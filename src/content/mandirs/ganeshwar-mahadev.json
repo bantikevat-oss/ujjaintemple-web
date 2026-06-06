@@ -1,0 +1,136 @@
+{
+    "slug":  "ganeshwar-mahadev",
+    "name":  {
+                 "hi":  "गणेश्वर महादेव",
+                 "en":  "Ganeshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (गणेश्वर रूप)",
+                  "en":  "Lord Shiva as Ganeshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कन्द पुराण काल",
+                           "en":  "Ancient — Skanda Purana era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "गणेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला के उन शिवलिंगों में से एक हैं जिनका नाम भगवान गणेश और शिव की सम्मिलित उपासना से जुड़ा है। इस मंदिर में शिव और गणेश की एकीकृत शक्ति का पूजन होता है। महाकाल क्षेत्र में स्थित यह मंदिर आध्यात्मिक सिद्धि की कामना रखने वाले भक्तों के लिए विशेष फलदायी माना जाता है।",
+                       "en":  "Ganeshwar Mahadev is one of the Shivalingas of Ujjain\u0027s Chaurasi Mahadeva series whose name is associated with the combined worship of Lord Ganesha and Shiva. This temple venerates the unified power of Shiva and Ganesha. Situated in the Mahakal Area, it is considered especially beneficial for devotees seeking spiritual accomplishment."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में गणेश्वर महादेव का उल्लेख चौरासी महादेव परंपरा के अन्तर्गत किया गया है। पुराण में वर्णित कथा के अनुसार स्वयं गणेश जी ने यहाँ शिव की आराधना की थी, जिसके फलस्वरूप इस स्थान को \u0027गणेश्वर\u0027 नाम मिला। अवन्ती नगरी में गण-अधिपति गणेश और महेश्वर शिव की सम्मिलित उपासना की यह परंपरा अत्यंत प्राचीन है। यहाँ गणेश चतुर्थी और शिवरात्रि दोनों पर्वों का उत्सव विशेष धूमधाम से मनाया जाता है। मंदिर में प्रतिदिन पंचामृत अभिषेक की परंपरा युगों से निरंतर चली आ रही है।",
+                    "en":  "Ganeshwar Mahadev is mentioned in the Avanti Khanda of the Skanda Purana as part of the Chaurasi Mahadeva tradition. According to the Puranic narrative, Lord Ganesha himself worshipped Shiva at this spot, giving the place the name \u0027Ganeshwar\u0027. The tradition of combined worship of Ganesha, the lord of ganas, and Maheshwar Shiva in Avanti is extremely ancient. Both Ganesh Chaturthi and Shivratri are celebrated here with special festivity. The daily ritual of Panchamrita abhisheka has continued unbroken at this temple for ages."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.183,
+                "lng":  75.7683
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-6.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी दूर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
+                       "en":  "Located approximately 0.3 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "गणेश्वर महादेव उज्जैन",
+                           "en":  "Ganeshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तजन मानते हैं कि गणेश्वर महादेव के दर्शन से किसी भी शुभ कार्य की शुरुआत में आने वाले विघ्न स्वतः ही दूर हो जाते हैं। ऐसी मान्यता है कि जो श्रद्धालु यहाँ पहले गणेश और फिर शिव का अभिषेक करते हैं, उनकी मनोकामनाएँ शीघ्र पूर्ण होती हैं। नवविवाहित जोड़े और नूतन व्यापार प्रारम्भ करने वाले लोग विशेष रूप से यहाँ संकल्प लेने आते हैं।",
+                         "en":  "Local devotees believe that the darshan of Ganeshwar Mahadev removes all obstacles that arise at the start of any auspicious endeavour. It is held that those who first offer worship to Ganesha and then perform abhisheka of Shiva here have their wishes fulfilled swiftly. Newly-wed couples and people starting fresh businesses especially come here to take sankalpa."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? गणेश्वर महादेव चौरासी महादेवों में उन विरल स्थानों में से एक हैं जहाँ शिव और गणेश की संयुक्त उपासना का विधान है। स्कन्द पुराण के अनुसार यह वही स्थान है जहाँ स्वयं गणपति ने पिता शिव की आराधना की थी।",
+                         "en":  "Did you know? Ganeshwar Mahadev is one of the rare shrines among the 84 Mahadevas where the joint worship of Shiva and Ganesha is prescribed. According to the Skanda Purana, this is the very spot where Lord Ganapati himself worshipped his father Shiva."
+                     },
+    "visitTips":  {
+                      "hi":  "दर्शन के लिए साधारण एवं शालीन वस्त्र पहनकर आएँ; मंदिर में प्रवेश से पूर्व चरण-प्रक्षालन अवश्य करें। बुधवार और चतुर्थी तिथि को विशेष भीड़ रहती है, अतः प्रातःकालीन दर्शन अधिक सुगम होते हैं। साथ में दूर्वा, मोदक, बेलपत्र और गंगाजल लाना शुभ माना जाता है।",
+                      "en":  "Wear simple and modest clothing for darshan and wash your feet before entering the temple. Wednesdays and Chaturthi tithis see heavier crowds, so early-morning visits are smoother. Carrying durva grass, modak, bilva leaves and Gangajal as offerings is considered auspicious."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "गणेश्वर महादेव मंदिर की विशेषता क्या है?",
+                                      "en":  "What is special about Ganeshwar Mahadev temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह चौरासी महादेवों में एक मात्र ऐसा स्थान है जहाँ शिव और गणेश दोनों की संयुक्त शक्ति का पूजन होता है, जिससे विघ्न-निवारण और आध्यात्मिक सिद्धि दोनों फल प्राप्त होते हैं।",
+                                    "en":  "It is among the unique shrines of the 84 Mahadevas where the combined power of both Shiva and Ganesha is worshipped, granting both the removal of obstacles and spiritual accomplishment."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या यह मंदिर महाकालेश्वर के समीप है?",
+                                      "en":  "Is this temple close to Mahakaleshwar?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, गणेश्वर महादेव मंदिर महाकाल क्षेत्र में ही स्थित है और महाकालेश्वर मंदिर से लगभग 0.3 किमी की पैदल दूरी पर है।",
+                                    "en":  "Yes, Ganeshwar Mahadev temple is located within the Mahakal Area and is just about 0.3 km on foot from the Mahakaleshwar temple."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "दर्शन के लिए सर्वोत्तम समय कौन सा है?",
+                                      "en":  "What is the best time for darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "प्रातःकालीन समय सबसे शांत और सुगम होता है; गणेश चतुर्थी, संकष्टी चतुर्थी और महाशिवरात्रि पर यहाँ का माहौल विशेष भक्तिमय रहता है।",
+                                    "en":  "Early morning hours are the calmest and most convenient; the atmosphere becomes especially devotional on Ganesh Chaturthi, Sankashti Chaturthi and Mahashivratri."
+                                }
+                 }
+             ]
+}

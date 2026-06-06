@@ -1,0 +1,146 @@
+{
+    "slug":  "chandraprabhu-jain-mandir",
+    "name":  {
+                 "hi":  "चन्द्रप्रभु जैन मंदिर",
+                 "en":  "Chandraprabhu Jain Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान चन्द्रप्रभु (८वें तीर्थंकर)",
+                  "en":  "Bhagwan Chandraprabhu (8th Tirthankara)"
+              },
+    "templeType":  "Jain",
+    "locationArea":  "Nanakheda",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकालीन युग",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Jain Nagara",
+    "shortIntro":  {
+                       "hi":  "चन्द्रप्रभु जैन मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित है और जैन धर्म के ८वें तीर्थंकर भगवान चन्द्रप्रभु को समर्पित है। \u0027चन्द्रप्रभु\u0027 अर्थात चंद्रमा के समान प्रभा वाले — उनका नाम ही उनकी शीतल और शांत आभा का द्योतक है। यह मंदिर उज्जैन की समृद्ध जैन वास्तुकला और आध्यात्मिक परंपरा का प्रतिनिधित्व करता है।",
+                       "en":  "The Chandraprabhu Jain Mandir is situated in the Nanakheda area of Ujjain and is dedicated to Bhagwan Chandraprabhu, the 8th Tirthankara of Jainism. The name \u0027Chandraprabhu\u0027 means \u0027one with the radiance of the moon\u0027, reflecting his cool, serene, and luminous spiritual presence. This temple represents the rich Jain architectural and spiritual tradition of Ujjain."
+                   },
+    "history":  {
+                    "hi":  "भगवान चन्द्रप्रभु जैन धर्म के ८वें तीर्थंकर थे जिनका जन्म चन्द्रपुरी नगरी में हुआ था। जैन आगम ग्रंथों के अनुसार उनकी काया का वर्ण श्वेत था और उनका लांछन चन्द्रमा है जो उनकी चन्द्रमा जैसी शीतल प्रकृति को प्रतिबिंबित करता है। उन्होंने सम्मेद शिखर (झारखंड) पर मोक्ष प्राप्त किया जो जैनों का सर्वोच्च तीर्थ है। उज्जैन की जैन श्रावक परंपरा में भगवान चन्द्रप्रभु की विशेष आराधना की जाती है और स्थानीय समाज ने इस मंदिर की स्थापना कर उस परंपरा को जीवंत रखा है। मंदिर में श्वेत प्रतिमा का दर्शन करने भक्त दूर-दूर से आते हैं।",
+                    "en":  "Bhagwan Chandraprabhu, the 8th Tirthankara, was born in the city of Chandrapuri, according to the Jain Agamas. His complexion was described as white, and his iconographic symbol is the crescent moon — reflecting his moon-like calm and radiant nature. He attained moksha at Sammed Shikhar (Jharkhand), the supreme pilgrimage site for Jains. Bhagwan Chandraprabhu is specially worshipped within the Ujjain Jain Shravak tradition, and the local community established this temple to keep that tradition alive. Devotees travel from afar to receive darshan of the white stone idol enshrined here."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.176,
+                "lng":  75.7782
+            },
+    "photos":  [
+                   "/images/mandirs/chandraprabhu-jain-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 1.5 किमी और महाकालेश्वर मंदिर से लगभग 2 किमी की दूरी पर नानाखेड़ा में स्थित है। ऑटोरिक्शा और सिटी बस सेवाएँ उपलब्ध हैं।",
+                       "en":  "The temple is approximately 1.5 km from Ujjain Railway Station and about 2 km from Mahakaleshwar Temple in Nanakheda. Auto-rickshaws and city bus services are available."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "चन्द्रप्रभु जैन मंदिर उज्जैन",
+                           "en":  "Chandraprabhu Jain Mandir Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय जैन समाज मानता है कि भगवान चन्द्रप्रभु की आराधना से मन की चंचलता शांत होती है और चित्त में शीतलता आती है। श्रावक-श्राविकाएँ विशेष रूप से पूर्णिमा एवं अष्टमी तिथि पर दर्शन को शुभ मानते हैं क्योंकि चन्द्रमा प्रभु का लांछन है। ऐसा भी विश्वास है कि सच्चे भाव से की गई वंदना से अहिंसा, संयम और तप के मार्ग पर चलने का बल मिलता है।",
+                         "en":  "Local Jain devotees believe that worshipping Bhagwan Chandraprabhu calms the restlessness of the mind and brings inner coolness and serenity. Shravaks and shravikas consider Purnima and Ashtami especially auspicious for darshan, as the moon is the Lord\u0027s iconographic symbol. It is also believed that sincere vandana here grants strength to walk the path of non-violence, restraint, and austerity."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? भगवान चन्द्रप्रभु जैन धर्म के २४ तीर्थंकरों में एकमात्र तीर्थंकर हैं जिनका लांछन (चिन्ह) चन्द्रमा है, और उनकी प्रतिमा परंपरागत रूप से श्वेत पाषाण की होती है। उज्जैन का यह मंदिर शहर की प्राचीन जैन श्रावक परंपरा का जीवंत प्रमाण है।",
+                         "en":  "Did you know? Among all 24 Tirthankaras, Bhagwan Chandraprabhu is the only one whose lanchhan (symbol) is the crescent moon, and his idol is traditionally carved from white stone. This temple stands as a living testament to Ujjain\u0027s ancient Jain Shravak heritage."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर में प्रवेश से पूर्व चमड़े की वस्तुएँ (बेल्ट, पर्स, घड़ी का पट्टा) बाहर रखना अनिवार्य है — यह जैन परंपरा का पालन है। शालीन वस्त्र पहनें और मंदिर के भीतर मौन एवं शांति बनाए रखें। प्रातःकालीन समय दर्शन हेतु सर्वश्रेष्ठ है जब वातावरण शांत और पवित्र होता है।",
+                      "en":  "Before entering, all leather items (belts, wallets, watch straps) must be removed and left outside, as per Jain tradition. Wear modest clothing and maintain silence and reverence inside the temple. Early morning is the best time for darshan when the atmosphere is calm and spiritually charged."
+                  },
+    "faqs":  [
+                 {
+                     "q":  {
+                               "hi":  "चन्द्रप्रभु जैन मंदिर उज्जैन में कहाँ स्थित है?",
+                               "en":  "Where is Chandraprabhu Jain Mandir located in Ujjain?"
+                           },
+                     "a":  {
+                               "hi":  "यह मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित है, जो रेलवे स्टेशन से लगभग 1.5 किमी की दूरी पर है।",
+                               "en":  "The temple is located in the Nanakheda area of Ujjain, approximately 1.5 km from the railway station."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "भगवान चन्द्रप्रभु कौन हैं?",
+                               "en":  "Who is Bhagwan Chandraprabhu?"
+                           },
+                     "a":  {
+                               "hi":  "भगवान चन्द्रप्रभु जैन धर्म के ८वें तीर्थंकर हैं, जिनका लांछन चन्द्रमा है और जिनकी प्रतिमा श्वेत वर्ण की होती है।",
+                               "en":  "Bhagwan Chandraprabhu is the 8th Tirthankara of Jainism, whose symbol is the crescent moon and whose idol is depicted in white."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "क्या मंदिर में प्रवेश शुल्क है?",
+                               "en":  "Is there an entry fee for the temple?"
+                           },
+                     "a":  {
+                               "hi":  "नहीं, मंदिर में दर्शन निःशुल्क है। सभी श्रद्धालुओं का स्वागत है।",
+                               "en":  "No, darshan is free of charge. All devotees are welcome."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "मंदिर में जाते समय किन बातों का ध्यान रखें?",
+                               "en":  "What should I keep in mind when visiting the temple?"
+                           },
+                     "a":  {
+                               "hi":  "चमड़े की वस्तुएँ बाहर रखें, शालीन वस्त्र पहनें, मौन बनाए रखें और मंदिर के भीतर भोजन या तेज सुगंधित पदार्थ न ले जाएँ।",
+                               "en":  "Leave leather items outside, wear modest clothing, maintain silence, and avoid bringing food or strongly scented items inside the temple."
+                           }
+                 }
+             ]
+}

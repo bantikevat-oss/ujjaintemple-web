@@ -1,0 +1,118 @@
+{
+  "slug": "ramtekdi-ram-mandir",
+  "name": {
+    "hi": "रामतेकड़ी मंदिर",
+    "en": "Ramtekdi Temple"
+  },
+  "deity": {
+    "hi": "भगवान राम",
+    "en": "Lord Rama"
+  },
+  "templeType": "Ram",
+  "locationArea": "City Center",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "टेकड़ी (पहाड़ी) पर बना प्राचीन राम मंदिर। उज्जैन का प्रमुख राम स्थल।",
+    "en": "Ancient Rama temple built on a hillock. Major Ram shrine of Ujjain."
+  },
+  "history": {
+    "hi": "रामतेकड़ी क्षेत्र में पहाड़ी पर स्थित। राम नवमी पर विशेष भीड़।",
+    "en": "Located on a hill in Ramtekdi area. Special crowd on Ram Navami."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 5:30 – रात्रि 9:30",
+    "en": "5:30 AM – 9:30 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 5:30 – रात्रि 9:30",
+      "en": "5:30 AM – 9:30 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "राम नवमी, दशहरा",
+    "en": "Ram Navami, Dussehra"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "रामतेकड़ी मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Ramtekdi Temple, City Center, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/ram-mandir-ramghat.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "रामतेकड़ी उज्जैन",
+    "en": "Ramtekdi Ujjain"
+  }
+}

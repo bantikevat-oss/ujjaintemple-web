@@ -1,0 +1,160 @@
+{
+  "slug": "indradyumneshwar-mahadev",
+  "name": {
+    "hi": "इंद्रद्युम्नेश्वर महादेव",
+    "en": "Indradyumneshwar Mahadev"
+  },
+  "deity": {
+    "hi": "भगवान शिव",
+    "en": "Lord Shiva"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "राजा इंद्रद्युम्न द्वारा पूजित शिव। 84 महादेव परंपरा का अंग।",
+    "en": "Shiva worshipped by King Indradyumna. Part of 84 Mahadeva tradition."
+  },
+  "history": {
+    "hi": "इंद्रद्युम्नेश्वर महादेव का संबंध पौराणिक राजा इंद्रद्युम्न से माना जाता है, जिनका नाम जगन्नाथ पुरी की कथाओं में भी प्रमुखता से आता है। स्कंद पुराण के अवंतिका खंड के अनुसार राजा इंद्रद्युम्न ने अवंतिका (उज्जैन) आकर इसी स्थान पर शिवलिंग की स्थापना कर कठोर तपस्या की थी। मान्यता है कि भगवान शिव ने उनकी भक्ति से प्रसन्न होकर यहाँ साक्षात दर्शन दिए और राजा को इच्छित वरदान प्रदान किए। यह मंदिर उज्जैन की 84 महादेव परिक्रमा परंपरा का एक महत्वपूर्ण अंग है, जिसकी यात्रा श्रावण मास और सिंहस्थ पर्व में विशेष पुण्यदायी मानी जाती है। आज भी श्रद्धालु यहाँ संतान प्राप्ति, राजकीय सफलता और मनोकामना पूर्ति की प्रार्थना के लिए आते हैं।",
+    "en": "Indradyumneshwar Mahadev is linked to the legendary King Indradyumna, whose name features prominently in the Jagannath Puri legends as well. According to the Avantika Khanda of the Skanda Purana, King Indradyumna travelled to Avantika (Ujjain) and consecrated this Shivalinga here, performing severe penance at the site. It is believed that Lord Shiva, pleased by his devotion, granted darshan in person and bestowed upon the king the boons he sought. The temple is an important station in the traditional 84 Mahadeva parikrama of Ujjain, with visits considered especially auspicious during Shravan and the Simhastha Kumbh. Even today devotees come here to pray for progeny, success in leadership, and the fulfilment of cherished wishes."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 6:00 – रात्रि 8:00",
+    "en": "6:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "इंद्रद्युम्नेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Indradyumneshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-10.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालु मानते हैं कि यहाँ सच्चे मन से किया गया संकल्प राजा इंद्रद्युम्न की कथा की भाँति अवश्य फलित होता है। सोमवार और श्रावण के सोमवारों पर बेलपत्र, गंगाजल और सफेद पुष्प अर्पित करने से शिव कृपा शीघ्र प्राप्त होती है। मनोकामना पूर्ति पर भक्त यहाँ रुद्राभिषेक करवाकर अपनी आस्था प्रकट करते हैं।",
+    "en": "Locals believe that any sincere resolve made here bears fruit, just as it did for King Indradyumna in the puranic tale. Offerings of bel leaves, Ganga water and white flowers on Mondays and Shravan Mondays are said to swiftly invoke Shiva's grace. Devotees often return to perform a Rudrabhishek once their prayers are fulfilled, as a mark of gratitude."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? यह वही पौराणिक राजा इंद्रद्युम्न से जुड़ा शिवालय है जिनका उल्लेख जगन्नाथ पुरी की उत्पत्ति कथा में भी होता है — अर्थात् पुरी और अवंतिका दोनों धामों को जोड़ने वाला यह दुर्लभ शिवस्थान है। यह 84 महादेव परिक्रमा का गणनीय मंदिर है।",
+    "en": "Did you know? This shrine is tied to the same legendary King Indradyumna who appears in the origin story of Jagannath Puri — making it a rare Shiva site that connects the dhams of Puri and Avantika. It is also a counted shrine on Ujjain's revered 84 Mahadeva parikrama."
+  },
+  "visitTips": {
+    "hi": "मंदिर परिसर में प्रवेश से पूर्व पैर धोकर शुद्ध वस्त्र पहनें — पुरुष धोती-कुर्ता और महिलाएँ साड़ी या सलवार-सूट को प्राथमिकता दें। प्रातः 6:00 – 8:00 का समय भीड़-रहित और शांत दर्शन के लिए सर्वोत्तम है। साथ में बेलपत्र, सफेद पुष्प, थोड़ा जल और छोटी थैली अवश्य रखें; गर्मियों में टोपी और पानी की बोतल साथ रखें।",
+    "en": "Wash your feet and wear clean traditional attire before entering the sanctum — dhoti-kurta for men and saree or salwar-suit for women are preferred. Early morning between 6:00 and 8:00 AM offers the calmest, least crowded darshan. Carry bel leaves, white flowers, a small bottle of water and a cloth bag; in summer, keep a cap and drinking water with you."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यह मंदिर 84 महादेव परिक्रमा का हिस्सा है?",
+        "en": "Is this temple part of the 84 Mahadeva parikrama?"
+      },
+      "a": {
+        "hi": "हाँ, इंद्रद्युम्नेश्वर महादेव उज्जैन की प्रसिद्ध 84 महादेव परिक्रमा परंपरा का गणनीय शिवालय है और श्रावण व सिंहस्थ में विशेष रूप से पूजनीय है।",
+        "en": "Yes, Indradyumneshwar Mahadev is a counted shrine on Ujjain's famous 84 Mahadeva parikrama and is especially revered during Shravan and Simhastha."
+      }
+    },
+    {
+      "q": {
+        "hi": "यहाँ किस प्रकार की पूजा-अर्चना श्रेष्ठ मानी जाती है?",
+        "en": "Which form of worship is considered ideal here?"
+      },
+      "a": {
+        "hi": "जलाभिषेक, बेलपत्र अर्पण और सोमवार को रुद्राभिषेक यहाँ का प्रमुख पूजा-विधान है। महाशिवरात्रि और श्रावण सोमवार पर विशेष अनुष्ठान का महत्व है।",
+        "en": "Jalabhishek, bel-leaf offerings and a Monday Rudrabhishek are the favoured rituals here. Special observances on Mahashivratri and Shravan Mondays are considered especially meritorious."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या मंदिर महाकाल से पैदल पहुँचा जा सकता है?",
+        "en": "Can the temple be reached on foot from Mahakaleshwar?"
+      },
+      "a": {
+        "hi": "हाँ, महाकाल क्षेत्र के भीतर होने के कारण यह मंदिर पैदल या ऑटो से सुगमता से पहुँचा जा सकता है; मार्ग में अन्य महादेव शिवालय भी पड़ते हैं।",
+        "en": "Yes, being within the Mahakal area the temple is easily reachable on foot or by auto, and several other Mahadeva shrines lie along the way."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "इंद्रद्युम्नेश्वर महादेव उज्जैन",
+    "en": "Indradyumneshwar Mahadev Ujjain"
+  }
+}

@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "krishna-sudama-mandir",
+    "name":  {
+                 "hi":  "कृष्ण-सुदामा मंदिर",
+                 "en":  "Krishna Sudama Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान कृष्ण और सुदामा",
+                  "en":  "Lord Krishna and Sudama"
+              },
+    "templeType":  "Krishna",
+    "locationArea":  "Sandipani Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient era"
+                       },
+    "architectureStyle":  "Nagara",
+    "shortIntro":  {
+                       "hi":  "कृष्ण-सुदामा मंदिर उज्जैन के सांदीपनि आश्रम क्षेत्र में स्थित है जहाँ भगवान कृष्ण और उनके बाल-सखा सुदामा ने महर्षि सांदीपनि से शिक्षा ग्रहण की थी। यह मंदिर उस पवित्र मित्रता का स्मारक है जो सत्ता और दरिद्रता के बीच भी अडिग रही। कृष्ण-सुदामा की मित्रता की कथा यहाँ विशेष रूप से प्रासंगिक है।",
+                       "en":  "Krishna Sudama Mandir is located in the Sandipani Ashram area of Ujjain, where Lord Krishna and his childhood friend Sudama studied under the sage Sandipani. This temple is a monument to the sacred friendship that remained steadfast even between power and poverty. The story of Krishna and Sudama\u0027s friendship holds special relevance at this site."
+                   },
+    "history":  {
+                    "hi":  "उज्जैन का सांदीपनि आश्रम वह पवित्र स्थान है जहाँ भगवान कृष्ण, बलराम और सुदामा ने महर्षि सांदीपनि के सान्निध्य में शिक्षा ग्रहण की थी। भागवत पुराण एवं हरिवंश पुराण में इस शिक्षा-काल का विस्तृत वर्णन मिलता है। सुदामा कृष्ण के प्रिय सखा थे जिनकी दरिद्रता को कृष्ण ने अपनी कृपा से दूर किया। यह मंदिर उस मित्रता का जीवंत स्मारक है जो धन और पद से परे है। प्रतिवर्ष यहाँ कृष्ण जन्माष्टमी पर भव्य उत्सव होता है।",
+                    "en":  "The Sandipani Ashram in Ujjain is the sacred site where Lord Krishna, Balarama and Sudama received their education under the sage Sandipani. Detailed accounts of this period of study appear in the Bhagavata Purana and the Harivamsa Purana. Sudama was Krishna\u0027s beloved friend whose poverty was alleviated by Krishna\u0027s grace. This temple is a living monument to a friendship that transcended wealth and status. A grand celebration is held here annually on Krishna Janmashtami."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                 "en":  "6:00 AM – 8:30 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                        "en":  "6:00 AM – 8:30 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                         "en":  "6:00 AM – 8:30 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                           "en":  "6:00 AM – 8:30 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                          "en":  "6:00 AM – 8:30 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                        "en":  "6:00 AM – 8:30 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                          "en":  "6:00 AM – 8:30 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
+                                        "en":  "6:00 AM – 8:30 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "सांदीपनि आश्रम क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Sandipani Ashram Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1752,
+                "lng":  75.7625
+            },
+    "photos":  [
+                   "/images/mandirs/krishna-sudama-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर सांदीपनि आश्रम के निकट महाकालेश्वर मंदिर से लगभग 1.5 किमी दक्षिण-पश्चिम में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 20 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is near Sandipani Ashram, approximately 1.5 km south-west of Mahakaleshwar Mandir. It can be reached in about 20 minutes by auto-rickshaw from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "कृष्ण सुदामा मंदिर उज्जैन",
+                           "en":  "Krishna Sudama Mandir Ujjain"
+                       }
+}

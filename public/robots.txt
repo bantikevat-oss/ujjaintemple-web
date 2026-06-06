@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /search/?q=
+
+Sitemap: https://ujjaintemple.com/sitemap.xml

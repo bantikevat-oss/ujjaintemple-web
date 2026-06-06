@@ -1,0 +1,160 @@
+{
+  "slug": "agreshwar-mahadev",
+  "name": {
+    "hi": "अगरेश्वर महादेव",
+    "en": "Agreshwar Mahadev"
+  },
+  "deity": {
+    "hi": "भगवान शिव (अगरेश्वर रूप)",
+    "en": "Lord Shiva (Agreshwar form)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "84 महादेव परंपरा का द्वितीय महादेव। स्कंद पुराण के अवंतिका खंड में उल्लेख।",
+    "en": "The second Mahadeva in the 84 Mahadeva tradition. Mentioned in Skanda Purana's Avantika Khand."
+  },
+  "history": {
+    "hi": "अगरेश्वर महादेव उज्जैन के 84 महादेवों की पवित्र परिक्रमा में द्वितीय स्थान पर विराजमान हैं। स्कंद पुराण के अवंतिका खंड में इस ज्योतिर्लिंग का विशेष उल्लेख मिलता है, जहाँ इसे मोक्षदायी एवं पाप-नाशक बताया गया है। पौराणिक मान्यता के अनुसार स्वयं भगवान शिव ने यहाँ अग्रपूज्य रूप में दर्शन दिए थे, जिससे इस स्थान का नाम 'अगरेश्वर' पड़ा। श्रावण मास, महाशिवरात्रि एवं सोमवार को यहाँ दर्शन का विशेष महत्व माना जाता है। सिंहस्थ कुंभ के अवसर पर हजारों श्रद्धालु 84 महादेव परिक्रमा के क्रम में यहाँ अवश्य पहुँचते हैं। मंदिर का सरल किंतु प्राचीन स्वरूप आज भी अवंतिका की आध्यात्मिक विरासत को जीवित रखे हुए है।",
+    "en": "Agreshwar Mahadev holds the second position in Ujjain's revered 84 Mahadeva parikrama tradition. The Skanda Purana's Avantika Khand specifically mentions this Jyotirlinga as liberating and capable of destroying sins. According to legend, Lord Shiva himself appeared here in his 'Agra-Pujya' (first-worshipped) form, which gave the temple its name. Worship during Shravan, Mahashivratri, and Mondays is considered particularly fruitful. During Simhastha Kumbh, thousands of devotees visit as part of the 84 Mahadeva circuit. The temple's simple yet ancient form continues to preserve the spiritual heritage of Avantika to this day."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 6:00 – रात्रि 8:00",
+    "en": "6:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "अगरेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Agreshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-1.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि अगरेश्वर महादेव के दर्शन से ग्रह दोष एवं पितृ दोष का शमन होता है। माना जाता है कि यहाँ बेलपत्र चढ़ाने से रुकी हुई मनोकामनाएँ शीघ्र पूर्ण होती हैं। 84 महादेव परिक्रमा करने वाले भक्त यहाँ रुककर जल एवं दूध से अभिषेक अवश्य करते हैं।",
+    "en": "Local devotees believe that darshan at Agreshwar Mahadev helps alleviate planetary doshas and ancestral (pitru) doshas. Offering bel leaves here is said to fulfil long-pending wishes quickly. Pilgrims undertaking the 84 Mahadeva parikrama always pause here to perform abhishek with water and milk."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? अगरेश्वर महादेव 84 महादेवों की सूची में द्वितीय क्रम पर आते हैं और स्कंद पुराण में इन्हें 'अग्रपूज्य' अर्थात् सर्वप्रथम पूजनीय कहा गया है। यही कारण है कि कई परंपरागत परिक्रमाओं में महाकाल दर्शन के तुरंत बाद यहाँ आना शुभ माना जाता है।",
+    "en": "Did you know? Agreshwar Mahadev is the second deity in the 84 Mahadeva list and is called 'Agra-Pujya' (the foremost worshipped) in the Skanda Purana. This is why many traditional parikramas consider it auspicious to visit here immediately after darshan at Mahakaleshwar."
+  },
+  "visitTips": {
+    "hi": "दर्शन हेतु सादे एवं शालीन वस्त्र पहनें; श्रावण व सोमवार को भीड़ अधिक रहती है, अतः प्रातःकाल आना श्रेयस्कर है। साथ में बेलपत्र, गंगाजल या शुद्ध जल, पुष्प एवं छोटा दीपक ले जाना उपयोगी रहता है। गर्मियों में पानी की बोतल अवश्य रखें और मंदिर के बाहर चप्पल सुरक्षित स्थान पर उतारें।",
+    "en": "Wear simple and modest clothing for darshan; crowds are heavier on Shravan Mondays, so early morning visits are preferable. Carrying bel leaves, Ganga jal or clean water, flowers, and a small lamp is helpful. In summers keep a water bottle, and leave footwear at the designated area outside the temple."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या अगरेश्वर महादेव 84 महादेव परिक्रमा में सम्मिलित हैं?",
+        "en": "Is Agreshwar Mahadev part of the 84 Mahadeva parikrama?"
+      },
+      "a": {
+        "hi": "हाँ, अगरेश्वर महादेव 84 महादेव परिक्रमा का द्वितीय पड़ाव हैं। स्कंद पुराण के अवंतिका खंड में इनका विशेष उल्लेख है।",
+        "en": "Yes, Agreshwar Mahadev is the second stop in the 84 Mahadeva parikrama and is specifically mentioned in the Skanda Purana's Avantika Khand."
+      }
+    },
+    {
+      "q": {
+        "hi": "मंदिर में क्या अर्पित करना चाहिए?",
+        "en": "What should one offer at the temple?"
+      },
+      "a": {
+        "hi": "बेलपत्र, शुद्ध जल, दूध, पुष्प एवं धूप-दीप अर्पित करना शुभ माना जाता है। श्रावण मास में जलाभिषेक का विशेष महत्व है।",
+        "en": "Offering bel leaves, clean water, milk, flowers, and incense-lamps is considered auspicious. Jalabhishek is especially significant during the Shravan month."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या मंदिर तक पहुँचना सुलभ है?",
+        "en": "Is the temple easy to reach?"
+      },
+      "a": {
+        "hi": "जी हाँ, महाकाल मंदिर क्षेत्र से ऑटो या कैब द्वारा आसानी से पहुँचा जा सकता है। पैदल परिक्रमा करने वाले श्रद्धालु भी यहाँ आते हैं।",
+        "en": "Yes, it is easily accessible by auto or cab from the Mahakal temple area. Devotees performing the parikrama on foot also reach here comfortably."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "अगरेश्वर महादेव उज्जैन",
+    "en": "Agreshwar Mahadev Ujjain"
+  }
+}

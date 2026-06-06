@@ -1,0 +1,94 @@
+﻿{
+    "slug":  "vikrant-bhairav",
+    "name":  {
+                 "hi":  "विक्रांत भैरव मंदिर",
+                 "en":  "Vikrant Bhairav Temple"
+             },
+    "deity":  {
+                  "hi":  "विक्रांत भैरव",
+                  "en":  "Vikrant Bhairav"
+              },
+    "templeType":  "Bhairav",
+    "locationArea":  "Bhairavgarh",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल, स्कन्द पुराण उल्लेखित",
+                           "en":  "Ancient era, referenced in Skanda Purana"
+                       },
+    "architectureStyle":  "Nagara",
+    "shortIntro":  {
+                       "hi":  "विक्रांत भैरव मंदिर उज्जैन के भैरवगढ़ क्षेत्र में स्थित भगवान भैरव का एक प्राचीन एवं शक्तिशाली मंदिर है। विक्रांत भैरव को उज्जैन के क्षेत्रपाल (रक्षक देवता) के रूप में माना जाता है। यह मंदिर नगर की अदृश्य शक्तियों से रक्षा एवं बाधा-निवारण के लिए विशेष रूप से प्रसिद्ध है।",
+                       "en":  "Vikrant Bhairav Temple is an ancient and potent shrine of Lord Bhairav located in Bhairavgarh, Ujjain. Vikrant Bhairav is revered as the kshetrapal (guardian deity) of Ujjain. This temple is especially renowned for protection from unseen forces and removal of obstacles."
+                   },
+    "history":  {
+                    "hi":  "उज्जैन नगरी को भैरव की नगरी भी कहा जाता है और यहाँ अनेक भैरव मंदिर स्थापित हैं जिनमें विक्रांत भैरव मंदिर विशेष रूप से महत्त्वपूर्ण है। स्कन्द पुराण के अवन्ति खण्ड में उज्जैन के विभिन्न भैरव स्वरूपों का उल्लेख मिलता है जो नगर की आठों दिशाओं की रक्षा करते हैं। तंत्र-साधना परंपरा में उज्जैन को सर्वोच्च स्थान प्राप्त है और विक्रांत भैरव इस परंपरा के सशक्त देवता हैं। रात्रि-पूजन एवं काल भैरव अष्टमी पर यहाँ विशेष तांत्रिक अनुष्ठान संपन्न होते हैं। भैरवगढ़ क्षेत्र का नाम ही इस भैरव-तीर्थ की महत्ता का प्रमाण है और यहाँ के पूजन से बाधाएँ, भय एवं शत्रु-पीड़ा का निवारण होता है।",
+                    "en":  "Ujjain is also known as the city of Bhairav, housing numerous Bhairav temples of which Vikrant Bhairav Mandir is especially significant. The Avanti Khanda of the Skanda Purana mentions the various Bhairav forms in Ujjain, which guard the city in all eight directions. Ujjain holds the highest position in the tradition of Tantra sadhana, and Vikrant Bhairav is a powerful deity of this lineage. Special tantric rituals are performed here on Raat-pujan nights and Kaal Bhairav Ashtami. The very name of Bhairavgarh attests to the pre-eminence of this Bhairav shrine, and worship here is believed to remove obstacles, fears, and afflictions from enemies."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "विक्रांत भैरव मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Vikrant Bhairav Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.192,
+                "lng":  75.768
+            },
+    "photos":  [
+                   "/images/mandirs/vikrant-bhairav.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "विक्रांत भैरव मंदिर भैरवगढ़ क्षेत्र में स्थित है और महाकालेश्वर मंदिर से लगभग 2 किमी उत्तर में है। उज्जैन रेलवे स्टेशन से लगभग 3 किमी दूर है, ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+                       "en":  "Vikrant Bhairav Temple is located in Bhairavgarh, approximately 2 km north of Mahakaleshwar Temple. It is about 3 km from Ujjain Railway Station and easily accessible by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+                          "gadkalika-mata",
+                          "bhartrihari-gufa",
+                          "shaneshwar-mahadev"
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "विक्रांत भैरव मंदिर उज्जैन",
+                           "en":  "Vikrant Bhairav Temple Ujjain"
+                       }
+}

@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "mahakali-mandir-ujjain",
+    "name":  {
+                 "hi":  "महाकाली मंदिर",
+                 "en":  "Mahakali Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "देवी महाकाली",
+                  "en":  "Goddess Mahakali"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "महाकाली मंदिर उज्जैन के महाकाल क्षेत्र में स्थित एक प्रमुख शक्तिपीठ है। यहाँ माँ महाकाली की उग्र एवं कल्याणकारी शक्ति की उपासना की जाती है। नवरात्रि पर्व पर यहाँ विशेष अनुष्ठान एवं भव्य शृंगार होता है।",
+                       "en":  "Mahakali Mandir is a prominent Shakti Peeth located in the Mahakal precinct of Ujjain. The temple enshrines the fierce yet benevolent form of Goddess Mahakali and draws large numbers of devotees throughout the year. Special rituals and elaborate decorations mark the Navratri celebrations here."
+                   },
+    "history":  {
+                    "hi":  "महाकाली मंदिर की स्थापना प्राचीन काल में हुई थी और यह उज्जैन की शाक्त परंपरा का अभिन्न अंग है। स्कंद पुराण के अवंती खंड में उज्जैन को शक्ति की नगरी बताया गया है जहाँ महाकाली देवी स्वयं विराजती हैं। परंपरागत मान्यता है कि माँ महाकाली यहाँ समस्त भक्तों को अभय और सिद्धि प्रदान करती हैं। मध्यकाल में परमार राजाओं ने इस मंदिर का जीर्णोद्धार कराया था। आज भी यह मंदिर उज्जैन के श्रद्धालुओं की अटूट आस्था का केंद्र बना हुआ है।",
+                    "en":  "The Mahakali Mandir is one of Ujjain\u0027s ancient Shakti shrines, integral to the city\u0027s deep-rooted tantric and devotional tradition. The Skanda Purana\u0027s Avanti Khanda describes Ujjain as a city where divine feminine energy is perpetually manifest, with Mahakali as a presiding force. Devotees believe the goddess grants fearlessness and spiritual accomplishment to sincere worshippers. The Paramara rulers of medieval times undertook renovations of this shrine, reinforcing its importance. It continues to be a living centre of faith for the people of Ujjain and pilgrims from across India."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.184,
+                "lng":  75.769
+            },
+    "photos":  [
+                   "/images/mandirs/mahakali-mandir-ujjain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Temple. From Ujjain Railway Station, it is reachable by auto-rickshaw or cycle-rickshaw in about 15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "महाकाली मंदिर उज्जैन",
+                           "en":  "Mahakali Mandir Ujjain"
+                       }
+}

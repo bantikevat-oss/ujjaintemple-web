@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.cache/
+.vite/
+pagefind/
+coverage/
+.idea/
+.vscode/
+*.swp

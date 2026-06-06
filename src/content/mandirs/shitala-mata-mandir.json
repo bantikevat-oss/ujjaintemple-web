@@ -1,0 +1,91 @@
+﻿{
+    "slug":  "shitala-mata-mandir",
+    "name":  {
+                 "hi":  "शीतला माता मंदिर",
+                 "en":  "Shitala Mata Mandir"
+             },
+    "deity":  {
+                  "hi":  "देवी शीतला",
+                  "en":  "Goddess Shitala"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Nanakheda",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकाल",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Rajput-Maratha",
+    "shortIntro":  {
+                       "hi":  "शीतला माता मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित एक लोकप्रिय शक्तिपीठ है। माँ शीतला को रोगों से मुक्ति दिलाने वाली देवी माना जाता है और यहाँ बच्चों की आरोग्य-कामना से विशेष भक्त आते हैं। शीतलाष्टमी पर्व पर यहाँ मेला लगता है।",
+                       "en":  "Shitala Mata Mandir is a beloved Shakti shrine in Ujjain\u0027s Nanakheda locality. Goddess Shitala is venerated as the protector from diseases, especially pox and fevers, and mothers bring young children here seeking health blessings. A fair is held on Shitalaashtami every year."
+                   },
+    "history":  {
+                    "hi":  "शीतला माता की उपासना परंपरा भारत के उत्तरी और मध्य प्रदेश में अत्यंत प्राचीन है। उज्जैन में शीतला माता का यह मंदिर मध्यकाल में स्थापित माना जाता है जब महामारियों के प्रकोप के दौरान लोग माँ की शरण में आते थे। स्कंदपुराण में उज्जैन को समस्त शक्तियों का आवास बताया गया है जिनमें शीतला देवी भी सम्मिलित हैं। मराठा काल में इस मंदिर का जीर्णोद्धार एवं विस्तार हुआ। आज भी शीतलाष्टमी के दिन यहाँ हजारों श्रद्धालु बासी भोजन का नैवेद्य चढ़ाकर देवी का आशीर्वाद प्राप्त करते हैं।",
+                    "en":  "The worship of Goddess Shitala is an ancient tradition in north and central India, where she is regarded as the divine healer who cures epidemic diseases. In Ujjain, this temple is believed to have been established during the medieval period when the population sought divine protection during outbreaks of pox and fever. The Skanda Purana affirms Ujjain as the abode of all Shakti forms including Shitala Devi. The Maratha rulers undertook renovation of this temple, strengthening its position as a community shrine. Even today, devotees offer stale food on Shitalaashtami following the ancient ritual prescribed in the Shitala Ashtakam."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.176,
+                "lng":  75.778
+            },
+    "photos": ["/images/mandirs/kali-mata-mandir-ujjain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर नानाखेड़ा क्षेत्र में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 10 मिनट का रास्ता है।",
+                       "en":  "The temple is located in Nanakheda, approximately 2 km from Ujjain Railway Station. It is about a 10-minute auto-rickshaw ride from Mahakaleshwar Temple."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "शीतला माता मंदिर उज्जैन",
+                           "en":  "Shitala Mata Mandir Ujjain"
+                       }
+}

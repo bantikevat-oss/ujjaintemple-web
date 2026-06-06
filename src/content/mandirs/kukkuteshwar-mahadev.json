@@ -1,0 +1,92 @@
+{
+    "slug":  "kukkuteshwar-mahadev",
+    "name":  {
+                 "hi":  "कुक्कुटेश्वर महादेव",
+                 "en":  "Kukkuteshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (कुक्कुटेश्वर रूप)",
+                  "en":  "Lord Shiva as Kukkuteshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Vana",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कन्द पुराण काल",
+                           "en":  "Ancient — Skanda Purana era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "कुक्कुटेश्वर महादेव उज्जैन के महाकाल वन में स्थित चौरासी महादेव श्रृंखला के एक अनोखे शिवलिंग हैं। \u0027कुक्कुट\u0027 अर्थात् मुर्गे के साथ जुड़ी पौराणिक कथा इस मंदिर को विशिष्ट पहचान देती है। ब्रह्म मुहूर्त की उपासना के लिए यह स्थान विशेष महत्व रखता है।",
+                       "en":  "Kukkuteshwar Mahadev is a unique Shivalinga of the Chaurasi Mahadeva series, located in the Mahakal Vana of Ujjain. The Puranic legend associated with \u0027kukkuta\u0027 (the rooster) gives this temple a distinctive identity. This site holds special significance for worship during the Brahma Muhurta."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में कुक्कुटेश्वर महादेव का वर्णन चौरासी महादेव की श्रृंखला में आता है। पुराणिक कथा के अनुसार एक कुक्कुट (मुर्गा) नित्य ब्रह्म मुहूर्त में यहाँ बाँग देकर भगवान शिव को जगाता था, जिससे प्रसन्न होकर शिव ने उसे मुक्ति प्रदान की और इस शिवलिंग को कुक्कुटेश्वर नाम से पहचाना जाने लगा। महाकाल वन के भीतर स्थित होने के कारण इस स्थान का आध्यात्मिक वातावरण अत्यंत पवित्र है। मंदिर में ब्रह्म मुहूर्त में की गई पूजा विशेष फलदायी मानी जाती है। स्थानीय परंपरा में यह मंदिर प्रतिदिन की दिनचर्या आरंभ करने से पूर्व दर्शन करने योग्य माना जाता है।",
+                    "en":  "Kukkuteshwar Mahadev is described in the Chaurasi Mahadeva series in the Avanti Khanda of the Skanda Purana. According to the Puranic legend, a rooster (kukkuta) would crow daily at Brahma Muhurta to wake Lord Shiva here; pleased by this, Shiva granted it liberation, and the Shivalinga came to be known as Kukkuteshwar. Being located within the Mahakal Vana, the spiritual atmosphere of this place is exceptionally sacred. Worship performed here at Brahma Muhurta is considered especially auspicious. In local tradition, this temple is considered ideal for darshan before beginning one\u0027s daily routine."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                 "en":  "5:30 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                        "en":  "5:30 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                         "en":  "5:30 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                           "en":  "5:30 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                          "en":  "5:30 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                        "en":  "5:30 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                          "en":  "5:30 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
+                                        "en":  "5:30 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:00 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:00 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल वन, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Vana, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1812,
+                "lng":  75.765
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-7.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.5 किमी दक्षिण में महाकाल वन के भीतर स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी।",
+                       "en":  "Located approximately 0.5 km south of Mahakaleshwar Temple, within the Mahakal Vana. About 2 km from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "कुक्कुटेश्वर महादेव उज्जैन",
+                           "en":  "Kukkuteshwar Mahadev Ujjain"
+                       }
+}

@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "parsvanath-jain-mandir",
+    "name":  {
+                 "hi":  "पार्श्वनाथ जैन मंदिर",
+                 "en":  "Parsvanath Jain Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान पार्श्वनाथ (२३वें तीर्थंकर)",
+                  "en":  "Bhagwan Parsvanath (23rd Tirthankara)"
+              },
+    "templeType":  "Jain",
+    "locationArea":  "Freeganj",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकालीन युग",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Jain Nagara",
+    "shortIntro":  {
+                       "hi":  "पार्श्वनाथ जैन मंदिर उज्जैन के फ्रीगंज क्षेत्र में स्थित है और जैन धर्म के २३वें तीर्थंकर भगवान पार्श्वनाथ को समर्पित है। भगवान पार्श्वनाथ की प्रतिमा सर्पफण से आच्छादित है जो उनकी प्रसिद्ध पहचान है। यह मंदिर उज्जैन के जैन समाज की गहरी आस्था और समृद्ध परंपरा का प्रतीक है।",
+                       "en":  "The Parsvanath Jain Mandir is situated in the Freeganj area of Ujjain and is dedicated to Bhagwan Parsvanath, the 23rd Tirthankara of Jainism. The idol of Bhagwan Parsvanath is characteristically depicted with a multi-hooded serpent canopy, his well-known iconographic identity. This temple stands as a symbol of the deep faith and rich tradition of Ujjain\u0027s Jain community."
+                   },
+    "history":  {
+                    "hi":  "भगवान पार्श्वनाथ जैन धर्म के २३वें तीर्थंकर थे जो लगभग ८७७–७७७ ईसा पूर्व काशी (वाराणसी) में जन्मे थे। उन्होंने अहिंसा, सत्य, अस्तेय और अपरिग्रह — इन चार महाव्रतों की शिक्षा दी, जिनमें महावीर ने पाँचवाँ महाव्रत ब्रह्मचर्य जोड़ा। जैन आगम परंपरा के अनुसार उज्जैन का जैन धर्म से गहरा संबंध रहा है और यहाँ के जैन समाज ने पार्श्वनाथ के नाम पर यह मंदिर स्थापित किया। मंदिर में सर्पफण से सुशोभित पार्श्वनाथ की श्वेत पाषाण प्रतिमा प्रधान आकर्षण है। पर्युषण पर्व पर यहाँ अष्टाह्निका महोत्सव का आयोजन भव्यता से किया जाता है।",
+                    "en":  "Bhagwan Parsvanath, the 23rd Tirthankara, is believed to have lived around 877–777 BCE and was born in Kashi (Varanasi). He preached the four great vows — ahimsa, satya, asteya, and aparigraha — to which Bhagwan Mahavir later added the fifth vow of brahmacharya. According to the Jain Agama tradition, Ujjain has deep ties with Jainism, and the local Jain community established this temple in honour of Parsvanath. The principal attraction is the white stone idol of Parsvanath crowned with a multi-hooded serpent canopy. The Ashtaahnika Mahotsava during Paryushana Parva is celebrated grandly here each year."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "फ्रीगंज, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Freeganj, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1785,
+                "lng":  75.7748
+            },
+    "photos":  [
+                   "/images/mandirs/parsvanath-jain-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 1.5 किमी और उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर फ्रीगंज में स्थित है। ऑटोरिक्शा और सिटी बस आसानी से उपलब्ध हैं।",
+                       "en":  "The temple is about 1.5 km from Mahakaleshwar Temple and approximately 2 km from Ujjain Railway Station in Freeganj. Auto-rickshaws and city buses are readily available."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "पार्श्वनाथ जैन मंदिर उज्जैन",
+                           "en":  "Parsvanath Jain Mandir Ujjain"
+                       }
+}

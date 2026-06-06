@@ -1,0 +1,92 @@
+{
+    "slug":  "sanyukteshwar-mahadev",
+    "name":  {
+                 "hi":  "संयुक्तेश्वर महादेव",
+                 "en":  "Sanyukteshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (संयुक्तेश्वर रूप)",
+                  "en":  "Lord Shiva as Sanyukteshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "संयुक्तेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ क्रम का एक पवित्र मंदिर है। \u0027संयुक्त\u0027 अर्थात एकत्रित या संगठित — यह नाम शिव की उस शक्ति को इंगित करता है जो सृष्टि के समस्त तत्त्वों को एकता में बाँधती है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग के दर्शन से परिवार में एकता और सौहार्द की प्राप्ति का उल्लेख है।",
+                       "en":  "Sanyukteshwar Mahadev is a sacred shrine in the Chaurasi Mahadeva pilgrimage series of Ujjain. \u0027Sanyukta\u0027 means united or combined — the name points to Shiva\u0027s power that binds all elements of creation in unity. The Avanti Khanda of the Skanda Purana mentions that darshan at this Shivalinga brings unity and harmony within the family."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवन्ति खण्ड में संयुक्तेश्वर महादेव उज्जैन के चौरासी स्वयंभू शिव-स्थलों में वर्णित हैं। पौराणिक मान्यता के अनुसार, यह लिंग उन स्थलों पर प्रकट हुआ जहाँ देव-शक्तियों का संयोजन हुआ था। उज्जैन के महाकाल क्षेत्र में इस मंदिर का अस्तित्व नगर की आध्यात्मिक एकता का प्रतीक है। मध्यकाल में भक्तों के सामूहिक प्रयास से मंदिर का जीर्णोद्धार हुआ। आज यह मंदिर चौरासी महादेव यात्रा का एक आवश्यक पड़ाव है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana includes Sanyukteshwar Mahadev among the eighty-four self-manifested Shiva sites of Ujjain. According to sacred tradition, this Shivalinga appeared at a spot where divine powers converged. The existence of this temple in the Mahakal Area symbolises the spiritual unity of Ujjain. During the medieval period, collective devotee effort led to its renovation. The temple continues to serve as an essential stop on the Chaurasi Mahadeva pilgrimage today."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1832,
+                "lng":  75.7686
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-13.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+                       "en":  "This temple is approximately 0.2 km from Mahakaleshwar Temple. Ujjain Railway Station is about 2 km away, reachable by auto."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "संयुक्तेश्वर महादेव उज्जैन",
+                           "en":  "Sanyukteshwar Mahadev Ujjain"
+                       }
+}

@@ -1,0 +1,136 @@
+{
+    "slug":  "charubhuteshwar-mahadev",
+    "name":  {
+                 "hi":  "चारुभूतेश्वर महादेव",
+                 "en":  "Charubhuteshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (चारुभूतेश्वर रूप)",
+                  "en":  "Lord Shiva as Charubhuteshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "चारुभूतेश्वर महादेव उज्जैन के प्रसिद्ध चौरासी महादेव तीर्थ क्रम का एक पवित्र मंदिर है। \u0027चारुभूत\u0027 का अर्थ है सुंदर भूतों के ईश्वर — यह रूप शिव की भूतनाथ अर्थात प्रकृति के सभी तत्त्वों के अधिपति की भूमिका को दर्शाता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की आराधना से सांसारिक बाधाओं के निवारण का उल्लेख मिलता है।",
+                       "en":  "Charubhuteshwar Mahadev is a sacred shrine in the celebrated Chaurasi Mahadeva pilgrimage circuit of Ujjain. \u0027Charubhuta\u0027 refers to the Lord of beautiful beings — this form reflects Shiva\u0027s role as Bhutanatha, the sovereign over all elements of nature. The Avanti Khanda of the Skanda Purana mentions that worship at this Shivalinga removes worldly obstacles and afflictions."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवन्ति खण्ड में चारुभूतेश्वर महादेव उज्जैन के चौरासी स्वयंभू शिव-लिंगों में से एक के रूप में वर्णित हैं। शिव के भूतनाथ स्वरूप की उपासना भारतीय शैव परंपरा में अत्यंत प्राचीन है — वे पंचभूतों के अधीश्वर माने जाते हैं। उज्जैन जैसी पुण्य नगरी में इस रूप का प्राकट्य विशेष रूप से महत्त्वपूर्ण माना जाता है। मध्यकाल में मंदिर का जीर्णोद्धार भक्त समाज के सहयोग से हुआ। आज चौरासी महादेव की परिक्रमा में यह मंदिर अपना विशिष्ट स्थान बनाए हुए है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana describes Charubhuteshwar Mahadev as one of the eighty-four self-manifested Shivalingas of Ujjain. Worship of Shiva as Bhutanatha — the lord of the five primordial elements — is one of the most ancient traditions in Indian Shaiva philosophy. The manifestation of this form on the sacred soil of Ujjain is considered especially significant. During the medieval period, the temple was renovated through collective community effort. This temple continues to hold its distinctive position in the Chaurasi Mahadeva pilgrimage today."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1826,
+                "lng":  75.7678
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-14.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+                       "en":  "This temple is approximately 0.3 km from Mahakaleshwar Temple. Ujjain Railway Station is about 2 km away, reachable by auto or rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "चारुभूतेश्वर महादेव उज्जैन",
+                           "en":  "Charubhuteshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तों की मान्यता है कि चारुभूतेश्वर महादेव के दर्शन से पंचभूतों — पृथ्वी, जल, अग्नि, वायु और आकाश — से जुड़े दोषों का निवारण होता है। श्रद्धालु यहाँ बेलपत्र, धतूरा और गंगाजल अर्पित कर सांसारिक बाधाओं से मुक्ति की प्रार्थना करते हैं। श्रावण मास और महाशिवरात्रि पर चौरासी महादेव परिक्रमा करने वाले यात्री इस मंदिर में अवश्य रुककर अभिषेक करते हैं।",
+                         "en":  "Local devotees believe that darshan of Charubhuteshwar Mahadev resolves afflictions linked to the five elements — earth, water, fire, air and ether. Worshippers offer bel leaves, dhatura and Ganga water here while praying for relief from worldly obstacles. During Shravan month and on Mahashivratri, pilgrims undertaking the Chaurasi Mahadeva parikrama always pause here to perform abhishek."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? \u0027चारुभूत\u0027 शब्द का अर्थ है \u0027सुंदर भूतगणों के स्वामी\u0027 — यह शिव के उस रूप का स्मरण है जिसमें वे प्रकृति के सभी तत्त्वों के अधिपति माने जाते हैं। यह मंदिर उज्जैन के चौरासी स्वयंभू शिवलिंगों में गिना जाता है, जिनका विस्तृत वर्णन स्कंद पुराण के अवन्ति खण्ड में मिलता है।",
+                         "en":  "Did you know? The word \u0027Charubhuta\u0027 means \u0027Lord of the beautiful spirit-beings\u0027 — a form recalling Shiva\u0027s sovereignty over every element of nature. This shrine is counted among Ujjain\u0027s eighty-four self-manifested Shivalingas, each described in detail in the Avanti Khanda of the Skanda Purana."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर महाकाल क्षेत्र में स्थित होने के कारण महाकालेश्वर दर्शन के साथ ही इसका दर्शन सरल है। श्रावण मास, सोमवार और प्रदोष काल में भीड़ अधिक होती है, इसलिए प्रातः जल्दी पहुँचना उत्तम है। बेलपत्र, जल का लोटा और स्वच्छ पारंपरिक वस्त्र साथ लेकर आएँ; गर्भगृह में चमड़े की वस्तुएँ वर्जित हैं।",
+                      "en":  "Since the temple lies within the Mahakal precinct, it is easy to combine with Mahakaleshwar darshan. Crowds swell during Shravan, on Mondays and during Pradosh hours, so an early morning visit is best. Carry bel leaves, a small water pot and wear modest traditional clothing; leather items are not permitted inside the sanctum."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "चारुभूतेश्वर महादेव मंदिर का क्या महत्त्व है?",
+                                      "en":  "What is the significance of Charubhuteshwar Mahadev temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह मंदिर उज्जैन की प्रसिद्ध चौरासी महादेव परिक्रमा का एक पवित्र पड़ाव है। यहाँ शिव के भूतनाथ स्वरूप की उपासना होती है, जो पंचभूतों के अधीश्वर माने जाते हैं।",
+                                    "en":  "This temple is a sacred stop on Ujjain\u0027s celebrated Chaurasi Mahadeva pilgrimage circuit. Shiva is worshipped here in his Bhutanatha form, the sovereign of the five primordial elements."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "मंदिर महाकालेश्वर से कितनी दूर है?",
+                                      "en":  "How far is the temple from Mahakaleshwar?"
+                                  },
+                     "answer":  {
+                                    "hi":  "चारुभूतेश्वर महादेव मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है, इसलिए पैदल भी सरलता से पहुँचा जा सकता है।",
+                                    "en":  "Charubhuteshwar Mahadev temple is roughly 0.3 km from Mahakaleshwar Temple, so it can easily be reached on foot."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "दर्शन के लिए सबसे उत्तम समय कौन सा है?",
+                                      "en":  "What is the best time to visit for darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "प्रातः की मंगला आरती के पश्चात का समय शांत और भक्तिपूर्ण होता है। श्रावण सोमवार, महाशिवरात्रि और प्रदोष व्रत पर विशेष पूजा का अवसर मिलता है।",
+                                    "en":  "The quiet hours after the morning mangala aarti are ideal for unhurried darshan. Shravan Mondays, Mahashivratri and Pradosh vrat offer special opportunities for worship."
+                                }
+                 }
+             ]
+}

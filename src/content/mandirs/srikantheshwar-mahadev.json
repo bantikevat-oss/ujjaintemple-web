@@ -1,0 +1,92 @@
+{
+    "slug":  "srikantheshwar-mahadev",
+    "name":  {
+                 "hi":  "श्रीकण्ठेश्वर महादेव",
+                 "en":  "Srikantheshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (श्रीकण्ठ रूप — नीलकण्ठ)",
+                  "en":  "Lord Shiva as Srikantha (the beautiful-throated / Neelakantha)"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "श्रीकण्ठेश्वर महादेव उज्जैन के 84 महादेव तीर्थों में एक विशिष्ट और पूज्य स्थान है। \u0027श्रीकण्ठ\u0027 अर्थात नीलकण्ठ — समुद्र मंथन के समय विष पीकर जगत की रक्षा करने वाले शिव यहाँ विराजित हैं। स्कन्द पुराण के अवन्ति खण्ड में इस शिवलिंग की अपार महिमा का वर्णन है।",
+                       "en":  "Srikantheshwar Mahadev is a distinctive and revered site among the 84 Mahadevas of Ujjain. Srikantha — the beautiful-throated Neelakantha — refers to Shiva who drank the poison during the churning of the ocean to protect the world. The Avanti Khanda of the Skanda Purana describes the immense glory of this Shivalinga."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में श्रीकण्ठेश्वर महादेव को अवन्तिका के 84 महादेवों में महत्त्वपूर्ण स्थान दिया गया है। पौराणिक आख्यान के अनुसार समुद्र मंथन के समय निकले हलाहल विष को शिव ने अपने कण्ठ में धारण कर लिया था, जिससे उनका कण्ठ नीला पड़ गया और वे \u0027नीलकण्ठ\u0027 या \u0027श्रीकण्ठ\u0027 कहलाए। इस त्याग और करुणा की स्मृति में स्थापित यह शिवलिंग \u0027श्रीकण्ठेश्वर\u0027 के नाम से पूजित है। महाकाल वन में यह तीर्थ उज्जैन की शैव परम्परा का जीवंत अंग है। भक्त यहाँ स्वास्थ्य-लाभ और संकट-निवारण की कामना से दर्शन करते हैं।",
+                    "en":  "The Avanti Khanda of the Skanda Purana gives Srikantheshwar Mahadev an important place among the 84 Mahadevas of Avantika. According to Puranic legend, during the churning of the ocean (Samudra Manthan), Shiva consumed the deadly Halahala poison and held it in his throat, turning it blue — earning him the names Neelakantha and Srikantha. The Shivalinga established in memory of this supreme sacrifice and compassion is worshipped as Srikantheshwar. This tirtha in the Mahakal forest is a living part of Ujjain\u0027s Shaiva tradition. Devotees visit seeking good health and relief from afflictions."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1843,
+                "lng":  75.7698
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-4.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.2 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "श्रीकण्ठेश्वर महादेव उज्जैन",
+                           "en":  "Srikantheshwar Mahadev Ujjain"
+                       }
+}

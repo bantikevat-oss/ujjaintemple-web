@@ -1,0 +1,92 @@
+{
+    "slug":  "narmadeshwar-mahadev",
+    "name":  {
+                 "hi":  "नर्मदेश्वर महादेव",
+                 "en":  "Narmadeshwar Mahadev Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (नर्मदा शिवलिंग)",
+                  "en":  "Lord Shiva / Narmada Shivalinga"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — नर्मदा नदी से प्राप्त बाणलिंग",
+                           "en":  "Ancient — Banalinga sourced from River Narmada"
+                       },
+    "architectureStyle":  "Traditional",
+    "shortIntro":  {
+                       "hi":  "नर्मदेश्वर महादेव उज्जैन का एक विशेष शिव मंदिर है जहाँ नर्मदा नदी से प्राप्त प्राकृतिक बाणलिंग की पूजा होती है। नर्मदा नदी का प्रत्येक पाषाण स्वयंभू शिवलिंग माना जाता है और इन्हें \u0027बाणलिंग\u0027 कहते हैं। महाकाल क्षेत्र में स्थित इस मंदिर में दर्शन करने से नर्मदा परिक्रमा के समतुल्य पुण्य की प्राप्ति मानी जाती है।",
+                       "en":  "Narmadeshwar Mahadev is a special Shiva temple in Ujjain where a natural Banalinga sourced from the holy River Narmada is venerated. Every smooth pebble of the Narmada River is considered a self-manifested Shivalinga — known as a \u0027Banalinga\u0027. Visiting this temple in the Mahakal Area is believed to bestow merit equivalent to undertaking the entire Narmada Parikrama."
+                   },
+    "history":  {
+                    "hi":  "नर्मदेश्वर महादेव मंदिर में प्रतिष्ठित बाणलिंग नर्मदा नदी से प्राप्त एक प्राकृतिक शिवलिंग है। पुराणों में नर्मदा नदी को \u0027रेवा\u0027 भी कहा गया है और इसके तट पर या इसके जल से प्राप्त प्रत्येक शिलाखंड को शिव का साक्षात् स्वरूप माना जाता है। स्कंद पुराण में नर्मदा के बाणलिंगों की विशेष महिमा का उल्लेख है। उज्जैन में इस मंदिर की स्थापना से नर्मदा और शिप्रा नदी की दो पवित्र धाराओं का आध्यात्मिक संगम माना जाता है। यहाँ दर्शन मात्र से नर्मदा परिक्रमा का पुण्य प्राप्त होता है, ऐसी पौराणिक मान्यता है।",
+                    "en":  "The Shivalinga enshrined in Narmadeshwar Mahadev is a natural Banalinga sourced from the sacred River Narmada. The Puranas refer to the Narmada also as \u0027Rewa\u0027, and every stone found on its banks or within its waters is revered as a direct manifestation of Lord Shiva. The Skanda Purana elaborately praises the special glory of Narmada Banalingas. The establishment of this temple in Ujjain is regarded as a spiritual confluence of the two sacred rivers — Narmada and Shipra. Tradition holds that merely viewing this Shivalinga bestows merit equal to completing the full Narmada Parikrama pilgrimage."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1835,
+                "lng":  75.7691
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-3.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+                       "en":  "This temple is approximately 0.2 km from Mahakaleshwar Temple. Ujjain Railway Station is about 2 km away, reachable by auto or rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "नर्मदेश्वर महादेव उज्जैन",
+                           "en":  "Narmadeshwar Mahadev Ujjain"
+                       }
+}

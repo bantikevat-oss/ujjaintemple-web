@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "kedareshwar-mahadev",
+    "name":  {
+                 "hi":  "केदारेश्वर महादेव",
+                 "en":  "Kedareshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (केदारेश्वर रूप)",
+                  "en":  "Lord Shiva as Kedareshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कन्द पुराण काल",
+                           "en":  "Ancient — Skanda Purana era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "केदारेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ में वर्णित एक अत्यंत पावन शिवलिंग हैं। उत्तराखंड के केदारनाथ की भाँति, यह उज्जैन का केदार तीर्थ माना जाता है जो दक्षिण के भक्तों को हिमालयीन तीर्थ का पुण्य प्रदान करता है। महाकाल क्षेत्र में स्थित यह मंदिर सिद्धि और मुक्ति दोनों का केंद्र है।",
+                       "en":  "Kedareshwar Mahadev is a deeply sacred Shivalinga described in Ujjain\u0027s Chaurasi Mahadeva pilgrimage. Much like Kedarnath in Uttarakhand, this is considered Ujjain\u0027s Kedara tirtha, offering devotees of the Deccan the merit of a Himalayan pilgrimage. Situated in the Mahakal Area, this temple is a center for both spiritual attainment and liberation."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में केदारेश्वर महादेव का उल्लेख चौरासी महादेव श्रृंखला में है। केदार के रूप में शिव पर्वतराज के अधिपति हैं; उज्जैन में यह रूप उन भक्तों की आराधना के लिए प्रकट हुआ जो हिमालय की कठिन यात्रा करने में असमर्थ थे। पुराण के अनुसार इस शिवलिंग के दर्शन से वही फल मिलता है जो साक्षात् केदारनाथ दर्शन से मिलता है। मध्यकाल में परमार वंश के शासकों ने इस मंदिर का जीर्णोद्धार करवाया था। श्रावण और महाशिवरात्रि पर यहाँ दूर-दूर से तीर्थयात्री आते हैं।",
+                    "en":  "Kedareshwar Mahadev is mentioned in the Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. As Kedara, Shiva is the lord of the mountains; this form manifested in Ujjain for devotees unable to undertake the arduous Himalayan journey. According to the Purana, darshan of this Shivalinga bestows the same merit as a direct pilgrimage to Kedarnath. During the medieval period, rulers of the Paramara dynasty renovated this temple. Pilgrims from distant places visit during Shravan and Mahashivratri."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1842,
+                "lng":  75.7675
+            },
+    "photos":  [
+                   "/images/mandirs/kedareshwar-mahadev.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी उत्तर में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
+                       "en":  "Located approximately 0.3 km north of Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "केदारेश्वर महादेव उज्जैन",
+                           "en":  "Kedareshwar Mahadev Ujjain"
+                       }
+}

@@ -1,0 +1,92 @@
+{
+    "slug":  "sureshwar-mahadev",
+    "name":  {
+                 "hi":  "सुरेश्वर महादेव",
+                 "en":  "Sureshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (सुरेश्वर रूप — देवताओं के ईश्वर)",
+                  "en":  "Lord Shiva as Sureshwar (Lord of the Devas)"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "सुरेश्वर महादेव उज्जैन के 84 महादेव तीर्थों में शामिल एक गौरवशाली शिव मंदिर है। \u0027सुर\u0027 अर्थात देवताओं के ईश्वर के रूप में यहाँ शिव की आराधना होती है। स्कन्द पुराण के अवन्ति खण्ड में इस शिवलिंग की महिमा का वर्णन मिलता है।",
+                       "en":  "Sureshwar Mahadev is a distinguished Shiva temple among the 84 Mahadevas of Ujjain. Shiva is worshipped here as Sureshwar — the lord of the suras (gods). The Avanti Khanda of the Skanda Purana describes the glory of this Shivalinga."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में उज्जैन के 84 महादेवों का उल्लेख है जिनमें सुरेश्वर महादेव अत्यंत महत्त्वपूर्ण हैं। पौराणिक आख्यान के अनुसार देवताओं (सुरों) ने यहाँ भगवान शिव की उपासना की थी, तब से यह शिवलिंग \u0027सुरेश्वर\u0027 — सुरों के ईश्वर — के नाम से प्रसिद्ध हुआ। महाकाल वन के इस पावन स्थल पर दर्शन करने से दैवीय कृपा प्राप्त होती है। यह मंदिर उज्जैन की प्राचीन तीर्थ परम्परा का एक अटूट अंग है। श्रद्धालु विशेष रूप से श्रावण मास में यहाँ जलाभिषेक के लिए आते हैं।",
+                    "en":  "The Avanti Khanda of the Skanda Purana mentions the 84 Mahadevas of Ujjain, among whom Sureshwar Mahadev is of great importance. According to legend, the suras (gods) themselves worshipped Lord Shiva at this spot, after which the Shivalinga became known as Sureshwar — lord of the suras. Devotees who visit this sacred site in the Mahakal forest receive divine grace. The temple is an inseparable part of Ujjain\u0027s ancient pilgrimage tradition. Devotees particularly visit for jalaabhishek during the Shravan month."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.184,
+                "lng":  75.7697
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-6.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.2 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto or rickshaw in about 10 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "सुरेश्वर महादेव उज्जैन",
+                           "en":  "Sureshwar Mahadev Ujjain"
+                       }
+}

@@ -1,0 +1,136 @@
+{
+    "slug":  "bakreshwar-mahadev-ujjain",
+    "name":  {
+                 "hi":  "बकरेश्वर महादेव",
+                 "en":  "Bakreshwar Mahadev Ujjain (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (बकरेश्वर रूप)",
+                  "en":  "Lord Shiva as Bakreshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Bhairavgarh",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "बकरेश्वर महादेव उज्जैन के 84 महादेवों में सम्मिलित एक अतिप्राचीन शिव तीर्थ है जो भैरवगढ़ क्षेत्र में स्थित है। स्कन्द पुराण के अवन्ति खण्ड में इस शिवलिंग की अलौकिक महिमा का वर्णन है। यह स्थान उज्जैन की बाहरी पवित्र परिधि पर बसे महत्त्वपूर्ण शिव तीर्थों में गिना जाता है।",
+                       "en":  "Bakreshwar Mahadev is an ancient Shiva shrine among the 84 Mahadevas of Ujjain, located in the Bhairavgarh area. The Avanti Khanda of the Skanda Purana describes the extraordinary glory of this Shivalinga. This site is counted among the important Shiva tirthas on the outer sacred periphery of Ujjain."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में अवन्तिका क्षेत्र के 84 महादेवों में बकरेश्वर महादेव का उल्लेख मिलता है। भैरवगढ़ — उज्जैन का एक ऐतिहासिक क्षेत्र — में स्थित यह मंदिर शिप्रा तट के समीप है और प्राचीन काल से श्रद्धालुओं को आकर्षित करता आ रहा है। पौराणिक मान्यता के अनुसार इस शिवलिंग की पूजा से समस्त विघ्न-बाधाओं का नाश होता है। 84 महादेवों की तीर्थयात्रा में यह मंदिर उत्तरी उज्जैन के शिव तीर्थों का प्रतिनिधित्व करता है। यहाँ प्रतिवर्ष महाशिवरात्रि और श्रावण में विशेष उत्सव मनाए जाते हैं।",
+                    "en":  "The Avanti Khanda of the Skanda Purana mentions Bakreshwar Mahadev among the 84 Mahadevas of the Avantika region. Located in Bhairavgarh — a historic area of Ujjain — this temple is close to the Shipra riverbank and has attracted devotees since ancient times. According to tradition, worship of this Shivalinga removes all obstacles and afflictions. In the 84 Mahadevas pilgrimage, this temple represents the Shiva tirthas of northern Ujjain. Special festivals are celebrated here annually on Mahashivratri and during Shravan."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1905,
+                "lng":  75.7665
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-3.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 1.0 किमी उत्तर में भैरवगढ़ क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is located approximately 1.0 km north of Mahakaleshwar Jyotirlinga in the Bhairavgarh area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "बकरेश्वर महादेव उज्जैन",
+                           "en":  "Bakreshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तों की मान्यता है कि बकरेश्वर महादेव के दर्शन मात्र से ग्रह-दोष और मानसिक अशांति शांत हो जाती है। भैरवगढ़ के निवासी इन्हें क्षेत्ररक्षक शिव के रूप में पूजते हैं और सोमवार तथा प्रदोष व्रत पर विशेष रूप से जल, बेलपत्र और दूध अर्पित करते हैं। मान्यता है कि सच्चे मन से मांगी गई मनोकामना यहाँ शीघ्र पूर्ण होती है।",
+                         "en":  "Local devotees believe that mere darshan of Bakreshwar Mahadev calms planetary doshas and mental unrest. Residents of Bhairavgarh worship him as the guardian Shiva of the region, offering water, bilva leaves, and milk especially on Mondays and Pradosh Vrat. It is said that wishes made here with a sincere heart are fulfilled swiftly."
+                     },
+    "specialFacts":  {
+                         "hi":  "बकरेश्वर महादेव उज्जैन के 84 महादेवों की पवित्र परिक्रमा का एक महत्वपूर्ण पड़ाव है, जिसका वर्णन स्कन्द पुराण के अवन्ति खण्ड में मिलता है। ऐसा माना जाता है कि इस शिवलिंग का नामकरण एक प्राचीन ऋषि-कथा से जुड़ा है जिसमें भगवान शिव ने भक्त की रक्षा की थी।",
+                         "en":  "Bakreshwar Mahadev is a key stop on the sacred 84 Mahadevas parikrama of Ujjain, described in the Avanti Khanda of the Skanda Purana. The naming of this Shivalinga is believed to be linked to an ancient rishi legend in which Lord Shiva protected a devotee."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर में प्रवेश से पूर्व पैर धोकर साफ-सुथरे वस्त्र पहनें; पुरुषों के लिए धोती या पैजामा उत्तम रहता है। अभिषेक हेतु जल, दूध, बेलपत्र और सफेद पुष्प साथ ले जाएँ तथा सोमवार व श्रावण मास में भीड़ अधिक होने के कारण प्रातःकाल जल्दी दर्शन करें। गर्मियों में टोपी व पानी की बोतल साथ रखें क्योंकि भैरवगढ़ क्षेत्र में छाया कम है।",
+                      "en":  "Wash your feet and wear clean modest attire before entering; a dhoti or pyjama is ideal for men. Carry water, milk, bilva leaves, and white flowers for abhishek, and visit early morning on Mondays and during Shravan as crowds increase. In summer, keep a cap and water bottle handy since the Bhairavgarh area has limited shade."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "बकरेश्वर महादेव मंदिर कहाँ स्थित है?",
+                                      "en":  "Where is Bakreshwar Mahadev temple located?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह मंदिर उज्जैन के भैरवगढ़ क्षेत्र में, महाकालेश्वर ज्योतिर्लिंग से लगभग 1 किमी उत्तर में स्थित है।",
+                                    "en":  "The temple is located in the Bhairavgarh area of Ujjain, approximately 1 km north of Mahakaleshwar Jyotirlinga."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या बकरेश्वर महादेव 84 महादेवों में सम्मिलित है?",
+                                      "en":  "Is Bakreshwar Mahadev among the 84 Mahadevas?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, स्कन्द पुराण के अवन्ति खण्ड में वर्णित उज्जैन के 84 महादेवों की पवित्र परिक्रमा में बकरेश्वर महादेव सम्मिलित हैं।",
+                                    "en":  "Yes, Bakreshwar Mahadev is included in the sacred 84 Mahadevas parikrama of Ujjain described in the Avanti Khanda of the Skanda Purana."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "दर्शन का सर्वोत्तम समय कौन सा है?",
+                                      "en":  "What is the best time for darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "सोमवार, प्रदोष व्रत, महाशिवरात्रि और श्रावण मास दर्शन के लिए सर्वश्रेष्ठ माने जाते हैं; प्रातः आरती के समय वातावरण विशेष भक्तिमय रहता है।",
+                                    "en":  "Mondays, Pradosh Vrat, Mahashivratri, and the month of Shravan are considered the best times for darshan; the atmosphere is especially devotional during the morning aarti."
+                                }
+                 }
+             ]
+}

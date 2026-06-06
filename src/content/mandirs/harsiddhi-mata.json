@@ -1,0 +1,150 @@
+{
+  "slug": "harsiddhi-mata",
+  "name": {
+    "hi": "हरसिद्धि माता मंदिर",
+    "en": "Harsiddhi Mata Temple"
+  },
+  "deity": {
+    "hi": "हरसिद्धि माता (शक्ति पीठ)",
+    "en": "Harsiddhi Mata (Shakti Peeth)"
+  },
+  "templeType": "Shakti Peeth",
+  "locationArea": "Rudrasagar",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "देवी भागवत में उल्लेख · वर्तमान संरचना मराठा एवं विक्रमादित्य कालीन",
+    "en": "Mentioned in Devi Bhagavata · present structure from Maratha and Vikramaditya eras"
+  },
+  "architectureStyle": "Bhumija + Maratha",
+  "shortIntro": {
+    "hi": "हरसिद्धि माता 51 शक्ति पीठों में से एक — माता सती की कोहनी यहां गिरी थी। राजा विक्रमादित्य की कुलदेवी। मंदिर के सामने स्थित दो विशाल दीप स्तंभ — नवरात्र में जलते हुए अत्यंत मनोहारी दृश्य प्रस्तुत करते हैं।",
+    "en": "Harsiddhi Mata is one of 51 Shakti Peeths — where Mata Sati's elbow fell. The kuldevi (clan deity) of King Vikramaditya. The two massive lamp pillars in front of the temple — illuminated during Navratri — present an awe-inspiring sight."
+  },
+  "history": {
+    "hi": "देवी भागवत पुराण के अनुसार जब भगवान विष्णु ने सती के मृत शरीर को सुदर्शन चक्र से 51 भागों में काटा, तो उज्जैन में माता की कोहनी (कूर्पर) गिरी — इसलिए यह शक्ति पीठ बना। राजा विक्रमादित्य ने हरसिद्धि को अपनी कुलदेवी माना। मंदिर के सामने दो विशाल दीप स्तंभ हैं जिनमें कुल 1,011 दीये जलते हैं — नवरात्र की संध्या में यह दृश्य अद्भुत है।",
+    "en": "Per Devi Bhagavata Purana, when Lord Vishnu cut Sati's body into 51 pieces with the Sudarshan Chakra, her elbow (kurpara) fell in Ujjain — establishing this Shakti Peeth. King Vikramaditya revered Harsiddhi as his clan deity. Two massive lamp pillars in front of the temple hold 1,011 diyas — the Navratri evening illumination is breathtaking."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 5:00 – रात्रि 9:00",
+    "en": "5:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00",
+      "en": "5:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "5:00 AM – 9:00 PM (busy day)"
+    },
+    "wednesday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00",
+      "en": "5:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00",
+      "en": "5:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "5:00 AM – 9:00 PM (busy day)"
+    },
+    "saturday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00",
+      "en": "5:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00",
+      "en": "5:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 5:30 · मध्याह्न 12:00 · संध्या आरती 7:30",
+    "en": "Morning aarti 5:30 AM · Noon 12:00 PM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "नवरात्र — 9 दिन भव्य उत्सव, दीप स्तंभ प्रज्वलित · अष्टमी/नवमी — विशेष भीड़ · पूर्णिमा — मुख्य पूजा",
+    "en": "Navratri — 9-day grand festival with lit lamp pillars · Ashtami/Navami — peak crowds · Purnima — main puja"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क · दीप दान ₹51-501",
+    "en": "Free entry · diya donations ₹51-501"
+  },
+  "address": {
+    "hi": "हरसिद्धि माता मंदिर, रुद्र सागर के निकट, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Harsiddhi Mata Temple, near Rudra Sagar, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1837,
+    "lng": 75.7657
+  },
+  "photos": [
+    "/images/mandirs/harsiddhi-mata.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "नारियल, चुनरी, सिंदूर, गुड़ · प्रसाद की दुकानें मंदिर के बाहर",
+    "en": "Coconut, chunari, sindoor, jaggery · prasad shops outside temple"
+  },
+  "howToReach": {
+    "hi": "महाकालेश्वर से 500 मीटर (पैदल 7 मिनट) · रेलवे स्टेशन से 2 किमी",
+    "en": "500m from Mahakaleshwar (7 min walk) · 2 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "gadkalika-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में नवरात्र-जैसा वातावरण — हजारों दीप प्रज्वलित होते हैं · शक्ति पीठ दर्शन यात्रा का आवश्यक अंग",
+    "en": "During Simhastha, the atmosphere is Navratri-like with thousands of lit lamps · Shakti Peeth darshan is essential part of pilgrimage"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय मान्यता है कि हरसिद्धि माता के दर्शन के बिना महाकाल यात्रा अधूरी मानी जाती है — पहले माता, फिर महादेव। उज्जैनवासी मानते हैं कि सच्चे मन से चुनरी चढ़ाने पर माता मनोकामना पूर्ण करती हैं। राजा विक्रमादित्य की कथा से जुड़ी मान्यता है कि माता ने उन्हें अद्भुत शक्तियां प्रदान की थीं।",
+    "en": "Locals believe a Mahakal pilgrimage is incomplete without Harsiddhi Mata darshan — first the Mother, then Mahadev. Ujjain residents hold that offering a chunari with true devotion fulfills heartfelt wishes. A long-standing belief tied to King Vikramaditya's legend says the Mata granted him extraordinary powers and protection."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? मंदिर के सामने स्थित दो दीप स्तंभ लगभग 15 फीट ऊंचे हैं और इनमें कुल 1,011 दीये एक साथ प्रज्वलित होते हैं। यह दृश्य भारत के किसी भी अन्य शक्ति पीठ में देखने को नहीं मिलता।",
+    "en": "Did you know? The two lamp pillars in front of the temple are about 15 feet tall and hold a combined 1,011 diyas that are lit simultaneously. This spectacular sight is unique to Harsiddhi and not seen at any other Shakti Peeth in India."
+  },
+  "visitTips": {
+    "hi": "सिर ढकने के लिए चुनरी या दुपट्टा साथ रखें — मंदिर परिसर में पारंपरिक वस्त्र उचित माने जाते हैं। नवरात्र की संध्या आरती (लगभग 7:30 बजे) दीप स्तंभ प्रज्वलन के साथ सर्वोत्तम अनुभव देती है। मंगलवार और शुक्रवार को भीड़ अधिक रहती है, इसलिए सुबह जल्दी दर्शन करना उत्तम है।",
+    "en": "Carry a chunari or stole to cover your head — traditional attire is considered respectful within the temple complex. The Navratri evening aarti (around 7:30 PM) with the lit lamp pillars offers the most memorable experience. Tuesdays and Fridays see heavier crowds, so an early morning darshan is best for a peaceful visit."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दीप स्तंभ नवरात्र के अलावा कब जलते हैं?",
+        "en": "When are the lamp pillars lit apart from Navratri?"
+      },
+      "a": {
+        "hi": "विशेष पूर्णिमा, अष्टमी, और सिंहस्थ शाही स्नान दिवसों पर। श्रद्धालु शुल्क देकर भी दीप दान कर सकते हैं।",
+        "en": "On special Purnima, Ashtami, and Simhastha shahi snan days. Devotees can also sponsor lamp donations year-round."
+      }
+    },
+    {
+      "q": {
+        "hi": "हरसिद्धि माता मंदिर महाकालेश्वर से कितनी दूर है?",
+        "en": "How far is Harsiddhi Mata Temple from Mahakaleshwar?"
+      },
+      "a": {
+        "hi": "लगभग 500 मीटर — पैदल केवल 7 मिनट। अधिकांश श्रद्धालु पहले हरसिद्धि माता के दर्शन करते हैं, फिर महाकालेश्वर जाते हैं।",
+        "en": "About 500 meters — a 7-minute walk. Most devotees visit Harsiddhi Mata first and then proceed to Mahakaleshwar, following the traditional darshan sequence."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यह वास्तव में 51 शक्ति पीठों में से एक है?",
+        "en": "Is this truly one of the 51 Shakti Peeths?"
+      },
+      "a": {
+        "hi": "हां, देवी भागवत पुराण और तंत्र चूड़ामणि में उज्जैन का उल्लेख शक्ति पीठ के रूप में है, जहां माता सती की कोहनी गिरी थी।",
+        "en": "Yes, the Devi Bhagavata Purana and Tantra Chudamani both mention Ujjain as a Shakti Peeth where Mata Sati's elbow fell, confirming its sacred status."
+      }
+    }
+  ],
+  "lastVerified": "2026-05-27",
+  "primaryKeyword": {
+    "hi": "हरसिद्धि माता मंदिर उज्जैन",
+    "en": "Harsiddhi Mata Temple Ujjain"
+  }
+}

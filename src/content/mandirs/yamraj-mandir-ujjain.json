@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "yamraj-mandir-ujjain",
+    "name":  {
+                 "hi":  "यमराज मंदिर",
+                 "en":  "Yamraj Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "यमराज (मृत्यु के देवता)",
+                  "en":  "Yamraj (God of Death)"
+              },
+    "templeType":  "Historical",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient era"
+                       },
+    "architectureStyle":  "North Indian",
+    "shortIntro":  {
+                       "hi":  "उज्जैन के महाकाल क्षेत्र में स्थित यमराज मंदिर, मृत्यु के देवता और धर्मराज यमराज को समर्पित एक अत्यंत दुर्लभ और अद्वितीय मंदिर है। यह मंदिर जीवन, मृत्यु और कर्म के दार्शनिक सिद्धांत को साकार करता है। उज्जैन जैसे महाकाल की नगरी में यमराज की उपासना की यह परंपरा अत्यंत विशिष्ट और महत्त्वपूर्ण है।",
+                       "en":  "The Yamraj Mandir in the Mahakal area of Ujjain is an exceptionally rare and unique temple dedicated to Yamraj, the God of Death and Lord of Dharma. This temple embodies the philosophical principles of life, death, and karma. The tradition of worshipping Yamraj in Ujjain — the city of Mahakal — is particularly significant and distinctive."
+                   },
+    "history":  {
+                    "hi":  "यमराज को धर्मराज भी कहा जाता है क्योंकि वे न्याय और धर्म के पालक हैं। हिंदू दर्शन में महाकाल (काल के अधिपति शिव) और यमराज (मृत्यु के देवता) दोनों उज्जैन से गहरे रूप से जुड़े हैं। स्कंद पुराण के अवन्ती खंड में उज्जैन को \u0027महाकाल की नगरी\u0027 कहा गया है जहाँ काल और मृत्यु की आराधना मोक्ष का द्वार खोलती है। यमराज के भाई शनिदेव का मंदिर भी उज्जैन में है और दोनों की एक साथ उपासना विशेष फलदायी मानी जाती है। ऐसी मान्यता है कि इस मंदिर में सच्चे मन से पूजा करने वाले को अकाल मृत्यु का भय नहीं रहता।",
+                    "en":  "Yamraj is also called Dharmaraj as he is the upholder of justice and dharma. In Hindu philosophy, both Mahakal (Shiva as the lord of time) and Yamraj (god of death) are deeply connected to Ujjain. The Avanti Khanda of the Skanda Purana calls Ujjain the \u0027city of Mahakal\u0027, where worship of time and death opens the door to moksha. Yamraj\u0027s brother Shani also has a temple in Ujjain, and worshipping both together is considered especially auspicious. It is believed that sincere worship at this temple protects devotees from untimely death."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                 "en":  "7:00 AM – 8:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                         "en":  "7:00 AM – 8:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                           "en":  "7:00 AM – 8:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                          "en":  "7:00 AM – 8:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                          "en":  "7:00 AM – 8:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 7:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 7:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1823,
+                "lng":  75.7672
+            },
+    "photos":  [
+                   "/images/mandirs/yamraj-mandir-ujjain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर के निकट, महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10-12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is located near Mahakaleshwar Temple within the Mahakal precinct. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10-12 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "यमराज मंदिर उज्जैन",
+                           "en":  "Yamraj Mandir Ujjain"
+                       }
+}

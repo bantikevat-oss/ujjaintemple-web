@@ -1,0 +1,92 @@
+{
+    "slug":  "nandikeshwar-mahadev",
+    "name":  {
+                 "hi":  "नन्दिकेश्वर महादेव",
+                 "en":  "Nandikeshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव एवं नन्दी — नन्दिकेश्वर स्वरूप",
+                  "en":  "Lord Shiva / Nandi as Nandikeshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "नन्दिकेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में नन्दी के शिव-स्वरूप को समर्पित एक दुर्लभ मंदिर है। यहाँ शिवजी के परम भक्त नन्दी की आराधना शिव के ही अवतार के रूप में की जाती है। महाकाल क्षेत्र में इस मंदिर का धार्मिक एवं पौराणिक महत्त्व अतुलनीय है।",
+                       "en":  "Nandikeshwar Mahadev is a rare shrine in Ujjain\u0027s 84 Mahadevas series dedicated to Nandi in his Shiva-form. Here Nandi, the foremost devotee of Shiva, is venerated as an avatar of Shiva himself. The temple\u0027s religious and scriptural significance within the Mahakal area is immense."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में नन्दिकेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक प्रमुख स्थल के रूप में किया गया है। पौराणिक मान्यता के अनुसार नन्दी ने यहाँ घोर तपस्या कर भगवान शिव को प्रसन्न किया था और शिव ने उन्हें अपने गणाधिपति के रूप में स्वीकार कर यहाँ नन्दिकेश्वर नाम से विराजमान हुए। नन्दी को शिव का सबसे प्रिय द्वारपाल एवं वाहन माना जाता है, इसलिए इस मंदिर में उनकी उपासना विशेष फलदायी है। मान्यता है कि यहाँ माँगी हुई मनोकामनाएँ शीघ्र पूर्ण होती हैं। सावन मास में यहाँ विशेष भीड़ उमड़ती है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana describes Nandikeshwar Mahadev as a principal site within the 84 Mahadevas series. According to tradition, Nandi performed fierce austerities here to please Lord Shiva, who then accepted him as chief of his ganas and manifested here as Nandikeshwar. Since Nandi is regarded as Shiva\u0027s most beloved guardian and vehicle, worship at this temple is believed to be especially efficacious. Devotees say that prayers offered here are fulfilled swiftly. The shrine draws large gatherings during the month of Shravan."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1831,
+                "lng":  75.7688
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-1.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 0.4 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "नन्दिकेश्वर महादेव उज्जैन",
+                           "en":  "Nandikeshwar Mahadev Ujjain"
+                       }
+}

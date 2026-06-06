@@ -1,0 +1,135 @@
+﻿{
+    "slug":  "bhavani-mata-mandir",
+    "name":  {
+                 "hi":  "भवानी माता मंदिर",
+                 "en":  "Bhavani Mata Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "माँ भवानी",
+                  "en":  "Goddess Bhavani"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient era"
+                       },
+    "architectureStyle":  "North Indian",
+    "shortIntro":  {
+                       "hi":  "महाकाल क्षेत्र में स्थित भवानी माता मंदिर माँ पार्वती के भवानी स्वरूप को समर्पित एक पवित्र शक्ति पीठ है। भवानी शब्द का अर्थ है \u0027भव अर्थात् संसार की रचनाकर्ता\u0027 — यह देवी जीवन और सृष्टि की शक्ति का प्रतीक हैं। महाकालेश्वर की छाया में यह मंदिर अत्यंत धार्मिक महत्त्व रखता है।",
+                       "en":  "The Bhavani Mata Mandir in the Mahakal Area is a sacred Shakti shrine dedicated to the Bhavani form of Goddess Parvati. The name Bhavani signifies the creator of the world (Bhava), representing the divine energy of life and creation. Situated in the shadow of the Mahakaleshwar precinct, this temple holds immense religious significance."
+                   },
+    "history":  {
+                    "hi":  "माँ भवानी, जगदम्बा पार्वती का वह स्वरूप हैं जो शक्ति, करुणा और सृजन की प्रतीक हैं। छत्रपति शिवाजी महाराज भी माँ भवानी के परम भक्त थे और उनकी तलवार को भवानी तलवार कहा जाता था। उज्जैन जैसे पवित्र तीर्थ में माँ भवानी की उपासना की परंपरा अत्यंत प्राचीन है। महाकाल क्षेत्र में यह मंदिर उन श्रद्धालुओं के लिए विशेष आस्था का केंद्र है जो शिव और शक्ति दोनों की एक साथ उपासना करना चाहते हैं। नवरात्रि पर्व पर यहाँ माँ की विशेष शृंगार पूजा और भव्य आरती का आयोजन होता है।",
+                    "en":  "Goddess Bhavani is the form of Jagdamba Parvati who embodies power, compassion, and creation. Chhatrapati Shivaji Maharaj was a devoted worshipper of Bhavani Mata, and his sword was famously called the Bhavani sword. The tradition of worshipping Goddess Bhavani in the sacred city of Ujjain is deeply ancient. Located within the Mahakal precinct, this temple serves as a special centre of devotion for pilgrims who wish to worship both Shiva and Shakti together. During Navratri, elaborate shringar puja and grand aarti ceremonies are conducted here."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.182,
+                "lng":  75.7666
+            },
+    "photos": ["/images/mandirs/mahakali-mandir-ujjain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से पैदल दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10-15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is within walking distance of Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10-15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "localBeliefs":  {
+                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि माँ भवानी के दर्शन से शत्रुओं पर विजय और साहस की प्राप्ति होती है। ऐसा माना जाता है कि सच्चे मन से माँ की आराधना करने वालों की हर मनोकामना पूर्ण होती है। महिलाएँ विशेष रूप से वैवाहिक सुख, संतान सुख और परिवार की रक्षा के लिए यहाँ मन्नत मानती हैं।",
+                         "en":  "Local devotees believe that the darshan of Maa Bhavani grants victory over enemies and bestows immense courage. It is widely held that sincere prayers to the Goddess here fulfill every wish of the heart. Women particularly come to seek blessings for marital harmony, progeny, and the protection of their families."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? छत्रपति शिवाजी महाराज की प्रसिद्ध तलवार का नाम 'भवानी तलवार' इसी देवी के नाम पर रखा गया था, क्योंकि उन्हें माँ भवानी का साक्षात आशीर्वाद प्राप्त माना जाता था। उज्जैन के महाकाल क्षेत्र में स्थित यह मंदिर शिव और शक्ति की समन्वित उपासना का दुर्लभ संगम स्थल है।",
+                         "en":  "Did you know? Chhatrapati Shivaji Maharaj's legendary sword was named the 'Bhavani Sword' after this very goddess, as he was believed to have received her divine blessings. Located within the Mahakal precinct of Ujjain, this temple is a rare confluence where devotees can worship both Shiva and Shakti together."
+                     },
+    "visitTips":  {
+                      "hi":  "दर्शन के लिए शालीन एवं पारंपरिक वस्त्र पहनकर आएँ — महिलाएँ साड़ी या सलवार-सूट और पुरुष कुर्ता-पायजामा पसंद किए जाते हैं। नवरात्रि और मंगलवार-शुक्रवार को भीड़ अधिक रहती है, इसलिए प्रातःकाल दर्शन करना श्रेष्ठ है। माँ को अर्पित करने के लिए लाल चुनरी, नारियल, सिंदूर और फूल साथ लाएँ।",
+                      "en":  "Wear modest, traditional attire for darshan — sarees or salwar-suits for women and kurta-pajama for men are preferred. Crowds swell during Navratri and on Tuesdays and Fridays, so an early morning visit is ideal. Carry a red chunari, coconut, sindoor, and flowers to offer at the Goddess's feet."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "भवानी माता मंदिर का सबसे शुभ दर्शन समय कौन सा है?",
+                                      "en":  "What is the most auspicious time to visit Bhavani Mata Mandir?"
+                                  },
+                     "answer":  {
+                                    "hi":  "नवरात्रि के नौ दिन, मंगलवार और शुक्रवार माँ भवानी के दर्शन के लिए सबसे शुभ माने जाते हैं। प्रातःकालीन आरती के समय दर्शन करना अत्यंत फलदायी होता है।",
+                                    "en":  "The nine days of Navratri, along with Tuesdays and Fridays, are considered most auspicious for the darshan of Maa Bhavani. Visiting during the morning aarti is regarded as especially fruitful."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या भवानी माता मंदिर महाकालेश्वर मंदिर के पास है?",
+                                      "en":  "Is Bhavani Mata Mandir close to Mahakaleshwar Temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, यह मंदिर महाकाल क्षेत्र में स्थित है और महाकालेश्वर मंदिर से पैदल दूरी पर है। श्रद्धालु महाकाल दर्शन के बाद माँ भवानी के दर्शन कर शिव-शक्ति की समन्वित उपासना का पुण्य लाभ ले सकते हैं।",
+                                    "en":  "Yes, the temple lies within the Mahakal precinct and is within walking distance of Mahakaleshwar Temple. Devotees can complete their Mahakal darshan and then proceed to Maa Bhavani for the combined blessing of Shiva and Shakti."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "माँ भवानी को कौन सी भेंट अर्पित की जाती है?",
+                                      "en":  "What offerings are made to Maa Bhavani?"
+                                  },
+                     "answer":  {
+                                    "hi":  "माँ भवानी को लाल चुनरी, सिंदूर, नारियल, लाल फूल और मिठाई अर्पित की जाती है। कई श्रद्धालु अखंड ज्योति और शृंगार सामग्री भी चढ़ाते हैं।",
+                                    "en":  "Devotees typically offer a red chunari, sindoor, coconut, red flowers, and sweets to Maa Bhavani. Many also dedicate an akhand jyoti (eternal lamp) and shringar items as part of their prayers."
+                                }
+                 }
+             ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "भवानी माता मंदिर उज्जैन",
+                           "en":  "Bhavani Mata Mandir Ujjain"
+                       }
+}

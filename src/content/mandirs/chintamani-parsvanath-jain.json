@@ -1,0 +1,136 @@
+{
+    "slug":  "chintamani-parsvanath-jain",
+    "name":  {
+                 "hi":  "चिंतामणि पार्श्वनाथ जैन मंदिर",
+                 "en":  "Chintamani Parsvanath Jain Temple"
+             },
+    "deity":  {
+                  "hi":  "चिंतामणि पार्श्वनाथ (२३वें तीर्थंकर)",
+                  "en":  "Chintamani Parsvanath (23rd Tirthankara)"
+              },
+    "templeType":  "Jain",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकालीन युग",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Jain Nagara",
+    "shortIntro":  {
+                       "hi":  "चिंतामणि पार्श्वनाथ जैन मंदिर उज्जैन के महाकाल क्षेत्र में स्थित एक विशिष्ट जैन तीर्थ है। \u0027चिंतामणि\u0027 नाम से विख्यात यह मंदिर मान्यता के अनुसार समस्त चिंताओं का हरण करने वाला है। भगवान पार्श्वनाथ की यहाँ स्थापित प्रतिमा अत्यंत चमत्कारी मानी जाती है और दूर-दूर से भक्त दर्शन के लिए आते हैं।",
+                       "en":  "The Chintamani Parsvanath Jain Temple is a distinctive Jain pilgrimage site in the Mahakal area of Ujjain. Known as \u0027Chintamani\u0027 — meaning the wish-fulfilling gem — this temple is believed to remove all worldly worries and anxieties of devotees. The idol of Bhagwan Parsvanath installed here is considered highly miraculous, drawing pilgrims from far and wide."
+                   },
+    "history":  {
+                    "hi":  "भगवान पार्श्वनाथ जैन धर्म के २३वें तीर्थंकर हैं जिन्होंने वाराणसी के निकट केवलज्ञान प्राप्त किया। \u0027चिंतामणि\u0027 विशेषण उनकी उस शक्ति को इंगित करता है जिसके द्वारा वे अपने भक्तों की समस्त मनोकामनाएँ पूर्ण करते हैं। जैन परंपरा में कुछ पार्श्वनाथ प्रतिमाएँ विशेष चमत्कारी मानी जाती हैं और उन्हें विशेष नाम दिए जाते हैं — चिंतामणि इसी श्रेणी का नाम है। उज्जैन में महाकाल क्षेत्र के निकट इस मंदिर की स्थापना स्थानीय जैन श्रावक समाज ने की जो पीढ़ियों से यहाँ आस्थापूर्वक पूजा-अर्चना करता आ रहा है। पर्युषण पर्व और दीपावली पर यहाँ विशेष पूजन और रथयात्रा का आयोजन होता है।",
+                    "en":  "Bhagwan Parsvanath, the 23rd Tirthankara, attained Kevalgyan near Varanasi. The epithet \u0027Chintamani\u0027 — the wish-fulfilling jewel — refers to his power to fulfil the desires of devoted worshippers and remove their worldly anxieties. In Jain tradition, certain Parsvanath idols are regarded as especially miraculous and are given distinctive names; Chintamani is one such revered designation. This temple near the Mahakal area was established by the local Jain Shravak community, which has performed devotional worship here across generations. Special pujas and rath-yatras are organized here during Paryushana Parva and Diwali."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1828,
+                "lng":  75.768
+            },
+    "photos":  [
+                   "/images/mandirs/chintamani-parsvanath-jain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.4 किमी और उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी की दूरी पर स्थित है। महाकाल मार्ग पर पैदल या ऑटोरिक्शा से आसानी से पहुँचा जा सकता है।",
+                       "en":  "The temple is about 0.4 km from Mahakaleshwar Temple and approximately 2.5 km from Ujjain Railway Station. Easily reachable on foot or by auto-rickshaw along the Mahakal road."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "चिंतामणि पार्श्वनाथ जैन मंदिर उज्जैन",
+                           "en":  "Chintamani Parsvanath Jain Temple Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय जैन श्रावक समाज में मान्यता है कि चिंतामणि पार्श्वनाथ की प्रतिमा के समक्ष सच्चे मन से की गई प्रार्थना से समस्त मानसिक चिंताएँ दूर हो जाती हैं। भक्तजन विशेष रूप से व्यापार, संतान सुख और रोगमुक्ति की मनोकामना लेकर यहाँ आते हैं। ऐसा माना जाता है कि भगवान पार्श्वनाथ की आराधना से नाग-नागिन के दोष भी शांत होते हैं।",
+                         "en":  "The local Jain Shravak community believes that sincere prayers offered before the Chintamani Parsvanath idol dissolve all mental anxieties and worries. Devotees especially come here seeking blessings for business prosperity, progeny, and freedom from chronic ailments. It is also believed that worship of Bhagwan Parsvanath pacifies the sarpa-dosha (serpent affliction) in one\u0027s horoscope."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? भगवान पार्श्वनाथ के लांछन (प्रतीक) के रूप में सर्प अंकित होता है, और उनकी प्रतिमाओं के ऊपर सात फणों वाले शेषनाग की छाया दर्शायी जाती है। \u0027चिंतामणि\u0027 नाम संस्कृत के उस दिव्य रत्न से लिया गया है जो सभी मनोकामनाएँ पूर्ण करता है।",
+                         "en":  "Did you know? Bhagwan Parsvanath\u0027s lanchan (symbol) is the serpent, and his idols are typically shown sheltered by the seven-hooded Sheshanag canopy. The name \u0027Chintamani\u0027 is derived from the divine wish-fulfilling jewel of Sanskrit mythology that grants all desires of its possessor."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर में प्रवेश से पूर्व चमड़े की वस्तुएँ (बेल्ट, पर्स) बाहर रखें क्योंकि जैन मंदिरों में इनका प्रवेश वर्जित है। शुद्ध एवं स्नान किए हुए वस्त्र पहनकर ही गर्भगृह तक जाएँ। प्रातःकालीन समय दर्शन के लिए सर्वश्रेष्ठ है तथा पर्युषण पर्व के दिनों में विशेष भीड़ रहती है।",
+                      "en":  "Remove leather items (belts, wallets, bags) before entering as these are prohibited in Jain temples. Wear clean, freshly bathed clothes when approaching the inner sanctum. Early morning hours are best for peaceful darshan, while the Paryushana Parva period sees significant crowds and special rituals."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "चिंतामणि पार्श्वनाथ कौन हैं?",
+                                      "en":  "Who is Chintamani Parsvanath?"
+                                  },
+                     "answer":  {
+                                    "hi":  "चिंतामणि पार्श्वनाथ जैन धर्म के २३वें तीर्थंकर भगवान पार्श्वनाथ का ही एक विशेष चमत्कारी रूप है। \u0027चिंतामणि\u0027 का अर्थ है मनोकामना पूर्ण करने वाला दिव्य रत्न।",
+                                    "en":  "Chintamani Parsvanath is a specially revered miraculous form of Bhagwan Parsvanath, the 23rd Tirthankara of Jainism. The word \u0027Chintamani\u0027 means the divine wish-fulfilling jewel that grants all desires."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या गैर-जैन भक्त भी दर्शन कर सकते हैं?",
+                                      "en":  "Can non-Jain devotees also visit this temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, सभी धर्मों के श्रद्धालु यहाँ श्रद्धापूर्वक दर्शन कर सकते हैं। बस जैन मंदिर के नियमों का पालन करना आवश्यक है — चमड़े की वस्तुएँ बाहर रखें और शुद्ध वस्त्र धारण करें।",
+                                    "en":  "Yes, devotees of all faiths are welcome to visit with reverence. Visitors only need to follow the rules of Jain temples — leave leather items outside and wear clean attire when entering."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "महाकालेश्वर दर्शन के साथ इस मंदिर के दर्शन कैसे करें?",
+                                      "en":  "How can I combine this visit with Mahakaleshwar darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह मंदिर महाकालेश्वर से मात्र 0.4 किमी दूर है, इसलिए दोनों दर्शन एक ही दिन सुगमता से किए जा सकते हैं। महाकाल दर्शन के पश्चात पैदल यहाँ पहुँचा जा सकता है।",
+                                    "en":  "This temple is just 0.4 km from Mahakaleshwar Temple, making it easy to visit both on the same day. You can simply walk over to this temple after completing Mahakal darshan."
+                                }
+                 }
+             ]
+}

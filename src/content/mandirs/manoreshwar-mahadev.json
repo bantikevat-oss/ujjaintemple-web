@@ -1,0 +1,92 @@
+{
+    "slug":  "manoreshwar-mahadev",
+    "name":  {
+                 "hi":  "मनोरेश्वर महादेव",
+                 "en":  "Manoreshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (मनोरेश्वर रूप — मन के ईश्वर)",
+                  "en":  "Lord Shiva as Manoreshwar (Lord of the Mind)"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "मनोरेश्वर महादेव उज्जैन की 84 महादेव परम्परा का एक अमूल्य तीर्थ है, जहाँ भगवान शिव \u0027मन के ईश्वर\u0027 रूप में पूजित हैं। यह मंदिर महाकाल क्षेत्र में स्थित है और स्कन्द पुराण के अवन्ति खण्ड में वर्णित है। मानसिक शांति और इच्छापूर्ति के लिए भक्त यहाँ विशेष रूप से आते हैं।",
+                       "en":  "Manoreshwar Mahadev is a priceless tirtha in the 84 Mahadevas tradition of Ujjain, where Lord Shiva is worshipped as the lord of the mind. Located in the Mahakal Area, it is described in the Avanti Khanda of the Skanda Purana. Devotees visit particularly for mental peace and fulfilment of desires."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में अवन्तिका के 84 महादेवों में मनोरेश्वर महादेव को विशिष्ट स्थान प्रदान किया गया है। \u0027मनस्\u0027 अर्थात मन के स्वामी शिव यहाँ भक्तों की मनोकामनाएँ पूर्ण करते हैं, इसीलिए इस शिवलिंग का नाम \u0027मनोरेश्वर\u0027 पड़ा। महाकाल वन में विराजमान यह लिंग उज्जैन की उस पावन परम्परा का हिस्सा है जहाँ प्रत्येक शिवलिंग किसी न किसी दिव्य शक्ति का प्रतीक है। परम्परागत तीर्थयात्री 84 महादेवों की यात्रा में इस मंदिर के दर्शन को अत्यंत फलदायी मानते हैं। श्रावण मास में यहाँ विशेष पूजा-अर्चना की जाती है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana gives a distinguished place to Manoreshwar Mahadev among the 84 Mahadevas of Avantika. Shiva as the lord of the mind (manas) fulfils devotees\u0027 wishes here, giving the Shivalinga the name Manoreshwar. This linga, situated in the Mahakal forest, is part of Ujjain\u0027s sacred tradition where each Shivalinga symbolises a divine power. Traditional pilgrims consider darshan at this temple during the 84 Mahadevas yatra to be highly auspicious. Special worship is performed here during the Shravan month."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1829,
+                "lng":  75.7681
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-13.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 12 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "मनोरेश्वर महादेव उज्जैन",
+                           "en":  "Manoreshwar Mahadev Ujjain"
+                       }
+}

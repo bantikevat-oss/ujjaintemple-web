@@ -1,0 +1,92 @@
+{
+    "slug":  "mrityunjayeshwar-mahadev",
+    "name":  {
+                 "hi":  "मृत्युञ्जयेश्वर महादेव",
+                 "en":  "Mrityunjayeshwar Mahadev Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — महामृत्युञ्जय",
+                  "en":  "Lord Shiva as Mrityunjaya"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पौराणिक काल (स्कंद पुराण)",
+                           "en":  "Puranic era (Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "मृत्युञ्जयेश्वर महादेव उज्जैन में भगवान शिव के महामृत्युञ्जय स्वरूप को समर्पित एक दिव्य तीर्थ है। यहाँ शिव मृत्यु पर विजेता के रूप में पूजित होते हैं और रोग, दुर्घटना तथा अकाल मृत्यु से रक्षा के लिए इनकी आराधना की जाती है। महाकाल नगरी में स्थित यह मंदिर महामृत्युञ्जय जाप और अनुष्ठान के लिए विशेष महत्वपूर्ण है।",
+                       "en":  "Mrityunjayeshwar Mahadev is a divine shrine in Ujjain dedicated to the Mahamrityunjaya form of Lord Shiva. Shiva is worshipped here as the conqueror of death, and devotees pray to him for protection from disease, accidents, and untimely death. Located in the city of Mahakal, this temple is especially important for Mahamrityunjaya chanting and ritual ceremonies."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवंति खंड में मृत्युञ्जयेश्वर महादेव को उज्जैन के 84 महादेव तीर्थों में मृत्यु-विजय की अद्भुत शक्ति वाला तीर्थ बताया गया है। पौराणिक कथा के अनुसार, ऋषि मृकंडु के पुत्र मार्कंडेय ने उज्जैन में ही शिव की आराधना कर यमराज पर विजय प्राप्त की थी, और इसी के स्मरण में मृत्युञ्जयेश्वर लिंग की प्रतिष्ठा हुई। महाकाल की नगरी में यह मंदिर यह संदेश देता है कि शिव भक्त के लिए काल भी पराजित हो जाता है। मध्यकाल में इस मंदिर का जीर्णोद्धार किया गया और नियमित रुद्राभिषेक की परंपरा आरंभ हुई। आज भी यहाँ लखबत्ती उत्सव और महाशिवरात्रि पर विशाल आयोजन होते हैं।",
+                    "en":  "The Skanda Purana\u0027s Avanti Khanda describes Mrityunjayeshwar Mahadev as the shrine among Ujjain\u0027s 84 Mahadevas that holds extraordinary power over the conquest of death. According to Puranic legend, Markandeya, son of sage Mrikandu, worshipped Shiva in Ujjain and defeated Yama himself, and in memory of this event the Mrityunjayeshwar Linga was consecrated. Situated in the city of Mahakal, this temple conveys the message that even time is defeated for a devotee of Shiva. In medieval times the temple was renovated and the tradition of regular Rudrabhishek was established. Even today, grand celebrations including the Lakhbatti festival and Mahashivaratri are held here."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                 "en":  "5:30 AM – 9:30 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                        "en":  "5:30 AM – 9:30 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                         "en":  "5:30 AM – 9:30 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                           "en":  "5:30 AM – 9:30 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                          "en":  "5:30 AM – 9:30 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                        "en":  "5:30 AM – 9:30 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                          "en":  "5:30 AM – 9:30 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                        "en":  "5:30 AM – 9:30 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:00 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:00 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1841,
+                "lng":  75.7696
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-15.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.35 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.35 km from Mahakaleshwar Jyotirlinga. It takes about 15 minutes from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "मृत्युञ्जयेश्वर महादेव उज्जैन",
+                           "en":  "Mrityunjayeshwar Mahadev Ujjain"
+                       }
+}

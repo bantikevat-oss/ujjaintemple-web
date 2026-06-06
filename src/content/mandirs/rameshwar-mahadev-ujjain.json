@@ -1,0 +1,92 @@
+{
+    "slug":  "rameshwar-mahadev-ujjain",
+    "name":  {
+                 "hi":  "रामेश्वर महादेव",
+                 "en":  "Rameshwar Mahadev Ujjain (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (रामेश्वर रूप)",
+                  "en":  "Lord Shiva as Rameshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Rudrasagar",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कन्द पुराण काल",
+                           "en":  "Ancient — Skanda Purana era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "रामेश्वर महादेव उज्जैन के रुद्रसागर क्षेत्र में स्थित चौरासी महादेव श्रृंखला के एक अत्यंत पवित्र शिवलिंग हैं। भगवान राम द्वारा पूजित शिव के इस रूप का नाम राम और ईश्वर के संगम से बना है। यह मंदिर राम-भक्तों और शिव-भक्तों दोनों के लिए समान रूप से पूज्य है।",
+                       "en":  "Rameshwar Mahadev is a supremely sacred Shivalinga of the Chaurasi Mahadeva series, situated in the Rudrasagar area of Ujjain. The name of this form of Shiva worshipped by Lord Rama is formed from the confluence of Rama and Ishvara. This temple is equally revered by devotees of Rama and Shiva alike."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में रामेश्वर महादेव का उल्लेख चौरासी महादेव की श्रृंखला में मिलता है। पुराण में वर्णित कथा के अनुसार भगवान श्रीराम ने वनवास काल में या लंका विजय के पश्चात् उज्जैन में रुद्रसागर के तट पर शिव की आराधना की थी, जिससे इस शिवलिंग को \u0027रामेश्वर\u0027 नाम प्राप्त हुआ। यह मंदिर शैव और वैष्णव दोनों परंपराओं के मिलन का प्रतीक है। रुद्रसागर के तट पर स्थित होने से यहाँ का वातावरण अत्यंत शांतिपूर्ण और ध्यान-योग्य है। रामनवमी और महाशिवरात्रि दोनों पर्वों पर यहाँ विशेष आयोजन होते हैं।",
+                    "en":  "Rameshwar Mahadev is mentioned in the Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. According to the Puranic narrative, Lord Shri Rama worshipped Shiva on the banks of Rudrasagar in Ujjain — either during his exile or after his victory over Lanka — giving this Shivalinga the name \u0027Rameshwar\u0027. This temple is a symbol of the meeting of both the Shaiva and Vaishnava traditions. Being situated on the banks of Rudrasagar, the atmosphere here is exceptionally peaceful and conducive to meditation. Special observances are held here on both Ram Navami and Mahashivratri."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "रुद्रसागर तट, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Rudrasagar Bank, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1855,
+                "lng":  75.7628
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-11.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 1 किमी उत्तर-पश्चिम में रुद्रसागर के तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2.5 किमी।",
+                       "en":  "Located approximately 1 km northwest of Mahakaleshwar Temple on the banks of Rudrasagar. About 2.5 km from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "रामेश्वर महादेव उज्जैन",
+                           "en":  "Rameshwar Mahadev Ujjain"
+                       }
+}

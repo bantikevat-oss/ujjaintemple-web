@@ -1,0 +1,118 @@
+{
+  "slug": "nagchandreshwar-mandir",
+  "name": {
+    "hi": "नागचंद्रेश्वर मंदिर",
+    "en": "Nagchandreshwar Temple"
+  },
+  "deity": {
+    "hi": "भगवान शिव (नाग-सर्प पर विराजित)",
+    "en": "Lord Shiva (seated on serpent)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "महाकाल मंदिर की तीसरी मंजिल पर स्थित दुर्लभ मंदिर — वर्ष में केवल नागपंचमी पर एक दिन खुलता है। शिव नागराज के फन पर विराजमान हैं।",
+    "en": "Rare temple on the third floor of Mahakaleshwar — opens only one day per year on Nag Panchami. Shiva sits atop a serpent throne."
+  },
+  "history": {
+    "hi": "11वीं सदी का यह दुर्लभ मंदिर वर्ष में केवल नागपंचमी (श्रावण शुक्ल पंचमी) पर एक दिन के लिए खुलता है। शिव नाग के फन पर बैठे हैं — विश्व का एकमात्र ऐसा मंदिर।",
+    "en": "This 11th-century rare temple opens only on Nag Panchami (Shravan Shukla Panchami) each year. Shiva is depicted seated on a serpent throne — the only such temple in the world."
+  },
+  "darshanTimingSummary": {
+    "hi": "केवल नागपंचमी पर 24 घंटे",
+    "en": "Only on Nag Panchami — 24 hours"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "tuesday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "wednesday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "thursday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "friday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "saturday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    },
+    "sunday": {
+      "hi": "केवल नागपंचमी पर 24 घंटे",
+      "en": "Only on Nag Panchami — 24 hours"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "नागपंचमी पर 5+ लाख श्रद्धालु",
+    "en": "Over 500,000 devotees on Nag Panchami"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "नागचंद्रेश्वर मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Nagchandreshwar Temple, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/nagchandreshwar-mandir.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "नागचंद्रेश्वर मंदिर उज्जैन",
+    "en": "Nagchandreshwar Temple Ujjain"
+  }
+}

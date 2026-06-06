@@ -1,0 +1,128 @@
+{
+  "slug": "kal-bhairav-ujjain",
+  "name": {
+    "hi": "काल भैरव मंदिर",
+    "en": "Kal Bhairav Temple Ujjain"
+  },
+  "deity": {
+    "hi": "काल भैरव (शिव)",
+    "en": "Kal Bhairav (Form of Shiva)"
+  },
+  "templeType": "Bhairav",
+  "locationArea": "Bhairavgarh",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "स्कंद पुराण में उल्लेख · वर्तमान संरचना 18वीं सदी मराठा युग",
+    "en": "Mentioned in Skanda Purana · present structure rebuilt in 18th century Maratha era"
+  },
+  "architectureStyle": "Maratha",
+  "shortIntro": {
+    "hi": "काल भैरव उज्जैन के 8 भैरवों में से प्रमुख और 'क्षेत्रपाल' माने जाते हैं — महाकाल नगरी के रक्षक। मंदिर की सबसे अनोखी विशेषता है कि भगवान को मदिरा (शराब) चढ़ाई जाती है और भोग वास्तव में स्वीकार करते हैं — आज भी इसका रहस्य अनसुलझा है।",
+    "en": "Kal Bhairav is the chief among 8 Bhairavs of Ujjain and revered as 'Kshetrapala' — the protector of Mahakal city. The temple's most unique feature: liquor is offered to the deity and the offering is mysteriously accepted — a phenomenon that continues to puzzle visitors today."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवंतिखंड में काल भैरव का उल्लेख है। मान्यता है कि भगवान शिव ने यहां अपने उग्र रूप में निवास किया ताकि अवंतिका नगरी की रक्षा हो सके। मूल मंदिर अति प्राचीन है, वर्तमान संरचना मराठा शासन काल (18वीं सदी) में पुनर्निर्मित हुई। मंदिर की मूर्ति में सिर पर चांदी का मुकुट, बड़ी आंखें, और काले शरीर पर सिंदूर का लेप है। उज्जैन में मान्यता है — महाकाल दर्शन तभी पूर्ण माने जाते हैं जब काल भैरव के भी दर्शन हों।",
+    "en": "The Avantikhand of Skanda Purana mentions Kal Bhairav. Tradition holds Lord Shiva took this fierce form to protect Avantika. The original temple is ancient; the present structure was rebuilt during Maratha rule (18th century). The idol features a silver crown, large eyes, and a sindoor-coated black body. Local belief: a darshan at Mahakal is considered incomplete without visiting Kal Bhairav."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 6:00 – रात्रि 9:00",
+    "en": "6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "6:00 AM – 9:00 PM (busy day)"
+    },
+    "wednesday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "6:00 AM – 9:00 PM (busy day)"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 7:00 · संध्या आरती 7:00",
+    "en": "Morning aarti 7:00 AM · Evening aarti 7:00 PM"
+  },
+  "specialOccasions": {
+    "hi": "भैरव अष्टमी (कार्तिक माह) — मुख्य उत्सव · रविवार और मंगलवार विशेष भीड़",
+    "en": "Bhairav Ashtami (Kartik month) — main festival · Sundays and Tuesdays are peak crowd days"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क · मदिरा प्रसाद बाहर की दुकानों से ₹30-100 में उपलब्ध",
+    "en": "Free entry · Liquor offering (prasad) available at shops outside for ₹30-100"
+  },
+  "address": {
+    "hi": "काल भैरव मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456010",
+    "en": "Kal Bhairav Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456010"
+  },
+  "geo": {
+    "lat": 23.2126,
+    "lng": 75.7916
+  },
+  "photos": [
+    "/images/mandirs/kal-bhairav-ujjain.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "मदिरा (विशेष भोग) · नारियल, फूल, सिंदूर · प्रसाद की दुकानें बाहर हैं",
+    "en": "Liquor (unique offering) · coconut, flowers, sindoor · prasad shops outside the temple"
+  },
+  "howToReach": {
+    "hi": "महाकालेश्वर से 15 किमी (15-20 मिनट कैब/ऑटो) · रेलवे स्टेशन से 8.5 किमी · पार्किंग उपलब्ध",
+    "en": "15 km from Mahakaleshwar (15-20 min by cab/auto) · 8.5 km from railway station · parking available"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "mangalnath",
+    "vikrant-bhairav"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ यात्रियों के लिए महाकाल दर्शन के बाद अनिवार्य पड़ाव — पूरी यात्रा पूर्ण मानी जाती है।",
+    "en": "An essential stop for Simhastha pilgrims after Mahakal darshan — the journey is considered complete only after visiting Kal Bhairav."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "क्या काल भैरव को मदिरा (शराब) चढ़ाना सही है?",
+        "en": "Is offering liquor to Kal Bhairav appropriate?"
+      },
+      "a": {
+        "hi": "यह सदियों पुरानी परंपरा है, स्कंद पुराण में उल्लिखित। यह तांत्रिक रूप के लिए विशेष भोग है — अन्य देवताओं के लिए नहीं।",
+        "en": "It is a centuries-old tradition mentioned in Skanda Purana. This offering is specific to the tantric form of Bhairav — not applicable to other deities."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या महाकाल दर्शन के बिना काल भैरव अकेले दर्शन कर सकते हैं?",
+        "en": "Can I visit Kal Bhairav without visiting Mahakal first?"
+      },
+      "a": {
+        "hi": "तकनीकी रूप से हाँ, लेकिन परंपरा के अनुसार महाकाल पहले फिर काल भैरव — दोनों मिलकर ही उज्जैन यात्रा पूर्ण होती है।",
+        "en": "Technically yes, but tradition recommends Mahakal first, then Kal Bhairav — together they complete the Ujjain pilgrimage."
+      }
+    }
+  ],
+  "lastVerified": "2026-05-27",
+  "primaryKeyword": {
+    "hi": "काल भैरव मंदिर उज्जैन समय",
+    "en": "Kal Bhairav Temple Ujjain timing"
+  }
+}

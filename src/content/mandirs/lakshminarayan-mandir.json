@@ -1,0 +1,118 @@
+{
+  "slug": "lakshminarayan-mandir",
+  "name": {
+    "hi": "लक्ष्मीनारायण मंदिर",
+    "en": "Lakshminarayan Temple"
+  },
+  "deity": {
+    "hi": "भगवान विष्णु + लक्ष्मी",
+    "en": "Lord Vishnu + Lakshmi"
+  },
+  "templeType": "Krishna",
+  "locationArea": "City Center",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "विष्णु और लक्ष्मी का संयुक्त मंदिर। धन-समृद्धि और गृह-सुख हेतु प्रसिद्ध।",
+    "en": "Joint temple of Vishnu and Lakshmi. Famous for wealth, prosperity, and household peace."
+  },
+  "history": {
+    "hi": "वैष्णव परंपरा का प्रमुख केन्द्र। दीपावली पर विशेष पूजा।",
+    "en": "Major Vaishnav center. Special worship during Diwali."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 5:30 – रात्रि 10:00",
+    "en": "5:30 AM – 10:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 5:30 – रात्रि 10:00",
+      "en": "5:30 AM – 10:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "दीपावली, जन्माष्टमी",
+    "en": "Diwali, Janmashtami"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "लक्ष्मीनारायण मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Lakshminarayan Temple, City Center, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/gopal-mandir-ujjain.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "लक्ष्मीनारायण मंदिर उज्जैन",
+    "en": "Lakshminarayan Mandir Ujjain"
+  }
+}

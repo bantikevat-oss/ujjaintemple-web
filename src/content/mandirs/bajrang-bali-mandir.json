@@ -1,0 +1,136 @@
+{
+    "slug":  "bajrang-bali-mandir",
+    "name":  {
+                 "hi":  "बजरंग बली मंदिर",
+                 "en":  "Bajrang Bali Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "बजरंग बली (भगवान हनुमान)",
+                  "en":  "Bajrang Bali (Lord Hanuman)"
+              },
+    "templeType":  "Ram",
+    "locationArea":  "Nanakheda",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "परंपरागत काल",
+                           "en":  "Traditional era"
+                       },
+    "architectureStyle":  "Nagara",
+    "shortIntro":  {
+                       "hi":  "बजरंग बली मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित एक लोकप्रिय हनुमान मंदिर है। बजरंग बली नाम हनुमान जी के उस वज्र के समान दृढ़ और बलशाली स्वरूप का प्रतीक है। यह मंदिर क्षेत्र के निवासियों की अटूट आस्था का केंद्र है।",
+                       "en":  "Bajrang Bali Mandir is a popular Hanuman temple located in the Nanakheda area of Ujjain. The name Bajrang Bali refers to Hanuman\u0027s form as powerful and firm as a thunderbolt. This temple is a centre of unwavering faith for the residents of the surrounding locality."
+                   },
+    "history":  {
+                    "hi":  "बजरंग बली नाम हनुमान जी के वज्रांग अर्थात् वज्र के समान अंगों वाले स्वरूप से लिया गया है। उज्जैन में हनुमान उपासना की परंपरा अत्यंत प्राचीन है और यहाँ के अनेक क्षेत्रों में हनुमान मंदिर स्थापित हैं। नानाखेड़ा क्षेत्र का यह मंदिर स्थानीय समुदाय की सांस्कृतिक और धार्मिक जीवन का केंद्र रहा है। मंगलवार एवं शनिवार को यहाँ विशेष भजन-कीर्तन एवं सुंदरकाण्ड पाठ का आयोजन किया जाता है। रामनवमी एवं हनुमान जयंती पर यहाँ विशाल उत्सव मनाया जाता है।",
+                    "en":  "The name Bajrang Bali is derived from Vajrang, meaning one whose limbs are as strong as a thunderbolt, a reference to Hanuman\u0027s immense strength. The tradition of Hanuman worship in Ujjain is extremely ancient, and Hanuman temples are established in many areas of the city. This temple in Nanakheda has been the cultural and religious heart of the local community. Special bhajan-kirtan and Sundarkand recitations are organised here on Tuesdays and Saturdays. Grand festivals are celebrated on Ram Navami and Hanuman Jayanti."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                         "en":  "5:30 AM – 9:30 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                          "en":  "5:30 AM – 9:30 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1758,
+                "lng":  75.7795
+            },
+    "photos":  [
+                   "/images/mandirs/bajrang-bali-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर नानाखेड़ा क्षेत्र में स्थित है। महाकालेश्वर मंदिर से ऑटो-रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is located approximately 2 km from Ujjain Railway Station in the Nanakheda area. It can be reached in about 15 minutes by auto-rickshaw from Mahakaleshwar Mandir."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "बजरंग बली मंदिर उज्जैन",
+                           "en":  "Bajrang Bali Mandir Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तों की मान्यता है कि बजरंग बली के दर्शन से भय, संकट और बुरी शक्तियों से रक्षा होती है। मंगलवार और शनिवार को सिंदूर-चोला अर्पित करने से हनुमान जी प्रसन्न होकर मनोकामनाएँ पूर्ण करते हैं। नानाखेड़ा क्षेत्र के निवासी नौकरी, परीक्षा एवं स्वास्थ्य संबंधी संकल्प लेकर यहाँ सुंदरकाण्ड पाठ कराते हैं।",
+                         "en":  "Local devotees believe that the darshan of Bajrang Bali offers protection from fear, hardships, and negative forces. Offering sindoor and chola on Tuesdays and Saturdays is said to please Hanuman ji and fulfil sincere wishes. Residents of the Nanakheda area frequently sponsor Sundarkand recitations here for success in jobs, examinations, and good health."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? \u0027बजरंग\u0027 शब्द संस्कृत \u0027वज्रांग\u0027 से बना है, जिसका अर्थ है वज्र के समान दृढ़ शरीर वाला। उज्जैन में अनेक हनुमान मंदिर हैं, परंतु नानाखेड़ा का यह मंदिर रिहायशी क्षेत्र की दैनिक उपासना का प्रमुख केंद्र माना जाता है।",
+                         "en":  "Did you know? The word \u0027Bajrang\u0027 is derived from the Sanskrit \u0027Vajranga\u0027, meaning one with limbs as firm as a thunderbolt. While Ujjain has many Hanuman temples, this Nanakheda shrine is regarded as a key centre of daily worship for the surrounding residential neighbourhood."
+                     },
+    "visitTips":  {
+                      "hi":  "मंगलवार और शनिवार को भीड़ अधिक होती है, अतः प्रातःकाल का समय शांत दर्शन के लिए उपयुक्त है। सिंदूर, चमेली का तेल, बूँदी के लड्डू एवं नारियल चढ़ावे के रूप में ले जा सकते हैं। मंदिर परिसर में सिर ढककर एवं सादे वस्त्रों में प्रवेश करना उचित माना जाता है।",
+                      "en":  "Tuesdays and Saturdays see larger crowds, so early morning is the calmest time for darshan. You may carry sindoor, jasmine oil, boondi laddoos, and a coconut as offerings. It is considered respectful to enter the temple premises with covered head and in modest clothing."
+                  },
+    "faqs":  [
+                 {
+                     "q":  {
+                               "hi":  "बजरंग बली मंदिर के दर्शन के लिए सर्वोत्तम दिन कौन सा है?",
+                               "en":  "Which day is best to visit Bajrang Bali Mandir?"
+                           },
+                     "a":  {
+                               "hi":  "मंगलवार और शनिवार हनुमान जी के विशेष दिन माने जाते हैं, इन दिनों दर्शन का विशेष फल माना जाता है।",
+                               "en":  "Tuesdays and Saturdays are considered Hanuman ji\u0027s special days and darshan on these days is believed to be especially auspicious."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "क्या यहाँ सुंदरकाण्ड पाठ का आयोजन होता है?",
+                               "en":  "Are Sundarkand recitations held here?"
+                           },
+                     "a":  {
+                               "hi":  "हाँ, मंगलवार और शनिवार को नियमित रूप से सुंदरकाण्ड पाठ एवं भजन-कीर्तन का आयोजन होता है, जिसमें भक्त संकल्प लेकर सम्मिलित हो सकते हैं।",
+                               "en":  "Yes, Sundarkand paths and bhajan-kirtan are regularly organised on Tuesdays and Saturdays, and devotees can participate by making a sankalp."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "मंदिर तक पहुँचने का सरल मार्ग क्या है?",
+                               "en":  "What is the easiest way to reach the temple?"
+                           },
+                     "a":  {
+                               "hi":  "नानाखेड़ा बस स्टैंड के समीप स्थित यह मंदिर ऑटो-रिक्शा एवं ई-रिक्शा द्वारा शहर के किसी भी हिस्से से सरलता से पहुँचा जा सकता है।",
+                               "en":  "Located near the Nanakheda bus stand, the temple can be reached easily by auto-rickshaw or e-rickshaw from any part of the city."
+                           }
+                 }
+             ]
+}

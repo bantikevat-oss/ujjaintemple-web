@@ -1,0 +1,92 @@
+{
+    "slug":  "vamaneshwar-mahadev",
+    "name":  {
+                 "hi":  "वामनेश्वर महादेव",
+                 "en":  "Vamaneshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव / वामन अवतार",
+                  "en":  "Lord Shiva / Vamana avatar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "वामनेश्वर महादेव उज्जैन के 84 महादेवों में एक विशिष्ट तीर्थ है जहाँ शिव-वामन का अद्भुत संगम देखने को मिलता है। यह मंदिर वामन अवतार (भगवान विष्णु के पाँचवें अवतार) और शिव की संयुक्त उपासना का केन्द्र है। स्कन्द पुराण के अवन्ति खण्ड में इस तीर्थ का महत्त्व प्रतिपादित किया गया है।",
+                       "en":  "Vamaneshwar Mahadev is a distinctive shrine among the 84 Mahadevas of Ujjain, where a remarkable confluence of Shiva and Vamana is witnessed. This temple is a centre for the combined veneration of the Vamana avatar (Vishnu\u0027s fifth incarnation) and Shiva. The Avanti Khanda of the Skanda Purana establishes the importance of this tirtha."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में वामनेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। पुराणों की मान्यता के अनुसार वामन — भगवान विष्णु के वामन अवतार — ने राजा बलि से तीन पग भूमि माँगकर त्रिलोक नापा था, और बाद में इसी क्षेत्र में उन्होंने शिव का पूजन किया, जिससे यह शिवलिंग \u0027वामनेश्वर\u0027 कहलाया। यह तीर्थ वैष्णव-शैव समन्वय का जीवंत प्रतीक है। उज्जैन की सर्वधर्म-समभाव की परम्परा में यह मंदिर विशेष स्थान रखता है। 84 महादेवों की यात्रा में यह एक महत्त्वपूर्ण पड़ाव है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana gives Vamaneshwar Mahadev a place among the 84 Mahadevas of Avantika. According to Puranic tradition, Vamana — Vishnu\u0027s dwarf avatar who measured the three worlds in three strides from King Bali — later worshipped Shiva in this region, giving the Shivalinga the name Vamaneshwar. This tirtha is a living symbol of the Vaishnava-Shaiva harmony. The temple holds a special place in Ujjain\u0027s tradition of religious integration. It is an important stop in the 84 Mahadevas pilgrimage."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1826,
+                "lng":  75.7677
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-14.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.4 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto or rickshaw in about 12 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "वामनेश्वर महादेव उज्जैन",
+                           "en":  "Vamaneshwar Mahadev Ujjain"
+                       }
+}

@@ -1,0 +1,94 @@
+﻿{
+    "slug":  "siddhavat-mandir",
+    "name":  {
+                 "hi":  "सिद्धवट मंदिर",
+                 "en":  "Siddhavat (Sacred Banyan) Temple"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव / पवित्र वट वृक्ष",
+                  "en":  "Lord Shiva / Sacred Vat Vriksha (Banyan Tree)"
+              },
+    "templeType":  "Historical",
+    "locationArea":  "Shipra Bank",
+    "isFeatured":  true,
+    "establishedEra":  {
+                           "hi":  "अनादि काल — स्कन्द पुराण में वर्णित",
+                           "en":  "Ancient / Timeless — described in Skanda Purana"
+                       },
+    "architectureStyle":  "Traditional",
+    "shortIntro":  {
+                       "hi":  "सिद्धवट मंदिर शिप्रा नदी के तट पर स्थित एक अत्यंत पवित्र स्थल है जहाँ एक प्राचीन वट (बरगद) वृक्ष को साक्षात् दिव्य मानकर पूजा जाता है। इस वट वृक्ष के नीचे पितरों के श्राद्ध-तर्पण का विशेष महत्त्व है और मान्यता है कि यहाँ किया गया पिंडदान अत्यंत फलदायी होता है। यह स्थान भारत के पाँच पवित्र वट वृक्षों में से एक माना जाता है।",
+                       "en":  "Siddhavat Mandir is an extremely sacred site on the banks of the Shipra River, where an ancient banyan (Vat) tree is venerated as divinely present. The Siddhavat is especially significant for performing shraddha and tarpan (ancestral rites), and offerings of pindadan here are believed to be extraordinarily fruitful. This site is considered one of the five sacred banyan trees of India."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में सिद्धवट का उल्लेख अत्यंत श्रद्धा के साथ किया गया है और इसे शिप्रा-तट का सर्वश्रेष्ठ तीर्थ बताया गया है। पौराणिक मान्यता के अनुसार इस वट वृक्ष के नीचे देवी पार्वती ने तपस्या की थी और यहाँ माता सती की कोहनी पड़ी थी, इस कारण यह शक्तिपीठ भी माना जाता है। पितृपक्ष (श्राद्ध पक्ष) में यहाँ देशभर से श्रद्धालु अपने पूर्वजों की मोक्ष-प्राप्ति हेतु पिंडदान करने आते हैं। कहा जाता है कि सिद्धवट के दर्शन मात्र से ही मनुष्य के अनेक जन्मों के पाप नष्ट हो जाते हैं। कुंभ मेले के दौरान यह स्थान विशेष रूप से सक्रिय रहता है और यहाँ लाखों श्रद्धालु स्नान-दान करते हैं।",
+                    "en":  "The Avanti Khanda of the Skanda Purana mentions Siddhavat with great reverence, describing it as the foremost pilgrimage site on the banks of Shipra. According to Puranic tradition, Goddess Parvati performed tapas under this banyan tree, and the elbow of Goddess Sati fell here, making it a Shakti Peeth as well. During Pitru Paksha (the fortnight of ancestral rites), devotees from across India come here to perform pindadan for the liberation (moksha) of their ancestors. It is said that even a mere glimpse of Siddhavat destroys the sins accumulated over many lifetimes. During Kumbh Mela, this site is especially active, with millions of pilgrims performing ritual bathing and charity."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                 "en":  "5:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                        "en":  "5:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                         "en":  "5:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                           "en":  "5:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                          "en":  "5:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                        "en":  "5:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                          "en":  "5:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 5:00 – रात्रि 9:00",
+                                        "en":  "5:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 5:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 5:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "सिद्धवट मंदिर, शिप्रा तट, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Siddhavat Mandir, Shipra Bank, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.186,
+                "lng":  75.761
+            },
+    "photos":  [
+                   "/images/mandirs/siddhavat-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "सिद्धवट मंदिर शिप्रा नदी के तट पर स्थित है और महाकालेश्वर मंदिर से लगभग 1 किमी उत्तर-पश्चिम में है। उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी दूर है; ऑटो-रिक्शा द्वारा 10-15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Siddhavat Mandir is situated on the banks of the Shipra River, approximately 1 km north-west of Mahakaleshwar Temple. It is about 2.5 km from Ujjain Railway Station and reachable in 10-15 minutes by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+                          "ram-mandir-ramghat",
+                          "sandipani-ashram",
+                          "navgraha-mandir-ujjain"
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "सिद्धवट मंदिर उज्जैन",
+                           "en":  "Siddhavat Mandir Ujjain"
+                       }
+}

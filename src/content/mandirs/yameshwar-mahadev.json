@@ -1,0 +1,92 @@
+{
+    "slug":  "yameshwar-mahadev",
+    "name":  {
+                 "hi":  "यमेश्वर महादेव",
+                 "en":  "Yameshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव / यमराज",
+                  "en":  "Lord Shiva / Yama"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पौराणिक काल (स्कंद पुराण)",
+                           "en":  "Puranic era (Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "यमेश्वर महादेव उज्जैन के 84 महादेवों की पावन श्रृंखला में एक महत्वपूर्ण शिवलिंग हैं। यहाँ भगवान शिव यम देवता के स्वामी के रूप में विराजमान हैं और भक्तों को अकाल मृत्यु के भय से मुक्ति प्रदान करते हैं। स्कंद पुराण के अवंति खंड में इनकी महिमा का विस्तार से वर्णन है।",
+                       "en":  "Yameshwar Mahadev is a sacred Shivalinga in the revered series of 84 Mahadevas of Ujjain. Lord Shiva is enshrined here as the supreme lord over Yama, the god of death, granting devotees freedom from the fear of untimely death. The Skanda Purana\u0027s Avanti Khanda describes this temple\u0027s glory in detail."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवंति खंड में वर्णित है कि उज्जैन नगरी में 84 महादेव क्षेत्रपाल के रूप में स्थित हैं, जिनमें यमेश्वर महादेव का विशेष स्थान है। पौराणिक मान्यता के अनुसार, यमराज ने स्वयं यहाँ शिवलिंग की स्थापना की और भगवान शिव की आराधना करके मृत्युलोक के संचालन की शक्ति प्राप्त की। महाकाल क्षेत्र में स्थित होने के कारण यह मंदिर काल और मृत्यु से परे मोक्ष की कामना रखने वाले श्रद्धालुओं के लिए विशेष पूजनीय है। ऐतिहासिक रूप से इस मंदिर का संरक्षण मालवा के परमार वंश के शासकों ने किया था। आज भी श्रावण मास और महाशिवरात्रि पर्व पर यहाँ विशेष आयोजन होते हैं।",
+                    "en":  "The Skanda Purana\u0027s Avanti Khanda states that 84 Mahadevas are stationed across Ujjain as divine guardians, among whom Yameshwar Mahadev holds a particularly significant position. According to Puranic tradition, Yama himself established this Shivalinga and worshipped Lord Shiva here to receive the divine authority to govern the realm of death. Situated within the sacred Mahakal area, this temple is especially revered by devotees seeking liberation beyond the cycles of time and death. Historically, the temple was patronised by the Paramara rulers of Malwa. Even today, special rituals are performed here during Shravan month and Mahashivaratri."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1839,
+                "lng":  75.7694
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-4.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से यहाँ पहुँचने में लगभग 15 मिनट लगते हैं।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It takes about 15 minutes from Ujjain Railway Station by auto or e-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "यमेश्वर महादेव उज्जैन",
+                           "en":  "Yameshwar Mahadev Ujjain"
+                       }
+}

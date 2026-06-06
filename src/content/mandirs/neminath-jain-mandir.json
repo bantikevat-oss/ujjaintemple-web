@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "neminath-jain-mandir",
+    "name":  {
+                 "hi":  "नेमिनाथ जैन मंदिर",
+                 "en":  "Neminath Jain Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान नेमिनाथ (२२वें तीर्थंकर)",
+                  "en":  "Bhagwan Neminath (22nd Tirthankara)"
+              },
+    "templeType":  "Jain",
+    "locationArea":  "Freeganj",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकालीन युग",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Jain Nagara",
+    "shortIntro":  {
+                       "hi":  "नेमिनाथ जैन मंदिर उज्जैन के फ्रीगंज क्षेत्र में स्थित है और जैन धर्म के २२वें तीर्थंकर भगवान नेमिनाथ को समर्पित है। भगवान नेमिनाथ भगवान श्रीकृष्ण के चचेरे भाई माने जाते हैं — यह अद्वितीय संयोग उन्हें जैन और वैष्णव दोनों परंपराओं में विशेष बनाता है। उज्जैन की जैन विरासत का यह मंदिर एक महत्वपूर्ण अंग है।",
+                       "en":  "The Neminath Jain Mandir is located in the Freeganj area of Ujjain and is dedicated to Bhagwan Neminath, the 22nd Tirthankara of Jainism. Bhagwan Neminath is considered a cousin of Lord Krishna — a unique connection that makes him revered in both Jain and Vaishnava traditions. This temple is an important part of Ujjain\u0027s Jain heritage."
+                   },
+    "history":  {
+                    "hi":  "भगवान नेमिनाथ जैन धर्म के २२वें तीर्थंकर थे जिनका जन्म शौरीपुर (मथुरा के निकट) में यदुवंश में हुआ था। जैन ग्रंथों के अनुसार वे भगवान श्रीकृष्ण के चचेरे भाई थे और उन्होंने विवाह के अवसर पर पशु-बलि का दृश्य देखकर वैराग्य धारण किया। वे गिरनार (सौराष्ट्र) में केवलज्ञान प्राप्त करके सिद्धावस्था को प्राप्त हुए। उज्जैन के जैन समाज ने उनके प्रति श्रद्धा प्रकट करते हुए यह मंदिर स्थापित किया। शंख के लांछन से पहचाने जाने वाले नेमिनाथ की प्रतिमा का दर्शन यहाँ श्रद्धालुओं को मिलता है।",
+                    "en":  "Bhagwan Neminath, the 22nd Tirthankara, was born in Shauripur (near Mathura) in the Yadava clan. According to Jain scriptures, he was a cousin of Lord Krishna and renounced worldly life upon witnessing animals being slaughtered for his wedding feast — a moment of profound compassion that shaped his spiritual destiny. He attained Kevalgyan and liberation at Girnar in Saurashtra (Gujarat). The Jain community of Ujjain established this temple in his reverence. Devotees come here to worship the idol of Neminath, whose iconographic symbol is the conch (shankha)."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "फ्रीगंज, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Freeganj, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1792,
+                "lng":  75.7742
+            },
+    "photos":  [
+                   "/images/mandirs/neminath-jain-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 1.5 किमी और उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर फ्रीगंज में स्थित है। ऑटोरिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+                       "en":  "The temple is about 1.5 km from Mahakaleshwar Temple and approximately 2 km from Ujjain Railway Station in the Freeganj area. Easily accessible by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "नेमिनाथ जैन मंदिर उज्जैन",
+                           "en":  "Neminath Jain Mandir Ujjain"
+                       }
+}

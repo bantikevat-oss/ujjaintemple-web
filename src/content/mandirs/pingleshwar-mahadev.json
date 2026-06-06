@@ -1,0 +1,92 @@
+{
+    "slug":  "pingleshwar-mahadev",
+    "name":  {
+                 "hi":  "पिंगलेश्वर महादेव",
+                 "en":  "Pingleshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — पिंगलेश्वर",
+                  "en":  "Lord Shiva as Pingleshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पौराणिक काल (स्कंद पुराण)",
+                           "en":  "Puranic era (Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "पिंगलेश्वर महादेव उज्जैन के 84 महादेवों की पवित्र श्रृंखला में एक विशिष्ट शिवलिंग है। \u0027पिंगल\u0027 नाम शिव के तपस्वी स्वरूप और जटाओं की आभा से संबंधित है, जो त्याग और तप की पराकाष्ठा का प्रतीक है। स्कंद पुराण के अवंति खंड में इस तीर्थ को पाप-मोचन और चित्तशुद्धि के लिए विशेष बताया गया है।",
+                       "en":  "Pingleshwar Mahadev is a distinctive Shivalinga in the sacred series of 84 Mahadevas of Ujjain. The name \u0027Pingala\u0027 relates to Shiva\u0027s ascetic form and the golden-brown hue of his matted locks, symbolising the pinnacle of renunciation and austerity. The Skanda Purana\u0027s Avanti Khanda describes this shrine as especially powerful for the removal of sins and purification of the mind."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवंति खंड में उज्जैन के 84 महादेव तीर्थों में पिंगलेश्वर महादेव का उल्लेख मिलता है। पौराणिक मान्यता के अनुसार, \u0027पिंगल\u0027 नाम शिव के उस स्वरूप से लिया गया है जब वे हिमालय पर तपस्या करते समय सूर्य की आभा से पिंगल (सुनहरे) रंग के दिखाई देते थे। इस स्थान पर महर्षि दुर्वासा ने भगवान शिव की तपस्वी स्वरूप में पूजा कर मनोवांछित वरदान प्राप्त किया था। महाकाल क्षेत्र में स्थित यह मंदिर उज्जैन की शिव तीर्थ यात्रा का एक आवश्यक पड़ाव रहा है। परमार काल से ही यहाँ नियमित पूजन और उत्सव की परंपरा अनवरत चली आ रही है।",
+                    "en":  "Pingleshwar Mahadev is mentioned among the 84 Mahadeva shrines of Ujjain in the Skanda Purana\u0027s Avanti Khanda. According to Puranic belief, the name \u0027Pingala\u0027 is derived from the form of Shiva who appeared golden-brown (pingala) in the glow of the sun during his penance in the Himalayas. It is said that the sage Durvasa worshipped Lord Shiva here in his ascetic form and received his desired blessings. Located in the Mahakal area, this temple has been an essential stop on Ujjain\u0027s Shiva-tirtha pilgrimage. The tradition of regular worship and celebrations here has continued unbroken since the Paramara period."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1833,
+                "lng":  75.7688
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-6.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga within the Mahakal area. It takes about 15 minutes from Ujjain Railway Station by auto."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "पिंगलेश्वर महादेव उज्जैन",
+                           "en":  "Pingleshwar Mahadev Ujjain"
+                       }
+}

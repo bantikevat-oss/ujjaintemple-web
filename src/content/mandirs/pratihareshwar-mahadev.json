@@ -1,0 +1,92 @@
+{
+    "slug":  "pratihareshwar-mahadev",
+    "name":  {
+                 "hi":  "प्रतिहारेश्वर महादेव",
+                 "en":  "Pratihareshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — प्रतिहारेश्वर",
+                  "en":  "Lord Shiva as Pratihareshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पौराणिक काल (स्कंद पुराण)",
+                           "en":  "Puranic era (Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "प्रतिहारेश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला में वह विशेष शिवलिंग है जो द्वारपाल (प्रतिहार) स्वरूप में शिव की उपासना का केंद्र है। स्कंद पुराण के अवंति खंड में वर्णित यह तीर्थ भक्तों की रक्षा और नकारात्मक शक्तियों को द्वार पर ही रोकने की मान्यता के लिए प्रसिद्ध है। यहाँ दर्शन करने से घर और परिवार की सुरक्षा का आशीर्वाद मिलता है।",
+                       "en":  "Pratihareshwar Mahadev is the special Shivalinga in the 84 Mahadevas series of Ujjain, serving as the centre of worship of Shiva in the form of a doorkeeper (Pratihara). Described in the Skanda Purana\u0027s Avanti Khanda, this shrine is renowned for the belief that it protects devotees and stops negative forces at the very threshold. Visiting here is believed to bestow the blessing of protection for one\u0027s home and family."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवंति खंड में प्रतिहारेश्वर महादेव का उल्लेख उज्जैन की 84 महादेव यात्रा के उन तीर्थों में मिलता है जो क्षेत्र-रक्षक के रूप में पूजित हैं। पौराणिक परंपरा के अनुसार, \u0027प्रतिहार\u0027 अर्थात् महाकालेश्वर के मुख्य द्वारपाल के रूप में इस शिवलिंग की स्थापना की गई थी, जो सम्पूर्ण महाकाल क्षेत्र की अशुभ शक्तियों से रक्षा करता है। प्रतिहार वंश के राजाओं ने मध्यकाल में इस मंदिर का विशेष संरक्षण किया और इसकी प्रतिष्ठा को बढ़ाया। यह मंदिर आज भी महाकाल क्षेत्र के पहरेदार के रूप में पूजित होता है। नवरात्रि और दीपावली पर यहाँ विशेष आराधना और दीपोत्सव का आयोजन किया जाता है।",
+                    "en":  "Pratihareshwar Mahadev is mentioned in the Skanda Purana\u0027s Avanti Khanda among those shrines in the 84 Mahadeva pilgrimage of Ujjain that are worshipped as protectors of the region. According to Puranic tradition, this Shivalinga was established as the chief doorkeeper (Pratihara) of Mahakaleshwar, guarding the entire Mahakal area against inauspicious forces. The kings of the Pratihara dynasty gave special patronage to this temple in the medieval period and enhanced its prestige. The temple is still worshipped as the guardian of the Mahakal area. Special worship and the lighting of lamps are organised here during Navaratri and Diwali."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1823,
+                "lng":  75.7673
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-9.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga within the Mahakal area. It takes about 15 minutes from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "प्रतिहारेश्वर महादेव उज्जैन",
+                           "en":  "Pratihareshwar Mahadev Ujjain"
+                       }
+}

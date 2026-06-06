@@ -1,0 +1,136 @@
+{
+    "slug":  "ambika-mata-mandir",
+    "name":  {
+                 "hi":  "अम्बिका माता मंदिर",
+                 "en":  "Ambika Mata Mandir"
+             },
+    "deity":  {
+                  "hi":  "देवी अम्बिका",
+                  "en":  "Goddess Ambika"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "अम्बिका माता मंदिर उज्जैन के महाकाल क्षेत्र में स्थित है और माँ जगदम्बा के अम्बिका स्वरूप को समर्पित है। अम्बिका को माँ दुर्गा का सौम्य और कल्याणकारी रूप माना जाता है। यह मंदिर महाकाल परिसर के समीप होने के कारण महाकालेश्वर यात्रा का एक अनिवार्य पड़ाव बन गया है।",
+                       "en":  "Ambika Mata Mandir in Ujjain\u0027s Mahakal Area is dedicated to Goddess Ambika, the benevolent and nurturing aspect of Goddess Durga. Located close to the Mahakaleshwar complex, it has become an integral stop for pilgrims visiting the sacred zone. The goddess is worshipped here as the universal mother who bestows protection and compassion."
+                   },
+    "history":  {
+                    "hi":  "अम्बिका देवी का उल्लेख देवीमाहात्म्य तथा स्कंद पुराण के अवंती खंड में मिलता है जहाँ उन्हें सम्पूर्ण सृष्टि की आदि माता बताया गया है। उज्जैन की शाक्त परंपरा में अम्बिका का स्थान विशेष है क्योंकि यह नगर स्वयं शक्तिपीठ के रूप में मान्य है। इस मंदिर की स्थापना प्राचीन काल में हुई थी और परमार राजाओं ने इसे संरक्षण दिया। मध्यकाल में जब उज्जैन में शैव और शाक्त परंपराओं का सम्मिलन हुआ, तब अम्बिका माता का यह मंदिर महाकाल क्षेत्र का अभिन्न अंग बन गया। प्रतिदिन सुबह-शाम आरती एवं विशेष उत्सवों पर यहाँ भव्य शृंगार होता है।",
+                    "en":  "Goddess Ambika finds mention in the Devi Mahatmya and the Skanda Purana\u0027s Avanti Khanda, where she is described as the primordial mother of all creation. In Ujjain\u0027s Shakta tradition, Ambika holds a distinguished place as the city itself is revered as a Shakti Peeth. The temple is believed to be of ancient origin, with Paramara rulers having extended royal patronage to it. During the medieval period, when Ujjain saw a rich confluence of Shaiva and Shakta traditions, Ambika Mata Mandir became an integral part of the Mahakal precinct. Daily aartis and festive decorations mark its continuous living worship."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1818,
+                "lng":  75.7672
+            },
+    "photos":  [
+                   "/images/mandirs/ambika-mata-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर है। उज्जैन रेलवे स्टेशन से पैदल या ऑटो द्वारा 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Temple. From Ujjain Railway Station, it can be reached on foot or by auto-rickshaw in about 15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "अम्बिका माता मंदिर उज्जैन",
+                           "en":  "Ambika Mata Mandir Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तों की मान्यता है कि अम्बिका माता उज्जैन की रक्षक देवी हैं और जो भी सच्चे मन से उनके दर्शन करता है उसकी मनोकामना अवश्य पूर्ण होती है। नवरात्रि के नौ दिनों में यहाँ कन्या पूजन और चुनरी अर्पण की परंपरा विशेष रूप से प्रचलित है। महाकालेश्वर के दर्शन से पूर्व अम्बिका माता के दर्शन को शुभ माना जाता है क्योंकि शक्ति के बिना शिव की आराधना अधूरी मानी गई है।",
+                         "en":  "Local devotees believe Ambika Mata is the guardian goddess of Ujjain and that anyone visiting her with sincere devotion has their wishes fulfilled. During the nine days of Navratri, the tradition of kanya pujan and offering chunari is especially observed here. Visiting Ambika Mata before Mahakaleshwar darshan is considered auspicious, as Shiva worship is believed incomplete without first invoking Shakti."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? अम्बिका को देवीमाहात्म्य में आदि शक्ति के रूप में वर्णित किया गया है और यह मंदिर महाकाल परिसर से मात्र कुछ कदम की दूरी पर शाक्त परंपरा का प्रतीक है। परमार वंश के राजाओं ने इस मंदिर को संरक्षण देकर उज्जैन की शिव-शक्ति समन्वय परंपरा को सशक्त किया।",
+                         "en":  "Did you know? Ambika is described in the Devi Mahatmya as the primordial Shakti, and this shrine, just steps away from the Mahakal precinct, symbolises Ujjain\u0027s Shakta tradition. The Paramara dynasty extended patronage to this temple, reinforcing the city\u0027s distinctive Shiva-Shakti integrated worship culture."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर में प्रवेश से पूर्व सिर ढककर मर्यादित वस्त्र पहनें और जूते-चप्पल बाहर उतारें। श्रावण मास, नवरात्रि एवं सोमवार के दिन अत्यधिक भीड़ रहती है, इसलिए प्रातःकाल दर्शन करना सुविधाजनक होता है। साथ में चुनरी, नारियल और लाल पुष्प अर्पण हेतु ले जाना शुभ माना जाता है।",
+                      "en":  "Cover your head, wear modest clothing and remove footwear before entering the temple. Shravan month, Navratri and Mondays witness heavy crowds, so early morning darshan is more comfortable. Carrying chunari, coconut and red flowers as offerings is considered auspicious."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "अम्बिका माता मंदिर दर्शन का सर्वोत्तम समय कौन सा है?",
+                                      "en":  "What is the best time to visit Ambika Mata Mandir?"
+                                  },
+                     "answer":  {
+                                    "hi":  "नवरात्रि, श्रावण मास और मंगलवार-शुक्रवार को दर्शन विशेष फलदायी माने जाते हैं। सामान्य दिनों में प्रातःकाल आरती के समय का अनुभव सबसे पवित्र होता है।",
+                                    "en":  "Navratri, the month of Shravan, and Tuesdays/Fridays are considered especially auspicious. On regular days, attending the early morning aarti offers the most serene and sacred experience."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या यह मंदिर महाकालेश्वर मंदिर के पास है?",
+                                      "en":  "Is this temple close to Mahakaleshwar Temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, अम्बिका माता मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में स्थित है और पैदल कुछ ही मिनट में पहुँचा जा सकता है।",
+                                    "en":  "Yes, Ambika Mata Mandir is located within the Mahakal Area, just about 0.3 km from Mahakaleshwar Temple, and is easily reachable on foot in a few minutes."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या मंदिर में प्रवेश शुल्क है?",
+                                      "en":  "Is there any entry fee at the temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "नहीं, मंदिर में दर्शन पूर्णतः निःशुल्क है। श्रद्धालु अपनी इच्छानुसार दान या भेंट अर्पित कर सकते हैं।",
+                                    "en":  "No, darshan at the temple is completely free of charge. Devotees may make voluntary donations or offerings as per their wish."
+                                }
+                 }
+             ]
+}

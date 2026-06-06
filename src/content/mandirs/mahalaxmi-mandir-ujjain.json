@@ -1,0 +1,91 @@
+﻿{
+    "slug":  "mahalaxmi-mandir-ujjain",
+    "name":  {
+                 "hi":  "महालक्ष्मी मंदिर",
+                 "en":  "Mahalaxmi Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "देवी महालक्ष्मी",
+                  "en":  "Goddess Mahalaxmi"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Freeganj",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकाल",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Maratha",
+    "shortIntro":  {
+                       "hi":  "महालक्ष्मी मंदिर उज्जैन के फ्रीगंज क्षेत्र में स्थित एक प्रसिद्ध शक्तिपीठ है जहाँ धन, समृद्धि और सौभाग्य की देवी महालक्ष्मी का पूजन होता है। व्यापारी वर्ग और गृहस्थ भक्त यहाँ विशेष रूप से आते हैं। दीपावली पर यहाँ भव्य पूजन का आयोजन होता है।",
+                       "en":  "Mahalaxmi Mandir in Ujjain\u0027s Freeganj area is a revered Shakti shrine dedicated to the goddess of wealth, prosperity, and good fortune. The temple attracts merchants, businesspersons, and householder devotees in large numbers. Grand worship ceremonies are held here during Diwali."
+                   },
+    "history":  {
+                    "hi":  "माँ महालक्ष्मी की उपासना परंपरा भारत में अत्यंत प्राचीन है और उनका उल्लेख विष्णु पुराण, श्री सूक्त तथा देवी भागवत में मिलता है। उज्जैन में महालक्ष्मी मंदिर की स्थापना मध्यकाल में हुई थी और मराठा काल में इसका जीर्णोद्धार एवं विस्तार हुआ। स्कंद पुराण के अवंती खंड के अनुसार उज्जैन में समस्त देवी-शक्तियाँ निवास करती हैं, जिनमें लक्ष्मी देवी भी सम्मिलित हैं। इस मंदिर में शुक्रवार को विशेष भीड़ होती है क्योंकि शुक्रवार का दिन लक्ष्मी माँ को समर्पित माना जाता है। यह मंदिर स्थानीय व्यापारियों की अगाध आस्था का केंद्र रहा है।",
+                    "en":  "The worship of Goddess Mahalaxmi is one of India\u0027s oldest traditions, with references found in the Vishnu Purana, Sri Sukta, and Devi Bhagavata. The Ujjain temple is believed to have been established in the medieval period, with significant renovation and expansion during the Maratha era. The Skanda Purana\u0027s Avanti Khanda affirms that all divine feminine powers, including Lakshmi, reside in Ujjain. Fridays draw especially large crowds as that day is traditionally dedicated to the goddess of wealth. The temple has long been a centre of faith for Ujjain\u0027s merchant community."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 5:30 – रात्रि 9:30",
+                                        "en":  "5:30 AM – 9:30 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "फ्रीगंज, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Freeganj, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1788,
+                "lng":  75.773
+            },
+    "photos": ["/images/mandirs/harsiddhi-mata.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 1.5 किमी दूर फ्रीगंज में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is situated in Freeganj, approximately 1.5 km from Ujjain Railway Station. It is about 10 minutes by auto-rickshaw from Mahakaleshwar Temple."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "महालक्ष्मी मंदिर उज्जैन",
+                           "en":  "Mahalaxmi Mandir Ujjain"
+                       }
+}

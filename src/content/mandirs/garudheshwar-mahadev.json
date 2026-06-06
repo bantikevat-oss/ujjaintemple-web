@@ -1,0 +1,136 @@
+{
+    "slug":  "garudheshwar-mahadev",
+    "name":  {
+                 "hi":  "गरुड़ेश्वर महादेव",
+                 "en":  "Garudheshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (गरुड़ेश्वर रूप)",
+                  "en":  "Lord Shiva as Garudheshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "गरुड़ेश्वर महादेव उज्जैन के 84 महादेवों की पावन श्रृंखला में सम्मिलित एक प्राचीन शिव तीर्थ है। यह मंदिर महाकाल क्षेत्र में स्थित है जहाँ भगवान शिव गरुड़ स्वरूप में विराजमान हैं। स्कन्द पुराण के अवन्ति खण्ड में इस लिंग की महिमा का विशद वर्णन मिलता है।",
+                       "en":  "Garudheshwar Mahadev is one of the sacred 84 Mahadevas of Ujjain, an ancient Shiva shrine located in the Mahakal Area. The presiding deity here is Lord Shiva worshipped in the form of Garudheshwar. The Skanda Purana\u0027s Avanti Khanda extols the spiritual merit of darshan at this holy site."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में उज्जैन के 84 महादेवों का विस्तृत वर्णन है, जिनमें गरुड़ेश्वर महादेव का स्थान अत्यंत महत्त्वपूर्ण है। पौराणिक मान्यता के अनुसार गरुड़ — भगवान विष्णु के वाहन — ने यहाँ भगवान शिव की तपस्या की थी, जिससे इस शिवलिंग को \u0027गरुड़ेश्वर\u0027 नाम प्राप्त हुआ। महाकाल वन में स्थित यह तीर्थ अवन्तिका के उन पवित्र स्थलों में है जहाँ दर्शन मात्र से मोक्ष की प्राप्ति होती है। परम्परागत रूप से श्रद्धालु महाकालेश्वर दर्शन के पश्चात 84 महादेवों की यात्रा के अंतर्गत इस मंदिर में भी आते हैं। यह मंदिर उज्जैन की सांस्कृतिक एवं धार्मिक विरासत का एक अभिन्न अंग है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana describes in detail the 84 Mahadevas of Ujjain, among whom Garudheshwar Mahadev holds a distinguished place. According to tradition, Garuda — the divine vehicle of Lord Vishnu — performed penance here and worshipped Shiva, giving this Shivalinga the name Garudheshwar. This tirtha within the sacred Mahakal forest is among the holy sites of Avantika where mere darshan is said to confer liberation. Devotees traditionally visit this temple as part of the 84 Mahadevas pilgrimage after offering prayers at Mahakaleshwar. The temple remains an integral part of Ujjain\u0027s living religious heritage."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1836,
+                "lng":  75.7693
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-7.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 10-15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is located approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto or rickshaw in about 10-15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "गरुड़ेश्वर महादेव उज्जैन",
+                           "en":  "Garudheshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि गरुड़ेश्वर महादेव के दर्शन से सर्प भय, विषबाधा एवं ग्रह दोष का निवारण होता है। श्रावण मास में यहाँ जलाभिषेक का विशेष महत्त्व माना जाता है। 84 महादेवों की परिक्रमा करने वाले भक्त इस मंदिर में अवश्य रुककर बिल्व पत्र अर्पित करते हैं।",
+                         "en":  "Local devotees believe that darshan of Garudheshwar Mahadev removes the fear of serpents, neutralises poison-related afflictions and grants relief from planetary doshas. Jalabhishek during the month of Shravan is considered especially meritorious here. Pilgrims undertaking the parikrama of the 84 Mahadevas invariably pause at this shrine to offer bilva leaves."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? गरुड़ेश्वर महादेव उन दुर्लभ शिवलिंगों में से एक हैं जिनका नाम भगवान विष्णु के वाहन गरुड़ की तपस्या से जुड़ा है — जो शैव और वैष्णव परम्पराओं के अद्भुत संगम का प्रतीक है।",
+                         "en":  "Did you know? Garudheshwar Mahadev is among the rare Shivalingas whose name is linked to the penance of Garuda — Lord Vishnu\u0027s celestial mount — making it a striking symbol of the harmony between the Shaiva and Vaishnava traditions."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर परिसर में प्रवेश हेतु शालीन वस्त्र पहनें एवं जूते-चप्पल बाहर उतारें। दर्शन के लिए प्रातःकाल का समय सर्वोत्तम है क्योंकि भीड़ कम होती है। बिल्व पत्र, गंगाजल एवं श्वेत पुष्प अर्पण हेतु साथ ले जा सकते हैं।",
+                      "en":  "Wear modest clothing inside the temple premises and remove footwear before entering. Early morning hours are best for a peaceful darshan as the crowd is lighter. You may carry bilva leaves, Gangajal and white flowers to offer at the shrine."
+                  },
+    "faqs":  [
+                 {
+                     "q":  {
+                               "hi":  "गरुड़ेश्वर महादेव का नाम कैसे पड़ा?",
+                               "en":  "How did Garudheshwar Mahadev get its name?"
+                           },
+                     "a":  {
+                               "hi":  "पौराणिक मान्यता है कि भगवान विष्णु के वाहन गरुड़ ने यहाँ शिव की तपस्या की थी, जिससे इस शिवलिंग को \u0027गरुड़ेश्वर\u0027 नाम प्राप्त हुआ।",
+                               "en":  "According to tradition, Garuda — the divine vehicle of Lord Vishnu — performed penance to Lord Shiva at this very spot, and the Shivalinga therefore came to be known as Garudheshwar."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "क्या यह मंदिर 84 महादेवों में सम्मिलित है?",
+                               "en":  "Is this temple part of the 84 Mahadevas of Ujjain?"
+                           },
+                     "a":  {
+                               "hi":  "हाँ, गरुड़ेश्वर महादेव उज्जैन के 84 महादेवों की पावन श्रृंखला में सम्मिलित है तथा स्कन्द पुराण के अवन्ति खण्ड में इसका उल्लेख है।",
+                               "en":  "Yes, Garudheshwar Mahadev is counted among the sacred 84 Mahadevas of Ujjain and finds mention in the Avanti Khanda of the Skanda Purana."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "दर्शन के लिए सर्वोत्तम समय क्या है?",
+                               "en":  "What is the best time to visit this temple?"
+                           },
+                     "a":  {
+                               "hi":  "श्रावण मास, महाशिवरात्रि एवं प्रत्येक सोमवार का दिन दर्शन हेतु अत्यंत शुभ माना जाता है। प्रातःकाल भीड़ कम होने से शांत दर्शन संभव है।",
+                               "en":  "The month of Shravan, Mahashivratri and every Monday are considered especially auspicious. Early mornings are quieter and allow for a peaceful darshan."
+                           }
+                 }
+             ]
+}

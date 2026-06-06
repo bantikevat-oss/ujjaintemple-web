@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted fonts — declare lightweight @font-face stubs.
+   Actual woff2 files dropped into /public/fonts/ via image-asset task. */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('DM Sans'), url('/fonts/dmsans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('DM Sans Bold'), url('/fonts/dmsans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans Devanagari'), url('/fonts/notosans-devanagari-400.woff2') format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
+}
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans Devanagari Bold'), url('/fonts/notosans-devanagari-700.woff2') format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Cormorant Garamond Bold'), url('/fonts/cormorant-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Tiro Devanagari Sanskrit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Tiro Devanagari Sanskrit'), url('/fonts/tiro-devanagari-400.woff2') format('woff2');
+  unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  html[lang='hi'] body { font-family: 'Noto Sans Devanagari', 'DM Sans', system-ui, sans-serif; }
+  html[lang='en'] body { font-family: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif; }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', 'Tiro Devanagari Sanskrit', serif; line-height: 1.15; }
+  html[lang='hi'] h1, html[lang='hi'] h2 { font-family: 'Tiro Devanagari Sanskrit', 'Cormorant Garamond', serif; }
+  body { min-height: 100dvh; }
+  img, video { max-width: 100%; height: auto; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-saffron px-5 py-3 font-semibold text-white shadow-md transition-all hover:bg-saffron-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-saffron;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-maroon bg-white px-5 py-3 font-semibold text-maroon shadow-sm transition-all hover:bg-maroon hover:text-white;
+  }
+  .btn-call {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-maroon px-5 py-3 font-bold text-white shadow-md transition-all hover:bg-maroon-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-maroon;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  /* ── PREMIUM ARTICLE TYPOGRAPHY (.prose-temple) ── */
+  .prose-temple {
+    @apply text-lg text-ink-soft leading-relaxed;
+  }
+  .prose-temple > p:first-of-type::first-letter {
+    @apply float-left text-6xl font-extrabold text-maroon mr-3 mb-[-8px] mt-[-6px] font-serif leading-none;
+  }
+  .prose-temple p {
+    @apply mb-6;
+  }
+  .prose-temple h2 {
+    @apply mt-12 mb-6 text-3xl sm:text-4xl font-bold text-maroon font-serif border-b-2 border-gold pb-3;
+  }
+  .prose-temple h3 {
+    @apply mt-8 mb-4 text-2xl sm:text-3xl font-bold text-maroon font-serif;
+  }
+  .prose-temple ul {
+    @apply mb-8 pl-0 space-y-3;
+  }
+  .prose-temple ul li {
+    @apply relative pl-8 text-ink-soft;
+  }
+  .prose-temple ul li::before {
+    content: "✦";
+    @apply absolute left-0 text-gold top-0 font-bold;
+  }
+  .prose-temple ol {
+    @apply mb-8 ml-6 list-decimal space-y-3 font-bold text-maroon;
+  }
+  .prose-temple ol li span {
+    @apply font-normal text-ink-soft;
+  }
+  .prose-temple a {
+    @apply text-maroon font-semibold underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors;
+  }
+  .prose-temple strong {
+    @apply font-bold text-maroon-900;
+  }
+  
+  /* Premium Tables */
+  .prose-temple table {
+    @apply w-full mb-8 border-collapse overflow-hidden rounded-xl shadow-lg border border-cream;
+  }
+  .prose-temple th {
+    @apply bg-maroon-900 text-white font-bold uppercase tracking-wider text-sm p-4 text-left border-b-4 border-gold;
+  }
+  .prose-temple td {
+    @apply p-4 border-b border-cream-dark text-ink-soft bg-white;
+  }
+  .prose-temple tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .prose-temple tbody tr:nth-child(even) td {
+    @apply bg-cream/50;
+  }
+  .prose-temple tbody tr:hover td {
+    @apply bg-cream transition-colors duration-200;
+  }
+
+  /* Sticky mobile phone bar — primary lead-gen surface */
+  .sticky-call-bar {
+    @apply fixed inset-x-0 bottom-0 z-40 flex items-center justify-center gap-2 bg-maroon px-4 py-3 text-white shadow-[0_-4px_12px_rgba(0,0,0,0.12)] md:hidden;
+  }
+}

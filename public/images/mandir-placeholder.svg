@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Mandir photograph placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8b1a1a"/>
+      <stop offset="100%" stop-color="#5b0f0f"/>
+    </linearGradient>
+    <linearGradient id="temple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbe9b7"/>
+      <stop offset="100%" stop-color="#d4a751"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <!-- Mandir silhouette -->
+  <g fill="url(#temple)" opacity="0.92">
+    <!-- Base platform -->
+    <rect x="180" y="260" width="240" height="22" rx="2"/>
+    <!-- Main body -->
+    <rect x="210" y="180" width="180" height="82"/>
+    <!-- Spire steps -->
+    <polygon points="220,180 380,180 365,160 235,160"/>
+    <polygon points="240,160 360,160 348,140 252,140"/>
+    <polygon points="258,140 342,140 332,120 268,120"/>
+    <!-- Shikhar (dome) -->
+    <polygon points="278,120 322,120 300,72"/>
+    <!-- Kalash (urn) -->
+    <circle cx="300" cy="62" r="6"/>
+    <line x1="300" y1="56" x2="300" y2="44" stroke="url(#temple)" stroke-width="3"/>
+    <!-- Door -->
+    <rect x="284" y="216" width="32" height="46" rx="16" fill="#8b1a1a"/>
+    <!-- Pillars -->
+    <rect x="220" y="200" width="8" height="60" fill="#8b1a1a" opacity="0.4"/>
+    <rect x="372" y="200" width="8" height="60" fill="#8b1a1a" opacity="0.4"/>
+  </g>
+  <!-- Decorative arch -->
+  <path d="M 100 340 Q 300 280 500 340" stroke="#d4a751" stroke-width="2" fill="none" opacity="0.4"/>
+  <!-- Caption text -->
+  <text x="300" y="334" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#fbe9b7" opacity="0.85">मन्दिर</text>
+  <text x="300" y="358" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" letter-spacing="2" fill="#fbe9b7" opacity="0.55">PHOTO COMING SOON</text>
+</svg>

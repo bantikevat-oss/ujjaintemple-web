@@ -1,0 +1,136 @@
+{
+    "slug":  "ikshureshwar-mahadev",
+    "name":  {
+                 "hi":  "इक्षुरेश्वर महादेव",
+                 "en":  "Ikshureshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (इक्षुरेश्वर रूप)",
+                  "en":  "Lord Shiva as Ikshureshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "इक्षुरेश्वर महादेव उज्जैन के प्रसिद्ध 84 महादेव क्षेत्रों में से एक है, जो महाकाल क्षेत्र में स्थित है। \u0027इक्षु\u0027 अर्थात गन्ने की मिठास की तरह मनोकामनाएँ पूर्ण करने वाले शिव यहाँ विराजमान हैं। स्कन्द पुराण के अवन्ति खण्ड में इस शिवलिंग की पूजा का विशेष फल बताया गया है।",
+                       "en":  "Ikshureshwar Mahadev is one of the celebrated 84 Mahadevas shrines of Ujjain, located in the Mahakal Area. The name Ikshureshwar is associated with Shiva who fulfils wishes as sweetly as sugarcane (iksha). The Avanti Khanda of the Skanda Purana describes special merit for worshipping this Shivalinga."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में अवन्तिका नगरी के 84 महादेवों का विवरण दिया गया है, जिनमें इक्षुरेश्वर महादेव एक प्रमुख तीर्थ है। \u0027इक्षु\u0027 (गन्ना) की मिठास के समान भक्तों की मनोकामनाएँ पूर्ण करने वाले इस शिवलिंग की स्थापना पुराकाल में हुई मानी जाती है। यह क्षेत्र उज्जैन के महाकाल वन का अंग है जो साक्षात् कैलाश स्वरूप माना जाता है। यहाँ विशेष रूप से सोमवार और शिवरात्रि पर्व पर भक्तों की भारी भीड़ उमड़ती है। 84 महादेवों की परम्परागत तीर्थयात्रा में इस मंदिर का विशेष स्थान है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana enumerates the 84 Mahadevas of Avantika, among whom Ikshureshwar Mahadev is a prominent tirtha. The Shivalinga, named for its sweetness in granting devotees\u0027 wishes like sugarcane (iksha), is believed to have been established in primordial times. This kshetra forms part of the Mahakal forest of Ujjain, which is regarded as Kailash on earth. Large gatherings of devotees visit on Mondays and Shivratri. This temple holds an important place in the traditional 84 Mahadevas pilgrimage circuit."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1825,
+                "lng":  75.7674
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-11.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 12 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "इक्षुरेश्वर महादेव उज्जैन",
+                           "en":  "Ikshureshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय मान्यता है कि इक्षुरेश्वर महादेव के दर्शन से जीवन में गन्ने के रस जैसी मिठास और मधुर सम्बन्ध आते हैं। भक्तजन यहाँ गन्ना अर्पित कर मनोकामना पूर्ति की प्रार्थना करते हैं। 84 महादेव यात्रा करने वाले श्रद्धालु इस मंदिर पर अवश्य रुकते हैं।",
+                         "en":  "Locals believe that darshan of Ikshureshwar Mahadev brings sweetness and harmonious relationships into life, just like the juice of sugarcane. Devotees often offer sugarcane while praying for the fulfilment of cherished wishes. Pilgrims undertaking the 84 Mahadevas yatra always halt at this shrine."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? \u0027इक्षु\u0027 शब्द संस्कृत में गन्ने के लिए प्रयुक्त होता है, और यही इस शिवलिंग के नाम का आधार है। स्कन्द पुराण के अवन्ति खण्ड में इस लिंग की पूजा का फल विशेष रूप से वर्णित है।",
+                         "en":  "Did you know? The word Iksha in Sanskrit refers to sugarcane, which is the very basis of this Shivalinga\u0027s name. The Avanti Khanda of the Skanda Purana specifically describes the merit earned by worshipping this linga."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर में प्रवेश से पूर्व सिर ढकने और शालीन वस्त्र पहनने का ध्यान रखें। श्रावण मास, सोमवार और शिवरात्रि पर भीड़ अधिक होती है, इसलिए प्रातःकाल जल्दी दर्शन करना श्रेष्ठ है। साथ में बेलपत्र, गन्ना और गंगाजल लेकर जाएँ।",
+                      "en":  "Cover your head and wear modest attire before entering the temple precincts. Crowds are heavy on Mondays, during Shravan month, and on Shivratri, so early morning darshan is best. Carry bel-patra, sugarcane and Ganga jal for offering during abhishek."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "इक्षुरेश्वर महादेव नाम का अर्थ क्या है?",
+                                      "en":  "What is the meaning of the name Ikshureshwar Mahadev?"
+                                  },
+                     "answer":  {
+                                    "hi":  "\u0027इक्षु\u0027 का अर्थ संस्कृत में गन्ना होता है। इक्षुरेश्वर वह शिव हैं जो भक्तों की मनोकामनाओं को गन्ने के रस जैसी मिठास से पूर्ण करते हैं।",
+                                    "en":  "Iksha in Sanskrit means sugarcane. Ikshureshwar is the form of Shiva who fulfils devotees\u0027 wishes with sweetness comparable to sugarcane juice."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या यह 84 महादेवों में सम्मिलित है?",
+                                      "en":  "Is this temple part of the 84 Mahadevas circuit?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, इक्षुरेश्वर महादेव उज्जैन के पारम्परिक 84 महादेव क्षेत्रों में से एक प्रमुख तीर्थ है, जिसका वर्णन स्कन्द पुराण के अवन्ति खण्ड में मिलता है।",
+                                    "en":  "Yes, Ikshureshwar Mahadev is one of the prominent shrines among Ujjain\u0027s traditional 84 Mahadevas circuit, described in the Avanti Khanda of the Skanda Purana."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "दर्शन के लिए सबसे अच्छा समय कौन सा है?",
+                                      "en":  "What is the best time to visit for darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "श्रावण मास, सोमवार और महाशिवरात्रि पर विशेष पूजा होती है। भीड़ से बचने के लिए प्रातः 6 से 8 बजे का समय श्रेष्ठ है।",
+                                    "en":  "Special worship takes place during Shravan month, Mondays and Mahashivratri. To avoid crowds, early morning between 6 and 8 AM is ideal."
+                                }
+                 }
+             ]
+}

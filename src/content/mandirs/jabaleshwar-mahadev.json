@@ -1,0 +1,92 @@
+{
+    "slug":  "jabaleshwar-mahadev",
+    "name":  {
+                 "hi":  "जाबालेश्वर महादेव",
+                 "en":  "Jabaleshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — जाबालेश्वर स्वरूप",
+                  "en":  "Lord Shiva as Jabaleshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "जाबालेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में महर्षि जाबाल से जुड़ा एक प्राचीन शिव मंदिर है। महाकाल क्षेत्र में स्थित यह तीर्थ स्थान ब्राह्मण परंपरा एवं वैदिक साधना के लिए विशेष महत्त्व रखता है। स्कन्द पुराण के अवन्ती खण्ड में इसका उल्लेख आदर के साथ किया गया है।",
+                       "en":  "Jabaleshwar Mahadev is an ancient Shiva temple in Ujjain\u0027s 84 Mahadevas series, associated with the sage Jabala. Located in the Mahakal area, this pilgrimage site holds special significance for the Brahmanical tradition and Vedic practice. It is mentioned with reverence in the Avanti Khanda of the Skanda Purana."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में जाबालेश्वर महादेव का उल्लेख 84 महादेव श्रृंखला के महत्त्वपूर्ण तीर्थ के रूप में किया गया है। पौराणिक कथाओं के अनुसार महर्षि जाबाल ने उज्जैन में कठोर वेदाध्ययन एवं तपस्या के पश्चात यहाँ शिवलिंग की स्थापना की और भगवान शिव ने उनकी साधना से प्रसन्न होकर यहाँ जाबालेश्वर नाम से अवतरण किया। यह मंदिर विशेष रूप से उन विद्यार्थियों एवं साधकों का प्रिय है जो वेद-वेदांग की शिक्षा प्राप्त करना चाहते हैं। परंपरा के अनुसार यहाँ प्रतिदिन शिव पंचाक्षर मंत्र का जाप करने से बुद्धि तीव्र होती है। चौरासी महादेव परिक्रमा में यह एक महत्त्वपूर्ण पड़ाव है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana mentions Jabaleshwar Mahadev as an important tirtha in the 84 Mahadevas series. According to tradition, the sage Jabala established a Shivalinga here after rigorous study of the Vedas and intense austerities in Ujjain, and Lord Shiva, pleased by his practice, descended here as Jabaleshwar. This temple is particularly beloved by students and spiritual seekers who wish to acquire knowledge of the Vedas and Vedangas. Tradition holds that daily recitation of the Shiva Panchakshara mantra here sharpens the intellect. It is an important halt in the 84 Mahadevas circumambulation."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1826,
+                "lng":  75.7678
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-14.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "जाबालेश्वर महादेव उज्जैन",
+                           "en":  "Jabaleshwar Mahadev Ujjain"
+                       }
+}

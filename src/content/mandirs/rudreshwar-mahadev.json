@@ -1,0 +1,92 @@
+{
+    "slug":  "rudreshwar-mahadev",
+    "name":  {
+                 "hi":  "रुद्रेश्वर महादेव",
+                 "en":  "Rudreshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — रुद्र स्वरूप",
+                  "en":  "Lord Shiva as Rudra"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पौराणिक काल (स्कंद पुराण)",
+                           "en":  "Puranic era (Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "रुद्रेश्वर महादेव उज्जैन के 84 महादेवों में से एक महत्वपूर्ण शिवलिंग है, जहाँ भगवान शिव के रौद्र स्वरूप \u0027रुद्र\u0027 की आराधना की जाती है। स्कंद पुराण के अवंति खंड में वर्णित यह तीर्थ पाप नाश और दुर्भाग्य निवारण के लिए विशेष माना जाता है। यहाँ के दर्शन से भक्तों को शत्रु भय, रोग और संकटों से मुक्ति मिलती है।",
+                       "en":  "Rudreshwar Mahadev is a significant Shivalinga among the 84 Mahadevas of Ujjain, where the fierce \u0027Rudra\u0027 form of Lord Shiva is worshipped. Described in the Skanda Purana\u0027s Avanti Khanda, this shrine is especially revered for the destruction of sins and removal of misfortune. Devotees believe that a visit here brings liberation from enemy fear, disease, and all hardships."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवंति खंड में रुद्रेश्वर महादेव को शिव के 11 रुद्र रूपों की अवंती में अभिव्यक्ति का केंद्र बताया गया है। पौराणिक आख्यान के अनुसार, एकादश रुद्रों ने मिलकर इस स्थान पर अपने स्वामी महाकाल की आराधना की थी, जिससे यह स्थान रुद्रेश्वर नाम से प्रसिद्ध हुआ। महाकाल क्षेत्र में स्थित यह मंदिर अवंती की शिव तीर्थ परंपरा का महत्वपूर्ण हिस्सा है। ऐतिहासिक दृष्टि से परमार राजाओं ने इस मंदिर को संरक्षण और संवर्धन प्रदान किया। आज श्रावण मास में सोमवार को यहाँ विशेष अभिषेक और रुद्राभिषेक का आयोजन होता है।",
+                    "en":  "The Skanda Purana\u0027s Avanti Khanda identifies Rudreshwar Mahadev as the centre of the manifestation of Shiva\u0027s 11 Rudra forms in Avanti. According to Puranic accounts, the eleven Rudras collectively worshipped their lord Mahakal at this spot, which is how the shrine came to be known as Rudreshwar. Situated in the Mahakal area, this temple is an important part of Avanti\u0027s Shiva-tirtha tradition. Historically, the Paramara kings patronised and developed this temple. Today, special Abhishek and Rudrabhishek ceremonies are performed here on Mondays during the Shravan month."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1836,
+                "lng":  75.769
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-12.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या ई-रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached in about 15 minutes from Ujjain Railway Station by auto or e-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "रुद्रेश्वर महादेव उज्जैन",
+                           "en":  "Rudreshwar Mahadev Ujjain"
+                       }
+}

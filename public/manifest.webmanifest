@@ -1,0 +1,13 @@
+{
+  "name": "UjjainTemple — Ujjain Temple, Travel & Simhastha 2028 Guide",
+  "short_name": "UjjainTemple",
+  "description": "Ujjain's authoritative bilingual temple, travel, and Simhastha 2028 guide. Plan via +91 74007 24456.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF5EC",
+  "theme_color": "#8B1A1A",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

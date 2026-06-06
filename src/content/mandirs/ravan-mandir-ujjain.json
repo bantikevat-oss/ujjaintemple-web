@@ -1,0 +1,91 @@
+﻿{
+    "slug":  "ravan-mandir-ujjain",
+    "name":  {
+                 "hi":  "रावण मंदिर उज्जैन",
+                 "en":  "Ravan Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "रावण (भगवान शिव के परम भक्त)",
+                  "en":  "Ravana (devotee of Lord Shiva)"
+              },
+    "templeType":  "Historical",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्राचीन काल",
+                           "en":  "Ancient Era"
+                       },
+    "architectureStyle":  "Traditional",
+    "shortIntro":  {
+                       "hi":  "रावण मंदिर उज्जैन का एक अत्यंत विरल एवं रहस्यमय धार्मिक स्थल है जहाँ लंकाधिपति रावण की पूजा भगवान शिव के परम भक्त के रूप में की जाती है। यह भारत के उन चुनिंदा मंदिरों में से एक है जो रावण को समर्पित हैं। यहाँ दशहरा के दिन विशेष पूजा होती है जो इस मंदिर की अनूठी परंपरा को दर्शाती है।",
+                       "en":  "Ravan Mandir is one of Ujjain\u0027s most rare and mysterious religious sites, where Ravana — the king of Lanka — is worshipped as the supreme devotee of Lord Shiva. It is among a handful of temples in India dedicated to Ravana. The temple\u0027s most distinctive tradition is special worship performed on Dussehra, the very day Ravana is burned elsewhere."
+                   },
+    "history":  {
+                    "hi":  "रामायण एवं पुराणों में रावण को भगवान शिव का महान भक्त बताया गया है जिसने कैलाश पर्वत को उठाकर शिव की स्तुति की और तांडव स्तोत्र की रचना की। उज्जैन जो स्वयं शिव की नगरी है, वहाँ रावण मंदिर का होना इसीलिए स्वाभाविक माना जाता है। परंपरा के अनुसार रावण ने उज्जैन में भगवान शिव की घोर तपस्या की थी। यह मंदिर उन दुर्लभ स्थलों में है जहाँ रावण को खलनायक के रूप में नहीं बल्कि एक असाधारण शिव-भक्त एवं विद्वान ब्राह्मण के रूप में सम्मानित किया जाता है। दशहरे के दिन यहाँ विशेष पूजा एवं हवन का आयोजन होता है।",
+                    "en":  "In the Ramayana and Puranas, Ravana is portrayed as one of the greatest devotees of Lord Shiva — the one who lifted Mount Kailash to honour Shiva and composed the Tandava Stotra. Since Ujjain is itself the city of Shiva, the presence of a Ravan Mandir here is considered natural by local tradition. According to lore, Ravana performed intense penance in Ujjain to propitiate Lord Shiva. This temple is among the rare sites in India that honours Ravana not as a villain but as an extraordinary Shiva-bhakta and learned Brahmin scholar. Special puja and havan are performed here on Dussehra, the day he is burned elsewhere across India."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                 "en":  "7:00 AM – 8:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                         "en":  "7:00 AM – 8:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                           "en":  "7:00 AM – 8:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                          "en":  "7:00 AM – 8:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                          "en":  "7:00 AM – 8:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
+                                        "en":  "7:00 AM – 8:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 7:30 · संध्या आरती 6:30",
+                        "en":  "Morning aarti 7:30 AM · Evening aarti 6:30 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.18,
+                "lng":  75.766
+            },
+    "photos": ["/images/mandirs/bhartrihari-gufa.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा 12-15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.5 km from Mahakaleshwar Temple. It can be reached from Ujjain Railway Station by auto-rickshaw in 12–15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "रावण मंदिर उज्जैन",
+                           "en":  "Ravan Mandir Ujjain"
+                       }
+}

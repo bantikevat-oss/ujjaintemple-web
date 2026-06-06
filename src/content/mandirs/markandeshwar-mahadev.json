@@ -1,0 +1,92 @@
+{
+    "slug":  "markandeshwar-mahadev",
+    "name":  {
+                 "hi":  "मार्कण्डेश्वर महादेव",
+                 "en":  "Markandeshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — मार्कण्डेश्वर स्वरूप",
+                  "en":  "Lord Shiva as Markandeshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Shipra Bank",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "मार्कण्डेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला के अंतर्गत शिप्रा तट पर स्थित एक पवित्र शिव मंदिर है। ऋषि मार्कण्डेय की घोर तपस्या से प्रसन्न होकर यहाँ शिवजी ने मार्कण्डेश्वर नाम से अपना दिव्य स्वरूप प्रकट किया। शिप्रा नदी के किनारे स्थित होने के कारण यह स्थान विशेष पुण्यदायक माना जाता है।",
+                       "en":  "Markandeshwar Mahadev is a sacred Shiva shrine on the banks of the Shipra river, part of the celebrated 84 Mahadevas circuit of Ujjain. Lord Shiva is said to have manifested here as Markandeshwar, pleased by the fierce penance of sage Markandeya. Its location on the Shipra riverbank makes it especially auspicious for ritual bathing and worship."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में वर्णित चौरासी महादेव श्रृंखला में मार्कण्डेश्वर महादेव का विशिष्ट स्थान है। पौराणिक मान्यता के अनुसार बालक मार्कण्डेय ने यहाँ शिप्रा तट पर घोर तपस्या की थी और भगवान शिव ने उन्हें मृत्यु के देवता यमराज से बचाकर चिरायु का वरदान दिया था। इसी स्मृति में यहाँ शिवलिंग की स्थापना हुई और यह मार्कण्डेश्वर नाम से विख्यात हुआ। मान्यता है कि यहाँ दर्शन करने से मृत्युभय का नाश होता है और दीर्घायु की प्राप्ति होती है। कुंभ एवं सिंहस्थ पर्व पर यहाँ विशेष पूजन तथा अभिषेक किए जाते हैं।",
+                    "en":  "Markandeshwar Mahadev holds a distinguished place in the 84 Mahadevas series described in the Avanti Khanda of the Skanda Purana. According to tradition, the young sage Markandeya performed intense austerities on these very banks of the Shipra, and Lord Shiva saved him from Yama, the god of death, granting him eternal life. In memory of this divine event, the Shivalinga was established here and came to be known as Markandeshwar. Devotees believe that darshan here dispels the fear of death and blesses one with longevity. The temple draws large crowds during Kumbh and Simhastha melas when special abhisheka rituals are performed."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "शिप्रा तट, मार्कण्डेश्वर घाट, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Shipra Bank, Markandeshwar Ghat, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1865,
+                "lng":  75.7618
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-14.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 1.5 किमी उत्तर में शिप्रा तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या टैक्सी द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 1.5 km north of Mahakaleshwar Temple on the Shipra riverbank. Approx 15 minutes by auto or taxi from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "मार्कण्डेश्वर महादेव उज्जैन",
+                           "en":  "Markandeshwar Mahadev Ujjain"
+                       }
+}

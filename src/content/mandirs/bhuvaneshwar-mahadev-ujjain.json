@@ -1,0 +1,136 @@
+{
+    "slug":  "bhuvaneshwar-mahadev-ujjain",
+    "name":  {
+                 "hi":  "भुवनेश्वर महादेव",
+                 "en":  "Bhuvaneshwar Mahadev Ujjain (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (भुवनेश्वर रूप)",
+                  "en":  "Lord Shiva as Bhuvaneshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "भुवनेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ क्रम का एक महत्त्वपूर्ण मंदिर है। \u0027भुवनेश्वर\u0027 अर्थात समस्त भुवनों (लोकों) के ईश्वर — यह नाम शिव की ब्रह्मांडीय सत्ता का बोध कराता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की महिमा का विस्तृत वर्णन मिलता है।",
+                       "en":  "Bhuvaneshwar Mahadev is an important temple in the Chaurasi Mahadeva pilgrimage circuit of Ujjain. \u0027Bhuvaneshwar\u0027 means the Lord of all worlds (Bhuvanals) — the name evokes Shiva\u0027s universal sovereignty over all realms of existence. The Avanti Khanda of the Skanda Purana elaborately describes the glory of this Shivalinga."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवन्ति खण्ड के अनुसार, भुवनेश्वर महादेव उज्जैन के चौरासी स्वयंभू लिंगों में से एक हैं। पौराणिक दृष्टि से \u0027भुवनेश्वर\u0027 नाम तीनों लोकों — स्वर्ग, भूमि और पाताल — के अधिपति शिव को संदर्भित करता है। उज्जैन के महाकाल क्षेत्र में इस लिंग का प्राकट्य नगर को ब्रह्मांडीय शक्ति का केंद्र बनाता है। मध्यकाल में परमार शासकों के संरक्षण में मंदिर का जीर्णोद्धार हुआ। आज भी यह मंदिर चौरासी महादेव यात्रा में श्रद्धालुओं के लिए एक विशेष आकर्षण है।",
+                    "en":  "According to the Avanti Khanda of the Skanda Purana, Bhuvaneshwar Mahadev is one of the eighty-four self-manifested Shivalingas of Ujjain. From a mythological perspective, the name \u0027Bhuvaneshwar\u0027 refers to Shiva as the lord of all three worlds — heaven, earth, and the underworld. The manifestation of this Shivalinga in the Mahakal Area establishes Ujjain as a cosmic centre of divine power. The temple was renovated under the patronage of Paramara rulers during the medieval period. It remains a special point of attraction for pilgrims on the Chaurasi Mahadeva circuit to this day."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.184,
+                "lng":  75.7696
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-7.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+                       "en":  "This temple is approximately 0.2 km from Mahakaleshwar Temple. Ujjain Railway Station is about 2 km away, accessible by auto or rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "भुवनेश्वर महादेव उज्जैन",
+                           "en":  "Bhuvaneshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि भुवनेश्वर महादेव के दर्शन से समस्त लोकों के स्वामी शिव की कृपा प्राप्त होती है और जीवन के सभी क्षेत्रों में सफलता मिलती है। चौरासी महादेव यात्रा में इस लिंग के दर्शन से चौरासी लाख योनियों के बंधन से मुक्ति की मान्यता है। सोमवार और महाशिवरात्रि पर यहाँ बेलपत्र और जल अर्पण विशेष फलदायी माना जाता है।",
+                         "en":  "Local devotees believe that darshan of Bhuvaneshwar Mahadev grants the grace of Shiva — the lord of all worlds — and brings success in every sphere of life. Within the Chaurasi Mahadeva yatra, worshipping this linga is said to free the soul from the cycle of eighty-four lakh births. Offering bilva leaves and water on Mondays and Mahashivratri is considered especially auspicious here."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? — \u0027भुवनेश्वर\u0027 नाम का अर्थ है \u0027समस्त भुवनों के ईश्वर\u0027, जो शिव को त्रिलोकनाथ के रूप में स्थापित करता है। यह उज्जैन के उन गिने-चुने लिंगों में से है जिनकी महिमा का वर्णन स्कंद पुराण के अवन्ति खण्ड में स्पष्ट रूप से मिलता है।",
+                         "en":  "Did you know? — The name \u0027Bhuvaneshwar\u0027 literally means \u0027Lord of all worlds\u0027, establishing Shiva as the sovereign of the three realms. It is among the select Ujjain lingas whose glory is explicitly described in the Avanti Khanda of the Skanda Purana."
+                     },
+    "visitTips":  {
+                      "hi":  "दर्शन के लिए सादे और शालीन वस्त्र पहनें; मंदिर परिसर में प्रवेश से पूर्व जूते-चप्पल बाहर उतारें। बेलपत्र, गंगाजल और श्वेत पुष्प साथ ले जाना शुभ रहता है। महाकालेश्वर के समीप होने के कारण भीड़ से बचने के लिए प्रातःकाल का समय सर्वोत्तम है।",
+                      "en":  "Wear simple and modest clothing for darshan; remove footwear before entering the temple premises. Carrying bilva leaves, Ganga water, and white flowers is considered auspicious. As the temple lies close to Mahakaleshwar, early morning is the best time to avoid crowds."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "भुवनेश्वर महादेव नाम का क्या अर्थ है?",
+                                      "en":  "What does the name Bhuvaneshwar Mahadev mean?"
+                                  },
+                     "answer":  {
+                                    "hi":  "\u0027भुवनेश्वर\u0027 का अर्थ है समस्त भुवनों अर्थात लोकों के ईश्वर। यह नाम भगवान शिव की ब्रह्मांडीय सत्ता और त्रिलोक पर उनके आधिपत्य को दर्शाता है।",
+                                    "en":  "\u0027Bhuvaneshwar\u0027 means the Lord of all bhuvanas, that is, all the worlds. The name reflects Lord Shiva\u0027s universal sovereignty and dominion over the three realms of existence."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या यह मंदिर चौरासी महादेव यात्रा का भाग है?",
+                                      "en":  "Is this temple part of the Chaurasi Mahadeva yatra?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, भुवनेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ क्रम के महत्त्वपूर्ण लिंगों में से एक है। श्रावण मास में चौरासी महादेव यात्रा करने वाले श्रद्धालु यहाँ अवश्य दर्शन करते हैं।",
+                                    "en":  "Yes, Bhuvaneshwar Mahadev is one of the important lingas in the Chaurasi Mahadeva pilgrimage circuit of Ujjain. Devotees undertaking the Chaurasi Mahadeva yatra during the month of Shravan invariably visit this temple."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "दर्शन के लिए सबसे अच्छा समय कौन सा है?",
+                                      "en":  "What is the best time to visit for darshan?"
+                                  },
+                     "answer":  {
+                                    "hi":  "सोमवार, महाशिवरात्रि और श्रावण मास इस मंदिर के लिए सर्वाधिक शुभ अवसर हैं। दैनिक दर्शन के लिए प्रातः और संध्या आरती का समय श्रेष्ठ माना जाता है।",
+                                    "en":  "Mondays, Mahashivratri, and the month of Shravan are the most auspicious occasions to visit this temple. For daily darshan, the times of morning and evening aarti are considered ideal."
+                                }
+                 }
+             ]
+}

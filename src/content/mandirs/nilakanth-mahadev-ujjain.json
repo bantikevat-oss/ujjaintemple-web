@@ -1,0 +1,92 @@
+{
+    "slug":  "nilakanth-mahadev-ujjain",
+    "name":  {
+                 "hi":  "नीलकण्ठ महादेव",
+                 "en":  "Nilakanth Mahadev Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — नीलकण्ठ स्वरूप",
+                  "en":  "Lord Shiva as Nilakanth (the blue-throated one)"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Rudrasagar",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "नीलकण्ठ महादेव उज्जैन के रुद्रसागर क्षेत्र में स्थित एक दिव्य शिव मंदिर है जहाँ भगवान शिव के उस स्वरूप की पूजा की जाती है जिन्होंने समुद्र मंथन में उत्पन्न हलाहल विष को कंठ में धारण किया था। नीले कंठ वाले शिव का यह स्वरूप सृष्टि के रक्षक के प्रतीक के रूप में पूजा जाता है। रुद्रसागर के शांत परिवेश में यह मंदिर असाधारण आध्यात्मिक ऊर्जा से भरपूर है।",
+                       "en":  "Nilakanth Mahadev is a divine Shiva temple in Ujjain\u0027s Rudrasagar area, where Lord Shiva is worshipped in the form in which he swallowed the deadly Halahala poison produced during the churning of the cosmic ocean. The blue-throated Shiva is venerated here as the protector of creation. Set amid the serene surroundings of Rudrasagar, this temple radiates extraordinary spiritual energy."
+                   },
+    "history":  {
+                    "hi":  "नीलकण्ठ महादेव की पौराणिक कथा समुद्र-मंथन से जुड़ी है — जब देवता और असुरों ने मिलकर समुद्र का मंथन किया तो उसमें से भीषण हलाहल विष निकला जो सम्पूर्ण सृष्टि को नष्ट कर सकता था। भगवान शिव ने देवताओं और सृष्टि की रक्षा के लिए वह सम्पूर्ण विष पी लिया और माता पार्वती ने उनका कंठ दबाकर विष को नीचे नहीं जाने दिया, जिससे उनका कंठ नीला हो गया और वे नीलकण्ठ कहलाए। उज्जैन के रुद्रसागर में इस दिव्य स्मृति में नीलकण्ठ मंदिर स्थापित है। यहाँ विष-पीड़ित रोगियों तथा कठिन परिस्थितियों में फंसे लोग विशेष रूप से पूजन करते हैं। सावन माह तथा महाशिवरात्रि पर यहाँ विशाल मेला लगता है।",
+                    "en":  "The legend of Nilakanth Mahadev is tied to the churning of the cosmic ocean — when gods and demons churned the ocean together, the terrible Halahala poison emerged, capable of destroying all creation. To protect the gods and all existence, Lord Shiva drank the entire poison; goddess Parvati held his throat to prevent it descending further, turning his throat blue and earning him the name Nilakanth. This divine memory is commemorated at the Nilakanth temple in Ujjain\u0027s Rudrasagar. Those afflicted by poison or trapped in dire circumstances perform special worship here. A grand fair is held during Shravan month and Mahashivratri."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "रुद्रसागर, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Rudrasagar, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.186,
+                "lng":  75.7635
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-4.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 1 किमी उत्तर-पश्चिम में रुद्रसागर क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 1 km north-west of Mahakaleshwar Temple in the Rudrasagar area. Approx 12 minutes by auto from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "नीलकण्ठ महादेव उज्जैन",
+                           "en":  "Nilakanth Mahadev Ujjain"
+                       }
+}

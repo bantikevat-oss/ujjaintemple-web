@@ -1,0 +1,136 @@
+{
+    "slug":  "guheshwar-mahadev",
+    "name":  {
+                 "hi":  "गुहेश्वर महादेव",
+                 "en":  "Guheshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — गुहेश्वर स्वरूप",
+                  "en":  "Lord Shiva as Guheshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Bhairavgarh",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "गुहेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में भैरवगढ़ क्षेत्र में स्थित एक रहस्यमय एवं पवित्र शिव मंदिर है। \u0027गुह\u0027 अर्थात गुफा — इस मंदिर में शिव को गुफा के स्वामी के रूप में पूजा जाता है। यह स्थान तंत्र-साधकों एवं शैव परंपरा के अनुयायियों के लिए विशेष महत्त्व रखता है।",
+                       "en":  "Guheshwar Mahadev is a mysterious and sacred Shiva temple in the Bhairavgarh area, part of Ujjain\u0027s 84 Mahadevas series. \u0027Guha\u0027 means cave — here Shiva is worshipped as the lord of the cave. This site holds particular significance for tantric practitioners and followers of the Shaiva tradition."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में गुहेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक गुप्त एवं शक्तिशाली तीर्थ के रूप में किया गया है। पौराणिक मान्यता के अनुसार स्वामी कार्तिकेय ने जन्म लेने से पहले एक गुफा में शिव का ध्यान किया था, इसी कारण शिव यहाँ गुहेश्वर — गुफा के ईश्वर — के नाम से पूजे जाते हैं। भैरवगढ़ क्षेत्र में इस मंदिर का विशेष तांत्रिक एवं आध्यात्मिक महत्त्व है। यहाँ महाशिवरात्रि पर विशेष अनुष्ठान एवं रात्रिकालीन जागरण का आयोजन होता है। श्रद्धालु यहाँ सकल मनोकामना पूर्ति की आस से आते हैं।",
+                    "en":  "The Avanti Khanda of the Skanda Purana describes Guheshwar Mahadev as a secret and powerful tirtha within the 84 Mahadevas circuit. According to tradition, Kartikeya meditated upon Shiva in a cave before his birth, hence Shiva is worshipped here as Guheshwar — the lord of the cave. The temple carries particular tantric and spiritual significance within the Bhairavgarh area. Special rituals and all-night vigils are held here on Mahashivratri. Devotees come seeking fulfilment of all heartfelt wishes."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.191,
+                "lng":  75.7672
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-9.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 1 किमी उत्तर-पूर्व में भैरवगढ़ क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 12 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 1 km north-east of Mahakaleshwar Temple in the Bhairavgarh area. Approx 12 minutes by auto from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "गुहेश्वर महादेव उज्जैन",
+                           "en":  "Guheshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय लोग मानते हैं कि गुहेश्वर महादेव के दर्शन से छिपे हुए भय एवं मानसिक उलझनें दूर होती हैं, क्योंकि शिव यहाँ \u0027गुह\u0027 अर्थात अंतःकरण की गुफा के स्वामी हैं। भैरवगढ़ के साधक मानते हैं कि सोमवार एवं प्रदोष काल में किया गया जलाभिषेक विशेष फलदायी होता है। संतान-प्राप्ति एवं कार्तिकेय जैसे तेजस्वी पुत्र की कामना से भी श्रद्धालु यहाँ मनोकामना दीप जलाते हैं।",
+                         "en":  "Locals believe that darshan of Guheshwar Mahadev removes hidden fears and inner confusions, as Shiva here is the lord of the \u0027guha\u0027 — the cave of the inner self. Practitioners of Bhairavgarh hold that jalabhishek offered on Mondays and during Pradosh kaal is especially fruitful. Devotees also light wish-lamps here seeking progeny and the blessing of a radiant child like Kartikeya."
+                     },
+    "specialFacts":  {
+                         "hi":  "गुहेश्वर महादेव उज्जैन की 84 महादेव परिक्रमा में एकमात्र मंदिर है जहाँ शिव को कार्तिकेय के पूर्व-जन्म ध्यान से जोड़ा जाता है। मंदिर का नाम \u0027गुह\u0027 शब्द से बना है जो भगवान कार्तिकेय का ही एक नाम भी है।",
+                         "en":  "Guheshwar Mahadev is the only temple in Ujjain\u0027s 84 Mahadeva parikrama linked with Kartikeya\u0027s pre-birth meditation upon Shiva. The temple\u0027s name derives from \u0027Guha\u0027 — which is itself another name for Lord Kartikeya."
+                     },
+    "visitTips":  {
+                      "hi":  "दर्शन के लिए सादे एवं शालीन वस्त्र पहनें; गर्भगृह में प्रवेश से पूर्व पैर अवश्य धोएँ। अभिषेक हेतु जल, बेलपत्र एवं सफेद पुष्प साथ ले जाना शुभ माना जाता है। भीड़ से बचने के लिए सुबह जल्दी या संध्या आरती के समय आना अनुकूल रहेगा, और मोबाइल को मौन रखें।",
+                      "en":  "Wear simple, modest clothing for darshan and wash your feet before entering the sanctum. Carrying water, bilva leaves and white flowers for abhishek is considered auspicious. To avoid crowds, visit early morning or during the evening aarti, and keep your phone on silent inside the premises."
+                  },
+    "faqs":  [
+                 {
+                     "q":  {
+                               "hi":  "गुहेश्वर महादेव नाम का क्या अर्थ है?",
+                               "en":  "What does the name Guheshwar Mahadev mean?"
+                           },
+                     "a":  {
+                               "hi":  "\u0027गुह\u0027 का अर्थ है गुफा एवं \u0027ईश्वर\u0027 का अर्थ है स्वामी; इस प्रकार गुहेश्वर अर्थात गुफा के स्वामी शिव। यह नाम कार्तिकेय के पूर्व-जन्म ध्यान-स्थल से भी जुड़ा है।",
+                               "en":  "\u0027Guha\u0027 means cave and \u0027Ishwar\u0027 means lord — so Guheshwar is Shiva as the lord of the cave. The name is also linked with the cave where Kartikeya is said to have meditated before his birth."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "क्या यह मंदिर 84 महादेव परिक्रमा का भाग है?",
+                               "en":  "Is this temple part of the 84 Mahadeva parikrama?"
+                           },
+                     "a":  {
+                               "hi":  "हाँ, गुहेश्वर महादेव उज्जैन की प्रसिद्ध चौरासी महादेव श्रृंखला का एक महत्वपूर्ण तीर्थ है, जिसका वर्णन स्कन्द पुराण के अवन्ती खण्ड में मिलता है।",
+                               "en":  "Yes, Guheshwar Mahadev is an important tirtha in Ujjain\u0027s renowned 84 Mahadevas circuit, described in the Avanti Khanda of the Skanda Purana."
+                           }
+                 },
+                 {
+                     "q":  {
+                               "hi":  "दर्शन के लिए सर्वोत्तम समय कौनसा है?",
+                               "en":  "What is the best time to visit?"
+                           },
+                     "a":  {
+                               "hi":  "सोमवार, प्रदोष काल एवं महाशिवरात्रि पर दर्शन विशेष फलदायी माने जाते हैं। शांत अनुभव के लिए प्रातःकाल आरती का समय सर्वोत्तम है।",
+                               "en":  "Mondays, Pradosh kaal and Mahashivratri are considered especially auspicious. For a peaceful experience, early-morning aarti is the best time."
+                           }
+                 }
+             ]
+}

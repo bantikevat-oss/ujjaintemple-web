@@ -1,0 +1,136 @@
+{
+    "slug":  "durgadevi-mandir-ujjain",
+    "name":  {
+                 "hi":  "दुर्गा देवी मंदिर",
+                 "en":  "Durga Devi Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "देवी दुर्गा",
+                  "en":  "Goddess Durga"
+              },
+    "templeType":  "Shakti",
+    "locationArea":  "Nanakheda",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकाल",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Rajput-Maratha",
+    "shortIntro":  {
+                       "hi":  "दुर्गा देवी मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित है और शक्ति की आदिरूपा माँ दुर्गा को समर्पित है। यह मंदिर नवरात्रि पर्व के दौरान विशेष रूप से जागृत हो उठता है जब यहाँ नौ दिनों तक विशेष अनुष्ठान होते हैं। श्रद्धालु यहाँ सुख-शांति और शत्रु-विजय की कामना लेकर आते हैं।",
+                       "en":  "Durga Devi Mandir in Ujjain\u0027s Nanakheda area is dedicated to the primordial form of Goddess Durga, the destroyer of evil and protector of the righteous. The temple becomes especially vibrant during Navratri, when nine days of special rituals attract large crowds. Devotees come here seeking peace, protection, and victory over adversity."
+                   },
+    "history":  {
+                    "hi":  "माँ दुर्गा की पूजा देवीमाहात्म्य, मार्कंडेय पुराण और स्कंद पुराण में विस्तार से वर्णित है। उज्जैन जो प्राचीन काल से शक्ति उपासना का महत्त्वपूर्ण केंद्र रहा है, वहाँ इस दुर्गा मंदिर की स्थापना मध्यकाल में हुई थी। स्कंद पुराण के अवंती खंड में अवंतिका (उज्जैन) को दुर्गा की भूमि कहा गया है। मराठा काल में इस मंदिर का विस्तार हुआ और नवरात्रि पूजन की भव्य परंपरा शुरू हुई। आज यह मंदिर नानाखेड़ा क्षेत्र के निवासियों और यात्रियों की श्रद्धा का प्रमुख केंद्र है।",
+                    "en":  "The worship of Goddess Durga is elaborately described in the Devi Mahatmya, Markandeya Purana, and Skanda Purana, where she is hailed as the supreme protector of the cosmos. Ujjain has been a major centre of Shakta worship since antiquity, and the Skanda Purana\u0027s Avanti Khanda refers to Avantika as the land of Durga. This temple was established in the medieval period, and expanded significantly during the Maratha era when grand Navratri traditions were formalised. Today it serves as a focal point of faith for the Nanakheda locality and for pilgrims passing through Ujjain."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1755,
+                "lng":  75.779
+            },
+    "photos":  [
+                   "/images/mandirs/kali-mata-mandir-ujjain.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर नानाखेड़ा में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 12 मिनट का रास्ता है।",
+                       "en":  "The temple is approximately 2 km from Ujjain Railway Station in the Nanakheda area. It is about 12 minutes by auto-rickshaw from Mahakaleshwar Temple."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "दुर्गा देवी मंदिर उज्जैन",
+                           "en":  "Durga Devi Mandir Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि माँ दुर्गा के दर्शन से शत्रु बाधा, रोग और भय का नाश होता है। नवरात्रि में यहाँ अखंड ज्योति जलाने और कन्या पूजन करने की परंपरा है, जिसे पुण्यदायी माना जाता है। मंगलवार और शुक्रवार को माँ को लाल चुनरी, श्रृंगार सामग्री और नारियल अर्पित करने से मनोकामना पूर्ण होने की मान्यता है।",
+                         "en":  "Local devotees believe that darshan of Maa Durga removes enemy obstacles, illness, and fear from one\u0027s life. During Navratri, lighting the akhand jyoti and performing kanya pujan here is considered especially meritorious. Offering red chunri, shringar items, and coconut on Tuesdays and Fridays is believed to fulfil heartfelt wishes."
+                     },
+    "specialFacts":  {
+                         "hi":  "स्कंद पुराण के अवंती खंड में उज्जैन को \u0027दुर्गा की भूमि\u0027 कहा गया है, जो इस मंदिर के आध्यात्मिक महत्व को दर्शाता है। नवरात्रि के नौ दिनों में यहाँ नवदुर्गा के नौ रूपों का अलग-अलग श्रृंगार किया जाता है।",
+                         "en":  "The Skanda Purana\u0027s Avanti Khanda refers to Ujjain as the \u0027land of Durga,\u0027 underlining this temple\u0027s spiritual significance. During the nine days of Navratri, the goddess is adorned in nine distinct forms representing Nav-Durga."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर आते समय शालीन और पारंपरिक वस्त्र पहनें — महिलाएँ साड़ी या सूट और पुरुष कुर्ता-पायजामा पसंद करते हैं। मंगलवार, शुक्रवार और नवरात्रि में भीड़ अधिक होती है, इसलिए प्रातःकाल दर्शन उत्तम है। चढ़ावे के लिए लाल चुनरी, नारियल, श्रृंगार सामग्री और फूल साथ ले जा सकते हैं।",
+                      "en":  "Wear modest, traditional attire when visiting — women often prefer a saree or suit and men a kurta-pyjama. Tuesdays, Fridays, and Navratri days see heavy crowds, so early morning darshan is ideal. You may carry red chunri, coconut, shringar items, and flowers as offerings to the goddess."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "दुर्गा देवी मंदिर दर्शन का सर्वोत्तम समय कौन सा है?",
+                                      "en":  "What is the best time to visit Durga Devi Mandir?"
+                                  },
+                     "answer":  {
+                                    "hi":  "नवरात्रि के नौ दिन यहाँ दर्शन का सबसे शुभ समय माना जाता है, जब मंदिर भव्य रूप से सजाया जाता है। सामान्य दिनों में मंगलवार और शुक्रवार प्रातःकाल दर्शन के लिए श्रेष्ठ हैं।",
+                                    "en":  "The nine days of Navratri are considered the most auspicious time to visit, when the temple is grandly decorated. On regular days, Tuesday and Friday mornings are best for a peaceful darshan."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "मंदिर में कौन-कौन से प्रसाद अर्पित किए जाते हैं?",
+                                      "en":  "What offerings are made at the temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "श्रद्धालु यहाँ लाल चुनरी, नारियल, श्रृंगार सामग्री, लाल फूल और मिठाई अर्पित करते हैं। नवरात्रि में हलवा-पूरी और कन्या पूजन का विशेष महत्व है।",
+                                    "en":  "Devotees offer red chunri, coconut, shringar items, red flowers, and sweets. During Navratri, halwa-puri and kanya pujan hold special significance."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या मंदिर परिसर में फोटोग्राफी की अनुमति है?",
+                                      "en":  "Is photography allowed inside the temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "गर्भगृह में फोटोग्राफी सामान्यतः वर्जित है, परंतु मंदिर परिसर और बाहरी भाग की तस्वीरें ली जा सकती हैं। नवरात्रि के समय स्थानीय नियमों का पालन करना उचित है।",
+                                    "en":  "Photography is usually not permitted inside the sanctum, though the temple courtyard and exterior may be photographed. It is best to follow local rules, especially during Navratri."
+                                }
+                 }
+             ]
+}

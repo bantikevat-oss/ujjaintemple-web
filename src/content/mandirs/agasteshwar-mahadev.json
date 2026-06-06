@@ -1,0 +1,136 @@
+{
+    "slug":  "agasteshwar-mahadev",
+    "name":  {
+                 "hi":  "अगस्तेश्वर महादेव",
+                 "en":  "Agasteshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव — अगस्तेश्वर स्वरूप",
+                  "en":  "Lord Shiva as Agasteshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुराण कालीन",
+                           "en":  "Puranic Era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "अगस्तेश्वर महादेव उज्जैन की प्रसिद्ध चौरासी महादेव श्रृंखला का अभिन्न अंग हैं, जो महाकाल क्षेत्र में विराजमान हैं। महर्षि अगस्त्य द्वारा स्थापित यह शिवलिंग अपने दिव्य महत्त्व के लिए जाना जाता है। स्कन्द पुराण के अवन्ती खण्ड में इनकी महिमा का विस्तृत वर्णन मिलता है।",
+                       "en":  "Agasteshwar Mahadev is an integral part of Ujjain\u0027s celebrated 84 Mahadevas circuit, enshrined in the Mahakal area. This Shivalinga is believed to have been established by the sage Agastya and is revered for its divine potency. The Avanti Khanda of the Skanda Purana elaborates its glory in detail."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में वर्णित 84 महादेव श्रृंखला में अगस्तेश्वर महादेव का पवित्र स्थान है। महर्षि अगस्त्य ने अवन्तीपुरी (उज्जैन) में तपस्या करते हुए इस शिवलिंग की स्थापना की और भगवान शिव से ज्ञान एवं मोक्ष का वरदान प्राप्त किया। यह मंदिर चौरासी महादेव की तीर्थयात्रा में महत्त्वपूर्ण पड़ाव है। कहा जाता है कि महर्षि अगस्त्य की तपस्या से प्रसन्न होकर शिवजी ने यहाँ अगस्तेश्वर नाम से अवतरण लिया। यहाँ नियमित पूजन से विद्या, ज्ञान और आध्यात्मिक उन्नति प्राप्त होती है।",
+                    "en":  "Agasteshwar Mahadev occupies a sacred position in the 84 Mahadevas series described in the Avanti Khanda of the Skanda Purana. The sage Agastya is said to have installed this Shivalinga while performing austerities in Avantipuri (Ujjain), and received from Lord Shiva the boon of knowledge and liberation. This temple is an important halt in the 84 Mahadevas pilgrimage circuit. Tradition holds that Shiva manifested here as Agasteshwar, pleased by the sage\u0027s intense tapas. Regular worship here is believed to bestow learning, wisdom, and spiritual progress."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.182,
+                "lng":  75.7665
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-1.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "अगस्तेश्वर महादेव उज्जैन",
+                           "en":  "Agasteshwar Mahadev Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तजन मानते हैं कि अगस्तेश्वर महादेव के दर्शन से विद्या, बुद्धि और एकाग्रता का वरदान प्राप्त होता है, इसीलिए परीक्षा से पूर्व विद्यार्थी यहाँ विशेष रूप से जल चढ़ाते हैं। मान्यता है कि सोमवार को बेलपत्र अर्पित करने से महर्षि अगस्त्य का आशीर्वाद भी साथ में मिलता है। चौरासी महादेव यात्रा करने वाले श्रद्धालुओं के लिए यहाँ नतमस्तक होना अनिवार्य पड़ाव माना जाता है।",
+                         "en":  "Locals believe that darshan of Agasteshwar Mahadev grants the boon of learning, sharp intellect, and concentration — which is why students often offer water here before exams. It is held that offering bel leaves on Mondays brings the additional blessing of sage Agastya. For pilgrims undertaking the 84 Mahadevas yatra, bowing here is considered an essential stop on the circuit."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? अगस्तेश्वर महादेव चौरासी महादेव श्रृंखला में उन कुछ शिवलिंगों में से एक हैं जिनका नाम सीधे महर्षि अगस्त्य से जुड़ा है। माना जाता है कि अगस्त्य मुनि ने दक्षिण भारत जाने से पूर्व यहीं तपस्या कर शिवजी को प्रसन्न किया था।",
+                         "en":  "Did you know? Agasteshwar Mahadev is among the few Shivalingas in the 84 Mahadevas circuit named directly after sage Agastya. Tradition holds that Agastya performed his tapas here and pleased Lord Shiva before journeying south to spread the Vedic dharma across the Deccan."
+                     },
+    "visitTips":  {
+                      "hi":  "मंदिर महाकाल क्षेत्र में होने के कारण श्रावण मास और सोमवार को भीड़ अधिक रहती है, इसलिए प्रातःकाल दर्शन सर्वोत्तम हैं। शिवजी को अर्पित करने हेतु जल, बेलपत्र, सफेद पुष्प और थोड़ा सा दूध साथ ले जाएं। सादे एवं ढके वस्त्र पहनें तथा गर्भगृह में मोबाइल का प्रयोग न करें।",
+                      "en":  "Being inside the Mahakal precinct, the temple sees heavy footfall during Shravan month and on Mondays, so early-morning darshan is ideal. Carry water, bel leaves, white flowers and a little milk to offer to the Shivalinga. Wear modest, covered clothing and avoid using your phone inside the sanctum."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "अगस्तेश्वर महादेव मंदिर क्यों प्रसिद्ध है?",
+                                      "en":  "Why is Agasteshwar Mahadev temple famous?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह मंदिर उज्जैन की चौरासी महादेव श्रृंखला का अंग है और महर्षि अगस्त्य द्वारा स्थापित माना जाता है। स्कन्द पुराण के अवन्ती खण्ड में इसकी महिमा वर्णित है।",
+                                    "en":  "The temple is part of Ujjain\u0027s 84 Mahadevas circuit and is believed to have been established by sage Agastya. Its glory is described in the Avanti Khanda of the Skanda Purana."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "मंदिर में दर्शन हेतु सर्वोत्तम समय कौन-सा है?",
+                                      "en":  "What is the best time to visit the temple?"
+                                  },
+                     "answer":  {
+                                    "hi":  "श्रावण मास, महाशिवरात्रि और प्रत्येक सोमवार विशेष रूप से शुभ माने जाते हैं। प्रातःकाल की आरती के समय वातावरण सर्वाधिक दिव्य रहता है।",
+                                    "en":  "Shravan month, Mahashivratri and every Monday are considered especially auspicious. The atmosphere is most divine during the early-morning aarti."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या यह मंदिर महाकालेश्वर के निकट है?",
+                                      "en":  "Is this temple close to Mahakaleshwar?"
+                                  },
+                     "answer":  {
+                                    "hi":  "हाँ, अगस्तेश्वर महादेव महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर है और पैदल भी सुगमता से पहुँचा जा सकता है।",
+                                    "en":  "Yes, Agasteshwar Mahadev lies about 0.3 km from the Mahakaleshwar temple and can comfortably be reached on foot."
+                                }
+                 }
+             ]
+}

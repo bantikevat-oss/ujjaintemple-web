@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="hi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#8B1A1A" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Self-hosted fonts (no Google CDN) — drop woff2 files in /public/fonts/ then re-enable preload -->
+    <!-- <link rel="preload" as="font" type="font/woff2" href="/fonts/notosans-devanagari-400.woff2" crossorigin /> -->
+    <!-- <link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-400.woff2" crossorigin /> -->
+
+    <!-- Hero LCP preload — WebP first, JPG fallback for older browsers -->
+    <link rel="preload" as="image" href="/images/hero/mahakaleshwar-hero.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/hero/mahakaleshwar-hero.jpg" media="(prefers-reduced-data: reduce)" />
+
+    <!-- DNS prefetch for tag manager (deferred 2.5s) -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- gtag init (deferred load via idle callback) -->
+    <script id="gtag-init">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      // gtag('config', 'G-XXXXXXX');  // add when GA4 property ready
+    </script>
+
+    <title>UjjainTemple — Ujjain मंदिर, सिंहस्थ 2028, यात्रा गाइड | +91 74007 24456</title>
+    <meta name="description" content="उज्जैन के 35+ मंदिर, सिंहस्थ 2028 गाइड, होटल, ट्रांसपोर्ट, पूजा जानकारी — एक भरोसेमंद बिलिंगुअल गाइड। दर्शन प्लानिंग के लिए कॉल करें: +91 74007 24456" />
+    <link rel="canonical" href="https://ujjaintemple.com/" />
+  </head>
+  <body class="bg-cream text-ink font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow focus:border-2 focus:border-maroon focus:text-maroon focus:font-semibold">मुख्य सामग्री पर जाएँ</a>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Lazy load GTM after 2.5s OR first interaction (Mangaldosh pattern) -->
+    <script id="gtag-injector">
+      (function () {
+        let fired = false;
+        function loadGtag() {
+          if (fired) return; fired = true;
+          // Uncomment when GTM/GA4 IDs are ready:
+          // var s = document.createElement('script');
+          // s.async = true;
+          // s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX';
+          // document.head.appendChild(s);
+        }
+        window.addEventListener('scroll', loadGtag, { once: true, passive: true });
+        window.addEventListener('click', loadGtag, { once: true });
+        window.addEventListener('touchstart', loadGtag, { once: true, passive: true });
+        setTimeout(loadGtag, 2500);
+      })();
+    </script>
+  </body>
+</html>

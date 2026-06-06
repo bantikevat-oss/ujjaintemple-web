@@ -1,0 +1,92 @@
+{
+    "slug":  "kankeshwar-mahadev",
+    "name":  {
+                 "hi":  "कंकेश्वर महादेव",
+                 "en":  "Kankeshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (कंकेश्वर रूप)",
+                  "en":  "Lord Shiva as Kankeshwar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "कंकेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ क्रम का एक प्रमुख शिव मंदिर है। \u0027कंक\u0027 शब्द से संबद्ध यह नाम शिव के एक विशेष स्वरूप को दर्शाता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की अर्चना से रोग और कष्टों से मुक्ति का उल्लेख मिलता है।",
+                       "en":  "Kankeshwar Mahadev is a prominent Shiva shrine in the Chaurasi Mahadeva pilgrimage circuit of Ujjain. The name is associated with a distinctive aspect of Lord Shiva\u0027s cosmic presence. The Avanti Khanda of the Skanda Purana mentions that worship at this Shivalinga grants relief from disease and suffering."
+                   },
+    "history":  {
+                    "hi":  "स्कंद पुराण के अवन्ति खण्ड में कंकेश्वर महादेव को उज्जैन के चौरासी स्वयंभू लिंगों में स्थान दिया गया है। पौराणिक परंपरा के अनुसार, यह लिंग आदि काल से प्रकट है और इसकी पूजा से मनुष्य के कर्मजन्य कष्ट दूर होते हैं। उज्जैन के महाकाल क्षेत्र में स्थित होने के कारण इस मंदिर का धार्मिक महत्त्व अत्यंत उच्च है। मध्यकाल में स्थानीय भक्तों के सहयोग से मंदिर का संरक्षण एवं जीर्णोद्धार किया गया। चौरासी महादेव की यात्रा में इस स्थान पर दर्शन करना अनिवार्य माना जाता है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana includes Kankeshwar Mahadev among the eighty-four self-manifested Shivalingas of Ujjain. According to sacred tradition, this Shivalinga has been manifest since primordial times and its worship is said to remove suffering born of past karmas. Located in the Mahakal Area of Ujjain, this temple holds great religious significance. In the medieval period, local devotees supported the preservation and renovation of the temple. Darshan at this site is considered an obligatory stop on the Chaurasi Mahadeva pilgrimage circuit."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1821,
+                "lng":  75.7668
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-2.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+                       "en":  "This temple is about 0.3 km from Mahakaleshwar Temple. Ujjain Railway Station is approximately 2 km away, reachable by auto or rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "कंकेश्वर महादेव उज्जैन",
+                           "en":  "Kankeshwar Mahadev Ujjain"
+                       }
+}

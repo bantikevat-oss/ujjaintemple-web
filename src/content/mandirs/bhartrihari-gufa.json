@@ -1,0 +1,138 @@
+{
+    "slug":  "bhartrihari-gufa",
+    "name":  {
+                 "hi":  "भर्तृहरि गुफा मंदिर",
+                 "en":  "Bhartrihari Cave Temple"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव / राजा भर्तृहरि",
+                  "en":  "Lord Shiva / Raja Bhartrihari"
+              },
+    "templeType":  "Historical",
+    "locationArea":  "Bhairavgarh",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "प्रथम शताब्दी ई., राजा भर्तृहरि काल",
+                           "en":  "1st century CE, era of Raja Bhartrihari"
+                       },
+    "architectureStyle":  "Rock-cut Cave",
+    "shortIntro":  {
+                       "hi":  "भर्तृहरि गुफा मंदिर वह ऐतिहासिक स्थल है जहाँ उज्जैन के विद्वान राजा एवं नाथ संप्रदाय के महान योगी भर्तृहरि ने वैराग्य लेकर तपस्या की थी। यह प्राकृतिक गुफाओं का समूह भैरवगढ़ की पहाड़ियों में स्थित है और अब यहाँ भगवान शिव के साथ भर्तृहरि की तपस्वी मूर्ति पूजी जाती है। नाथ पंथ के साधु-संत आज भी यहाँ साधना के लिए आते हैं।",
+                       "en":  "Bhartrihari Cave Temple is the historic site where Raja Bhartrihari — the scholar-king of Ujjain and great yogi of the Nath Sampradaya — renounced his kingdom and performed intense meditation. This cluster of natural caves in the Bhairavgarh hills now enshrines Lord Shiva alongside an ascetic image of Bhartrihari. Nath Panth saints continue to come here for spiritual practice."
+                   },
+    "history":  {
+                    "hi":  "भर्तृहरि विक्रमादित्य के ज्येष्ठ भ्राता तथा उज्जैन के प्रतापी राजा थे जिन्होंने संसार की नश्वरता को जानकर राजपाट छोड़ दिया और नाथ संप्रदाय में दीक्षा ली। संस्कृत साहित्य में उनकी रचनाएँ — शृंगार शतक, नीति शतक एवं वैराग्य शतक — अमर हैं। इस गुफा में भर्तृहरि ने वर्षों तक कठोर तपस्या की और योग-साधना के माध्यम से आत्मज्ञान की प्राप्ति की। गुफा परिसर में भगवान शिव का एक प्राचीन शिवलिंग स्थापित है जिसकी पूजा भर्तृहरि स्वयं करते थे। कार्तिक पूर्णिमा एवं शिवरात्रि पर यहाँ नाथ पंथ के साधुओं का विशेष समागम होता है।",
+                    "en":  "Bhartrihari was the elder brother of Vikramaditya and the powerful king of Ujjain who, having realized the transience of worldly pleasures, abdicated his throne and took initiation into the Nath Sampradaya. His Sanskrit compositions — Shringara Shataka, Niti Shataka, and Vairagya Shataka — are immortal works of literature. In this cave, Bhartrihari performed intense tapas for years and attained self-knowledge through yogic practice. An ancient Shivalinga worshipped by Bhartrihari himself is enshrined in the cave complex. On Kartik Purnima and Mahashivratri, a special gathering of Nath Panth saints is held here."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 7:00 – सायं 6:00",
+                                 "en":  "7:00 AM – 6:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 7:00 – सायं 6:00",
+                                        "en":  "7:00 AM – 6:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 7:00 – सायं 6:00",
+                                         "en":  "7:00 AM – 6:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 7:00 – सायं 6:00",
+                                           "en":  "7:00 AM – 6:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 7:00 – सायं 6:00",
+                                          "en":  "7:00 AM – 6:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 7:00 – सायं 6:00",
+                                        "en":  "7:00 AM – 6:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 7:00 – सायं 6:00",
+                                          "en":  "7:00 AM – 6:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 7:00 – सायं 6:00",
+                                        "en":  "7:00 AM – 6:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 7:30 · संध्या आरती 5:30",
+                        "en":  "Morning aarti 7:30 AM · Evening aarti 5:30 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "भर्तृहरि गुफा मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Bhartrihari Cave Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1975,
+                "lng":  75.7705
+            },
+    "photos":  [
+                   "/images/mandirs/bhartrihari-gufa.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "भर्तृहरि गुफा मंदिर भैरवगढ़ पहाड़ियों में स्थित है और महाकालेश्वर मंदिर से लगभग 2.5 किमी उत्तर में है। उज्जैन रेलवे स्टेशन से लगभग 3.5 किमी दूर है और ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+                       "en":  "Bhartrihari Cave Temple is located in the Bhairavgarh hills, approximately 2.5 km north of Mahakaleshwar Temple. It is about 3.5 km from Ujjain Railway Station and accessible by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+                          "gadkalika-mata",
+                          "vikrant-bhairav",
+                          "shaneshwar-mahadev"
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "भर्तृहरि गुफा उज्जैन",
+                           "en":  "Bhartrihari Cave Temple Ujjain"
+                       },
+    "localBeliefs":  {
+                         "hi":  "स्थानीय भक्तों का विश्वास है कि भर्तृहरि गुफा में आज भी सूक्ष्म रूप में राजा भर्तृहरि की उपस्थिति है और सच्चे मन से ध्यान करने वाले साधक को यहाँ विशेष आध्यात्मिक अनुभूति होती है। मान्यता है कि गुफा के भीतर बैठकर वैराग्य शतक का पाठ करने से सांसारिक मोह कम होते हैं। नाथ पंथ के साधु इसे सिद्धपीठ मानते हैं जहाँ साधना शीघ्र फलित होती है।",
+                         "en":  "Local devotees believe that Raja Bhartrihari is still subtly present within the cave, and sincere seekers who meditate here receive special spiritual experiences. It is said that reciting the Vairagya Shataka while seated inside the cave helps loosen worldly attachments. Nath Panth saints regard this as a Siddhapeeth where sadhana bears fruit quickly."
+                     },
+    "specialFacts":  {
+                         "hi":  "क्या आप जानते हैं? भर्तृहरि गुफा एक प्राकृतिक चट्टान-निर्मित गुफा है जो हजारों वर्ष पुरानी मानी जाती है, और इसके भीतरी कक्ष में पहुँचने के लिए संकरे रास्ते से झुककर जाना पड़ता है। कहा जाता है कि गुफा के अंदर तापमान बाहर से सदा कम रहता है।",
+                         "en":  "Did you know? The Bhartrihari Cave is a natural rock-cut cavern believed to be thousands of years old, and reaching its inner chamber requires crouching through a narrow passage. The temperature inside the cave is said to remain noticeably cooler than outside throughout the year."
+                     },
+    "visitTips":  {
+                      "hi":  "गुफा के भीतर रास्ता संकरा और नीचा है, इसलिए आरामदायक एवं सादे वस्त्र पहनें तथा सिर बचाते हुए झुककर चलें। टॉर्च या मोबाइल लाइट साथ रखें क्योंकि भीतर रोशनी कम होती है। प्रातः या संध्या के समय दर्शन सर्वोत्तम हैं जब भीड़ कम और वातावरण शांत रहता है।",
+                      "en":  "The passage inside the cave is narrow and low, so wear comfortable modest clothing and walk crouched while protecting your head. Carry a torch or mobile light as the interior is dim. Early morning or evening visits are best when crowds are sparse and the atmosphere is most serene."
+                  },
+    "faqs":  [
+                 {
+                     "question":  {
+                                      "hi":  "भर्तृहरि गुफा का धार्मिक महत्व क्या है?",
+                                      "en":  "What is the religious significance of Bhartrihari Cave?"
+                                  },
+                     "answer":  {
+                                    "hi":  "यह वह पवित्र स्थल है जहाँ राजा भर्तृहरि ने राजपाट त्यागकर नाथ संप्रदाय की दीक्षा ली और वर्षों तक तपस्या की। यहाँ भगवान शिव का प्राचीन शिवलिंग स्थापित है जिसकी पूजा भर्तृहरि स्वयं करते थे। नाथ पंथ के साधकों के लिए यह सिद्धपीठ है।",
+                                    "en":  "This is the sacred site where Raja Bhartrihari renounced his throne, was initiated into the Nath Sampradaya, and performed years of tapas. An ancient Shivalinga worshipped by Bhartrihari himself is enshrined here. For Nath Panth seekers, this is a Siddhapeeth."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "क्या गुफा के भीतर जाना सभी के लिए सुरक्षित है?",
+                                      "en":  "Is it safe for everyone to enter the cave?"
+                                  },
+                     "answer":  {
+                                    "hi":  "गुफा का मार्ग संकरा और नीचा है, इसलिए वृद्ध एवं घुटनों की समस्या वाले श्रद्धालुओं को सावधानी से जाना चाहिए। क्लॉस्ट्रोफोबिया (बंद स्थानों का भय) वाले लोग बाहरी मंदिर से ही दर्शन कर सकते हैं। बच्चों को बड़ों के साथ ही भीतर ले जाएँ।",
+                                    "en":  "The passage is narrow and low, so elderly devotees and those with knee problems should proceed carefully. Visitors with claustrophobia can take darshan from the outer temple area. Children should enter only when accompanied by adults."
+                                }
+                 },
+                 {
+                     "question":  {
+                                      "hi":  "भर्तृहरि गुफा दर्शन के लिए सबसे उपयुक्त समय कौन सा है?",
+                                      "en":  "Which is the best time to visit Bhartrihari Cave?"
+                                  },
+                     "answer":  {
+                                    "hi":  "महाशिवरात्रि एवं कार्तिक पूर्णिमा पर यहाँ नाथ पंथ के साधुओं का विशेष समागम होता है और वातावरण अत्यंत भक्तिमय रहता है। सामान्य दिनों में प्रातः या संध्या के समय जाना सर्वोत्तम है। सर्दियों के महीने अक्टूबर से फरवरी दर्शन हेतु अनुकूल हैं।",
+                                    "en":  "Mahashivratri and Kartik Purnima see special gatherings of Nath Panth saints and a deeply devotional atmosphere. On regular days, early morning or evening visits are best. The winter months from October to February are ideal for darshan."
+                                }
+                 }
+             ]
+}

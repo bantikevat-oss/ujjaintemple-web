@@ -1,0 +1,92 @@
+{
+    "slug":  "kurmareshwar-mahadev",
+    "name":  {
+                 "hi":  "कूर्मेश्वर महादेव",
+                 "en":  "Kurmareshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव / कूर्म (कच्छप) अवतार",
+                  "en":  "Lord Shiva / Kurma (Tortoise) avatar"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "कूर्मेश्वर महादेव उज्जैन के 84 महादेव तीर्थों में एक अनूठा स्थान है जो कूर्म (कच्छप) अवतार और शिव की संयुक्त उपासना का केन्द्र है। यह मंदिर महाकाल क्षेत्र में है और स्कन्द पुराण के अवन्ति खण्ड में वर्णित है। समुद्र मंथन की पौराणिक कथा से जुड़ा यह तीर्थ अत्यंत महत्त्वपूर्ण है।",
+                       "en":  "Kurmareshwar Mahadev is a unique site among the 84 Mahadevas of Ujjain, serving as a centre for the combined veneration of the Kurma (Tortoise) avatar and Shiva. Located in the Mahakal Area and described in the Avanti Khanda of the Skanda Purana, this tirtha is connected to the Puranic legend of the ocean churning."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में कूर्मेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। पौराणिक मान्यता के अनुसार समुद्र मंथन के समय भगवान विष्णु ने कूर्म (कच्छप) अवतार ग्रहण कर मन्दराचल पर्वत को अपनी पीठ पर धारण किया था। उस घटना के उपलक्ष्य में कूर्म ने यहाँ शिव की उपासना की, जिससे यह शिवलिंग \u0027कूर्मेश्वर\u0027 नाम से प्रसिद्ध हुआ। महाकाल वन में स्थित यह तीर्थ शिव-विष्णु समन्वय का प्रतीक है। 84 महादेवों की परम्परागत यात्रा में यह मंदिर एक महत्त्वपूर्ण आध्यात्मिक पड़ाव है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana gives Kurmareshwar Mahadev a place among the 84 Mahadevas of Avantika. According to tradition, during the churning of the ocean, Lord Vishnu took the Kurma (Tortoise) avatar to support Mount Mandara on his back. In commemoration of this event, Kurma worshipped Shiva at this spot, giving the Shivalinga the name Kurmareshwar. This tirtha in the Mahakal forest symbolises the harmony between Shiva and Vishnu. In the traditional 84 Mahadevas yatra, this temple is an important spiritual stop."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1832,
+                "lng":  75.7686
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-9.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "कूर्मेश्वर महादेव उज्जैन",
+                           "en":  "Kurmareshwar Mahadev Ujjain"
+                       }
+}

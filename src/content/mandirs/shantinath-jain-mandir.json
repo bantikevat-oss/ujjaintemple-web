@@ -1,0 +1,92 @@
+﻿{
+    "slug":  "shantinath-jain-mandir",
+    "name":  {
+                 "hi":  "शान्तिनाथ जैन मंदिर",
+                 "en":  "Shantinath Jain Mandir Ujjain"
+             },
+    "deity":  {
+                  "hi":  "भगवान शान्तिनाथ (१६वें तीर्थंकर)",
+                  "en":  "Bhagwan Shantinath (16th Tirthankara)"
+              },
+    "templeType":  "Jain",
+    "locationArea":  "Nanakheda",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "मध्यकालीन युग",
+                           "en":  "Medieval Era"
+                       },
+    "architectureStyle":  "Jain Nagara",
+    "shortIntro":  {
+                       "hi":  "शान्तिनाथ जैन मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित एक शांतिपूर्ण आध्यात्मिक स्थल है। यह मंदिर जैन धर्म के १६वें तीर्थंकर भगवान शान्तिनाथ को समर्पित है जो शांति, करुणा और अहिंसा के प्रतीक हैं। उनके नाम में ही \u0027शांति\u0027 का भाव निहित है जो इस मंदिर के वातावरण में प्रतिबिंबित होता है।",
+                       "en":  "The Shantinath Jain Mandir is a serene spiritual destination in the Nanakheda area of Ujjain. Dedicated to Bhagwan Shantinath, the 16th Tirthankara of Jainism, this temple embodies his ideals of peace, compassion, and non-violence. The very name Shantinath — meaning \u0027Lord of Peace\u0027 — reflects the calm atmosphere of this sacred place."
+                   },
+    "history":  {
+                    "hi":  "भगवान शान्तिनाथ जैन धर्म के १६वें तीर्थंकर थे जिनका जन्म हस्तिनापुर में हुआ था। जैन आगम ग्रंथों के अनुसार वे तीर्थंकर होने से पूर्व चक्रवर्ती राजा भी रहे — ऐसे कुछ ही तीर्थंकर हैं जो एक ही जीवन में चक्रवर्ती पद भी प्राप्त करते हैं। उनकी उपस्थिति मात्र से समस्त क्लेश और पापों का नाश होता है — यह विश्वास जैन भक्तों में दृढ़ है। उज्जैन की जैन परंपरा में शान्तिनाथ की विशेष महिमा रही है और स्थानीय जैन समाज ने उनके नाम पर यह मंदिर स्थापित किया। मंदिर में हिरण के लांछन (चिह्न) से पहचानी जाने वाली शान्तिनाथ की प्रतिमा विराजमान है।",
+                    "en":  "Bhagwan Shantinath, the 16th Tirthankara, was born in Hastinapur according to the Jain Agama texts. He is among the rare Tirthankaras who also held the title of Chakravarti (universal emperor) before attaining liberation, making him uniquely revered in Jain tradition. Jain devotees firmly believe that the mere presence of Shantinath dispels all sins and suffering. Shantinath holds special reverence in Ujjain\u0027s Jain tradition, and the local community established this temple in his honour. The idol here is identified by the deer symbol (lanchhan), which is the iconographic mark of Bhagwan Shantinath."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1755,
+                "lng":  75.779
+            },
+    "photos":  [
+                   "/images/mandirs/shantinath-jain-mandir.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 1.5 किमी और महाकालेश्वर मंदिर से लगभग 2 किमी की दूरी पर नानाखेड़ा क्षेत्र में स्थित है। ऑटोरिक्शा और ई-रिक्शा सहज रूप से उपलब्ध हैं।",
+                       "en":  "The temple is located in Nanakheda, approximately 1.5 km from Ujjain Railway Station and about 2 km from Mahakaleshwar Temple. Auto-rickshaws and e-rickshaws are easily available."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "शान्तिनाथ जैन मंदिर उज्जैन",
+                           "en":  "Shantinath Jain Mandir Ujjain"
+                       }
+}

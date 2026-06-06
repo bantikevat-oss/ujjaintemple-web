@@ -1,0 +1,160 @@
+{
+  "slug": "dundeshwar-mahadev",
+  "name": {
+    "hi": "डुंडेश्वर महादेव",
+    "en": "Dundeshwar Mahadev"
+  },
+  "deity": {
+    "hi": "भगवान शिव",
+    "en": "Lord Shiva"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "डुंड (ढोल/वाद्य) से पूजित शिव। 84 महादेव परंपरा।",
+    "en": "Shiva worshipped with the dund (drum/percussion). Part of 84 Mahadeva tradition."
+  },
+  "history": {
+    "hi": "डुंडेश्वर महादेव उज्जैन के प्रसिद्ध 84 महादेवों की पवित्र परंपरा का एक महत्वपूर्ण शिवलिंग है। स्कंद पुराण के अवंतिका खंड में इन 84 महादेवों का विशेष उल्लेख मिलता है, जिनके दर्शन से जीव को मोक्ष की प्राप्ति होती है। 'डुंड' शब्द ढोल या वाद्य ध्वनि से जुड़ा है, और मान्यता है कि यहाँ नाद-पूजा अर्थात् वाद्य ध्वनियों के माध्यम से शिव की आराधना की प्राचीन परंपरा रही है। पौराणिक कथाओं के अनुसार, स्वयं भगवान शिव ने यहाँ डुंड नामक असुर का संहार कर भक्तों को अभय प्रदान किया था। अवंतिका क्षेत्र (उज्जैन) में स्थित यह स्थान सदियों से साधकों, तांत्रिकों और शैव भक्तों का श्रद्धा-केंद्र रहा है। श्रावण मास और महाशिवरात्रि पर यहाँ विशेष पूजा-अर्चना का आयोजन होता है।",
+    "en": "Dundeshwar Mahadev is a sacred Shivling in the revered tradition of the 84 Mahadevas of Ujjain. The Skanda Purana's Avantika Khanda mentions these 84 Mahadevas, whose darshan is believed to grant moksha to the devotee. The word 'Dund' is associated with the drum or percussive sound, and tradition holds that an ancient form of nada-puja, worship through sound and percussion, was performed here. Puranic accounts suggest that Lord Shiva himself vanquished a demon named Dund at this very spot, granting fearlessness to his devotees. Situated within the sacred Avantika region (Ujjain), the shrine has long been a centre of devotion for sadhakas, tantriks and Shaiva pilgrims. The temple sees special worship during Shravan month and on Mahashivratri."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 6:00 – रात्रि 8:00",
+    "en": "6:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 6:00 – रात्रि 8:00",
+      "en": "6:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "डुंडेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Dundeshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-5.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों का विश्वास है कि डुंडेश्वर महादेव के दर्शन से भय, बाधा और नकारात्मक ऊर्जा का नाश होता है। मान्यता है कि सोमवार और श्रावण माह में बेलपत्र चढ़ाने से मनोकामनाएँ शीघ्र पूर्ण होती हैं। बुजुर्गों के अनुसार, ढोल-मृदंग की ध्वनि के साथ यहाँ की गई पूजा शिव को अत्यंत प्रिय है।",
+    "en": "Locals believe that darshan at Dundeshwar Mahadev removes fear, obstacles and negative energies from one's life. Offering bel leaves on Mondays and during Shravan is said to fulfil heartfelt wishes quickly. Elders hold that worship accompanied by the sound of drums and percussion is especially dear to Lord Shiva here."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? डुंडेश्वर महादेव उज्जैन के उन 84 महादेवों में से एक हैं, जिनकी परिक्रमा को अवंतिका क्षेत्र की संपूर्ण शिव यात्रा माना जाता है। 'डुंड' नाम वाद्य ध्वनि और एक पौराणिक असुर—दोनों से जुड़ा है।",
+    "en": "Did you know? Dundeshwar Mahadev is one of the 84 Mahadevas of Ujjain whose combined parikrama is regarded as the complete Shiva yatra of the Avantika region. The name 'Dund' is linked both to percussive sound and to a demon mentioned in Puranic legend."
+  },
+  "visitTips": {
+    "hi": "मंदिर में प्रवेश से पूर्व हाथ-पैर धोकर सादे, शालीन वस्त्र पहनें। अभिषेक के लिए जल, दूध, बेलपत्र और पुष्प साथ ले जाएँ; सोमवार व श्रावण में थोड़ी भीड़ रहती है, अतः प्रातःकाल जाना अच्छा रहेगा। महाकाल क्षेत्र में होने के कारण मोबाइल, चप्पल बाहर रखकर शांत मन से दर्शन करें।",
+    "en": "Wash your hands and feet before entering and wear simple, modest clothing. Carry water, milk, bel leaves and flowers for the abhishek; Mondays and Shravan see slightly larger crowds, so an early morning visit is ideal. As the shrine lies within the Mahakal precinct, leave footwear and phones outside and take darshan with a calm, focused mind."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या डुंडेश्वर महादेव 84 महादेवों में आते हैं?",
+        "en": "Is Dundeshwar Mahadev part of the 84 Mahadevas?"
+      },
+      "a": {
+        "hi": "हाँ, डुंडेश्वर महादेव उज्जैन के प्रसिद्ध 84 महादेवों की पवित्र सूची में सम्मिलित हैं, जिनका वर्णन स्कंद पुराण के अवंतिका खंड में मिलता है।",
+        "en": "Yes, Dundeshwar Mahadev is included in the sacred list of the 84 Mahadevas of Ujjain, which is described in the Avantika Khanda of the Skanda Purana."
+      }
+    },
+    {
+      "q": {
+        "hi": "मंदिर में क्या चढ़ावा ले जाएँ?",
+        "en": "What offerings should one carry to the temple?"
+      },
+      "a": {
+        "hi": "जल, दूध, बेलपत्र, सफेद पुष्प, धूप-दीप और थोड़ी सी मिठाई अथवा फल पर्याप्त हैं। तामसिक वस्तुएँ वर्जित हैं।",
+        "en": "Water, milk, bel leaves, white flowers, incense, lamps and a little sweet or fruit are sufficient. Tamasic items should be avoided."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यहाँ श्रावण मास में विशेष आयोजन होते हैं?",
+        "en": "Are there special events during Shravan month?"
+      },
+      "a": {
+        "hi": "जी हाँ, श्रावण के सोमवार और महाशिवरात्रि पर विशेष अभिषेक, रुद्राभिषेक और भजन-कीर्तन का आयोजन होता है, जिसमें भक्तगण उत्साहपूर्वक भाग लेते हैं।",
+        "en": "Yes, special abhishek, Rudrabhishek and bhajan-kirtan are organised on Shravan Mondays and Mahashivratri, in which devotees participate with great enthusiasm."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "डुंडेश्वर महादेव उज्जैन",
+    "en": "Dundeshwar Mahadev Ujjain"
+  }
+}

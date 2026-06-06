@@ -1,0 +1,92 @@
+{
+    "slug":  "sthuleshwar-mahadev",
+    "name":  {
+                 "hi":  "स्थूलेश्वर महादेव",
+                 "en":  "Sthuleshwar Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (स्थूलेश्वर रूप — स्थूल सृष्टि के ईश्वर)",
+                  "en":  "Lord Shiva as Sthuleshwar (Lord of the Gross Creation)"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Mahakal Area",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
+                           "en":  "Ancient era (referenced in Skanda Purana)"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "स्थूलेश्वर महादेव उज्जैन के 84 महादेवों की पावन परम्परा में सम्मिलित एक प्राचीन शिव तीर्थ है। \u0027स्थूल\u0027 अर्थात स्थूल सृष्टि (भौतिक जगत) के ईश्वर — शिव यहाँ विश्व के पालक एवं नियामक रूप में पूजित हैं। स्कन्द पुराण के अवन्ति खण्ड में इस लिंग की पूजा का फल विशेष रूप से बताया गया है।",
+                       "en":  "Sthuleshwar Mahadev is an ancient Shiva tirtha included in the sacred tradition of the 84 Mahadevas of Ujjain. The name Sthuleshwar refers to Shiva as the lord of the gross (sthula) creation — the physical world. The Avanti Khanda of the Skanda Purana specially describes the merit of worshipping this linga."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में स्थूलेश्वर महादेव को अवन्तिका के 84 महादेवों में गिना गया है। दार्शनिक परम्परा में शिव सूक्ष्म और स्थूल दोनों सृष्टियों के अधिपति हैं — इस शिवलिंग में उनका स्थूल विश्व के नियामक स्वरूप की उपासना की जाती है। महाकाल वन के इस पावन स्थल पर दर्शन करने से भौतिक एवं आध्यात्मिक दोनों प्रकार की सिद्धियाँ प्राप्त होती हैं। 84 महादेवों की यात्रा करने वाले तीर्थयात्री इस मंदिर को विशेष श्रद्धा से देखते हैं। यहाँ सोमवार और प्रदोष तिथि पर विशेष पूजा-अर्चना की जाती है।",
+                    "en":  "The Avanti Khanda of the Skanda Purana counts Sthuleshwar Mahadev among the 84 Mahadevas of Avantika. In philosophical tradition, Shiva is the lord of both the subtle and gross creations — this Shivalinga is worshipped in his aspect as the regulator of the gross world. Darshan at this sacred site in the Mahakal forest is said to grant both material and spiritual accomplishments. Pilgrims undertaking the 84 Mahadevas yatra hold this temple in special reverence. Special worship is performed here on Mondays and Pradosh tithi."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1822,
+                "lng":  75.7671
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-5.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 12-15 मिनट में पहुँचा जा सकता है।",
+                       "en":  "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 12-15 minutes."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "स्थूलेश्वर महादेव उज्जैन",
+                           "en":  "Sthuleshwar Mahadev Ujjain"
+                       }
+}

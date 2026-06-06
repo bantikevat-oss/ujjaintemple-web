@@ -1,0 +1,128 @@
+{
+  "slug": "mangalnath",
+  "name": {
+    "hi": "मंगलनाथ मंदिर",
+    "en": "Mangalnath Temple"
+  },
+  "deity": {
+    "hi": "मंगल देव (शिव)",
+    "en": "Mangal Dev (Lord Shiva)"
+  },
+  "templeType": "Navagraha",
+  "locationArea": "Mahakal Vana",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "मत्स्य पुराण में उल्लेख · वर्तमान संरचना मराठा युग",
+    "en": "Mentioned in Matsya Purana · present structure from Maratha era"
+  },
+  "architectureStyle": "Maratha",
+  "shortIntro": {
+    "hi": "मत्स्य पुराण के अनुसार मंगल ग्रह की उत्पत्ति यहीं हुई थी — मंगलनाथ को मंगल देव की 'जन्मभूमि' माना जाता है। मांगलिक दोष, मंगल दोष निवारण पूजा के लिए यह भारत का प्रमुख तीर्थ है।",
+    "en": "According to Matsya Purana, planet Mars (Mangal) was born here — Mangalnath is revered as the 'birthplace' of Mangal Dev. It is India's foremost site for Manglik Dosh and Mangal Dosh Nivaran puja."
+  },
+  "history": {
+    "hi": "मत्स्य पुराण कहता है कि शिव और पृथ्वी के पुत्र के रूप में मंगल ग्रह यहां प्रकट हुए। प्राचीन काल से यह स्थान खगोलीय गणनाओं और ग्रह शांति का केंद्र रहा। ज्योतिष शास्त्र के अनुसार जिनकी कुंडली में मंगल अशुभ स्थान पर है (मांगलिक दोष), उनके लिए इस मंदिर में पूजा सर्वोत्तम मानी जाती है। मंदिर शिप्रा नदी के तट पर ऊंचाई पर स्थित है — चारों ओर दृश्य अत्यंत मनोरम है।",
+    "en": "Matsya Purana describes how Mars (planet Mangal), born of Shiva and Earth, manifested here. Since ancient times this has been a center for astronomical calculations and planetary remediation. Per Jyotish, individuals with Mars in inauspicious houses (Manglik Dosh) are advised to perform puja here above all other Mars temples. The temple sits elevated on the banks of Shipra, offering panoramic views."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 5:00 – रात्रि 8:00 (मंगलवार विशेष भीड़)",
+    "en": "5:00 AM – 8:00 PM (Tuesdays especially crowded)"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:00 (मुख्य पूजा दिवस)",
+      "en": "5:00 AM – 9:00 PM (main puja day)"
+    },
+    "wednesday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 5:00 – रात्रि 8:00",
+      "en": "5:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:00 · मध्याह्न भोग 12:00 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:00 AM · Afternoon bhog 12:00 PM · Evening aarti 7:00 PM"
+  },
+  "specialOccasions": {
+    "hi": "अंगारक चतुर्थी — मुख्य उत्सव · मंगलवार — साप्ताहिक उच्च भीड़ · नई कुंडली विश्लेषण और मंगल दोष पूजा हेतु पूर्व-बुकिंग",
+    "en": "Angarak Chaturthi — main festival · Tuesdays — weekly peak · Advance booking recommended for kundli analysis and Mangal Dosh puja"
+  },
+  "entryFee": {
+    "hi": "दर्शन निःशुल्क · पूजा सेवा ₹3,100 से शुरू (समय और सामग्री के अनुसार)",
+    "en": "Darshan free · Puja services from ₹3,100 onwards (varies by duration and materials)"
+  },
+  "address": {
+    "hi": "मंगलनाथ मंदिर, मंगलनाथ रोड, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Mangalnath Temple, Mangalnath Road, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1983,
+    "lng": 75.7619
+  },
+  "photos": [
+    "/images/mandirs/mangalnath.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "लाल चंदन, गुड़, मसूर दाल विशेष भोग · प्रसाद की दुकानें मंदिर के बाहर",
+    "en": "Red sandalwood, jaggery, masoor dal as special offerings · prasad shops outside temple"
+  },
+  "howToReach": {
+    "hi": "महाकालेश्वर से 6 किमी (12 मिनट कैब) · रेलवे स्टेशन से 4 किमी · ऑटो/ई-रिक्शा सुलभ",
+    "en": "6 km from Mahakaleshwar (12 min cab) · 4 km from railway station · auto/e-rickshaw accessible"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "harsiddhi-mata",
+    "siddhanat-mandir"
+  ],
+  "simhasthaRelevance": {
+    "hi": "ग्रह शांति पूजा के लिए सिंहस्थ काल में विशेष महत्व — योग्यता बढ़ाने और दोष शांति की मान्यता",
+    "en": "Special significance during Simhastha for planetary remediation puja — believed to amplify ritual potency"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "मंगल दोष पूजा कब और कैसे बुक करें?",
+        "en": "When and how to book Mangal Dosh Puja?"
+      },
+      "a": {
+        "hi": "मंगलवार पूजा का सर्वोत्तम दिन है। प्रामाणिक पंडित द्वारा वैदिक विधि से पूजा हेतु पूर्व-बुकिंग अनुशंसित।",
+        "en": "Tuesday is the most auspicious day. For Vedic puja by authentic pandit, advance booking is recommended."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या केवल मांगलिक लोग ही पूजा करा सकते हैं?",
+        "en": "Can only Manglik people perform the puja?"
+      },
+      "a": {
+        "hi": "नहीं — किसी भी ग्रह शांति, विवाह में देरी, या सामान्य शुभता के लिए भी पूजा कराई जा सकती है।",
+        "en": "No — the puja is also performed for general planetary remediation, marriage delays, or auspiciousness."
+      }
+    }
+  ],
+  "lastVerified": "2026-05-27",
+  "primaryKeyword": {
+    "hi": "मंगलनाथ मंदिर उज्जैन",
+    "en": "Mangalnath Temple Ujjain"
+  }
+}

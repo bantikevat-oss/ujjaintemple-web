@@ -1,0 +1,118 @@
+{
+  "slug": "uma-maheshwar-mandir",
+  "name": {
+    "hi": "उमा-महेश्वर मंदिर",
+    "en": "Uma Maheshwar Temple"
+  },
+  "deity": {
+    "hi": "शिव + पार्वती (उमा-महेश)",
+    "en": "Shiva + Parvati (Uma-Mahesh)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "शिव और पार्वती का संयुक्त मंदिर। दांपत्य सुख और विवाह-सिद्धि हेतु।",
+    "en": "Joint temple of Shiva and Parvati. For marital happiness and marriage-success."
+  },
+  "history": {
+    "hi": "विवाह की इच्छुक कन्याएँ और दांपत्य सुख की कामना करने वाले यहाँ आते हैं।",
+    "en": "Marriage-seeking women and couples wishing marital peace visit here."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 6:00 – रात्रि 9:00",
+    "en": "6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 6:00 – रात्रि 9:00",
+      "en": "6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "उमा-महेश्वर मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Uma Maheshwar Temple, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-11.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "उमा महेश्वर उज्जैन",
+    "en": "Uma Maheshwar Ujjain"
+  }
+}

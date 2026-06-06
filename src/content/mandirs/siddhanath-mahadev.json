@@ -1,0 +1,92 @@
+{
+    "slug":  "siddhanath-mahadev",
+    "name":  {
+                 "hi":  "सिद्धनाथ महादेव",
+                 "en":  "Siddhanath Mahadev (84 Mahadevas)"
+             },
+    "deity":  {
+                  "hi":  "भगवान शिव (सिद्धनाथ रूप)",
+                  "en":  "Lord Shiva as Siddhanath"
+              },
+    "templeType":  "Shiva",
+    "locationArea":  "Rudrasagar",
+    "isFeatured":  false,
+    "establishedEra":  {
+                           "hi":  "पुरातन — स्कन्द पुराण काल",
+                           "en":  "Ancient — Skanda Purana era"
+                       },
+    "architectureStyle":  "Paramara",
+    "shortIntro":  {
+                       "hi":  "सिद्धनाथ महादेव उज्जैन की चौरासी महादेव परंपरा के अत्यंत महत्वपूर्ण शिवलिंग हैं, जो रुद्रसागर तट पर विराजमान हैं। \u0027सिद्धनाथ\u0027 अर्थात् सिद्धों के नाथ — यहाँ की साधना से भक्त को आध्यात्मिक सिद्धि की प्राप्ति होती है। नाथ सम्प्रदाय में इस मंदिर का विशेष महत्व रहा है।",
+                       "en":  "Siddhanath Mahadev is a highly important Shivalinga of Ujjain\u0027s Chaurasi Mahadeva tradition, enshrined on the banks of Rudrasagar. \u0027Siddhanath\u0027 means the lord of the Siddhas — worship here is said to bestow spiritual accomplishment upon the devotee. This temple holds special significance in the Natha sampradaya."
+                   },
+    "history":  {
+                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में सिद्धनाथ महादेव का उल्लेख चौरासी महादेव की पवित्र श्रृंखला में मिलता है। रुद्रसागर के तट पर स्थित होने के कारण यह स्थान तपस्वियों और सिद्ध पुरुषों का प्रिय निवास रहा है। नाथ परंपरा के सिद्धों ने यहाँ तपस्या कर शिव की कृपा प्राप्त की थी, इसीलिए यह शिवलिंग \u0027सिद्धनाथ\u0027 कहलाए। पुराण के अनुसार इस स्थान पर की गई साधना सहस्रगुणित फलदायी होती है। मध्यकाल में नाथपंथी साधुओं ने इस मंदिर की सेवा-व्यवस्था का दायित्व संभाला था।",
+                    "en":  "Siddhanath Mahadev is mentioned in the sacred Chaurasi Mahadeva series in the Avanti Khanda of the Skanda Purana. Being situated on the banks of Rudrasagar, this place has been a favoured abode of ascetics and accomplished sages. Siddhas of the Natha tradition performed tapas here and received Shiva\u0027s grace, which is why this Shivalinga is called \u0027Siddhanath\u0027. According to the Purana, spiritual practice at this site yields manifold results. During the medieval period, Nathapanthi sadhus took charge of the temple\u0027s service arrangements."
+                },
+    "darshanTimingSummary":  {
+                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                 "en":  "6:00 AM – 9:00 PM"
+                             },
+    "weeklyTiming":  {
+                         "monday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "tuesday":  {
+                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                         "en":  "6:00 AM – 9:00 PM"
+                                     },
+                         "wednesday":  {
+                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                           "en":  "6:00 AM – 9:00 PM"
+                                       },
+                         "thursday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "friday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    },
+                         "saturday":  {
+                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                          "en":  "6:00 AM – 9:00 PM"
+                                      },
+                         "sunday":  {
+                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
+                                        "en":  "6:00 AM – 9:00 PM"
+                                    }
+                     },
+    "aartiTiming":  {
+                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
+                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+                    },
+    "entryFee":  {
+                     "hi":  "निःशुल्क",
+                     "en":  "Free entry"
+                 },
+    "address":  {
+                    "hi":  "रुद्रसागर तट, उज्जैन, मध्य प्रदेश 456006",
+                    "en":  "Rudrasagar Bank, Ujjain, Madhya Pradesh 456006"
+                },
+    "geo":  {
+                "lat":  23.1858,
+                "lng":  75.763
+            },
+    "photos":  [
+                   "/images/mandirs/shiva-variety-1.jpg"
+               ],
+    "howToReach":  {
+                       "hi":  "महाकालेश्वर मंदिर से लगभग 1 किमी उत्तर-पश्चिम में रुद्रसागर तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2.5 किमी।",
+                       "en":  "Located approximately 1 km northwest of Mahakaleshwar Temple on the banks of Rudrasagar. About 2.5 km from Ujjain Railway Station by auto-rickshaw."
+                   },
+    "nearbyMandirs":  [
+
+                      ],
+    "lastVerified":  "2026-05-31",
+    "primaryKeyword":  {
+                           "hi":  "सिद्धनाथ महादेव उज्जैन",
+                           "en":  "Siddhanath Mahadev Ujjain"
+                       }
+}

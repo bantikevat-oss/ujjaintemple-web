@@ -1,0 +1,150 @@
+{
+  "slug": "chintaman-ganesh",
+  "name": {
+    "hi": "चिंतामण गणेश मंदिर",
+    "en": "Chintaman Ganesh Temple"
+  },
+  "deity": {
+    "hi": "गणेश",
+    "en": "Lord Ganesha"
+  },
+  "templeType": "Ganesh",
+  "locationArea": "Jawasiya",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "मूर्ति अति प्राचीन (1000+ वर्ष) · मंदिर मराठा कालीन",
+    "en": "Idol over 1,000 years old · temple structure from Maratha era"
+  },
+  "architectureStyle": "Maratha",
+  "shortIntro": {
+    "hi": "चिंतामण गणेश — चिंताओं को हरने वाले गणेश। यहाँ की मूर्ति स्वयंभू मानी जाती है। तीन रूप — चिंतामण (चिंता हरण), इच्छामण (इच्छा पूर्ण) और सिद्धिमण (सिद्धि प्रदाता)। मनोकामना पूर्ति हेतु प्रसिद्ध तीर्थ।",
+    "en": "Chintaman Ganesh — the remover of worries. The idol is considered swayambhu (self-manifested). Three forms — Chintaman (remover of anxiety), Ichchhaman (wish-fulfiller), and Siddhiman (granter of accomplishments). Famous pilgrimage for wish fulfillment."
+  },
+  "history": {
+    "hi": "मूर्ति की प्राचीनता पुरातत्व विभाग द्वारा 1000+ वर्ष आंकी गई है। मान्यता है कि भगवान राम ने वनवास काल में यहां पूजा की थी। मंदिर शिप्रा नदी के पार स्थित है — पुराने उज्जैन की दिशा से 7 किमी। बुधवार को विशेष भीड़, चूंकि बुधवार गणेश का प्रिय दिवस है।",
+    "en": "Archaeological evidence dates the idol to over 1,000 years. Tradition holds that Lord Rama worshipped here during his exile. The temple sits across the Shipra river — 7 km from old Ujjain. Wednesdays draw special crowds as it is Ganesha's preferred day."
+  },
+  "darshanTimingSummary": {
+    "hi": "प्रातः 5:00 – रात्रि 9:30",
+    "en": "5:00 AM – 9:30 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    },
+    "tuesday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    },
+    "wednesday": {
+      "hi": "प्रातः 5:00 – रात्रि 10:00 (मुख्य दिवस)",
+      "en": "5:00 AM – 10:00 PM (main day)"
+    },
+    "thursday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    },
+    "friday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    },
+    "saturday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    },
+    "sunday": {
+      "hi": "प्रातः 5:00 – रात्रि 9:30",
+      "en": "5:00 AM – 9:30 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "प्रातः आरती 6:00 · मध्याह्न भोग 12:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:00 AM · Afternoon bhog 12:30 PM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "गणेश चतुर्थी — 10 दिवसीय विशेष आयोजन · बुधवार साप्ताहिक भीड़ · संकष्टी चतुर्थी मासिक भीड़",
+    "en": "Ganesh Chaturthi — 10-day grand celebration · Wednesdays — weekly peak · Sankashti Chaturthi — monthly peak"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "चिंतामण गणेश मंदिर, चिंतामण रोड, जवासिया, उज्जैन, मध्य प्रदेश 456010",
+    "en": "Chintaman Ganesh Temple, Chintaman Road, Jawasiya, Ujjain, Madhya Pradesh 456010"
+  },
+  "geo": {
+    "lat": 23.1493,
+    "lng": 75.7234
+  },
+  "photos": [
+    "/images/mandirs/chintaman-ganesh.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "मोदक, लड्डू, दूर्वा घास · प्रसाद की दुकानें मंदिर परिसर के बाहर",
+    "en": "Modak, laddoo, durva grass · prasad shops outside temple"
+  },
+  "howToReach": {
+    "hi": "महाकालेश्वर से 7 किमी (15 मिनट कैब) · रेलवे स्टेशन से 8 किमी · ऑटो/कैब सुलभ",
+    "en": "7 km from Mahakaleshwar (15 min cab) · 8 km from railway station · auto/cab accessible"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "navagraha-mandir",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ यात्रा प्रारंभ करने से पहले शुभ संकल्प हेतु — गणेश पहले पूजे जाते हैं",
+    "en": "Visited at the start of Simhastha pilgrimage for auspicious resolve — Ganesha is worshipped first as per tradition"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों की दृढ़ मान्यता है कि चिंतामण गणेश के दर्शन मात्र से सभी चिंताएं और बाधाएं दूर हो जाती हैं। नवविवाहित जोड़े गृहस्थ जीवन की शुभ शुरुआत हेतु यहां आशीर्वाद लेने आते हैं, और नए वाहन, व्यापार या गृह प्रवेश से पहले पूजा कराने की परंपरा है। मनोकामना पूर्ण होने पर भक्त उल्टा स्वस्तिक बनाकर सीधा करते हैं — यह यहां की विशेष परंपरा है।",
+    "en": "Locals firmly believe that a single darshan of Chintaman Ganesha dissolves all worries and obstacles. Newlyweds visit for blessings before starting married life, and it is tradition to perform puja here before purchasing a vehicle, starting a business, or moving into a new home. Devotees draw an inverted swastika and straighten it once their wish is fulfilled — a unique custom of this shrine."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं — यह मंदिर परिसर तीन गणेश रूपों को एक साथ समेटे हुए है, जो भारत में दुर्लभ है। मूर्ति को स्वयंभू माना जाता है यानी प्राकृतिक रूप से प्रकट हुई, किसी मूर्तिकार द्वारा निर्मित नहीं।",
+    "en": "Did you know — this complex houses all three forms of Ganesha (Chintaman, Ichchhaman, Siddhiman) together, a rarity in India. The main idol is considered swayambhu, meaning it manifested naturally rather than being carved by a sculptor."
+  },
+  "visitTips": {
+    "hi": "मंदिर में पारंपरिक एवं शालीन वस्त्र पहनकर जाएं — पुरुष धोती/कुर्ता या फुल पैंट और महिलाएं साड़ी/सलवार सूट उत्तम। बुधवार और गणेश चतुर्थी पर भारी भीड़ रहती है, अतः सुबह जल्दी 5:30-7:00 के बीच दर्शन सुगम होते हैं। मोदक, दूर्वा घास और लाल फूल साथ ले जाएं, तथा मोबाइल/जूते बाहर ही रखें।",
+    "en": "Wear traditional and modest attire — dhoti/kurta or full pants for men, saree/salwar suit for women. Wednesdays and Ganesh Chaturthi see heavy crowds, so early morning darshan between 5:30-7:00 AM is most comfortable. Carry modak, durva grass, and red flowers as offerings, and leave footwear and phones outside the sanctum."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "बुधवार को विशेष क्या है?",
+        "en": "What is special about Wednesday?"
+      },
+      "a": {
+        "hi": "बुधवार गणेश का प्रिय दिन है — भीड़ अधिक होती है पर पूजा का फल विशेष माना जाता है।",
+        "en": "Wednesday is Ganesha's beloved day — crowds are larger but puja is considered especially fruitful."
+      }
+    },
+    {
+      "q": {
+        "hi": "तीन गणेश रूपों का क्या अर्थ है?",
+        "en": "What do the three Ganesha forms signify?"
+      },
+      "a": {
+        "hi": "चिंतामण चिंताओं का हरण करते हैं, इच्छामण इच्छाएं पूर्ण करते हैं, और सिद्धिमण कार्यों में सिद्धि प्रदान करते हैं — तीनों के दर्शन एक साथ अत्यंत शुभ माने जाते हैं।",
+        "en": "Chintaman removes worries, Ichchhaman fulfils wishes, and Siddhiman grants success in endeavours — darshan of all three together is considered especially auspicious."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या मनोकामना के लिए कोई विशेष विधि है?",
+        "en": "Is there a special ritual for making a wish?"
+      },
+      "a": {
+        "hi": "भक्त मंदिर परिसर में उल्टा स्वस्तिक बनाते हैं और मनोकामना पूर्ण होने पर वापस आकर उसे सीधा करते हैं — यह यहां की पारंपरिक प्रथा है।",
+        "en": "Devotees draw an inverted swastika in the temple complex while making a wish, and return to straighten it once the wish is fulfilled — a traditional practice unique to this temple."
+      }
+    }
+  ],
+  "lastVerified": "2026-05-27",
+  "primaryKeyword": {
+    "hi": "चिंतामण गणेश उज्जैन",
+    "en": "Chintaman Ganesh Ujjain"
+  }
+}
