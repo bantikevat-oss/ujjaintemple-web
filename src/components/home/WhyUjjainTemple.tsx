@@ -1,5 +1,5 @@
 import { useI18n } from '../../i18n';
-import { Users, MapPin } from 'lucide-react';
+import { Users, MapPin, Headphones, Sparkles } from 'lucide-react';
 
 const REASONS = [
   {
@@ -8,10 +8,8 @@ const REASONS = [
     bg: 'rgba(26,58,92,0.08)',
     titleHi: 'अनुभवी वैदिक पंडित',
     titleEn: 'Experienced Vedic Pandits',
-    descHi: '12+ वर्षों के अनुभवी वैदिक पंडित जी द्वारा शास्त्रसम्मत विधि से सम्पूर्ण पूजा।',
-    descEn: 'Complete shastra-compliant pujas by experienced Vedic pandits with 12+ years of practice.',
-    stat: '12+',
-    statLabel: 'Years',
+    descHi: 'अनुभवी वैदिक पंडित जी द्वारा शास्त्रसम्मत विधि से सम्पूर्ण पूजा।',
+    descEn: 'Complete shastra-compliant pujas by experienced Vedic pandits.',
   },
   {
     Icon: MapPin,
@@ -19,10 +17,30 @@ const REASONS = [
     bg: 'rgba(194,65,12,0.08)',
     titleHi: 'सम्पूर्ण यात्रा मार्गदर्शन',
     titleEn: 'Complete Travel Guide',
-    descHi: 'कैब · होटल · टूर पैकेज · परिवहन — एक ही जगह, बिना किसी छुपे शुल्क के।',
-    descEn: 'Cab · Hotels · Tour packages · Transport — one place, no hidden charges.',
-    stat: '2028',
-    statLabel: 'Simhastha',
+    descHi: 'कैब · होटल · टूर पैकेज · परिवहन — एक ही जगह से पूरी व्यवस्था।',
+    descEn: 'Cab · Hotels · Tour packages · Transport — everything arranged from one place.',
+  },
+  {
+    Icon: Headphones,
+    color: '#9C411B',
+    bg: 'rgba(156,65,27,0.08)',
+    titleHi: '24×7 यात्रा सहायता',
+    titleEn: '24×7 Travel Support',
+    descHi: 'फ़ोन एवं व्हाट्सऐप पर कभी भी सहायता — योजना से दर्शन तक साथ।',
+    descEn: 'Help anytime on phone & WhatsApp — with you from planning to darshan.',
+    stat: '24×7',
+    statLabel: 'Support',
+  },
+  {
+    Icon: Sparkles,
+    color: '#c2410c',
+    bg: 'rgba(194,65,12,0.08)',
+    titleHi: 'व्यक्तिगत यात्रा योजना',
+    titleEn: 'Personalised Yatra Plan',
+    descHi: 'आपकी सुविधा अनुसार पूजा, कैब, होटल एवं टूर की कस्टम योजना।',
+    descEn: 'Custom puja, cab, hotel and tour plan tailored to your convenience.',
+    stat: '1-on-1',
+    statLabel: 'Planning',
   },
 ];
 
@@ -50,7 +68,7 @@ export function WhyUjjainTemple() {
         </div>
 
         {/* Cards */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl mx-auto">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2 max-w-3xl mx-auto">
           {REASONS.map((r, i) => (
             <div
               key={i}
@@ -74,18 +92,20 @@ export function WhyUjjainTemple() {
                 <r.Icon className="h-5 w-5" style={{ color: r.color }} />
               </div>
 
-              {/* Stat */}
-              <div className="mb-3 flex items-baseline gap-1.5">
-                <span
-                  className="font-serif font-bold leading-none"
-                  style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', color: r.color }}
-                >
-                  {r.stat}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-ink-mute">
-                  {r.statLabel}
-                </span>
-              </div>
+              {/* Stat (optional) */}
+              {r.stat && (
+                <div className="mb-3 flex items-baseline gap-1.5">
+                  <span
+                    className="font-serif font-bold leading-none"
+                    style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', color: r.color }}
+                  >
+                    {r.stat}
+                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-ink-mute">
+                    {r.statLabel}
+                  </span>
+                </div>
+              )}
 
               <h3
                 className={`font-bold text-maroon mb-2 ${isHi ? 'font-sanskrit text-[15px]' : 'font-serif text-[14px]'}`}

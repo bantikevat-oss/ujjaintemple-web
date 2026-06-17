@@ -6,8 +6,6 @@ import { SEOHead } from '../components/global/SEOHead';
 import { MandalaDivider } from '../components/global/MandalaDivider';
 import { HomeGraphicHero } from '../components/home/HomeGraphicHero';
 import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
-import { TestimonialsSection } from '../components/home/TestimonialsSection';
-import { FestivalCalendar } from '../components/home/FestivalCalendar';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
@@ -169,9 +167,6 @@ export function Home() {
                   <p className={`font-bold text-maroon text-sm sm:text-base ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}>
                     {locale === 'hi' ? s.hi : s.en}
                   </p>
-                  <p className="mt-0.5 text-[10px] sm:text-xs text-ink-mute leading-snug hidden sm:block">
-                    {locale === 'hi' ? s.desc_hi : s.desc_en}
-                  </p>
                   <div className="mt-2 h-[2px] w-0 group-hover:w-8 bg-gold transition-all duration-300 rounded-full" />
                 </Link>
               ))}
@@ -224,13 +219,13 @@ export function Home() {
         </section>
 
         {/* ── PUJA CARDS ────────────────────────────────────────────────── */}
-        <section id="pujas" style={{ background: 'radial-gradient(ellipse at 50% 0%, #4a0606 0%, #1a0202 70%)' }}>
+        <section id="pujas" style={{ background: 'linear-gradient(to bottom, #FCEFD8 0%, #FBF5EC 100%)' }}>
           <div className="container-page py-16 sm:py-20">
             <div className="text-center mb-10">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gold/70 mb-2">
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
                 {locale === 'hi' ? 'महाकालेश्वर उज्जैन में अनुष्ठान' : 'Rituals at Mahakaleshwar Ujjain'}
               </p>
-              <h2 className={`font-bold text-white ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
+              <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)' }}>
                 {locale === 'hi' ? 'पवित्र पूजाएँ' : 'Sacred Pujas'}
               </h2>
@@ -245,31 +240,29 @@ export function Home() {
                 { slug: 'pitru-dosh-nivaran', hi: 'पितृ दोष निवारण', en: 'Pitru Dosh Nivaran', symbol: '🪔', mantra: 'ॐ पितृभ्यो नमः' },
               ].map((p) => (
                 <Link key={p.slug} to={`${prefix}/puja-in-ujjain/${p.slug}/`}
-                  className="group relative flex flex-col rounded-xl overflow-hidden border border-gold/20
-                    hover:border-gold/50 transition-all duration-300 hover:-translate-y-1
-                    hover:shadow-[0_12px_40px_rgba(212,175,55,0.2)]"
-                  style={{ background: 'rgba(0,0,0,0.3)' }}>
-                  <div className="h-[2px] bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+                  className="group relative flex flex-col rounded-xl overflow-hidden bg-white border border-gold/30
+                    shadow-sm hover:border-gold/60 transition-all duration-300 hover:-translate-y-1
+                    hover:shadow-[0_14px_40px_rgba(139,26,26,0.12)]">
+                  <div className="h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
                   <div className="p-6 flex flex-col items-center text-center flex-1">
                     <span className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{p.symbol}</span>
-                    <h3 className="font-sanskrit font-bold text-white leading-snug mb-1"
+                    <h3 className="font-sanskrit font-bold text-maroon leading-snug mb-1"
                       style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)' }}>
                       {locale === 'hi' ? p.hi : p.en}
                     </h3>
-                    <p className="text-gold/60 text-[11px] italic mb-5">{p.mantra}</p>
-                    <div className="h-px w-10 bg-gold/30 mb-5" />
-                    <div className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-white/40 group-hover:text-gold transition-colors">
+                    <p className="text-saffron-700 text-[11px] italic mb-5">{p.mantra}</p>
+                    <div className="h-px w-10 bg-gold/40 mb-5" />
+                    <div className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-maroon/50 group-hover:text-maroon transition-colors">
                       {locale === 'hi' ? 'जानकारी देखें' : 'View Details'}
                       <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
-                  <div className="h-[2px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
                 </Link>
               ))}
             </div>
             <div className="mt-8 text-center">
               <Link to={`${prefix}/puja-in-ujjain/`}
-                className="inline-flex items-center gap-2 rounded-full border border-gold/30 px-6 py-2.5 text-sm font-semibold text-gold/80 hover:border-gold hover:text-gold transition-all hover:bg-white/5">
+                className="inline-flex items-center gap-2 rounded-full border border-maroon/30 px-6 py-2.5 text-sm font-semibold text-maroon hover:border-maroon hover:bg-maroon hover:text-white transition-all">
                 {locale === 'hi' ? 'सभी पूजाएँ देखें' : 'View all pujas'}
                 <ArrowRight className="h-3.5 w-3.5" />
               </Link>
@@ -309,12 +302,6 @@ export function Home() {
           </div>
         </section>
 
-        {/* ── TESTIMONIALS — after content, before CTA ─────────────────── */}
-        <TestimonialsSection />
-
-        {/* ── FESTIVAL CALENDAR ────────────────────────────────────────── */}
-        <FestivalCalendar />
-
         {/* ── LEAD FORM — main enquiry CTA ─────────────────────────────── */}
         <GlobalLeadSection sourcePage="home" defaultService="darshanPlan" />
 
@@ -336,40 +323,6 @@ export function Home() {
                 <p>{t.section2P3}</p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ── EXPLORE — site navigation hub ────────────────────────────── */}
-        <section id="explore" className="bg-cream">
-          <div className="container-page py-16 sm:py-20">
-            <div className="mb-10 max-w-xl">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-                {t.exploreEyebrow}
-              </p>
-              <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-3xl sm:text-4xl`}>
-                {t.exploreTitle}
-              </h2>
-            </div>
-            <div className="grid divide-y divide-gold/30 border-y border-gold/30 sm:grid-cols-2 lg:grid-cols-3 lg:divide-x lg:divide-y-0">
-              {t.exploreItems.map((item, i) => (
-                <Link
-                  key={item.href}
-                  to={`${prefix}${item.href}`}
-                  className={`group flex items-start justify-between gap-4 px-6 py-7 transition-colors hover:bg-white ${
-                    i >= 2 ? 'sm:border-t sm:border-gold/30 lg:border-t-0' : ''
-                  }`}
-                >
-                  <div>
-                    <p className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-xl sm:text-2xl`}>
-                      {item.label}
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{item.desc}</p>
-                  </div>
-                  <ArrowRight className="mt-1.5 h-5 w-5 flex-shrink-0 text-maroon/40 transition-all group-hover:translate-x-1 group-hover:text-maroon" />
-                </Link>
-              ))}
-            </div>
-            <p className="mt-10 text-xs leading-relaxed text-ink-mute sm:text-sm">{t.footnote}</p>
           </div>
         </section>
 

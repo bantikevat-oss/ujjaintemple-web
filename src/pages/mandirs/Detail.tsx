@@ -184,7 +184,7 @@ export function MandirDetail({ slug }: DetailProps) {
         )}
 
         {/* ── QUICK FACTS BAR ── */}
-        {(mandir.crowdLevel || mandir.photographyAllowed !== undefined || mandir.parkingAvailable || mandir.architectureStyle) && (
+        {(mandir.crowdLevel || mandir.photographyAllowed !== undefined || mandir.parkingAvailable) && (
           <section className="border-y border-cream-dark bg-cream-dark/30">
             <div className="container-page py-4">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -215,13 +215,6 @@ export function MandirDetail({ slug }: DetailProps) {
                         ? { available: 'उपलब्ध', limited: 'सीमित', shared: 'साझा', none: 'नहीं' }[mandir.parkingAvailable]
                         : { available: 'Available', limited: 'Limited', shared: 'Shared', none: 'None' }[mandir.parkingAvailable]}
                     </span>
-                  </div>
-                )}
-                {mandir.architectureStyle && (
-                  <div className="flex items-center gap-2 text-sm">
-                    <Star className="h-4 w-4 text-maroon" />
-                    <span className="font-semibold text-ink-soft">{locale === 'hi' ? 'शैली' : 'Style'}:</span>
-                    <span className="text-xs font-bold text-ink">{mandir.architectureStyle}</span>
                   </div>
                 )}
               </div>

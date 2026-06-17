@@ -90,7 +90,7 @@ export function HomeGraphicHero() {
       om:      '|| ॐ नमः शिवाय ||',
       h1:      'उज्जैन',
       sub:     'महाकाल की नगरी',
-      tagline: 'आस्था, अध्यात्म और चमत्कारों की पावन भूमि',
+      tagline: 'आस्था और अध्यात्म की पावन भूमि',
       ctaA:    'मंदिर दर्शन करें',
       ctaB:    'अभी कॉल करें',
       caption: 'महाकालेश्वर मंदिर, उज्जैन',
@@ -112,7 +112,7 @@ export function HomeGraphicHero() {
       om:      '|| Om Namah Shivay ||',
       h1:      'Ujjain',
       sub:     'City of Mahakal',
-      tagline: 'Sacred land of faith, spirituality and miracles',
+      tagline: 'Sacred land of faith and spirituality',
       ctaA:    'Visit Temples',
       ctaB:    'Call Now',
       caption: 'Mahakaleshwar Temple, Ujjain',
@@ -135,40 +135,55 @@ export function HomeGraphicHero() {
   return (
     <section
       className="relative overflow-hidden flex flex-col lg:flex-row"
-      style={{ minHeight: 'clamp(640px, 100svh, 980px)' }}
+      style={{ minHeight: 'clamp(480px, calc(100svh - 160px), 760px)' }}
     >
       {/* ── CSS animations ── */}
       <style>{`
+        /* Continuous cinematic Ken Burns — slow zoom + drift toward the shivling, seamless loop */
         @keyframes heroKB {
-          from { transform: scale(1.06); }
-          to   { transform: scale(1.0); }
+          0%   { transform: scale(1.02) translate3d(0%, 0%, 0); }
+          100% { transform: scale(1.10) translate3d(-1.6%, -1.2%, 0); }
+        }
+        @keyframes heroFade {
+          from { opacity: 0; }
+          to   { opacity: 1; }
         }
         @keyframes fadeUp {
           from { opacity:0; transform:translateY(16px); }
           to   { opacity:1; transform:translateY(0); }
         }
-        .hf1 { animation: fadeUp .8s ease-out .05s both; }
-        .hf2 { animation: fadeUp .8s ease-out .18s both; }
-        .hf3 { animation: fadeUp .8s ease-out .30s both; }
-        .hf4 { animation: fadeUp .8s ease-out .42s both; }
-        .hf5 { animation: fadeUp .8s ease-out .54s both; }
-        .hf6 { animation: fadeUp .8s ease-out .66s both; }
-        .hf7 { animation: fadeUp .8s ease-out .78s both; }
-        .hero-photo { animation: heroKB 9s ease-out forwards; }
+        .hf1 { animation: fadeUp .9s ease-out .15s both; }
+        .hf2 { animation: fadeUp .9s ease-out .30s both; }
+        .hf3 { animation: fadeUp 1s  ease-out .45s both; }
+        .hf4 { animation: fadeUp .9s ease-out .62s both; }
+        .hf5 { animation: fadeUp .9s ease-out .78s both; }
+        .hf6 { animation: fadeUp .9s ease-out .92s both; }
+        .hf7 { animation: fadeUp .9s ease-out 1.05s both; }
+        .hero-photo {
+          transform-origin: 66% 46%;
+          will-change: transform, opacity;
+          animation: heroKB 26s ease-in-out infinite alternate, heroFade 1.6s ease-out both;
+        }
+        /* Accessibility — respect reduced-motion: hold a still, gently-zoomed frame */
+        @media (prefers-reduced-motion: reduce) {
+          .hero-photo { animation: heroFade 1.2s ease-out both; transform: scale(1.06); }
+          .hf1,.hf2,.hf3,.hf4,.hf5,.hf6,.hf7 { animation: heroFade .6s ease-out both; }
+        }
       `}</style>
 
       {/* ── Full-bleed image — entire section background ── */}
       <img
-        src="/images/hero/hero.png"
+        src="/images/hero/mahakal-real.webp"
         alt={t.caption}
-        className="hero-photo absolute inset-0 w-full h-full object-cover object-right z-0"
-        style={{ filter: 'brightness(0.88) saturate(0.92) contrast(1.04)' }}
-        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+        className="hero-photo absolute inset-0 w-full h-full object-cover z-0
+          object-[68%_center] lg:object-[72%_center]"
+        style={{ filter: 'brightness(0.82) saturate(1.02) contrast(1.03)' }}
+        onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero/mahakal-real.jpg'; }}
       />
 
-      {/* Minimal left-side text readability overlay — very light */}
+      {/* Left-side text readability overlay — stronger for bright photo */}
       <div className="absolute inset-0 z-[1] pointer-events-none" style={{
-        background: 'linear-gradient(to right, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.12) 35%, transparent 65%)',
+        background: 'linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.42) 30%, rgba(0,0,0,0.12) 55%, transparent 78%)',
       }} />
       {/* Top vignette */}
       <div className="absolute inset-x-0 top-0 z-[1] pointer-events-none" style={{
@@ -198,32 +213,19 @@ export function HomeGraphicHero() {
           w-full lg:w-[52%] flex-shrink-0
           px-6 sm:px-10 lg:pl-14 xl:pl-20 lg:pr-6
           py-14 sm:py-16 lg:py-12"
-        style={{ minHeight: 'clamp(640px, 100svh, 980px)' }}
+        style={{ minHeight: 'clamp(480px, calc(100svh - 160px), 760px)' }}
       >
         {/* no background — image already dark on left */}
-
-        {/* || ॐ नमः शिवाय || */}
-        <p className="hf1 relative font-serif italic tracking-[0.22em] mb-3"
-          style={{ fontSize: 'clamp(0.7rem, 1.2vw, 0.88rem)', color: 'rgba(212,175,55,0.72)' }}>
-          {t.om}
-        </p>
-
-        {/* Trishul + ornament lines */}
-        <div className="hf2 relative flex items-center gap-3 w-full max-w-xs lg:max-w-sm mb-4">
-          <div className="flex-1 h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(212,175,55,0.55))' }} />
-          <Trishul />
-          <div className="flex-1 h-px" style={{ background: 'linear-gradient(to left, transparent, rgba(212,175,55,0.55))' }} />
-        </div>
 
         {/* H1 — gold metallic text */}
         <h1
           className="hf3 relative font-sanskrit font-black tracking-tight"
-          style={{ fontSize: 'clamp(4.5rem, 12vw, 10.5rem)' }}
+          style={{ fontSize: 'clamp(3.6rem, 8.5vw, 8rem)' }}
         >
           <span style={{
             display: 'inline-block',
-            lineHeight: 1.35,
-            padding: '0.42em 0.1em 0.22em 0',
+            lineHeight: 1.1,
+            padding: '0.26em 0.1em 0.06em 0',
             background: 'linear-gradient(to bottom, #FFF9C4 0%, #FFE566 12%, #D4AF37 32%, #A07828 52%, #D4AF37 70%, #FFE566 86%, #FFF9C4 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -250,15 +252,16 @@ export function HomeGraphicHero() {
         <p
           className="hf4 relative font-serif mt-2 max-w-md"
           style={{
-            fontSize: 'clamp(0.78rem, 1.4vw, 1rem)',
-            color: 'rgba(255,245,220,0.68)',
+            fontSize: 'clamp(0.82rem, 1.4vw, 1.02rem)',
+            color: 'rgba(255,248,232,0.95)',
+            textShadow: '0 2px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)',
           }}
         >
           {t.tagline}
         </p>
 
         {/* ── 5 temple badges ── */}
-        <div className="hf5 relative mt-7 flex items-stretch">
+        <div className="hf5 relative mt-5 flex items-stretch">
           {t.temples.map((tm, i) => (
             <div
               key={tm.name}
@@ -275,7 +278,7 @@ export function HomeGraphicHero() {
         </div>
 
         {/* ── CTA buttons ── */}
-        <div className="hf6 relative mt-7 flex flex-wrap justify-center lg:justify-start gap-3">
+        <div className="hf6 relative mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
           <Link
             to={`${prefix}/mandirs/`}
             className="inline-flex items-center gap-2.5 font-bold rounded-md
