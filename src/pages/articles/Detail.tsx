@@ -363,7 +363,7 @@ export function ArticleDetail({ category, slug }: Props) {
                         {locale === 'hi' ? 'पूजा अनुष्ठान' : 'Puja Ceremonies'}
                       </p>
                       <h2 className="font-sanskrit text-2xl font-bold text-maroon leading-none">
-                        {locale === 'hi' ? 'झलकियाँ — असली पूजा' : 'Gallery — Real Ceremonies'}
+                        {locale === 'hi' ? 'झलकियाँ — पूजा अनुष्ठान' : 'Gallery — Puja Ceremonies'}
                       </h2>
                     </div>
                   </div>
@@ -387,8 +387,8 @@ export function ArticleDetail({ category, slug }: Props) {
                   </div>
                   <p className="mt-4 text-[11px] text-ink-mute">
                     {locale === 'hi'
-                      ? 'उज्जैन में सम्पन्न असली पूजा अनुष्ठानों की झलकियाँ — मंगलनाथ मंदिर परिसर'
-                      : 'Real puja ceremonies performed in Ujjain — Mangalnath Mandir premises'}
+                      ? 'उज्जैन में सम्पन्न पूजा अनुष्ठानों की झलकियाँ — मंगलनाथ मंदिर परिसर'
+                      : 'Puja ceremonies performed in Ujjain — Mangalnath Mandir premises'}
                   </p>
                 </section>
               )}

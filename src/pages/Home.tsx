@@ -344,17 +344,17 @@ export function Home() {
               </a>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-                  {locale === 'hi' ? 'अधिकारियों का विश्वास' : 'Trusted by Authorities'}
+                  {locale === 'hi' ? 'मान्यता एवं सम्मान' : 'Recognition & Honours'}
                 </p>
                 <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
                   {locale === 'hi'
-                    ? <>माननीय <span className="text-saffron-700">मुख्यमंत्री</span> मध्य प्रदेश द्वारा सम्मानित</>
-                    : <>Recognised by the Hon'ble <span className="italic text-saffron-700">Chief Minister</span> of Madhya Pradesh</>}
+                    ? <>राज्य स्तरीय <span className="text-saffron-700">MSME Conclave</span> में सम्मानित</>
+                    : <>Recognised at the State-level <span className="italic text-saffron-700">MSME Conclave</span></>}
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
                   {locale === 'hi'
-                    ? 'हमारी संस्थापक प्रियंका शिवहरे को राज्य स्तरीय MSME Conclave, भोपाल में वैदिक सेवाओं में डिजिटल नवाचार के लिए सम्मानित किया गया — असली दोष निवारण पूजाएँ देश-विदेश के श्रद्धालुओं तक पहुँचाने के लिए।'
-                    : "Our founder Priyanka Shivhare was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing real dosh nivaran pujas to devotees across India and Indians living abroad."}
+                    ? 'हमारी संस्थापक प्रियंका शिवहरे को राज्य स्तरीय MSME Conclave, भोपाल में वैदिक सेवाओं में डिजिटल नवाचार के लिए सम्मानित किया गया — दोष निवारण पूजाएँ देश-विदेश के श्रद्धालुओं तक पहुँचाने के लिए।'
+                    : "Our founder Priyanka Shivhare was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing dosh nivaran pujas to devotees across India and Indians living abroad."}
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2 max-w-2xl">
                   <div className="rounded-lg border border-gold/30 bg-white px-4 py-3">
