@@ -1,92 +1,90 @@
-﻿{
-    "slug":  "parashuram-mandir-ujjain",
-    "name":  {
-                 "hi":  "परशुराम मंदिर",
-                 "en":  "Parashuram Mandir Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान परशुराम (विष्णु के छठे अवतार)",
-                  "en":  "Lord Parashuram (6th avatar of Vishnu)"
-              },
-    "templeType":  "Historical",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल",
-                           "en":  "Ancient era"
-                       },
-    "architectureStyle":  "North Indian",
-    "shortIntro":  {
-                       "hi":  "उज्जैन के महाकाल क्षेत्र में स्थित परशुराम मंदिर भगवान विष्णु के छठे अवतार परशुराम जी को समर्पित है। परशुराम जी ब्राह्मण योद्धा के रूप में प्रसिद्ध हैं जिन्होंने धर्म की स्थापना के लिए अनेक बार पृथ्वी को क्षत्रियों से विहीन किया। उज्जैन का सम्बन्ध इनके गुरु भगवान शिव (महाकाल) से भी अत्यंत गहरा है।",
-                       "en":  "The Parashuram Mandir in the Mahakal area of Ujjain is dedicated to Lord Parashuram, the sixth avatar of Vishnu. Parashuram is renowned as the brahmin warrior who repeatedly rid the earth of tyrannical kshatriyas to restore dharma. Ujjain\u0027s deep connection with his guru Lord Shiva (Mahakal) adds to the significance of this shrine."
-                   },
-    "history":  {
-                    "hi":  "भगवान परशुराम त्रेतायुग में अवतरित हुए और भृगु कुल में जन्म लेकर ब्राह्मण क्षत्रिय परंपरा के प्रतीक बने। वे सात चिरंजीवियों में से एक हैं और कलियुग में भी उनकी उपस्थिति मानी जाती है। उज्जैन में महाकाल (शिव) की नगरी होने के कारण यहाँ परशुराम मंदिर का विशेष महत्त्व है क्योंकि परशुराम के गुरु स्वयं भगवान शिव थे जिन्होंने उन्हें परशु (फरसा) प्रदान किया था। पुराणों के अनुसार परशुराम ने उज्जैन क्षेत्र में भी तपस्या की थी। ब्राह्मण समुदाय विशेष रूप से परशुराम जयंती पर यहाँ पूजा-अर्चना करता है।",
-                    "en":  "Lord Parashuram descended in the Treta Yuga and was born in the Bhrigu clan, becoming the symbol of the brahmin-warrior tradition. He is one of the seven Chiranjeevis (immortals) and is believed to be present even in the Kali Yuga. In Ujjain — the city of Mahakal (Shiva) — the Parashuram temple holds special significance because Parashuram\u0027s own guru was Lord Shiva, who bestowed upon him the divine parashu (axe). Puranic texts indicate that Parashuram also performed penance in the Ujjain region. The Brahmin community especially worships here on Parashuram Jayanti."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                 "en":  "7:00 AM – 8:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                        "en":  "7:00 AM – 8:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                         "en":  "7:00 AM – 8:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                           "en":  "7:00 AM – 8:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                          "en":  "7:00 AM – 8:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                        "en":  "7:00 AM – 8:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                          "en":  "7:00 AM – 8:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 7:00 – रात्रि 8:00",
-                                        "en":  "7:00 AM – 8:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 7:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 7:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1838,
-                "lng":  75.7693
-            },
-    "photos":  [
-                   "/images/mandirs/parashuram-mandir-ujjain.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर के निकट महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is located near Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "परशुराम मंदिर उज्जैन",
-                           "en":  "Parashuram Mandir Ujjain"
-                       }
+{
+  "slug": "parashuram-mandir-ujjain",
+  "name": {
+    "hi": "परशुराम मंदिर",
+    "en": "Parashuram Mandir Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान परशुराम (विष्णु के छठे अवतार)",
+    "en": "Lord Parashuram (6th avatar of Vishnu)"
+  },
+  "templeType": "Historical",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल",
+    "en": "Ancient era"
+  },
+  "architectureStyle": "North Indian",
+  "shortIntro": {
+    "hi": "उज्जैन के महाकाल क्षेत्र में स्थित परशुराम मंदिर भगवान विष्णु के छठे अवतार परशुराम जी को समर्पित है। परशुराम जी ब्राह्मण योद्धा के रूप में प्रसिद्ध हैं जिन्होंने धर्म की स्थापना के लिए अनेक बार पृथ्वी को क्षत्रियों से विहीन किया। उज्जैन का सम्बन्ध इनके गुरु भगवान शिव (महाकाल) से भी अत्यंत गहरा है।",
+    "en": "The Parashuram Mandir in the Mahakal area of Ujjain is dedicated to Lord Parashuram, the sixth avatar of Vishnu. Parashuram is renowned as the brahmin warrior who repeatedly rid the earth of tyrannical kshatriyas to restore dharma. Ujjain's deep connection with his guru Lord Shiva (Mahakal) adds to the significance of this shrine."
+  },
+  "history": {
+    "hi": "भगवान परशुराम त्रेतायुग में अवतरित हुए और भृगु कुल में जन्म लेकर ब्राह्मण क्षत्रिय परंपरा के प्रतीक बने। वे सात चिरंजीवियों में से एक हैं और कलियुग में भी उनकी उपस्थिति मानी जाती है। उज्जैन में महाकाल (शिव) की नगरी होने के कारण यहाँ परशुराम मंदिर का विशेष महत्त्व है क्योंकि परशुराम के गुरु स्वयं भगवान शिव थे जिन्होंने उन्हें परशु (फरसा) प्रदान किया था। पुराणों के अनुसार परशुराम ने उज्जैन क्षेत्र में भी तपस्या की थी। ब्राह्मण समुदाय विशेष रूप से परशुराम जयंती पर यहाँ पूजा-अर्चना करता है।",
+    "en": "Lord Parashuram descended in the Treta Yuga and was born in the Bhrigu clan, becoming the symbol of the brahmin-warrior tradition. He is one of the seven Chiranjeevis (immortals) and is believed to be present even in the Kali Yuga. In Ujjain — the city of Mahakal (Shiva) — the Parashuram temple holds special significance because Parashuram's own guru was Lord Shiva, who bestowed upon him the divine parashu (axe). Puranic texts indicate that Parashuram also performed penance in the Ujjain region. The Brahmin community especially worships here on Parashuram Jayanti."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+    "en": "Approx. 7:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 7:00 – रात्रि 8:00",
+      "en": "Approx. 7:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 7:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 7:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1838,
+    "lng": 75.7693
+  },
+  "photos": [
+    "/images/mandirs/parashuram-mandir-ujjain.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर के निकट महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is located near Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "परशुराम मंदिर उज्जैन",
+    "en": "Parashuram Mandir Ujjain"
+  }
 }

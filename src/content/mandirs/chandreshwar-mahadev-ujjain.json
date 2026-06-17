@@ -1,136 +1,134 @@
 {
-    "slug":  "chandreshwar-mahadev-ujjain",
-    "name":  {
-                 "hi":  "चन्द्रेश्वर महादेव",
-                 "en":  "Chandreshwar Mahadev Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव एवं चन्द्र देव — चन्द्रेश्वर स्वरूप",
-                  "en":  "Lord Shiva / Chandra (Moon) as Chandreshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुराण कालीन",
-                           "en":  "Puranic Era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "चन्द्रेश्वर महादेव उज्जैन में चन्द्र देव (चाँद) एवं शिव के संयुक्त स्वरूप को समर्पित एक दुर्लभ एवं पवित्र मंदिर है। शिव के मस्तक पर चन्द्रमा विराजमान है, इसलिए चन्द्रेश्वर स्वरूप विशेष ज्योतिषीय एवं आध्यात्मिक महत्त्व रखता है। चन्द्रमा की पीड़ा से मुक्ति एवं मन की शांति के लिए यहाँ विशेष पूजन किया जाता है।",
-                       "en":  "Chandreshwar Mahadev in Ujjain is a rare and sacred temple dedicated to the combined form of Chandra (the Moon) and Shiva. Since the moon is enshrined on Shiva\u0027s crown, the Chandreshwar form holds special astrological and spiritual significance. Special worship is performed here for relief from the malefic effects of the moon and for peace of mind."
-                   },
-    "history":  {
-                    "hi":  "चन्द्रेश्वर महादेव की पौराणिक कथा चन्द्रमा की प्रसिद्ध कहानी से जुड़ी है। दक्ष प्रजापति के शाप से चन्द्रमा क्षय रोग से पीड़ित हो गए थे और धीरे-धीरे क्षीण हो रहे थे। शापमुक्ति के लिए चन्द्रदेव ने उज्जैन में शिव की घोर तपस्या की। प्रसन्न होकर भगवान शिव ने चन्द्रमा को अपने मस्तक पर धारण किया और उन्हें शाप से आधी मुक्ति दी — तभी से चन्द्रमा पन्द्रह दिन बढ़ता और पन्द्रह दिन घटता है। उज्जैन में यह स्थान चन्द्रेश्वर के नाम से प्रसिद्ध हुआ। कुंडली में चन्द्र दोष से पीड़ित श्रद्धालु सोमवार को यहाँ विशेष पूजन करते हैं और मानसिक शांति तथा भावनात्मक स्थिरता की कामना करते हैं।",
-                    "en":  "The legend of Chandreshwar Mahadev is linked to the famous story of the moon god. Chandra had been afflicted with a wasting disease due to the curse of Daksha Prajapati and was slowly diminishing. To seek release from the curse, Chandra performed intense austerities before Shiva in Ujjain. Pleased, Lord Shiva placed the moon on his own crown and granted partial relief from the curse — which is why the moon waxes for fifteen days and wanes for fifteen days. This site in Ujjain became known as Chandreshwar. Devotees afflicted by lunar afflictions in their horoscopes perform special worship here on Mondays, praying for mental peace and emotional stability."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00 (सोमवार विशेष)",
-                                        "en":  "5:00 AM – 10:00 PM (Monday special)"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.182,
-                "lng":  75.7668
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-13.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है। सोमवार को विशेष भीड़ रहती है।",
-                       "en":  "Located about 0.2 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station. Expect large crowds on Mondays."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "चन्द्रेश्वर महादेव उज्जैन",
-                           "en":  "Chandreshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय लोग मानते हैं कि कुंडली में चन्द्र दोष, मानसिक अशांति या अनिद्रा से पीड़ित व्यक्ति यदि सोमवार और पूर्णिमा को यहाँ जलाभिषेक करें तो विशेष लाभ मिलता है। श्रद्धालु सफेद वस्त्र, चावल, मिश्री और दूध अर्पित कर चन्द्रमा को प्रसन्न करते हैं। मान्यता है कि चन्द्रेश्वर शिव की कृपा से भावनात्मक स्थिरता और परिवारिक सौहार्द्र प्राप्त होता है।",
-                         "en":  "Locals believe that those suffering from Chandra Dosha in their horoscope, mental restlessness, or sleeplessness gain special benefit by performing jalabhishek here on Mondays and full-moon days. Devotees offer white clothes, rice, mishri (rock sugar), and milk to please the moon god. It is held that Chandreshwar Shiva\u0027s grace bestows emotional stability and harmony within the family."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? चन्द्रेश्वर महादेव उन दुर्लभ शिव मंदिरों में से एक है जहाँ शिव के साथ चन्द्र देव की संयुक्त उपासना होती है। ज्योतिषीय दृष्टि से कमजोर चन्द्र वाले जातकों के लिए यह स्थान विशेष फलदायी माना जाता है।",
-                         "en":  "Did you know? Chandreshwar Mahadev is among the rare Shiva temples where Lord Shiva is worshipped jointly with Chandra (the Moon). Astrologically, this site is considered especially auspicious for those with a weak or afflicted Moon in their natal chart."
-                     },
-    "visitTips":  {
-                      "hi":  "सोमवार और पूर्णिमा को यहाँ अत्यधिक भीड़ रहती है, इसलिए प्रातःकाल जल्दी दर्शन के लिए पहुँचें। मंदिर में प्रवेश से पहले पैर धोएँ और सिर ढकने के लिए वस्त्र साथ रखें। जलाभिषेक के लिए छोटी लोटा, सफेद फूल, चावल और दूध साथ ले जाना उत्तम रहता है।",
-                      "en":  "Mondays and full-moon nights see very heavy footfall, so plan an early-morning darshan to avoid long queues. Wash your feet before entering and carry a cloth to cover your head. For jalabhishek, it helps to bring a small lota, white flowers, rice, and milk along with you."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "चन्द्रेश्वर महादेव मंदिर किसके लिए विशेष रूप से प्रसिद्ध है?",
-                                      "en":  "What is Chandreshwar Mahadev Temple specifically known for?"
-                                  },
-                     "answer":  {
-                                    "hi":  "यह मंदिर कुंडली में चन्द्र दोष से पीड़ित लोगों की पूजा-अर्चना तथा मानसिक शांति की कामना के लिए प्रसिद्ध है। यहाँ शिव एवं चन्द्र देव की संयुक्त उपासना की जाती है।",
-                                    "en":  "The temple is renowned for worship by those suffering from Chandra Dosha in their horoscope and for those seeking mental peace. Lord Shiva and Chandra are worshipped here in a combined form."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "दर्शन के लिए सबसे अच्छा दिन कौन सा है?",
-                                      "en":  "Which day is best for darshan?"
-                                  },
-                     "answer":  {
-                                    "hi":  "सोमवार एवं पूर्णिमा का दिन सर्वश्रेष्ठ माना जाता है। श्रावण मास में भी यहाँ विशेष पूजा-अर्चना होती है।",
-                                    "en":  "Mondays and full-moon days are considered most auspicious. Special worship is also performed during the holy month of Shravan."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या मंदिर महाकालेश्वर के पास है?",
-                                      "en":  "Is the temple located near Mahakaleshwar?"
-                                  },
-                     "answer":  {
-                                    "hi":  "हाँ, चन्द्रेश्वर महादेव मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर महाकाल क्षेत्र में स्थित है, अतः दोनों दर्शन एक साथ किए जा सकते हैं।",
-                                    "en":  "Yes, Chandreshwar Mahadev Temple lies approximately 0.2 km from Mahakaleshwar Temple within the Mahakal area, so both can be visited together."
-                                }
-                 }
-             ]
+  "slug": "chandreshwar-mahadev-ujjain",
+  "name": {
+    "hi": "चन्द्रेश्वर महादेव",
+    "en": "Chandreshwar Mahadev Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान शिव एवं चन्द्र देव — चन्द्रेश्वर स्वरूप",
+    "en": "Lord Shiva / Chandra (Moon) as Chandreshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुराण कालीन",
+    "en": "Puranic Era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "चन्द्रेश्वर महादेव उज्जैन में चन्द्र देव (चाँद) एवं शिव के संयुक्त स्वरूप को समर्पित एक दुर्लभ एवं पवित्र मंदिर है। शिव के मस्तक पर चन्द्रमा विराजमान है, इसलिए चन्द्रेश्वर स्वरूप विशेष ज्योतिषीय एवं आध्यात्मिक महत्त्व रखता है। चन्द्रमा की पीड़ा से मुक्ति एवं मन की शांति के लिए यहाँ विशेष पूजन किया जाता है।",
+    "en": "Chandreshwar Mahadev in Ujjain is a rare and sacred temple dedicated to the combined form of Chandra (the Moon) and Shiva. Since the moon is enshrined on Shiva's crown, the Chandreshwar form holds special astrological and spiritual significance. Special worship is performed here for relief from the malefic effects of the moon and for peace of mind."
+  },
+  "history": {
+    "hi": "चन्द्रेश्वर महादेव की पौराणिक कथा चन्द्रमा की प्रसिद्ध कहानी से जुड़ी है। दक्ष प्रजापति के शाप से चन्द्रमा क्षय रोग से पीड़ित हो गए थे और धीरे-धीरे क्षीण हो रहे थे। शापमुक्ति के लिए चन्द्रदेव ने उज्जैन में शिव की घोर तपस्या की। प्रसन्न होकर भगवान शिव ने चन्द्रमा को अपने मस्तक पर धारण किया और उन्हें शाप से आधी मुक्ति दी — तभी से चन्द्रमा पन्द्रह दिन बढ़ता और पन्द्रह दिन घटता है। उज्जैन में यह स्थान चन्द्रेश्वर के नाम से प्रसिद्ध हुआ। कुंडली में चन्द्र दोष से पीड़ित श्रद्धालु सोमवार को यहाँ विशेष पूजन करते हैं और मानसिक शांति तथा भावनात्मक स्थिरता की कामना करते हैं।",
+    "en": "The legend of Chandreshwar Mahadev is linked to the famous story of the moon god. Chandra had been afflicted with a wasting disease due to the curse of Daksha Prajapati and was slowly diminishing. To seek release from the curse, Chandra performed intense austerities before Shiva in Ujjain. Pleased, Lord Shiva placed the moon on his own crown and granted partial relief from the curse — which is why the moon waxes for fifteen days and wanes for fifteen days. This site in Ujjain became known as Chandreshwar. Devotees afflicted by lunar afflictions in their horoscopes perform special worship here on Mondays, praying for mental peace and emotional stability."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00 (सोमवार विशेष)",
+      "en": "Approx. 5:00 AM – 10:00 PM (Monday special)"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.182,
+    "lng": 75.7668
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-13.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है। सोमवार को विशेष भीड़ रहती है।",
+    "en": "Located about 0.2 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station. Expect large crowds on Mondays."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "चन्द्रेश्वर महादेव उज्जैन",
+    "en": "Chandreshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय लोग मानते हैं कि कुंडली में चन्द्र दोष, मानसिक अशांति या अनिद्रा से पीड़ित व्यक्ति यदि सोमवार और पूर्णिमा को यहाँ जलाभिषेक करें तो विशेष लाभ मिलता है। श्रद्धालु सफेद वस्त्र, चावल, मिश्री और दूध अर्पित कर चन्द्रमा को प्रसन्न करते हैं। मान्यता है कि चन्द्रेश्वर शिव की कृपा से भावनात्मक स्थिरता और परिवारिक सौहार्द्र प्राप्त होता है।",
+    "en": "Locals believe that those suffering from Chandra Dosha in their horoscope, mental restlessness, or sleeplessness gain special benefit by performing jalabhishek here on Mondays and full-moon days. Devotees offer white clothes, rice, mishri (rock sugar), and milk to please the moon god. It is held that Chandreshwar Shiva's grace bestows emotional stability and harmony within the family."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? चन्द्रेश्वर महादेव उन दुर्लभ शिव मंदिरों में से एक है जहाँ शिव के साथ चन्द्र देव की संयुक्त उपासना होती है। ज्योतिषीय दृष्टि से कमजोर चन्द्र वाले जातकों के लिए यह स्थान विशेष फलदायी माना जाता है।",
+    "en": "Did you know? Chandreshwar Mahadev is among the rare Shiva temples where Lord Shiva is worshipped jointly with Chandra (the Moon). Astrologically, this site is considered especially auspicious for those with a weak or afflicted Moon in their natal chart."
+  },
+  "visitTips": {
+    "hi": "सोमवार और पूर्णिमा को यहाँ अत्यधिक भीड़ रहती है, इसलिए प्रातःकाल जल्दी दर्शन के लिए पहुँचें। मंदिर में प्रवेश से पहले पैर धोएँ और सिर ढकने के लिए वस्त्र साथ रखें। जलाभिषेक के लिए छोटी लोटा, सफेद फूल, चावल और दूध साथ ले जाना उत्तम रहता है।",
+    "en": "Mondays and full-moon nights see very heavy footfall, so plan an early-morning darshan to avoid long queues. Wash your feet before entering and carry a cloth to cover your head. For jalabhishek, it helps to bring a small lota, white flowers, rice, and milk along with you."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "चन्द्रेश्वर महादेव मंदिर किसके लिए विशेष रूप से प्रसिद्ध है?",
+        "en": "What is Chandreshwar Mahadev Temple specifically known for?"
+      },
+      "answer": {
+        "hi": "यह मंदिर कुंडली में चन्द्र दोष से पीड़ित लोगों की पूजा-अर्चना तथा मानसिक शांति की कामना के लिए प्रसिद्ध है। यहाँ शिव एवं चन्द्र देव की संयुक्त उपासना की जाती है।",
+        "en": "The temple is renowned for worship by those suffering from Chandra Dosha in their horoscope and for those seeking mental peace. Lord Shiva and Chandra are worshipped here in a combined form."
+      }
+    },
+    {
+      "question": {
+        "hi": "दर्शन के लिए सबसे अच्छा दिन कौन सा है?",
+        "en": "Which day is best for darshan?"
+      },
+      "answer": {
+        "hi": "सोमवार एवं पूर्णिमा का दिन सर्वश्रेष्ठ माना जाता है। श्रावण मास में भी यहाँ विशेष पूजा-अर्चना होती है।",
+        "en": "Mondays and full-moon days are considered most auspicious. Special worship is also performed during the holy month of Shravan."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या मंदिर महाकालेश्वर के पास है?",
+        "en": "Is the temple located near Mahakaleshwar?"
+      },
+      "answer": {
+        "hi": "हाँ, चन्द्रेश्वर महादेव मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर महाकाल क्षेत्र में स्थित है, अतः दोनों दर्शन एक साथ किए जा सकते हैं।",
+        "en": "Yes, Chandreshwar Mahadev Temple lies approximately 0.2 km from Mahakaleshwar Temple within the Mahakal area, so both can be visited together."
+      }
+    }
+  ]
 }

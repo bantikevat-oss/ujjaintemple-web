@@ -1,92 +1,90 @@
 {
-    "slug":  "swarnajaleshar-mahadev",
-    "name":  {
-                 "hi":  "स्वर्णजलेश्वर महादेव",
-                 "en":  "Swarnajaleshar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (स्वर्णजलेश्वर रूप)",
-                  "en":  "Lord Shiva as Swarnajaleshar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कन्द पुराण काल",
-                           "en":  "Ancient — Skanda Purana era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "स्वर्णजलेश्वर महादेव उज्जैन की चौरासी महादेव परंपरा के एक महत्वपूर्ण शिवलिंग हैं, जिनका नाम स्वर्णिम जल से अभिषेक की प्राचीन प्रथा से जुड़ा है। महाकाल क्षेत्र में विराजमान यह शिवलिंग समृद्धि और मोक्ष दोनों का वरदान देने वाला माना जाता है। स्कन्द पुराण में इनकी महिमा का विस्तृत वर्णन मिलता है।",
-                       "en":  "Swarnajaleshar Mahadev is a significant Shivalinga of Ujjain\u0027s Chaurasi Mahadeva tradition, whose name is connected to the ancient practice of abhisheka with golden water. Enshrined in the Mahakal Area, this Shivalinga is believed to bestow both prosperity and liberation. The Skanda Purana elaborately describes its glory."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में वर्णित चौरासी महादेव श्रृंखला में स्वर्णजलेश्वर का विशेष स्थान है। \u0027स्वर्णजल\u0027 अर्थात् सोने के समान पवित्र जल से अभिषेक की परंपरा के कारण इस शिवलिंग को यह नाम प्राप्त हुआ। पुराणों के अनुसार यहाँ शिप्रा के पावन जल से अभिषेक करने पर भक्त को असीम पुण्य की प्राप्ति होती है। महाकाल वन की परिधि में स्थित होने के कारण यह स्थान अत्यंत पवित्र माना जाता है। युगों से यहाँ श्रावण मास में विशेष जलाभिषेक उत्सव मनाया जाता है।",
-                    "en":  "Swarnajaleshar holds a special place in the Chaurasi Mahadeva series described in the Avanti Khanda of the Skanda Purana. The name derives from the tradition of abhisheka with \u0027swarna-jala\u0027 — water as pure and precious as gold. According to the Puranas, performing abhisheka here with the sacred waters of the Shipra river bestows immense merit upon the devotee. Being situated within the precincts of the Mahakal Vana, this site is regarded as exceptionally holy. For ages, a special jalabhisheka festival has been celebrated here during the month of Shravan."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1822,
-                "lng":  75.7679
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-10.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या ई-रिक्शा द्वारा लगभग 2 किमी।",
-                       "en":  "Located approximately 0.4 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto or e-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "स्वर्णजलेश्वर महादेव उज्जैन",
-                           "en":  "Swarnajaleshar Mahadev Ujjain"
-                       }
+  "slug": "swarnajaleshar-mahadev",
+  "name": {
+    "hi": "स्वर्णजलेश्वर महादेव",
+    "en": "Swarnajaleshar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (स्वर्णजलेश्वर रूप)",
+    "en": "Lord Shiva as Swarnajaleshar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कन्द पुराण काल",
+    "en": "Ancient — Skanda Purana era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "स्वर्णजलेश्वर महादेव उज्जैन की चौरासी महादेव परंपरा के एक महत्वपूर्ण शिवलिंग हैं, जिनका नाम स्वर्णिम जल से अभिषेक की प्राचीन प्रथा से जुड़ा है। महाकाल क्षेत्र में विराजमान यह शिवलिंग समृद्धि और मोक्ष दोनों का वरदान देने वाला माना जाता है। स्कन्द पुराण में इनकी महिमा का विस्तृत वर्णन मिलता है।",
+    "en": "Swarnajaleshar Mahadev is a significant Shivalinga of Ujjain's Chaurasi Mahadeva tradition, whose name is connected to the ancient practice of abhisheka with golden water. Enshrined in the Mahakal Area, this Shivalinga is believed to bestow both prosperity and liberation. The Skanda Purana elaborately describes its glory."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में वर्णित चौरासी महादेव श्रृंखला में स्वर्णजलेश्वर का विशेष स्थान है। 'स्वर्णजल' अर्थात् सोने के समान पवित्र जल से अभिषेक की परंपरा के कारण इस शिवलिंग को यह नाम प्राप्त हुआ। पुराणों के अनुसार यहाँ शिप्रा के पावन जल से अभिषेक करने पर भक्त को असीम पुण्य की प्राप्ति होती है। महाकाल वन की परिधि में स्थित होने के कारण यह स्थान अत्यंत पवित्र माना जाता है। युगों से यहाँ श्रावण मास में विशेष जलाभिषेक उत्सव मनाया जाता है।",
+    "en": "Swarnajaleshar holds a special place in the Chaurasi Mahadeva series described in the Avanti Khanda of the Skanda Purana. The name derives from the tradition of abhisheka with 'swarna-jala' — water as pure and precious as gold. According to the Puranas, performing abhisheka here with the sacred waters of the Shipra river bestows immense merit upon the devotee. Being situated within the precincts of the Mahakal Vana, this site is regarded as exceptionally holy. For ages, a special jalabhisheka festival has been celebrated here during the month of Shravan."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1822,
+    "lng": 75.7679
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-10.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या ई-रिक्शा द्वारा लगभग 2 किमी।",
+    "en": "Located approximately 0.4 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto or e-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "स्वर्णजलेश्वर महादेव उज्जैन",
+    "en": "Swarnajaleshar Mahadev Ujjain"
+  }
 }

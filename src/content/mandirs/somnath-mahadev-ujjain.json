@@ -1,94 +1,94 @@
 {
-    "slug":  "somnath-mahadev-ujjain",
-    "name":  {
-                 "hi":  "सोमनाथ महादेव (चंद्रेश्वर)",
-                 "en":  "Somnath Mahadev (Chandreshwar) Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव / चंद्र देव",
-                  "en":  "Lord Shiva / Moon deity (Chandra)"
-              },
-    "templeType":  "Navagraha",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल, स्कन्द पुराण उल्लेखित",
-                           "en":  "Ancient era, referenced in Skanda Purana"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "सोमनाथ महादेव मंदिर, जिसे चंद्रेश्वर के नाम से भी जाना जाता है, उज्जैन के नवग्रह मंदिर समूह में चंद्रमा ग्रह का प्रतिनिधित्व करता है। यहाँ भगवान शिव के सोमनाथ स्वरूप की पूजा होती है जो चंद्रदेव के संरक्षक माने जाते हैं। सोमवार को यहाँ विशेष दर्शन एवं जलाभिषेक का आयोजन होता है।",
-                       "en":  "Somnath Mahadev, also known as Chandreshwar, represents the Moon (Chandra) in Ujjain\u0027s Navagraha temple group. Lord Shiva is worshipped here in his Somnath form, considered the guardian of the Moon god. Mondays witness special darshan and jalabhishek rituals at this revered shrine."
-                   },
-    "history":  {
-                    "hi":  "पौराणिक कथा के अनुसार चंद्रदेव को राजयक्ष्मा रोग से मुक्ति दिलाने के लिए भगवान शिव ने सोमनाथ के रूप में उनका उद्धार किया था, इसी कारण इस शिवलिंग को चंद्रेश्वर भी कहते हैं। उज्जैन, जो प्राचीन काल में चंद्रगुप्त के काल में भी प्रसिद्ध थी, यहाँ के सोमनाथ महादेव का उल्लेख स्कन्द पुराण के अवन्ति खण्ड में विस्तार से मिलता है। यह मंदिर नवग्रह दर्शन में चंद्र ग्रह के दुष्प्रभाव को शांत करने के लिए विशेष रूप से पूजा जाता है। राशि चक्र में कर्क राशि के स्वामी चंद्रमा की शांति हेतु श्रद्धालु यहाँ सफेद पुष्प, दूध एवं श्वेत वस्त्र अर्पित करते हैं। यह मंदिर महाकाल क्षेत्र के निकट होने से तीर्थयात्रियों के लिए सुगमतापूर्वक दर्शनीय है।",
-                    "en":  "According to Puranic legend, Lord Shiva liberated the Moon god (Chandra) from the disease of rajayakshma (tuberculosis) by sheltering him, earning the name Somnath — Lord of the Moon. This is why the Shivalinga here is also called Chandreshwar. The Avanti Khanda of the Skanda Purana provides a detailed account of this Somnath Mahadev in Ujjain. This temple is especially venerated in the Navagraha pilgrimage circuit to pacify the malefic effects of the Moon. Devotees offer white flowers, milk, and white cloth to invoke lunar blessings. Being near the Mahakal area, it is conveniently accessible for pilgrims."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:30",
-                                        "en":  "5:30 AM – 9:30 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "सोमनाथ महादेव मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Somnath Mahadev Temple, Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.182,
-                "lng":  75.767
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-3.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.4 किमी दूर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर है, ऑटो-रिक्शा या पैदल आसानी से पहुँचा जा सकता है।",
-                       "en":  "This temple is located approximately 0.4 km from Mahakaleshwar Temple in the Mahakal Area. It is about 2 km from Ujjain Railway Station and can be reached easily by auto-rickshaw or on foot."
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "trivikram-mandir",
-                          "navgraha-mandir-ujjain"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "सोमनाथ महादेव उज्जैन",
-                           "en":  "Somnath Mahadev Ujjain"
-                       }
+  "slug": "somnath-mahadev-ujjain",
+  "name": {
+    "hi": "सोमनाथ महादेव (चंद्रेश्वर)",
+    "en": "Somnath Mahadev (Chandreshwar) Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान शिव / चंद्र देव",
+    "en": "Lord Shiva / Moon deity (Chandra)"
+  },
+  "templeType": "Navagraha",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल, स्कन्द पुराण उल्लेखित",
+    "en": "Ancient era, referenced in Skanda Purana"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "सोमनाथ महादेव मंदिर, जिसे चंद्रेश्वर के नाम से भी जाना जाता है, उज्जैन के नवग्रह मंदिर समूह में चंद्रमा ग्रह का प्रतिनिधित्व करता है। यहाँ भगवान शिव के सोमनाथ स्वरूप की पूजा होती है जो चंद्रदेव के संरक्षक माने जाते हैं। सोमवार को यहाँ विशेष दर्शन एवं जलाभिषेक का आयोजन होता है।",
+    "en": "Somnath Mahadev, also known as Chandreshwar, represents the Moon (Chandra) in Ujjain's Navagraha temple group. Lord Shiva is worshipped here in his Somnath form, considered the guardian of the Moon god. Mondays witness special darshan and jalabhishek rituals at this revered shrine."
+  },
+  "history": {
+    "hi": "पौराणिक कथा के अनुसार चंद्रदेव को राजयक्ष्मा रोग से मुक्ति दिलाने के लिए भगवान शिव ने सोमनाथ के रूप में उनका उद्धार किया था, इसी कारण इस शिवलिंग को चंद्रेश्वर भी कहते हैं। उज्जैन, जो प्राचीन काल में चंद्रगुप्त के काल में भी प्रसिद्ध थी, यहाँ के सोमनाथ महादेव का उल्लेख स्कन्द पुराण के अवन्ति खण्ड में विस्तार से मिलता है। यह मंदिर नवग्रह दर्शन में चंद्र ग्रह के दुष्प्रभाव को शांत करने के लिए विशेष रूप से पूजा जाता है। राशि चक्र में कर्क राशि के स्वामी चंद्रमा की शांति हेतु श्रद्धालु यहाँ सफेद पुष्प, दूध एवं श्वेत वस्त्र अर्पित करते हैं। यह मंदिर महाकाल क्षेत्र के निकट होने से तीर्थयात्रियों के लिए सुगमतापूर्वक दर्शनीय है।",
+    "en": "According to Puranic legend, Lord Shiva liberated the Moon god (Chandra) from the disease of rajayakshma (tuberculosis) by sheltering him, earning the name Somnath — Lord of the Moon. This is why the Shivalinga here is also called Chandreshwar. The Avanti Khanda of the Skanda Purana provides a detailed account of this Somnath Mahadev in Ujjain. This temple is especially venerated in the Navagraha pilgrimage circuit to pacify the malefic effects of the Moon. Devotees offer white flowers, milk, and white cloth to invoke lunar blessings. Being near the Mahakal area, it is conveniently accessible for pilgrims."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30",
+      "en": "Approx. 5:30 AM – 9:30 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "सोमनाथ महादेव मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Somnath Mahadev Temple, Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.182,
+    "lng": 75.767
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-3.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.4 किमी दूर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर है, ऑटो-रिक्शा या पैदल आसानी से पहुँचा जा सकता है।",
+    "en": "This temple is located approximately 0.4 km from Mahakaleshwar Temple in the Mahakal Area. It is about 2 km from Ujjain Railway Station and can be reached easily by auto-rickshaw or on foot."
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "trivikram-mandir",
+    "navgraha-mandir-ujjain"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "सोमनाथ महादेव उज्जैन",
+    "en": "Somnath Mahadev Ujjain"
+  }
 }

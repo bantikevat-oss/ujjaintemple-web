@@ -1,92 +1,90 @@
 {
-    "slug":  "lokeshwar-mahadev",
-    "name":  {
-                 "hi":  "लोकेश्वर महादेव",
-                 "en":  "Lokeshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (लोकेश्वर रूप — समस्त लोकों के ईश्वर)",
-                  "en":  "Lord Shiva as Lokeshwar (Lord of All Worlds)"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
-                           "en":  "Ancient era (referenced in Skanda Purana)"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "लोकेश्वर महादेव उज्जैन के 84 महादेव तीर्थों में एक भव्य और महत्त्वपूर्ण मंदिर है जहाँ शिव \u0027समस्त लोकों के स्वामी\u0027 के रूप में पूजित हैं। महाकाल क्षेत्र में स्थित यह तीर्थ स्कन्द पुराण के अवन्ति खण्ड में वर्णित है। यहाँ दर्शन करने से भक्तों को तीनों लोकों में शिव की कृपा प्राप्त होती है।",
-                       "en":  "Lokeshwar Mahadev is a grand and significant temple among the 84 Mahadevas of Ujjain, where Shiva is worshipped as the lord of all worlds (lokas). Located in the Mahakal Area and described in the Avanti Khanda of the Skanda Purana, devotees who visit here are said to receive Shiva\u0027s grace across all three worlds."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में लोकेश्वर महादेव को अवन्तिका के 84 महादेवों में विशिष्ट स्थान दिया गया है। \u0027लोक\u0027 अर्थात समस्त ब्रह्माण्ड के लोक — पृथ्वीलोक, पाताललोक और स्वर्गलोक — के अधिपति शिव यहाँ \u0027लोकेश्वर\u0027 रूप में पूजित हैं। यह तीर्थ उज्जैन की उस महान परम्परा का अंग है जहाँ महाकाल के रूप में शिव समय और काल के भी स्वामी हैं। यहाँ दर्शन का फल पौराणिक मान्यता के अनुसार समस्त लोकों की तीर्थयात्रा के समान है। 84 महादेवों की परम्परागत परिक्रमा में यह मंदिर अत्यंत महत्त्वपूर्ण पड़ाव है।",
-                    "en":  "The Avanti Khanda of the Skanda Purana gives Lokeshwar Mahadev a distinguished place among the 84 Mahadevas of Avantika. Shiva is worshipped here as Lokeshwar — the lord of all lokas (worlds): Bhuloka (earth), Patala (underworld), and Svarga (heaven). This tirtha is part of Ujjain\u0027s great tradition where Shiva as Mahakala is also the lord of time and death. According to tradition, the merit of darshan here equals a pilgrimage to all worlds. This temple is an extremely important stop in the traditional circumambulation of the 84 Mahadevas."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1821,
-                "lng":  75.7669
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-11.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 12-15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 12-15 minutes."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "लोकेश्वर महादेव उज्जैन",
-                           "en":  "Lokeshwar Mahadev Ujjain"
-                       }
+  "slug": "lokeshwar-mahadev",
+  "name": {
+    "hi": "लोकेश्वर महादेव",
+    "en": "Lokeshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (लोकेश्वर रूप — समस्त लोकों के ईश्वर)",
+    "en": "Lord Shiva as Lokeshwar (Lord of All Worlds)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन काल (स्कन्द पुराण संदर्भित)",
+    "en": "Ancient era (referenced in Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "लोकेश्वर महादेव उज्जैन के 84 महादेव तीर्थों में एक भव्य और महत्त्वपूर्ण मंदिर है जहाँ शिव 'समस्त लोकों के स्वामी' के रूप में पूजित हैं। महाकाल क्षेत्र में स्थित यह तीर्थ स्कन्द पुराण के अवन्ति खण्ड में वर्णित है। यहाँ दर्शन करने से भक्तों को तीनों लोकों में शिव की कृपा प्राप्त होती है।",
+    "en": "Lokeshwar Mahadev is a grand and significant temple among the 84 Mahadevas of Ujjain, where Shiva is worshipped as the lord of all worlds (lokas). Located in the Mahakal Area and described in the Avanti Khanda of the Skanda Purana, devotees who visit here are said to receive Shiva's grace across all three worlds."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ति खण्ड में लोकेश्वर महादेव को अवन्तिका के 84 महादेवों में विशिष्ट स्थान दिया गया है। 'लोक' अर्थात समस्त ब्रह्माण्ड के लोक — पृथ्वीलोक, पाताललोक और स्वर्गलोक — के अधिपति शिव यहाँ 'लोकेश्वर' रूप में पूजित हैं। यह तीर्थ उज्जैन की उस महान परम्परा का अंग है जहाँ महाकाल के रूप में शिव समय और काल के भी स्वामी हैं। यहाँ दर्शन का फल पौराणिक मान्यता के अनुसार समस्त लोकों की तीर्थयात्रा के समान है। 84 महादेवों की परम्परागत परिक्रमा में यह मंदिर अत्यंत महत्त्वपूर्ण पड़ाव है।",
+    "en": "The Avanti Khanda of the Skanda Purana gives Lokeshwar Mahadev a distinguished place among the 84 Mahadevas of Avantika. Shiva is worshipped here as Lokeshwar — the lord of all lokas (worlds): Bhuloka (earth), Patala (underworld), and Svarga (heaven). This tirtha is part of Ujjain's great tradition where Shiva as Mahakala is also the lord of time and death. According to tradition, the merit of darshan here equals a pilgrimage to all worlds. This temple is an extremely important stop in the traditional circumambulation of the 84 Mahadevas."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1821,
+    "lng": 75.7669
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-11.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 12-15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 12-15 minutes."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "लोकेश्वर महादेव उज्जैन",
+    "en": "Lokeshwar Mahadev Ujjain"
+  }
 }

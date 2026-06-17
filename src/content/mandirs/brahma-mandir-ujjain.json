@@ -1,136 +1,134 @@
 {
-    "slug":  "brahma-mandir-ujjain",
-    "name":  {
-                 "hi":  "ब्रह्मा मंदिर उज्जैन",
-                 "en":  "Brahma Mandir Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान ब्रह्मा (सृष्टिकर्ता)",
-                  "en":  "Lord Brahma (Creator)"
-              },
-    "templeType":  "Historical",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल",
-                           "en":  "Ancient era"
-                       },
-    "architectureStyle":  "North Indian",
-    "shortIntro":  {
-                       "hi":  "उज्जैन के महाकाल क्षेत्र में स्थित ब्रह्मा मंदिर सृष्टि के रचयिता भगवान ब्रह्मा को समर्पित एक अत्यंत दुर्लभ मंदिर है। भारत में ब्रह्मा जी के मंदिर अत्यल्प संख्या में हैं, इसलिए यह मंदिर विशेष महत्त्व रखता है। उज्जैन जैसे पवित्र तीर्थ में त्रिदेव — ब्रह्मा, विष्णु और महेश — तीनों की उपासना का संगम देखने को मिलता है।",
-                       "en":  "The Brahma Mandir in the Mahakal area of Ujjain is a rare and significant temple dedicated to Lord Brahma, the creator of the universe. Temples dedicated to Brahma are exceptionally rare across India, making this shrine particularly noteworthy. In the sacred city of Ujjain, all three of the Tridev — Brahma, Vishnu, and Mahesh — are worshipped, representing the complete cosmic order."
-                   },
-    "history":  {
-                    "hi":  "भगवान ब्रह्मा को हिंदू त्रिदेव में सृष्टि के निर्माता के रूप में जाना जाता है। पौराणिक कथाओं के अनुसार एक शाप के कारण ब्रह्मा जी के मंदिर भारत में अत्यंत दुर्लभ हैं। उज्जैन, जो अवन्तिका के नाम से भी जाना जाता है, प्राचीन काल से सप्त पुरियों में शामिल रहा है और यहाँ त्रिदेव की उपासना की परंपरा अत्यंत पुरातन है। स्कंद पुराण के अवन्ती खंड में उज्जैन के विभिन्न देव स्थलों का वर्णन मिलता है जिनमें ब्रह्मा उपासना स्थल भी सम्मिलित हैं। यह मंदिर हिंदू दार्शनिक परंपरा में सृष्टि के त्रिगुणात्मक स्वरूप — सृजन, पालन और संहार — का प्रतीक है।",
-                    "en":  "Lord Brahma is revered as the creator of the universe among the Hindu Tridev. According to Puranic lore, temples dedicated to Brahma are exceptionally rare in India due to an ancient curse. Ujjain, also known as Avantika, has been counted among the seven sacred cities of India since ancient times, and the tradition of worshipping all three cosmic deities here is very old. The Avanti Khanda of the Skanda Purana describes various divine shrines in Ujjain, including places of Brahma worship. This temple symbolises the trigunatmak (three-quality) nature of creation — creation, preservation, and dissolution — in Hindu philosophical tradition."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                 "en":  "6:00 AM – 8:30 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                        "en":  "6:00 AM – 8:30 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                         "en":  "6:00 AM – 8:30 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                           "en":  "6:00 AM – 8:30 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                          "en":  "6:00 AM – 8:30 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                        "en":  "6:00 AM – 8:30 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                          "en":  "6:00 AM – 8:30 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:30",
-                                        "en":  "6:00 AM – 8:30 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1831,
-                "lng":  75.7685
-            },
-    "photos":  [
-                   "/images/mandirs/brahma-mandir-ujjain.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से पैदल दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is within walking distance of Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "ब्रह्मा मंदिर उज्जैन",
-                           "en":  "Brahma Mandir Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय भक्तों का विश्वास है कि उज्जैन में महाकाल, विष्णु (गोपाल मंदिर) और ब्रह्मा — तीनों के दर्शन एक ही दिन करने से त्रिदेव की संयुक्त कृपा प्राप्त होती है। मान्यता है कि यहाँ सच्चे मन से प्रार्थना करने पर ज्ञान, सृजनशीलता और नवीन आरंभ का आशीर्वाद मिलता है। विद्यार्थी और कलाकार विशेष रूप से यहाँ विद्या एवं सृजन शक्ति की कामना से आते हैं।",
-                         "en":  "Local devotees believe that having darshan of Mahakal, Vishnu (Gopal Mandir), and Brahma on the same day in Ujjain brings the combined blessings of the Tridev. It is said that sincere prayers here grant wisdom, creativity, and the strength for new beginnings. Students and artists especially visit this shrine to seek blessings for learning and creative power."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? पूरे भारत में भगवान ब्रह्मा को समर्पित मंदिर बहुत कम हैं — पुष्कर (राजस्थान) के बाद उज्जैन का यह मंदिर ब्रह्मा उपासकों के लिए विशेष महत्व रखता है। उज्जैन एकमात्र ऐसा तीर्थ है जहाँ त्रिदेव — ब्रह्मा, विष्णु और शिव — तीनों के प्रमुख स्थल एक ही नगर में मिलते हैं।",
-                         "en":  "Did you know? Temples dedicated to Lord Brahma are extremely rare across India — after Pushkar in Rajasthan, this Ujjain shrine holds special importance for Brahma devotees. Ujjain is one of the few sacred cities where major shrines of all three Tridev — Brahma, Vishnu, and Shiva — exist within the same town."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर महाकाल क्षेत्र में होने के कारण इसे महाकालेश्वर दर्शन के साथ जोड़कर देखना सर्वोत्तम है। पारंपरिक एवं शालीन वस्त्र पहनें, गर्भगृह में प्रवेश से पूर्व पादुकाएँ बाहर उतारें। गर्मियों में सुबह जल्दी या संध्या समय आना अधिक सुविधाजनक रहता है, साथ में पानी की बोतल अवश्य रखें।",
-                      "en":  "Since the temple lies in the Mahakal area, it is best combined with a visit to Mahakaleshwar Temple. Wear modest, traditional clothing and remove footwear before entering the sanctum. In summers, early morning or evening visits are more comfortable — carry a water bottle and small change for offerings."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "ब्रह्मा मंदिर उज्जैन में कहाँ स्थित है?",
-                                      "en":  "Where is Brahma Mandir located in Ujjain?"
-                                  },
-                     "answer":  {
-                                    "hi":  "यह मंदिर उज्जैन के महाकाल क्षेत्र में, महाकालेश्वर मंदिर से पैदल दूरी पर स्थित है।",
-                                    "en":  "The temple is in the Mahakal area of Ujjain, within walking distance of the Mahakaleshwar Temple."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "ब्रह्मा जी के मंदिर भारत में दुर्लभ क्यों हैं?",
-                                      "en":  "Why are Brahma temples rare in India?"
-                                  },
-                     "answer":  {
-                                    "hi":  "पौराणिक कथाओं के अनुसार एक प्राचीन शाप के कारण ब्रह्मा जी की पूजा सार्वजनिक मंदिरों में अत्यंत सीमित मानी जाती है, इसलिए उनके मंदिर बहुत कम मिलते हैं।",
-                                    "en":  "According to Puranic legend, an ancient curse limited public worship of Lord Brahma, which is why temples dedicated to him are exceptionally rare across India."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या इस मंदिर में प्रवेश शुल्क है?",
-                                      "en":  "Is there an entry fee for this temple?"
-                                  },
-                     "answer":  {
-                                    "hi":  "नहीं, मंदिर में दर्शन निःशुल्क है और सभी श्रद्धालुओं के लिए खुला है।",
-                                    "en":  "No, darshan at the temple is free of charge and open to all devotees."
-                                }
-                 }
-             ]
+  "slug": "brahma-mandir-ujjain",
+  "name": {
+    "hi": "ब्रह्मा मंदिर उज्जैन",
+    "en": "Brahma Mandir Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान ब्रह्मा (सृष्टिकर्ता)",
+    "en": "Lord Brahma (Creator)"
+  },
+  "templeType": "Historical",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल",
+    "en": "Ancient era"
+  },
+  "architectureStyle": "North Indian",
+  "shortIntro": {
+    "hi": "उज्जैन के महाकाल क्षेत्र में स्थित ब्रह्मा मंदिर सृष्टि के रचयिता भगवान ब्रह्मा को समर्पित एक अत्यंत दुर्लभ मंदिर है। भारत में ब्रह्मा जी के मंदिर अत्यल्प संख्या में हैं, इसलिए यह मंदिर विशेष महत्त्व रखता है। उज्जैन जैसे पवित्र तीर्थ में त्रिदेव — ब्रह्मा, विष्णु और महेश — तीनों की उपासना का संगम देखने को मिलता है।",
+    "en": "The Brahma Mandir in the Mahakal area of Ujjain is a rare and significant temple dedicated to Lord Brahma, the creator of the universe. Temples dedicated to Brahma are exceptionally rare across India, making this shrine particularly noteworthy. In the sacred city of Ujjain, all three of the Tridev — Brahma, Vishnu, and Mahesh — are worshipped, representing the complete cosmic order."
+  },
+  "history": {
+    "hi": "भगवान ब्रह्मा को हिंदू त्रिदेव में सृष्टि के निर्माता के रूप में जाना जाता है। पौराणिक कथाओं के अनुसार एक शाप के कारण ब्रह्मा जी के मंदिर भारत में अत्यंत दुर्लभ हैं। उज्जैन, जो अवन्तिका के नाम से भी जाना जाता है, प्राचीन काल से सप्त पुरियों में शामिल रहा है और यहाँ त्रिदेव की उपासना की परंपरा अत्यंत पुरातन है। स्कंद पुराण के अवन्ती खंड में उज्जैन के विभिन्न देव स्थलों का वर्णन मिलता है जिनमें ब्रह्मा उपासना स्थल भी सम्मिलित हैं। यह मंदिर हिंदू दार्शनिक परंपरा में सृष्टि के त्रिगुणात्मक स्वरूप — सृजन, पालन और संहार — का प्रतीक है।",
+    "en": "Lord Brahma is revered as the creator of the universe among the Hindu Tridev. According to Puranic lore, temples dedicated to Brahma are exceptionally rare in India due to an ancient curse. Ujjain, also known as Avantika, has been counted among the seven sacred cities of India since ancient times, and the tradition of worshipping all three cosmic deities here is very old. The Avanti Khanda of the Skanda Purana describes various divine shrines in Ujjain, including places of Brahma worship. This temple symbolises the trigunatmak (three-quality) nature of creation — creation, preservation, and dissolution — in Hindu philosophical tradition."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+    "en": "Approx. 6:00 AM – 8:30 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:30",
+      "en": "Approx. 6:00 AM – 8:30 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1831,
+    "lng": 75.7685
+  },
+  "photos": [
+    "/images/mandirs/brahma-mandir-ujjain.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से पैदल दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is within walking distance of Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "ब्रह्मा मंदिर उज्जैन",
+    "en": "Brahma Mandir Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों का विश्वास है कि उज्जैन में महाकाल, विष्णु (गोपाल मंदिर) और ब्रह्मा — तीनों के दर्शन एक ही दिन करने से त्रिदेव की संयुक्त कृपा प्राप्त होती है। मान्यता है कि यहाँ सच्चे मन से प्रार्थना करने पर ज्ञान, सृजनशीलता और नवीन आरंभ का आशीर्वाद मिलता है। विद्यार्थी और कलाकार विशेष रूप से यहाँ विद्या एवं सृजन शक्ति की कामना से आते हैं।",
+    "en": "Local devotees believe that having darshan of Mahakal, Vishnu (Gopal Mandir), and Brahma on the same day in Ujjain brings the combined blessings of the Tridev. It is said that sincere prayers here grant wisdom, creativity, and the strength for new beginnings. Students and artists especially visit this shrine to seek blessings for learning and creative power."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? पूरे भारत में भगवान ब्रह्मा को समर्पित मंदिर बहुत कम हैं — पुष्कर (राजस्थान) के बाद उज्जैन का यह मंदिर ब्रह्मा उपासकों के लिए विशेष महत्व रखता है। उज्जैन एकमात्र ऐसा तीर्थ है जहाँ त्रिदेव — ब्रह्मा, विष्णु और शिव — तीनों के प्रमुख स्थल एक ही नगर में मिलते हैं।",
+    "en": "Did you know? Temples dedicated to Lord Brahma are extremely rare across India — after Pushkar in Rajasthan, this Ujjain shrine holds special importance for Brahma devotees. Ujjain is one of the few sacred cities where major shrines of all three Tridev — Brahma, Vishnu, and Shiva — exist within the same town."
+  },
+  "visitTips": {
+    "hi": "मंदिर महाकाल क्षेत्र में होने के कारण इसे महाकालेश्वर दर्शन के साथ जोड़कर देखना सर्वोत्तम है। पारंपरिक एवं शालीन वस्त्र पहनें, मंदिर में प्रवेश से पूर्व पादुकाएँ बाहर उतारें। गर्मियों में सुबह जल्दी या संध्या समय आना अधिक सुविधाजनक रहता है, साथ में पानी की बोतल अवश्य रखें।",
+    "en": "Since the temple lies in the Mahakal area, it is best combined with a visit to Mahakaleshwar Temple. Wear modest, traditional clothing and remove footwear before entering the sanctum. In summers, early morning or evening visits are more comfortable — carry a water bottle and small change for offerings."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "ब्रह्मा मंदिर उज्जैन में कहाँ स्थित है?",
+        "en": "Where is Brahma Mandir located in Ujjain?"
+      },
+      "answer": {
+        "hi": "यह मंदिर उज्जैन के महाकाल क्षेत्र में, महाकालेश्वर मंदिर से पैदल दूरी पर स्थित है।",
+        "en": "The temple is in the Mahakal area of Ujjain, within walking distance of the Mahakaleshwar Temple."
+      }
+    },
+    {
+      "question": {
+        "hi": "ब्रह्मा जी के मंदिर भारत में दुर्लभ क्यों हैं?",
+        "en": "Why are Brahma temples rare in India?"
+      },
+      "answer": {
+        "hi": "पौराणिक कथाओं के अनुसार एक प्राचीन शाप के कारण ब्रह्मा जी की पूजा सार्वजनिक मंदिरों में अत्यंत सीमित मानी जाती है, इसलिए उनके मंदिर बहुत कम मिलते हैं।",
+        "en": "According to Puranic legend, an ancient curse limited public worship of Lord Brahma, which is why temples dedicated to him are exceptionally rare across India."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या इस मंदिर में प्रवेश शुल्क है?",
+        "en": "Is there an entry fee for this temple?"
+      },
+      "answer": {
+        "hi": "नहीं, मंदिर में दर्शन निःशुल्क है और सभी श्रद्धालुओं के लिए खुला है।",
+        "en": "No, darshan at the temple is free of charge and open to all devotees."
+      }
+    }
+  ]
 }

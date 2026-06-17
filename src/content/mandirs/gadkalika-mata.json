@@ -1,138 +1,138 @@
 {
-    "slug":  "gadkalika-mata",
-    "name":  {
-                 "hi":  "गढ़कालिका माता मंदिर",
-                 "en":  "Gadkalika Mata Temple"
-             },
-    "deity":  {
-                  "hi":  "देवी कालिका (महाकाली)",
-                  "en":  "Goddess Kalika (Mahakali)"
-              },
-    "templeType":  "Shakti",
-    "locationArea":  "Bhairavgarh",
-    "isFeatured":  true,
-    "establishedEra":  {
-                           "hi":  "महाभारत कालीन, सम्राट हर्षवर्धन द्वारा जीर्णोद्धार",
-                           "en":  "Mahabharata era, restored by Emperor Harshavardhana"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "गढ़कालिका माता मंदिर उज्जैन के भैरवगढ़ में स्थित एक प्राचीन शक्तिपीठ है जहाँ देवी कालिका की महिमामयी प्रतिमा विराजमान है। महाकवि कालिदास इसी देवी के परम उपासक थे और उनकी काव्य-प्रतिभा इसी शक्ति के आशीर्वाद से प्राप्त मानी जाती है। यह मंदिर 51 शक्तिपीठों में से एक माना जाता है और यहाँ नवरात्रि में विशाल मेले का आयोजन होता है।",
-                       "en":  "Gadkalika Mata Temple is an ancient Shakti Peeth located in Bhairavgarh, Ujjain, enshrining the magnificent idol of Goddess Kalika. The great poet Kalidasa was a devoted worshipper of this goddess, and his poetic genius is traditionally attributed to her blessings. This temple is considered one of the 51 Shakti Peethas, and a grand fair is held here during Navratri."
-                   },
-    "history":  {
-                    "hi":  "गढ़कालिका माता का मंदिर महाभारत काल से भी प्राचीन माना जाता है और प्राचीन अवन्ति नगरी में इसे सर्वोच्च शक्ति-तीर्थ का स्थान प्राप्त था। प्रख्यात कवि कालिदास के कुलदेवी के रूप में इस मंदिर की ख्याति सर्वविदित है — ऐसी मान्यता है कि देवी कालिका के प्रसाद से कालिदास को असाधारण काव्य-प्रतिभा मिली थी। सातवीं शती में सम्राट हर्षवर्धन ने इस मंदिर का विस्तृत जीर्णोद्धार करवाया था। देवी सती के अंग जहाँ-जहाँ गिरे वहाँ शक्तिपीठ स्थापित हुए और इस मंदिर को भी उन्हीं पीठों में स्थान प्राप्त है। नवरात्रि में यहाँ लाखों श्रद्धालु माँ कालिका के दर्शन के लिए आते हैं और ज्योति कलश तथा चुनरी का अर्पण करते हैं।",
-                    "en":  "Gadkalika Mata Temple is considered even older than the Mahabharata era and held the status of the supreme Shakti shrine in the ancient city of Avanti. The temple is universally celebrated as the family deity of the great Sanskrit poet Kalidasa — tradition holds that Kalidasa received his extraordinary poetic gifts through the grace of Goddess Kalika. Emperor Harshavardhana undertook a major renovation of this temple in the 7th century CE. The temple is counted among the Shakti Peethas established at the spots where limbs of Goddess Sati fell. During Navratri, millions of devotees visit to seek the blessings of Maa Kalika, offering jyoti kalash and chunri."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                 "en":  "5:00 AM – 10:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                         "en":  "5:00 AM – 10:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                           "en":  "5:00 AM – 10:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                          "en":  "5:00 AM – 10:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                          "en":  "5:00 AM – 10:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 5:30 · मध्याह्न आरती 12:00 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 5:30 AM · Noon aarti 12:00 PM · Evening aarti 7:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "गढ़कालिका माता मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Gadkalika Mata Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1965,
-                "lng":  75.7712
-            },
-    "photos":  [
-                   "/images/mandirs/gadkalika-mata.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "गढ़कालिका माता मंदिर भैरवगढ़ में स्थित है और महाकालेश्वर मंदिर से लगभग 2 किमी उत्तर की ओर है। उज्जैन रेलवे स्टेशन से लगभग 3 किमी दूर है; ऑटो-रिक्शा या टेम्पो द्वारा आसानी से पहुँचा जा सकता है।",
-                       "en":  "Gadkalika Mata Temple is located in Bhairavgarh, approximately 2 km north of Mahakaleshwar Temple. It is about 3 km from Ujjain Railway Station and easily accessible by auto-rickshaw or tempo."
-                   },
-    "nearbyMandirs":  [
-                          "bhartrihari-gufa",
-                          "vikrant-bhairav",
-                          "shaneshwar-mahadev"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "गढ़कालिका माता मंदिर उज्जैन",
-                           "en":  "Gadkalika Mata Temple Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि माँ गढ़कालिका सच्चे मन से माँगी गई हर मनोकामना पूर्ण करती हैं और विशेषकर विद्या, वाणी एवं कला-साधना का वरदान देती हैं। कहा जाता है कि कालिदास यहाँ की देहरी पर सिर रखकर ज्ञान के याचक बने थे और देवी की कृपा से ही उन्हें \u0027कविकुलगुरु\u0027 की उपाधि प्राप्त हुई। नवरात्रि में यहाँ ज्योति-कलश जलाने पर वंश में सुख-समृद्धि एवं सन्तति की रक्षा की मान्यता है।",
-                         "en":  "Locals firmly believe that Maa Gadkalika fulfils every sincere wish, especially blessing devotees with knowledge, speech and artistic excellence. It is said that Kalidasa surrendered at this very threshold seeking wisdom, and earned the title of \u0027Kavi-Kulaguru\u0027 only through the Goddess\u0027s grace. Lighting a jyoti-kalash here during Navratri is believed to bring prosperity and protection of progeny to the entire family lineage."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? यह वही शक्तिपीठ है जहाँ कथानुसार महाकवि कालिदास साधारण गडरिये से संस्कृत के महाकवि बने थे। मंदिर की मूर्ति स्वयंभू मानी जाती है और इसके चेहरे के भाव दिन के अलग-अलग समय में बदलते प्रतीत होते हैं।",
-                         "en":  "Did you know? This is the very Shakti Peeth where, according to legend, Kalidasa transformed from a simple shepherd into the greatest Sanskrit poet. The idol is believed to be swayambhu (self-manifested), and devotees say the expressions on the Goddess\u0027s face appear to change at different hours of the day."
-                     },
-    "visitTips":  {
-                      "hi":  "दर्शन के लिए शालीन एवं ढके हुए वस्त्र पहनकर आएँ; नवरात्रि में लम्बी कतार होती है इसलिए प्रातःकाल का समय श्रेष्ठ रहता है। अपने साथ चुनरी, नारियल, लाल फूल एवं जल-पात्र ले जा सकते हैं; मोबाइल एवं चमड़े की वस्तुएँ गर्भगृह के बाहर रखनी पड़ती हैं। गर्मी के मौसम में पानी की बोतल एवं छाता अवश्य रखें क्योंकि मंदिर परिसर खुला हुआ है।",
-                      "en":  "Wear modest, fully-covered clothing for darshan; arrive in the early morning during Navratri as queues become very long. You may carry chunri, coconut, red flowers and a water-pot as offerings, but mobile phones and leather items must be left outside the sanctum. Carry a water bottle and umbrella in summer, as much of the temple courtyard is open to the sky."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "गढ़कालिका माता मंदिर का कालिदास से क्या सम्बन्ध है?",
-                                      "en":  "What is the connection between Gadkalika Mata Temple and Kalidasa?"
-                                  },
-                     "answer":  {
-                                    "hi":  "किंवदंती के अनुसार महाकवि कालिदास माँ गढ़कालिका के परम भक्त थे और इसी देवी की उपासना से उन्हें असाधारण काव्य-प्रतिभा प्राप्त हुई थी। मंदिर परिसर में आज भी उनकी साधना-स्थली की स्मृति में श्रद्धालु शीश नवाते हैं।",
-                                    "en":  "According to legend, the great poet Kalidasa was a devoted worshipper of Maa Gadkalika, and it was through her grace that he received his extraordinary poetic genius. Devotees still bow at the spot within the complex traditionally associated with his sadhana."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या गढ़कालिका मंदिर 51 शक्तिपीठों में शामिल है?",
-                                      "en":  "Is Gadkalika Temple counted among the 51 Shakti Peethas?"
-                                  },
-                     "answer":  {
-                                    "hi":  "जी हाँ, परम्परा में इसे शक्तिपीठों में स्थान प्राप्त है और इसे प्राचीन अवन्तिका का प्रमुख शक्ति-तीर्थ माना गया है। नवरात्रि में यहाँ देश भर से शाक्त साधक एवं श्रद्धालु दर्शन हेतु आते हैं।",
-                                    "en":  "Yes, tradition counts it among the Shakti Peethas and it has long been regarded as the principal Shakti shrine of ancient Avantika. During Navratri, Shakta sadhakas and devotees from across India travel here for darshan."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "मंदिर दर्शन का सबसे श्रेष्ठ समय कौन सा है?",
-                                      "en":  "What is the best time to visit the temple?"
-                                  },
-                     "answer":  {
-                                    "hi":  "नवरात्रि (चैत्र एवं शारदीय) तथा प्रत्येक मंगलवार-शुक्रवार माँ कालिका के दर्शन हेतु अत्यन्त शुभ माने जाते हैं। प्रातः की मंगला आरती एवं संध्या आरती में दर्शन का विशेष माहात्म्य है।",
-                                    "en":  "Both Chaitra and Sharadiya Navratri, along with every Tuesday and Friday, are considered most auspicious for darshan of Maa Kalika. The morning Mangala aarti and the evening aarti are particularly revered times to visit."
-                                }
-                 }
-             ]
+  "slug": "gadkalika-mata",
+  "name": {
+    "hi": "गढ़कालिका माता मंदिर",
+    "en": "Gadkalika Mata Temple"
+  },
+  "deity": {
+    "hi": "देवी कालिका (महाकाली)",
+    "en": "Goddess Kalika (Mahakali)"
+  },
+  "templeType": "Shakti",
+  "locationArea": "Bhairavgarh",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "महाभारत कालीन, सम्राट हर्षवर्धन द्वारा जीर्णोद्धार",
+    "en": "Mahabharata era, restored by Emperor Harshavardhana"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "गढ़कालिका माता मंदिर उज्जैन के भैरवगढ़ में स्थित एक प्राचीन शक्तिपीठ है जहाँ देवी कालिका की महिमामयी प्रतिमा विराजमान है। महाकवि कालिदास इसी देवी के परम उपासक थे और उनकी काव्य-प्रतिभा इसी शक्ति के आशीर्वाद से प्राप्त मानी जाती है। यह मंदिर 51 शक्तिपीठों में से एक माना जाता है और यहाँ नवरात्रि में विशाल मेले का आयोजन होता है।",
+    "en": "Gadkalika Mata Temple is an ancient Shakti Peeth located in Bhairavgarh, Ujjain, enshrining the magnificent idol of Goddess Kalika. The great poet Kalidasa was a devoted worshipper of this goddess, and his poetic genius is traditionally attributed to her blessings. This temple is considered one of the 51 Shakti Peethas, and a grand fair is held here during Navratri."
+  },
+  "history": {
+    "hi": "गढ़कालिका माता का मंदिर महाभारत काल से भी प्राचीन माना जाता है और प्राचीन अवन्ति नगरी में इसे सर्वोच्च शक्ति-तीर्थ का स्थान प्राप्त था। प्रख्यात कवि कालिदास के कुलदेवी के रूप में इस मंदिर की ख्याति सर्वविदित है — ऐसी मान्यता है कि देवी कालिका के प्रसाद से कालिदास को असाधारण काव्य-प्रतिभा मिली थी। सातवीं शती में सम्राट हर्षवर्धन ने इस मंदिर का विस्तृत जीर्णोद्धार करवाया था। देवी सती के अंग जहाँ-जहाँ गिरे वहाँ शक्तिपीठ स्थापित हुए और इस मंदिर को भी उन्हीं पीठों में स्थान प्राप्त है। नवरात्रि में यहाँ लाखों श्रद्धालु माँ कालिका के दर्शन के लिए आते हैं और ज्योति कलश तथा चुनरी का अर्पण करते हैं।",
+    "en": "Gadkalika Mata Temple is considered even older than the Mahabharata era and held the status of the supreme Shakti shrine in the ancient city of Avanti. The temple is universally celebrated as the family deity of the great Sanskrit poet Kalidasa — tradition holds that Kalidasa received his extraordinary poetic gifts through the grace of Goddess Kalika. Emperor Harshavardhana undertook a major renovation of this temple in the 7th century CE. The temple is counted among the Shakti Peethas established at the spots where limbs of Goddess Sati fell. During Navratri, millions of devotees visit to seek the blessings of Maa Kalika, offering jyoti kalash and chunri."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+    "en": "Approx. 5:00 AM – 10:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 5:30 · मध्याह्न आरती 12:00 · संध्या आरती 7:30",
+    "en": "Morning aarti 5:30 AM · Noon aarti 12:00 PM · Evening aarti 7:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "गढ़कालिका माता मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Gadkalika Mata Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1965,
+    "lng": 75.7712
+  },
+  "photos": [
+    "/images/mandirs/gadkalika-mata.jpg"
+  ],
+  "howToReach": {
+    "hi": "गढ़कालिका माता मंदिर भैरवगढ़ में स्थित है और महाकालेश्वर मंदिर से लगभग 2 किमी उत्तर की ओर है। उज्जैन रेलवे स्टेशन से लगभग 3 किमी दूर है; ऑटो-रिक्शा या टेम्पो द्वारा आसानी से पहुँचा जा सकता है।",
+    "en": "Gadkalika Mata Temple is located in Bhairavgarh, approximately 2 km north of Mahakaleshwar Temple. It is about 3 km from Ujjain Railway Station and easily accessible by auto-rickshaw or tempo."
+  },
+  "nearbyMandirs": [
+    "bhartrihari-gufa",
+    "vikrant-bhairav",
+    "shaneshwar-mahadev"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "गढ़कालिका माता मंदिर उज्जैन",
+    "en": "Gadkalika Mata Temple Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि माँ गढ़कालिका सच्चे मन से माँगी गई हर मनोकामना पूर्ण करती हैं और विशेषकर विद्या, वाणी एवं कला-साधना का वरदान देती हैं। कहा जाता है कि कालिदास यहाँ की देहरी पर सिर रखकर ज्ञान के याचक बने थे और देवी की कृपा से ही उन्हें 'कविकुलगुरु' की उपाधि प्राप्त हुई। नवरात्रि में यहाँ ज्योति-कलश जलाने पर वंश में सुख-समृद्धि एवं सन्तति की रक्षा की मान्यता है।",
+    "en": "Locals firmly believe that Maa Gadkalika fulfils every sincere wish, especially blessing devotees with knowledge, speech and artistic excellence. It is said that Kalidasa surrendered at this very threshold seeking wisdom, and earned the title of 'Kavi-Kulaguru' only through the Goddess's grace. Lighting a jyoti-kalash here during Navratri is believed to bring prosperity and protection of progeny to the entire family lineage."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? यह वही शक्तिपीठ है जहाँ कथानुसार महाकवि कालिदास साधारण गडरिये से संस्कृत के महाकवि बने थे। मंदिर की मूर्ति स्वयंभू मानी जाती है और इसके चेहरे के भाव दिन के अलग-अलग समय में बदलते प्रतीत होते हैं।",
+    "en": "Did you know? This is the very Shakti Peeth where, according to legend, Kalidasa transformed from a simple shepherd into the greatest Sanskrit poet. The idol is believed to be swayambhu (self-manifested), and devotees say the expressions on the Goddess's face appear to change at different hours of the day."
+  },
+  "visitTips": {
+    "hi": "दर्शन के लिए शालीन एवं ढके हुए वस्त्र पहनकर आएँ; नवरात्रि में लम्बी कतार होती है इसलिए प्रातःकाल का समय श्रेष्ठ रहता है। अपने साथ चुनरी, नारियल, लाल फूल एवं जल-पात्र ले जा सकते हैं; मोबाइल एवं चमड़े की वस्तुएँ मंदिर के बाहर रखनी पड़ती हैं। गर्मी के मौसम में पानी की बोतल एवं छाता अवश्य रखें क्योंकि मंदिर परिसर खुला हुआ है।",
+    "en": "Wear modest, fully-covered clothing for darshan; arrive in the early morning during Navratri as queues become very long. You may carry chunri, coconut, red flowers and a water-pot as offerings, but mobile phones and leather items must be left outside the sanctum. Carry a water bottle and umbrella in summer, as much of the temple courtyard is open to the sky."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "गढ़कालिका माता मंदिर का कालिदास से क्या सम्बन्ध है?",
+        "en": "What is the connection between Gadkalika Mata Temple and Kalidasa?"
+      },
+      "answer": {
+        "hi": "किंवदंती के अनुसार महाकवि कालिदास माँ गढ़कालिका के परम भक्त थे और इसी देवी की उपासना से उन्हें असाधारण काव्य-प्रतिभा प्राप्त हुई थी। मंदिर परिसर में आज भी उनकी साधना-स्थली की स्मृति में श्रद्धालु शीश नवाते हैं।",
+        "en": "According to legend, the great poet Kalidasa was a devoted worshipper of Maa Gadkalika, and it was through her grace that he received his extraordinary poetic genius. Devotees still bow at the spot within the complex traditionally associated with his sadhana."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या गढ़कालिका मंदिर 51 शक्तिपीठों में शामिल है?",
+        "en": "Is Gadkalika Temple counted among the 51 Shakti Peethas?"
+      },
+      "answer": {
+        "hi": "जी हाँ, परम्परा में इसे शक्तिपीठों में स्थान प्राप्त है और इसे प्राचीन अवन्तिका का प्रमुख शक्ति-तीर्थ माना गया है। नवरात्रि में यहाँ देश भर से शाक्त साधक एवं श्रद्धालु दर्शन हेतु आते हैं।",
+        "en": "Yes, tradition counts it among the Shakti Peethas and it has long been regarded as the principal Shakti shrine of ancient Avantika. During Navratri, Shakta sadhakas and devotees from across India travel here for darshan."
+      }
+    },
+    {
+      "question": {
+        "hi": "मंदिर दर्शन का सबसे श्रेष्ठ समय कौन सा है?",
+        "en": "What is the best time to visit the temple?"
+      },
+      "answer": {
+        "hi": "नवरात्रि (चैत्र एवं शारदीय) तथा प्रत्येक मंगलवार-शुक्रवार माँ कालिका के दर्शन हेतु अत्यन्त शुभ माने जाते हैं। प्रातः की मंगला आरती एवं संध्या आरती में दर्शन का विशेष माहात्म्य है।",
+        "en": "Both Chaitra and Sharadiya Navratri, along with every Tuesday and Friday, are considered most auspicious for darshan of Maa Kalika. The morning Mangala aarti and the evening aarti are particularly revered times to visit."
+      }
+    }
+  ]
 }

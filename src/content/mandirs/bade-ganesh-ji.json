@@ -1,138 +1,138 @@
 {
-    "slug":  "bade-ganesh-ji",
-    "name":  {
-                 "hi":  "बड़े गणेश जी मंदिर",
-                 "en":  "Bade Ganesh Ji Temple"
-             },
-    "deity":  {
-                  "hi":  "भगवान गणेश (विशाल प्रतिमा)",
-                  "en":  "Lord Ganesha (large idol)"
-              },
-    "templeType":  "Ganesh",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  true,
-    "establishedEra":  {
-                           "hi":  "19वीं शताब्दी, पेशवा कालीन निर्माण",
-                           "en":  "19th century, Peshwa era construction"
-                       },
-    "architectureStyle":  "Maratha",
-    "shortIntro":  {
-                       "hi":  "बड़े गणेश जी मंदिर महाकालेश्वर मंदिर के निकट स्थित उज्जैन का सबसे प्रसिद्ध गणेश मंदिर है। यहाँ भगवान गणेश की अत्यंत विशाल एवं मनोहारी प्रतिमा विराजमान है जो पेशवा काल में स्थापित की गई थी। महाकाल दर्शन से पूर्व गणेश पूजन की परंपरा के कारण प्रतिदिन हजारों श्रद्धालु यहाँ दर्शन करते हैं।",
-                       "en":  "Bade Ganesh Ji Temple, located near Mahakaleshwar Temple, is the most famous Ganesha temple in Ujjain. It houses an extraordinarily large and beautiful idol of Lord Ganesha, installed during the Peshwa era. Following the tradition of worshipping Ganesha before Mahakal darshan, thousands of devotees visit this temple daily."
-                   },
-    "history":  {
-                    "hi":  "बड़े गणेश जी मंदिर का निर्माण पेशवा काल में किया गया था और यहाँ स्थापित गणेश प्रतिमा उज्जैन की सबसे विशाल एवं भव्य गणेश मूर्तियों में से एक है। महाकालेश्वर ज्योतिर्लिंग के प्रांगण के निकट होने के कारण यह मंदिर सदैव से तीर्थयात्रियों का प्रमुख आकर्षण रहा है। हिन्दू परंपरा में \u0027प्रथम पूज्य गणेश\u0027 की मान्यता के अनुसार यहाँ महाकाल दर्शन से पूर्व गणेश वंदना करना अत्यंत शुभ माना जाता है। मंदिर परिसर में गणेश जी की विभिन्न रूपों में प्रतिमाएँ भी स्थापित हैं। बुधवार एवं गणेश चतुर्थी को यहाँ विशेष सजावट एवं महाभोग का आयोजन किया जाता है।",
-                    "en":  "Bade Ganesh Ji Temple was constructed during the Peshwa era and houses one of the largest and most magnificent Ganesha idols in Ujjain. Being situated near the precincts of Mahakaleshwar Jyotirlinga, this temple has always been a primary attraction for pilgrims. In accordance with the Hindu tradition of \u0027Pratham Pujya Ganesha\u0027 (Ganesha first to be worshipped), paying obeisance here before Mahakal darshan is considered highly auspicious. The temple complex also enshrines Ganesha in various forms. Wednesdays and Ganesh Chaturthi witness special decorations and mahabhog offerings."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                 "en":  "5:00 AM – 10:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                         "en":  "5:00 AM – 10:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                           "en":  "5:00 AM – 10:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                          "en":  "5:00 AM – 10:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                          "en":  "5:00 AM – 10:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                        "en":  "5:00 AM – 10:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 5:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 5:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "बड़े गणेश जी मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Bade Ganesh Ji Temple, Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1832,
-                "lng":  75.7678
-            },
-    "photos":  [
-                   "/images/mandirs/bade-ganesh-ji.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से मात्र 100 मीटर की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है और महाकाल की ओर जाने वाले किसी भी ऑटो या रिक्शा से पहुँचा जा सकता है।",
-                       "en":  "This temple is located just 100 metres from Mahakaleshwar Temple in the Mahakal Area. It is about 2 km from Ujjain Railway Station; any auto-rickshaw or cycle rickshaw heading towards Mahakal will drop you here."
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "trivikram-mandir",
-                          "navgraha-mandir-ujjain"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "बड़े गणेश जी मंदिर उज्जैन",
-                           "en":  "Bade Ganesh Ji Temple Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि बड़े गणेश जी के दर्शन किए बिना महाकाल की यात्रा अधूरी मानी जाती है। विद्यार्थी एवं नवविवाहित जोड़े यहाँ विशेष रूप से बुद्धि, समृद्धि एवं विघ्नहरण की कामना लेकर आते हैं। ऐसा माना जाता है कि यहाँ सच्चे मन से माँगी गई मनोकामना अवश्य पूर्ण होती है।",
-                         "en":  "Local devotees believe that a pilgrimage to Mahakal is incomplete without first having darshan of Bade Ganesh Ji. Students and newlywed couples especially come here seeking wisdom, prosperity, and the removal of obstacles. It is widely believed that sincere wishes made before this idol are always fulfilled."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? यहाँ स्थापित गणेश प्रतिमा मध्य भारत की सबसे विशाल गणेश मूर्तियों में से एक मानी जाती है, जिसकी रचना में पंचधातु एवं विशेष मसालों का उपयोग किया गया है। मंदिर परिसर में नवग्रह एवं पंचमुखी हनुमान की प्रतिमाएँ भी विराजमान हैं।",
-                         "en":  "Did you know? The Ganesha idol enshrined here is considered one of the largest in Central India and is said to be crafted using panchadhatu (five metals) along with sacred ingredients. The temple complex also houses idols of Navagraha and Panchmukhi Hanuman."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर में प्रवेश हेतु शालीन वस्त्र पहनें एवं सिर ढककर जाना शुभ माना जाता है। बुधवार, गणेश चतुर्थी एवं श्रावण मास में अत्यधिक भीड़ रहती है, अतः प्रातःकाल का समय दर्शन हेतु सर्वोत्तम है। मोदक, लड्डू या दूर्वा साथ ले जाएँ एवं मोबाइल/जूते बाहर ही उतार दें।",
-                      "en":  "Wear modest, traditional clothing and consider covering your head as a mark of respect. Wednesdays, Ganesh Chaturthi, and the month of Shravan see heavy crowds, so early morning is the best time for a peaceful darshan. Carry modak, laddus, or durva grass as offerings, and leave footwear and phones outside the sanctum."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "क्या महाकाल दर्शन से पहले बड़े गणेश जी के दर्शन करना आवश्यक है?",
-                                      "en":  "Is it necessary to visit Bade Ganesh Ji before Mahakal darshan?"
-                                  },
-                     "answer":  {
-                                    "hi":  "हिन्दू परंपरा के अनुसार किसी भी शुभ कार्य से पूर्व प्रथम पूज्य गणेश की वंदना की जाती है, इसलिए महाकाल दर्शन से पहले यहाँ दर्शन करना अत्यंत शुभ माना जाता है। यद्यपि यह अनिवार्य नहीं है, परंतु अधिकांश श्रद्धालु इस परंपरा का पालन करते हैं।",
-                                    "en":  "According to Hindu tradition, Lord Ganesha is worshipped first before any auspicious endeavour, so visiting here before Mahakal darshan is considered highly auspicious. While not mandatory, most devotees willingly follow this time-honoured custom."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "बड़े गणेश जी मंदिर में कौन सा दिन सबसे विशेष होता है?",
-                                      "en":  "Which day is most special at Bade Ganesh Ji Temple?"
-                                  },
-                     "answer":  {
-                                    "hi":  "बुधवार गणेश जी का विशेष वार माना जाता है तथा गणेश चतुर्थी एवं अंगारकी चतुर्थी पर यहाँ विशेष श्रृंगार, महाआरती एवं महाभोग का आयोजन होता है। इन दिनों मंदिर भक्तों से खचाखच भरा रहता है।",
-                                    "en":  "Wednesday is considered Lord Ganesha\u0027s special day, and Ganesh Chaturthi along with Angarki Chaturthi see grand shringar, mahaaarti, and mahabhog ceremonies. The temple is packed with devotees on these occasions."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या मंदिर परिसर में फोटोग्राफी की अनुमति है?",
-                                      "en":  "Is photography allowed inside the temple complex?"
-                                  },
-                     "answer":  {
-                                    "hi":  "मंदिर के बाहरी प्रांगण में सामान्यतः फोटोग्राफी की अनुमति है, परंतु गर्भगृह एवं मुख्य प्रतिमा के सम्मुख फोटो लेना वर्जित है। आरती के समय मोबाइल फोन बंद रखना उचित होता है।",
-                                    "en":  "Photography is generally allowed in the outer courtyard, but taking pictures inside the sanctum sanctorum or directly of the main idol is prohibited. It is respectful to keep mobile phones silent during aarti."
-                                }
-                 }
-             ]
+  "slug": "bade-ganesh-ji",
+  "name": {
+    "hi": "बड़े गणेश जी मंदिर",
+    "en": "Bade Ganesh Ji Temple"
+  },
+  "deity": {
+    "hi": "भगवान गणेश (विशाल प्रतिमा)",
+    "en": "Lord Ganesha (large idol)"
+  },
+  "templeType": "Ganesh",
+  "locationArea": "Mahakal Area",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "पेशवा कालीन",
+    "en": "Peshwa era"
+  },
+  "architectureStyle": "Maratha",
+  "shortIntro": {
+    "hi": "बड़े गणेश जी मंदिर महाकालेश्वर मंदिर के निकट स्थित उज्जैन का सबसे प्रसिद्ध गणेश मंदिर है। यहाँ भगवान गणेश की अत्यंत विशाल एवं मनोहारी प्रतिमा विराजमान है जो पेशवा काल में स्थापित की गई थी। महाकाल दर्शन से पूर्व गणेश पूजन की परंपरा के कारण प्रतिदिन हजारों श्रद्धालु यहाँ दर्शन करते हैं।",
+    "en": "Bade Ganesh Ji Temple, located near Mahakaleshwar Temple, is the most famous Ganesha temple in Ujjain. It houses an extraordinarily large and beautiful idol of Lord Ganesha, installed during the Peshwa era. Following the tradition of worshipping Ganesha before Mahakal darshan, thousands of devotees visit this temple daily."
+  },
+  "history": {
+    "hi": "बड़े गणेश जी मंदिर का निर्माण पेशवा काल में किया गया था और यहाँ स्थापित गणेश प्रतिमा उज्जैन की सबसे विशाल एवं भव्य गणेश मूर्तियों में से एक है। महाकालेश्वर ज्योतिर्लिंग के प्रांगण के निकट होने के कारण यह मंदिर सदैव से तीर्थयात्रियों का प्रमुख आकर्षण रहा है। हिन्दू परंपरा में 'प्रथम पूज्य गणेश' की मान्यता के अनुसार यहाँ महाकाल दर्शन से पूर्व गणेश वंदना करना अत्यंत शुभ माना जाता है। मंदिर परिसर में गणेश जी की विभिन्न रूपों में प्रतिमाएँ भी स्थापित हैं। बुधवार एवं गणेश चतुर्थी को यहाँ विशेष सजावट एवं महाभोग का आयोजन किया जाता है।",
+    "en": "Bade Ganesh Ji Temple was constructed during the Peshwa era and houses one of the largest and most magnificent Ganesha idols in Ujjain. Being situated near the precincts of Mahakaleshwar Jyotirlinga, this temple has always been a primary attraction for pilgrims. In accordance with the Hindu tradition of 'Pratham Pujya Ganesha' (Ganesha first to be worshipped), paying obeisance here before Mahakal darshan is considered highly auspicious. The temple complex also enshrines Ganesha in various forms. Wednesdays and Ganesh Chaturthi witness special decorations and mahabhog offerings."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+    "en": "Approx. 5:00 AM – 10:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 5:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 5:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "बड़े गणेश जी मंदिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Bade Ganesh Ji Temple, Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1832,
+    "lng": 75.7678
+  },
+  "photos": [
+    "/images/mandirs/bade-ganesh-ji.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से मात्र 100 मीटर की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है और महाकाल की ओर जाने वाले किसी भी ऑटो या रिक्शा से पहुँचा जा सकता है।",
+    "en": "This temple is located just 100 metres from Mahakaleshwar Temple in the Mahakal Area. It is about 2 km from Ujjain Railway Station; any auto-rickshaw or cycle rickshaw heading towards Mahakal will drop you here."
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "trivikram-mandir",
+    "navgraha-mandir-ujjain"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "बड़े गणेश जी मंदिर उज्जैन",
+    "en": "Bade Ganesh Ji Temple Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि बड़े गणेश जी के दर्शन किए बिना महाकाल की यात्रा अधूरी मानी जाती है। विद्यार्थी एवं नवविवाहित जोड़े यहाँ विशेष रूप से बुद्धि, समृद्धि एवं विघ्नहरण की कामना लेकर आते हैं। ऐसा माना जाता है कि यहाँ सच्चे मन से माँगी गई मनोकामना अवश्य पूर्ण होती है।",
+    "en": "Local devotees believe that a pilgrimage to Mahakal is incomplete without first having darshan of Bade Ganesh Ji. Students and newlywed couples especially come here seeking wisdom, prosperity, and the removal of obstacles. It is widely believed that sincere wishes made before this idol are always fulfilled."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? यहाँ स्थापित गणेश प्रतिमा मध्य भारत की सबसे विशाल गणेश मूर्तियों में से एक मानी जाती है, जिसकी रचना में पंचधातु एवं विशेष मसालों का उपयोग किया गया है। मंदिर परिसर में नवग्रह एवं पंचमुखी हनुमान की प्रतिमाएँ भी विराजमान हैं।",
+    "en": "Did you know? The Ganesha idol enshrined here is considered one of the largest in Central India and is said to be crafted using panchadhatu (five metals) along with sacred ingredients. The temple complex also houses idols of Navagraha and Panchmukhi Hanuman."
+  },
+  "visitTips": {
+    "hi": "मंदिर में प्रवेश हेतु शालीन वस्त्र पहनें एवं सिर ढककर जाना शुभ माना जाता है। बुधवार, गणेश चतुर्थी एवं श्रावण मास में अत्यधिक भीड़ रहती है, अतः प्रातःकाल का समय दर्शन हेतु सर्वोत्तम है। मोदक, लड्डू या दूर्वा साथ ले जाएँ एवं मोबाइल/जूते बाहर ही उतार दें।",
+    "en": "Wear modest, traditional clothing and consider covering your head as a mark of respect. Wednesdays, Ganesh Chaturthi, and the month of Shravan see heavy crowds, so early morning is the best time for a peaceful darshan. Carry modak, laddus, or durva grass as offerings, and leave footwear and phones outside the sanctum."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "क्या महाकाल दर्शन से पहले बड़े गणेश जी के दर्शन करना आवश्यक है?",
+        "en": "Is it necessary to visit Bade Ganesh Ji before Mahakal darshan?"
+      },
+      "answer": {
+        "hi": "हिन्दू परंपरा के अनुसार किसी भी शुभ कार्य से पूर्व प्रथम पूज्य गणेश की वंदना की जाती है, इसलिए महाकाल दर्शन से पहले यहाँ दर्शन करना अत्यंत शुभ माना जाता है। यद्यपि यह अनिवार्य नहीं है, परंतु अधिकांश श्रद्धालु इस परंपरा का पालन करते हैं।",
+        "en": "According to Hindu tradition, Lord Ganesha is worshipped first before any auspicious endeavour, so visiting here before Mahakal darshan is considered highly auspicious. While not mandatory, most devotees willingly follow this time-honoured custom."
+      }
+    },
+    {
+      "question": {
+        "hi": "बड़े गणेश जी मंदिर में कौन सा दिन सबसे विशेष होता है?",
+        "en": "Which day is most special at Bade Ganesh Ji Temple?"
+      },
+      "answer": {
+        "hi": "बुधवार गणेश जी का विशेष वार माना जाता है तथा गणेश चतुर्थी एवं अंगारकी चतुर्थी पर यहाँ विशेष श्रृंगार, महाआरती एवं महाभोग का आयोजन होता है। इन दिनों मंदिर भक्तों से खचाखच भरा रहता है।",
+        "en": "Wednesday is considered Lord Ganesha's special day, and Ganesh Chaturthi along with Angarki Chaturthi see grand shringar, mahaaarti, and mahabhog ceremonies. The temple is packed with devotees on these occasions."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या मंदिर परिसर में फोटोग्राफी की अनुमति है?",
+        "en": "Is photography allowed inside the temple complex?"
+      },
+      "answer": {
+        "hi": "मंदिर के बाहरी प्रांगण में सामान्यतः फोटोग्राफी की अनुमति है, परंतु मंदिर एवं मुख्य प्रतिमा के सम्मुख फोटो लेना वर्जित है। आरती के समय मोबाइल फोन बंद रखना उचित होता है।",
+        "en": "Photography is generally allowed in the outer courtyard, but taking pictures inside the sanctum sanctorum or directly of the main idol is prohibited. It is respectful to keep mobile phones silent during aarti."
+      }
+    }
+  ]
 }

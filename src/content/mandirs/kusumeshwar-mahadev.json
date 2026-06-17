@@ -1,92 +1,90 @@
 {
-    "slug":  "kusumeshwar-mahadev",
-    "name":  {
-                 "hi":  "कुसुमेश्वर महादेव",
-                 "en":  "Kusumeshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (कुसुमेश्वर रूप)",
-                  "en":  "Lord Shiva as Kusumeshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Vana",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
-                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "कुसुमेश्वर महादेव उज्जैन के पवित्र महाकाल वन क्षेत्र में स्थित चौरासी महादेव श्रृंखला का एक विशिष्ट मंदिर है। \u0027कुसुम\u0027 अर्थात पुष्प — इस नाम से शिव का सौम्य और सुंदर स्वरूप झलकता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की पुष्प-अभिषेक पूजा का विशेष माहात्म्य बताया गया है।",
-                       "en":  "Kusumeshwar Mahadev is a distinctive shrine of the Chaurasi Mahadeva circuit, located in the sacred Mahakal Vana area of Ujjain. \u0027Kusum\u0027 means flower — the name reflects Shiva\u0027s gentle and beautiful aspect. The Avanti Khanda of the Skanda Purana assigns special significance to floral offerings and abhisheka at this Shivalinga."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवन्ति खण्ड के अनुसार, कुसुमेश्वर महादेव महाकाल वन में विराजित उन चौरासी शिव-लिंगों में से एक हैं जो अनंत काल से स्वयंभू रूप में स्थित हैं। पौराणिक मान्यता है कि इस स्थान पर देवताओं और ऋषियों ने शिव को पुष्प अर्पित कर उनकी विशेष कृपा प्राप्त की थी। महाकाल वन की सघन वनस्पति के मध्य स्थित यह मंदिर प्राकृतिक सौंदर्य और आध्यात्मिक शांति का अनुपम संगम प्रस्तुत करता है। मध्यकाल में स्थानीय श्रद्धालुओं ने मंदिर परिसर का विस्तार किया। आज भी इस मंदिर में नित्य पुष्पार्चन की परंपरा जीवित है।",
-                    "en":  "According to the Avanti Khanda of the Skanda Purana, Kusumeshwar Mahadev is one of the eighty-four eternally self-manifested Shivalingas situated in the sacred Mahakal Vana of Ujjain. Tradition holds that gods and sages offered flowers at this spot to receive Shiva\u0027s special grace. Set amidst the lush greenery of Mahakal Vana, this temple offers a rare confluence of natural beauty and spiritual serenity. In the medieval period, local devotees expanded the temple complex. The tradition of daily floral worship continues unbroken at this shrine even today."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल वन, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Vana, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1813,
-                "lng":  75.7653
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-10.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर महाकाल वन क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 2.5 किमी में पहुँचा जा सकता है।",
-                       "en":  "This temple is about 0.5 km from Mahakaleshwar Temple within the Mahakal Vana area. It is approximately 2.5 km from Ujjain Railway Station, reachable by auto."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "कुसुमेश्वर महादेव उज्जैन",
-                           "en":  "Kusumeshwar Mahadev Ujjain"
-                       }
+  "slug": "kusumeshwar-mahadev",
+  "name": {
+    "hi": "कुसुमेश्वर महादेव",
+    "en": "Kusumeshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (कुसुमेश्वर रूप)",
+    "en": "Lord Shiva as Kusumeshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Vana",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+    "en": "Ancient — mentioned in Skanda Purana Avanti Khanda"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "कुसुमेश्वर महादेव उज्जैन के पवित्र महाकाल वन क्षेत्र में स्थित चौरासी महादेव श्रृंखला का एक विशिष्ट मंदिर है। 'कुसुम' अर्थात पुष्प — इस नाम से शिव का सौम्य और सुंदर स्वरूप झलकता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की पुष्प-अभिषेक पूजा का विशेष माहात्म्य बताया गया है।",
+    "en": "Kusumeshwar Mahadev is a distinctive shrine of the Chaurasi Mahadeva circuit, located in the sacred Mahakal Vana area of Ujjain. 'Kusum' means flower — the name reflects Shiva's gentle and beautiful aspect. The Avanti Khanda of the Skanda Purana assigns special significance to floral offerings and abhisheka at this Shivalinga."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवन्ति खण्ड के अनुसार, कुसुमेश्वर महादेव महाकाल वन में विराजित उन चौरासी शिव-लिंगों में से एक हैं जो अनंत काल से स्वयंभू रूप में स्थित हैं। पौराणिक मान्यता है कि इस स्थान पर देवताओं और ऋषियों ने शिव को पुष्प अर्पित कर उनकी विशेष कृपा प्राप्त की थी। महाकाल वन की सघन वनस्पति के मध्य स्थित यह मंदिर प्राकृतिक सौंदर्य और आध्यात्मिक शांति का अनुपम संगम प्रस्तुत करता है। मध्यकाल में स्थानीय श्रद्धालुओं ने मंदिर परिसर का विस्तार किया। आज भी इस मंदिर में नित्य पुष्पार्चन की परंपरा जीवित है।",
+    "en": "According to the Avanti Khanda of the Skanda Purana, Kusumeshwar Mahadev is one of the eighty-four eternally self-manifested Shivalingas situated in the sacred Mahakal Vana of Ujjain. Tradition holds that gods and sages offered flowers at this spot to receive Shiva's special grace. Set amidst the lush greenery of Mahakal Vana, this temple offers a rare confluence of natural beauty and spiritual serenity. In the medieval period, local devotees expanded the temple complex. The tradition of daily floral worship continues unbroken at this shrine even today."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल वन, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Vana, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1813,
+    "lng": 75.7653
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-10.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर महाकाल वन क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 2.5 किमी में पहुँचा जा सकता है।",
+    "en": "This temple is about 0.5 km from Mahakaleshwar Temple within the Mahakal Vana area. It is approximately 2.5 km from Ujjain Railway Station, reachable by auto."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "कुसुमेश्वर महादेव उज्जैन",
+    "en": "Kusumeshwar Mahadev Ujjain"
+  }
 }

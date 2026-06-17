@@ -1,92 +1,90 @@
 {
-    "slug":  "vyaseshwar-mahadev",
-    "name":  {
-                 "hi":  "व्यासेश्वर महादेव",
-                 "en":  "Vyaseshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव — व्यासेश्वर स्वरूप",
-                  "en":  "Lord Shiva as Vyaseshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुराण कालीन",
-                           "en":  "Puranic Era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "व्यासेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में महर्षि वेद व्यास की साधना से जुड़ा एक पावन शिव मंदिर है। महाकाल क्षेत्र में स्थित यह मंदिर उन श्रद्धालुओं के लिए विशेष महत्त्व रखता है जो चौरासी महादेव की पूर्ण परिक्रमा करते हैं। स्कन्द पुराण में इस स्थान की महिमा विशेष रूप से वर्णित है।",
-                       "en":  "Vyaseshwar Mahadev is a sacred Shiva temple in Ujjain\u0027s 84 Mahadevas series, associated with the spiritual practice of the great sage Veda Vyasa. Located in the Mahakal area, it holds special importance for pilgrims completing the full 84 Mahadevas circuit. The Skanda Purana specifically mentions the glory of this site."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में वर्णित 84 महादेव श्रृंखला में व्यासेश्वर महादेव का उल्लेख अत्यंत आदरपूर्वक किया गया है। पौराणिक परंपरा के अनुसार महर्षि वेद व्यास ने उज्जैन में निवास करते हुए महाभारत की रचना के पश्चात इस स्थान पर शिव की उपासना की थी। उनकी भक्ति से प्रसन्न होकर भगवान शिव ने यहाँ व्यासेश्वर नाम से अपना दिव्य स्वरूप स्थापित किया। यह मंदिर विद्वानों, लेखकों एवं ज्ञान-साधकों के लिए विशेष आराधना का केन्द्र रहा है। आज भी चौरासी महादेव यात्रा में इस मंदिर के दर्शन अनिवार्य माने जाते हैं।",
-                    "en":  "Vyaseshwar Mahadev is mentioned with great reverence in the 84 Mahadevas series of the Avanti Khanda, Skanda Purana. According to sacred tradition, the sage Veda Vyasa, after composing the Mahabharata while residing in Ujjain, worshipped Shiva at this very spot. Pleased by his devotion, Lord Shiva established his divine form here as Vyaseshwar. The temple has long been a special center of worship for scholars, writers, and seekers of knowledge. To this day, its darshan is considered essential in the 84 Mahadevas pilgrimage."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1828,
-                "lng":  75.768
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-3.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "व्यासेश्वर महादेव उज्जैन",
-                           "en":  "Vyaseshwar Mahadev Ujjain"
-                       }
+  "slug": "vyaseshwar-mahadev",
+  "name": {
+    "hi": "व्यासेश्वर महादेव",
+    "en": "Vyaseshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव — व्यासेश्वर स्वरूप",
+    "en": "Lord Shiva as Vyaseshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुराण कालीन",
+    "en": "Puranic Era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "व्यासेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में महर्षि वेद व्यास की साधना से जुड़ा एक पावन शिव मंदिर है। महाकाल क्षेत्र में स्थित यह मंदिर उन श्रद्धालुओं के लिए विशेष महत्त्व रखता है जो चौरासी महादेव की पूर्ण परिक्रमा करते हैं। स्कन्द पुराण में इस स्थान की महिमा विशेष रूप से वर्णित है।",
+    "en": "Vyaseshwar Mahadev is a sacred Shiva temple in Ujjain's 84 Mahadevas series, associated with the spiritual practice of the great sage Veda Vyasa. Located in the Mahakal area, it holds special importance for pilgrims completing the full 84 Mahadevas circuit. The Skanda Purana specifically mentions the glory of this site."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में वर्णित 84 महादेव श्रृंखला में व्यासेश्वर महादेव का उल्लेख अत्यंत आदरपूर्वक किया गया है। पौराणिक परंपरा के अनुसार महर्षि वेद व्यास ने उज्जैन में निवास करते हुए महाभारत की रचना के पश्चात इस स्थान पर शिव की उपासना की थी। उनकी भक्ति से प्रसन्न होकर भगवान शिव ने यहाँ व्यासेश्वर नाम से अपना दिव्य स्वरूप स्थापित किया। यह मंदिर विद्वानों, लेखकों एवं ज्ञान-साधकों के लिए विशेष आराधना का केन्द्र रहा है। आज भी चौरासी महादेव यात्रा में इस मंदिर के दर्शन अनिवार्य माने जाते हैं।",
+    "en": "Vyaseshwar Mahadev is mentioned with great reverence in the 84 Mahadevas series of the Avanti Khanda, Skanda Purana. According to sacred tradition, the sage Veda Vyasa, after composing the Mahabharata while residing in Ujjain, worshipped Shiva at this very spot. Pleased by his devotion, Lord Shiva established his divine form here as Vyaseshwar. The temple has long been a special center of worship for scholars, writers, and seekers of knowledge. To this day, its darshan is considered essential in the 84 Mahadevas pilgrimage."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1828,
+    "lng": 75.768
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-3.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "व्यासेश्वर महादेव उज्जैन",
+    "en": "Vyaseshwar Mahadev Ujjain"
+  }
 }

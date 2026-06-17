@@ -1,94 +1,94 @@
-﻿{
-    "slug":  "ram-mandir-ramghat",
-    "name":  {
-                 "hi":  "राम मंदिर (रामघाट)",
-                 "en":  "Ram Mandir at Ram Ghat"
-             },
-    "deity":  {
-                  "hi":  "भगवान राम",
-                  "en":  "Lord Rama"
-              },
-    "templeType":  "Ram",
-    "locationArea":  "Rudrasagar",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल, सिंधिया काल में जीर्णोद्धार",
-                           "en":  "Ancient, renovated in Scindia era"
-                       },
-    "architectureStyle":  "Maratha-Nagara",
-    "shortIntro":  {
-                       "hi":  "राम मंदिर रामघाट उज्जैन की पावन शिप्रा नदी के तट पर रामघाट के निकट स्थित है जहाँ भगवान राम की भव्य प्रतिमा विराजमान है। रामघाट सिंहस्थ कुंभ मेले का एक प्रमुख स्नान घाट है और इस मंदिर में स्नान के पश्चात् दर्शन की विशेष परंपरा है। रामनवमी एवं दीपावली पर यहाँ भव्य उत्सव का आयोजन होता है।",
-                       "en":  "Ram Mandir at Ram Ghat is located near the sacred Ram Ghat on the banks of the Shipra River in Ujjain, enshrining a magnificent idol of Lord Rama. Ram Ghat is one of the principal bathing ghats of the Simhastha Kumbh Mela, and there is a special tradition of visiting this temple after the ritual bath. Grand celebrations are held here on Ram Navami and Diwali."
-                   },
-    "history":  {
-                    "hi":  "रामघाट उज्जैन के सबसे पवित्र घाटों में से एक है जहाँ पौराणिक मान्यता के अनुसार स्वयं भगवान राम ने शिप्रा में स्नान किया था। इस स्थान पर स्थित राम मंदिर की स्थापना प्राचीन काल में हुई और सिंधिया काल में इसका जीर्णोद्धार किया गया। रामघाट पर प्रतिदिन शाम को शिप्रा आरती का आयोजन होता है जो देश के प्रमुख नदी-आरती कार्यक्रमों में से एक है। कार्तिक माह में यहाँ दीपदान एवं तुलसी विवाह का आयोजन होता है। सिंहस्थ कुंभ मेले के दौरान यह घाट लाखों श्रद्धालुओं की आस्था का केंद्र बनता है और राम मंदिर में उनके दर्शन की विशेष व्यवस्था की जाती है।",
-                    "en":  "Ram Ghat is one of the most sacred ghats of Ujjain, where tradition holds that Lord Rama himself bathed in the Shipra River. The Ram Mandir at this site was established in ancient times and renovated during the Scindia era. Every evening, the Shipra Aarti is performed at Ram Ghat, which is one of the most prominent river aarti ceremonies in India. In the month of Kartik, deepdan (lamp offerings) and Tulsi Vivah ceremonies are organized here. During the Simhastha Kumbh Mela, this ghat becomes a focal point of faith for millions of pilgrims, and special arrangements are made for darshan at the Ram Mandir."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00 (शिप्रा आरती)",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM (Shipra Aarti)"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "राम मंदिर, रामघाट, रुद्रसागर, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Ram Mandir, Ram Ghat, Rudrasagar, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1855,
-                "lng":  75.7625
-            },
-    "photos":  [
-                   "/images/mandirs/ram-mandir-ramghat.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "राम मंदिर रामघाट पर शिप्रा नदी के तट पर स्थित है, महाकालेश्वर मंदिर से लगभग 8 किमी दूर। उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी की दूरी पर है, ऑटो-रिक्शा द्वारा 10-15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "Ram Mandir is situated on the Shipra River bank at Ram Ghat, approximately 8 km from Mahakaleshwar Temple. It is about 2.5 km from Ujjain Railway Station and reachable in 10-15 minutes by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-                          "siddhavat-mandir",
-                          "navgraha-mandir-ujjain",
-                          "bade-ganesh-ji"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "राम मंदिर रामघाट उज्जैन",
-                           "en":  "Ram Mandir Ram Ghat Ujjain"
-                       }
+{
+  "slug": "ram-mandir-ramghat",
+  "name": {
+    "hi": "राम मंदिर (रामघाट)",
+    "en": "Ram Mandir at Ram Ghat"
+  },
+  "deity": {
+    "hi": "भगवान राम",
+    "en": "Lord Rama"
+  },
+  "templeType": "Ram",
+  "locationArea": "Rudrasagar",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल, सिंधिया काल में जीर्णोद्धार",
+    "en": "Ancient, renovated in Scindia era"
+  },
+  "architectureStyle": "Maratha-Nagara",
+  "shortIntro": {
+    "hi": "राम मंदिर रामघाट उज्जैन की पावन शिप्रा नदी के तट पर रामघाट के निकट स्थित है जहाँ भगवान राम की भव्य प्रतिमा विराजमान है। रामघाट सिंहस्थ कुंभ मेले का एक प्रमुख स्नान घाट है और इस मंदिर में स्नान के पश्चात् दर्शन की विशेष परंपरा है। रामनवमी एवं दीपावली पर यहाँ भव्य उत्सव का आयोजन होता है।",
+    "en": "Ram Mandir at Ram Ghat is located near the sacred Ram Ghat on the banks of the Shipra River in Ujjain, enshrining a magnificent idol of Lord Rama. Ram Ghat is one of the principal bathing ghats of the Simhastha Kumbh Mela, and there is a special tradition of visiting this temple after the ritual bath. Grand celebrations are held here on Ram Navami and Diwali."
+  },
+  "history": {
+    "hi": "रामघाट उज्जैन के सबसे पवित्र घाटों में से एक है जहाँ पौराणिक मान्यता के अनुसार स्वयं भगवान राम ने शिप्रा में स्नान किया था। इस स्थान पर स्थित राम मंदिर की स्थापना प्राचीन काल में हुई और सिंधिया काल में इसका जीर्णोद्धार किया गया। रामघाट पर प्रतिदिन शाम को शिप्रा आरती का आयोजन होता है जो देश के प्रमुख नदी-आरती कार्यक्रमों में से एक है। कार्तिक माह में यहाँ दीपदान एवं तुलसी विवाह का आयोजन होता है। सिंहस्थ कुंभ मेले के दौरान यह घाट लाखों श्रद्धालुओं की आस्था का केंद्र बनता है और राम मंदिर में उनके दर्शन की विशेष व्यवस्था की जाती है।",
+    "en": "Ram Ghat is one of the most sacred ghats of Ujjain, where tradition holds that Lord Rama himself bathed in the Shipra River. The Ram Mandir at this site was established in ancient times and renovated during the Scindia era. Every evening, the Shipra Aarti is performed at Ram Ghat, which is one of the most prominent river aarti ceremonies in India. In the month of Kartik, deepdan (lamp offerings) and Tulsi Vivah ceremonies are organized here. During the Simhastha Kumbh Mela, this ghat becomes a focal point of faith for millions of pilgrims, and special arrangements are made for darshan at the Ram Mandir."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00 (शिप्रा आरती)",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM (Shipra Aarti)"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "राम मंदिर, रामघाट, रुद्रसागर, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Ram Mandir, Ram Ghat, Rudrasagar, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1855,
+    "lng": 75.7625
+  },
+  "photos": [
+    "/images/mandirs/ram-mandir-ramghat.jpg"
+  ],
+  "howToReach": {
+    "hi": "राम मंदिर रामघाट पर शिप्रा नदी के तट पर स्थित है, महाकालेश्वर मंदिर से लगभग 8 किमी दूर। उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी की दूरी पर है, ऑटो-रिक्शा द्वारा 10-15 मिनट में पहुँचा जा सकता है।",
+    "en": "Ram Mandir is situated on the Shipra River bank at Ram Ghat, approximately 8 km from Mahakaleshwar Temple. It is about 2.5 km from Ujjain Railway Station and reachable in 10-15 minutes by auto-rickshaw."
+  },
+  "nearbyMandirs": [
+    "siddhavat-mandir",
+    "navgraha-mandir-ujjain",
+    "bade-ganesh-ji"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "राम मंदिर रामघाट उज्जैन",
+    "en": "Ram Mandir Ram Ghat Ujjain"
+  }
 }

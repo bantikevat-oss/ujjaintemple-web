@@ -1,136 +1,134 @@
 {
-    "slug":  "bilvamuleshwar-mahadev",
-    "name":  {
-                 "hi":  "बिल्वमूलेश्वर महादेव",
-                 "en":  "Bilvamuleshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव — बिल्व वृक्ष के नीचे",
-                  "en":  "Lord Shiva under Bilva tree"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Vana",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल (स्कंद पुराण)",
-                           "en":  "Puranic era (Skanda Purana)"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "बिल्वमूलेश्वर महादेव उज्जैन के महाकाल वन क्षेत्र में स्थित 84 महादेवों का वह विशेष तीर्थ है, जहाँ शिवलिंग प्राचीन बिल्व वृक्ष की जड़ों के नीचे स्थापित है। बिल्व पत्र शिव को अत्यंत प्रिय है और इस स्थान का धार्मिक महत्व इसी कारण द्विगुणित हो जाता है। स्कंद पुराण के अवंति खंड में इस तीर्थ का उल्लेख अत्यंत शुभ फलदायक के रूप में किया गया है।",
-                       "en":  "Bilvamuleshwar Mahadev is the special shrine among the 84 Mahadevas located in the Mahakal Vana area of Ujjain, where the Shivalinga is established under the roots of an ancient Bilva tree. The Bilva leaf is extremely dear to Lord Shiva, which doubles the religious significance of this site. The Skanda Purana\u0027s Avanti Khanda describes this shrine as one that bestows highly auspicious results."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवंति खंड में महाकाल वन को शिव की पावन क्रीड़ा भूमि बताया गया है, और इसी वन में बिल्वमूलेश्वर महादेव की स्थापना की गई है। पौराणिक मान्यता के अनुसार, इस स्थान पर स्वयंभू शिवलिंग एक प्राचीन बिल्व वृक्ष की जड़ों से प्रकट हुआ था। बिल्व वृक्ष को त्रिदल (तीन पत्तियाँ) के कारण ब्रह्मा, विष्णु और महेश की त्रिमूर्ति का प्रतीक माना जाता है। इस मंदिर की विशेषता यह है कि यहाँ बिल्व पत्र चढ़ाने मात्र से समस्त कामनाओं की पूर्ति होती है। मध्यकाल में इस मंदिर का संरक्षण उज्जैन के महंत परिवारों ने किया और आज भी यह परंपरा जारी है।",
-                    "en":  "The Skanda Purana\u0027s Avanti Khanda describes the Mahakal Vana as Shiva\u0027s sacred playground, and it is in this very forest that Bilvamuleshwar Mahadev has been established. According to Puranic belief, a self-manifested Shivalinga emerged from the roots of an ancient Bilva tree at this spot. The Bilva tree, with its tri-lobed leaf, is considered a symbol of the Trimurthi — Brahma, Vishnu, and Mahesh. This temple is notable for the belief that merely offering Bilva leaves here fulfils all desires. In medieval times the temple was protected by the mahant families of Ujjain, and this tradition continues today."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल वन, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Vana, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1815,
-                "lng":  75.7655
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-9.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर महाकाल वन में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 20 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga, located within Mahakal Vana. It takes about 20 minutes from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "बिल्वमूलेश्वर महादेव उज्जैन",
-                           "en":  "Bilvamuleshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय भक्तों की मान्यता है कि बिल्वमूलेश्वर महादेव पर ताज़ा बिल्व पत्र चढ़ाने से अकाल मृत्यु का भय दूर होता है और पारिवारिक कलह शांत हो जाती है। उज्जैन के पंडित बताते हैं कि सोमवार और प्रदोष काल में यहाँ जल और बिल्व पत्र अर्पण करने से भगवान शिव शीघ्र प्रसन्न होते हैं। श्रावण मास में यहाँ बिल्व पत्र की वर्षा करने की परंपरा आज भी निभाई जाती है।",
-                         "en":  "Local devotees believe that offering fresh Bilva leaves at Bilvamuleshwar Mahadev removes the fear of untimely death and calms family discord. Ujjain pandits say that worship with water and Bilva leaves on Mondays and during Pradosh Kaal pleases Lord Shiva most quickly. The tradition of showering Bilva leaves on the linga during the month of Shravan is still observed here."
-                     },
-    "specialFacts":  {
-                         "hi":  "यह 84 महादेवों में एकमात्र ऐसा शिवलिंग है जो जीवित बिल्व वृक्ष की जड़ों के नीचे विराजमान माना जाता है। मान्यता है कि यहाँ चढ़ाया गया एक बिल्व पत्र हज़ार पत्रों के बराबर पुण्य देता है।",
-                         "en":  "This is the only Shivalinga among the 84 Mahadevas believed to be seated beneath the roots of a living Bilva tree. It is said that a single Bilva leaf offered here yields the merit of a thousand leaves offered elsewhere."
-                     },
-    "visitTips":  {
-                      "hi":  "दर्शन के लिए पारंपरिक एवं शालीन वस्त्र पहनें; मंदिर में प्रवेश से पहले पैर धोना अनिवार्य है। साथ में ताज़ा बिल्व पत्र, गंगाजल और सफेद पुष्प लाएँ — ये शिव अभिषेक के लिए सर्वश्रेष्ठ माने जाते हैं। प्रातःकाल या संध्या आरती के समय आना सबसे शुभ रहता है, भीड़ कम होती है और वातावरण भक्तिमय रहता है।",
-                      "en":  "Wear traditional and modest clothing; washing your feet before entering the sanctum is customary. Carry fresh Bilva leaves, Gangajal and white flowers — these are considered ideal for Shiva abhishek. Early morning or evening aarti time is most auspicious to visit, when crowds are lighter and the atmosphere is deeply devotional."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "बिल्वमूलेश्वर महादेव का नाम कैसे पड़ा?",
-                                      "en":  "How did Bilvamuleshwar Mahadev get its name?"
-                                  },
-                     "answer":  {
-                                    "hi":  "\u0027बिल्वमूल\u0027 का अर्थ है बिल्व वृक्ष की जड़। इस मंदिर का शिवलिंग एक प्राचीन बिल्व वृक्ष की जड़ों के नीचे स्वयंभू रूप से प्रकट हुआ था, इसलिए भगवान शिव यहाँ बिल्वमूलेश्वर — अर्थात् बिल्व की जड़ के स्वामी — कहलाते हैं।",
-                                    "en":  "\u0027Bilvamula\u0027 means the root of the Bilva tree. The Shivalinga here is believed to have self-manifested beneath the roots of an ancient Bilva tree, and hence Lord Shiva is worshipped here as Bilvamuleshwar — the Lord of the Bilva root."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "यहाँ कौन-सी पूजा सर्वश्रेष्ठ मानी जाती है?",
-                                      "en":  "Which form of worship is considered best here?"
-                                  },
-                     "answer":  {
-                                    "hi":  "बिल्व पत्र अर्पण और जलाभिषेक यहाँ की सर्वश्रेष्ठ पूजा मानी जाती है। सोमवार, प्रदोष व्रत और श्रावण मास में रुद्राभिषेक करना विशेष फलदायक माना जाता है।",
-                                    "en":  "Offering Bilva leaves along with a water abhishek is considered the most rewarding worship here. Performing Rudrabhishek on Mondays, during Pradosh vrat, and in the month of Shravan is believed to bring special merit."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या यह मंदिर 84 महादेव यात्रा का हिस्सा है?",
-                                      "en":  "Is this temple part of the 84 Mahadev Yatra?"
-                                  },
-                     "answer":  {
-                                    "hi":  "हाँ, बिल्वमूलेश्वर महादेव उज्जैन के पारंपरिक 84 महादेव परिक्रमा का एक महत्वपूर्ण पड़ाव है। श्रद्धालु महाकालेश्वर दर्शन के साथ इस मंदिर की भी यात्रा करते हैं।",
-                                    "en":  "Yes, Bilvamuleshwar Mahadev is an important stop on Ujjain\u0027s traditional 84 Mahadev parikrama. Devotees often visit this shrine along with darshan at Mahakaleshwar."
-                                }
-                 }
-             ]
+  "slug": "bilvamuleshwar-mahadev",
+  "name": {
+    "hi": "बिल्वमूलेश्वर महादेव",
+    "en": "Bilvamuleshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव — बिल्व वृक्ष के नीचे",
+    "en": "Lord Shiva under Bilva tree"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Vana",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल (स्कंद पुराण)",
+    "en": "Puranic era (Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "बिल्वमूलेश्वर महादेव उज्जैन के महाकाल वन क्षेत्र में स्थित 84 महादेवों का वह विशेष तीर्थ है, जहाँ शिवलिंग प्राचीन बिल्व वृक्ष की जड़ों के नीचे स्थापित है। बिल्व पत्र शिव को अत्यंत प्रिय है और इस स्थान का धार्मिक महत्व इसी कारण द्विगुणित हो जाता है। स्कंद पुराण के अवंति खंड में इस तीर्थ का उल्लेख अत्यंत शुभ फलदायक के रूप में किया गया है।",
+    "en": "Bilvamuleshwar Mahadev is the special shrine among the 84 Mahadevas located in the Mahakal Vana area of Ujjain, where the Shivalinga is established under the roots of an ancient Bilva tree. The Bilva leaf is extremely dear to Lord Shiva, which doubles the religious significance of this site. The Skanda Purana's Avanti Khanda describes this shrine as one that bestows highly auspicious results."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवंति खंड में महाकाल वन को शिव की पावन क्रीड़ा भूमि बताया गया है, और इसी वन में बिल्वमूलेश्वर महादेव की स्थापना की गई है। पौराणिक मान्यता के अनुसार, इस स्थान पर स्वयंभू शिवलिंग एक प्राचीन बिल्व वृक्ष की जड़ों से प्रकट हुआ था। बिल्व वृक्ष को त्रिदल (तीन पत्तियाँ) के कारण ब्रह्मा, विष्णु और महेश की त्रिमूर्ति का प्रतीक माना जाता है। इस मंदिर की विशेषता यह है कि यहाँ बिल्व पत्र चढ़ाने मात्र से समस्त कामनाओं की पूर्ति होती है। मध्यकाल में इस मंदिर का संरक्षण उज्जैन के महंत परिवारों ने किया और आज भी यह परंपरा जारी है।",
+    "en": "The Skanda Purana's Avanti Khanda describes the Mahakal Vana as Shiva's sacred playground, and it is in this very forest that Bilvamuleshwar Mahadev has been established. According to Puranic belief, a self-manifested Shivalinga emerged from the roots of an ancient Bilva tree at this spot. The Bilva tree, with its tri-lobed leaf, is considered a symbol of the Trimurthi — Brahma, Vishnu, and Mahesh. This temple is notable for the belief that merely offering Bilva leaves here fulfils all desires. In medieval times the temple was protected by the mahant families of Ujjain, and this tradition continues today."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल वन, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Vana, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1815,
+    "lng": 75.7655
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-9.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.5 किमी की दूरी पर महाकाल वन में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 20 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 0.5 km from Mahakaleshwar Jyotirlinga, located within Mahakal Vana. It takes about 20 minutes from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "बिल्वमूलेश्वर महादेव उज्जैन",
+    "en": "Bilvamuleshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों की मान्यता है कि बिल्वमूलेश्वर महादेव पर ताज़ा बिल्व पत्र चढ़ाने से अकाल मृत्यु का भय दूर होता है और पारिवारिक कलह शांत हो जाती है। उज्जैन के पंडित बताते हैं कि सोमवार और प्रदोष काल में यहाँ जल और बिल्व पत्र अर्पण करने से भगवान शिव शीघ्र प्रसन्न होते हैं। श्रावण मास में यहाँ बिल्व पत्र की वर्षा करने की परंपरा आज भी निभाई जाती है।",
+    "en": "Local devotees believe that offering fresh Bilva leaves at Bilvamuleshwar Mahadev removes the fear of untimely death and calms family discord. Ujjain pandits say that worship with water and Bilva leaves on Mondays and during Pradosh Kaal pleases Lord Shiva most quickly. The tradition of showering Bilva leaves on the linga during the month of Shravan is still observed here."
+  },
+  "specialFacts": {
+    "hi": "यह 84 महादेवों में एकमात्र ऐसा शिवलिंग है जो जीवित बिल्व वृक्ष की जड़ों के नीचे विराजमान माना जाता है। मान्यता है कि यहाँ चढ़ाया गया एक बिल्व पत्र हज़ार पत्रों के बराबर पुण्य देता है।",
+    "en": "This is the only Shivalinga among the 84 Mahadevas believed to be seated beneath the roots of a living Bilva tree. It is said that a single Bilva leaf offered here yields the merit of a thousand leaves offered elsewhere."
+  },
+  "visitTips": {
+    "hi": "दर्शन के लिए पारंपरिक एवं शालीन वस्त्र पहनें; मंदिर में प्रवेश से पहले पैर धोना अनिवार्य है। साथ में ताज़ा बिल्व पत्र, गंगाजल और सफेद पुष्प लाएँ — ये शिव अभिषेक के लिए सर्वश्रेष्ठ माने जाते हैं। प्रातःकाल या संध्या आरती के समय आना सबसे शुभ रहता है, भीड़ कम होती है और वातावरण भक्तिमय रहता है।",
+    "en": "Wear traditional and modest clothing; washing your feet before entering the sanctum is customary. Carry fresh Bilva leaves, Gangajal and white flowers — these are considered ideal for Shiva abhishek. Early morning or evening aarti time is most auspicious to visit, when crowds are lighter and the atmosphere is deeply devotional."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "बिल्वमूलेश्वर महादेव का नाम कैसे पड़ा?",
+        "en": "How did Bilvamuleshwar Mahadev get its name?"
+      },
+      "answer": {
+        "hi": "'बिल्वमूल' का अर्थ है बिल्व वृक्ष की जड़। इस मंदिर का शिवलिंग एक प्राचीन बिल्व वृक्ष की जड़ों के नीचे स्वयंभू रूप से प्रकट हुआ था, इसलिए भगवान शिव यहाँ बिल्वमूलेश्वर — अर्थात् बिल्व की जड़ के स्वामी — कहलाते हैं।",
+        "en": "'Bilvamula' means the root of the Bilva tree. The Shivalinga here is believed to have self-manifested beneath the roots of an ancient Bilva tree, and hence Lord Shiva is worshipped here as Bilvamuleshwar — the Lord of the Bilva root."
+      }
+    },
+    {
+      "question": {
+        "hi": "यहाँ कौन-सी पूजा सर्वश्रेष्ठ मानी जाती है?",
+        "en": "Which form of worship is considered best here?"
+      },
+      "answer": {
+        "hi": "बिल्व पत्र अर्पण और जलाभिषेक यहाँ की सर्वश्रेष्ठ पूजा मानी जाती है। सोमवार, प्रदोष व्रत और श्रावण मास में रुद्राभिषेक करना विशेष फलदायक माना जाता है।",
+        "en": "Offering Bilva leaves along with a water abhishek is considered the most rewarding worship here. Performing Rudrabhishek on Mondays, during Pradosh vrat, and in the month of Shravan is believed to bring special merit."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या यह मंदिर 84 महादेव यात्रा का हिस्सा है?",
+        "en": "Is this temple part of the 84 Mahadev Yatra?"
+      },
+      "answer": {
+        "hi": "हाँ, बिल्वमूलेश्वर महादेव उज्जैन के पारंपरिक 84 महादेव परिक्रमा का एक महत्वपूर्ण पड़ाव है। श्रद्धालु महाकालेश्वर दर्शन के साथ इस मंदिर की भी यात्रा करते हैं।",
+        "en": "Yes, Bilvamuleshwar Mahadev is an important stop on Ujjain's traditional 84 Mahadev parikrama. Devotees often visit this shrine along with darshan at Mahakaleshwar."
+      }
+    }
+  ]
 }

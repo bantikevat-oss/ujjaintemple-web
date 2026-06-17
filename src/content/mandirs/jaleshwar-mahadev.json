@@ -1,92 +1,90 @@
 {
-    "slug":  "jaleshwar-mahadev",
-    "name":  {
-                 "hi":  "जलेश्वर महादेव",
-                 "en":  "Jaleshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव — जलेश्वर",
-                  "en":  "Lord Shiva as Jaleshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Shipra Bank",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल (स्कंद पुराण)",
-                           "en":  "Puranic era (Skanda Purana)"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "जलेश्वर महादेव शिप्रा नदी के पावन तट पर स्थित 84 महादेवों की श्रृंखला का एक दिव्य शिवलिंग है। भगवान शिव यहाँ जल के स्वामी \u0027जलेश्वर\u0027 रूप में विराजमान हैं और जल तत्व की शुद्धि व जीवनदायिनी शक्ति के प्रतीक हैं। शिप्रा के पवित्र जल में स्नान कर यहाँ दर्शन करना अत्यंत फलदायी माना जाता है।",
-                       "en":  "Jaleshwar Mahadev is a divine Shivalinga of the 84 Mahadevas series, situated on the sacred banks of the Shipra river. Lord Shiva is worshipped here as \u0027Jaleshwar\u0027, the lord of water, symbolising the life-giving and purifying power of the water element. Taking a holy dip in the Shipra and then offering darshan here is considered especially meritorious."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवंति खंड में जलेश्वर महादेव को उज्जैन के 84 पावन महादेवों में से एक के रूप में स्थापित किया गया है। पौराणिक आख्यानों के अनुसार, वरुण देव ने शिप्रा तट पर इस लिंग की स्थापना की थी और जल-देवताओं ने यहाँ भगवान शिव की आराधना की थी। शिप्रा नदी के तट पर स्थित होने के कारण यह मंदिर कुंभ मेले और सिंहस्थ के दौरान तीर्थयात्रियों का प्रमुख पड़ाव बनता है। मध्यकाल में इस मंदिर का जीर्णोद्धार स्थानीय व्यापारी समुदाय द्वारा किया गया था। यहाँ शिवरात्रि और कार्तिक पूर्णिमा पर विशेष उत्सव आयोजित होते हैं।",
-                    "en":  "The Skanda Purana\u0027s Avanti Khanda establishes Jaleshwar Mahadev as one of the 84 sacred Mahadevas of Ujjain. According to Puranic accounts, Varuna, the god of water, established this Shivalinga on the banks of the Shipra, and the water deities worshipped Lord Shiva here. Located on the Shipra riverbank, this temple becomes a major halting point for pilgrims during the Kumbh Mela and Simhastha. In medieval times, the temple was restored by the local merchant community. Special celebrations are held here on Shivaratri and Kartik Purnima."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "शिप्रा तट, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Shipra Bank, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1863,
-                "lng":  75.762
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-15.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.8 किमी उत्तर में शिप्रा तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 20 मिनट में पहुँचा जा सकता है।",
-                       "en":  "This temple is located approximately 0.8 km north of Mahakaleshwar Jyotirlinga on the Shipra riverbank. It can be reached in about 20 minutes from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "जलेश्वर महादेव उज्जैन",
-                           "en":  "Jaleshwar Mahadev Ujjain"
-                       }
+  "slug": "jaleshwar-mahadev",
+  "name": {
+    "hi": "जलेश्वर महादेव",
+    "en": "Jaleshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव — जलेश्वर",
+    "en": "Lord Shiva as Jaleshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Shipra Bank",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल (स्कंद पुराण)",
+    "en": "Puranic era (Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "जलेश्वर महादेव शिप्रा नदी के पावन तट पर स्थित 84 महादेवों की श्रृंखला का एक दिव्य शिवलिंग है। भगवान शिव यहाँ जल के स्वामी 'जलेश्वर' रूप में विराजमान हैं और जल तत्व की शुद्धि व जीवनदायिनी शक्ति के प्रतीक हैं। शिप्रा के पवित्र जल में स्नान कर यहाँ दर्शन करना अत्यंत फलदायी माना जाता है।",
+    "en": "Jaleshwar Mahadev is a divine Shivalinga of the 84 Mahadevas series, situated on the sacred banks of the Shipra river. Lord Shiva is worshipped here as 'Jaleshwar', the lord of water, symbolising the life-giving and purifying power of the water element. Taking a holy dip in the Shipra and then offering darshan here is considered especially meritorious."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवंति खंड में जलेश्वर महादेव को उज्जैन के 84 पावन महादेवों में से एक के रूप में स्थापित किया गया है। पौराणिक आख्यानों के अनुसार, वरुण देव ने शिप्रा तट पर इस लिंग की स्थापना की थी और जल-देवताओं ने यहाँ भगवान शिव की आराधना की थी। शिप्रा नदी के तट पर स्थित होने के कारण यह मंदिर कुंभ मेले और सिंहस्थ के दौरान तीर्थयात्रियों का प्रमुख पड़ाव बनता है। मध्यकाल में इस मंदिर का जीर्णोद्धार स्थानीय व्यापारी समुदाय द्वारा किया गया था। यहाँ शिवरात्रि और कार्तिक पूर्णिमा पर विशेष उत्सव आयोजित होते हैं।",
+    "en": "The Skanda Purana's Avanti Khanda establishes Jaleshwar Mahadev as one of the 84 sacred Mahadevas of Ujjain. According to Puranic accounts, Varuna, the god of water, established this Shivalinga on the banks of the Shipra, and the water deities worshipped Lord Shiva here. Located on the Shipra riverbank, this temple becomes a major halting point for pilgrims during the Kumbh Mela and Simhastha. In medieval times, the temple was restored by the local merchant community. Special celebrations are held here on Shivaratri and Kartik Purnima."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "शिप्रा तट, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Shipra Bank, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1863,
+    "lng": 75.762
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-15.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.8 किमी उत्तर में शिप्रा तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 20 मिनट में पहुँचा जा सकता है।",
+    "en": "This temple is located approximately 0.8 km north of Mahakaleshwar Jyotirlinga on the Shipra riverbank. It can be reached in about 20 minutes from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "जलेश्वर महादेव उज्जैन",
+    "en": "Jaleshwar Mahadev Ujjain"
+  }
 }

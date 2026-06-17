@@ -1,92 +1,90 @@
 {
-    "slug":  "kapileshwar-mahadev",
-    "name":  {
-                 "hi":  "कपिलेश्वर महादेव",
-                 "en":  "Kapileshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (कपिलेश्वर रूप)",
-                  "en":  "Lord Shiva as Kapileshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Shipra Bank",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कन्द पुराण काल",
-                           "en":  "Ancient — Skanda Purana era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "कपिलेश्वर महादेव उज्जैन की शिप्रा नदी के तट पर स्थित चौरासी महादेव श्रृंखला के एक पवित्र शिवलिंग हैं। इस मंदिर का नाम महर्षि कपिल की साधना से जुड़ा है जिन्होंने यहाँ शिव की उपासना की थी। सांख्य दर्शन के प्रणेता कपिल मुनि और शिव का यह संगम अत्यंत दुर्लभ तीर्थ है।",
-                       "en":  "Kapileshwar Mahadev is a sacred Shivalinga of the Chaurasi Mahadeva series, situated on the banks of the Shipra river in Ujjain. The name of this temple is connected to the tapas of Maharshi Kapila, who worshipped Shiva here. This confluence of the sage Kapila — founder of Samkhya philosophy — and Shiva makes it an exceptionally rare pilgrimage site."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में कपिलेश्वर महादेव का उल्लेख चौरासी महादेव की पवित्र श्रृंखला में मिलता है। सांख्य दर्शन के प्रवर्तक महर्षि कपिल ने अवन्ती में शिप्रा के तट पर आकर शिव की आराधना की थी। उनकी तपस्या से प्रसन्न होकर शिव ने इस स्थान पर लिंग रूप में प्रकट होकर \u0027कपिलेश्वर\u0027 नाम धारण किया। शिप्रा तट पर होने के कारण यहाँ सिंहस्थ कुम्भ मेले में विशेष महत्व है और लाखों श्रद्धालु स्नान के बाद दर्शन करते हैं। कपिल षष्ठी पर यहाँ विशेष अनुष्ठान होते हैं।",
-                    "en":  "Kapileshwar Mahadev is mentioned in the sacred Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. Maharshi Kapila, the founder of Samkhya philosophy, came to the banks of the Shipra in Avanti and worshipped Shiva here. Pleased by his tapas, Shiva manifested in the form of a Linga at this spot and took the name \u0027Kapileshwar\u0027. Being situated on the Shipra bank, this site holds special significance during the Simhastha Kumbha Mela when millions of devotees take a dip and seek darshan. Special rituals are performed here on Kapila Shashthi."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                 "en":  "5:30 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                         "en":  "5:30 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                           "en":  "5:30 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                          "en":  "5:30 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                          "en":  "5:30 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:00 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:00 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "शिप्रा तट, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Shipra Bank, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1862,
-                "lng":  75.7615
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-3.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 1.2 किमी उत्तर-पश्चिम में शिप्रा नदी के तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 3 किमी।",
-                       "en":  "Located approximately 1.2 km northwest of Mahakaleshwar Temple on the banks of the Shipra river. About 3 km from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "कपिलेश्वर महादेव उज्जैन",
-                           "en":  "Kapileshwar Mahadev Ujjain"
-                       }
+  "slug": "kapileshwar-mahadev",
+  "name": {
+    "hi": "कपिलेश्वर महादेव",
+    "en": "Kapileshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (कपिलेश्वर रूप)",
+    "en": "Lord Shiva as Kapileshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Shipra Bank",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कन्द पुराण काल",
+    "en": "Ancient — Skanda Purana era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "कपिलेश्वर महादेव उज्जैन की शिप्रा नदी के तट पर स्थित चौरासी महादेव श्रृंखला के एक पवित्र शिवलिंग हैं। इस मंदिर का नाम महर्षि कपिल की साधना से जुड़ा है जिन्होंने यहाँ शिव की उपासना की थी। सांख्य दर्शन के प्रणेता कपिल मुनि और शिव का यह संगम अत्यंत दुर्लभ तीर्थ है।",
+    "en": "Kapileshwar Mahadev is a sacred Shivalinga of the Chaurasi Mahadeva series, situated on the banks of the Shipra river in Ujjain. The name of this temple is connected to the tapas of Maharshi Kapila, who worshipped Shiva here. This confluence of the sage Kapila — founder of Samkhya philosophy — and Shiva makes it an exceptionally rare pilgrimage site."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में कपिलेश्वर महादेव का उल्लेख चौरासी महादेव की पवित्र श्रृंखला में मिलता है। सांख्य दर्शन के प्रवर्तक महर्षि कपिल ने अवन्ती में शिप्रा के तट पर आकर शिव की आराधना की थी। उनकी तपस्या से प्रसन्न होकर शिव ने इस स्थान पर लिंग रूप में प्रकट होकर 'कपिलेश्वर' नाम धारण किया। शिप्रा तट पर होने के कारण यहाँ सिंहस्थ कुम्भ मेले में विशेष महत्व है और लाखों श्रद्धालु स्नान के बाद दर्शन करते हैं। कपिल षष्ठी पर यहाँ विशेष अनुष्ठान होते हैं।",
+    "en": "Kapileshwar Mahadev is mentioned in the sacred Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. Maharshi Kapila, the founder of Samkhya philosophy, came to the banks of the Shipra in Avanti and worshipped Shiva here. Pleased by his tapas, Shiva manifested in the form of a Linga at this spot and took the name 'Kapileshwar'. Being situated on the Shipra bank, this site holds special significance during the Simhastha Kumbha Mela when millions of devotees take a dip and seek darshan. Special rituals are performed here on Kapila Shashthi."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+    "en": "Approx. 5:30 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:00 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:00 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "शिप्रा तट, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Shipra Bank, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1862,
+    "lng": 75.7615
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-3.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 1.2 किमी उत्तर-पश्चिम में शिप्रा नदी के तट पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 3 किमी।",
+    "en": "Located approximately 1.2 km northwest of Mahakaleshwar Temple on the banks of the Shipra river. About 3 km from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "कपिलेश्वर महादेव उज्जैन",
+    "en": "Kapileshwar Mahadev Ujjain"
+  }
 }

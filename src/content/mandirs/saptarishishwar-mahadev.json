@@ -1,92 +1,90 @@
 {
-    "slug":  "saptarishishwar-mahadev",
-    "name":  {
-                 "hi":  "सप्तर्षीश्वर महादेव",
-                 "en":  "Saptarishishwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव / सप्तर्षि",
-                  "en":  "Lord Shiva / Seven Sages"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल (स्कंद पुराण)",
-                           "en":  "Puranic era (Skanda Purana)"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "सप्तर्षीश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला का वह दिव्य तीर्थ है जो सप्त महर्षियों की शिव-आराधना की स्मृति को अमर रखता है। स्कंद पुराण के अवंति खंड में वर्णित इस मंदिर में भगवान शिव सात ऋषियों के गुरु के रूप में विराजमान हैं। यहाँ दर्शन से ज्ञान, विद्या और आध्यात्मिक प्रगति का आशीर्वाद मिलता है।",
-                       "en":  "Saptarishishwar Mahadev is the divine shrine in the 84 Mahadevas series of Ujjain that immortalises the Shiva worship of the seven great sages. Described in the Skanda Purana\u0027s Avanti Khanda, Lord Shiva is enshrined here as the supreme guru of the seven rishis. Visiting this temple is believed to bestow blessings of knowledge, learning, and spiritual progress."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवंति खंड में उल्लेख है कि उज्जैन की 84 महादेव तीर्थ यात्रा में सप्तर्षीश्वर महादेव का स्थान ज्ञान और ऋषि परंपरा के प्रतीक के रूप में विशेष है। पौराणिक आख्यान के अनुसार, मरीचि, अत्रि, अंगिरस, पुलस्त्य, पुलह, क्रतु और वशिष्ठ — इन सात महर्षियों ने उज्जैन में इस स्थान पर शिवलिंग की स्थापना की और घोर तपस्या की। उनकी तपस्या से प्रसन्न होकर भगवान शिव ने उन्हें ज्ञान और सृष्टि-रचना की शक्ति प्रदान की। इसी कारण यह मंदिर विद्यार्थियों, विद्वानों और साधकों के लिए विशेष पूजनीय रहा है। परमार शासनकाल से आज तक यह मंदिर उज्जैन की ज्ञान परंपरा का केंद्र बना हुआ है।",
-                    "en":  "The Skanda Purana\u0027s Avanti Khanda mentions that Saptarishishwar Mahadev holds a special place in the 84 Mahadevas pilgrimage of Ujjain as a symbol of knowledge and the sage tradition. According to Puranic accounts, the seven great sages — Marichi, Atri, Angiras, Pulastya, Pulaha, Kratu, and Vasishtha — established this Shivalinga in Ujjain and performed intense penance here. Pleased by their austerities, Lord Shiva granted them wisdom and the power of creation. For this reason, the temple has been especially revered by students, scholars, and spiritual seekers. From the Paramara reign to the present day, this temple has remained a centre of Ujjain\u0027s tradition of knowledge."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1827,
-                "lng":  75.7678
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-14.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से यहाँ पहुँचने में लगभग 15 मिनट लगते हैं।",
-                       "en":  "The temple is approximately 0.2 km from Mahakaleshwar Jyotirlinga. It takes about 15 minutes from Ujjain Railway Station by auto or e-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "सप्तर्षीश्वर महादेव उज्जैन",
-                           "en":  "Saptarishishwar Mahadev Ujjain"
-                       }
+  "slug": "saptarishishwar-mahadev",
+  "name": {
+    "hi": "सप्तर्षीश्वर महादेव",
+    "en": "Saptarishishwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव / सप्तर्षि",
+    "en": "Lord Shiva / Seven Sages"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल (स्कंद पुराण)",
+    "en": "Puranic era (Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "सप्तर्षीश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला का वह दिव्य तीर्थ है जो सप्त महर्षियों की शिव-आराधना की स्मृति को अमर रखता है। स्कंद पुराण के अवंति खंड में वर्णित इस मंदिर में भगवान शिव सात ऋषियों के गुरु के रूप में विराजमान हैं। यहाँ दर्शन से ज्ञान, विद्या और आध्यात्मिक प्रगति का आशीर्वाद मिलता है।",
+    "en": "Saptarishishwar Mahadev is the divine shrine in the 84 Mahadevas series of Ujjain that immortalises the Shiva worship of the seven great sages. Described in the Skanda Purana's Avanti Khanda, Lord Shiva is enshrined here as the supreme guru of the seven rishis. Visiting this temple is believed to bestow blessings of knowledge, learning, and spiritual progress."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवंति खंड में उल्लेख है कि उज्जैन की 84 महादेव तीर्थ यात्रा में सप्तर्षीश्वर महादेव का स्थान ज्ञान और ऋषि परंपरा के प्रतीक के रूप में विशेष है। पौराणिक आख्यान के अनुसार, मरीचि, अत्रि, अंगिरस, पुलस्त्य, पुलह, क्रतु और वशिष्ठ — इन सात महर्षियों ने उज्जैन में इस स्थान पर शिवलिंग की स्थापना की और घोर तपस्या की। उनकी तपस्या से प्रसन्न होकर भगवान शिव ने उन्हें ज्ञान और सृष्टि-रचना की शक्ति प्रदान की। इसी कारण यह मंदिर विद्यार्थियों, विद्वानों और साधकों के लिए विशेष पूजनीय रहा है। परमार शासनकाल से आज तक यह मंदिर उज्जैन की ज्ञान परंपरा का केंद्र बना हुआ है।",
+    "en": "The Skanda Purana's Avanti Khanda mentions that Saptarishishwar Mahadev holds a special place in the 84 Mahadevas pilgrimage of Ujjain as a symbol of knowledge and the sage tradition. According to Puranic accounts, the seven great sages — Marichi, Atri, Angiras, Pulastya, Pulaha, Kratu, and Vasishtha — established this Shivalinga in Ujjain and performed intense penance here. Pleased by their austerities, Lord Shiva granted them wisdom and the power of creation. For this reason, the temple has been especially revered by students, scholars, and spiritual seekers. From the Paramara reign to the present day, this temple has remained a centre of Ujjain's tradition of knowledge."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1827,
+    "lng": 75.7678
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-14.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से यहाँ पहुँचने में लगभग 15 मिनट लगते हैं।",
+    "en": "The temple is approximately 0.2 km from Mahakaleshwar Jyotirlinga. It takes about 15 minutes from Ujjain Railway Station by auto or e-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "सप्तर्षीश्वर महादेव उज्जैन",
+    "en": "Saptarishishwar Mahadev Ujjain"
+  }
 }

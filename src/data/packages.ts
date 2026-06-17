@@ -56,8 +56,8 @@ export const packagesData: TourPackageData[] = [
           { hi: 'इस्कॉन मंदिर: भगवान कृष्ण के भजन और कीर्तन का आनंद लें।', en: 'ISKCON Temple: End your journey at ISKCON Temple, where faith and devotion will lift your spirit.' }
         ],
         note: {
-          hi: 'नोट: महाकालेश्वर भस्म आरती और विशेष दर्शन बुकिंग एडवांस में करें।',
-          en: 'Note: Advance Booking for Mahakaleshwar Bhasm Aarti & VIP Darshan is recommended.'
+          hi: 'नोट: महाकालेश्वर भस्म आरती की बुकिंग केवल मंदिर की आधिकारिक वेबसाइट पर एडवांस में होती है।',
+          en: "Note: Mahakaleshwar Bhasma Aarti booking is done only in advance on the temple's official website."
         }
       }
     ]

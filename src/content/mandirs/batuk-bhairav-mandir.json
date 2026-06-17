@@ -1,160 +1,160 @@
 {
-    "slug":  "batuk-bhairav-mandir",
-    "name":  {
-                 "hi":  "बटुक भैरव मंदिर",
-                 "en":  "Batuk Bhairav Temple"
-             },
-    "deity":  {
-                  "hi":  "बटुक भैरव (बाल रूप)",
-                  "en":  "Batuk Bhairav (Child form)"
-              },
-    "templeType":  "Bhairav",
-    "locationArea":  "City Center",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल",
-                           "en":  "Ancient / Puranic era"
-                       },
-    "architectureStyle":  "Traditional Hindu",
-    "shortIntro":  {
-                       "hi":  "भैरव का बाल रूप — बटुक। बच्चों की रक्षा और विद्या प्राप्ति हेतु।",
-                       "en":  "Child form of Bhairav — Batuk. For protection of children and acquisition of knowledge."
-                   },
-    "history":  {
-                    "hi":  "बटुक भैरव शिव के बाल स्वरूप माने जाते हैं, जो भैरव के अष्टरूपों में सौम्य और कृपालु रूप हैं। पौराणिक मान्यता के अनुसार ये बालकों के संरक्षक, विद्या-बुद्धि के दाता और भय निवारक देवता हैं। तंत्र साधना में बटुक भैरव की उपासना का विशेष महत्व बताया गया है। उज्जैन की धार्मिक परंपरा में काल भैरव के साथ-साथ बटुक भैरव का पूजन भी प्राचीन काल से होता आ रहा है। भक्तजन यहाँ दूध, बेसन के लड्डू, मिष्ठान और पुष्प अर्पित करते हैं। मंगलवार और रविवार को विशेष पूजा का विधान है।",
-                    "en":  "Batuk Bhairav is revered as the child form of Lord Shiva and is the gentle, benevolent aspect among the eight forms of Bhairav. According to Puranic belief, he is the protector of children, bestower of wisdom and learning, and remover of fear. Tantric tradition holds the worship of Batuk Bhairav in special regard. In Ujjain\u0027s religious heritage, alongside Kal Bhairav, the veneration of Batuk Bhairav has continued since ancient times. Devotees offer milk, besan ladoos, sweets and flowers here. Tuesdays and Sundays are considered especially auspicious for worship."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                 "en":  "5:30 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                         "en":  "5:30 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                           "en":  "5:30 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                          "en":  "5:30 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                          "en":  "5:30 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "specialOccasions":  {
-                             "hi":  "महाशिवरात्रि, नवरात्रि, श्रावण",
-                             "en":  "Mahashivratri, Navratri, Shravan"
-                         },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "बटुक भैरव मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
-                    "en":  "Batuk Bhairav Temple, City Center, Ujjain, Madhya Pradesh 456001"
-                },
-    "geo":  {
-                "lat":  23.1765,
-                "lng":  75.7885
-            },
-    "photos":  [
-                   "/images/mandirs/vikrant-bhairav.jpg"
-               ],
-    "prasadInfo":  {
-                       "hi":  "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
-                       "en":  "Prasad available · flowers, bel leaves, incense, lamps"
-                   },
-    "howToReach":  {
-                       "hi":  "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
-                       "en":  "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "kal-bhairav-ujjain",
-                          "harsiddhi-mata"
-                      ],
-    "simhasthaRelevance":  {
-                               "hi":  "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
-                               "en":  "Suitable temple for darshan during Simhastha"
-                           },
-    "faqs":  [
-                 {
-                     "q":  {
-                               "hi":  "दर्शन का सर्वोत्तम समय?",
-                               "en":  "Best time for darshan?"
-                           },
-                     "a":  {
-                               "hi":  "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
-                               "en":  "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "बटुक भैरव को क्या भोग चढ़ाया जाता है?",
-                               "en":  "What bhog is offered to Batuk Bhairav?"
-                           },
-                     "a":  {
-                               "hi":  "दूध, बेसन के लड्डू, मिष्ठान, पुष्प और बेलपत्र मुख्य भोग हैं। बाल रूप होने के कारण मिठाई का विशेष महत्व है।",
-                               "en":  "Milk, besan ladoos, sweets, flowers and bel leaves are the main offerings. As he is in child form, sweets hold special significance."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या यहाँ बच्चों के लिए विशेष पूजा होती है?",
-                               "en":  "Is there a special puja for children here?"
-                           },
-                     "a":  {
-                               "hi":  "हाँ, बटुक भैरव बालकों के रक्षक माने जाते हैं। माता-पिता संतान की मंगलकामना और सुरक्षा हेतु यहाँ आते हैं।",
-                               "en":  "Yes, Batuk Bhairav is regarded as the protector of children. Parents visit here praying for the well-being and safety of their children."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या मंदिर में फोटोग्राफी की अनुमति है?",
-                               "en":  "Is photography allowed inside the temple?"
-                           },
-                     "a":  {
-                               "hi":  "गर्भगृह में फोटोग्राफी सामान्यतः निषिद्ध है। बाहरी परिसर में पुजारी से अनुमति लेकर फोटो ले सकते हैं।",
-                               "en":  "Photography is generally prohibited inside the sanctum. In the outer premises, photos may be taken after seeking permission from the priest."
-                           }
-                 }
-             ],
-    "lastVerified":  "2026-06-03",
-    "primaryKeyword":  {
-                           "hi":  "बटुक भैरव उज्जैन",
-                           "en":  "Batuk Bhairav Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय भक्तों की मान्यता है कि बटुक भैरव के दर्शन से बच्चों पर आने वाले संकट टल जाते हैं और उन्हें दीर्घायु प्राप्त होती है। विद्यार्थी यहाँ बुद्धि और स्मरण शक्ति की कामना लेकर आते हैं। मनोकामना पूर्ण होने पर भक्त दूध और बेसन के लड्डू का भोग अर्पित करते हैं।",
-                         "en":  "Local devotees believe that darshan of Batuk Bhairav wards off dangers facing children and grants them long life. Students come here seeking sharp intellect and strong memory. On fulfilment of wishes, devotees offer milk and besan ladoos as bhog."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? भैरव के आठ रूपों में बटुक भैरव सबसे सौम्य माने जाते हैं और बालक स्वरूप में पूजे जाते हैं। उज्जैन में काल भैरव के उग्र रूप के साथ बटुक भैरव का बाल रूप एक अद्भुत संतुलन प्रस्तुत करता है।",
-                         "en":  "Did you know? Among the eight forms of Bhairav, Batuk Bhairav is considered the gentlest and is worshipped in child form. In Ujjain, the fierce form of Kal Bhairav and the child form of Batuk Bhairav together present a remarkable spiritual balance."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर में प्रवेश हेतु सादे एवं शालीन वस्त्र पहनें। दर्शन के लिए प्रातःकाल या संध्या आरती का समय श्रेष्ठ है। साथ में दूध, बेसन के लड्डू, पुष्प और बेलपत्र लेकर जाएँ। मोबाइल साइलेंट रखें और मंदिर परिसर में शांति बनाए रखें।",
-                      "en":  "Wear simple and modest clothing when visiting the temple. Early morning or evening aarti time is best for darshan. Carry milk, besan ladoos, flowers and bel leaves as offerings. Keep mobile phones on silent and maintain reverent silence within the temple premises."
-                  }
+  "slug": "batuk-bhairav-mandir",
+  "name": {
+    "hi": "बटुक भैरव मंदिर",
+    "en": "Batuk Bhairav Temple"
+  },
+  "deity": {
+    "hi": "बटुक भैरव (बाल रूप)",
+    "en": "Batuk Bhairav (Child form)"
+  },
+  "templeType": "Bhairav",
+  "locationArea": "City Center",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "भैरव का बाल रूप — बटुक। बच्चों की रक्षा और विद्या प्राप्ति हेतु।",
+    "en": "Child form of Bhairav — Batuk. For protection of children and acquisition of knowledge."
+  },
+  "history": {
+    "hi": "बटुक भैरव शिव के बाल स्वरूप माने जाते हैं, जो भैरव के अष्टरूपों में सौम्य और कृपालु रूप हैं। पौराणिक मान्यता के अनुसार ये बालकों के संरक्षक, विद्या-बुद्धि के दाता और भय निवारक देवता हैं। तंत्र साधना में बटुक भैरव की उपासना का विशेष महत्व बताया गया है। उज्जैन की धार्मिक परंपरा में काल भैरव के साथ-साथ बटुक भैरव का पूजन भी प्राचीन काल से होता आ रहा है। भक्तजन यहाँ दूध, बेसन के लड्डू, मिष्ठान और पुष्प अर्पित करते हैं। मंगलवार और रविवार को विशेष पूजा का विधान है।",
+    "en": "Batuk Bhairav is revered as the child form of Lord Shiva and is the gentle, benevolent aspect among the eight forms of Bhairav. According to Puranic belief, he is the protector of children, bestower of wisdom and learning, and remover of fear. Tantric tradition holds the worship of Batuk Bhairav in special regard. In Ujjain's religious heritage, alongside Kal Bhairav, the veneration of Batuk Bhairav has continued since ancient times. Devotees offer milk, besan ladoos, sweets and flowers here. Tuesdays and Sundays are considered especially auspicious for worship."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+    "en": "Approx. 5:30 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "बटुक भैरव मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Batuk Bhairav Temple, City Center, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/vikrant-bhairav.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "लगभग प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "बटुक भैरव को क्या भोग चढ़ाया जाता है?",
+        "en": "What bhog is offered to Batuk Bhairav?"
+      },
+      "a": {
+        "hi": "दूध, बेसन के लड्डू, मिष्ठान, पुष्प और बेलपत्र मुख्य भोग हैं। बाल रूप होने के कारण मिठाई का विशेष महत्व है।",
+        "en": "Milk, besan ladoos, sweets, flowers and bel leaves are the main offerings. As he is in child form, sweets hold special significance."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यहाँ बच्चों के लिए विशेष पूजा होती है?",
+        "en": "Is there a special puja for children here?"
+      },
+      "a": {
+        "hi": "हाँ, बटुक भैरव बालकों के रक्षक माने जाते हैं। माता-पिता संतान की मंगलकामना और सुरक्षा हेतु यहाँ आते हैं।",
+        "en": "Yes, Batuk Bhairav is regarded as the protector of children. Parents visit here praying for the well-being and safety of their children."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या मंदिर में फोटोग्राफी की अनुमति है?",
+        "en": "Is photography allowed inside the temple?"
+      },
+      "a": {
+        "hi": "मंदिर में फोटोग्राफी सामान्यतः निषिद्ध है। बाहरी परिसर में पुजारी से अनुमति लेकर फोटो ले सकते हैं।",
+        "en": "Photography is generally prohibited inside the sanctum. In the outer premises, photos may be taken after seeking permission from the priest."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "बटुक भैरव उज्जैन",
+    "en": "Batuk Bhairav Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों की मान्यता है कि बटुक भैरव के दर्शन से बच्चों पर आने वाले संकट टल जाते हैं और उन्हें दीर्घायु प्राप्त होती है। विद्यार्थी यहाँ बुद्धि और स्मरण शक्ति की कामना लेकर आते हैं। मनोकामना पूर्ण होने पर भक्त दूध और बेसन के लड्डू का भोग अर्पित करते हैं।",
+    "en": "Local devotees believe that darshan of Batuk Bhairav wards off dangers facing children and grants them long life. Students come here seeking sharp intellect and strong memory. On fulfilment of wishes, devotees offer milk and besan ladoos as bhog."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? भैरव के आठ रूपों में बटुक भैरव सबसे सौम्य माने जाते हैं और बालक स्वरूप में पूजे जाते हैं। उज्जैन में काल भैरव के उग्र रूप के साथ बटुक भैरव का बाल रूप एक अद्भुत संतुलन प्रस्तुत करता है।",
+    "en": "Did you know? Among the eight forms of Bhairav, Batuk Bhairav is considered the gentlest and is worshipped in child form. In Ujjain, the fierce form of Kal Bhairav and the child form of Batuk Bhairav together present a remarkable spiritual balance."
+  },
+  "visitTips": {
+    "hi": "मंदिर में प्रवेश हेतु सादे एवं शालीन वस्त्र पहनें। दर्शन के लिए प्रातःकाल या संध्या आरती का समय श्रेष्ठ है। साथ में दूध, बेसन के लड्डू, पुष्प और बेलपत्र लेकर जाएँ। मोबाइल साइलेंट रखें और मंदिर परिसर में शांति बनाए रखें।",
+    "en": "Wear simple and modest clothing when visiting the temple. Early morning or evening aarti time is best for darshan. Carry milk, besan ladoos, flowers and bel leaves as offerings. Keep mobile phones on silent and maintain reverent silence within the temple premises."
+  }
 }

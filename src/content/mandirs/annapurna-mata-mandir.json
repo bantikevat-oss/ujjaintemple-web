@@ -1,134 +1,134 @@
 {
-    "slug": "annapurna-mata-mandir",
-    "name": {
-        "hi": "अन्नपूर्णा माता मंदिर",
-        "en": "Annapurna Mata Mandir"
+  "slug": "annapurna-mata-mandir",
+  "name": {
+    "hi": "अन्नपूर्णा माता मंदिर",
+    "en": "Annapurna Mata Mandir"
+  },
+  "deity": {
+    "hi": "देवी अन्नपूर्णा",
+    "en": "Goddess Annapurna"
+  },
+  "templeType": "Shakti",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल",
+    "en": "Ancient Era"
+  },
+  "architectureStyle": "Paramara-Maratha",
+  "shortIntro": {
+    "hi": "अन्नपूर्णा माता मंदिर उज्जैन के महाकाल क्षेत्र में स्थित है जहाँ अन्न और पोषण की देवी माँ अन्नपूर्णा की पूजा होती है। यह मंदिर उन श्रद्धालुओं में विशेष लोकप्रिय है जो जीविका एवं खाद्य-समृद्धि की कामना लेकर आते हैं। यहाँ प्रतिदिन अन्नदान का पुण्य कार्य भी किया जाता है।",
+    "en": "Annapurna Mata Mandir is situated in the Mahakal Area of Ujjain, dedicated to the goddess of food and nourishment. The temple is especially popular among devotees who pray for sustenance and abundance. Daily free food distribution (annadaan) is conducted here as a form of divine service."
+  },
+  "history": {
+    "hi": "देवी अन्नपूर्णा को समस्त जगत की पोषणहार देवी कहा गया है और उनकी उपासना का उल्लेख देवी भागवत तथा स्कंद पुराण में मिलता है। उज्जैन जैसे पवित्र तीर्थ नगर में अन्नपूर्णा माता का मंदिर युगों से यात्रियों और साधु-संतों को अन्न व आश्रय प्रदान करने का केंद्र रहा है। मान्यता है कि स्वयं शिवजी माँ अन्नपूर्णा से भिक्षा माँगने आते हैं, इसलिए महाकाल क्षेत्र में इनका मंदिर विशेष महत्त्व रखता है। मराठा काल में सिंधिया वंश के संरक्षण में इस मंदिर का पुनरुद्धार हुआ। आज भी यह मंदिर दान-पुण्य एवं भक्ति का जीवंत केंद्र है।",
+    "en": "Goddess Annapurna is celebrated in the Devi Bhagavata and the Skanda Purana as the sustainer of all creation, the one who never lets any being go hungry. In the sacred city of Ujjain, the Annapurna Mata Mandir has for centuries served as a centre of provision for pilgrims, saints, and the poor. According to legend, Lord Shiva himself comes as a mendicant to receive food from Annapurna, making her temple near Mahakaleshwar especially sacred. The Scindia rulers of the Maratha era contributed to the temple's restoration and upkeep. It remains today an active centre of devotion and charitable food distribution."
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं का विश्वास है कि माँ अन्नपूर्णा के दर्शन से घर के अन्न-भंडार सदा भरे रहते हैं और कोई भी सदस्य भूखा नहीं सोता। नवविवाहित जोड़े यहाँ आकर सुखद गृहस्थ जीवन की कामना करते हैं, और कई परिवार यहाँ अन्नदान करना अत्यंत पुण्य का कार्य मानते हैं। मान्यता है कि माँ के मंदिर में किया गया दान कई गुना फल देता है।",
+    "en": "Local devotees believe that having darshan of Maa Annapurna ensures the household pantry is always full and no family member ever goes to sleep hungry. Newly-married couples visit to seek blessings for a harmonious domestic life, and many families consider offering annadaan (food donation) here as an act of immense spiritual merit. It is believed that charity performed at the goddess's feet multiplies manifold in blessings."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? पौराणिक कथाओं के अनुसार स्वयं भगवान शिव ने काशी में माँ अन्नपूर्णा से भिक्षा माँगी थी, और तभी से अन्नपूर्णा-शिव का संबंध अटूट माना जाता है। उज्जैन में महाकाल के निकट इस मंदिर की स्थापना इसी पौराणिक संबंध का प्रत्यक्ष प्रमाण है।",
+    "en": "Did you know? According to mythology, Lord Shiva himself once sought alms from Maa Annapurna in Kashi, and since then the bond between Annapurna and Shiva is considered inseparable. The placement of this temple near Mahakaleshwar in Ujjain is a living embodiment of that ancient mythological connection."
+  },
+  "visitTips": {
+    "hi": "मंदिर दर्शन के लिए साधारण और मर्यादित वस्त्र पहनकर आएँ; महिलाएँ साड़ी या सलवार-सूट पहनें तो उत्तम। दर्शन के लिए प्रातःकाल या संध्या आरती का समय सर्वोत्तम है क्योंकि भीड़ कम रहती है। अन्नदान में भाग लेने या प्रसाद चढ़ाने के लिए शुद्ध अनाज, चावल या आटा साथ ले जाना शुभ माना जाता है।",
+    "en": "Wear simple and modest clothing during your visit; women may prefer a saree or salwar-suit. The best time for darshan is during the morning or evening aarti when the crowd is lighter. To participate in annadaan or make an offering, it is considered auspicious to bring pure grains such as rice or wheat flour along with you."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "अन्नपूर्णा माता मंदिर का सबसे शुभ दर्शन समय कौन-सा है?",
+        "en": "What is the most auspicious time to visit Annapurna Mata Mandir?"
+      },
+      "answer": {
+        "hi": "लगभग प्रातः आरती तथा संध्या आरती का समय सर्वाधिक शुभ माना जाता है। नवरात्रि और अक्षय तृतीया जैसे विशेष पर्वों पर यहाँ श्रद्धालुओं की विशेष भीड़ रहती है।",
+        "en": "The morning and evening aarti times are considered most auspicious. Special festivals like Navratri and Akshaya Tritiya also draw large numbers of devotees seeking the goddess's blessings."
+      }
     },
-    "deity": {
-        "hi": "देवी अन्नपूर्णा",
-        "en": "Goddess Annapurna"
+    {
+      "question": {
+        "hi": "क्या मंदिर में अन्नदान या प्रसाद चढ़ाया जा सकता है?",
+        "en": "Can devotees offer annadaan or prasad at the temple?"
+      },
+      "answer": {
+        "hi": "हाँ, यह मंदिर अन्नदान परंपरा का जीवंत केंद्र है। श्रद्धालु अनाज, चावल, आटा या आर्थिक सहयोग देकर अन्नदान में सहभागी बन सकते हैं, जिसे माँ अन्नपूर्णा को समर्पित सर्वोच्च सेवा माना जाता है।",
+        "en": "Yes, this temple is a living centre of the annadaan tradition. Devotees may contribute grains, rice, flour or monetary support to participate in the food-donation seva, which is considered the highest form of service to Maa Annapurna."
+      }
     },
-    "templeType": "Shakti",
-    "locationArea": "Mahakal Area",
-    "isFeatured": false,
-    "establishedEra": {
-        "hi": "प्राचीन काल",
-        "en": "Ancient Era"
-    },
-    "architectureStyle": "Paramara-Maratha",
-    "shortIntro": {
-        "hi": "अन्नपूर्णा माता मंदिर उज्जैन के महाकाल क्षेत्र में स्थित है जहाँ अन्न और पोषण की देवी माँ अन्नपूर्णा की पूजा होती है। यह मंदिर उन श्रद्धालुओं में विशेष लोकप्रिय है जो जीविका एवं खाद्य-समृद्धि की कामना लेकर आते हैं। यहाँ प्रतिदिन अन्नदान का पुण्य कार्य भी किया जाता है।",
-        "en": "Annapurna Mata Mandir is situated in the Mahakal Area of Ujjain, dedicated to the goddess of food and nourishment. The temple is especially popular among devotees who pray for sustenance and abundance. Daily free food distribution (annadaan) is conducted here as a form of divine service."
-    },
-    "history": {
-        "hi": "देवी अन्नपूर्णा को समस्त जगत की पोषणहार देवी कहा गया है और उनकी उपासना का उल्लेख देवी भागवत तथा स्कंद पुराण में मिलता है। उज्जैन जैसे पवित्र तीर्थ नगर में अन्नपूर्णा माता का मंदिर युगों से यात्रियों और साधु-संतों को अन्न व आश्रय प्रदान करने का केंद्र रहा है। मान्यता है कि स्वयं शिवजी माँ अन्नपूर्णा से भिक्षा माँगने आते हैं, इसलिए महाकाल क्षेत्र में इनका मंदिर विशेष महत्त्व रखता है। मराठा काल में सिंधिया वंश के संरक्षण में इस मंदिर का पुनरुद्धार हुआ। आज भी यह मंदिर दान-पुण्य एवं भक्ति का जीवंत केंद्र है।",
-        "en": "Goddess Annapurna is celebrated in the Devi Bhagavata and the Skanda Purana as the sustainer of all creation, the one who never lets any being go hungry. In the sacred city of Ujjain, the Annapurna Mata Mandir has for centuries served as a centre of provision for pilgrims, saints, and the poor. According to legend, Lord Shiva himself comes as a mendicant to receive food from Annapurna, making her temple near Mahakaleshwar especially sacred. The Scindia rulers of the Maratha era contributed to the temple's restoration and upkeep. It remains today an active centre of devotion and charitable food distribution."
-    },
-    "localBeliefs": {
-        "hi": "स्थानीय श्रद्धालुओं का विश्वास है कि माँ अन्नपूर्णा के दर्शन से घर के अन्न-भंडार सदा भरे रहते हैं और कोई भी सदस्य भूखा नहीं सोता। नवविवाहित जोड़े यहाँ आकर सुखद गृहस्थ जीवन की कामना करते हैं, और कई परिवार यहाँ अन्नदान करना अत्यंत पुण्य का कार्य मानते हैं। मान्यता है कि माँ के मंदिर में किया गया दान कई गुना फल देता है।",
-        "en": "Local devotees believe that having darshan of Maa Annapurna ensures the household pantry is always full and no family member ever goes to sleep hungry. Newly-married couples visit to seek blessings for a harmonious domestic life, and many families consider offering annadaan (food donation) here as an act of immense spiritual merit. It is believed that charity performed at the goddess's feet multiplies manifold in blessings."
-    },
-    "specialFacts": {
-        "hi": "क्या आप जानते हैं? पौराणिक कथाओं के अनुसार स्वयं भगवान शिव ने काशी में माँ अन्नपूर्णा से भिक्षा माँगी थी, और तभी से अन्नपूर्णा-शिव का संबंध अटूट माना जाता है। उज्जैन में महाकाल के निकट इस मंदिर की स्थापना इसी पौराणिक संबंध का प्रत्यक्ष प्रमाण है।",
-        "en": "Did you know? According to mythology, Lord Shiva himself once sought alms from Maa Annapurna in Kashi, and since then the bond between Annapurna and Shiva is considered inseparable. The placement of this temple near Mahakaleshwar in Ujjain is a living embodiment of that ancient mythological connection."
-    },
-    "visitTips": {
-        "hi": "मंदिर दर्शन के लिए साधारण और मर्यादित वस्त्र पहनकर आएँ; महिलाएँ साड़ी या सलवार-सूट पहनें तो उत्तम। दर्शन के लिए प्रातःकाल या संध्या आरती का समय सर्वोत्तम है क्योंकि भीड़ कम रहती है। अन्नदान में भाग लेने या प्रसाद चढ़ाने के लिए शुद्ध अनाज, चावल या आटा साथ ले जाना शुभ माना जाता है।",
-        "en": "Wear simple and modest clothing during your visit; women may prefer a saree or salwar-suit. The best time for darshan is during the morning or evening aarti when the crowd is lighter. To participate in annadaan or make an offering, it is considered auspicious to bring pure grains such as rice or wheat flour along with you."
-    },
-    "faqs": [
-        {
-            "question": {
-                "hi": "अन्नपूर्णा माता मंदिर का सबसे शुभ दर्शन समय कौन-सा है?",
-                "en": "What is the most auspicious time to visit Annapurna Mata Mandir?"
-            },
-            "answer": {
-                "hi": "प्रातः आरती तथा संध्या आरती का समय सर्वाधिक शुभ माना जाता है। नवरात्रि और अक्षय तृतीया जैसे विशेष पर्वों पर यहाँ श्रद्धालुओं की विशेष भीड़ रहती है।",
-                "en": "The morning and evening aarti times are considered most auspicious. Special festivals like Navratri and Akshaya Tritiya also draw large numbers of devotees seeking the goddess's blessings."
-            }
-        },
-        {
-            "question": {
-                "hi": "क्या मंदिर में अन्नदान या प्रसाद चढ़ाया जा सकता है?",
-                "en": "Can devotees offer annadaan or prasad at the temple?"
-            },
-            "answer": {
-                "hi": "हाँ, यह मंदिर अन्नदान परंपरा का जीवंत केंद्र है। श्रद्धालु अनाज, चावल, आटा या आर्थिक सहयोग देकर अन्नदान में सहभागी बन सकते हैं, जिसे माँ अन्नपूर्णा को समर्पित सर्वोच्च सेवा माना जाता है।",
-                "en": "Yes, this temple is a living centre of the annadaan tradition. Devotees may contribute grains, rice, flour or monetary support to participate in the food-donation seva, which is considered the highest form of service to Maa Annapurna."
-            }
-        },
-        {
-            "question": {
-                "hi": "क्या यह मंदिर महाकालेश्वर मंदिर के पास है?",
-                "en": "Is this temple located near Mahakaleshwar Mandir?"
-            },
-            "answer": {
-                "hi": "जी हाँ, अन्नपूर्णा माता मंदिर महाकाल क्षेत्र में स्थित है और महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर है। महाकाल दर्शन के साथ ही श्रद्धालु यहाँ सहजता से दर्शन कर सकते हैं।",
-                "en": "Yes, the Annapurna Mata Mandir is in the Mahakal Area, only about 0.2 km from Mahakaleshwar Temple. Devotees can conveniently combine their darshan here with a visit to Mahakaleshwar."
-            }
-        }
-    ],
-    "darshanTimingSummary": {
-        "hi": "प्रातः 6:00 – रात्रि 9:00",
-        "en": "6:00 AM – 9:00 PM"
-    },
-    "weeklyTiming": {
-        "monday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "tuesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "wednesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "thursday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "friday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "saturday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "sunday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        }
-    },
-    "aartiTiming": {
-        "hi": "प्रातः आरती 6:30 · संध्या आरती 7:00",
-        "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-    },
-    "entryFee": {
-        "hi": "निःशुल्क",
-        "en": "Free entry"
-    },
-    "address": {
-        "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-        "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-    },
-    "geo": {
-        "lat": 23.1822,
-        "lng": 75.7685
-    },
-    "photos": [
-        "/images/mandirs/annapurna-mata-mandir.jpg"
-    ],
-    "howToReach": {
-        "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा 12-15 मिनट में पहुँचा जा सकता है।",
-        "en": "The temple is approximately 0.2 km from Mahakaleshwar Temple. It can be reached from Ujjain Railway Station by auto-rickshaw in 12–15 minutes."
-    },
-    "nearbyMandirs": [],
-    "lastVerified": "2026-05-31",
-    "primaryKeyword": {
-        "hi": "अन्नपूर्णा माता मंदिर उज्जैन",
-        "en": "Annapurna Mata Mandir Ujjain"
+    {
+      "question": {
+        "hi": "क्या यह मंदिर महाकालेश्वर मंदिर के पास है?",
+        "en": "Is this temple located near Mahakaleshwar Mandir?"
+      },
+      "answer": {
+        "hi": "जी हाँ, अन्नपूर्णा माता मंदिर महाकाल क्षेत्र में स्थित है और महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर है। महाकाल दर्शन के साथ ही श्रद्धालु यहाँ सहजता से दर्शन कर सकते हैं।",
+        "en": "Yes, the Annapurna Mata Mandir is in the Mahakal Area, only about 0.2 km from Mahakaleshwar Temple. Devotees can conveniently combine their darshan here with a visit to Mahakaleshwar."
+      }
     }
+  ],
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1822,
+    "lng": 75.7685
+  },
+  "photos": [
+    "/images/mandirs/annapurna-mata-mandir.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा 12-15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 0.2 km from Mahakaleshwar Temple. It can be reached from Ujjain Railway Station by auto-rickshaw in 12–15 minutes."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "अन्नपूर्णा माता मंदिर उज्जैन",
+    "en": "Annapurna Mata Mandir Ujjain"
+  }
 }

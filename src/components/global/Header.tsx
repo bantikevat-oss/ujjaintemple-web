@@ -176,7 +176,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden xl:flex items-center gap-4 text-sm">
+        <ul className="hidden lg:flex items-center gap-3 text-sm">
           {renderDesktopNav(navTree)}
           <li className="ml-2">
             <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm flex items-center gap-2">
@@ -192,7 +192,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="rounded-md p-2 text-maroon xl:hidden"
+          className="rounded-md p-2 text-maroon lg:hidden"
           aria-expanded={open}
           aria-label="Toggle menu"
         >
@@ -202,7 +202,7 @@ export function Header() {
 
       {/* Mobile Nav */}
       {open && (
-        <div className="border-t border-cream-dark bg-white px-4 pb-4 xl:hidden max-h-[80vh] overflow-y-auto">
+        <div className="border-t border-cream-dark bg-white px-4 pb-4 lg:hidden max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col">
             {navTree.map((item, idx) => (
               <MobileNavItem key={idx} item={item} prefix={prefix} locale={locale as 'hi' | 'en'} t={t} closeMenu={() => setOpen(false)} />

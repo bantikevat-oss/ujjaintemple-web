@@ -1,94 +1,94 @@
-﻿{
-    "slug":  "shaneshwar-mahadev",
-    "name":  {
-                 "hi":  "शनेश्वर महादेव",
-                 "en":  "Shaneshwar Mahadev (Saturn Navagraha)"
-             },
-    "deity":  {
-                  "hi":  "शनि देव (शनि ग्रह) / भगवान शिव",
-                  "en":  "Shani (Saturn) / Lord Shiva"
-              },
-    "templeType":  "Navagraha",
-    "locationArea":  "Bhairavgarh",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल, पुराणोक्त",
-                           "en":  "Ancient era, mentioned in Puranas"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "शनेश्वर महादेव मंदिर उज्जैन के भैरवगढ़ क्षेत्र में स्थित है और नवग्रह मंदिर समूह में शनि ग्रह (Saturn) का प्रतिनिधित्व करता है। यहाँ भगवान शिव को शनेश्वर के रूप में पूजा जाता है जो शनिदेव के अधिपति माने जाते हैं। शनिवार को यहाँ तेल अभिषेक एवं काले तिल का दान अत्यंत फलदायी माना जाता है।",
-                       "en":  "Shaneshwar Mahadev Temple, located in Bhairavgarh, represents Saturn (Shani) in Ujjain\u0027s Navagraha circuit. Lord Shiva is venerated here as Shaneshwar, the presiding deity governing the planet Saturn. Saturdays are most auspicious for worship, with oil abhishek and black sesame donations considered highly beneficial."
-                   },
-    "history":  {
-                    "hi":  "पौराणिक मान्यता के अनुसार शनिदेव ने भगवान शिव की तपस्या कर उनसे नवग्रहों में महत्त्वपूर्ण स्थान प्राप्त किया था। उज्जैन में शनेश्वर महादेव के रूप में शिवलिंग की पूजा का विधान अत्यंत प्राचीन है और स्कन्द पुराण के अवन्ति खण्ड में इसका संदर्भ मिलता है। शनि की साढ़ेसाती एवं ढैया के दुष्प्रभाव निवारण के लिए देशभर के श्रद्धालु यहाँ विशेष पूजा-पाठ कराते हैं। प्रत्येक शनिश्चरी अमावस्या को यहाँ विशाल मेले का आयोजन होता है जिसमें हजारों भक्त सम्मिलित होते हैं। काले रंग के वस्त्र, काले तिल, सरसों का तेल एवं नीलमणि (नीलम) का दान यहाँ शनि की प्रसन्नता के लिए किया जाता है।",
-                    "en":  "According to Puranic tradition, Lord Shani (Saturn) performed tapas dedicated to Lord Shiva and obtained a prominent position among the Navagrahas. The worship of Shivalinga as Shaneshwar Mahadev in Ujjain is extremely ancient, with references in the Avanti Khanda of the Skanda Purana. Devotees from across India come here to perform special rituals to pacify the notorious Shani Sadhesati (seven-and-a-half years of Saturn) and Dhaiyya (two-and-a-half years). A grand fair is organized here on every Shanichar Amavasya (new moon Saturday), attracting thousands of pilgrims. Black cloth, black sesame, mustard oil, and sapphire are traditional offerings to appease Saturn."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:00 – रात्रि 10:00",
-                                          "en":  "5:00 AM – 10:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "शनेश्वर महादेव मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Shaneshwar Mahadev Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.188,
-                "lng":  75.765
-            },
-    "photos":  [
-                   "/images/mandirs/shaneshwar-mahadev.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर भैरवगढ़ क्षेत्र में स्थित है और महाकालेश्वर मंदिर से लगभग 1.5 किमी दूर है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर है, ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
-                       "en":  "The temple is situated in Bhairavgarh, approximately 1.5 km from Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station and easily accessible by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-                          "gadkalika-mata",
-                          "bhartrihari-gufa",
-                          "vikrant-bhairav"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "शनेश्वर महादेव उज्जैन",
-                           "en":  "Shaneshwar Mahadev Ujjain"
-                       }
+{
+  "slug": "shaneshwar-mahadev",
+  "name": {
+    "hi": "शनेश्वर महादेव",
+    "en": "Shaneshwar Mahadev (Saturn Navagraha)"
+  },
+  "deity": {
+    "hi": "शनि देव (शनि ग्रह) / भगवान शिव",
+    "en": "Shani (Saturn) / Lord Shiva"
+  },
+  "templeType": "Navagraha",
+  "locationArea": "Bhairavgarh",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल, पुराणोक्त",
+    "en": "Ancient era, mentioned in Puranas"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "शनेश्वर महादेव मंदिर उज्जैन के भैरवगढ़ क्षेत्र में स्थित है और नवग्रह मंदिर समूह में शनि ग्रह (Saturn) का प्रतिनिधित्व करता है। यहाँ भगवान शिव को शनेश्वर के रूप में पूजा जाता है जो शनिदेव के अधिपति माने जाते हैं। शनिवार को यहाँ तेल अभिषेक एवं काले तिल का दान अत्यंत फलदायी माना जाता है।",
+    "en": "Shaneshwar Mahadev Temple, located in Bhairavgarh, represents Saturn (Shani) in Ujjain's Navagraha circuit. Lord Shiva is venerated here as Shaneshwar, the presiding deity governing the planet Saturn. Saturdays are most auspicious for worship, with oil abhishek and black sesame donations considered highly beneficial."
+  },
+  "history": {
+    "hi": "पौराणिक मान्यता के अनुसार शनिदेव ने भगवान शिव की तपस्या कर उनसे नवग्रहों में महत्त्वपूर्ण स्थान प्राप्त किया था। उज्जैन में शनेश्वर महादेव के रूप में शिवलिंग की पूजा का विधान अत्यंत प्राचीन है और स्कन्द पुराण के अवन्ति खण्ड में इसका संदर्भ मिलता है। शनि की साढ़ेसाती एवं ढैया के दुष्प्रभाव निवारण के लिए देशभर के श्रद्धालु यहाँ विशेष पूजा-पाठ कराते हैं। प्रत्येक शनिश्चरी अमावस्या को यहाँ विशाल मेले का आयोजन होता है जिसमें हजारों भक्त सम्मिलित होते हैं। काले रंग के वस्त्र, काले तिल, सरसों का तेल एवं नीलमणि (नीलम) का दान यहाँ शनि की प्रसन्नता के लिए किया जाता है।",
+    "en": "According to Puranic tradition, Lord Shani (Saturn) performed tapas dedicated to Lord Shiva and obtained a prominent position among the Navagrahas. The worship of Shivalinga as Shaneshwar Mahadev in Ujjain is extremely ancient, with references in the Avanti Khanda of the Skanda Purana. Devotees from across India come here to perform special rituals to pacify the notorious Shani Sadhesati (seven-and-a-half years of Saturn) and Dhaiyya (two-and-a-half years). A grand fair is organized here on every Shanichar Amavasya (new moon Saturday), attracting thousands of pilgrims. Black cloth, black sesame, mustard oil, and sapphire are traditional offerings to appease Saturn."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:00 – रात्रि 10:00",
+      "en": "Approx. 5:00 AM – 10:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "शनेश्वर महादेव मंदिर, भैरवगढ़, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Shaneshwar Mahadev Temple, Bhairavgarh, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.188,
+    "lng": 75.765
+  },
+  "photos": [
+    "/images/mandirs/shaneshwar-mahadev.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर भैरवगढ़ क्षेत्र में स्थित है और महाकालेश्वर मंदिर से लगभग 1.5 किमी दूर है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी की दूरी पर है, ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+    "en": "The temple is situated in Bhairavgarh, approximately 1.5 km from Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station and easily accessible by auto-rickshaw."
+  },
+  "nearbyMandirs": [
+    "gadkalika-mata",
+    "bhartrihari-gufa",
+    "vikrant-bhairav"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "शनेश्वर महादेव उज्जैन",
+    "en": "Shaneshwar Mahadev Ujjain"
+  }
 }

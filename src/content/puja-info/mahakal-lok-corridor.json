@@ -24,23 +24,51 @@
   "heroImage": "/images/puja-info/gallery_3.webp",
   "publishDate": "2026-06-06",
   "lastUpdated": "2026-06-06",
-  "relatedSlugs": ["mahakaleshwar-bhasma-aarti-booking", "mahakaleshwar-vip-darshan", "kaal-sarp-dosh-nivaran"],
+  "relatedSlugs": [
+    "mahakaleshwar-bhasma-aarti-booking",
+    "mahakaleshwar-Shighra-darshan",
+    "kaal-sarp-dosh-nivaran"
+  ],
   "faqs": [
     {
-      "q": { "hi": "महाकाल लोक का प्रवेश शुल्क कितना है?", "en": "What is the entry fee for Mahakal Lok?" },
-      "a": { "hi": "महाकाल लोक कॉरिडोर में प्रवेश पूर्णतः निःशुल्क है।", "en": "Entry to Mahakal Lok Corridor is completely free of charge." }
+      "q": {
+        "hi": "महाकाल लोक का प्रवेश शुल्क कितना है?",
+        "en": "What is the entry fee for Mahakal Lok?"
+      },
+      "a": {
+        "hi": "महाकाल लोक कॉरिडोर में प्रवेश पूर्णतः निःशुल्क है।",
+        "en": "Entry to Mahakal Lok Corridor is completely free of charge."
+      }
     },
     {
-      "q": { "hi": "महाकाल लोक कितने समय तक खुला रहता है?", "en": "What are the opening hours of Mahakal Lok?" },
-      "a": { "hi": "प्रातः 5 बजे से रात्रि 11 बजे तक। भस्म आरती के दिन रात 3 बजे से खुलता है।", "en": "Open from 5 AM to 11 PM. On Bhasma Aarti days, entry starts from 3 AM." }
+      "q": {
+        "hi": "महाकाल लोक कितने समय तक खुला रहता है?",
+        "en": "What are the opening hours of Mahakal Lok?"
+      },
+      "a": {
+        "hi": "लगभग प्रातः 5 बजे से रात्रि 11 बजे तक। भस्म आरती के दिन रात 3 बजे से खुलता है।",
+        "en": "Open from 5 AM to 11 PM. On Bhasma Aarti days, entry starts from 3 AM."
+      }
     },
     {
-      "q": { "hi": "क्या महाकाल लोक में फोटोग्राफी की अनुमति है?", "en": "Is photography allowed at Mahakal Lok?" },
-      "a": { "hi": "खुले कॉरिडोर में फोटोग्राफी की अनुमति है। मंदिर गर्भगृह में मोबाइल/कैमरा वर्जित है।", "en": "Photography is allowed in the open corridor. Mobile/camera is prohibited inside the temple sanctum." }
+      "q": {
+        "hi": "क्या महाकाल लोक में फोटोग्राफी की अनुमति है?",
+        "en": "Is photography allowed at Mahakal Lok?"
+      },
+      "a": {
+        "hi": "खुले कॉरिडोर में फोटोग्राफी की अनुमति है। मंदिर मंदिर में मोबाइल/कैमरा वर्जित है।",
+        "en": "Photography is allowed in the open corridor. Mobile/camera is prohibited inside the temple sanctum."
+      }
     },
     {
-      "q": { "hi": "क्या रात को महाकाल लोक में जा सकते हैं?", "en": "Can we visit Mahakal Lok at night?" },
-      "a": { "hi": "हाँ, रात्रि 11 बजे तक। शाम को लाइट-एंड-साउंड शो की व्यवस्था रहती है जो बहुत सुंदर होती है।", "en": "Yes, until 11 PM. In the evening there is a light and sound show which is very beautiful." }
+      "q": {
+        "hi": "क्या रात को महाकाल लोक में जा सकते हैं?",
+        "en": "Can we visit Mahakal Lok at night?"
+      },
+      "a": {
+        "hi": "हाँ, रात्रि 11 बजे तक। शाम को लाइट-एंड-साउंड शो की व्यवस्था रहती है जो बहुत सुंदर होती है।",
+        "en": "Yes, until 11 PM. In the evening there is a light and sound show which is very beautiful."
+      }
     }
   ],
   "photos": [

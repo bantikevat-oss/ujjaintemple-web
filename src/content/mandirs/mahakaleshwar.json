@@ -4,13 +4,16 @@
     "hi": "महाकालेश्वर ज्योतिर्लिंग",
     "en": "Mahakaleshwar Jyotirlinga"
   },
-  "deity": { "hi": "भगवान शिव", "en": "Lord Shiva" },
+  "deity": {
+    "hi": "भगवान शिव",
+    "en": "Lord Shiva"
+  },
   "templeType": "Jyotirlinga",
   "locationArea": "Mahakal Area",
   "isFeatured": true,
   "establishedEra": {
-    "hi": "बहुत पुराना — पुरातत्व सबूत 6वीं सदी का, आज का मंदिर 1734 में बना (मराठा काल)",
-    "en": "Ancient — archaeological evidence dates to 6th century; present structure rebuilt 1734 CE during Maratha era"
+    "hi": "अति प्राचीन — सदियों से पूजित, वर्तमान संरचना मराठा कालीन",
+    "en": "Very ancient — worshipped for centuries; present structure from the Maratha era"
   },
   "architectureStyle": "Bhumija + Maratha",
   "shortIntro": {
@@ -18,21 +21,42 @@
     "en": "Mahakaleshwar is the third among 12 Jyotirlingas — the only south-facing Jyotirlinga on Earth. Located on the banks of Shipra in Ujjain, it is the famed abode of Lord Mahakal. The renowned Bhasma Aarti takes place at 4:00 AM daily."
   },
   "history": {
-    "hi": "महाकालेश्वर मंदिर का ज़िक्र स्कंद पुराण, शिव पुराण और मत्स्य पुराण में मिलता है। माना जाता है कि राजा चंद्रसेन के ज़माने में राक्षस दूषण से बचाने के लिए भगवान शिव ने महाकाल रूप में यहाँ प्रकट होकर निवास किया। यह जगह पुराने समय से 'अवंतिका' नाम से जानी जाती थी और समय गिनने का केंद्र रही है। 1234 में दिल्ली के सुल्तान इल्तुतमिश ने मंदिर को तोड़ दिया था। आज जो बड़ा-सुंदर मंदिर है वो 1734 में मराठा राजा रानोजी शिंदे ने दोबारा बनवाया था। मंदिर के तीन हिस्से हैं — महाकालेश्वर (नीचे), ओंकारेश्वर (बीच में), नागचंद्रेश्वर (ऊपर — साल में सिर्फ नागपंचमी पर खुलता है)।",
-    "en": "Mahakaleshwar is mentioned in Skanda Purana, Shiva Purana, and Matsya Purana. Tradition holds that during King Chandrasen's era, Lord Shiva manifested as Mahakal here to protect devotees from the demon Dushan. The city was historically known as 'Avantika' and served as ancient India's prime meridian for time calculation. The temple was destroyed by Delhi Sultan Iltutmish in 1234 CE. The present grand structure was rebuilt in 1734 CE by Maratha ruler Ranoji Shinde. The temple has three levels — Mahakaleshwar (lower), Omkareshwar (middle), and Nagchandreshwar (upper — opens only on Nag Panchami each year)."
+    "hi": "महाकालेश्वर मंदिर का ज़िक्र स्कंद पुराण, शिव पुराण और मत्स्य पुराण में मिलता है। माना जाता है कि राजा चंद्रसेन के ज़माने में भगवान शिव ने महाकाल रूप में यहाँ प्रकट होकर निवास किया। यह जगह पुराने समय से 'अवंतिका' नाम से जानी जाती थी और समय गिनने का केंद्र रही है। इतिहासकारों के अनुसार मध्यकाल में मंदिर को कई बार क्षति पहुँची। आज जो भव्य मंदिर है उसका पुनर्निर्माण 18वीं सदी में मराठा शासन के दौरान हुआ। मंदिर के तीन हिस्से हैं — महाकालेश्वर (नीचे), ओंकारेश्वर (बीच में), नागचंद्रेश्वर (ऊपर — साल में सिर्फ नागपंचमी पर खुलता है)।",
+    "en": "Mahakaleshwar is mentioned in the Skanda Purana, Shiva Purana, and Matsya Purana. Tradition holds that Lord Shiva manifested as Mahakal here during the era of King Chandrasen. The city was historically known as 'Avantika' and is regarded as ancient India's prime meridian for time calculation. According to historians, the temple was damaged several times during the medieval period. The present grand structure was rebuilt in the 18th century during Maratha rule. The temple has three levels — Mahakaleshwar (lower), Omkareshwar (middle), and Nagchandreshwar (upper — opens only on Nag Panchami each year)."
   },
   "darshanTimingSummary": {
-    "hi": "सुबह 3:00 – रात 11:00 (भस्म आरती के लिए पहले से रजिस्ट्रेशन ज़रूरी)",
-    "en": "3:00 AM – 11:00 PM (Bhasma Aarti requires advance booking)"
+    "hi": "लगभग सुबह 3:00 – रात 11:00 (भस्म आरती के लिए पहले से रजिस्ट्रेशन ज़रूरी)",
+    "en": "Approx. 3:00 AM – 11:00 PM (Bhasma Aarti requires advance booking)"
   },
   "weeklyTiming": {
-    "monday": { "hi": "प्रातः 3:00 – रात्रि 11:00 (सावन सोमवार पर विशेष भीड़)", "en": "3:00 AM – 11:00 PM (heavy crowd on Shravan Mondays)" },
-    "tuesday":  { "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" },
-    "wednesday":{ "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" },
-    "thursday": { "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" },
-    "friday":   { "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" },
-    "saturday": { "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" },
-    "sunday":   { "hi": "प्रातः 3:00 – रात्रि 11:00", "en": "3:00 AM – 11:00 PM" }
+    "monday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00 (सावन सोमवार पर विशेष भीड़)",
+      "en": "Approx. 3:00 AM – 11:00 PM (heavy crowd on Shravan Mondays)"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 3:00 – रात्रि 11:00",
+      "en": "Approx. 3:00 AM – 11:00 PM"
+    }
   },
   "aartiTiming": {
     "hi": "भस्म आरती प्रातः 4:00 · दद्धोदक प्रातः 7:00 – 7:30 · भोग प्रातः 10:30 – 11:15 · संध्या पूजा 5:00 – 5:45 · श्री महाकाल आरती संध्या 7:00 – 7:45 · शयन आरती रात्रि 10:30 – 11:00",
@@ -43,14 +67,17 @@
     "en": "Mahashivratri — overnight darshan, open 24 hours · Shravan Mondays — royal procession (sawari) · Nag Panchami — Nagchandreshwar temple opens for 24 hours only"
   },
   "entryFee": {
-    "hi": "साधारण दर्शन फ्री है · जल्दी दर्शन और भस्म आरती की पहले से बुकिंग shrimahakaleshwar.com पर होती है (अभी का शुल्क वहीं देख लें)",
-    "en": "General darshan free · Shighra (fast-track) darshan & Bhasma Aarti — advance booking at shrimahakaleshwar.com (check current fees there)"
+    "hi": "साधारण दर्शन फ्री है · जल्दी दर्शन और भस्म आरती की पहले से बुकिंग आधिकारिक वेबसाइट पर होती है (अभी का शुल्क वहीं देख लें)",
+    "en": "General darshan free · Shighra (fast-track) darshan & Bhasma Aarti — advance booking at the official website (check current fees there)"
   },
   "address": {
     "hi": "श्री महाकालेश्वर ज्योतिर्लिंग मंदिर, जयसिंहपुरा, उज्जैन, मध्य प्रदेश 456006",
     "en": "Shri Mahakaleshwar Jyotirlinga Temple, Jaisinghpura, Ujjain, Madhya Pradesh 456006"
   },
-  "geo": { "lat": 23.1828, "lng": 75.7681 },
+  "geo": {
+    "lat": 23.1828,
+    "lng": 75.7681
+  },
   "trust": "Shri Mahakaleshwar Mandir Prabandh Samiti",
   "photos": [
     "/images/mandirs/mahakaleshwar.jpg"
@@ -63,23 +90,45 @@
     "hi": "रेलवे स्टेशन से 1.5 किमी · बस स्टैंड (देवास गेट) से 2 किमी · इंदौर हवाई अड्डे से 55 किमी (90 मिनट कैब)। ऑटो/ई-रिक्शा हर 100 मीटर पर मिलते हैं।",
     "en": "1.5 km from Ujjain Railway Station · 2 km from Dewas Gate bus stand · 55 km from Indore airport (90 min cab). Auto/e-rickshaws available every 100m."
   },
-  "nearbyMandirs": ["kal-bhairav-ujjain", "harsiddhi-mata", "chintaman-ganesh"],
+  "nearbyMandirs": [
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata",
+    "chintaman-ganesh"
+  ],
   "simhasthaRelevance": {
-    "hi": "सिंहस्थ 2028 का मुख्य केंद्र है। शाही स्नान वाले दिन लाखों श्रद्धालु दर्शन के लिए आते हैं। दर्शन की लाइन बहुत लंबी हो सकती है — VIP या जल्दी दर्शन की पहले से बुकिंग करवा लेना ज़रूरी है।",
-    "en": "The epicenter of Simhastha 2028. Lakhs of devotees visit on shahi snan days. Darshan queues can be very long — VIP / fast-track advance booking strongly recommended."
+    "hi": "सिंहस्थ 2028 का मुख्य केंद्र है। शाही स्नान वाले दिन लाखों श्रद्धालु दर्शन के लिए आते हैं। दर्शन की लाइन बहुत लंबी हो सकती है — Shighra या जल्दी दर्शन की पहले से बुकिंग करवा लेना ज़रूरी है।",
+    "en": "The epicenter of Simhastha 2028. Lakhs of devotees visit on shahi snan days. Darshan queues can be very long — Shighra / fast-track advance booking strongly recommended."
   },
   "faqs": [
     {
-      "q": { "hi": "महाकालेश्वर का भस्म आरती कब होती है?", "en": "When is the Bhasma Aarti at Mahakaleshwar?" },
-      "a": { "hi": "भस्म आरती प्रतिदिन सुबह 4:00 बजे होती है। अग्रिम पंजीकरण आवश्यक है — shrimahakaleshwar.com पर 60 दिन पहले बुकिंग खुलती है।", "en": "Bhasma Aarti happens daily at 4:00 AM. Advance registration is mandatory — bookings open 60 days in advance at shrimahakaleshwar.com." }
+      "q": {
+        "hi": "महाकालेश्वर का भस्म आरती कब होती है?",
+        "en": "When is the Bhasma Aarti at Mahakaleshwar?"
+      },
+      "a": {
+        "hi": "भस्म आरती प्रतिदिन सुबह 4:00 बजे होती है। अग्रिम पंजीकरण आवश्यक है — आधिकारिक वेबसाइट पर 60 दिन पहले बुकिंग खुलती है।",
+        "en": "Bhasma Aarti happens daily at 4:00 AM. Advance registration is mandatory — bookings open 60 days in advance at the official website."
+      }
     },
     {
-      "q": { "hi": "क्या महाकाल मंदिर में दर्शन फ्री है?", "en": "Is darshan at Mahakal Temple free?" },
-      "a": { "hi": "हाँ, साधारण दर्शन फ्री है। जल्दी दर्शन और भस्म आरती के लिए छोटा सा शुल्क लगता है और पहले से बुकिंग करवानी पड़ती है — अभी का शुल्क shrimahakaleshwar.com पर देख लें।", "en": "Yes, general darshan is free. Shighra (fast-track) darshan and Bhasma Aarti require a nominal fee with advance booking — check current fees at shrimahakaleshwar.com." }
+      "q": {
+        "hi": "क्या महाकाल मंदिर में दर्शन फ्री है?",
+        "en": "Is darshan at Mahakal Temple free?"
+      },
+      "a": {
+        "hi": "हाँ, साधारण दर्शन फ्री है। जल्दी दर्शन और भस्म आरती के लिए छोटा सा शुल्क लगता है और पहले से बुकिंग करवानी पड़ती है — अभी का शुल्क आधिकारिक वेबसाइट पर देख लें।",
+        "en": "Yes, general darshan is free. Shighra (fast-track) darshan and Bhasma Aarti require a nominal fee with advance booking — check current fees at the official website."
+      }
     },
     {
-      "q": { "hi": "क्या मंदिर के अंदर मोबाइल फोन ले जा सकते हैं?", "en": "Are mobile phones allowed inside the temple?" },
-      "a": { "hi": "गर्भगृह के अंदर मोबाइल, कैमरा और चमड़े की चीज़ें ले जाना मना है। एंट्री गेट पर फ्री लॉकर मिल जाते हैं।", "en": "Mobile phones, cameras, and leather items are prohibited inside the sanctum. Free lockers available at entrance." }
+      "q": {
+        "hi": "क्या मंदिर के अंदर मोबाइल फोन ले जा सकते हैं?",
+        "en": "Are mobile phones allowed inside the temple?"
+      },
+      "a": {
+        "hi": "मंदिर के अंदर मोबाइल, कैमरा और चमड़े की चीज़ें ले जाना मना है। एंट्री गेट पर फ्री लॉकर मिल जाते हैं।",
+        "en": "Mobile phones, cameras, and leather items are prohibited inside the sanctum. Free lockers available at entrance."
+      }
     }
   ],
   "lastVerified": "2026-05-27",

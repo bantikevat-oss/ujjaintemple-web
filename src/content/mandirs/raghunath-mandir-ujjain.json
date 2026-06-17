@@ -1,91 +1,90 @@
-﻿{
-    "slug":  "raghunath-mandir-ujjain",
-    "name":  {
-                 "hi":  "रघुनाथ मंदिर",
-                 "en":  "Raghunath Mandir Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान राम (रघुनाथ स्वरूप)",
-                  "en":  "Lord Rama as Raghunath"
-              },
-    "templeType":  "Ram",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "परंपरागत काल",
-                           "en":  "Traditional era"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "रघुनाथ मंदिर महाकाल क्षेत्र में स्थित एक प्रतिष्ठित वैष्णव मंदिर है जहाँ भगवान राम को उनके रघुनाथ स्वरूप में पूजा जाता है। रघुनाथ नाम रघुकुल के नाथ अर्थात् रघु वंश के स्वामी का द्योतक है। यहाँ की मूर्ति अत्यंत भव्य और चित्ताकर्षक है।",
-                       "en":  "Raghunath Mandir is a revered Vaishnava temple in the Mahakal Area where Lord Rama is worshipped in his Raghunath form. The name Raghunath means the Lord of the Raghu dynasty. The idol enshrined here is majestic and captivating."
-                   },
-    "history":  {
-                    "hi":  "रघुनाथ नाम भगवान राम के सूर्यवंशी रघुकुल में जन्म लेने के कारण पड़ा है। उज्जैन में रघुनाथ मंदिर की स्थापना उस प्राचीन वैष्णव परंपरा का हिस्सा है जो इस नगरी को शैव तीर्थ के साथ-साथ वैष्णव तीर्थ भी मानती है। महाकाल क्षेत्र में स्थित होने के कारण यह मंदिर शिव और विष्णु के समन्वय की उस परंपरा का प्रतीक है जो उज्जैन में सदियों से चली आ रही है। रामनवमी और विवाह पंचमी पर यहाँ विशेष पूजा एवं भजन का आयोजन होता है। नित्य राम नाम संकीर्तन इस मंदिर की विशेषता है।",
-                    "en":  "The name Raghunath derives from Lord Rama\u0027s birth in the solar Raghu dynasty. The establishment of the Raghunath Mandir in Ujjain is part of the ancient Vaishnava tradition that regards this city as both a Shaiva and a Vaishnava pilgrimage site. Located in the Mahakal Area, this temple symbolises the tradition of harmony between Shiva and Vishnu that has persisted in Ujjain for centuries. Special puja and bhajans are organised on Ram Navami and Vivah Panchami. Daily Ram-naam kirtan is a hallmark of this temple."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1833,
-                "lng":  75.7687
-            },
-    "photos": ["/images/mandirs/ram-mandir-ramghat.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 200 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto-rickshaw from Ujjain Railway Station."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "रघुनाथ मंदिर उज्जैन",
-                           "en":  "Raghunath Mandir Ujjain"
-                       }
+{
+  "slug": "raghunath-mandir-ujjain",
+  "name": {
+    "hi": "रघुनाथ मंदिर",
+    "en": "Raghunath Mandir Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान राम (रघुनाथ स्वरूप)",
+    "en": "Lord Rama as Raghunath"
+  },
+  "templeType": "Ram",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "परंपरागत काल",
+    "en": "Traditional era"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "रघुनाथ मंदिर महाकाल क्षेत्र में स्थित एक प्रतिष्ठित वैष्णव मंदिर है जहाँ भगवान राम को उनके रघुनाथ स्वरूप में पूजा जाता है। रघुनाथ नाम रघुकुल के नाथ अर्थात् रघु वंश के स्वामी का द्योतक है। यहाँ की मूर्ति अत्यंत भव्य और चित्ताकर्षक है।",
+    "en": "Raghunath Mandir is a revered Vaishnava temple in the Mahakal Area where Lord Rama is worshipped in his Raghunath form. The name Raghunath means the Lord of the Raghu dynasty. The idol enshrined here is majestic and captivating."
+  },
+  "history": {
+    "hi": "रघुनाथ नाम भगवान राम के सूर्यवंशी रघुकुल में जन्म लेने के कारण पड़ा है। उज्जैन में रघुनाथ मंदिर की स्थापना उस प्राचीन वैष्णव परंपरा का हिस्सा है जो इस नगरी को शैव तीर्थ के साथ-साथ वैष्णव तीर्थ भी मानती है। महाकाल क्षेत्र में स्थित होने के कारण यह मंदिर शिव और विष्णु के समन्वय की उस परंपरा का प्रतीक है जो उज्जैन में सदियों से चली आ रही है। रामनवमी और विवाह पंचमी पर यहाँ विशेष पूजा एवं भजन का आयोजन होता है। नित्य राम नाम संकीर्तन इस मंदिर की विशेषता है।",
+    "en": "The name Raghunath derives from Lord Rama's birth in the solar Raghu dynasty. The establishment of the Raghunath Mandir in Ujjain is part of the ancient Vaishnava tradition that regards this city as both a Shaiva and a Vaishnava pilgrimage site. Located in the Mahakal Area, this temple symbolises the tradition of harmony between Shiva and Vishnu that has persisted in Ujjain for centuries. Special puja and bhajans are organised on Ram Navami and Vivah Panchami. Daily Ram-naam kirtan is a hallmark of this temple."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1833,
+    "lng": 75.7687
+  },
+  "photos": [
+    "/images/mandirs/ram-mandir-ramghat.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 200 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto-rickshaw from Ujjain Railway Station."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "रघुनाथ मंदिर उज्जैन",
+    "en": "Raghunath Mandir Ujjain"
+  }
 }

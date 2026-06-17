@@ -1,136 +1,134 @@
 {
-    "slug":  "batukeshwar-mahadev",
-    "name":  {
-                 "hi":  "बटुकेश्वर महादेव",
-                 "en":  "Batukeshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (बटुकेश्वर / बटुक भैरव रूप)",
-                  "en":  "Lord Shiva as Batukeshwar / Batuk Bhairav"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन काल (स्कन्द पुराण संदर्भित)",
-                           "en":  "Ancient era (referenced in Skanda Purana)"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "बटुकेश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला में एक विशेष तीर्थ है जहाँ शिव \u0027बटुक\u0027 (बालक) भैरव के रूप में पूजित हैं। यह मंदिर महाकाल क्षेत्र में स्थित है और तांत्रिक परम्परा में भी अत्यंत महत्त्वपूर्ण माना जाता है। स्कन्द पुराण के अवन्ति खण्ड में इस तीर्थ की महिमा वर्णित है।",
-                       "en":  "Batukeshwar Mahadev is a special shrine in the 84 Mahadevas series of Ujjain, where Shiva is worshipped in the form of Batuk (child) Bhairav. Located in the Mahakal Area, this temple is also highly significant in the Tantric tradition. The Avanti Khanda of the Skanda Purana describes the glory of this tirtha."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ति खण्ड में बटुकेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। \u0027बटुक\u0027 अर्थात बालक भैरव — शिव के इस तरुण एवं उग्र रूप की यहाँ उपासना होती है। तांत्रिक परम्परा में बटुक भैरव की साधना अत्यंत फलदायी मानी जाती है और उज्जैन तंत्र-विद्या का प्राचीन केन्द्र रहा है। महाकाल वन के इस स्थल पर दर्शन करने से भय, शत्रु और विघ्न-बाधाओं से रक्षा होती है। 84 महादेवों की यात्रा में यह मंदिर तांत्रिक और सामान्य दोनों श्रद्धालुओं के लिए विशेष आकर्षण का केन्द्र है।",
-                    "en":  "The Avanti Khanda of the Skanda Purana gives Batukeshwar Mahadev a place among the 84 Mahadevas of Avantika. Batuk refers to the young Bhairava — the fierce and youthful form of Shiva worshipped here. In Tantric tradition, the sadhana of Batuk Bhairav is considered highly fruitful, and Ujjain has been an ancient centre of Tantra-vidya. Darshan at this site in the Mahakal forest is said to protect devotees from fear, enemies, and obstacles. In the 84 Mahadevas yatra, this temple is a special draw for both Tantric practitioners and ordinary devotees."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1835,
-                "lng":  75.7689
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-4.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "बटुकेश्वर महादेव उज्जैन",
-                           "en":  "Batukeshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि बटुकेश्वर महादेव के दर्शन से बाल-ग्रह दोष, बुरी नज़र एवं अकाल मृत्यु का भय दूर होता है। तांत्रिक साधक रविवार और मंगलवार को विशेष रूप से यहाँ साधना करते हैं। माना जाता है कि सच्चे मन से जल और बेलपत्र चढ़ाने पर बटुक भैरव शीघ्र प्रसन्न होकर भक्तों के शत्रु और विघ्न नष्ट करते हैं।",
-                         "en":  "Local devotees believe that darshan of Batukeshwar Mahadev removes bal-graha dosha, evil eye, and the fear of untimely death. Tantric sadhakas especially perform their practice here on Sundays and Tuesdays. It is said that offering water and bel patra with a pure heart quickly pleases Batuk Bhairav, who then destroys the devotee\u0027s enemies and obstacles."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? बटुकेश्वर महादेव उज्जैन के 84 महादेवों में एकमात्र ऐसा स्थान है जहाँ शिव बाल-भैरव स्वरूप में पूजे जाते हैं। यह तंत्र-साधना के प्राचीन केन्द्र महाकाल वन का सूक्ष्म किन्तु अति शक्तिशाली तीर्थ माना जाता है।",
-                         "en":  "Did you know? Batukeshwar Mahadev is the only site among Ujjain\u0027s 84 Mahadevas where Shiva is worshipped in the child-Bhairav form. It is considered a subtle yet immensely powerful tirtha within the Mahakal Van, an ancient hub of Tantra sadhana."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर महाकाल क्षेत्र में स्थित है, अतः 84 महादेव यात्रा के साथ इसे जोड़ें। सादे एवं शालीन वस्त्र पहनें तथा जल, बेलपत्र और सरसों का तेल साथ ले जाएँ। प्रातःकाल या संध्या आरती के समय दर्शन करना सर्वाधिक शुभ माना जाता है, भीड़भाड़ से बचने हेतु सप्ताह के बीच के दिन चुनें।",
-                      "en":  "The temple lies in the Mahakal Area, so combine your visit with the 84 Mahadevas yatra. Wear modest, simple clothing and carry water, bel patra, and mustard oil as offerings. Darshan during the morning or evening aarti is considered most auspicious; pick a weekday to avoid heavy crowds."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "बटुकेश्वर महादेव में किस रूप में शिव की पूजा होती है?",
-                                      "en":  "In what form is Shiva worshipped at Batukeshwar Mahadev?"
-                                  },
-                     "answer":  {
-                                    "hi":  "यहाँ शिव की पूजा बटुक भैरव अर्थात बाल-भैरव रूप में होती है, जो उनका तरुण एवं रक्षक स्वरूप माना जाता है।",
-                                    "en":  "Here Shiva is worshipped as Batuk Bhairav — the child Bhairav form, regarded as his youthful and protective aspect."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या यह मंदिर 84 महादेव यात्रा में सम्मिलित है?",
-                                      "en":  "Is this temple part of the 84 Mahadevas yatra?"
-                                  },
-                     "answer":  {
-                                    "hi":  "हाँ, स्कन्द पुराण के अवन्ति खण्ड में बटुकेश्वर महादेव को उज्जैन के 84 महादेवों में से एक माना गया है।",
-                                    "en":  "Yes, the Avanti Khanda of the Skanda Purana lists Batukeshwar Mahadev as one of Ujjain\u0027s 84 Mahadevas."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "दर्शन के लिए कौन सा दिन सर्वोत्तम है?",
-                                      "en":  "Which day is best for darshan?"
-                                  },
-                     "answer":  {
-                                    "hi":  "रविवार और मंगलवार बटुक भैरव की उपासना के लिए विशेष शुभ माने जाते हैं, साथ ही श्रावण मास और शिवरात्रि पर अत्यंत महत्त्वपूर्ण माने जाते हैं।",
-                                    "en":  "Sundays and Tuesdays are especially auspicious for worshipping Batuk Bhairav, while Shravan month and Shivratri carry profound significance."
-                                }
-                 }
-             ]
+  "slug": "batukeshwar-mahadev",
+  "name": {
+    "hi": "बटुकेश्वर महादेव",
+    "en": "Batukeshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (बटुकेश्वर / बटुक भैरव रूप)",
+    "en": "Lord Shiva as Batukeshwar / Batuk Bhairav"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन काल (स्कन्द पुराण संदर्भित)",
+    "en": "Ancient era (referenced in Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "बटुकेश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला में एक विशेष तीर्थ है जहाँ शिव 'बटुक' (बालक) भैरव के रूप में पूजित हैं। यह मंदिर महाकाल क्षेत्र में स्थित है और तांत्रिक परम्परा में भी अत्यंत महत्त्वपूर्ण माना जाता है। स्कन्द पुराण के अवन्ति खण्ड में इस तीर्थ की महिमा वर्णित है।",
+    "en": "Batukeshwar Mahadev is a special shrine in the 84 Mahadevas series of Ujjain, where Shiva is worshipped in the form of Batuk (child) Bhairav. Located in the Mahakal Area, this temple is also highly significant in the Tantric tradition. The Avanti Khanda of the Skanda Purana describes the glory of this tirtha."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ति खण्ड में बटुकेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। 'बटुक' अर्थात बालक भैरव — शिव के इस तरुण एवं उग्र रूप की यहाँ उपासना होती है। तांत्रिक परम्परा में बटुक भैरव की साधना अत्यंत फलदायी मानी जाती है और उज्जैन तंत्र-विद्या का प्राचीन केन्द्र रहा है। महाकाल वन के इस स्थल पर दर्शन करने से भय, शत्रु और विघ्न-बाधाओं से रक्षा होती है। 84 महादेवों की यात्रा में यह मंदिर तांत्रिक और सामान्य दोनों श्रद्धालुओं के लिए विशेष आकर्षण का केन्द्र है।",
+    "en": "The Avanti Khanda of the Skanda Purana gives Batukeshwar Mahadev a place among the 84 Mahadevas of Avantika. Batuk refers to the young Bhairava — the fierce and youthful form of Shiva worshipped here. In Tantric tradition, the sadhana of Batuk Bhairav is considered highly fruitful, and Ujjain has been an ancient centre of Tantra-vidya. Darshan at this site in the Mahakal forest is said to protect devotees from fear, enemies, and obstacles. In the 84 Mahadevas yatra, this temple is a special draw for both Tantric practitioners and ordinary devotees."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1835,
+    "lng": 75.7689
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-4.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "बटुकेश्वर महादेव उज्जैन",
+    "en": "Batukeshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि बटुकेश्वर महादेव के दर्शन से बाल-ग्रह दोष, बुरी नज़र एवं अकाल मृत्यु का भय दूर होता है। तांत्रिक साधक रविवार और मंगलवार को विशेष रूप से यहाँ साधना करते हैं। माना जाता है कि सच्चे मन से जल और बेलपत्र चढ़ाने पर बटुक भैरव शीघ्र प्रसन्न होकर भक्तों के शत्रु और विघ्न नष्ट करते हैं।",
+    "en": "Local devotees believe that darshan of Batukeshwar Mahadev removes bal-graha dosha, evil eye, and the fear of untimely death. Tantric sadhakas especially perform their practice here on Sundays and Tuesdays. It is said that offering water and bel patra with a pure heart quickly pleases Batuk Bhairav, who then destroys the devotee's enemies and obstacles."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? बटुकेश्वर महादेव उज्जैन के 84 महादेवों में एकमात्र ऐसा स्थान है जहाँ शिव बाल-भैरव स्वरूप में पूजे जाते हैं। यह तंत्र-साधना के प्राचीन केन्द्र महाकाल वन का सूक्ष्म किन्तु अति शक्तिशाली तीर्थ माना जाता है।",
+    "en": "Did you know? Batukeshwar Mahadev is the only site among Ujjain's 84 Mahadevas where Shiva is worshipped in the child-Bhairav form. It is considered a subtle yet immensely powerful tirtha within the Mahakal Van, an ancient hub of Tantra sadhana."
+  },
+  "visitTips": {
+    "hi": "मंदिर महाकाल क्षेत्र में स्थित है, अतः 84 महादेव यात्रा के साथ इसे जोड़ें। सादे एवं शालीन वस्त्र पहनें तथा जल, बेलपत्र और सरसों का तेल साथ ले जाएँ। प्रातःकाल या संध्या आरती के समय दर्शन करना सर्वाधिक शुभ माना जाता है, भीड़भाड़ से बचने हेतु सप्ताह के बीच के दिन चुनें।",
+    "en": "The temple lies in the Mahakal Area, so combine your visit with the 84 Mahadevas yatra. Wear modest, simple clothing and carry water, bel patra, and mustard oil as offerings. Darshan during the morning or evening aarti is considered most auspicious; pick a weekday to avoid heavy crowds."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "बटुकेश्वर महादेव में किस रूप में शिव की पूजा होती है?",
+        "en": "In what form is Shiva worshipped at Batukeshwar Mahadev?"
+      },
+      "answer": {
+        "hi": "यहाँ शिव की पूजा बटुक भैरव अर्थात बाल-भैरव रूप में होती है, जो उनका तरुण एवं रक्षक स्वरूप माना जाता है।",
+        "en": "Here Shiva is worshipped as Batuk Bhairav — the child Bhairav form, regarded as his youthful and protective aspect."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या यह मंदिर 84 महादेव यात्रा में सम्मिलित है?",
+        "en": "Is this temple part of the 84 Mahadevas yatra?"
+      },
+      "answer": {
+        "hi": "हाँ, स्कन्द पुराण के अवन्ति खण्ड में बटुकेश्वर महादेव को उज्जैन के 84 महादेवों में से एक माना गया है।",
+        "en": "Yes, the Avanti Khanda of the Skanda Purana lists Batukeshwar Mahadev as one of Ujjain's 84 Mahadevas."
+      }
+    },
+    {
+      "question": {
+        "hi": "दर्शन के लिए कौन सा दिन सर्वोत्तम है?",
+        "en": "Which day is best for darshan?"
+      },
+      "answer": {
+        "hi": "रविवार और मंगलवार बटुक भैरव की उपासना के लिए विशेष शुभ माने जाते हैं, साथ ही श्रावण मास और शिवरात्रि पर अत्यंत महत्त्वपूर्ण माने जाते हैं।",
+        "en": "Sundays and Tuesdays are especially auspicious for worshipping Batuk Bhairav, while Shravan month and Shivratri carry profound significance."
+      }
+    }
+  ]
 }

@@ -1,94 +1,94 @@
-﻿{
-    "slug":  "sandipani-ashram",
-    "name":  {
-                 "hi":  "सांदीपनि आश्रम",
-                 "en":  "Sandipani Ashram"
-             },
-    "deity":  {
-                  "hi":  "गुरु सांदीपनि / भगवान कृष्ण",
-                  "en":  "Guru Sandipani / Lord Krishna"
-              },
-    "templeType":  "Historical",
-    "locationArea":  "Ankpat Road",
-    "isFeatured":  true,
-    "establishedEra":  {
-                           "hi":  "द्वापर युग — भगवान श्रीकृष्ण के शिक्षा काल का स्थान",
-                           "en":  "Dvapara Yuga — site of Lord Krishna\u0027s education"
-                       },
-    "architectureStyle":  "Traditional Ashram",
-    "shortIntro":  {
-                       "hi":  "सांदीपनि आश्रम वह पवित्र स्थल है जहाँ भगवान श्रीकृष्ण, बलराम एवं सुदामा ने महर्षि सांदीपनि के सान्निध्य में शिक्षा ग्रहण की थी। यह आश्रम उज्जैन के अंकपात मार्ग पर स्थित है और यहाँ वह पत्थर की स्लेट आज भी सुरक्षित है जिस पर श्रीकृष्ण ने अंक (अंकगणित) सीखे थे। भारत में यह शायद एकमात्र ऐसा तीर्थ है जो ईश्वर की विद्यार्थी जीवन की स्मृति को समर्पित है।",
-                       "en":  "Sandipani Ashram is the sacred site where Lord Krishna, Balarama, and Sudama received their education under the sage Sandipani. Located on Ankpat Road in Ujjain, the ashram preserves the stone slate on which Krishna is said to have learned arithmetic (ankaganit). This is perhaps the only pilgrimage site in India dedicated to the memory of God as a student."
-                   },
-    "history":  {
-                    "hi":  "श्रीमद्भागवत पुराण एवं विष्णु पुराण के अनुसार भगवान श्रीकृष्ण ने अवन्तिका (उज्जैन) में महर्षि सांदीपनि के गुरुकुल में 64 कलाओं तथा 14 विद्याओं की शिक्षा ग्रहण की थी। यह आश्रम द्वापर युग से जुड़ा भारत का अतुलनीय ऐतिहासिक एवं आध्यात्मिक स्थल है। गुरुकुल समाप्ति पर श्रीकृष्ण ने गुरुदक्षिणा में गुरु सांदीपनि के मृत पुत्र को प्रभास तीर्थ से जीवित लाकर भेंट किया था। आज भी आश्रम परिसर में वह \u0027अंकपात\u0027 (पत्थर की पट्टी) विद्यमान है जिसे \u0027सांदीपनि की शिलाखड्ग\u0027 के नाम से जाना जाता है। यह स्थान भारतीय गुरु-शिष्य परंपरा का सर्वोच्च प्रतीक है और प्रतिवर्ष लाखों श्रद्धालु एवं शिक्षार्थी यहाँ आशीर्वाद लेने आते हैं।",
-                    "en":  "According to the Srimad Bhagavata Purana and Vishnu Purana, Lord Krishna received instruction in 64 arts and 14 branches of knowledge at the gurukul of Sage Sandipani in Avantika (Ujjain). This ashram is an incomparable historical and spiritual site of India, connected to the Dvapara Yuga. As gurudakshina (teacher\u0027s fee) upon completing his studies, Krishna brought back Sandipani\u0027s dead son from Prabhas Tirtha. Even today, the \u0027Ankpat\u0027 (stone slate) on which Krishna practised writing numbers is preserved in the ashram complex, known as \u0027Sandipani\u0027s stone slab.\u0027 This place is the supreme symbol of the Indian guru-shishya tradition, drawing millions of devotees and students seeking blessings every year."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 7:00 – सायं 7:00",
-                                 "en":  "7:00 AM – 7:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 7:00 – सायं 7:00",
-                                        "en":  "7:00 AM – 7:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 7:00 – सायं 7:00",
-                                         "en":  "7:00 AM – 7:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 7:00 – सायं 7:00",
-                                           "en":  "7:00 AM – 7:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 7:00 – सायं 7:00",
-                                          "en":  "7:00 AM – 7:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 7:00 – सायं 7:00",
-                                        "en":  "7:00 AM – 7:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 7:00 – सायं 7:00",
-                                          "en":  "7:00 AM – 7:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 7:00 – सायं 7:00",
-                                        "en":  "7:00 AM – 7:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 7:30 · संध्या आरती 6:30",
-                        "en":  "Morning aarti 7:30 AM · Evening aarti 6:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "सांदीपनि आश्रम, अंकपात रोड, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Sandipani Ashram, Ankpat Road, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.175,
-                "lng":  75.762
-            },
-    "photos":  [
-                   "/images/mandirs/sandipani-ashram.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "सांदीपनि आश्रम महाकालेश्वर मंदिर से लगभग 1.5 किमी दक्षिण-पश्चिम में अंकपात रोड पर स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है और ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
-                       "en":  "Sandipani Ashram is located on Ankpat Road, approximately 1.5 km south-west of Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station and easily accessible by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-                          "siddhavat-mandir",
-                          "ram-mandir-ramghat",
-                          "gopal-mandir-ujjain"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "सांदीपनि आश्रम उज्जैन",
-                           "en":  "Sandipani Ashram Ujjain"
-                       }
+{
+  "slug": "sandipani-ashram",
+  "name": {
+    "hi": "सांदीपनि आश्रम",
+    "en": "Sandipani Ashram"
+  },
+  "deity": {
+    "hi": "गुरु सांदीपनि / भगवान कृष्ण",
+    "en": "Guru Sandipani / Lord Krishna"
+  },
+  "templeType": "Historical",
+  "locationArea": "Ankpat Road",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "द्वापर युग — भगवान श्रीकृष्ण के शिक्षा काल का स्थान",
+    "en": "Dvapara Yuga — site of Lord Krishna's education"
+  },
+  "architectureStyle": "Traditional Ashram",
+  "shortIntro": {
+    "hi": "सांदीपनि आश्रम वह पवित्र स्थल है जहाँ भगवान श्रीकृष्ण, बलराम एवं सुदामा ने महर्षि सांदीपनि के सान्निध्य में शिक्षा ग्रहण की थी। यह आश्रम उज्जैन के अंकपात मार्ग पर स्थित है और यहाँ वह पत्थर की स्लेट आज भी सुरक्षित है जिस पर श्रीकृष्ण ने अंक (अंकगणित) सीखे थे। भारत में यह शायद एकमात्र ऐसा तीर्थ है जो ईश्वर की विद्यार्थी जीवन की स्मृति को समर्पित है।",
+    "en": "Sandipani Ashram is the sacred site where Lord Krishna, Balarama, and Sudama received their education under the sage Sandipani. Located on Ankpat Road in Ujjain, the ashram preserves the stone slate on which Krishna is said to have learned arithmetic (ankaganit). This is perhaps the only pilgrimage site in India dedicated to the memory of God as a student."
+  },
+  "history": {
+    "hi": "श्रीमद्भागवत पुराण एवं विष्णु पुराण के अनुसार भगवान श्रीकृष्ण ने अवन्तिका (उज्जैन) में महर्षि सांदीपनि के गुरुकुल में 64 कलाओं तथा 14 विद्याओं की शिक्षा ग्रहण की थी। यह आश्रम द्वापर युग से जुड़ा भारत का अतुलनीय ऐतिहासिक एवं आध्यात्मिक स्थल है। गुरुकुल समाप्ति पर श्रीकृष्ण ने गुरुदक्षिणा में गुरु सांदीपनि के मृत पुत्र को प्रभास तीर्थ से जीवित लाकर भेंट किया था। आज भी आश्रम परिसर में वह 'अंकपात' (पत्थर की पट्टी) विद्यमान है जिसे 'सांदीपनि की शिलाखड्ग' के नाम से जाना जाता है। यह स्थान भारतीय गुरु-शिष्य परंपरा का सर्वोच्च प्रतीक है और प्रतिवर्ष लाखों श्रद्धालु एवं शिक्षार्थी यहाँ आशीर्वाद लेने आते हैं।",
+    "en": "According to the Srimad Bhagavata Purana and Vishnu Purana, Lord Krishna received instruction in 64 arts and 14 branches of knowledge at the gurukul of Sage Sandipani in Avantika (Ujjain). This ashram is an incomparable historical and spiritual site of India, connected to the Dvapara Yuga. As gurudakshina (teacher's fee) upon completing his studies, Krishna brought back Sandipani's dead son from Prabhas Tirtha. Even today, the 'Ankpat' (stone slate) on which Krishna practised writing numbers is preserved in the ashram complex, known as 'Sandipani's stone slab.' This place is the supreme symbol of the Indian guru-shishya tradition, drawing millions of devotees and students seeking blessings every year."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+    "en": "Approx. 7:00 AM – 7:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 7:00 – सायं 7:00",
+      "en": "Approx. 7:00 AM – 7:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 7:30 · संध्या आरती 6:30",
+    "en": "Morning aarti 7:30 AM · Evening aarti 6:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "सांदीपनि आश्रम, अंकपात रोड, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Sandipani Ashram, Ankpat Road, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.175,
+    "lng": 75.762
+  },
+  "photos": [
+    "/images/mandirs/sandipani-ashram.jpg"
+  ],
+  "howToReach": {
+    "hi": "सांदीपनि आश्रम महाकालेश्वर मंदिर से लगभग 1.5 किमी दक्षिण-पश्चिम में अंकपात रोड पर स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है और ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+    "en": "Sandipani Ashram is located on Ankpat Road, approximately 1.5 km south-west of Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station and easily accessible by auto-rickshaw."
+  },
+  "nearbyMandirs": [
+    "siddhavat-mandir",
+    "ram-mandir-ramghat",
+    "gopal-mandir-ujjain"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "सांदीपनि आश्रम उज्जैन",
+    "en": "Sandipani Ashram Ujjain"
+  }
 }

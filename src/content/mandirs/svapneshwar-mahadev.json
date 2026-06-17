@@ -1,92 +1,90 @@
 {
-    "slug":  "svapneshwar-mahadev",
-    "name":  {
-                 "hi":  "स्वप्नेश्वर महादेव",
-                 "en":  "Svapneshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव — स्वप्नेश्वर स्वरूप",
-                  "en":  "Lord Shiva as Svapneshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुराण कालीन",
-                           "en":  "Puranic Era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "स्वप्नेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला का एक रहस्यमयी एवं दिव्य मंदिर है। \u0027स्वप्न\u0027 अर्थात स्वप्न — यहाँ शिव को स्वप्न में दर्शन देने वाले देवता के रूप में पूजा जाता है। मान्यता है कि इस मंदिर में सच्चे मन से प्रार्थना करने पर भगवान शिव स्वप्न में मार्गदर्शन करते हैं।",
-                       "en":  "Svapneshwar Mahadev is a mysterious and divine temple in Ujjain\u0027s 84 Mahadevas series. \u0027Svapna\u0027 means dream — Shiva is worshipped here as the deity who grants darshan through dreams. It is believed that sincere prayers at this temple are answered by Lord Shiva appearing in one\u0027s dreams to give guidance."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में स्वप्नेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक अद्भुत एवं रहस्यपूर्ण तीर्थ के रूप में है। पौराणिक आख्यान के अनुसार एक भक्त को स्वप्न में शिव ने यहाँ पधारकर इस शिवलिंग की स्थापना करने का आदेश दिया था; उस भक्त ने शिव के निर्देशानुसार यहाँ लिंग की प्रतिष्ठा की और तब से यह स्थान स्वप्नेश्वर कहलाया। यह माना जाता है कि यहाँ रात्रि पूजन करके सोने से शिव स्वयं स्वप्न में उपस्थित होते हैं और जीवन के कठिन प्रश्नों का समाधान देते हैं। चौरासी महादेव की यात्रा में इस मंदिर का दर्शन विशेष आध्यात्मिक अनुभव देता है। प्रतिवर्ष शिवरात्रि पर यहाँ रात्रि जागरण का आयोजन होता है।",
-                    "en":  "The Avanti Khanda of the Skanda Purana describes Svapneshwar Mahadev as a wondrous and mysterious tirtha within the 84 Mahadevas series. According to tradition, Shiva appeared in a devotee\u0027s dream, instructed him to come to this spot and install a Shivalinga; the devotee did so and the place has been known as Svapneshwar ever since. It is believed that if one performs night worship here and sleeps at the temple, Shiva himself appears in dreams and resolves difficult questions of life. Darshan at this temple during the 84 Mahadevas circuit is said to provide a uniquely profound spiritual experience. An all-night vigil is held here annually on Mahashivratri."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1832,
-                "lng":  75.769
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-8.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "Located about 0.4 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "स्वप्नेश्वर महादेव उज्जैन",
-                           "en":  "Svapneshwar Mahadev Ujjain"
-                       }
+  "slug": "svapneshwar-mahadev",
+  "name": {
+    "hi": "स्वप्नेश्वर महादेव",
+    "en": "Svapneshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव — स्वप्नेश्वर स्वरूप",
+    "en": "Lord Shiva as Svapneshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुराण कालीन",
+    "en": "Puranic Era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "स्वप्नेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला का एक रहस्यमयी एवं दिव्य मंदिर है। 'स्वप्न' अर्थात स्वप्न — यहाँ शिव को स्वप्न में दर्शन देने वाले देवता के रूप में पूजा जाता है। मान्यता है कि इस मंदिर में सच्चे मन से प्रार्थना करने पर भगवान शिव स्वप्न में मार्गदर्शन करते हैं।",
+    "en": "Svapneshwar Mahadev is a mysterious and divine temple in Ujjain's 84 Mahadevas series. 'Svapna' means dream — Shiva is worshipped here as the deity who grants darshan through dreams. It is believed that sincere prayers at this temple are answered by Lord Shiva appearing in one's dreams to give guidance."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में स्वप्नेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक अद्भुत एवं रहस्यपूर्ण तीर्थ के रूप में है। पौराणिक आख्यान के अनुसार एक भक्त को स्वप्न में शिव ने यहाँ पधारकर इस शिवलिंग की स्थापना करने का आदेश दिया था; उस भक्त ने शिव के निर्देशानुसार यहाँ लिंग की प्रतिष्ठा की और तब से यह स्थान स्वप्नेश्वर कहलाया। यह माना जाता है कि यहाँ रात्रि पूजन करके सोने से शिव स्वयं स्वप्न में उपस्थित होते हैं और जीवन के कठिन प्रश्नों का समाधान देते हैं। चौरासी महादेव की यात्रा में इस मंदिर का दर्शन विशेष आध्यात्मिक अनुभव देता है। प्रतिवर्ष शिवरात्रि पर यहाँ रात्रि जागरण का आयोजन होता है।",
+    "en": "The Avanti Khanda of the Skanda Purana describes Svapneshwar Mahadev as a wondrous and mysterious tirtha within the 84 Mahadevas series. According to tradition, Shiva appeared in a devotee's dream, instructed him to come to this spot and install a Shivalinga; the devotee did so and the place has been known as Svapneshwar ever since. It is believed that if one performs night worship here and sleeps at the temple, Shiva himself appears in dreams and resolves difficult questions of life. Darshan at this temple during the 84 Mahadevas circuit is said to provide a uniquely profound spiritual experience. An all-night vigil is held here annually on Mahashivratri."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1832,
+    "lng": 75.769
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-8.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "Located about 0.4 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "स्वप्नेश्वर महादेव उज्जैन",
+    "en": "Svapneshwar Mahadev Ujjain"
+  }
 }

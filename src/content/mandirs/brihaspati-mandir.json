@@ -1,148 +1,148 @@
 {
-    "slug": "brihaspati-mandir",
-    "name": {
-        "hi": "बृहस्पति मन्दिर",
-        "en": "Brihaspati Mandir (Jupiter Navagraha)"
+  "slug": "brihaspati-mandir",
+  "name": {
+    "hi": "बृहस्पति मन्दिर",
+    "en": "Brihaspati Mandir (Jupiter Navagraha)"
+  },
+  "deity": {
+    "hi": "बृहस्पति देव (गुरु ग्रह)",
+    "en": "Brihaspati / Jupiter"
+  },
+  "templeType": "Navagraha",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल, पुराणोक्त",
+    "en": "Ancient era, mentioned in Puranas"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "बृहस्पति मन्दिर उज्जैन के नवग्रह मंदिर समूह में गुरु ग्रह (Jupiter) का प्रतिनिधित्व करता है। बृहस्पति देवगुरु हैं जो ज्ञान, धर्म, संतान एवं समृद्धि के कारक माने जाते हैं। गुरुवार को यहाँ विशेष पूजन किया जाता है और पीले रंग के पुष्प एवं चने की दाल का प्रसाद अर्पित किया जाता है।",
+    "en": "Brihaspati Mandir represents Jupiter (Guru) in Ujjain's Navagraha temple circuit. Brihaspati is the preceptor of the gods, governing knowledge, dharma, progeny, and prosperity. Thursdays are especially auspicious for worship here, with offerings of yellow flowers and yellow gram."
+  },
+  "history": {
+    "hi": "ऋग्वेद एवं विभिन्न पुराणों में बृहस्पति को देवताओं के गुरु के रूप में वर्णित किया गया है। उज्जैन की नवग्रह उपासना परंपरा में बृहस्पति मंदिर का विशेष स्थान है और स्कन्द पुराण के अवन्ति खण्ड में इस क्षेत्र के ग्रह-तीर्थों का उल्लेख मिलता है। वैदिक ज्योतिष में गुरु ग्रह को नवग्रहों में सर्वाधिक शुभ माना जाता है, जो विवाह, संतान एवं शिक्षा का कारक है। उज्जैन में प्रत्येक सिंहस्थ कुंभ के अवसर पर बृहस्पति के वृश्चिक राशि में प्रवेश की खगोलीय घटना विशेष महत्त्व रखती है। इस मंदिर में गुरु की साढ़ेसाती एवं ढैया के दुष्प्रभाव निवारण हेतु अनेक भक्त पूजन-पाठ करते हैं।",
+    "en": "Brihaspati (Jupiter) is described as the preceptor of the gods in the Rigveda and various Puranas. The Brihaspati Mandir holds a special place in Ujjain's Navagraha worship tradition, with the Avanti Khanda of the Skanda Purana referencing the planetary shrines of this region. In Vedic astrology, Jupiter is considered the most benevolent of all nine planets, governing marriage, progeny, and education. Ujjain's famous Simhastha Kumbh Mela is itself determined by Jupiter's entry into Scorpio, highlighting the city's deep Jovian connection. Many devotees worship here seeking relief from the challenging periods of Jupiter's Sadhesati and Dhaiyya."
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय मान्यता है कि गुरुवार को बृहस्पति देव के दर्शन करने से कुंडली में कमजोर गुरु ग्रह बलवान होता है और विवाह में आ रही बाधाएँ दूर होती हैं। उज्जैनवासी विशेष रूप से संतान प्राप्ति, शिक्षा में सफलता एवं वैवाहिक सुख हेतु यहाँ पीला वस्त्र धारण कर पूजन करते हैं। कई परिवार बच्चों के मुण्डन या विद्यारंभ संस्कार से पहले यहाँ माथा टेकना शुभ मानते हैं।",
+    "en": "Locals believe that darshan on Thursdays strengthens a weak Jupiter in one's birth chart and removes obstacles in marriage. Ujjain residents often wear yellow garments and offer prayers here for childbirth, academic success, and marital harmony. Many families consider it auspicious to bow here before performing a child's mundan or vidyarambh ceremony."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? उज्जैन का प्रसिद्ध सिंहस्थ कुंभ मेला तभी आयोजित होता है जब बृहस्पति ग्रह सिंह राशि में प्रवेश करता है, इसीलिए इसे 'सिंहस्थ' कहा जाता है। उज्जैन को प्राचीन काल से ज्योतिष की राजधानी माना जाता है, और यहाँ का देशांतर रेखा (कर्क रेखा) भी बृहस्पति की गणनाओं से जुड़ी है।",
+    "en": "Did you know? Ujjain's famous Simhastha Kumbh Mela is held precisely when Jupiter enters Leo (Simha) — that is why it is called 'Simhastha'. Ujjain has been regarded as India's astronomical capital since ancient times, and the Tropic of Cancer passes near here, tying the city directly to Jovian planetary calculations."
+  },
+  "visitTips": {
+    "hi": "गुरुवार को यहाँ दर्शन सर्वश्रेष्ठ माना जाता है — पीले वस्त्र पहनकर आएं और चने की दाल, गुड़, पीले पुष्प तथा हल्दी का प्रसाद साथ लाएं। मंदिर महाकालेश्वर क्षेत्र में होने से महाकाल दर्शन के साथ ही इसे जोड़ लें। ग्रीष्मकाल में सुबह जल्दी आएं, और पैदल चलने के लिए आरामदायक चप्पल पहनें।",
+    "en": "Thursdays are the most auspicious day for darshan — wear yellow clothes and carry offerings of yellow gram (chana dal), jaggery, yellow flowers, and turmeric. Since the temple lies within the Mahakal precinct, combine your visit with Mahakaleshwar darshan. In summer, arrive early morning, and wear comfortable footwear since the area requires walking."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "deity": {
-        "hi": "बृहस्पति देव (गुरु ग्रह)",
-        "en": "Brihaspati / Jupiter"
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "templeType": "Navagraha",
-    "locationArea": "Mahakal Area",
-    "isFeatured": false,
-    "establishedEra": {
-        "hi": "प्राचीन काल, पुराणोक्त",
-        "en": "Ancient era, mentioned in Puranas"
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "architectureStyle": "Nagara",
-    "shortIntro": {
-        "hi": "बृहस्पति मन्दिर उज्जैन के नवग्रह मंदिर समूह में गुरु ग्रह (Jupiter) का प्रतिनिधित्व करता है। बृहस्पति देवगुरु हैं जो ज्ञान, धर्म, संतान एवं समृद्धि के कारक माने जाते हैं। गुरुवार को यहाँ विशेष पूजन किया जाता है और पीले रंग के पुष्प एवं चने की दाल का प्रसाद अर्पित किया जाता है।",
-        "en": "Brihaspati Mandir represents Jupiter (Guru) in Ujjain's Navagraha temple circuit. Brihaspati is the preceptor of the gods, governing knowledge, dharma, progeny, and prosperity. Thursdays are especially auspicious for worship here, with offerings of yellow flowers and yellow gram."
+    "thursday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30",
+      "en": "Approx. 5:30 AM – 9:30 PM"
     },
-    "history": {
-        "hi": "ऋग्वेद एवं विभिन्न पुराणों में बृहस्पति को देवताओं के गुरु के रूप में वर्णित किया गया है। उज्जैन की नवग्रह उपासना परंपरा में बृहस्पति मंदिर का विशेष स्थान है और स्कन्द पुराण के अवन्ति खण्ड में इस क्षेत्र के ग्रह-तीर्थों का उल्लेख मिलता है। वैदिक ज्योतिष में गुरु ग्रह को नवग्रहों में सर्वाधिक शुभ माना जाता है, जो विवाह, संतान एवं शिक्षा का कारक है। उज्जैन में प्रत्येक सिंहस्थ कुंभ के अवसर पर बृहस्पति के वृश्चिक राशि में प्रवेश की खगोलीय घटना विशेष महत्त्व रखती है। इस मंदिर में गुरु की साढ़ेसाती एवं ढैया के दुष्प्रभाव निवारण हेतु अनेक भक्त पूजन-पाठ करते हैं।",
-        "en": "Brihaspati (Jupiter) is described as the preceptor of the gods in the Rigveda and various Puranas. The Brihaspati Mandir holds a special place in Ujjain's Navagraha worship tradition, with the Avanti Khanda of the Skanda Purana referencing the planetary shrines of this region. In Vedic astrology, Jupiter is considered the most benevolent of all nine planets, governing marriage, progeny, and education. Ujjain's famous Simhastha Kumbh Mela is itself determined by Jupiter's entry into Scorpio, highlighting the city's deep Jovian connection. Many devotees worship here seeking relief from the challenging periods of Jupiter's Sadhesati and Dhaiyya."
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "localBeliefs": {
-        "hi": "स्थानीय मान्यता है कि गुरुवार को बृहस्पति देव के दर्शन करने से कुंडली में कमजोर गुरु ग्रह बलवान होता है और विवाह में आ रही बाधाएँ दूर होती हैं। उज्जैनवासी विशेष रूप से संतान प्राप्ति, शिक्षा में सफलता एवं वैवाहिक सुख हेतु यहाँ पीला वस्त्र धारण कर पूजन करते हैं। कई परिवार बच्चों के मुण्डन या विद्यारंभ संस्कार से पहले यहाँ माथा टेकना शुभ मानते हैं।",
-        "en": "Locals believe that darshan on Thursdays strengthens a weak Jupiter in one's birth chart and removes obstacles in marriage. Ujjain residents often wear yellow garments and offer prayers here for childbirth, academic success, and marital harmony. Many families consider it auspicious to bow here before performing a child's mundan or vidyarambh ceremony."
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "specialFacts": {
-        "hi": "क्या आप जानते हैं? उज्जैन का प्रसिद्ध सिंहस्थ कुंभ मेला तभी आयोजित होता है जब बृहस्पति ग्रह सिंह राशि में प्रवेश करता है, इसीलिए इसे 'सिंहस्थ' कहा जाता है। उज्जैन को प्राचीन काल से ज्योतिष की राजधानी माना जाता है, और यहाँ का देशांतर रेखा (कर्क रेखा) भी बृहस्पति की गणनाओं से जुड़ी है।",
-        "en": "Did you know? Ujjain's famous Simhastha Kumbh Mela is held precisely when Jupiter enters Leo (Simha) — that is why it is called 'Simhastha'. Ujjain has been regarded as India's astronomical capital since ancient times, and the Tropic of Cancer passes near here, tying the city directly to Jovian planetary calculations."
-    },
-    "visitTips": {
-        "hi": "गुरुवार को यहाँ दर्शन सर्वश्रेष्ठ माना जाता है — पीले वस्त्र पहनकर आएं और चने की दाल, गुड़, पीले पुष्प तथा हल्दी का प्रसाद साथ लाएं। मंदिर महाकालेश्वर क्षेत्र में होने से महाकाल दर्शन के साथ ही इसे जोड़ लें। ग्रीष्मकाल में सुबह जल्दी आएं, और पैदल चलने के लिए आरामदायक चप्पल पहनें।",
-        "en": "Thursdays are the most auspicious day for darshan — wear yellow clothes and carry offerings of yellow gram (chana dal), jaggery, yellow flowers, and turmeric. Since the temple lies within the Mahakal precinct, combine your visit with Mahakaleshwar darshan. In summer, arrive early morning, and wear comfortable footwear since the area requires walking."
-    },
-    "darshanTimingSummary": {
-        "hi": "प्रातः 6:00 – रात्रि 9:00",
-        "en": "6:00 AM – 9:00 PM"
-    },
-    "weeklyTiming": {
-        "monday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "tuesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "wednesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "thursday": {
-            "hi": "प्रातः 5:30 – रात्रि 9:30",
-            "en": "5:30 AM – 9:30 PM"
-        },
-        "friday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "saturday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "sunday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        }
-    },
-    "aartiTiming": {
-        "hi": "प्रातः आरती 6:30 · संध्या आरती 7:00",
-        "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-    },
-    "entryFee": {
-        "hi": "निःशुल्क",
-        "en": "Free entry"
-    },
-    "address": {
-        "hi": "बृहस्पति मन्दिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-        "en": "Brihaspati Mandir, Mahakal Area, Ujjain, Madhya Pradesh 456006"
-    },
-    "geo": {
-        "lat": 23.1825,
-        "lng": 75.7688
-    },
-    "photos": [
-        "/images/mandirs/shiva-variety-11.jpg"
-    ],
-    "howToReach": {
-        "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
-        "en": "This temple is approximately 0.3 km from Mahakaleshwar Temple in the Mahakal Area. It is easily accessible by auto-rickshaw from Ujjain Railway Station."
-    },
-    "faqs": [
-        {
-            "question": {
-                "hi": "बृहस्पति मंदिर में दर्शन का सर्वश्रेष्ठ दिन कौन सा है?",
-                "en": "Which is the best day to visit Brihaspati Mandir?"
-            },
-            "answer": {
-                "hi": "गुरुवार बृहस्पति देव का दिन माना जाता है, इसलिए इस दिन दर्शन एवं पूजन का विशेष महत्त्व है। इस दिन पीले वस्त्र पहनकर आना शुभ माना जाता है।",
-                "en": "Thursday is dedicated to Brihaspati (Guru), making it the most auspicious day for darshan and worship. Devotees traditionally wear yellow attire on this day."
-            }
-        },
-        {
-            "question": {
-                "hi": "बृहस्पति देव को कौन सा प्रसाद चढ़ाया जाता है?",
-                "en": "What offerings are made to Brihaspati Dev?"
-            },
-            "answer": {
-                "hi": "बृहस्पति देव को पीले पुष्प, चने की दाल, गुड़, हल्दी एवं केले अर्पित किए जाते हैं। पीला रंग गुरु ग्रह का प्रतीक है इसलिए सभी प्रसाद पीले रंग के होते हैं।",
-                "en": "Yellow flowers, yellow gram (chana dal), jaggery, turmeric, and bananas are typically offered. Yellow is the colour associated with Jupiter, so most offerings reflect this hue."
-            }
-        },
-        {
-            "question": {
-                "hi": "क्या यह मंदिर महाकालेश्वर दर्शन के साथ देखा जा सकता है?",
-                "en": "Can this temple be visited along with Mahakaleshwar darshan?"
-            },
-            "answer": {
-                "hi": "हाँ, बृहस्पति मंदिर महाकालेश्वर मंदिर से मात्र 0.3 किमी दूर है, इसलिए दोनों के दर्शन एक ही यात्रा में सहजता से किए जा सकते हैं।",
-                "en": "Yes, Brihaspati Mandir is only about 0.3 km from Mahakaleshwar Temple, so both can comfortably be covered in a single visit."
-            }
-        },
-        {
-            "question": {
-                "hi": "बृहस्पति पूजन से कौन से लाभ माने जाते हैं?",
-                "en": "What benefits are associated with Brihaspati worship?"
-            },
-            "answer": {
-                "hi": "मान्यता है कि बृहस्पति पूजन से ज्ञान, संतान सुख, वैवाहिक सुख एवं आर्थिक समृद्धि प्राप्त होती है। कुंडली में कमजोर गुरु ग्रह को बल मिलता है और साढ़ेसाती-ढैया के दुष्प्रभाव कम होते हैं।",
-                "en": "Brihaspati worship is believed to bestow wisdom, progeny, marital happiness, and prosperity. It is also said to strengthen a weak Jupiter in one's horoscope and ease the effects of Sadhesati and Dhaiyya."
-            }
-        }
-    ],
-    "nearbyMandirs": [
-        "trivikram-mandir",
-        "navgraha-mandir-ujjain",
-        "bade-ganesh-ji"
-    ],
-    "lastVerified": "2026-05-31",
-    "primaryKeyword": {
-        "hi": "बृहस्पति मन्दिर उज्जैन",
-        "en": "Brihaspati Mandir Ujjain"
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "बृहस्पति मन्दिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Brihaspati Mandir, Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1825,
+    "lng": 75.7688
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-11.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+    "en": "This temple is approximately 0.3 km from Mahakaleshwar Temple in the Mahakal Area. It is easily accessible by auto-rickshaw from Ujjain Railway Station."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "बृहस्पति मंदिर में दर्शन का सर्वश्रेष्ठ दिन कौन सा है?",
+        "en": "Which is the best day to visit Brihaspati Mandir?"
+      },
+      "answer": {
+        "hi": "गुरुवार बृहस्पति देव का दिन माना जाता है, इसलिए इस दिन दर्शन एवं पूजन का विशेष महत्त्व है। इस दिन पीले वस्त्र पहनकर आना शुभ माना जाता है।",
+        "en": "Thursday is dedicated to Brihaspati (Guru), making it the most auspicious day for darshan and worship. Devotees traditionally wear yellow attire on this day."
+      }
+    },
+    {
+      "question": {
+        "hi": "बृहस्पति देव को कौन सा प्रसाद चढ़ाया जाता है?",
+        "en": "What offerings are made to Brihaspati Dev?"
+      },
+      "answer": {
+        "hi": "बृहस्पति देव को पीले पुष्प, चने की दाल, गुड़, हल्दी एवं केले अर्पित किए जाते हैं। पीला रंग गुरु ग्रह का प्रतीक है इसलिए सभी प्रसाद पीले रंग के होते हैं।",
+        "en": "Yellow flowers, yellow gram (chana dal), jaggery, turmeric, and bananas are typically offered. Yellow is the colour associated with Jupiter, so most offerings reflect this hue."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या यह मंदिर महाकालेश्वर दर्शन के साथ देखा जा सकता है?",
+        "en": "Can this temple be visited along with Mahakaleshwar darshan?"
+      },
+      "answer": {
+        "hi": "हाँ, बृहस्पति मंदिर महाकालेश्वर मंदिर से मात्र 0.3 किमी दूर है, इसलिए दोनों के दर्शन एक ही यात्रा में सहजता से किए जा सकते हैं।",
+        "en": "Yes, Brihaspati Mandir is only about 0.3 km from Mahakaleshwar Temple, so both can comfortably be covered in a single visit."
+      }
+    },
+    {
+      "question": {
+        "hi": "बृहस्पति पूजन से कौन से लाभ माने जाते हैं?",
+        "en": "What benefits are associated with Brihaspati worship?"
+      },
+      "answer": {
+        "hi": "मान्यता है कि बृहस्पति पूजन से ज्ञान, संतान सुख, वैवाहिक सुख एवं आर्थिक समृद्धि प्राप्त होती है। कुंडली में कमजोर गुरु ग्रह को बल मिलता है और साढ़ेसाती-ढैया के दुष्प्रभाव कम होते हैं।",
+        "en": "Brihaspati worship is believed to bestow wisdom, progeny, marital happiness, and prosperity. It is also said to strengthen a weak Jupiter in one's horoscope and ease the effects of Sadhesati and Dhaiyya."
+      }
+    }
+  ],
+  "nearbyMandirs": [
+    "trivikram-mandir",
+    "navgraha-mandir-ujjain",
+    "bade-ganesh-ji"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "बृहस्पति मन्दिर उज्जैन",
+    "en": "Brihaspati Mandir Ujjain"
+  }
 }

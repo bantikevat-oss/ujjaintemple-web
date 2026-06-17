@@ -1,91 +1,90 @@
-﻿{
-    "slug":  "mahaganpati-mandir",
-    "name":  {
-                 "hi":  "महागणपति मंदिर",
-                 "en":  "Mahaganpati Mandir Ujjain"
-             },
-    "deity":  {
-                  "hi":  "भगवान गणेश (महागणपति)",
-                  "en":  "Lord Ganesha (Mahaganpati)"
-              },
-    "templeType":  "Ganesh",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल",
-                           "en":  "Ancient era"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "महागणपति मंदिर उज्जैन के महाकाल क्षेत्र में स्थित एक प्रमुख गणेश तीर्थ है। यहाँ विराजमान महागणपति की मूर्ति अत्यंत भव्य एवं चमत्कारी मानी जाती है। प्रत्येक बुधवार एवं चतुर्थी को यहाँ विशेष पूजा-अर्चना होती है।",
-                       "en":  "Mahaganpati Mandir is a prominent Ganesha shrine located in the sacred Mahakal Area of Ujjain. The idol of Mahaganpati enshrined here is considered highly auspicious and miraculous. Special worship is performed every Wednesday and on Chaturthi tithi."
-                   },
-    "history":  {
-                    "hi":  "महागणपति मंदिर की स्थापना प्राचीन काल में महाकालेश्वर क्षेत्र के निकट हुई थी। पुराणों में उज्जैन को गणपति की आराधना का विशेष स्थान बताया गया है। ऐसी मान्यता है कि महाकाल के दर्शन से पूर्व महागणपति की पूजा करने से यात्रा निर्विघ्न सम्पन्न होती है। स्थानीय परंपरा के अनुसार यह मंदिर कई शताब्दियों से श्रद्धालुओं की आस्था का केंद्र रहा है। गणेश चतुर्थी उत्सव पर यहाँ विशाल मेले का आयोजन होता है।",
-                    "en":  "Mahaganpati Mandir was established in antiquity near the sacred Mahakaleshwar precinct of Ujjain. The Puranas designate Ujjain as a special seat of Ganesha worship within the Avanti region. It is traditionally believed that offering prayers to Mahaganpati before visiting Mahakaleshwar ensures a successful and obstacle-free pilgrimage. According to local tradition, this temple has been a centre of devotion for several centuries. A large fair is held here during the Ganesh Chaturthi festival each year."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 5:30 – रात्रि 9:30",
-                                           "en":  "5:30 AM – 9:30 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1834,
-                "lng":  75.7688
-            },
-    "photos": ["/images/mandirs/bade-ganesh-ji.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 200 metres from Mahakaleshwar Mandir. From Ujjain Railway Station, it can be reached in about 15 minutes by auto-rickshaw or cycle-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "महागणपति मंदिर उज्जैन",
-                           "en":  "Mahaganpati Mandir Ujjain"
-                       }
+{
+  "slug": "mahaganpati-mandir",
+  "name": {
+    "hi": "महागणपति मंदिर",
+    "en": "Mahaganpati Mandir Ujjain"
+  },
+  "deity": {
+    "hi": "भगवान गणेश (महागणपति)",
+    "en": "Lord Ganesha (Mahaganpati)"
+  },
+  "templeType": "Ganesh",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल",
+    "en": "Ancient era"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "महागणपति मंदिर उज्जैन के महाकाल क्षेत्र में स्थित एक प्रमुख गणेश तीर्थ है। यहाँ विराजमान महागणपति की मूर्ति अत्यंत भव्य एवं चमत्कारी मानी जाती है। प्रत्येक बुधवार एवं चतुर्थी को यहाँ विशेष पूजा-अर्चना होती है।",
+    "en": "Mahaganpati Mandir is a prominent Ganesha shrine located in the sacred Mahakal Area of Ujjain. The idol of Mahaganpati enshrined here is considered highly auspicious and miraculous. Special worship is performed every Wednesday and on Chaturthi tithi."
+  },
+  "history": {
+    "hi": "महागणपति मंदिर की स्थापना प्राचीन काल में महाकालेश्वर क्षेत्र के निकट हुई थी। पुराणों में उज्जैन को गणपति की आराधना का विशेष स्थान बताया गया है। ऐसी मान्यता है कि महाकाल के दर्शन से पूर्व महागणपति की पूजा करने से यात्रा निर्विघ्न सम्पन्न होती है। स्थानीय परंपरा के अनुसार यह मंदिर कई शताब्दियों से श्रद्धालुओं की आस्था का केंद्र रहा है। गणेश चतुर्थी उत्सव पर यहाँ विशाल मेले का आयोजन होता है।",
+    "en": "Mahaganpati Mandir was established in antiquity near the sacred Mahakaleshwar precinct of Ujjain. The Puranas designate Ujjain as a special seat of Ganesha worship within the Avanti region. It is traditionally believed that offering prayers to Mahaganpati before visiting Mahakaleshwar ensures a successful and obstacle-free pilgrimage. According to local tradition, this temple has been a centre of devotion for several centuries. A large fair is held here during the Ganesh Chaturthi festival each year."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30",
+      "en": "Approx. 5:30 AM – 9:30 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1834,
+    "lng": 75.7688
+  },
+  "photos": [
+    "/images/mandirs/bade-ganesh-ji.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 200 metres from Mahakaleshwar Mandir. From Ujjain Railway Station, it can be reached in about 15 minutes by auto-rickshaw or cycle-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "महागणपति मंदिर उज्जैन",
+    "en": "Mahaganpati Mandir Ujjain"
+  }
 }

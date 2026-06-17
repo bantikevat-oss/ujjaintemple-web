@@ -12,8 +12,8 @@
   "locationArea": "Bhairavgarh",
   "isFeatured": true,
   "establishedEra": {
-    "hi": "स्कंद पुराण में उल्लेख · वर्तमान संरचना 18वीं सदी मराठा युग",
-    "en": "Mentioned in Skanda Purana · present structure rebuilt in 18th century Maratha era"
+    "hi": "स्कंद पुराण में उल्लेख · वर्तमान संरचना मराठा युग",
+    "en": "Mentioned in Skanda Purana · present structure from Maratha era"
   },
   "architectureStyle": "Maratha",
   "shortIntro": {
@@ -25,41 +25,41 @@
     "en": "The Avantikhand of Skanda Purana mentions Kal Bhairav. Tradition holds Lord Shiva took this fierce form to protect Avantika. The original temple is ancient; the present structure was rebuilt during Maratha rule (18th century). The idol features a silver crown, large eyes, and a sindoor-coated black body. Local belief: a darshan at Mahakal is considered incomplete without visiting Kal Bhairav."
   },
   "darshanTimingSummary": {
-    "hi": "प्रातः 6:00 – रात्रि 9:00",
-    "en": "6:00 AM – 9:00 PM"
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
   },
   "weeklyTiming": {
     "monday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00",
-      "en": "6:00 AM – 9:00 PM"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "tuesday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
-      "en": "6:00 AM – 9:00 PM (busy day)"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "Approx. 6:00 AM – 9:00 PM (busy day)"
     },
     "wednesday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00",
-      "en": "6:00 AM – 9:00 PM"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "thursday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00",
-      "en": "6:00 AM – 9:00 PM"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "friday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00",
-      "en": "6:00 AM – 9:00 PM"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "saturday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00",
-      "en": "6:00 AM – 9:00 PM"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "sunday": {
-      "hi": "प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
-      "en": "6:00 AM – 9:00 PM (busy day)"
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "en": "Approx. 6:00 AM – 9:00 PM (busy day)"
     }
   },
   "aartiTiming": {
-    "hi": "प्रातः आरती 7:00 · संध्या आरती 7:00",
+    "hi": "लगभग प्रातः आरती 7:00 · संध्या आरती 7:00",
     "en": "Morning aarti 7:00 AM · Evening aarti 7:00 PM"
   },
   "specialOccasions": {

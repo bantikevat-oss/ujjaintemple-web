@@ -1,92 +1,90 @@
-﻿{
-    "slug":  "panchmukhi-hanuman-mandir",
-    "name":  {
-                 "hi":  "पंचमुखी हनुमान मंदिर",
-                 "en":  "Panchmukhi Hanuman Mandir"
-             },
-    "deity":  {
-                  "hi":  "पंचमुखी हनुमान (पाँच मुख वाले)",
-                  "en":  "Panchmukhi (Five-Faced) Hanuman"
-              },
-    "templeType":  "Ram",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल",
-                           "en":  "Ancient era"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "पंचमुखी हनुमान मंदिर महाकाल क्षेत्र में स्थित एक अत्यंत शक्तिशाली हनुमान तीर्थ है। यहाँ हनुमान जी के पाँच मुखों वाले दिव्य रूप — हनुमान, नरसिंह, गरुड़, वराह और हयग्रीव — की पूजा होती है। पंचमुखी हनुमान की उपासना सर्वसिद्धिदायक मानी जाती है।",
-                       "en":  "Panchmukhi Hanuman Mandir is a highly potent Hanuman shrine in the Mahakal Area of Ujjain. The five-faced divine form of Hanuman venerated here comprises the faces of Hanuman, Narasimha, Garuda, Varaha and Hayagriva. Worship of Panchmukhi Hanuman is believed to grant all spiritual accomplishments."
-                   },
-    "history":  {
-                    "hi":  "पंचमुखी हनुमान का स्वरूप रामायण की परंपरा से जुड़ा है जिसमें हनुमान जी ने लंका में अहिरावण का वध करने के लिए पाँच मुखों वाला दिव्य रूप धारण किया था। इस स्वरूप में हनुमान के पाँच मुख पाँच दिशाओं के रक्षक हैं। उज्जैन जैसे महातीर्थ में इस शक्तिशाली स्वरूप की उपासना का विशेष महात्म्य है। महाकाल क्षेत्र में स्थित होने के कारण यह मंदिर महाकाल परिक्रमा मार्ग पर एक महत्वपूर्ण तीर्थ है। मंगलवार और शनिवार को यहाँ विशेष पूजा एवं हनुमान चालीसा पाठ का आयोजन होता है।",
-                    "en":  "The Panchmukhi form of Hanuman is rooted in the Ramayana tradition, in which Hanuman assumed five faces to slay Ahiravana in Lanka. Each of the five faces of this form guards one of the five directions. Worship of this powerful form carries special significance in the great pilgrimage city of Ujjain. Located within the Mahakal Area, this temple is an important stop on the Mahakal parikrama route. Special puja and Hanumaan Chalisa recitations are organised here every Tuesday and Saturday."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 5:30 – रात्रि 9:30",
-                                         "en":  "5:30 AM – 9:30 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 5:30 – रात्रि 9:30",
-                                          "en":  "5:30 AM – 9:30 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1825,
-                "lng":  75.7675
-            },
-    "photos":  [
-                   "/images/mandirs/panchmukhi-hanuman-mandir.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 400 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या साइकिल-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 400 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto or cycle-rickshaw from Ujjain Railway Station."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "पंचमुखी हनुमान मंदिर उज्जैन",
-                           "en":  "Panchmukhi Hanuman Mandir Ujjain"
-                       }
+{
+  "slug": "panchmukhi-hanuman-mandir",
+  "name": {
+    "hi": "पंचमुखी हनुमान मंदिर",
+    "en": "Panchmukhi Hanuman Mandir"
+  },
+  "deity": {
+    "hi": "पंचमुखी हनुमान (पाँच मुख वाले)",
+    "en": "Panchmukhi (Five-Faced) Hanuman"
+  },
+  "templeType": "Ram",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल",
+    "en": "Ancient era"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "पंचमुखी हनुमान मंदिर महाकाल क्षेत्र में स्थित एक अत्यंत शक्तिशाली हनुमान तीर्थ है। यहाँ हनुमान जी के पाँच मुखों वाले दिव्य रूप — हनुमान, नरसिंह, गरुड़, वराह और हयग्रीव — की पूजा होती है। पंचमुखी हनुमान की उपासना सर्वसिद्धिदायक मानी जाती है।",
+    "en": "Panchmukhi Hanuman Mandir is a highly potent Hanuman shrine in the Mahakal Area of Ujjain. The five-faced divine form of Hanuman venerated here comprises the faces of Hanuman, Narasimha, Garuda, Varaha and Hayagriva. Worship of Panchmukhi Hanuman is believed to grant all spiritual accomplishments."
+  },
+  "history": {
+    "hi": "पंचमुखी हनुमान का स्वरूप रामायण की परंपरा से जुड़ा है जिसमें हनुमान जी ने लंका में अहिरावण का वध करने के लिए पाँच मुखों वाला दिव्य रूप धारण किया था। इस स्वरूप में हनुमान के पाँच मुख पाँच दिशाओं के रक्षक हैं। उज्जैन जैसे महातीर्थ में इस शक्तिशाली स्वरूप की उपासना का विशेष महात्म्य है। महाकाल क्षेत्र में स्थित होने के कारण यह मंदिर महाकाल परिक्रमा मार्ग पर एक महत्वपूर्ण तीर्थ है। मंगलवार और शनिवार को यहाँ विशेष पूजा एवं हनुमान चालीसा पाठ का आयोजन होता है।",
+    "en": "The Panchmukhi form of Hanuman is rooted in the Ramayana tradition, in which Hanuman assumed five faces to slay Ahiravana in Lanka. Each of the five faces of this form guards one of the five directions. Worship of this powerful form carries special significance in the great pilgrimage city of Ujjain. Located within the Mahakal Area, this temple is an important stop on the Mahakal parikrama route. Special puja and Hanumaan Chalisa recitations are organised here every Tuesday and Saturday."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30",
+      "en": "Approx. 5:30 AM – 9:30 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30",
+      "en": "Approx. 5:30 AM – 9:30 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1825,
+    "lng": 75.7675
+  },
+  "photos": [
+    "/images/mandirs/panchmukhi-hanuman-mandir.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 400 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या साइकिल-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 400 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto or cycle-rickshaw from Ujjain Railway Station."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "पंचमुखी हनुमान मंदिर उज्जैन",
+    "en": "Panchmukhi Hanuman Mandir Ujjain"
+  }
 }

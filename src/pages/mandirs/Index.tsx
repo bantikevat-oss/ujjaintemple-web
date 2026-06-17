@@ -45,8 +45,8 @@ export function MandirIndex() {
     ? `उज्जैन के ${mandirs.length}+ प्रमुख मन्दिर — सत्यापित दर्शन समय, इतिहास, फ़ोटो (2026 अद्यतन)`
     : `${mandirs.length}+ Major Temples of Ujjain — Verified Timings, History, Photos (2026 Updated)`;
   const description = locale === 'hi'
-    ? `उज्जैन के सभी प्रमुख मन्दिरों की पूरी सूची — महाकालेश्वर, काल भैरव, मंगलनाथ, चिंतामण गणेश, हरसिद्धि माता। सत्यापित दर्शन समय, इतिहास, फ़ोटो। ByteFlow सम्पादकीय द्वारा 31 मई 2026 को सत्यापित। यात्रा सहायता: ${SITE.phone}`
-    : `Complete list of all major Ujjain temples — Mahakaleshwar, Kal Bhairav, Mangalnath, Chintaman Ganesh, Harsiddhi Mata. Verified darshan timings, history, photos. Editorial verified 31 May 2026 by ByteFlow. Plan: ${SITE.phone}`;
+    ? `उज्जैन के सभी प्रमुख मन्दिरों की पूरी सूची — महाकालेश्वर, काल भैरव, मंगलनाथ, चिंतामण गणेश, हरसिद्धि माता। सत्यापित दर्शन समय, इतिहास, फ़ोटो। यात्रा सहायता: ${SITE.phone}`
+    : `Complete list of all major Ujjain temples — Mahakaleshwar, Kal Bhairav, Mangalnath, Chintaman Ganesh, Harsiddhi Mata. Verified darshan timings, history, photos. Plan: ${SITE.phone}`;
 
   const filtered = useMemo(() => {
     let result = typeFilter === 'all' ? mandirs : mandirs.filter((m) => m.templeType === typeFilter);
@@ -128,7 +128,7 @@ export function MandirIndex() {
                   : `From Mahakaleshwar to Kal Bhairav — verified information on ${mandirs.length}+ major temples of Ujjain. Darshan timings · history · photos · directions.`}
               </p>
               <div className="mt-5 flex items-center justify-center gap-3 text-xs text-gold/80">
-                <span>{locale === 'hi' ? 'ByteFlow सम्पादकीय द्वारा सत्यापित' : 'Verified by ByteFlow editorial'}</span>
+                <span>{locale === 'hi' ? 'स्थानीय स्रोतों से सत्यापित' : 'Verified from local sources'}</span>
                 <span>·</span>
                 <span>{locale === 'hi' ? 'अद्यतन 31 मई 2026' : 'Updated 31 May 2026'}</span>
               </div>

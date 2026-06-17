@@ -1,92 +1,90 @@
-﻿{
-    "slug":  "iskcon-ujjain",
-    "name":  {
-                 "hi":  "इस्कॉन मंदिर उज्जैन",
-                 "en":  "ISKCON Sri Sri Radha Madanmohan Temple"
-             },
-    "deity":  {
-                  "hi":  "श्री श्री राधा मदनमोहन (भगवान श्रीकृष्ण)",
-                  "en":  "Radha Madanmohan (Lord Krishna)"
-              },
-    "templeType":  "Krishna",
-    "locationArea":  "Nanakheda",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "आधुनिक काल (21वीं शताब्दी)",
-                           "en":  "Modern Era (21st Century)"
-                       },
-    "architectureStyle":  "ISKCON Traditional",
-    "shortIntro":  {
-                       "hi":  "इस्कॉन मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित एक भव्य एवं आधुनिक वैष्णव मंदिर है जहाँ श्री श्री राधा मदनमोहन की पूजा होती है। यह मंदिर श्रील प्रभुपाद द्वारा स्थापित इस्कॉन संस्था के अंतर्गत संचालित होता है और यहाँ वैदिक जीवन-शैली, भागवत प्रवचन एवं प्रसाद वितरण की समृद्ध परंपरा है। जन्माष्टमी पर यहाँ विशाल उत्सव होता है।",
-                       "en":  "The ISKCON temple in Ujjain\u0027s Nanakheda area is a grand modern Vaishnava shrine dedicated to Sri Sri Radha Madanmohan. Operating under the International Society for Krishna Consciousness founded by Srila Prabhupada, the temple offers daily Vedic worship, Bhagavat discourses, and free prasadam distribution. Janmashtami is celebrated here with great splendour."
-                   },
-    "history":  {
-                    "hi":  "इस्कॉन (अंतर्राष्ट्रीय कृष्ण भावनामृत संघ) की स्थापना 1966 में श्रील अभयचरणारविन्द भक्तिवेदांत स्वामी प्रभुपाद ने की थी जिसका उद्देश्य भागवत गीता एवं श्रीमद्भागवत के सनातन सन्देश को विश्वभर में फैलाना था। उज्जैन में इस्कॉन मंदिर की स्थापना 21वीं शताब्दी में हुई जो इस पवित्र तीर्थ नगर में गौड़ीय वैष्णव परंपरा को एक नई पहचान देती है। मदनमोहन का अर्थ है \u0027मन को मोहने वाले\u0027 जो श्रीकृष्ण का वह स्वरूप है जो भक्तों के चित्त को पूर्णतः आकर्षित कर लेते हैं। यह मंदिर प्रतिदिन भागवत गीता कक्षाओं, भजन-कीर्तन एवं निःशुल्क प्रसाद के माध्यम से हजारों भक्तों की सेवा करता है।",
-                    "en":  "ISKCON (International Society for Krishna Consciousness) was founded in 1966 by Srila A.C. Bhaktivedanta Swami Prabhupada with the mission of spreading the eternal message of Bhagavad Gita and Srimad Bhagavatam worldwide. The ISKCON temple in Ujjain was established in the 21st century, bringing the Gaudiya Vaishnava tradition into this ancient pilgrimage city with renewed vigour. \u0027Madanmohan\u0027 means \u0027the captivator of the mind,\u0027 the form of Krishna that completely enchants the hearts of devotees. The temple serves thousands of visitors daily through Bhagavad Gita classes, bhajan-kirtan sessions, and free prasadam distribution."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                 "en":  "4:30 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                        "en":  "4:30 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                         "en":  "4:30 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                           "en":  "4:30 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                          "en":  "4:30 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                        "en":  "4:30 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                          "en":  "4:30 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 4:30 – रात्रि 9:00",
-                                        "en":  "4:30 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "मंगला आरती 4:30 · श्रृंगार 7:30 · राजभोग 12:30 · उत्थापन 4:30 · संध्या 7:00 · शयन 8:30",
-                        "en":  "Mangala 4:30 AM · Shringar 7:30 AM · Rajbhog 12:30 PM · Utthapan 4:30 PM · Sandhya 7:00 PM · Shayana 8:30 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Nanakheda, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1742,
-                "lng":  75.7812
-            },
-    "photos":  [
-                   "/images/mandirs/iskcon-ujjain.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी दूर स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
-                       "en":  "The temple is approximately 2.5 km from Ujjain Railway Station. It is about 15 minutes by auto-rickshaw from Mahakaleshwar Temple."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "इस्कॉन मंदिर उज्जैन",
-                           "en":  "ISKCON Temple Ujjain"
-                       }
+{
+  "slug": "iskcon-ujjain",
+  "name": {
+    "hi": "इस्कॉन मंदिर उज्जैन",
+    "en": "ISKCON Sri Sri Radha Madanmohan Temple"
+  },
+  "deity": {
+    "hi": "श्री श्री राधा मदनमोहन (भगवान श्रीकृष्ण)",
+    "en": "Radha Madanmohan (Lord Krishna)"
+  },
+  "templeType": "Krishna",
+  "locationArea": "Nanakheda",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "आधुनिक काल",
+    "en": "Modern era"
+  },
+  "architectureStyle": "ISKCON Traditional",
+  "shortIntro": {
+    "hi": "इस्कॉन मंदिर उज्जैन के नानाखेड़ा क्षेत्र में स्थित एक भव्य एवं आधुनिक वैष्णव मंदिर है जहाँ श्री श्री राधा मदनमोहन की पूजा होती है। यह मंदिर श्रील प्रभुपाद द्वारा स्थापित इस्कॉन संस्था के अंतर्गत संचालित होता है और यहाँ वैदिक जीवन-शैली, भागवत प्रवचन एवं प्रसाद वितरण की समृद्ध परंपरा है। जन्माष्टमी पर यहाँ विशाल उत्सव होता है।",
+    "en": "The ISKCON temple in Ujjain's Nanakheda area is a grand modern Vaishnava shrine dedicated to Sri Sri Radha Madanmohan. Operating under the International Society for Krishna Consciousness founded by Srila Prabhupada, the temple offers daily Vedic worship, Bhagavat discourses, and free prasadam distribution. Janmashtami is celebrated here with great splendour."
+  },
+  "history": {
+    "hi": "इस्कॉन (अंतर्राष्ट्रीय कृष्ण भावनामृत संघ) की स्थापना 1966 में श्रील अभयचरणारविन्द भक्तिवेदांत स्वामी प्रभुपाद ने की थी जिसका उद्देश्य भागवत गीता एवं श्रीमद्भागवत के सनातन सन्देश को विश्वभर में फैलाना था। उज्जैन में इस्कॉन मंदिर की स्थापना 21वीं शताब्दी में हुई जो इस पवित्र तीर्थ नगर में गौड़ीय वैष्णव परंपरा को एक नई पहचान देती है। मदनमोहन का अर्थ है 'मन को मोहने वाले' जो श्रीकृष्ण का वह स्वरूप है जो भक्तों के चित्त को पूर्णतः आकर्षित कर लेते हैं। यह मंदिर प्रतिदिन भागवत गीता कक्षाओं, भजन-कीर्तन एवं निःशुल्क प्रसाद के माध्यम से हजारों भक्तों की सेवा करता है।",
+    "en": "ISKCON (International Society for Krishna Consciousness) was founded in 1966 by Srila A.C. Bhaktivedanta Swami Prabhupada with the mission of spreading the eternal message of Bhagavad Gita and Srimad Bhagavatam worldwide. The ISKCON temple in Ujjain was established in the 21st century, bringing the Gaudiya Vaishnava tradition into this ancient pilgrimage city with renewed vigour. 'Madanmohan' means 'the captivator of the mind,' the form of Krishna that completely enchants the hearts of devotees. The temple serves thousands of visitors daily through Bhagavad Gita classes, bhajan-kirtan sessions, and free prasadam distribution."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+    "en": "Approx. 4:30 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 4:30 – रात्रि 9:00",
+      "en": "Approx. 4:30 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "मंगला आरती 4:30 · श्रृंगार 7:30 · राजभोग 12:30 · उत्थापन 4:30 · संध्या 7:00 · शयन 8:30",
+    "en": "Mangala 4:30 AM · Shringar 7:30 AM · Rajbhog 12:30 PM · Utthapan 4:30 PM · Sandhya 7:00 PM · Shayana 8:30 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "नानाखेड़ा, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Nanakheda, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1742,
+    "lng": 75.7812
+  },
+  "photos": [
+    "/images/mandirs/iskcon-ujjain.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2.5 किमी दूर स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 2.5 km from Ujjain Railway Station. It is about 15 minutes by auto-rickshaw from Mahakaleshwar Temple."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "इस्कॉन मंदिर उज्जैन",
+    "en": "ISKCON Temple Ujjain"
+  }
 }

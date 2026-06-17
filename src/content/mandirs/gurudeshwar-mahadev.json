@@ -1,134 +1,134 @@
 {
-    "slug": "gurudeshwar-mahadev",
-    "name": {
-        "hi": "गुरुदेश्वर महादेव",
-        "en": "Gurudeshwar Mahadev (84 Mahadevas)"
+  "slug": "gurudeshwar-mahadev",
+  "name": {
+    "hi": "गुरुदेश्वर महादेव",
+    "en": "Gurudeshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (गुरुदेश्वर रूप — गुरुओं के ईश्वर)",
+    "en": "Lord Shiva as Gurudeshwar (Lord of Gurus)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन काल (स्कन्द पुराण संदर्भित)",
+    "en": "Ancient era (referenced in Skanda Purana)"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "गुरुदेश्वर महादेव उज्जैन के 84 महादेव क्षेत्रों में एक विशिष्ट तीर्थ है जहाँ शिव 'गुरुओं के ईश्वर' के रूप में पूजित हैं। महाकाल क्षेत्र में स्थित यह मंदिर ज्ञान, विद्या और गुरु-शिष्य परम्परा से जुड़ा है। स्कन्द पुराण के अवन्ति खण्ड में इस तीर्थ का उल्लेख है।",
+    "en": "Gurudeshwar Mahadev is a distinctive shrine in the 84 Mahadevas of Ujjain, where Shiva is worshipped as the lord of gurus. Located in the Mahakal Area, this temple is associated with knowledge, learning, and the guru-disciple tradition. The Avanti Khanda of the Skanda Purana mentions this tirtha."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ति खण्ड में गुरुदेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। शिव आदिगुरु हैं — दक्षिणामूर्ति के रूप में वे समस्त ज्ञान के स्रोत हैं — इस शिवलिंग को 'गुरुदेश्वर' की संज्ञा इसी परम्परा से मिली है। उज्जैन प्राचीन काल से विद्या और शास्त्र का केन्द्र रहा है जहाँ स्वयं भगवान श्रीकृष्ण ने गुरु सान्दीपनि के आश्रम में शिक्षा ग्रहण की थी। मान्यता है कि देवताओं और ऋषियों ने भी यहाँ आकर गुरु-तत्त्व की उपासना की थी। इस पृष्ठभूमि में गुरुदेश्वर महादेव का विशेष महत्त्व है। परम्परागत रूप से विद्यार्थी और गुरुजन इस मंदिर में आशीर्वाद लेने आते हैं तथा गुरु पूर्णिमा पर यहाँ विशेष पूजा-अर्चना होती है।",
+    "en": "The Avanti Khanda of the Skanda Purana includes Gurudeshwar Mahadev among the 84 Mahadevas of Avantika. Shiva is the Adi Guru — as Dakshinamurti he is the source of all knowledge — and this Shivalinga received the name Gurudeshwar from this tradition. Ujjain has been a centre of learning since ancient times, where Lord Krishna himself studied at Guru Sandipani's ashram. It is believed that devas and rishis also visited this site to worship the guru-principle. Gurudeshwar Mahadev holds special significance in this backdrop. Traditionally, students and teachers come to this temple to seek blessings, and Guru Purnima sees special worship at this shrine."
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय मान्यता है कि गुरुदेश्वर महादेव के दर्शन से विद्या, बुद्धि और एकाग्रता का आशीर्वाद प्राप्त होता है। परीक्षा से पूर्व विद्यार्थी यहाँ बेलपत्र और सफ़ेद पुष्प अर्पित करते हैं तथा सही गुरु की प्राप्ति के लिए प्रार्थना करते हैं। माना जाता है कि सच्चे मन से की गई प्रार्थना से जीवन में योग्य मार्गदर्शक मिलते हैं।",
+    "en": "Locals believe that darshan at Gurudeshwar Mahadev bestows the blessings of learning, wisdom, and concentration. Before examinations, students offer bel leaves and white flowers here and pray for the right teacher to enter their lives. It is held that sincere prayers at this shrine lead one to worthy mentors and guides."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? गुरुदेश्वर महादेव उज्जैन के उन गिने-चुने तीर्थों में से है जहाँ शिव को विशेष रूप से 'गुरु' के रूप में पूजा जाता है — जो दक्षिणामूर्ति परम्परा का दुर्लभ रूप है। यह मंदिर महाकालेश्वर ज्योतिर्लिंग से मात्र कुछ ही कदम की दूरी पर स्थित होने के कारण 84 महादेव यात्रा के आरंभिक पड़ावों में आता है।",
+    "en": "Did you know? Gurudeshwar Mahadev is among the few shrines in Ujjain where Shiva is specifically worshipped as the Guru — a rare form linked to the Dakshinamurti tradition. Being just a short walk from the Mahakaleshwar Jyotirlinga, this temple is one of the early stops on the 84 Mahadev pilgrimage circuit."
+  },
+  "visitTips": {
+    "hi": "सादे और शालीन वस्त्र पहनकर आएँ; मंदिर परिसर में प्रवेश से पूर्व जूते-चप्पल बाहर उतारें। दर्शन के लिए प्रातःकाल या संध्या आरती का समय सर्वोत्तम है क्योंकि भीड़ कम होती है। बेलपत्र, सफ़ेद फूल और जल का छोटा पात्र साथ रखें; गर्मियों में पानी की बोतल और छाता अवश्य लाएँ।",
+    "en": "Wear modest, traditional attire and remove footwear before entering the shrine. Early morning or evening aarti hours offer the calmest darshan with fewer crowds. Carry bel leaves, white flowers, and a small water pot for offering; in summer, bring a water bottle and an umbrella for the short walk from Mahakal."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "deity": {
-        "hi": "भगवान शिव (गुरुदेश्वर रूप — गुरुओं के ईश्वर)",
-        "en": "Lord Shiva as Gurudeshwar (Lord of Gurus)"
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "templeType": "Shiva",
-    "locationArea": "Mahakal Area",
-    "isFeatured": false,
-    "establishedEra": {
-        "hi": "पुरातन काल (स्कन्द पुराण संदर्भित)",
-        "en": "Ancient era (referenced in Skanda Purana)"
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "architectureStyle": "Paramara",
-    "shortIntro": {
-        "hi": "गुरुदेश्वर महादेव उज्जैन के 84 महादेव क्षेत्रों में एक विशिष्ट तीर्थ है जहाँ शिव 'गुरुओं के ईश्वर' के रूप में पूजित हैं। महाकाल क्षेत्र में स्थित यह मंदिर ज्ञान, विद्या और गुरु-शिष्य परम्परा से जुड़ा है। स्कन्द पुराण के अवन्ति खण्ड में इस तीर्थ का उल्लेख है।",
-        "en": "Gurudeshwar Mahadev is a distinctive shrine in the 84 Mahadevas of Ujjain, where Shiva is worshipped as the lord of gurus. Located in the Mahakal Area, this temple is associated with knowledge, learning, and the guru-disciple tradition. The Avanti Khanda of the Skanda Purana mentions this tirtha."
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "history": {
-        "hi": "स्कन्द पुराण के अवन्ति खण्ड में गुरुदेश्वर महादेव को अवन्तिका के 84 महादेवों में स्थान दिया गया है। शिव आदिगुरु हैं — दक्षिणामूर्ति के रूप में वे समस्त ज्ञान के स्रोत हैं — इस शिवलिंग को 'गुरुदेश्वर' की संज्ञा इसी परम्परा से मिली है। उज्जैन प्राचीन काल से विद्या और शास्त्र का केन्द्र रहा है जहाँ स्वयं भगवान श्रीकृष्ण ने गुरु सान्दीपनि के आश्रम में शिक्षा ग्रहण की थी। मान्यता है कि देवताओं और ऋषियों ने भी यहाँ आकर गुरु-तत्त्व की उपासना की थी। इस पृष्ठभूमि में गुरुदेश्वर महादेव का विशेष महत्त्व है। परम्परागत रूप से विद्यार्थी और गुरुजन इस मंदिर में आशीर्वाद लेने आते हैं तथा गुरु पूर्णिमा पर यहाँ विशेष पूजा-अर्चना होती है।",
-        "en": "The Avanti Khanda of the Skanda Purana includes Gurudeshwar Mahadev among the 84 Mahadevas of Avantika. Shiva is the Adi Guru — as Dakshinamurti he is the source of all knowledge — and this Shivalinga received the name Gurudeshwar from this tradition. Ujjain has been a centre of learning since ancient times, where Lord Krishna himself studied at Guru Sandipani's ashram. It is believed that devas and rishis also visited this site to worship the guru-principle. Gurudeshwar Mahadev holds special significance in this backdrop. Traditionally, students and teachers come to this temple to seek blessings, and Guru Purnima sees special worship at this shrine."
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "localBeliefs": {
-        "hi": "स्थानीय मान्यता है कि गुरुदेश्वर महादेव के दर्शन से विद्या, बुद्धि और एकाग्रता का आशीर्वाद प्राप्त होता है। परीक्षा से पूर्व विद्यार्थी यहाँ बेलपत्र और सफ़ेद पुष्प अर्पित करते हैं तथा सही गुरु की प्राप्ति के लिए प्रार्थना करते हैं। माना जाता है कि सच्चे मन से की गई प्रार्थना से जीवन में योग्य मार्गदर्शक मिलते हैं।",
-        "en": "Locals believe that darshan at Gurudeshwar Mahadev bestows the blessings of learning, wisdom, and concentration. Before examinations, students offer bel leaves and white flowers here and pray for the right teacher to enter their lives. It is held that sincere prayers at this shrine lead one to worthy mentors and guides."
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     },
-    "specialFacts": {
-        "hi": "क्या आप जानते हैं? गुरुदेश्वर महादेव उज्जैन के उन गिने-चुने तीर्थों में से है जहाँ शिव को विशेष रूप से 'गुरु' के रूप में पूजा जाता है — जो दक्षिणामूर्ति परम्परा का दुर्लभ रूप है। यह मंदिर महाकालेश्वर ज्योतिर्लिंग से मात्र कुछ ही कदम की दूरी पर स्थित होने के कारण 84 महादेव यात्रा के आरंभिक पड़ावों में आता है।",
-        "en": "Did you know? Gurudeshwar Mahadev is among the few shrines in Ujjain where Shiva is specifically worshipped as the Guru — a rare form linked to the Dakshinamurti tradition. Being just a short walk from the Mahakaleshwar Jyotirlinga, this temple is one of the early stops on the 84 Mahadev pilgrimage circuit."
-    },
-    "visitTips": {
-        "hi": "सादे और शालीन वस्त्र पहनकर आएँ; मंदिर परिसर में प्रवेश से पूर्व जूते-चप्पल बाहर उतारें। दर्शन के लिए प्रातःकाल या संध्या आरती का समय सर्वोत्तम है क्योंकि भीड़ कम होती है। बेलपत्र, सफ़ेद फूल और जल का छोटा पात्र साथ रखें; गर्मियों में पानी की बोतल और छाता अवश्य लाएँ।",
-        "en": "Wear modest, traditional attire and remove footwear before entering the shrine. Early morning or evening aarti hours offer the calmest darshan with fewer crowds. Carry bel leaves, white flowers, and a small water pot for offering; in summer, bring a water bottle and an umbrella for the short walk from Mahakal."
-    },
-    "darshanTimingSummary": {
-        "hi": "प्रातः 6:00 – रात्रि 9:00",
-        "en": "6:00 AM – 9:00 PM"
-    },
-    "weeklyTiming": {
-        "monday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "tuesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "wednesday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "thursday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "friday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "saturday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        },
-        "sunday": {
-            "hi": "प्रातः 6:00 – रात्रि 9:00",
-            "en": "6:00 AM – 9:00 PM"
-        }
-    },
-    "aartiTiming": {
-        "hi": "प्रातः आरती 6:30 · संध्या आरती 7:00",
-        "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-    },
-    "entryFee": {
-        "hi": "निःशुल्क",
-        "en": "Free entry"
-    },
-    "address": {
-        "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-        "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-    },
-    "geo": {
-        "lat": 23.1831,
-        "lng": 75.7684
-    },
-    "photos": [
-        "/images/mandirs/shiva-variety-10.jpg"
-    ],
-    "howToReach": {
-        "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10-12 मिनट में पहुँचा जा सकता है।",
-        "en": "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10-12 minutes."
-    },
-    "faqs": [
-        {
-            "question": {
-                "hi": "गुरुदेश्वर महादेव क्यों प्रसिद्ध हैं?",
-                "en": "Why is Gurudeshwar Mahadev famous?"
-            },
-            "answer": {
-                "hi": "यह उज्जैन के 84 महादेवों में से एक है जहाँ भगवान शिव 'गुरुओं के ईश्वर' के रूप में पूजे जाते हैं। यह विद्या, ज्ञान और गुरु-शिष्य परम्परा से जुड़ा अनूठा तीर्थ है।",
-                "en": "It is one of the 84 Mahadevas of Ujjain where Lord Shiva is worshipped as the Lord of Gurus. The shrine is uniquely connected to learning, wisdom, and the guru-disciple tradition."
-            }
-        },
-        {
-            "question": {
-                "hi": "क्या यह मंदिर महाकालेश्वर मंदिर के पास है?",
-                "en": "Is this temple close to the Mahakaleshwar Mandir?"
-            },
-            "answer": {
-                "hi": "हाँ, गुरुदेश्वर महादेव महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर है। महाकाल दर्शन के बाद पैदल चलकर सरलता से पहुँचा जा सकता है।",
-                "en": "Yes, Gurudeshwar Mahadev is approximately 0.3 km from the Mahakaleshwar Jyotirlinga. After Mahakal darshan, it can easily be reached on foot."
-            }
-        },
-        {
-            "question": {
-                "hi": "विद्यार्थियों के लिए दर्शन का क्या महत्त्व है?",
-                "en": "What is the significance of darshan for students?"
-            },
-            "answer": {
-                "hi": "मान्यता है कि गुरुदेश्वर महादेव के दर्शन से एकाग्रता, स्मरण-शक्ति और सही गुरु की प्राप्ति का आशीर्वाद मिलता है। परीक्षा के पूर्व विद्यार्थी विशेष रूप से यहाँ बेलपत्र अर्पित करने आते हैं।",
-                "en": "It is believed that darshan at Gurudeshwar Mahadev bestows concentration, memory, and the blessing of finding a worthy teacher. Students often visit before examinations to offer bel leaves at the shrine."
-            }
-        }
-    ],
-    "nearbyMandirs": [],
-    "lastVerified": "2026-05-31",
-    "primaryKeyword": {
-        "hi": "गुरुदेश्वर महादेव उज्जैन",
-        "en": "Gurudeshwar Mahadev Ujjain"
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
     }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1831,
+    "lng": 75.7684
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-10.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो रिक्शा द्वारा लगभग 10-12 मिनट में पहुँचा जा सकता है।",
+    "en": "The temple is approximately 0.3 km from Mahakaleshwar Jyotirlinga. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10-12 minutes."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "गुरुदेश्वर महादेव क्यों प्रसिद्ध हैं?",
+        "en": "Why is Gurudeshwar Mahadev famous?"
+      },
+      "answer": {
+        "hi": "यह उज्जैन के 84 महादेवों में से एक है जहाँ भगवान शिव 'गुरुओं के ईश्वर' के रूप में पूजे जाते हैं। यह विद्या, ज्ञान और गुरु-शिष्य परम्परा से जुड़ा अनूठा तीर्थ है।",
+        "en": "It is one of the 84 Mahadevas of Ujjain where Lord Shiva is worshipped as the Lord of Gurus. The shrine is uniquely connected to learning, wisdom, and the guru-disciple tradition."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या यह मंदिर महाकालेश्वर मंदिर के पास है?",
+        "en": "Is this temple close to the Mahakaleshwar Mandir?"
+      },
+      "answer": {
+        "hi": "हाँ, गुरुदेश्वर महादेव महाकालेश्वर ज्योतिर्लिंग से लगभग 0.3 किमी की दूरी पर है। महाकाल दर्शन के बाद पैदल चलकर सरलता से पहुँचा जा सकता है।",
+        "en": "Yes, Gurudeshwar Mahadev is approximately 0.3 km from the Mahakaleshwar Jyotirlinga. After Mahakal darshan, it can easily be reached on foot."
+      }
+    },
+    {
+      "question": {
+        "hi": "विद्यार्थियों के लिए दर्शन का क्या महत्त्व है?",
+        "en": "What is the significance of darshan for students?"
+      },
+      "answer": {
+        "hi": "मान्यता है कि गुरुदेश्वर महादेव के दर्शन से एकाग्रता, स्मरण-शक्ति और सही गुरु की प्राप्ति का आशीर्वाद मिलता है। परीक्षा के पूर्व विद्यार्थी विशेष रूप से यहाँ बेलपत्र अर्पित करने आते हैं।",
+        "en": "It is believed that darshan at Gurudeshwar Mahadev bestows concentration, memory, and the blessing of finding a worthy teacher. Students often visit before examinations to offer bel leaves at the shrine."
+      }
+    }
+  ],
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "गुरुदेश्वर महादेव उज्जैन",
+    "en": "Gurudeshwar Mahadev Ujjain"
+  }
 }

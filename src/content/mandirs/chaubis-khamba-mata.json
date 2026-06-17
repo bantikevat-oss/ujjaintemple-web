@@ -1,150 +1,150 @@
 {
-    "slug":  "chaubis-khamba-mata",
-    "name":  {
-                 "hi":  "चौबीस खंबा माता मंदिर",
-                 "en":  "Chaubis Khamba Mata Temple"
-             },
-    "deity":  {
-                  "hi":  "महालया देवी",
-                  "en":  "Mahalaya Devi"
-              },
-    "templeType":  "Shakti",
-    "locationArea":  "City Center",
-    "isFeatured":  true,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल",
-                           "en":  "Ancient / Puranic era"
-                       },
-    "architectureStyle":  "Traditional Hindu",
-    "shortIntro":  {
-                       "hi":  "परमार कालीन (10वीं–12वीं शताब्दी) मंदिर जो 24 पत्थर के स्तंभों पर खड़ा है। ASI संरक्षित। उज्जैन के पूर्वी प्रवेश द्वार की रक्षक देवी।",
-                       "en":  "Parmar-era (10-12th century) temple resting on 24 stone pillars. ASI-protected. The guardian goddess at Ujjain\u0027s eastern entrance."
-                   },
-    "history":  {
-                    "hi":  "परमार राजवंश काल (10वीं–12वीं शताब्दी) का यह अद्वितीय मंदिर 24 विशाल पत्थर के स्तंभों पर खड़ा है, जिनसे इसका नाम \u0027चौबीस खंबा\u0027 पड़ा। पुराने उज्जैन की प्राचीन नगर प्राचीर के पूर्वी प्रवेश द्वार पर स्थित यह मंदिर महालया देवी और महामाया देवी को समर्पित है, जो नगर की द्वार-रक्षक देवियाँ मानी जाती हैं। मान्यता है कि कभी सम्राट विक्रमादित्य भी यहीं से नगर में प्रवेश करते थे। मंदिर के स्तंभों और द्वार पर उत्कीर्ण प्राचीन शिल्पकला परमार युग की समृद्ध स्थापत्य परंपरा को दर्शाती है। यह स्थल भारतीय पुरातत्व सर्वेक्षण (ASI) द्वारा संरक्षित स्मारक है। सिंहस्थ और नवरात्रि के समय यहाँ विशेष पूजा-अर्चना होती है।",
-                    "en":  "This unique Parmar-dynasty temple (10th-12th century CE) rests on 24 massive stone pillars, from which it derives its name \u0027Chaubis Khamba\u0027 (twenty-four pillars). Situated at the eastern gateway of the ancient walled city of Ujjain, the temple is dedicated to Mahalaya Devi and Mahamaya Devi, regarded as the guardian goddesses of the city. Tradition holds that even Emperor Vikramaditya entered Ujjain through this very gateway. The intricate carvings on its pillars and doorframe reflect the rich architectural heritage of the Parmar era. The site is a protected monument under the Archaeological Survey of India (ASI). Special worship is conducted here during Simhastha and Navratri."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "specialOccasions":  {
-                             "hi":  "नवरात्रि — 9 दिन विशेष पूजा",
-                             "en":  "Navratri — 9 days special worship"
-                         },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "चौबीस खंबा माता मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
-                    "en":  "Chaubis Khamba Mata Temple, City Center, Ujjain, Madhya Pradesh 456001"
-                },
-    "geo":  {
-                "lat":  23.1765,
-                "lng":  75.7885
-            },
-    "photos":  [
-                   "/images/mandirs/harsiddhi-mata.jpg"
-               ],
-    "prasadInfo":  {
-                       "hi":  "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
-                       "en":  "Prasad available · flowers, bel leaves, incense, lamps"
-                   },
-    "howToReach":  {
-                       "hi":  "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
-                       "en":  "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "kal-bhairav-ujjain",
-                          "harsiddhi-mata"
-                      ],
-    "simhasthaRelevance":  {
-                               "hi":  "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
-                               "en":  "Suitable temple for darshan during Simhastha"
-                           },
-    "faqs":  [
-                 {
-                     "q":  {
-                               "hi":  "दर्शन का सर्वोत्तम समय?",
-                               "en":  "Best time for darshan?"
-                           },
-                     "a":  {
-                               "hi":  "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
-                               "en":  "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "मंदिर किसने बनवाया था?",
-                               "en":  "Who built this temple?"
-                           },
-                     "a":  {
-                               "hi":  "यह मंदिर परमार राजवंश काल (लगभग 10वीं–12वीं शताब्दी) में बनवाया गया माना जाता है और वर्तमान में भारतीय पुरातत्व सर्वेक्षण द्वारा संरक्षित है।",
-                               "en":  "The temple is believed to have been built during the Parmar dynasty period (around the 10th-12th century CE) and is presently protected by the Archaeological Survey of India."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या नवरात्रि में विशेष आयोजन होते हैं?",
-                               "en":  "Are there special events during Navratri?"
-                           },
-                     "a":  {
-                               "hi":  "हाँ, नवरात्रि के नौ दिनों में यहाँ 24 शक्तियों की विशेष पूजा और अर्चना होती है। भक्तों की संख्या काफी अधिक होती है, इसलिए सुबह के समय जाना उपयुक्त रहता है।",
-                               "en":  "Yes, special worship of the 24 Shaktis is conducted during the nine days of Navratri. Footfall is significantly higher, so morning visits are recommended."
-                           }
-                 }
-             ],
-    "lastVerified":  "2026-06-03",
-    "primaryKeyword":  {
-                           "hi":  "चौबीस खंबा मंदिर उज्जैन",
-                           "en":  "Chaubis Khamba Mandir Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि महालया देवी उज्जैन नगरी की पूर्वी सीमा की रक्षक हैं और उनके दर्शन के बिना नगर की तीर्थ-यात्रा अधूरी मानी जाती है। कहा जाता है कि जो भक्त यहाँ सच्चे मन से प्रार्थना करता है, उसकी यात्रा निर्विघ्न पूर्ण होती है। नवरात्रि के नौ दिनों में 24 शक्तियों की विशेष पूजा से मनोकामना पूर्ण होने की आस्था है।",
-                         "en":  "Local devotees believe that Mahalaya Devi is the guardian of Ujjain\u0027s eastern boundary, and a pilgrimage to the city is considered incomplete without her darshan. It is said that any devotee who prays here with sincere devotion completes their journey without obstacles. During the nine nights of Navratri, special worship of the 24 Shaktis is believed to fulfil heartfelt wishes."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? इस मंदिर के 24 पत्थर के स्तंभ 24 शक्तियों का प्रतीक माने जाते हैं और लगभग एक हज़ार वर्षों से अपनी मूल स्थिति में खड़े हैं। यह उज्जैन के सबसे प्राचीन ASI-संरक्षित स्मारकों में से एक है।",
-                         "en":  "Did you know? The 24 stone pillars of this temple are believed to symbolise the 24 Shaktis and have stood in their original position for nearly a thousand years. It is among the oldest ASI-protected monuments in Ujjain."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर परिसर में प्रवेश से पहले जूते-चप्पल बाहर उतारें और शालीन वस्त्र पहनें। ग्रीष्म ऋतु में सुबह या संध्या समय दर्शन अधिक सुखद रहता है — पानी की बोतल साथ रखें। चूँकि यह ASI संरक्षित स्थल है, स्तंभों या नक्काशी को न छुएँ और फोटोग्राफी से पहले स्थानीय नियम जाँच लें।",
-                      "en":  "Remove footwear before entering the temple premises and wear modest clothing. In summer, early morning or evening visits are more comfortable — carry a water bottle. As this is an ASI-protected site, avoid touching the pillars or carvings and check local rules before photography."
-                  }
+  "slug": "chaubis-khamba-mata",
+  "name": {
+    "hi": "चौबीस खंबा माता मंदिर",
+    "en": "Chaubis Khamba Mata Temple"
+  },
+  "deity": {
+    "hi": "महालया देवी",
+    "en": "Mahalaya Devi"
+  },
+  "templeType": "Shakti",
+  "locationArea": "City Center",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "परमार कालीन (10वीं–12वीं शताब्दी) मंदिर जो 24 पत्थर के स्तंभों पर खड़ा है। ASI संरक्षित। उज्जैन के पूर्वी प्रवेश द्वार की रक्षक देवी।",
+    "en": "Parmar-era (10-12th century) temple resting on 24 stone pillars. ASI-protected. The guardian goddess at Ujjain's eastern entrance."
+  },
+  "history": {
+    "hi": "परमार राजवंश काल (10वीं–12वीं शताब्दी) का यह अद्वितीय मंदिर 24 विशाल पत्थर के स्तंभों पर खड़ा है, जिनसे इसका नाम 'चौबीस खंबा' पड़ा। पुराने उज्जैन की प्राचीन नगर प्राचीर के पूर्वी प्रवेश द्वार पर स्थित यह मंदिर महालया देवी और महामाया देवी को समर्पित है, जो नगर की द्वार-रक्षक देवियाँ मानी जाती हैं। मान्यता है कि कभी सम्राट विक्रमादित्य भी यहीं से नगर में प्रवेश करते थे। मंदिर के स्तंभों और द्वार पर उत्कीर्ण प्राचीन शिल्पकला परमार युग की समृद्ध स्थापत्य परंपरा को दर्शाती है। यह स्थल भारतीय पुरातत्व सर्वेक्षण (ASI) द्वारा संरक्षित स्मारक है। सिंहस्थ और नवरात्रि के समय यहाँ विशेष पूजा-अर्चना होती है।",
+    "en": "This unique Parmar-dynasty temple (10th-12th century CE) rests on 24 massive stone pillars, from which it derives its name 'Chaubis Khamba' (twenty-four pillars). Situated at the eastern gateway of the ancient walled city of Ujjain, the temple is dedicated to Mahalaya Devi and Mahamaya Devi, regarded as the guardian goddesses of the city. Tradition holds that even Emperor Vikramaditya entered Ujjain through this very gateway. The intricate carvings on its pillars and doorframe reflect the rich architectural heritage of the Parmar era. The site is a protected monument under the Archaeological Survey of India (ASI). Special worship is conducted here during Simhastha and Navratri."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "नवरात्रि — 9 दिन विशेष पूजा",
+    "en": "Navratri — 9 days special worship"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "चौबीस खंबा माता मंदिर, उज्जैन, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Chaubis Khamba Mata Temple, City Center, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/harsiddhi-mata.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "लगभग प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "मंदिर किसने बनवाया था?",
+        "en": "Who built this temple?"
+      },
+      "a": {
+        "hi": "यह मंदिर परमार राजवंश काल (लगभग 10वीं–12वीं शताब्दी) में बनवाया गया माना जाता है और वर्तमान में भारतीय पुरातत्व सर्वेक्षण द्वारा संरक्षित है।",
+        "en": "The temple is believed to have been built during the Parmar dynasty period (around the 10th-12th century CE) and is presently protected by the Archaeological Survey of India."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या नवरात्रि में विशेष आयोजन होते हैं?",
+        "en": "Are there special events during Navratri?"
+      },
+      "a": {
+        "hi": "हाँ, नवरात्रि के नौ दिनों में यहाँ 24 शक्तियों की विशेष पूजा और अर्चना होती है। भक्तों की संख्या काफी अधिक होती है, इसलिए सुबह के समय जाना उपयुक्त रहता है।",
+        "en": "Yes, special worship of the 24 Shaktis is conducted during the nine days of Navratri. Footfall is significantly higher, so morning visits are recommended."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "चौबीस खंबा मंदिर उज्जैन",
+    "en": "Chaubis Khamba Mandir Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि महालया देवी उज्जैन नगरी की पूर्वी सीमा की रक्षक हैं और उनके दर्शन के बिना नगर की तीर्थ-यात्रा अधूरी मानी जाती है। कहा जाता है कि जो भक्त यहाँ सच्चे मन से प्रार्थना करता है, उसकी यात्रा निर्विघ्न पूर्ण होती है। नवरात्रि के नौ दिनों में 24 शक्तियों की विशेष पूजा से मनोकामना पूर्ण होने की आस्था है।",
+    "en": "Local devotees believe that Mahalaya Devi is the guardian of Ujjain's eastern boundary, and a pilgrimage to the city is considered incomplete without her darshan. It is said that any devotee who prays here with sincere devotion completes their journey without obstacles. During the nine nights of Navratri, special worship of the 24 Shaktis is believed to fulfil heartfelt wishes."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? इस मंदिर के 24 पत्थर के स्तंभ 24 शक्तियों का प्रतीक माने जाते हैं और लगभग एक हज़ार वर्षों से अपनी मूल स्थिति में खड़े हैं। यह उज्जैन के सबसे प्राचीन ASI-संरक्षित स्मारकों में से एक है।",
+    "en": "Did you know? The 24 stone pillars of this temple are believed to symbolise the 24 Shaktis and have stood in their original position for nearly a thousand years. It is among the oldest ASI-protected monuments in Ujjain."
+  },
+  "visitTips": {
+    "hi": "मंदिर परिसर में प्रवेश से पहले जूते-चप्पल बाहर उतारें और शालीन वस्त्र पहनें। ग्रीष्म ऋतु में सुबह या संध्या समय दर्शन अधिक सुखद रहता है — पानी की बोतल साथ रखें। चूँकि यह ASI संरक्षित स्थल है, स्तंभों या नक्काशी को न छुएँ और फोटोग्राफी से पहले स्थानीय नियम जाँच लें।",
+    "en": "Remove footwear before entering the temple premises and wear modest clothing. In summer, early morning or evening visits are more comfortable — carry a water bottle. As this is an ASI-protected site, avoid touching the pillars or carvings and check local rules before photography."
+  }
 }

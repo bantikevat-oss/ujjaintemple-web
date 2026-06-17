@@ -1,92 +1,90 @@
 {
-    "slug":  "trivishtap-mahadev",
-    "name":  {
-                 "hi":  "त्रिविष्टप महादेव",
-                 "en":  "Trivishtap Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (त्रिविष्टप रूप)",
-                  "en":  "Lord Shiva as Trivishtap"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कन्द पुराण काल",
-                           "en":  "Ancient — Skanda Purana era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "त्रिविष्टप महादेव उज्जैन की चौरासी महादेव श्रृंखला के एक महत्वपूर्ण शिवलिंग हैं। \u0027त्रिविष्टप\u0027 का अर्थ स्वर्गलोक है और यहाँ दर्शन करने से भक्त को स्वर्गीय फल की प्राप्ति होती है। महाकाल क्षेत्र में स्थित यह मंदिर तीनों लोकों के अधिपति महादेव की शक्ति का प्रतीक है।",
-                       "en":  "Trivishtap Mahadev is an important Shivalinga of Ujjain\u0027s Chaurasi Mahadeva series. \u0027Trivishtap\u0027 means the celestial realm (heaven), and darshan here is said to bestow heavenly merit upon the devotee. Located in the Mahakal Area, this temple symbolises the power of Mahadev as the lord of all three worlds."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में त्रिविष्टप महादेव का उल्लेख चौरासी महादेव परंपरा के अंतर्गत है। \u0027त्रिविष्टप\u0027 संस्कृत में स्वर्ग को कहते हैं; इस शिवलिंग की महिमा यह है कि इनके दर्शन से भक्त को त्रिलोक में पुण्य की प्राप्ति होती है। प्राचीन मान्यता के अनुसार देवताओं ने भी यहाँ आकर शिव की आराधना की थी और स्वर्ग में अपना स्थान सुरक्षित किया था। उज्जैन के महाकाल वन में यह मंदिर शिव की विश्वव्यापी सत्ता का प्रतिनिधित्व करता है। सदियों से यहाँ रुद्राभिषेक और पंचायतन पूजा की परंपरा चली आ रही है।",
-                    "en":  "Trivishtap Mahadev is mentioned in the Avanti Khanda of the Skanda Purana as part of the Chaurasi Mahadeva tradition. \u0027Trivishtap\u0027 in Sanskrit refers to heaven; the glory of this Shivalinga is that its darshan bestows merit across all three worlds. Ancient belief holds that the gods themselves came here to worship Shiva and secured their position in the celestial realm. Within the Mahakal Vana of Ujjain, this temple represents Shiva\u0027s all-encompassing sovereignty. For centuries, the traditions of Rudrabhisheka and Panchayatana puja have continued here."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1835,
-                "lng":  75.77
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-12.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2.5 किमी।",
-                       "en":  "Located approximately 0.5 km from Mahakaleshwar Temple. About 2.5 km from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "त्रिविष्टप महादेव उज्जैन",
-                           "en":  "Trivishtap Mahadev Ujjain"
-                       }
+  "slug": "trivishtap-mahadev",
+  "name": {
+    "hi": "त्रिविष्टप महादेव",
+    "en": "Trivishtap Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (त्रिविष्टप रूप)",
+    "en": "Lord Shiva as Trivishtap"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कन्द पुराण काल",
+    "en": "Ancient — Skanda Purana era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "त्रिविष्टप महादेव उज्जैन की चौरासी महादेव श्रृंखला के एक महत्वपूर्ण शिवलिंग हैं। 'त्रिविष्टप' का अर्थ स्वर्गलोक है और यहाँ दर्शन करने से भक्त को स्वर्गीय फल की प्राप्ति होती है। महाकाल क्षेत्र में स्थित यह मंदिर तीनों लोकों के अधिपति महादेव की शक्ति का प्रतीक है।",
+    "en": "Trivishtap Mahadev is an important Shivalinga of Ujjain's Chaurasi Mahadeva series. 'Trivishtap' means the celestial realm (heaven), and darshan here is said to bestow heavenly merit upon the devotee. Located in the Mahakal Area, this temple symbolises the power of Mahadev as the lord of all three worlds."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में त्रिविष्टप महादेव का उल्लेख चौरासी महादेव परंपरा के अंतर्गत है। 'त्रिविष्टप' संस्कृत में स्वर्ग को कहते हैं; इस शिवलिंग की महिमा यह है कि इनके दर्शन से भक्त को त्रिलोक में पुण्य की प्राप्ति होती है। प्राचीन मान्यता के अनुसार देवताओं ने भी यहाँ आकर शिव की आराधना की थी और स्वर्ग में अपना स्थान सुरक्षित किया था। उज्जैन के महाकाल वन में यह मंदिर शिव की विश्वव्यापी सत्ता का प्रतिनिधित्व करता है। सदियों से यहाँ रुद्राभिषेक और पंचायतन पूजा की परंपरा चली आ रही है।",
+    "en": "Trivishtap Mahadev is mentioned in the Avanti Khanda of the Skanda Purana as part of the Chaurasi Mahadeva tradition. 'Trivishtap' in Sanskrit refers to heaven; the glory of this Shivalinga is that its darshan bestows merit across all three worlds. Ancient belief holds that the gods themselves came here to worship Shiva and secured their position in the celestial realm. Within the Mahakal Vana of Ujjain, this temple represents Shiva's all-encompassing sovereignty. For centuries, the traditions of Rudrabhisheka and Panchayatana puja have continued here."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1835,
+    "lng": 75.77
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-12.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2.5 किमी।",
+    "en": "Located approximately 0.5 km from Mahakaleshwar Temple. About 2.5 km from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "त्रिविष्टप महादेव उज्जैन",
+    "en": "Trivishtap Mahadev Ujjain"
+  }
 }

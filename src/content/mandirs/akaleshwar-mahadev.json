@@ -1,160 +1,160 @@
 {
-    "slug":  "akaleshwar-mahadev",
-    "name":  {
-                 "hi":  "अकलेश्वर महादेव",
-                 "en":  "Akaleshwar Mahadev"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव",
-                  "en":  "Lord Shiva"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल",
-                           "en":  "Ancient / Puranic era"
-                       },
-    "architectureStyle":  "Traditional Hindu",
-    "shortIntro":  {
-                       "hi":  "अकाल (बुरे समय) में रक्षा करने वाले शिव।",
-                       "en":  "Shiva who protects in times of crisis (akaal)."
-                   },
-    "history":  {
-                    "hi":  "अकलेश्वर महादेव मंदिर भगवान शिव के उस रूप को समर्पित है जो भक्तों को अकाल मृत्यु और बुरे समय से रक्षा करते हैं। \u0027अकाल\u0027 का अर्थ है समय से पहले या अनुचित समय, और शिव यहाँ काल पर विजय पाने वाले महाकाल के सहायक रूप में पूजे जाते हैं। पौराणिक कथाओं के अनुसार जब भक्त किसी संकट, रोग या अनिश्चित भविष्य से भयभीत होते थे, तो वे यहाँ आकर रुद्राभिषेक और बेलपत्र अर्पण करते थे। महाकाल क्षेत्र में स्थित होने के कारण इस मंदिर का सिंहस्थ और श्रावण मास में विशेष महत्व है। स्थानीय परंपरा में इसे संकटमोचक शिवालय माना जाता है। साधक यहाँ महामृत्युंजय जप करके दीर्घायु और आरोग्य की कामना करते हैं।",
-                    "en":  "Akaleshwar Mahadev temple is dedicated to the form of Lord Shiva who shields devotees from untimely death and adverse times. The word \u0027akaal\u0027 means premature or untimely, and Shiva is worshipped here as a guardian aspect closely linked to Mahakal, the conqueror of time. Puranic tradition holds that devotees facing crisis, illness or uncertain futures would come here to perform Rudrabhishek and offer bel leaves. Being situated within the Mahakal precinct, the temple gains added significance during Simhastha and the holy month of Shravan. Local tradition reveres it as a sankat-mochak (crisis-removing) shrine. Sadhaks chant the Mahamrityunjaya mantra here seeking longevity and good health."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                 "en":  "6:00 AM – 8:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                         "en":  "6:00 AM – 8:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                           "en":  "6:00 AM – 8:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                          "en":  "6:00 AM – 8:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                          "en":  "6:00 AM – 8:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "specialOccasions":  {
-                             "hi":  "महाशिवरात्रि, नवरात्रि, श्रावण",
-                             "en":  "Mahashivratri, Navratri, Shravan"
-                         },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "अकलेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
-                    "en":  "Akaleshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
-                },
-    "geo":  {
-                "lat":  23.1765,
-                "lng":  75.7885
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-13.jpg"
-               ],
-    "prasadInfo":  {
-                       "hi":  "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
-                       "en":  "Prasad available · flowers, bel leaves, incense, lamps"
-                   },
-    "howToReach":  {
-                       "hi":  "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
-                       "en":  "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "kal-bhairav-ujjain",
-                          "harsiddhi-mata"
-                      ],
-    "simhasthaRelevance":  {
-                               "hi":  "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
-                               "en":  "Suitable temple for darshan during Simhastha"
-                           },
-    "faqs":  [
-                 {
-                     "q":  {
-                               "hi":  "दर्शन का सर्वोत्तम समय?",
-                               "en":  "Best time for darshan?"
-                           },
-                     "a":  {
-                               "hi":  "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
-                               "en":  "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "अकलेश्वर महादेव की पूजा का क्या महत्व है?",
-                               "en":  "What is the significance of worshipping Akaleshwar Mahadev?"
-                           },
-                     "a":  {
-                               "hi":  "यहाँ शिव की पूजा अकाल मृत्यु के भय, ग्रह बाधा और गंभीर रोगों से मुक्ति के लिए की जाती है। महामृत्युंजय मंत्र का जप विशेष फलदायी माना जाता है।",
-                               "en":  "Worship here is performed to seek relief from fear of untimely death, planetary afflictions and serious illness. Chanting the Mahamrityunjaya mantra is considered especially fruitful."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या मंदिर महाकाल दर्शन के साथ देखा जा सकता है?",
-                               "en":  "Can this temple be visited along with Mahakaleshwar darshan?"
-                           },
-                     "a":  {
-                               "hi":  "हाँ, यह मंदिर महाकाल क्षेत्र में स्थित है, इसलिए महाकालेश्वर दर्शन के पहले या बाद आसानी से दर्शन किए जा सकते हैं। पैदल या ऑटो दोनों से पहुँचा जा सकता है।",
-                               "en":  "Yes, the temple lies within the Mahakal precinct, so it can easily be visited before or after the Mahakaleshwar darshan. It is reachable on foot or by auto."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या यहाँ अभिषेक की सुविधा है?",
-                               "en":  "Is abhishek available here?"
-                           },
-                     "a":  {
-                               "hi":  "जी हाँ, भक्त स्वयं जल, दूध और बेलपत्र से अभिषेक कर सकते हैं। श्रावण मास और शिवरात्रि में रुद्राभिषेक का विशेष आयोजन होता है।",
-                               "en":  "Yes, devotees may perform abhishek themselves with water, milk and bel leaves. Special Rudrabhishek arrangements are made during Shravan and Shivratri."
-                           }
-                 }
-             ],
-    "lastVerified":  "2026-06-03",
-    "primaryKeyword":  {
-                           "hi":  "अकलेश्वर महादेव उज्जैन",
-                           "en":  "Akaleshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय भक्तों का विश्वास है कि जो व्यक्ति अकाल मृत्यु के भय या ग्रह दोष से परेशान हो, वह यहाँ सोमवार को जल और बेलपत्र चढ़ाकर शांति प्राप्त करता है। बुजुर्ग बताते हैं कि महाकाल दर्शन से पूर्व अकलेश्वर के दर्शन करने से यात्रा सफल मानी जाती है। श्रावण मास में यहाँ महामृत्युंजय जप का विशेष फल बताया गया है।",
-                         "en":  "Local devotees believe that anyone troubled by fear of untimely death or planetary afflictions finds peace by offering water and bel leaves here on Mondays. Elders say that visiting Akaleshwar before the Mahakal darshan is considered to make the pilgrimage fruitful. Chanting the Mahamrityunjaya mantra here during Shravan is said to bring special merit."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? \u0027अकाल\u0027 शब्द का अर्थ है \u0027समय से पहले\u0027, और यहाँ शिव को काल के नियंत्रक महाकाल के सहायक रूप में पूजा जाता है। यह मंदिर महाकाल क्षेत्र के उन प्राचीन शिवालयों में गिना जाता है जिनकी छाँव सदियों से तीर्थयात्रियों को मिलती आई है।",
-                         "en":  "Did you know? The word \u0027akaal\u0027 means \u0027untimely\u0027, and Shiva here is worshipped as a guardian aspect of Mahakal, the lord of time. The temple counts among the ancient Shiva shrines in the Mahakal precinct that have offered shelter to pilgrims for centuries."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर में प्रवेश से पूर्व पैर धोकर शुद्ध वस्त्र पहनें; पुरुष धोती-कुर्ता और महिलाएँ साड़ी या सलवार-कुर्ता उपयुक्त हैं। साथ में बेलपत्र, गंगाजल, सफेद पुष्प और एक छोटी टॉर्च रखें क्योंकि गर्भगृह में प्रकाश कम रहता है। ग्रीष्म ऋतु में जूते बाहर छोड़ने के लिए मोज़े साथ रखें ताकि गरम फर्श से बचा जा सके।",
-                      "en":  "Wash your feet and wear clean traditional clothes before entering; dhoti-kurta for men and saree or salwar-kurta for women are appropriate. Carry bel leaves, Gangajal, white flowers and a small torch, as the sanctum tends to be dim. In summer, keep socks handy since footwear must be left outside and the floor can get hot."
-                  }
+  "slug": "akaleshwar-mahadev",
+  "name": {
+    "hi": "अकलेश्वर महादेव",
+    "en": "Akaleshwar Mahadev"
+  },
+  "deity": {
+    "hi": "भगवान शिव",
+    "en": "Lord Shiva"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "अकाल (बुरे समय) में रक्षा करने वाले शिव।",
+    "en": "Shiva who protects in times of crisis (akaal)."
+  },
+  "history": {
+    "hi": "अकलेश्वर महादेव मंदिर भगवान शिव के उस रूप को समर्पित है जो भक्तों को अकाल मृत्यु और बुरे समय से रक्षा करते हैं। 'अकाल' का अर्थ है समय से पहले या अनुचित समय, और शिव यहाँ काल पर विजय पाने वाले महाकाल के सहायक रूप में पूजे जाते हैं। पौराणिक कथाओं के अनुसार जब भक्त किसी संकट, रोग या अनिश्चित भविष्य से भयभीत होते थे, तो वे यहाँ आकर रुद्राभिषेक और बेलपत्र अर्पण करते थे। महाकाल क्षेत्र में स्थित होने के कारण इस मंदिर का सिंहस्थ और श्रावण मास में विशेष महत्व है। स्थानीय परंपरा में इसे संकटमोचक शिवालय माना जाता है। साधक यहाँ महामृत्युंजय जप करके दीर्घायु और आरोग्य की कामना करते हैं।",
+    "en": "Akaleshwar Mahadev temple is dedicated to the form of Lord Shiva who shields devotees from untimely death and adverse times. The word 'akaal' means premature or untimely, and Shiva is worshipped here as a guardian aspect closely linked to Mahakal, the conqueror of time. Puranic tradition holds that devotees facing crisis, illness or uncertain futures would come here to perform Rudrabhishek and offer bel leaves. Being situated within the Mahakal precinct, the temple gains added significance during Simhastha and the holy month of Shravan. Local tradition reveres it as a sankat-mochak (crisis-removing) shrine. Sadhaks chant the Mahamrityunjaya mantra here seeking longevity and good health."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+    "en": "Approx. 6:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "अकलेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Akaleshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-13.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "लगभग प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "अकलेश्वर महादेव की पूजा का क्या महत्व है?",
+        "en": "What is the significance of worshipping Akaleshwar Mahadev?"
+      },
+      "a": {
+        "hi": "यहाँ शिव की पूजा अकाल मृत्यु के भय, ग्रह बाधा और गंभीर रोगों से मुक्ति के लिए की जाती है। महामृत्युंजय मंत्र का जप विशेष फलदायी माना जाता है।",
+        "en": "Worship here is performed to seek relief from fear of untimely death, planetary afflictions and serious illness. Chanting the Mahamrityunjaya mantra is considered especially fruitful."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या मंदिर महाकाल दर्शन के साथ देखा जा सकता है?",
+        "en": "Can this temple be visited along with Mahakaleshwar darshan?"
+      },
+      "a": {
+        "hi": "हाँ, यह मंदिर महाकाल क्षेत्र में स्थित है, इसलिए महाकालेश्वर दर्शन के पहले या बाद आसानी से दर्शन किए जा सकते हैं। पैदल या ऑटो दोनों से पहुँचा जा सकता है।",
+        "en": "Yes, the temple lies within the Mahakal precinct, so it can easily be visited before or after the Mahakaleshwar darshan. It is reachable on foot or by auto."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यहाँ अभिषेक की सुविधा है?",
+        "en": "Is abhishek available here?"
+      },
+      "a": {
+        "hi": "जी हाँ, भक्त स्वयं जल, दूध और बेलपत्र से अभिषेक कर सकते हैं। श्रावण मास और शिवरात्रि में रुद्राभिषेक का विशेष आयोजन होता है।",
+        "en": "Yes, devotees may perform abhishek themselves with water, milk and bel leaves. Special Rudrabhishek arrangements are made during Shravan and Shivratri."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "अकलेश्वर महादेव उज्जैन",
+    "en": "Akaleshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय भक्तों का विश्वास है कि जो व्यक्ति अकाल मृत्यु के भय या ग्रह दोष से परेशान हो, वह यहाँ सोमवार को जल और बेलपत्र चढ़ाकर शांति प्राप्त करता है। बुजुर्ग बताते हैं कि महाकाल दर्शन से पूर्व अकलेश्वर के दर्शन करने से यात्रा सफल मानी जाती है। श्रावण मास में यहाँ महामृत्युंजय जप का विशेष फल बताया गया है।",
+    "en": "Local devotees believe that anyone troubled by fear of untimely death or planetary afflictions finds peace by offering water and bel leaves here on Mondays. Elders say that visiting Akaleshwar before the Mahakal darshan is considered to make the pilgrimage fruitful. Chanting the Mahamrityunjaya mantra here during Shravan is said to bring special merit."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? 'अकाल' शब्द का अर्थ है 'समय से पहले', और यहाँ शिव को काल के नियंत्रक महाकाल के सहायक रूप में पूजा जाता है। यह मंदिर महाकाल क्षेत्र के उन प्राचीन शिवालयों में गिना जाता है जिनकी छाँव सदियों से तीर्थयात्रियों को मिलती आई है।",
+    "en": "Did you know? The word 'akaal' means 'untimely', and Shiva here is worshipped as a guardian aspect of Mahakal, the lord of time. The temple counts among the ancient Shiva shrines in the Mahakal precinct that have offered shelter to pilgrims for centuries."
+  },
+  "visitTips": {
+    "hi": "मंदिर में प्रवेश से पूर्व पैर धोकर शुद्ध वस्त्र पहनें; पुरुष धोती-कुर्ता और महिलाएँ साड़ी या सलवार-कुर्ता उपयुक्त हैं। साथ में बेलपत्र, गंगाजल, सफेद पुष्प और एक छोटी टॉर्च रखें क्योंकि मंदिर में प्रकाश कम रहता है। ग्रीष्म ऋतु में जूते बाहर छोड़ने के लिए मोज़े साथ रखें ताकि गरम फर्श से बचा जा सके।",
+    "en": "Wash your feet and wear clean traditional clothes before entering; dhoti-kurta for men and saree or salwar-kurta for women are appropriate. Carry bel leaves, Gangajal, white flowers and a small torch, as the sanctum tends to be dim. In summer, keep socks handy since footwear must be left outside and the floor can get hot."
+  }
 }

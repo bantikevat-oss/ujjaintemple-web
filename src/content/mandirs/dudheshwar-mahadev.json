@@ -1,136 +1,134 @@
 {
-    "slug":  "dudheshwar-mahadev",
-    "name":  {
-                 "hi":  "दुग्धेश्वर महादेव",
-                 "en":  "Dudheshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (दुग्धेश्वर रूप)",
-                  "en":  "Lord Shiva as Dudheshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कन्द पुराण काल",
-                           "en":  "Ancient — Skanda Purana era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "दुग्धेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला के उन शिवलिंगों में से एक हैं जिनका दुग्ध (दूध) से अभिषेक की प्राचीन परंपरा से विशेष संबंध है। महाकाल क्षेत्र में स्थित यह मंदिर शिव की \u0027क्षीरसागर-निवासी\u0027 स्वरूप की आराधना का प्रतीक है। यहाँ दूध से अभिषेक करने वाले भक्तों को विशेष कृपा प्राप्त होती है।",
-                       "en":  "Dudheshwar Mahadev is one of the Shivalingas of Ujjain\u0027s Chaurasi Mahadeva series that has a special connection to the ancient tradition of abhisheka with dugdha (milk). Located in the Mahakal Area, this temple symbolises the worship of Shiva in his \u0027dweller in the ocean of milk\u0027 form. Devotees who perform milk abhisheka here are said to receive special grace."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में दुग्धेश्वर महादेव का वर्णन चौरासी महादेव की पवित्र श्रृंखला में मिलता है। \u0027दुग्ध\u0027 अर्थात् दूध से अभिषेक की परंपरा अत्यंत प्राचीन है और यह शिव की शुद्धता एवं श्वेत वर्ण की प्रतीक है। पुराण के अनुसार किसी भक्त ने यहाँ मनोकामना पूर्ण होने पर क्षीरधारा से अभिषेक किया था, तभी से इस शिवलिंग को दुग्धेश्वर कहा जाने लगा। मान्यता है कि समुद्र मंथन के समय निकले क्षीरसागर का स्मरण कराते हुए यहाँ शिव की क्षीर-निवासी रूप में पूजा होती है। गोदुग्ध से अभिषेक यहाँ विशेष फलदायी माना जाता है तथा संतान-सुख की कामना रखने वाले भक्त विशेष रूप से यहाँ आते हैं। श्रावण मास में यहाँ प्रतिदिन दुग्धाभिषेक उत्सव होता है और सोमवार को विशेष भीड़ रहती है।",
-                    "en":  "Dudheshwar Mahadev is described in the sacred Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. The tradition of abhisheka with \u0027dugdha\u0027 (milk) is extremely ancient and symbolises the purity and white complexion of Shiva. According to the Purana, a devotee performed a milk-stream abhisheka here upon the fulfillment of a wish, and since then this Shivalinga has been called Dudheshwar. It is believed that Shiva is worshipped here in his \u0027dweller in the ocean of milk\u0027 form, reminiscent of the Kshirsagar that emerged during the churning of the cosmic ocean. Abhisheka with cow\u0027s milk is considered especially auspicious here, and devotees seeking the blessing of progeny particularly visit this shrine. During the month of Shravan, a daily milk-abhisheka festival is held and Mondays witness especially large crowds."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1818,
-                "lng":  75.7682
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-3.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
-                       "en":  "Located approximately 0.3 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "दुग्धेश्वर महादेव उज्जैन",
-                           "en":  "Dudheshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय लोगों की मान्यता है कि दुग्धेश्वर महादेव पर सच्चे मन से दूध चढ़ाने वाले भक्तों की मनोकामनाएँ अवश्य पूर्ण होती हैं। नवविवाहित दम्पति और संतान-सुख की कामना रखने वाले श्रद्धालु विशेष रूप से यहाँ गोदुग्ध से अभिषेक करते हैं। सोमवार और श्रावण मास में यहाँ दुग्धाभिषेक करना अत्यंत पुण्यदायी माना जाता है।",
-                         "en":  "Locals believe that devotees who offer milk with sincere devotion at Dudheshwar Mahadev have their wishes invariably fulfilled. Newly married couples and those seeking the blessing of children particularly perform cow-milk abhisheka here. Performing the milk-abhisheka on Mondays and during the month of Shravan is considered exceptionally meritorious."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? दुग्धेश्वर महादेव का नाम ही दूध-अभिषेक की परंपरा से पड़ा है और यह चौरासी महादेव श्रृंखला का वह विरला शिवलिंग है जहाँ दुग्धाभिषेक को मुख्य पूजा-विधि माना जाता है। शिव की क्षीरसागर-निवासी कल्पना से जुड़ा यह स्थल श्वेत-शुभ्र भक्ति का प्रतीक है।",
-                         "en":  "Did you know? The very name Dudheshwar Mahadev originates from the tradition of milk abhisheka, and this is one of the rare Shivalingas in the Chaurasi Mahadeva series where milk abhisheka is considered the principal mode of worship. Linked to Shiva\u0027s imagery as the dweller in the ocean of milk, this site symbolises pure, white-hued devotion."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर महाकालेश्वर के निकट है, अतः महाकाल दर्शन के साथ इसे जोड़ें। अभिषेक हेतु शुद्ध गोदुग्ध, बिल्व पत्र और सफेद पुष्प साथ ले जाएँ। शालीन वस्त्र पहनें और सोमवार व श्रावण मास में अधिक भीड़ की संभावना के कारण प्रातःकाल जल्दी पहुँचना उत्तम रहता है।",
-                      "en":  "The temple lies close to Mahakaleshwar, so combine it with your Mahakal darshan. Carry pure cow\u0027s milk, bilva leaves and white flowers for the abhisheka. Wear modest attire and, given the heavier crowds on Mondays and during Shravan, plan to arrive early in the morning for a peaceful darshan."
-                  },
-    "faqs":  [
-                 {
-                     "question":  {
-                                      "hi":  "दुग्धेश्वर महादेव में अभिषेक के लिए क्या ले जाना चाहिए?",
-                                      "en":  "What should I bring for abhisheka at Dudheshwar Mahadev?"
-                                  },
-                     "answer":  {
-                                    "hi":  "शुद्ध गोदुग्ध, गंगाजल, बिल्व पत्र, सफेद पुष्प तथा चंदन ले जाना शुभ माना जाता है। दूध से अभिषेक यहाँ की मुख्य परंपरा है।",
-                                    "en":  "It is considered auspicious to bring pure cow\u0027s milk, Ganga jal, bilva leaves, white flowers and sandalwood paste. Milk abhisheka is the principal tradition at this shrine."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "दुग्धेश्वर महादेव दर्शन का सर्वोत्तम समय कौन-सा है?",
-                                      "en":  "What is the best time to visit Dudheshwar Mahadev?"
-                                  },
-                     "answer":  {
-                                    "hi":  "श्रावण मास के सोमवार और महाशिवरात्रि सर्वश्रेष्ठ अवसर हैं। शांत दर्शन हेतु प्रातःकाल का समय उत्तम है।",
-                                    "en":  "Mondays during the month of Shravan and Mahashivratri are the most auspicious occasions. For a peaceful darshan, early morning is the best time."
-                                }
-                 },
-                 {
-                     "question":  {
-                                      "hi":  "क्या दुग्धेश्वर महादेव चौरासी महादेव यात्रा का भाग है?",
-                                      "en":  "Is Dudheshwar Mahadev part of the Chaurasi Mahadeva yatra?"
-                                  },
-                     "answer":  {
-                                    "hi":  "हाँ, यह उज्जैन की प्रसिद्ध चौरासी महादेव श्रृंखला का एक पवित्र शिवलिंग है, जिसका वर्णन स्कन्द पुराण के अवन्ती खण्ड में है।",
-                                    "en":  "Yes, it is one of the sacred Shivalingas in Ujjain\u0027s renowned Chaurasi Mahadeva series, described in the Avanti Khanda of the Skanda Purana."
-                                }
-                 }
-             ]
+  "slug": "dudheshwar-mahadev",
+  "name": {
+    "hi": "दुग्धेश्वर महादेव",
+    "en": "Dudheshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (दुग्धेश्वर रूप)",
+    "en": "Lord Shiva as Dudheshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कन्द पुराण काल",
+    "en": "Ancient — Skanda Purana era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "दुग्धेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला के उन शिवलिंगों में से एक हैं जिनका दुग्ध (दूध) से अभिषेक की प्राचीन परंपरा से विशेष संबंध है। महाकाल क्षेत्र में स्थित यह मंदिर शिव की 'क्षीरसागर-निवासी' स्वरूप की आराधना का प्रतीक है। यहाँ दूध से अभिषेक करने वाले भक्तों को विशेष कृपा प्राप्त होती है।",
+    "en": "Dudheshwar Mahadev is one of the Shivalingas of Ujjain's Chaurasi Mahadeva series that has a special connection to the ancient tradition of abhisheka with dugdha (milk). Located in the Mahakal Area, this temple symbolises the worship of Shiva in his 'dweller in the ocean of milk' form. Devotees who perform milk abhisheka here are said to receive special grace."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में दुग्धेश्वर महादेव का वर्णन चौरासी महादेव की पवित्र श्रृंखला में मिलता है। 'दुग्ध' अर्थात् दूध से अभिषेक की परंपरा अत्यंत प्राचीन है और यह शिव की शुद्धता एवं श्वेत वर्ण की प्रतीक है। पुराण के अनुसार किसी भक्त ने यहाँ मनोकामना पूर्ण होने पर क्षीरधारा से अभिषेक किया था, तभी से इस शिवलिंग को दुग्धेश्वर कहा जाने लगा। मान्यता है कि समुद्र मंथन के समय निकले क्षीरसागर का स्मरण कराते हुए यहाँ शिव की क्षीर-निवासी रूप में पूजा होती है। गोदुग्ध से अभिषेक यहाँ विशेष फलदायी माना जाता है तथा संतान-सुख की कामना रखने वाले भक्त विशेष रूप से यहाँ आते हैं। श्रावण मास में यहाँ प्रतिदिन दुग्धाभिषेक उत्सव होता है और सोमवार को विशेष भीड़ रहती है।",
+    "en": "Dudheshwar Mahadev is described in the sacred Chaurasi Mahadeva series within the Avanti Khanda of the Skanda Purana. The tradition of abhisheka with 'dugdha' (milk) is extremely ancient and symbolises the purity and white complexion of Shiva. According to the Purana, a devotee performed a milk-stream abhisheka here upon the fulfillment of a wish, and since then this Shivalinga has been called Dudheshwar. It is believed that Shiva is worshipped here in his 'dweller in the ocean of milk' form, reminiscent of the Kshirsagar that emerged during the churning of the cosmic ocean. Abhisheka with cow's milk is considered especially auspicious here, and devotees seeking the blessing of progeny particularly visit this shrine. During the month of Shravan, a daily milk-abhisheka festival is held and Mondays witness especially large crowds."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1818,
+    "lng": 75.7682
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-3.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
+    "en": "Located approximately 0.3 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "दुग्धेश्वर महादेव उज्जैन",
+    "en": "Dudheshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय लोगों की मान्यता है कि दुग्धेश्वर महादेव पर सच्चे मन से दूध चढ़ाने वाले भक्तों की मनोकामनाएँ अवश्य पूर्ण होती हैं। नवविवाहित दम्पति और संतान-सुख की कामना रखने वाले श्रद्धालु विशेष रूप से यहाँ गोदुग्ध से अभिषेक करते हैं। सोमवार और श्रावण मास में यहाँ दुग्धाभिषेक करना अत्यंत पुण्यदायी माना जाता है।",
+    "en": "Locals believe that devotees who offer milk with sincere devotion at Dudheshwar Mahadev have their wishes invariably fulfilled. Newly married couples and those seeking the blessing of children particularly perform cow-milk abhisheka here. Performing the milk-abhisheka on Mondays and during the month of Shravan is considered exceptionally meritorious."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? दुग्धेश्वर महादेव का नाम ही दूध-अभिषेक की परंपरा से पड़ा है और यह चौरासी महादेव श्रृंखला का वह विरला शिवलिंग है जहाँ दुग्धाभिषेक को मुख्य पूजा-विधि माना जाता है। शिव की क्षीरसागर-निवासी कल्पना से जुड़ा यह स्थल श्वेत-शुभ्र भक्ति का प्रतीक है।",
+    "en": "Did you know? The very name Dudheshwar Mahadev originates from the tradition of milk abhisheka, and this is one of the rare Shivalingas in the Chaurasi Mahadeva series where milk abhisheka is considered the principal mode of worship. Linked to Shiva's imagery as the dweller in the ocean of milk, this site symbolises pure, white-hued devotion."
+  },
+  "visitTips": {
+    "hi": "मंदिर महाकालेश्वर के निकट है, अतः महाकाल दर्शन के साथ इसे जोड़ें। अभिषेक हेतु शुद्ध गोदुग्ध, बिल्व पत्र और सफेद पुष्प साथ ले जाएँ। शालीन वस्त्र पहनें और सोमवार व श्रावण मास में अधिक भीड़ की संभावना के कारण प्रातःकाल जल्दी पहुँचना उत्तम रहता है।",
+    "en": "The temple lies close to Mahakaleshwar, so combine it with your Mahakal darshan. Carry pure cow's milk, bilva leaves and white flowers for the abhisheka. Wear modest attire and, given the heavier crowds on Mondays and during Shravan, plan to arrive early in the morning for a peaceful darshan."
+  },
+  "faqs": [
+    {
+      "question": {
+        "hi": "दुग्धेश्वर महादेव में अभिषेक के लिए क्या ले जाना चाहिए?",
+        "en": "What should I bring for abhisheka at Dudheshwar Mahadev?"
+      },
+      "answer": {
+        "hi": "शुद्ध गोदुग्ध, गंगाजल, बिल्व पत्र, सफेद पुष्प तथा चंदन ले जाना शुभ माना जाता है। दूध से अभिषेक यहाँ की मुख्य परंपरा है।",
+        "en": "It is considered auspicious to bring pure cow's milk, Ganga jal, bilva leaves, white flowers and sandalwood paste. Milk abhisheka is the principal tradition at this shrine."
+      }
+    },
+    {
+      "question": {
+        "hi": "दुग्धेश्वर महादेव दर्शन का सर्वोत्तम समय कौन-सा है?",
+        "en": "What is the best time to visit Dudheshwar Mahadev?"
+      },
+      "answer": {
+        "hi": "श्रावण मास के सोमवार और महाशिवरात्रि सर्वश्रेष्ठ अवसर हैं। शांत दर्शन हेतु प्रातःकाल का समय उत्तम है।",
+        "en": "Mondays during the month of Shravan and Mahashivratri are the most auspicious occasions. For a peaceful darshan, early morning is the best time."
+      }
+    },
+    {
+      "question": {
+        "hi": "क्या दुग्धेश्वर महादेव चौरासी महादेव यात्रा का भाग है?",
+        "en": "Is Dudheshwar Mahadev part of the Chaurasi Mahadeva yatra?"
+      },
+      "answer": {
+        "hi": "हाँ, यह उज्जैन की प्रसिद्ध चौरासी महादेव श्रृंखला का एक पवित्र शिवलिंग है, जिसका वर्णन स्कन्द पुराण के अवन्ती खण्ड में है।",
+        "en": "Yes, it is one of the sacred Shivalingas in Ujjain's renowned Chaurasi Mahadeva series, described in the Avanti Khanda of the Skanda Purana."
+      }
+    }
+  ]
 }

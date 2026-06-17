@@ -1,94 +1,94 @@
 {
-    "slug":  "trivikram-mandir",
-    "name":  {
-                 "hi":  "त्रिविक्रम मन्दिर (सूर्य/नवग्रह)",
-                 "en":  "Trivikram Mandir (Sun/Navagraha)"
-             },
-    "deity":  {
-                  "hi":  "भगवान विष्णु त्रिविक्रम रूप / सूर्यदेव",
-                  "en":  "Lord Vishnu as Trivikram / Surya (Sun)"
-              },
-    "templeType":  "Navagraha",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "प्राचीन काल, पुराणोक्त",
-                           "en":  "Ancient era, mentioned in Puranas"
-                       },
-    "architectureStyle":  "Nagara",
-    "shortIntro":  {
-                       "hi":  "त्रिविक्रम मन्दिर उज्जैन के महाकाल क्षेत्र में स्थित एक प्रमुख नवग्रह मंदिर है जहाँ भगवान विष्णु के त्रिविक्रम स्वरूप के साथ सूर्यदेव की आराधना की जाती है। यह मंदिर नवग्रह दर्शन श्रृंखला में सूर्य ग्रह के प्रतिनिधि के रूप में विशेष महत्त्व रखता है। श्रद्धालु यहाँ स्वास्थ्य, यश एवं नेत्रज्योति की कामना लेकर आते हैं।",
-                       "en":  "Trivikram Mandir, located in the Mahakal Area of Ujjain, is an important Navagraha temple where Lord Vishnu in his Trivikram form is worshipped alongside Surya, the Sun deity. This temple holds special significance as the representative of the Sun (Surya) in the Navagraha pilgrimage circuit. Devotees visit seeking good health, fame, and blessings for eyesight."
-                   },
-    "history":  {
-                    "hi":  "पौराणिक मान्यता के अनुसार भगवान विष्णु ने वामन अवतार में तीन पग से तीनों लोकों को नापा था, इसी स्वरूप को त्रिविक्रम कहा जाता है। उज्जैन नगरी में सूर्यदेव की उपासना का प्राचीन इतिहास है और यहाँ का त्रिविक्रम मंदिर सूर्य नवग्रह के रूप में पूजित होता आया है। स्कन्द पुराण के अवन्ति खण्ड में उज्जैन के सूर्य क्षेत्रों का वर्णन मिलता है जो इस मंदिर की महिमा को प्रमाणित करता है। रविवार को यहाँ विशेष रूप से सूर्योपासना की जाती है और तेल-तिल का दीपदान शुभ माना जाता है। यह मंदिर नवग्रह पीड़ा निवारण हेतु उज्जैन के प्रमुख तीर्थस्थलों में गिना जाता है।",
-                    "en":  "According to Puranic tradition, Lord Vishnu in his Vamana avatar measured all three worlds in three strides, earning the name Trivikram. Ujjain has an ancient history of Sun worship and this Trivikram Mandir has been venerated as the Surya Navagraha temple for centuries. The Avanti Khanda of the Skanda Purana describes the solar shrines of Ujjain, lending scriptural authority to this temple\u0027s sanctity. Special Sun worship is performed here on Sundays, and offerings of oil and sesame are considered auspicious. This temple is counted among the key pilgrimage sites in Ujjain for relief from malefic planetary influences."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 5:30 – रात्रि 9:00",
-                                        "en":  "5:30 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "त्रिविक्रम मन्दिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Trivikram Mandir, Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1835,
-                "lng":  75.7695
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-11.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है, जहाँ ऑटो या रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
-                       "en":  "The temple is located approximately 0.3 km from Mahakaleshwar Temple within the Mahakal Area. It is about 2 km from Ujjain Railway Station and can be easily reached by auto-rickshaw or cycle rickshaw."
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "bade-ganesh-ji",
-                          "navgraha-mandir-ujjain"
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "त्रिविक्रम मन्दिर उज्जैन",
-                           "en":  "Trivikram Mandir Ujjain"
-                       }
+  "slug": "trivikram-mandir",
+  "name": {
+    "hi": "त्रिविक्रम मन्दिर (सूर्य/नवग्रह)",
+    "en": "Trivikram Mandir (Sun/Navagraha)"
+  },
+  "deity": {
+    "hi": "भगवान विष्णु त्रिविक्रम रूप / सूर्यदेव",
+    "en": "Lord Vishnu as Trivikram / Surya (Sun)"
+  },
+  "templeType": "Navagraha",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "प्राचीन काल, पुराणोक्त",
+    "en": "Ancient era, mentioned in Puranas"
+  },
+  "architectureStyle": "Nagara",
+  "shortIntro": {
+    "hi": "त्रिविक्रम मन्दिर उज्जैन के महाकाल क्षेत्र में स्थित एक प्रमुख नवग्रह मंदिर है जहाँ भगवान विष्णु के त्रिविक्रम स्वरूप के साथ सूर्यदेव की आराधना की जाती है। यह मंदिर नवग्रह दर्शन श्रृंखला में सूर्य ग्रह के प्रतिनिधि के रूप में विशेष महत्त्व रखता है। श्रद्धालु यहाँ स्वास्थ्य, यश एवं नेत्रज्योति की कामना लेकर आते हैं।",
+    "en": "Trivikram Mandir, located in the Mahakal Area of Ujjain, is an important Navagraha temple where Lord Vishnu in his Trivikram form is worshipped alongside Surya, the Sun deity. This temple holds special significance as the representative of the Sun (Surya) in the Navagraha pilgrimage circuit. Devotees visit seeking good health, fame, and blessings for eyesight."
+  },
+  "history": {
+    "hi": "पौराणिक मान्यता के अनुसार भगवान विष्णु ने वामन अवतार में तीन पग से तीनों लोकों को नापा था, इसी स्वरूप को त्रिविक्रम कहा जाता है। उज्जैन नगरी में सूर्यदेव की उपासना का प्राचीन इतिहास है और यहाँ का त्रिविक्रम मंदिर सूर्य नवग्रह के रूप में पूजित होता आया है। स्कन्द पुराण के अवन्ति खण्ड में उज्जैन के सूर्य क्षेत्रों का वर्णन मिलता है जो इस मंदिर की महिमा को प्रमाणित करता है। रविवार को यहाँ विशेष रूप से सूर्योपासना की जाती है और तेल-तिल का दीपदान शुभ माना जाता है। यह मंदिर नवग्रह पीड़ा निवारण हेतु उज्जैन के प्रमुख तीर्थस्थलों में गिना जाता है।",
+    "en": "According to Puranic tradition, Lord Vishnu in his Vamana avatar measured all three worlds in three strides, earning the name Trivikram. Ujjain has an ancient history of Sun worship and this Trivikram Mandir has been venerated as the Surya Navagraha temple for centuries. The Avanti Khanda of the Skanda Purana describes the solar shrines of Ujjain, lending scriptural authority to this temple's sanctity. Special Sun worship is performed here on Sundays, and offerings of oil and sesame are considered auspicious. This temple is counted among the key pilgrimage sites in Ujjain for relief from malefic planetary influences."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:00",
+      "en": "Approx. 5:30 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "त्रिविक्रम मन्दिर, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Trivikram Mandir, Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1835,
+    "lng": 75.7695
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-11.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर है, जहाँ ऑटो या रिक्शा द्वारा आसानी से पहुँचा जा सकता है।",
+    "en": "The temple is located approximately 0.3 km from Mahakaleshwar Temple within the Mahakal Area. It is about 2 km from Ujjain Railway Station and can be easily reached by auto-rickshaw or cycle rickshaw."
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "bade-ganesh-ji",
+    "navgraha-mandir-ujjain"
+  ],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "त्रिविक्रम मन्दिर उज्जैन",
+    "en": "Trivikram Mandir Ujjain"
+  }
 }

@@ -1,92 +1,90 @@
 {
-    "slug":  "suvarnashikheshwar-mahadev",
-    "name":  {
-                 "hi":  "सुवर्णशिखेश्वर महादेव",
-                 "en":  "Suvarnashikheshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (सुवर्णशिखेश्वर रूप)",
-                  "en":  "Lord Shiva as Suvarnashikheshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
-                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "सुवर्णशिखेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ का एक विशिष्ट मंदिर है। \u0027सुवर्णशिखा\u0027 अर्थात स्वर्णिम शिखर वाले — यह नाम शिव के तेजोमय स्वरूप का बोध कराता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग के दर्शन से सुख-समृद्धि और ऐश्वर्य की प्राप्ति का उल्लेख है।",
-                       "en":  "Suvarnashikheshwar Mahadev is a distinctive temple in the Chaurasi Mahadeva pilgrimage of Ujjain. The name \u0027Suvarnashikha\u0027 — meaning golden-peaked — evokes Shiva\u0027s radiant and glorious aspect. The Avanti Khanda of the Skanda Purana states that darshan at this Shivalinga bestows happiness, prosperity, and abundance on the devotee."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवन्ति खण्ड के अनुसार, सुवर्णशिखेश्वर महादेव उज्जैन के चौरासी स्वयंभू शिव-स्थलों में से एक हैं, जिनकी महिमा सृष्टि के आरंभ से प्रचलित है। पुराणों में वर्णित है कि इस लिंग का अभिषेक स्वर्ण और मूल्यवान रत्नों से करने की प्राचीन परंपरा रही है, जो इसके नाम को सार्थक करती है। मध्यकाल में धनाढ्य व्यापारियों और राजाओं ने इस मंदिर को समृद्ध बनाने में महत्त्वपूर्ण योगदान दिया। उज्जैन की समृद्ध व्यापारिक परंपरा में इस मंदिर का विशेष स्थान रहा है। आज भी भक्त यहाँ समृद्धि की कामना से पूजा-अर्चना करते हैं।",
-                    "en":  "According to the Avanti Khanda of the Skanda Purana, Suvarnashikheshwar Mahadev is one of the eighty-four self-manifested Shiva shrines of Ujjain, whose glory has been celebrated since the dawn of creation. Scriptures describe an ancient tradition of anointing this Shivalinga with gold and precious gems, which gives meaning to its name. In the medieval period, affluent merchants and rulers made significant contributions to enrich this temple. The shrine has held a special place within Ujjain\u0027s prosperous mercantile traditions. Devotees continue to worship here seeking blessings of wealth and abundance."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1834,
-                "lng":  75.7688
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-7.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
-                       "en":  "This temple is approximately 0.2 km from Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station, reachable by auto or rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "सुवर्णशिखेश्वर महादेव उज्जैन",
-                           "en":  "Suvarnashikheshwar Mahadev Ujjain"
-                       }
+  "slug": "suvarnashikheshwar-mahadev",
+  "name": {
+    "hi": "सुवर्णशिखेश्वर महादेव",
+    "en": "Suvarnashikheshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (सुवर्णशिखेश्वर रूप)",
+    "en": "Lord Shiva as Suvarnashikheshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+    "en": "Ancient — mentioned in Skanda Purana Avanti Khanda"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "सुवर्णशिखेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ का एक विशिष्ट मंदिर है। 'सुवर्णशिखा' अर्थात स्वर्णिम शिखर वाले — यह नाम शिव के तेजोमय स्वरूप का बोध कराता है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग के दर्शन से सुख-समृद्धि और ऐश्वर्य की प्राप्ति का उल्लेख है।",
+    "en": "Suvarnashikheshwar Mahadev is a distinctive temple in the Chaurasi Mahadeva pilgrimage of Ujjain. The name 'Suvarnashikha' — meaning golden-peaked — evokes Shiva's radiant and glorious aspect. The Avanti Khanda of the Skanda Purana states that darshan at this Shivalinga bestows happiness, prosperity, and abundance on the devotee."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवन्ति खण्ड के अनुसार, सुवर्णशिखेश्वर महादेव उज्जैन के चौरासी स्वयंभू शिव-स्थलों में से एक हैं, जिनकी महिमा सृष्टि के आरंभ से प्रचलित है। पुराणों में वर्णित है कि इस लिंग का अभिषेक स्वर्ण और मूल्यवान रत्नों से करने की प्राचीन परंपरा रही है, जो इसके नाम को सार्थक करती है। मध्यकाल में धनाढ्य व्यापारियों और राजाओं ने इस मंदिर को समृद्ध बनाने में महत्त्वपूर्ण योगदान दिया। उज्जैन की समृद्ध व्यापारिक परंपरा में इस मंदिर का विशेष स्थान रहा है। आज भी भक्त यहाँ समृद्धि की कामना से पूजा-अर्चना करते हैं।",
+    "en": "According to the Avanti Khanda of the Skanda Purana, Suvarnashikheshwar Mahadev is one of the eighty-four self-manifested Shiva shrines of Ujjain, whose glory has been celebrated since the dawn of creation. Scriptures describe an ancient tradition of anointing this Shivalinga with gold and precious gems, which gives meaning to its name. In the medieval period, affluent merchants and rulers made significant contributions to enrich this temple. The shrine has held a special place within Ujjain's prosperous mercantile traditions. Devotees continue to worship here seeking blessings of wealth and abundance."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1834,
+    "lng": 75.7688
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-7.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी में पहुँचा जा सकता है।",
+    "en": "This temple is approximately 0.2 km from Mahakaleshwar Temple. It is about 2 km from Ujjain Railway Station, reachable by auto or rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "सुवर्णशिखेश्वर महादेव उज्जैन",
+    "en": "Suvarnashikheshwar Mahadev Ujjain"
+  }
 }

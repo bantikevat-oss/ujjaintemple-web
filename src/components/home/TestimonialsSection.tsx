@@ -47,7 +47,7 @@ const TESTIMONIALS = [
     textHi: 'नवग्रह शांति पूजा बुक की। पंडित जी ने पूरी पूजा विधि समझाई। सिंहस्थ 2028 की जानकारी भी इस साइट पर सबसे विस्तृत मिली।',
     textEn: 'Booked Navgrah Shanti puja. The pandit explained the entire vidhi. Also found the most detailed Simhastha 2028 information on this site.',
     initials: 'SV',
-    color: '#2d5a1e',
+    color: '#1a3a5c',
   },
   {
     nameHi: 'विकास सिंह',

@@ -1,150 +1,150 @@
 {
-    "slug":  "amareshwar-mahadev",
-    "name":  {
-                 "hi":  "अमरेश्वर महादेव",
-                 "en":  "Amareshwar Mahadev"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव",
-                  "en":  "Lord Shiva"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पौराणिक काल",
-                           "en":  "Ancient / Puranic era"
-                       },
-    "architectureStyle":  "Traditional Hindu",
-    "shortIntro":  {
-                       "hi":  "अमर (देवताओं) के ईश्वर। इंद्र द्वारा पूजित।",
-                       "en":  "Lord of the immortals (devas). Worshipped by Indra."
-                   },
-    "history":  {
-                    "hi":  "अमरेश्वर महादेव का संबंध देवराज इंद्र की शिव-आराधना से जुड़ा है। पौराणिक मान्यता के अनुसार, वृत्रासुर वध के पश्चात इंद्र पर ब्रह्महत्या का दोष लगा, जिसके निवारण हेतु उन्होंने उज्जयिनी की पवित्र भूमि पर भगवान शिव की कठोर तपस्या की। इसी स्थान पर शिव \u0027अमरेश्वर\u0027 अर्थात अमरों (देवताओं) के ईश्वर रूप में प्रकट हुए। उज्जैन की महाकाल नगरी में यह मंदिर देव-आराधना की प्राचीन परंपरा का जीवंत प्रमाण है। शिवपुराण व स्कंदपुराण के अवंतिखंड में इस क्षेत्र की महिमा का विशेष वर्णन मिलता है। श्रद्धालु यहाँ मनोकामना पूर्ति व पाप-शमन हेतु शिवलिंग का जलाभिषेक करते हैं।",
-                    "en":  "Amareshwar Mahadev is linked to the penance performed by Indra, king of the gods, to atone for the sin of slaying Vritrasura. According to Puranic tradition, Indra came to the sacred land of Ujjayini and undertook severe tapasya before Lord Shiva to absolve himself of Brahmahatya. Pleased by his devotion, Shiva manifested here as \u0027Amareshwar\u0027 — the lord of the immortals. Situated within Ujjain\u0027s Mahakal region, the temple stands as a living testament to the city\u0027s ancient deva-worship tradition. References to this sacred area appear in the Avantikhanda of the Skanda Purana and in the Shiva Purana. Devotees offer jalabhishek to the Shivalinga here seeking the fulfilment of wishes and relief from past sins."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                 "en":  "6:00 AM – 8:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                         "en":  "6:00 AM – 8:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                           "en":  "6:00 AM – 8:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                          "en":  "6:00 AM – 8:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                          "en":  "6:00 AM – 8:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 8:00",
-                                        "en":  "6:00 AM – 8:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:30",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
-                    },
-    "specialOccasions":  {
-                             "hi":  "महाशिवरात्रि, नवरात्रि, श्रावण",
-                             "en":  "Mahashivratri, Navratri, Shravan"
-                         },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "अमरेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
-                    "en":  "Amareshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
-                },
-    "geo":  {
-                "lat":  23.1765,
-                "lng":  75.7885
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-3.jpg"
-               ],
-    "prasadInfo":  {
-                       "hi":  "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
-                       "en":  "Prasad available · flowers, bel leaves, incense, lamps"
-                   },
-    "howToReach":  {
-                       "hi":  "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
-                       "en":  "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
-                   },
-    "nearbyMandirs":  [
-                          "mahakaleshwar",
-                          "kal-bhairav-ujjain",
-                          "harsiddhi-mata"
-                      ],
-    "simhasthaRelevance":  {
-                               "hi":  "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
-                               "en":  "Suitable temple for darshan during Simhastha"
-                           },
-    "faqs":  [
-                 {
-                     "q":  {
-                               "hi":  "दर्शन का सर्वोत्तम समय?",
-                               "en":  "Best time for darshan?"
-                           },
-                     "a":  {
-                               "hi":  "प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
-                               "en":  "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "अमरेश्वर महादेव नाम का अर्थ क्या है?",
-                               "en":  "What does the name Amareshwar Mahadev mean?"
-                           },
-                     "a":  {
-                               "hi":  "\u0027अमरेश्वर\u0027 का अर्थ है \u0027अमरों के ईश्वर\u0027 अर्थात देवताओं के स्वामी। यहाँ देवराज इंद्र ने स्वयं शिव की आराधना की थी, इसी से यह नाम प्रचलित हुआ।",
-                               "en":  "\u0027Amareshwar\u0027 means \u0027lord of the immortals\u0027, i.e. the master of the devas. Indra, king of the gods, himself worshipped Shiva here, which is how the name came to be associated with this shrine."
-                           }
-                 },
-                 {
-                     "q":  {
-                               "hi":  "क्या यहाँ रुद्राभिषेक कराया जा सकता है?",
-                               "en":  "Can Rudrabhishek be performed here?"
-                           },
-                     "a":  {
-                               "hi":  "हाँ, मंदिर के पुजारी से संपर्क कर रुद्राभिषेक व जलाभिषेक की व्यवस्था हो जाती है। सोमवार और श्रावण मास में यह विशेष फलदायी माना जाता है।",
-                               "en":  "Yes, Rudrabhishek and Jalabhishek can be arranged through the temple priests. These rituals are considered especially auspicious on Mondays and during the Shravan month."
-                           }
-                 }
-             ],
-    "lastVerified":  "2026-06-03",
-    "primaryKeyword":  {
-                           "hi":  "अमरेश्वर महादेव उज्जैन",
-                           "en":  "Amareshwar Mahadev Ujjain"
-                       },
-    "localBeliefs":  {
-                         "hi":  "स्थानीय श्रद्धालुओं की मान्यता है कि अमरेश्वर महादेव के दर्शन से ग्रह-दोष व पितृ-दोष का शमन होता है। सोमवार और श्रावण मास में यहाँ रुद्राभिषेक कराने से मनोकामनाएँ शीघ्र पूर्ण होती हैं, ऐसी जनश्रुति है। महाकाल दर्शन के साथ इस मंदिर का दर्शन परंपरागत रूप से शुभ माना जाता है।",
-                         "en":  "Local devotees believe that darshan at Amareshwar Mahadev relieves graha-dosha and pitru-dosha. Folk tradition holds that performing Rudrabhishek here on Mondays and during the Shravan month leads to swift fulfilment of wishes. Pairing this darshan with a visit to Mahakaleshwar is considered especially auspicious."
-                     },
-    "specialFacts":  {
-                         "hi":  "क्या आप जानते हैं? \u0027अमरेश्वर\u0027 नाम का अर्थ है \u0027अमरों (देवताओं) के ईश्वर\u0027 — यही वह स्थान है जहाँ स्वयं इंद्र ने शिव की आराधना की। उज्जैन के 84 महादेव-स्थलों की प्राचीन परंपरा में इस मंदिर का विशिष्ट स्थान माना जाता है।",
-                         "en":  "Did you know? The name \u0027Amareshwar\u0027 literally means \u0027lord of the immortal devas\u0027 — this is said to be the very spot where Indra himself worshipped Shiva. The temple holds a distinctive place within Ujjain\u0027s ancient tradition of the 84 Mahadev shrines."
-                     },
-    "visitTips":  {
-                      "hi":  "मंदिर में प्रवेश से पूर्व पैर अवश्य धोएँ और सिर ढककर जाएँ। शिवलिंग पर चढ़ाने हेतु जल, बेलपत्र, सफेद पुष्प व धतूरा साथ रखें। सोमवार व श्रावण में भीड़ अधिक होती है, अतः प्रातःकाल दर्शन श्रेष्ठ है। चमड़े की वस्तुएँ गर्भगृह में वर्जित हैं।",
-                      "en":  "Wash your feet and cover your head before entering the sanctum. Carry water, bel leaves, white flowers and dhatura for offering on the Shivalinga. Mondays and the Shravan month see heavy footfall, so early morning darshan is ideal. Leather items are not permitted inside the garbhagriha."
-                  }
+  "slug": "amareshwar-mahadev",
+  "name": {
+    "hi": "अमरेश्वर महादेव",
+    "en": "Amareshwar Mahadev"
+  },
+  "deity": {
+    "hi": "भगवान शिव",
+    "en": "Lord Shiva"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पौराणिक काल",
+    "en": "Ancient / Puranic era"
+  },
+  "architectureStyle": "Traditional Hindu",
+  "shortIntro": {
+    "hi": "अमर (देवताओं) के ईश्वर। इंद्र द्वारा पूजित।",
+    "en": "Lord of the immortals (devas). Worshipped by Indra."
+  },
+  "history": {
+    "hi": "अमरेश्वर महादेव का संबंध देवराज इंद्र की शिव-आराधना से जुड़ा है। पौराणिक मान्यता के अनुसार, वृत्रासुर वध के पश्चात इंद्र पर ब्रह्महत्या का दोष लगा, जिसके निवारण हेतु उन्होंने उज्जयिनी की पवित्र भूमि पर भगवान शिव की कठोर तपस्या की। इसी स्थान पर शिव 'अमरेश्वर' अर्थात अमरों (देवताओं) के ईश्वर रूप में प्रकट हुए। उज्जैन की महाकाल नगरी में यह मंदिर देव-आराधना की प्राचीन परंपरा का जीवंत प्रमाण है। शिवपुराण व स्कंदपुराण के अवंतिखंड में इस क्षेत्र की महिमा का विशेष वर्णन मिलता है। श्रद्धालु यहाँ मनोकामना पूर्ति व पाप-शमन हेतु शिवलिंग का जलाभिषेक करते हैं।",
+    "en": "Amareshwar Mahadev is linked to the penance performed by Indra, king of the gods, to atone for the sin of slaying Vritrasura. According to Puranic tradition, Indra came to the sacred land of Ujjayini and undertook severe tapasya before Lord Shiva to absolve himself of Brahmahatya. Pleased by his devotion, Shiva manifested here as 'Amareshwar' — the lord of the immortals. Situated within Ujjain's Mahakal region, the temple stands as a living testament to the city's ancient deva-worship tradition. References to this sacred area appear in the Avantikhanda of the Skanda Purana and in the Shiva Purana. Devotees offer jalabhishek to the Shivalinga here seeking the fulfilment of wishes and relief from past sins."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+    "en": "Approx. 6:00 AM – 8:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 8:00",
+      "en": "Approx. 6:00 AM – 8:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:30",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:30 PM"
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि, नवरात्रि, श्रावण",
+    "en": "Mahashivratri, Navratri, Shravan"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "अमरेश्वर महादेव, महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456001",
+    "en": "Amareshwar Mahadev, Mahakal Area, Ujjain, Madhya Pradesh 456001"
+  },
+  "geo": {
+    "lat": 23.1765,
+    "lng": 75.7885
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-3.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
+    "en": "Prasad available · flowers, bel leaves, incense, lamps"
+  },
+  "howToReach": {
+    "hi": "महाकाल मंदिर से कैब/ऑटो द्वारा सुलभ · रेलवे स्टेशन से 3-5 किमी",
+    "en": "Accessible by cab/auto from Mahakal · 3-5 km from railway station"
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ काल में दर्शन हेतु उपयुक्त मंदिर",
+    "en": "Suitable temple for darshan during Simhastha"
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "दर्शन का सर्वोत्तम समय?",
+        "en": "Best time for darshan?"
+      },
+      "a": {
+        "hi": "लगभग प्रातः 6:00 – 8:00 बजे भीड़ कम होती है। दोपहर में मंदिर का माहौल शांत रहता है।",
+        "en": "Early morning 6-8 AM has lower crowds. Afternoon offers a quieter atmosphere."
+      }
+    },
+    {
+      "q": {
+        "hi": "अमरेश्वर महादेव नाम का अर्थ क्या है?",
+        "en": "What does the name Amareshwar Mahadev mean?"
+      },
+      "a": {
+        "hi": "'अमरेश्वर' का अर्थ है 'अमरों के ईश्वर' अर्थात देवताओं के स्वामी। यहाँ देवराज इंद्र ने स्वयं शिव की आराधना की थी, इसी से यह नाम प्रचलित हुआ।",
+        "en": "'Amareshwar' means 'lord of the immortals', i.e. the master of the devas. Indra, king of the gods, himself worshipped Shiva here, which is how the name came to be associated with this shrine."
+      }
+    },
+    {
+      "q": {
+        "hi": "क्या यहाँ रुद्राभिषेक कराया जा सकता है?",
+        "en": "Can Rudrabhishek be performed here?"
+      },
+      "a": {
+        "hi": "हाँ, मंदिर के पुजारी से संपर्क कर रुद्राभिषेक व जलाभिषेक की व्यवस्था हो जाती है। सोमवार और श्रावण मास में यह विशेष फलदायी माना जाता है।",
+        "en": "Yes, Rudrabhishek and Jalabhishek can be arranged through the temple priests. These rituals are considered especially auspicious on Mondays and during the Shravan month."
+      }
+    }
+  ],
+  "lastVerified": "2026-06-03",
+  "primaryKeyword": {
+    "hi": "अमरेश्वर महादेव उज्जैन",
+    "en": "Amareshwar Mahadev Ujjain"
+  },
+  "localBeliefs": {
+    "hi": "स्थानीय श्रद्धालुओं की मान्यता है कि अमरेश्वर महादेव के दर्शन से ग्रह-दोष व पितृ-दोष का शमन होता है। सोमवार और श्रावण मास में यहाँ रुद्राभिषेक कराने से मनोकामनाएँ शीघ्र पूर्ण होती हैं, ऐसी जनश्रुति है। महाकाल दर्शन के साथ इस मंदिर का दर्शन परंपरागत रूप से शुभ माना जाता है।",
+    "en": "Local devotees believe that darshan at Amareshwar Mahadev relieves graha-dosha and pitru-dosha. Folk tradition holds that performing Rudrabhishek here on Mondays and during the Shravan month leads to swift fulfilment of wishes. Pairing this darshan with a visit to Mahakaleshwar is considered especially auspicious."
+  },
+  "specialFacts": {
+    "hi": "क्या आप जानते हैं? 'अमरेश्वर' नाम का अर्थ है 'अमरों (देवताओं) के ईश्वर' — यही वह स्थान है जहाँ स्वयं इंद्र ने शिव की आराधना की। उज्जैन के 84 महादेव-स्थलों की प्राचीन परंपरा में इस मंदिर का विशिष्ट स्थान माना जाता है।",
+    "en": "Did you know? The name 'Amareshwar' literally means 'lord of the immortal devas' — this is said to be the very spot where Indra himself worshipped Shiva. The temple holds a distinctive place within Ujjain's ancient tradition of the 84 Mahadev shrines."
+  },
+  "visitTips": {
+    "hi": "मंदिर में प्रवेश से पूर्व पैर अवश्य धोएँ और सिर ढककर जाएँ। शिवलिंग पर चढ़ाने हेतु जल, बेलपत्र, सफेद पुष्प व धतूरा साथ रखें। सोमवार व श्रावण में भीड़ अधिक होती है, अतः प्रातःकाल दर्शन श्रेष्ठ है। चमड़े की वस्तुएँ मंदिर में वर्जित हैं।",
+    "en": "Wash your feet and cover your head before entering the sanctum. Carry water, bel leaves, white flowers and dhatura for offering on the Shivalinga. Mondays and the Shravan month see heavy footfall, so early morning darshan is ideal. Leather items are not permitted inside the garbhagriha."
+  }
 }

@@ -1,92 +1,90 @@
 {
-    "slug":  "karkoreshwar-mahadev",
-    "name":  {
-                 "hi":  "कर्कोटेश्वर महादेव",
-                 "en":  "Karkoreshwar Mahadev (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव — कर्कोटेश्वर स्वरूप",
-                  "en":  "Lord Shiva as Karkoreshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुराण कालीन",
-                           "en":  "Puranic Era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "कर्कोटेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में महाकाल क्षेत्र का एक पावन शिव तीर्थ है। नागराज कर्कोट की तपस्या से सम्बन्धित इस मंदिर में सर्पदोष निवारण की विशेष कामना की जाती है। स्कन्द पुराण में इस स्थान की महिमा का स्पष्ट उल्लेख है।",
-                       "en":  "Karkoreshwar Mahadev is a sacred Shiva tirtha in the Mahakal area, part of Ujjain\u0027s 84 Mahadevas series. Associated with the penance of serpent king Karkota, this temple is especially sought for relief from serpent-related afflictions (Sarpa dosha). The Skanda Purana mentions the glory of this site explicitly."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में कर्कोटेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक विशिष्ट तीर्थ के रूप में किया गया है। पौराणिक कथाओं के अनुसार नागराज कर्कोट ने यहाँ उज्जैन में घोर तपस्या कर भगवान शिव को प्रसन्न किया और शिव ने उन्हें अपने गणों में शामिल कर यहाँ कर्कोटेश्वर नाम से अपना दिव्य स्वरूप प्रकट किया। यह मंदिर नाग पंचमी पर्व पर विशेष महत्त्व रखता है, जब हजारों श्रद्धालु सर्पदोष निवारण हेतु यहाँ पूजन करने आते हैं। मान्यता है कि यहाँ दर्शन एवं अभिषेक करने से कुंडली में राहु-केतु एवं सर्पदोष का प्रभाव कम होता है।",
-                    "en":  "The Avanti Khanda of the Skanda Purana describes Karkoreshwar Mahadev as a distinctive tirtha within the 84 Mahadevas series. According to Puranic accounts, the serpent king Karkota performed severe austerities here in Ujjain, pleasing Shiva, who then included him among his ganas and manifested as Karkoreshwar at this spot. The temple holds special importance on Naga Panchami, when thousands of devotees visit for relief from serpent-related afflictions. It is believed that darshan and abhisheka here reduces the adverse effects of Rahu, Ketu, and Sarpa dosha in one\u0027s horoscope."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1829,
-                "lng":  75.7682
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-4.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
-                       "en":  "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "कर्कोटेश्वर महादेव उज्जैन",
-                           "en":  "Karkoreshwar Mahadev Ujjain"
-                       }
+  "slug": "karkoreshwar-mahadev",
+  "name": {
+    "hi": "कर्कोटेश्वर महादेव",
+    "en": "Karkoreshwar Mahadev (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव — कर्कोटेश्वर स्वरूप",
+    "en": "Lord Shiva as Karkoreshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुराण कालीन",
+    "en": "Puranic Era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "कर्कोटेश्वर महादेव उज्जैन की चौरासी महादेव श्रृंखला में महाकाल क्षेत्र का एक पावन शिव तीर्थ है। नागराज कर्कोट की तपस्या से सम्बन्धित इस मंदिर में सर्पदोष निवारण की विशेष कामना की जाती है। स्कन्द पुराण में इस स्थान की महिमा का स्पष्ट उल्लेख है।",
+    "en": "Karkoreshwar Mahadev is a sacred Shiva tirtha in the Mahakal area, part of Ujjain's 84 Mahadevas series. Associated with the penance of serpent king Karkota, this temple is especially sought for relief from serpent-related afflictions (Sarpa dosha). The Skanda Purana mentions the glory of this site explicitly."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में कर्कोटेश्वर महादेव का वर्णन 84 महादेव श्रृंखला के एक विशिष्ट तीर्थ के रूप में किया गया है। पौराणिक कथाओं के अनुसार नागराज कर्कोट ने यहाँ उज्जैन में घोर तपस्या कर भगवान शिव को प्रसन्न किया और शिव ने उन्हें अपने गणों में शामिल कर यहाँ कर्कोटेश्वर नाम से अपना दिव्य स्वरूप प्रकट किया। यह मंदिर नाग पंचमी पर्व पर विशेष महत्त्व रखता है, जब हजारों श्रद्धालु सर्पदोष निवारण हेतु यहाँ पूजन करने आते हैं। मान्यता है कि यहाँ दर्शन एवं अभिषेक करने से कुंडली में राहु-केतु एवं सर्पदोष का प्रभाव कम होता है।",
+    "en": "The Avanti Khanda of the Skanda Purana describes Karkoreshwar Mahadev as a distinctive tirtha within the 84 Mahadevas series. According to Puranic accounts, the serpent king Karkota performed severe austerities here in Ujjain, pleasing Shiva, who then included him among his ganas and manifested as Karkoreshwar at this spot. The temple holds special importance on Naga Panchami, when thousands of devotees visit for relief from serpent-related afflictions. It is believed that darshan and abhisheka here reduces the adverse effects of Rahu, Ketu, and Sarpa dosha in one's horoscope."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1829,
+    "lng": 75.7682
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-4.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
+    "en": "Located about 0.3 km from Mahakaleshwar Temple. Approx 10 minutes by auto from Ujjain Railway Station."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "कर्कोटेश्वर महादेव उज्जैन",
+    "en": "Karkoreshwar Mahadev Ujjain"
+  }
 }

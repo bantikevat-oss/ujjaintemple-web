@@ -1,92 +1,90 @@
 {
-    "slug":  "tryambakeshwar-ujjain",
-    "name":  {
-                 "hi":  "त्र्यम्बकेश्वर महादेव",
-                 "en":  "Tryambakeshwar Mahadev Ujjain (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (त्र्यम्बकेश्वर — त्रिनेत्रधारी)",
-                  "en":  "Lord Shiva (Three-Eyed)"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कन्द पुराण काल",
-                           "en":  "Ancient — Skanda Purana era"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "त्र्यम्बकेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ में स्थित एक अत्यंत महत्वपूर्ण शिवलिंग हैं। \u0027त्र्यम्बक\u0027 अर्थात् तीन नेत्रों वाले शिव — यह रूप शिव की सर्वज्ञता और ब्रह्मांड के तीनों पहलुओं (सृष्टि, स्थिति, संहार) पर उनके अधिकार का प्रतीक है। उज्जैन का यह त्र्यम्बक तीर्थ नासिक के ज्योतिर्लिंग की भाँति पवित्र माना जाता है।",
-                       "en":  "Tryambakeshwar Mahadev is an extremely important Shivalinga in Ujjain\u0027s Chaurasi Mahadeva pilgrimage. \u0027Tryambaka\u0027 means Shiva of three eyes — this form symbolises Shiva\u0027s omniscience and his sovereignty over the three aspects of the universe (creation, preservation, dissolution). This Tryambaka shrine of Ujjain is considered as sacred as the Jyotirlinga at Nashik."
-                   },
-    "history":  {
-                    "hi":  "स्कन्द पुराण के अवन्ती खण्ड में त्र्यम्बकेश्वर महादेव का उल्लेख चौरासी महादेव की श्रृंखला में मिलता है। \u0027त्र्यम्बक\u0027 शिव का वह स्वरूप है जिसकी तीसरी आँख — ज्ञान की आँख — सत्य को प्रकाशित करती है। ऋग्वेद के महामृत्युञ्जय मंत्र में \u0027त्र्यम्बकं यजामहे\u0027 के रूप में इस स्वरूप की स्तुति की गई है। उज्जैन में इस शिवलिंग की प्रतिष्ठा अत्यंत प्राचीन है और इसे नासिक के त्र्यम्बकेश्वर ज्योतिर्लिंग का अवन्ती प्रतिरूप माना जाता है। महामृत्युञ्जय जाप और रुद्राभिषेक यहाँ नित्य होते हैं।",
-                    "en":  "Tryambakeshwar Mahadev is mentioned in the Chaurasi Mahadeva series in the Avanti Khanda of the Skanda Purana. \u0027Tryambaka\u0027 is the form of Shiva whose third eye — the eye of knowledge — illuminates truth. The Rigvedic Mahamrityunjaya mantra praises this form as \u0027Tryambakam Yajamahe\u0027. The consecration of this Shivalinga in Ujjain is extremely ancient, and it is regarded as the Avanti counterpart of the Tryambakeshwar Jyotirlinga at Nashik. Mahamrityunjaya japa and Rudrabhisheka are performed here daily."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1828,
-                "lng":  75.767
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-13.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
-                       "en":  "Located approximately 0.3 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "त्र्यम्बकेश्वर महादेव उज्जैन",
-                           "en":  "Tryambakeshwar Mahadev Ujjain"
-                       }
+  "slug": "tryambakeshwar-ujjain",
+  "name": {
+    "hi": "त्र्यम्बकेश्वर महादेव",
+    "en": "Tryambakeshwar Mahadev Ujjain (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (त्र्यम्बकेश्वर — त्रिनेत्रधारी)",
+    "en": "Lord Shiva (Three-Eyed)"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कन्द पुराण काल",
+    "en": "Ancient — Skanda Purana era"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "त्र्यम्बकेश्वर महादेव उज्जैन के चौरासी महादेव तीर्थ में स्थित एक अत्यंत महत्वपूर्ण शिवलिंग हैं। 'त्र्यम्बक' अर्थात् तीन नेत्रों वाले शिव — यह रूप शिव की सर्वज्ञता और ब्रह्मांड के तीनों पहलुओं (सृष्टि, स्थिति, संहार) पर उनके अधिकार का प्रतीक है। उज्जैन का यह त्र्यम्बक तीर्थ नासिक के ज्योतिर्लिंग की भाँति पवित्र माना जाता है।",
+    "en": "Tryambakeshwar Mahadev is an extremely important Shivalinga in Ujjain's Chaurasi Mahadeva pilgrimage. 'Tryambaka' means Shiva of three eyes — this form symbolises Shiva's omniscience and his sovereignty over the three aspects of the universe (creation, preservation, dissolution). This Tryambaka shrine of Ujjain is considered as sacred as the Jyotirlinga at Nashik."
+  },
+  "history": {
+    "hi": "स्कन्द पुराण के अवन्ती खण्ड में त्र्यम्बकेश्वर महादेव का उल्लेख चौरासी महादेव की श्रृंखला में मिलता है। 'त्र्यम्बक' शिव का वह स्वरूप है जिसकी तीसरी आँख — ज्ञान की आँख — सत्य को प्रकाशित करती है। ऋग्वेद के महामृत्युञ्जय मंत्र में 'त्र्यम्बकं यजामहे' के रूप में इस स्वरूप की स्तुति की गई है। उज्जैन में इस शिवलिंग की प्रतिष्ठा अत्यंत प्राचीन है और इसे नासिक के त्र्यम्बकेश्वर ज्योतिर्लिंग का अवन्ती प्रतिरूप माना जाता है। महामृत्युञ्जय जाप और रुद्राभिषेक यहाँ नित्य होते हैं।",
+    "en": "Tryambakeshwar Mahadev is mentioned in the Chaurasi Mahadeva series in the Avanti Khanda of the Skanda Purana. 'Tryambaka' is the form of Shiva whose third eye — the eye of knowledge — illuminates truth. The Rigvedic Mahamrityunjaya mantra praises this form as 'Tryambakam Yajamahe'. The consecration of this Shivalinga in Ujjain is extremely ancient, and it is regarded as the Avanti counterpart of the Tryambakeshwar Jyotirlinga at Nashik. Mahamrityunjaya japa and Rudrabhisheka are performed here daily."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1828,
+    "lng": 75.767
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-13.jpg"
+  ],
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर से लगभग 0.3 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा लगभग 2 किमी।",
+    "en": "Located approximately 0.3 km from Mahakaleshwar Temple. About 2 km from Ujjain Railway Station by auto-rickshaw."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "त्र्यम्बकेश्वर महादेव उज्जैन",
+    "en": "Tryambakeshwar Mahadev Ujjain"
+  }
 }

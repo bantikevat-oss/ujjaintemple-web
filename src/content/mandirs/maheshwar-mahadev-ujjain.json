@@ -1,92 +1,90 @@
 {
-    "slug":  "maheshwar-mahadev-ujjain",
-    "name":  {
-                 "hi":  "महेश्वर महादेव (उज्जैन)",
-                 "en":  "Maheshwar Mahadev Ujjain (84 Mahadevas)"
-             },
-    "deity":  {
-                  "hi":  "भगवान शिव (महेश्वर रूप)",
-                  "en":  "Lord Shiva as Maheshwar"
-              },
-    "templeType":  "Shiva",
-    "locationArea":  "Mahakal Area",
-    "isFeatured":  false,
-    "establishedEra":  {
-                           "hi":  "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
-                           "en":  "Ancient — mentioned in Skanda Purana Avanti Khanda"
-                       },
-    "architectureStyle":  "Paramara",
-    "shortIntro":  {
-                       "hi":  "महेश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला में एक पवित्र शिव मंदिर है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की महिमा का विस्तृत वर्णन मिलता है। महाकालेश्वर क्षेत्र में स्थित यह मंदिर शिव भक्तों के लिए अत्यंत फलदायी माना जाता है।",
-                       "en":  "Maheshwar Mahadev is a sacred Shiva temple forming part of the celebrated 84 Mahadevas circuit of Ujjain. The glory of this Shivalinga is elaborately described in the Avanti Khanda of the Skanda Purana. Situated in the Mahakal Area, this shrine is revered as highly auspicious for Shiva devotees."
-                   },
-    "history":  {
-                    "hi":  "स्कंद पुराण के अवन्ति खण्ड के अनुसार, उज्जैन नगरी में चौरासी महादेव स्वयंभू रूप में विराजमान हैं, जिनमें महेश्वर महादेव का स्थान विशेष महत्त्व रखता है। पौराणिक मान्यता है कि भगवान शिव ने स्वयं इस क्षेत्र में अपने विभिन्न रूपों में अवतरित होकर भक्तों की रक्षा की थी। महेश्वर अर्थात \u0027महान ईश्वर\u0027 — यह नाम शिव की सर्वोच्च सत्ता को दर्शाता है। प्राचीन काल से उज्जैन के तीर्थयात्री चौरासी महादेव की यात्रा में इस मंदिर का दर्शन अनिवार्य मानते आए हैं। परमार वंश के शासनकाल में इस मंदिर का जीर्णोद्धार एवं विस्तार किया गया था।",
-                    "en":  "According to the Avanti Khanda of the Skanda Purana, eighty-four Shivalingas are self-manifested (swayambhu) in the sacred city of Ujjain, among which Maheshwar Mahadev holds a place of special significance. Tradition holds that Lord Shiva himself descended in various forms across this region to protect his devotees. The name Maheshwar — meaning \u0027the Supreme Lord\u0027 — reflects Shiva\u0027s highest sovereignty over the cosmos. Since ancient times, pilgrims undertaking the Chaurasi Mahadeva circuit have considered this temple an essential stop on their journey. The temple was renovated and expanded during the reign of the Paramara dynasty."
-                },
-    "darshanTimingSummary":  {
-                                 "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                 "en":  "6:00 AM – 9:00 PM"
-                             },
-    "weeklyTiming":  {
-                         "monday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "tuesday":  {
-                                         "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                         "en":  "6:00 AM – 9:00 PM"
-                                     },
-                         "wednesday":  {
-                                           "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                           "en":  "6:00 AM – 9:00 PM"
-                                       },
-                         "thursday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "friday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    },
-                         "saturday":  {
-                                          "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                          "en":  "6:00 AM – 9:00 PM"
-                                      },
-                         "sunday":  {
-                                        "hi":  "प्रातः 6:00 – रात्रि 9:00",
-                                        "en":  "6:00 AM – 9:00 PM"
-                                    }
-                     },
-    "aartiTiming":  {
-                        "hi":  "प्रातः आरती 6:30 · संध्या आरती 7:00",
-                        "en":  "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
-                    },
-    "entryFee":  {
-                     "hi":  "निःशुल्क",
-                     "en":  "Free entry"
-                 },
-    "address":  {
-                    "hi":  "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
-                    "en":  "Mahakal Area, Ujjain, Madhya Pradesh 456006"
-                },
-    "geo":  {
-                "lat":  23.1831,
-                "lng":  75.7685
-            },
-    "photos":  [
-                   "/images/mandirs/shiva-variety-12.jpg"
-               ],
-    "howToReach":  {
-                       "hi":  "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी की दूरी तय करके पहुँचा जा सकता है।",
-                       "en":  "This temple is located approximately 0.2 km from Mahakaleshwar Temple. It can be reached by auto or rickshaw from Ujjain Railway Station, which is about 2 km away."
-                   },
-    "nearbyMandirs":  [
-
-                      ],
-    "lastVerified":  "2026-05-31",
-    "primaryKeyword":  {
-                           "hi":  "महेश्वर महादेव उज्जैन",
-                           "en":  "Maheshwar Mahadev Ujjain"
-                       }
+  "slug": "maheshwar-mahadev-ujjain",
+  "name": {
+    "hi": "महेश्वर महादेव (उज्जैन)",
+    "en": "Maheshwar Mahadev Ujjain (84 Mahadevas)"
+  },
+  "deity": {
+    "hi": "भगवान शिव (महेश्वर रूप)",
+    "en": "Lord Shiva as Maheshwar"
+  },
+  "templeType": "Shiva",
+  "locationArea": "Mahakal Area",
+  "isFeatured": false,
+  "establishedEra": {
+    "hi": "पुरातन — स्कंद पुराण अवन्ति खण्ड वर्णित",
+    "en": "Ancient — mentioned in Skanda Purana Avanti Khanda"
+  },
+  "architectureStyle": "Paramara",
+  "shortIntro": {
+    "hi": "महेश्वर महादेव उज्जैन के 84 महादेवों की श्रृंखला में एक पवित्र शिव मंदिर है। स्कंद पुराण के अवन्ति खण्ड में इस लिंग की महिमा का विस्तृत वर्णन मिलता है। महाकालेश्वर क्षेत्र में स्थित यह मंदिर शिव भक्तों के लिए अत्यंत फलदायी माना जाता है।",
+    "en": "Maheshwar Mahadev is a sacred Shiva temple forming part of the celebrated 84 Mahadevas circuit of Ujjain. The glory of this Shivalinga is elaborately described in the Avanti Khanda of the Skanda Purana. Situated in the Mahakal Area, this shrine is revered as highly auspicious for Shiva devotees."
+  },
+  "history": {
+    "hi": "स्कंद पुराण के अवन्ति खण्ड के अनुसार, उज्जैन नगरी में चौरासी महादेव स्वयंभू रूप में विराजमान हैं, जिनमें महेश्वर महादेव का स्थान विशेष महत्त्व रखता है। पौराणिक मान्यता है कि भगवान शिव ने स्वयं इस क्षेत्र में अपने विभिन्न रूपों में अवतरित होकर भक्तों की रक्षा की थी। महेश्वर अर्थात 'महान ईश्वर' — यह नाम शिव की सर्वोच्च सत्ता को दर्शाता है। प्राचीन काल से उज्जैन के तीर्थयात्री चौरासी महादेव की यात्रा में इस मंदिर का दर्शन अनिवार्य मानते आए हैं। परमार वंश के शासनकाल में इस मंदिर का जीर्णोद्धार एवं विस्तार किया गया था।",
+    "en": "According to the Avanti Khanda of the Skanda Purana, eighty-four Shivalingas are self-manifested (swayambhu) in the sacred city of Ujjain, among which Maheshwar Mahadev holds a place of special significance. Tradition holds that Lord Shiva himself descended in various forms across this region to protect his devotees. The name Maheshwar — meaning 'the Supreme Lord' — reflects Shiva's highest sovereignty over the cosmos. Since ancient times, pilgrims undertaking the Chaurasi Mahadeva circuit have considered this temple an essential stop on their journey. The temple was renovated and expanded during the reign of the Paramara dynasty."
+  },
+  "darshanTimingSummary": {
+    "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+    "en": "Approx. 6:00 AM – 9:00 PM"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "tuesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "wednesday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "thursday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "friday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "saturday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    },
+    "sunday": {
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00",
+      "en": "Approx. 6:00 AM – 9:00 PM"
+    }
+  },
+  "aartiTiming": {
+    "hi": "लगभग प्रातः आरती 6:30 · संध्या आरती 7:00",
+    "en": "Morning aarti 6:30 AM · Evening aarti 7:00 PM"
+  },
+  "entryFee": {
+    "hi": "निःशुल्क",
+    "en": "Free entry"
+  },
+  "address": {
+    "hi": "महाकाल क्षेत्र, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Mahakal Area, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1831,
+    "lng": 75.7685
+  },
+  "photos": [
+    "/images/mandirs/shiva-variety-12.jpg"
+  ],
+  "howToReach": {
+    "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.2 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 2 किमी की दूरी तय करके पहुँचा जा सकता है।",
+    "en": "This temple is located approximately 0.2 km from Mahakaleshwar Temple. It can be reached by auto or rickshaw from Ujjain Railway Station, which is about 2 km away."
+  },
+  "nearbyMandirs": [],
+  "lastVerified": "2026-05-31",
+  "primaryKeyword": {
+    "hi": "महेश्वर महादेव उज्जैन",
+    "en": "Maheshwar Mahadev Ujjain"
+  }
 }
