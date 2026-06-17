@@ -79,7 +79,7 @@ export function CabBookingLanding() {
           
           {/* Main Image with refined gradient overlay */}
           <div className="absolute inset-0 z-0">
-            <img src="/images/ujjain_taxi_4k.webp" alt="Ujjain Cab Booking" className="h-full w-full object-cover opacity-60 mix-blend-luminosity" />
+            <img src="/images/services/ujjain_taxi_4k.webp" alt="Ujjain Cab Booking" className="h-full w-full object-cover opacity-60 mix-blend-luminosity" />
             <div className="absolute inset-0 bg-gradient-to-b from-maroon-900/90 via-maroon-900/60 to-maroon-900/95" />
           </div>
 
@@ -130,7 +130,7 @@ export function CabBookingLanding() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream">
-              <img src="/images/ujjain_taxi_4k.webp" alt="Ujjain Taxi Service" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img src="/images/services/ujjain_taxi_4k.webp" alt="Ujjain Taxi Service" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>
@@ -140,7 +140,7 @@ export function CabBookingLanding() {
         <section className="bg-cream-dark/10 py-16">
           <div className="container-page max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white flex-shrink-0 relative group">
-              <img src="/images/ujjain_tirthyatra_services_4k.webp" alt="TirthYatra Services" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+              <img src="/images/services/ujjain_tirthyatra_services_4k.webp" alt="TirthYatra Services" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-colors duration-500" />
             </div>
             

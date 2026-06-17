@@ -73,43 +73,43 @@
   .container-page {
     @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
   }
-  /* ── PREMIUM ARTICLE TYPOGRAPHY (.prose-temple) ── */
+  /* ── BLOG-STYLE ARTICLE TYPOGRAPHY (.prose-temple) ── */
   .prose-temple {
-    @apply text-lg text-ink-soft leading-relaxed;
+    @apply text-base sm:text-lg text-ink leading-[1.85];
   }
   .prose-temple > p:first-of-type::first-letter {
-    @apply float-left text-6xl font-extrabold text-maroon mr-3 mb-[-8px] mt-[-6px] font-serif leading-none;
+    @apply float-left text-5xl font-bold text-maroon mr-2 mb-[-4px] mt-1 font-serif leading-none;
   }
   .prose-temple p {
-    @apply mb-6;
+    @apply mb-5;
   }
   .prose-temple h2 {
-    @apply mt-12 mb-6 text-3xl sm:text-4xl font-bold text-maroon font-serif border-b-2 border-gold pb-3;
+    @apply mt-10 mb-4 text-xl sm:text-2xl font-bold text-ink font-serif;
   }
   .prose-temple h3 {
-    @apply mt-8 mb-4 text-2xl sm:text-3xl font-bold text-maroon font-serif;
+    @apply mt-7 mb-3 text-lg sm:text-xl font-bold text-ink font-serif;
   }
   .prose-temple ul {
-    @apply mb-8 pl-0 space-y-3;
+    @apply mb-6 pl-0 space-y-2;
   }
   .prose-temple ul li {
-    @apply relative pl-8 text-ink-soft;
+    @apply relative pl-6 text-ink;
   }
   .prose-temple ul li::before {
-    content: "✦";
-    @apply absolute left-0 text-gold top-0 font-bold;
+    content: "•";
+    @apply absolute left-0 text-saffron-700 top-0 font-bold;
   }
   .prose-temple ol {
-    @apply mb-8 ml-6 list-decimal space-y-3 font-bold text-maroon;
+    @apply mb-6 ml-6 list-decimal space-y-2 text-ink;
   }
   .prose-temple ol li span {
-    @apply font-normal text-ink-soft;
+    @apply font-normal text-ink;
   }
   .prose-temple a {
-    @apply text-maroon font-semibold underline decoration-gold decoration-2 underline-offset-4 hover:text-gold transition-colors;
+    @apply text-maroon font-medium underline decoration-gold/60 decoration-1 underline-offset-4 hover:text-gold transition-colors;
   }
   .prose-temple strong {
-    @apply font-bold text-maroon-900;
+    @apply font-bold text-ink;
   }
   
   /* Premium Tables */

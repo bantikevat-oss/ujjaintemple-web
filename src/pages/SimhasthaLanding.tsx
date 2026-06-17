@@ -11,7 +11,7 @@ import { breadcrumbSchema, itemListSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight } from 'lucide-react';
 
 // ─── Countdown ───────────────────────────────────────────────────
-const SIMHASTHA_START = new Date('2028-04-29T00:00:00');
+const SIMHASTHA_START = new Date('2028-04-09T00:00:00');
 
 type Countdown = { d: number; h: number; m: number; s: number; ready: boolean };
 
@@ -38,48 +38,113 @@ function useCountdown(): Countdown {
 
 // ─── Data ─────────────────────────────────────────────────────────
 const STATS = [
-  { numHi: '29 दिन',     numEn: '29 Days',     labelHi: 'महापर्व अवधि',         labelEn: 'Festival Duration' },
-  { numHi: '5',           numEn: '5',            labelHi: 'शाही स्नान',            labelEn: 'Shahi Snans' },
+  { numHi: '30 दिन',     numEn: '30 Days',     labelHi: 'महापर्व अवधि',         labelEn: 'Festival Duration' },
+  { numHi: '3',           numEn: '3',            labelHi: 'शाही स्नान',            labelEn: 'Shahi Snans' },
   { numHi: '13',          numEn: '13',           labelHi: 'अखाड़े',               labelEn: 'Akhadas' },
-  { numHi: '12 करोड़+',  numEn: '12 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
+  { numHi: '30 करोड़+',  numEn: '30 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
 ];
 
+// Official data — Ujjain Police Simhastha 2028 presentation
 const SHAHI_SNANS = [
   {
     num: 1,
-    dateHi: '29 अप्रैल 2028',   dateEn: '29 Apr 2028',
-    nameHi: 'चैत्र पूर्णिमा',   nameEn: 'Chaitra Purnima',
-    noteHi: 'प्रथम शाही स्नान — सिंहस्थ प्रारम्भ', noteEn: 'First Shahi Snan — Simhastha Opens',
+    dateHi: '27 मार्च 2028 (सोमवार)',   dateEn: '27 Mar 2028 (Monday)',
+    nameHi: 'प्रथम पेशवाई',   nameEn: 'First Peshwai',
+    noteHi: 'अखाड़ों का भव्य प्रवेश — सिंहस्थ की औपचारिक शुरुआत', noteEn: 'Grand entry of Akhadas — official commencement',
     highlight: false,
   },
   {
     num: 2,
-    dateHi: '13 मई 2028',       dateEn: '13 May 2028',
-    nameHi: 'वैशाख कृष्ण अमावस्या', nameEn: 'Vaisakh Krishna Amavasya',
-    noteHi: 'द्वितीय शाही स्नान — पितृ तर्पण विशेष', noteEn: 'Second Shahi Snan — Pitru Tarpan',
-    highlight: false,
-  },
-  {
-    num: 3,
-    dateHi: '15 मई 2028',       dateEn: '15 May 2028',
-    nameHi: 'अक्षय तृतीया',     nameEn: 'Akshaya Tritiya',
-    noteHi: 'तृतीय शाही स्नान — अक्षय पुण्य', noteEn: 'Third Shahi Snan — Akshaya Merit',
+    dateHi: '09 अप्रैल 2028 (रविवार)',   dateEn: '09 Apr 2028 (Sunday)',
+    nameHi: 'प्रथम शाही स्नान — चैत्र पूर्णिमा',   nameEn: 'First Shahi Snan — Chaitra Purnima',
+    noteHi: 'पहला शाही स्नान — सिंहस्थ की शुरुआत', noteEn: 'First Shahi Snan — Simhastha Opens',
     highlight: true,
   },
   {
+    num: 3,
+    dateHi: '19–24 अप्रैल 2028 (6 दिन)',   dateEn: '19–24 Apr 2028 (6 days)',
+    nameHi: 'पंचकोशी यात्रा',   nameEn: 'Panchkoshi Yatra',
+    noteHi: '6 दिन की पवित्र परिक्रमा — उज्जैन के बाहरी क्षेत्र की पैदल यात्रा', noteEn: '6-day sacred circumambulation of greater Ujjain',
+    highlight: false,
+  },
+  {
     num: 4,
-    dateHi: '23 मई 2028',       dateEn: '23 May 2028',
-    nameHi: 'वैशाख शुक्ल एकादशी', nameEn: 'Vaisakh Shukla Ekadashi',
-    noteHi: 'चतुर्थ शाही स्नान — मोहिनी एकादशी', noteEn: 'Fourth Shahi Snan — Mohini Ekadashi',
+    dateHi: '24 अप्रैल 2028 (सोमवार)',   dateEn: '24 Apr 2028 (Monday)',
+    nameHi: 'सोमवती अमावस्या — वैशाख कृष्ण',   nameEn: 'Somvati Amavasya — Vaisakh Krishna',
+    noteHi: 'पितृ तर्पण और स्नान का खास दिन', noteEn: 'Special day for ancestral offerings and snan',
     highlight: false,
   },
   {
     num: 5,
-    dateHi: '27 मई 2028',       dateEn: '27 May 2028',
-    nameHi: 'वैशाख पूर्णिमा',  nameEn: 'Vaisakh Purnima',
-    noteHi: 'पंचम व मुख्य स्नान — सिंहस्थ समापन', noteEn: 'Fifth & Grand Final Snan — Simhastha Closes',
+    dateHi: '27 अप्रैल 2028 (गुरुवार)',  dateEn: '27 Apr 2028 (Thursday)',
+    nameHi: 'द्वितीय शाही स्नान — अक्षय तृतीया',  nameEn: 'Second Shahi Snan — Akshaya Tritiya',
+    noteHi: 'दूसरा शाही स्नान — अक्षय पुण्य का दिन', noteEn: 'Second Shahi Snan — Akshaya Merit',
     highlight: true,
   },
+  {
+    num: 6,
+    dateHi: '08 मई 2028 (सोमवार)',       dateEn: '08 May 2028 (Monday)',
+    nameHi: 'तृतीय शाही स्नान — वैशाख पूर्णिमा',  nameEn: 'Third Shahi Snan — Vaisakh Purnima',
+    noteHi: 'तीसरा और आखिरी शाही स्नान — सिंहस्थ का समापन', noteEn: 'Third & Final Shahi Snan — Simhastha Closes',
+    highlight: true,
+  },
+];
+
+// 13 अखाड़े — Official list from Ujjain Police
+const AKHADAS = {
+  shaiv: {
+    titleHi: 'शैव सम्प्रदाय — 7 अखाड़े',
+    titleEn: 'Shaiv Sampradaya — 7 Akhadas',
+    areaHi: 'दत्त भखाड़ा होलकर, बहरमपुर रोड',
+    areaEn: 'Datt Bakhada Holkar, Bahrampur Road',
+    list: [
+      { hi: 'जूना अखाड़ा', en: 'Juna Akhada' },
+      { hi: 'आव्हान अखाड़ा', en: 'Avahan Akhada' },
+      { hi: 'अग्नि अखाड़ा', en: 'Agni Akhada' },
+      { hi: 'महानिर्वाणी अखाड़ा', en: 'Mahanirvani Akhada' },
+      { hi: 'अटल अखाड़ा', en: 'Atal Akhada' },
+      { hi: 'निरंजनी अखाड़ा', en: 'Niranjani Akhada' },
+      { hi: 'आनंद अखाड़ा', en: 'Anand Akhada' },
+    ],
+    color: '#1e3a5c',
+  },
+  vaishnav: {
+    titleHi: 'वैष्णव सम्प्रदाय — 3 अखाड़े',
+    titleEn: 'Vaishnav Sampradaya — 3 Akhadas',
+    areaHi: 'मरकाला (चिंतामणि) क्षेत्र',
+    areaEn: 'Markala (Chintamani) area',
+    list: [
+      { hi: 'निर्वाणी अखाड़ा', en: 'Nirvani Akhada' },
+      { hi: 'श्री दिगम्बर अखाड़ा', en: 'Shri Digambar Akhada' },
+      { hi: 'निर्मोही अखाड़ा', en: 'Nirmohi Akhada' },
+    ],
+    color: '#c66d1f',
+  },
+  udasin: {
+    titleHi: 'उदासीन एवं निर्मल — 3 अखाड़े',
+    titleEn: 'Udasin & Nirmal — 3 Akhadas',
+    areaHi: 'सम्भायती एवं बहरमपुर रोड',
+    areaEn: 'Sambhayati & Bahrampur Road',
+    list: [
+      { hi: 'पंचायती बड़ा उदासीन', en: 'Panchayati Bada Udasin' },
+      { hi: 'नया उदासीन अखाड़ा', en: 'Naya Udasin Akhada' },
+      { hi: 'निर्मल अखाड़ा', en: 'Nirmal Akhada' },
+    ],
+    color: '#2d5a3d',
+  },
+} as const;
+
+// Security & infrastructure — Ujjain Police official data
+const POLICE_FACTS = [
+  { numHi: '62,950', numEn: '62,950', labelHi: 'सुरक्षा बल', labelEn: 'Security Force' },
+  { numHi: '3,500',  numEn: '3,500',  labelHi: 'AI CCTV कैमरे', labelEn: 'AI CCTV Cameras' },
+  { numHi: '3,000',  numEn: '3,000',  labelHi: 'हेक्टेयर मेला क्षेत्र', labelEn: 'Hectares Mela Area' },
+  { numHi: '10',     numEn: '10',     labelHi: 'जोन', labelEn: 'Zones' },
+  { numHi: '40',     numEn: '40',     labelHi: 'सेक्टर', labelEn: 'Sectors' },
+  { numHi: '80',     numEn: '80',     labelHi: 'थाने', labelEn: 'Police Stations' },
+  { numHi: '500+',   numEn: '500+',   labelHi: 'राजपत्रित अधिकारी', labelEn: 'Gazetted Officers' },
+  { numHi: '100+',   numEn: '100+',   labelHi: 'पार्किंग स्थल', labelEn: 'Parking Spots' },
+  { numHi: '2.20 लाख', numEn: '2.20 Lakh', labelHi: 'वाहन क्षमता', labelEn: 'Vehicle Capacity' },
 ];
 
 // ─── Component ────────────────────────────────────────────────────
@@ -93,26 +158,26 @@ export function SimhasthaLanding() {
     ? 'सिंहस्थ 2028 उज्जैन — सम्पूर्ण गाइड'
     : 'Simhastha 2028 Ujjain — Complete Guide';
   const description = locale === 'hi'
-    ? 'सिंहस्थ महाकुम्भ 2028 (29 अप्रैल — 27 मई) — शाही स्नान, कल्पवास, अखाड़े, आवास, यातायात, बजट। 12 करोड़+ श्रद्धालुओं का महापर्व। सहायता: +91 74007 24456'
-    : 'Simhastha Mahakumbh 2028 (29 April – 27 May) — Shahi Snan, Kalpvas, Akhadas, accommodation, transport, budget. Guide for 12 crore+ pilgrims.';
+    ? 'सिंहस्थ महाकुम्भ 2028 (09 अप्रैल — 08 मई · 30 दिन) — 3 शाही स्नान, 13 अखाड़े, कल्पवास, होटल, ट्रांसपोर्ट की पूरी जानकारी। 30 करोड़+ श्रद्धालुओं का महापर्व। मदद: +91 74007 24456'
+    : 'Simhastha Mahakumbh 2028 (09 April – 08 May · 30 days) — 3 Shahi Snans, 13 Akhadas, Kalpvas, hotels, transport. Guide for 30 crore+ pilgrims.';
 
   const ESSENTIALS = [
     {
       icon: '🛕',
-      titleHi: 'आवास बुकिंग',
+      titleHi: 'होटल बुकिंग',
       titleEn: 'Accommodation',
-      descHi: 'सिंहस्थ नगर कुटिया, होटल, धर्मशाला — शाही स्नान तिथियों पर स्थान अत्यंत सीमित। 6–8 माह पूर्व बुकिंग आवश्यक।',
+      descHi: 'सिंहस्थ नगर की कुटिया, होटल, धर्मशाला — शाही स्नान वाले दिनों में जगह बहुत कम मिलती है। 6–8 महीने पहले बुकिंग करवा लें।',
       descEn: 'MP Tourism kutiyas, hotels, dharmshalas — extremely limited on Shahi Snan dates. Book 6–8 months in advance.',
       href: SITE.phoneTel,
       isExternal: true,
-      ctaHi: 'बुकिंग सहायता',
+      ctaHi: 'बुकिंग में मदद लें',
       ctaEn: 'Booking Help',
     },
     {
       icon: '🚂',
-      titleHi: 'यातायात योजना',
+      titleHi: 'कैसे पहुँचें',
       titleEn: 'Travel Planning',
-      descHi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेन। इंदौर हवाई अड्डे से 55 किमी। सिंहस्थ अवधि में विशेष ट्रेनें।',
+      descHi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेन आती है। इंदौर एयरपोर्ट से 55 किमी दूर है। सिंहस्थ के समय खास ट्रेनें भी चलती हैं।',
       descEn: 'Direct trains from Delhi, Mumbai, Ahmedabad. 55 km from Indore airport. Special trains run during Simhastha.',
       href: `${prefix}/transport-in-ujjain/`,
       isExternal: false,
@@ -121,10 +186,10 @@ export function SimhasthaLanding() {
     },
     {
       icon: '📅',
-      titleHi: 'यात्रा दिनांक',
+      titleHi: 'कब जाएँ',
       titleEn: 'When to Go',
-      descHi: 'कल्पवास: पूरे 29 दिन। शाही स्नान: किसी एक तिथि। परिवार यात्रा के लिए वैशाख पूर्णिमा (27 मई 2028) सर्वोत्तम।',
-      descEn: 'Kalpvas: all 29 days. Shahi Snan: any one date. For families, target Vaisakh Purnima (27 May 2028).',
+      descHi: 'कल्पवास: पूरे 30 दिन चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 27 अप्रैल, 08 मई)। परिवार के साथ जाना है तो वैशाख पूर्णिमा (08 मई 2028) सबसे अच्छा दिन है।',
+      descEn: 'Kalpvas: all 30 days. 3 Shahi Snans (09 Apr, 27 Apr, 08 May). For families, target Vaisakh Purnima (08 May 2028).',
       href: `${prefix}/simhastha-2028/simhastha-2028-complete-guide/`,
       isExternal: false,
       ctaHi: 'पूरी गाइड पढ़ें',
@@ -224,8 +289,8 @@ export function SimhasthaLanding() {
               </h1>
               <p className="text-cream/70 font-serif text-base sm:text-xl tracking-wide">
                 {locale === 'hi'
-                  ? '29 अप्रैल — 27 मई  ·  शिप्रा तट, उज्जैन'
-                  : '29 April — 27 May  ·  Shipra Ghat, Ujjain'}
+                  ? '09 अप्रैल — 08 मई  ·  शिप्रा तट, उज्जैन'
+                  : '09 April — 08 May  ·  Shipra Ghat, Ujjain'}
               </p>
             </div>
 
@@ -374,31 +439,26 @@ export function SimhasthaLanding() {
             {/* Desktop: horizontal. Mobile: vertical */}
             <div className="relative">
 
-              {/* Connecting line — desktop only */}
-              <div className="hidden lg:block absolute top-8 left-[8%] right-[8%] h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent)' }} />
+              {/* Horizontal connecting line — desktop only (6 cards on one row) */}
+              <div className="hidden lg:block absolute top-6 left-[6%] right-[6%] h-px" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent)' }} />
 
-              <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-3 lg:gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
                 {SHAHI_SNANS.map((snan, idx) => (
                   <div key={idx} className="relative flex flex-col items-center text-center group">
 
-                    {/* Mobile vertical connector */}
-                    {idx < SHAHI_SNANS.length - 1 && (
-                      <div className="sm:hidden absolute left-8 top-16 h-full w-px" style={{ background: 'linear-gradient(180deg, rgba(201,168,76,0.5), transparent)' }} />
-                    )}
-
                     {/* Node circle */}
                     <div
-                      className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center font-serif font-extrabold text-xl transition-all duration-300 group-hover:scale-110"
+                      className="relative z-10 w-12 h-12 lg:w-12 lg:h-12 rounded-full flex items-center justify-center font-serif font-extrabold text-base transition-all duration-300 group-hover:scale-110"
                       style={snan.highlight ? {
                         background: 'linear-gradient(135deg, #E0C374, #C9A84C)',
                         color: '#1a0404',
-                        boxShadow: '0 0 0 4px rgba(201,168,76,0.2), 0 0 30px rgba(201,168,76,0.45)',
+                        boxShadow: '0 0 0 3px rgba(201,168,76,0.2), 0 0 20px rgba(201,168,76,0.4)',
                         border: '2px solid rgba(201,168,76,0.8)',
                       } : {
                         background: '#2f0707',
                         color: '#E0C374',
                         border: '2px solid rgba(201,168,76,0.45)',
-                        boxShadow: '0 2px 16px rgba(0,0,0,0.3)',
+                        boxShadow: '0 2px 12px rgba(0,0,0,0.3)',
                       }}
                     >
                       {snan.num}
@@ -406,24 +466,24 @@ export function SimhasthaLanding() {
 
                     {/* Card */}
                     <div
-                      className="mt-4 p-4 sm:p-5 rounded-xl w-full max-w-[220px] sm:max-w-none transition-all duration-300 group-hover:shadow-md"
+                      className="mt-3 p-3 rounded-xl w-full transition-all duration-300 group-hover:shadow-md"
                       style={snan.highlight ? {
                         background: '#2f0707',
                         border: '1.5px solid rgba(201,168,76,0.45)',
-                        boxShadow: '0 0 20px rgba(201,168,76,0.12)',
+                        boxShadow: '0 0 16px rgba(201,168,76,0.12)',
                       } : {
                         background: '#fff',
                         border: '1.5px solid #F0E6D3',
-                        boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
+                        boxShadow: '0 2px 10px rgba(0,0,0,0.06)',
                       }}
                     >
-                      <p className="font-serif font-bold text-xs tracking-wide mb-1" style={{ color: snan.highlight ? '#C9A84C' : '#B8501A' }}>
+                      <p className="font-serif font-bold text-[10px] sm:text-[11px] tracking-wide mb-1 leading-tight" style={{ color: snan.highlight ? '#C9A84C' : '#B8501A' }}>
                         {locale === 'hi' ? snan.nameHi : snan.nameEn}
                       </p>
-                      <p className="font-bold text-sm" style={{ color: snan.highlight ? '#E0C374' : '#8B1A1A' }}>
+                      <p className="font-bold text-[11px] sm:text-xs leading-tight" style={{ color: snan.highlight ? '#E0C374' : '#8B1A1A' }}>
                         {locale === 'hi' ? snan.dateHi : snan.dateEn}
                       </p>
-                      <p className="text-xs mt-2 leading-relaxed" style={{ color: snan.highlight ? 'rgba(251,245,236,0.60)' : '#6B6B6B' }}>
+                      <p className="text-[10px] sm:text-[11px] mt-2 leading-snug" style={{ color: snan.highlight ? 'rgba(251,245,236,0.60)' : '#6B6B6B' }}>
                         {locale === 'hi' ? snan.noteHi : snan.noteEn}
                       </p>
                     </div>
@@ -435,8 +495,103 @@ export function SimhasthaLanding() {
             {/* Note */}
             <p className="text-center text-xs text-ink-mute font-serif italic mt-10 max-w-2xl mx-auto">
               {locale === 'hi'
-                ? '* सटीक तिथियाँ शासकीय अधिसूचना के बाद घोषित होंगी। पंचांग के अनुसार मामूली परिवर्तन संभव।'
+                ? '* सटीक तिथियाँ सरकारी सूचना के बाद घोषित होंगी। पंचांग के अनुसार थोड़ा-बहुत बदलाव हो सकता है।'
                 : '* Exact dates will be confirmed via government notification. Minor variations possible per the panchang.'}
+            </p>
+            <p className="text-center text-[11px] text-ink-mute/70 font-serif italic mt-2 max-w-2xl mx-auto">
+              {locale === 'hi' ? 'स्रोत: उज्जैन पुलिस — सिंहस्थ महाकुम्भ 2028 आधिकारिक प्रस्तुति' : 'Source: Ujjain Police — Simhastha Mahakumbh 2028 official presentation'}
+            </p>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 3B — 13 AKHADAS (Official Ujjain Police data)
+        ═══════════════════════════════════════════════════════════ */}
+        <section id="akhadas" className="bg-cream py-20 sm:py-24 border-b border-cream-dark">
+          <div className="container-page max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+                {locale === 'hi' ? '— 13 अखाड़े —' : '— 13 Akhadas —'}
+              </p>
+              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon">
+                {locale === 'hi' ? 'अखाड़ों का परिचय' : 'The 13 Akhadas'}
+              </h2>
+              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
+              <p className="mt-5 text-ink-soft text-base max-w-2xl mx-auto">
+                {locale === 'hi'
+                  ? 'सिंहस्थ 2028 में तीन परम्पराओं के कुल 13 अखाड़े हिस्सा लेंगे — शैव, वैष्णव और उदासीन-निर्मल।'
+                  : 'Three traditions, 13 Akhadas participating in Simhastha 2028 — Shaiv, Vaishnav and Udasin-Nirmal.'}
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {Object.values(AKHADAS).map((group, gi) => (
+                <div key={gi} className="rounded-2xl overflow-hidden border border-cream-dark bg-white shadow-sm hover:shadow-md transition-shadow">
+                  <div className="px-5 py-4 text-white" style={{ background: group.color }}>
+                    <p className="font-bold text-sm">
+                      {locale === 'hi' ? group.titleHi : group.titleEn}
+                    </p>
+                    <p className="text-[11px] opacity-80 mt-1">
+                      {locale === 'hi' ? group.areaHi : group.areaEn}
+                    </p>
+                  </div>
+                  <ul className="divide-y divide-cream-dark">
+                    {group.list.map((item, ii) => (
+                      <li key={ii} className="px-5 py-3 text-sm text-ink-soft flex items-center gap-3">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-[11px] font-bold" style={{ background: `${group.color}15`, color: group.color }}>
+                          {ii + 1}
+                        </span>
+                        {locale === 'hi' ? item.hi : item.en}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="px-5 py-3 text-center text-xs font-bold text-white" style={{ background: group.color }}>
+                    {locale === 'hi' ? `कुल: ${group.list.length} अखाड़े` : `Total: ${group.list.length} Akhadas`}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 3C — Security & Infrastructure (Police data)
+        ═══════════════════════════════════════════════════════════ */}
+        <section className="bg-gradient-to-br from-maroon-950 to-maroon py-20 sm:py-24 border-b border-cream-dark">
+          <div className="container-page max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-gold font-serif text-sm tracking-[0.35em] uppercase mb-3">
+                {locale === 'hi' ? '— सुरक्षा एवं व्यवस्था —' : '— Security & Infrastructure —'}
+              </p>
+              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-cream">
+                {locale === 'hi' ? 'सिंहस्थ 2028 का प्रबंध' : 'Simhastha 2028 Management'}
+              </h2>
+              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
+              <p className="mt-5 text-cream/70 text-base max-w-2xl mx-auto">
+                {locale === 'hi'
+                  ? 'उज्जैन पुलिस की आधिकारिक तैयारी — आधुनिक तकनीक के साथ श्रद्धालुओं की सुरक्षा।'
+                  : 'Official preparation by Ujjain Police — modern tech for devotee safety.'}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
+              {POLICE_FACTS.map((fact, idx) => (
+                <div key={idx} className="rounded-xl border border-gold/30 bg-maroon-900/50 backdrop-blur p-5 text-center hover:border-gold/60 transition-colors">
+                  <p className="font-serif text-2xl sm:text-3xl font-extrabold text-gold">
+                    {locale === 'hi' ? fact.numHi : fact.numEn}
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-cream/80 mt-2 leading-tight">
+                    {locale === 'hi' ? fact.labelHi : fact.labelEn}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-[11px] text-cream/50 font-serif italic mt-8">
+              {locale === 'hi' ? 'स्रोत: उज्जैन पुलिस — सिंहस्थ महाकुम्भ 2028 आधिकारिक प्रस्तुति' : 'Source: Ujjain Police — Simhastha Mahakumbh 2028 official presentation'}
+            </p>
+            <p className="text-center text-xs text-cream/70 mt-3">
+              {locale === 'hi' ? 'AI-CCTV · ड्रोन (UAV) · ICCC अत्याधुनिक निगरानी प्रणाली' : 'AI-CCTV · Drones (UAV) · ICCC advanced surveillance system'}
             </p>
           </div>
         </section>
@@ -590,7 +745,7 @@ export function SimhasthaLanding() {
             <div className="mt-12 text-center">
               <p className="font-serif text-base italic" style={{ color: 'rgba(201,168,76,0.65)' }}>
                 {locale === 'hi'
-                  ? '⚠ सिंहस्थ 2028 के दौरान आवास और यातायात बुकिंग बहुत जल्दी भर जाती है — अभी योजना बनाएँ।'
+                  ? '⚠ सिंहस्थ 2028 के समय होटल और ट्रेन-कैब की बुकिंग बहुत जल्दी फुल हो जाती है — अभी से प्लानिंग शुरू कर दें।'
                   : '⚠ Accommodation and transport for Simhastha 2028 will fill months in advance — start planning now.'}
               </p>
               <a

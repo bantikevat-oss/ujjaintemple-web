@@ -263,7 +263,7 @@ export function Footer() {
           {/* DPIIT badge */}
           <div className="mt-6 rounded-xl border border-gold/15 bg-gold/5 p-4">
             <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-gold/60 mb-1">
-              {isHi ? 'सरकारी मान्यता' : 'Govt Recognised'}
+              {isHi ? 'सरकार से अप्रूव्ड' : 'Govt Recognised'}
             </p>
             <p className="text-[11px] font-bold text-cream/70 leading-snug">
               Startup India EIR

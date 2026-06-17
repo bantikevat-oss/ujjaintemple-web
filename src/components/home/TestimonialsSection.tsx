@@ -157,7 +157,7 @@ export function TestimonialsSection() {
                     {isHi ? t.nameHi : t.nameEn}
                   </p>
                   <p className="text-[11px] text-ink-mute">
-                    {isHi ? t.cityHi : t.cityEn} · {isHi ? t.dateHi : t.dateEn}
+                    {isHi ? t.cityHi : t.cityEn}
                   </p>
                 </div>
               </div>
@@ -165,14 +165,8 @@ export function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Footer note */}
-        <p className={`mt-10 text-center text-xs text-ink-mute ${isHi ? 'font-sanskrit' : ''}`}>
-          {isHi
-            ? '१०,000+ श्रद्धालु प्रतिवर्ष UjjainTemple.com की सहायता से उज्जैन यात्रा करते हैं'
-            : '10,000+ pilgrims rely on UjjainTemple.com for their Ujjain journey every year'}
-        </p>
         {/* Disclaimer */}
-        <p className="mt-3 text-center text-[11px] text-ink-mute/60 italic max-w-xl mx-auto leading-relaxed">
+        <p className="mt-10 text-center text-[11px] text-ink-mute/60 italic max-w-xl mx-auto leading-relaxed">
           {isHi
             ? 'ये अनुभव श्रद्धालुजनों ने स्वेच्छा से share किए हैं। परिणाम व्यक्तिगत रूप से अलग हो सकते हैं।'
             : 'These experiences have been voluntarily shared by devotees. Individual results may vary.'}

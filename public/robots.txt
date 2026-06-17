@@ -2,5 +2,27 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /search/?q=
+Disallow: /*?utm_*
+Disallow: /*?ref=
+Disallow: /*?fbclid=
+
+# Allow important crawler bots full access
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Block AI scrapers that don't respect copyright (optional — remove if you want AI visibility)
+# User-agent: GPTBot
+# Disallow: /
 
 Sitemap: https://ujjaintemple.com/sitemap.xml

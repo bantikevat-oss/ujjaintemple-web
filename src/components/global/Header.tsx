@@ -164,7 +164,7 @@ export function Header() {
             {locale === 'hi' ? '24×7 दर्शन सहायता' : '24×7 darshan help'}
           </span>
           <a href={SITE.phoneTel} className="flex items-center gap-1.5 whitespace-nowrap font-bold hover:opacity-90" aria-label={t('cta.call')}>
-            <Phone className="h-3.5 w-3.5" /> {SITE.phone}
+            <Phone className="h-3.5 w-3.5" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
           </a>
         </div>
       </div>
@@ -180,7 +180,7 @@ export function Header() {
           {renderDesktopNav(navTree)}
           <li className="ml-2">
             <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm flex items-center gap-2">
-              <Phone className="h-4 w-4" /> {SITE.phone}
+              <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
             </a>
           </li>
           <li className="ml-2">
@@ -209,7 +209,7 @@ export function Header() {
             ))}
             <div className="pt-4 mt-2 border-t border-cream-dark flex justify-between items-center">
               <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm inline-flex items-center gap-2">
-                <Phone className="h-4 w-4" /> {SITE.phone}
+                <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
               </a>
               <Link to={`${altPrefix}/`} className="text-sm font-bold text-link underline" onClick={() => setOpen(false)}>
                 {t('lang.switchTo')}

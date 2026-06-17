@@ -134,19 +134,6 @@ export function MandirDetail({ slug }: DetailProps) {
               </div>
             </header>
 
-            {/* Intro + Lead Form (below photo hero) */}
-            <section className="container-page py-5 sm:py-6">
-              <div className="grid gap-6 lg:grid-cols-3">
-                <div className="lg:col-span-2">
-                  <p className={`leading-relaxed text-ink-soft ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
-                    {mandir.shortIntro[locale]}
-                  </p>
-                </div>
-                <aside className="lg:sticky lg:top-24 lg:self-start">
-                  <LeadForm defaultService="darshanPlan" sourcePage={`mandir/${mandir.slug}`} />
-                </aside>
-              </div>
-            </section>
           </>
         ) : (
           /* ── TEXT-ONLY HERO fallback (no photo) ── */
@@ -250,25 +237,38 @@ export function MandirDetail({ slug }: DetailProps) {
           </section>
         )}
 
-        {/* ── HISTORY + SPECIAL OCCASIONS — combined blog block ── */}
-        <section className="container-page py-7">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-            {locale === 'hi' ? 'इतिहास एवं पौराणिक महत्व' : 'History & Significance'}
-          </p>
-          <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
-            {locale === 'hi' ? `${mandir.name.hi} का इतिहास` : `History of ${mandir.name.en}`}
-          </h2>
-          <div className="prose-temple mt-4">
-            <p className="text-base leading-[1.9] text-ink-soft sm:text-lg">{mandir.history[locale]}</p>
-            {mandir.establishedEra && (
-              <div className="mt-4 flex gap-3 rounded-lg border-l-4 border-gold bg-gold-50/60 p-4">
-                <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-gold-700">{locale === 'hi' ? 'स्थापना काल' : 'Established Era'}</p>
-                  <p className="mt-1 text-sm text-ink-soft">{mandir.establishedEra[locale]}</p>
-                </div>
+        {/* ── INTRO + HISTORY (blog-style, two columns with sticky form) ── */}
+        <section className="container-page py-8">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              {/* Intro paragraph as blog lead */}
+              <p className={`leading-[1.9] text-ink first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-maroon first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1 ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
+                {mandir.shortIntro[locale]}
+              </p>
+
+              {/* History heading */}
+              <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+                {locale === 'hi' ? 'इतिहास एवं पौराणिक महत्व' : 'History & Significance'}
+              </p>
+              <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
+                {locale === 'hi' ? `${mandir.name.hi} का इतिहास` : `History of ${mandir.name.en}`}
+              </h2>
+              <div className="mt-4">
+                <p className="text-base leading-[1.9] text-ink-soft sm:text-lg">{mandir.history[locale]}</p>
+                {mandir.establishedEra && (
+                  <div className="mt-5 flex gap-3 rounded-lg border-l-4 border-gold bg-gold-50/60 p-4">
+                    <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-gold-700">{locale === 'hi' ? 'स्थापना काल' : 'Established Era'}</p>
+                      <p className="mt-1 text-sm text-ink-soft">{mandir.establishedEra[locale]}</p>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
+            <aside className="lg:sticky lg:top-24 lg:self-start">
+              <LeadForm defaultService="darshanPlan" sourcePage={`mandir/${mandir.slug}`} />
+            </aside>
           </div>
         </section>
 

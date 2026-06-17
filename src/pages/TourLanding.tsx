@@ -115,7 +115,7 @@ export function TourLanding() {
           
           {/* Main Image with refined gradient overlay */}
           <div className="absolute inset-0 z-0">
-            <img src="/images/tour-landing-hero.png" alt="Ujjain Ghat Background" className="h-full w-full object-cover opacity-60 mix-blend-luminosity" />
+            <img src="/images/tours/tour-landing-hero.png" alt="Ujjain Ghat Background" className="h-full w-full object-cover opacity-60 mix-blend-luminosity" />
             <div className="absolute inset-0 bg-gradient-to-b from-maroon-900/90 via-maroon-900/60 to-maroon-900/95" />
           </div>
 
@@ -160,7 +160,7 @@ export function TourLanding() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group border-4 border-cream order-1 lg:order-2">
-              <img src="/images/ujjain-travel-package.webp" alt="Mahakaleshwar Temple at Sunset" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+              <img src="/images/tours/ujjain-travel-package.webp" alt="Mahakaleshwar Temple at Sunset" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-maroon-900/80 to-transparent opacity-60 mix-blend-multiply" />
             </div>
           </div>

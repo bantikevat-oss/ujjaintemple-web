@@ -1,29 +1,7 @@
 import { useI18n } from '../../i18n';
-import { Shield, BookOpen, Users, MapPin } from 'lucide-react';
+import { Users, MapPin } from 'lucide-react';
 
 const REASONS = [
-  {
-    Icon: Shield,
-    color: '#8B0000',
-    bg: 'rgba(139,0,0,0.08)',
-    titleHi: 'सरकार-मान्यता प्राप्त',
-    titleEn: 'Government Recognised',
-    descHi: 'Startup India EIR योजना के अंतर्गत भारत सरकार द्वारा प्रमाणित। DPIIT पंजीकृत।',
-    descEn: 'Recognised under Startup India EIR — Govt of India. DPIIT registered.',
-    stat: 'DPIIT',
-    statLabel: 'Registered',
-  },
-  {
-    Icon: BookOpen,
-    color: '#5c3a00',
-    bg: 'rgba(92,58,0,0.08)',
-    titleHi: 'द्विभाषी प्रामाणिक जानकारी',
-    titleEn: 'Bilingual Authoritative Content',
-    descHi: '182+ मंदिर · 56+ तीर्थ — हिंदी और अंग्रेज़ी में स्थानीय स्रोतों से सत्यापित।',
-    descEn: '182+ temples · 56+ tirthas — verified from local sources in Hindi & English.',
-    stat: '182+',
-    statLabel: 'Temples',
-  },
   {
     Icon: Users,
     color: '#1a3a5c',
@@ -65,14 +43,14 @@ export function WhyUjjainTemple() {
             style={{ fontSize: 'clamp(1.5rem, 3vw, 2.4rem)' }}
           >
             {isHi
-              ? 'UjjainTemple.com — आपकी पूजा यात्रा का विश्वसनीय साथी'
+              ? 'UjjainTemple.com — आपकी यात्रा का विश्वसनीय साथी'
               : 'UjjainTemple.com — your trusted sacred guide'}
           </h2>
           <div className="mt-3 mx-auto w-14 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
         </div>
 
         {/* Cards */}
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2 max-w-2xl mx-auto">
           {REASONS.map((r, i) => (
             <div
               key={i}

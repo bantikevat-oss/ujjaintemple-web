@@ -7,7 +7,7 @@ import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { articlesByCategory, articlePath } from '../data/articles';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema, faqSchema } from '../lib/schemas';
+import { breadcrumbSchema, faqSchema, pujaServiceSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight, CheckCircle2, ChevronDown, Star } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────
@@ -116,6 +116,7 @@ export function PujaLanding() {
       { name: locale === 'hi' ? 'उज्जैन में पूजा' : 'Puja in Ujjain', url: `${SITE.url}/puja-in-ujjain/` },
     ] }),
     faqSchema(faqs.map((f) => ({ q: f.q, a: f.a }))),
+    pujaServiceSchema(),
   ];
 
   return (

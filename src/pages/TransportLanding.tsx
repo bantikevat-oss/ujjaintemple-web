@@ -136,7 +136,7 @@ const FAQS_HI = [
   },
   {
     q: 'सिंहस्थ 2028 के दौरान उज्जैन कैसे पहुंचें?',
-    a: 'सिंहस्थ 2028 (29 अप्रैल–27 मई 2028) में 12 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें। सहायता: +91 74007 24456।',
+    a: 'सिंहस्थ 2028 (09 अप्रैल–08 मई 2028) में 30 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें। सहायता: +91 74007 24456।',
   },
   {
     q: 'उज्जैन जंक्शन से महाकालेश्वर कितनी दूर है?',
@@ -163,7 +163,7 @@ const FAQS_EN = [
   },
   {
     q: 'How to reach Ujjain during Simhastha 2028?',
-    a: 'Simhastha 2028 (29 April–27 May 2028) expects 12 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 74007 24456.',
+    a: 'Simhastha 2028 (09 April–08 May 2028) expects 12 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 74007 24456.',
   },
   {
     q: 'How far is Mahakaleshwar from Ujjain Junction?',
@@ -429,8 +429,8 @@ export function TransportLanding() {
             </h2>
             <p className="text-cream/70 font-serif italic text-base sm:text-lg max-w-2xl leading-relaxed">
               {locale === 'hi'
-                ? '29 अप्रैल — 27 मई 2028 को 12 करोड़+ श्रद्धालु उज्जैन आएंगे। शाही स्नान के दिनों में ट्रेन, बस, कैब — सब बुक हो जाएंगे। अभी से बुकिंग करें।'
-                : '12 crore+ pilgrims will visit Ujjain from 29 April – 27 May 2028. On Shahi Snan dates, trains, buses, cabs — all will be booked. Reserve now.'}
+                ? '09 अप्रैल — 08 मई 2028 को 30 करोड़+ श्रद्धालु उज्जैन आएंगे। शाही स्नान के दिनों में ट्रेन, बस, कैब — सब बुक हो जाएंगे। अभी से बुकिंग करें।'
+                : '12 crore+ pilgrims will visit Ujjain from 09 April – 08 May 2028. On Shahi Snan dates, trains, buses, cabs — all will be booked. Reserve now.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={SITE.phoneTel}

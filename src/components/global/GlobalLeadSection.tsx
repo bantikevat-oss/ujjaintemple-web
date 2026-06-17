@@ -29,16 +29,16 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
             </h3>
             <ul className="space-y-4 text-xl sm:text-2xl font-serif text-white inline-block text-left">
               <li className="flex items-center gap-4">
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'ऑनलाइन पूजा' : 'Online Puja'}
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'पूजा बुकिंग' : 'Puja Booking'}
               </li>
               <li className="flex items-center gap-4">
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'यातायात (कैब)' : 'Transportation (Cab)'}
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'कैब बुकिंग' : 'Cab Booking'}
               </li>
               <li className="flex items-center gap-4">
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'आवास (होटल)' : 'Accommodation'}
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'होटल बुकिंग' : 'Hotel Booking'}
               </li>
               <li className="flex items-center gap-4">
-                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'तीर्थ पुरोहित' : 'Tirth Purohit'}
+                <span className="w-2 h-2 rounded-full bg-[#D4AF37] shadow-[0_0_8px_rgba(212,175,55,0.8)] flex-shrink-0" /> {locale === 'hi' ? 'पंडित जी' : 'Pandit Ji'}
               </li>
             </ul>
           </div>

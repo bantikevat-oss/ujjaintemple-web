@@ -14,9 +14,8 @@
     <!-- <link rel="preload" as="font" type="font/woff2" href="/fonts/notosans-devanagari-400.woff2" crossorigin /> -->
     <!-- <link rel="preload" as="font" type="font/woff2" href="/fonts/dmsans-400.woff2" crossorigin /> -->
 
-    <!-- Hero LCP preload — WebP first, JPG fallback for older browsers -->
-    <link rel="preload" as="image" href="/images/hero/mahakaleshwar-hero.webp" type="image/webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/images/hero/mahakaleshwar-hero.jpg" media="(prefers-reduced-data: reduce)" />
+    <!-- Hero LCP preload — fetchpriority:high removes layout-shift penalty -->
+    <link rel="preload" as="image" href="/images/hero/hero.png" type="image/png" fetchpriority="high" />
 
     <!-- DNS prefetch for tag manager (deferred 2.5s) -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />

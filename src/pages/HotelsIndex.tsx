@@ -113,7 +113,7 @@ export function HotelsIndex() {
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%)' }} />
 
           <div className="absolute inset-0 z-0">
-            <img src="/images/ujjain_hotels_4k.png" alt="" aria-hidden="true"
+            <img src="/images/hotels/ujjain_hotels_4k.png" alt="" aria-hidden="true"
               className="h-full w-full object-cover opacity-20 mix-blend-luminosity"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             <div className="absolute inset-0 bg-gradient-to-b from-maroon-900/80 via-maroon-900/50 to-maroon-900/90" />

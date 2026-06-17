@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
-import { TrustStrip } from '../components/global/TrustStrip';
 import { MandalaDivider } from '../components/global/MandalaDivider';
-import { EditorialStandards } from '../components/global/EditorialStandards';
 import { HomeGraphicHero } from '../components/home/HomeGraphicHero';
 import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
@@ -38,9 +36,9 @@ const COPY = {
     featuredCta: 'पूरी मंदिर सूची',
     simhasthaEyebrow: 'महाकुम्भ',
     simhasthaTitle: 'सिंहस्थ 2028',
-    simhasthaDates: '29 अप्रैल — 27 मई 2028',
+    simhasthaDates: '09 अप्रैल — 08 मई 2028 · 30 दिवस',
     simhasthaP:
-      'बारह वर्ष में एक बार। पाँच शाही स्नान। तीन अखाड़ा परम्पराएँ। एक मास का कल्पवास। सिंहस्थ 2028 के लिए अद्यतन गाइड — कल्पवास नियम, घाट सूची, अखाड़ा परिचय, यातायात व्यवस्था।',
+      'बारह साल में एक बार। तीन शाही स्नान। 13 अखाड़े। पूरे 30 दिन का आयोजन। 3000 हेक्टेयर का मेला क्षेत्र। सिंहस्थ 2028 की पूरी गाइड — कल्पवास, घाट, अखाड़े, ट्रांसपोर्ट।',
     simhasthaCta: 'गाइड पढ़ें',
     exploreEyebrow: 'विषय',
     exploreTitle: 'इस संग्रह में',
@@ -75,7 +73,7 @@ const COPY = {
     featuredCta: 'See full temple list',
     simhasthaEyebrow: 'Mahakumbh',
     simhasthaTitle: 'Simhastha 2028',
-    simhasthaDates: '29 April — 27 May 2028',
+    simhasthaDates: '09 April — 08 May 2028 · 30 days',
     simhasthaP:
       'Once in twelve years. Five royal baths. Three akhada traditions. A month of kalpvas. An evolving guide to Simhastha 2028 — kalpvas conduct, ghats, royal-bath calendar, akhada introductions, transit arrangements.',
     simhasthaCta: 'Read the guide',
@@ -97,7 +95,7 @@ const COPY = {
 function useSimhasthaCountdown() {
   const [days, setDays] = useState<number | null>(null);
   useEffect(() => {
-    const target = new Date('2028-04-29T00:00:00+05:30').getTime();
+    const target = new Date('2028-04-09T00:00:00+05:30').getTime();
     const calc = () => Math.max(0, Math.floor((target - Date.now()) / 86400000));
     setDays(calc());
     const id = setInterval(() => setDays(calc()), 60000);
@@ -116,8 +114,8 @@ export function Home() {
     ? 'उज्जैन — महाकालेश्वर ज्योतिर्लिंग, सिंहस्थ 2028 और यात्रा गाइड | UjjainTemple'
     : 'Ujjain — Mahakaleshwar Jyotirlinga, Simhastha 2028 & Travel Guide | UjjainTemple';
   const description = locale === 'hi'
-    ? 'महाकालेश्वर ज्योतिर्लिंग, काल भैरव, मंगलनाथ, हरसिद्धि माता सहित उज्जैन के पैंतीस से अधिक प्राचीन मंदिरों की प्रामाणिक जानकारी। सिंहस्थ महाकुम्भ 2028 की पूर्ण गाइड।'
-    : "Authoritative record of more than thirty-five ancient temples of Ujjain — Mahakaleshwar, Kal Bhairav, Mangalnath, Harsiddhi. A complete guide to the Simhastha Mahakumbh 2028.";
+    ? 'महाकालेश्वर दर्शन, काल सर्प दोष पूजा, मंगल दोष निवारण, सिंहस्थ 2028 — उज्जैन के 182+ मंदिर, टूर पैकेज, होटल बुकिंग। वैदिक पंडित जी उपलब्ध। कॉल करें: +91 74007 24456।'
+    : 'Mahakaleshwar darshan, Kaal Sarp Dosh puja, Mangal Dosh nivaran, Simhastha 2028 guide — 182+ Ujjain temples, tour packages, hotel booking. Authentic pandit services. Call +91 74007 24456.';
 
   return (
     <>
@@ -129,9 +127,6 @@ export function Home() {
         schemas={[organizationSchema(), websiteSchema(), simhastha2028EventSchema()]}
       />
       <Layout>
-        {/* TRUST STRIP */}
-        <TrustStrip variant="thin" />
-
         {/* HERO — premium graphic, no photo dependency */}
         <HomeGraphicHero />
 
@@ -396,16 +391,36 @@ export function Home() {
               </a>
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-                  {locale === 'hi' ? 'भारत सरकार · Startup India EIR' : 'Govt of India · Startup India EIR'}
+                  {locale === 'hi' ? 'अधिकारियों का विश्वास' : 'Trusted by Authorities'}
                 </p>
                 <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
-                  {locale === 'hi' ? 'भारत सरकार से प्रथम अनुदान — Startup India EIR योजना' : 'First grant under Startup India EIR — Govt of India'}
+                  {locale === 'hi'
+                    ? <>माननीय <span className="text-saffron-700">मुख्यमंत्री</span> मध्य प्रदेश द्वारा सम्मानित</>
+                    : <>Recognised by the Hon'ble <span className="italic text-saffron-700">Chief Minister</span> of Madhya Pradesh</>}
                 </h2>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
                   {locale === 'hi'
-                    ? 'बाइटफ़्लो टेक्नोलॉजीज़ प्रा. लि. को Startup India EIR योजना के अंतर्गत भारत सरकार से प्रथम अनुदान प्राप्त हुआ। यह UjjainTemple.com को संचालित करने वाली DPIIT पंजीकृत कम्पनी है।'
-                    : 'ByteFlow Technologies Pvt Ltd received its first government grant under the Startup India EIR scheme — Govt of India. This is the DPIIT-registered entity that operates UjjainTemple.com.'}
+                    ? 'हमारी संस्थापक प्रियंका शिवहरे को राज्य स्तरीय MSME Conclave, भोपाल में वैदिक सेवाओं में डिजिटल नवाचार के लिए सम्मानित किया गया — असली दोष निवारण पूजाएँ देश-विदेश के श्रद्धालुओं तक पहुँचाने के लिए।'
+                    : "Our founder Priyanka Shivhare was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing real dosh nivaran pujas to devotees across India and Indians living abroad."}
                 </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 max-w-2xl">
+                  <div className="rounded-lg border border-gold/30 bg-white px-4 py-3">
+                    <p className="text-[13px] font-bold text-maroon">
+                      {locale === 'hi' ? 'DPIIT पंजीकृत स्टार्टअप' : 'DPIIT-Registered Startup'}
+                    </p>
+                    <p className="text-[11px] text-ink-mute mt-1">
+                      {locale === 'hi' ? 'भारत सरकार · Startup India पहल' : 'Government of India · Startup India initiative'}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-gold/30 bg-white px-4 py-3">
+                    <p className="text-[13px] font-bold text-maroon">
+                      {locale === 'hi' ? 'राष्ट्रीय प्रेस में प्रकाशित' : 'Featured in National Press'}
+                    </p>
+                    <p className="text-[11px] text-ink-mute mt-1">
+                      Dainik Bhaskar · Patrika · Shivhare Vaani
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -413,9 +428,6 @@ export function Home() {
 
         {/* MANDALA DIVIDER */}
         <MandalaDivider />
-
-        {/* EDITORIAL STANDARDS */}
-        <EditorialStandards />
 
         {/* ── WHATSAPP FLOATING BUTTON ──────────────────────────────────── */}
         <a href="https://wa.me/917400724456" target="_blank" rel="noopener noreferrer"

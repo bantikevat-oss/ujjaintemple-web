@@ -5,6 +5,8 @@ const modules = import.meta.glob<{ default: Mandir }>('../content/mandirs/*.json
 export const mandirs: Mandir[] = Object.values(modules)
   .map((m) => m.default)
   .sort((a, b) => {
+    if (a.slug === 'mahakaleshwar') return -1;
+    if (b.slug === 'mahakaleshwar') return 1;
     if (a.isFeatured && !b.isFeatured) return -1;
     if (!a.isFeatured && b.isFeatured) return 1;
     return a.name.en.localeCompare(b.name.en);
