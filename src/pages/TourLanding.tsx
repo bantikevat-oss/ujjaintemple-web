@@ -16,10 +16,10 @@ export function TourLanding() {
   const prefix = locale === 'hi' ? '' : '/en';
   const articles = articlesByCategory('blog').slice(0, 3); // For News Feed
 
-  const title = locale === 'hi' ? 'उज्जैन टूर पैकेज' : 'Ujjain Tour Packages';
+  const title = locale === 'hi' ? 'उज्जैन टूर एंड ट्रैवल — उज्जैन दर्शन पैकेज, टूर ऑपरेटर' : 'Tour and Travel in Ujjain — Ujjain Darshan Packages & Tour Operator';
   const description = locale === 'hi'
-    ? 'उज्जैन यात्रा कार्यक्रम — एक दिन, दो दिन, तीन दिन तथा सिंहस्थ 2028 — सम्पूर्ण योजनाएँ। निजी कार्यक्रम हेतु: +91 74007 24456'
-    : 'Ujjain tour packages — 1 day, 2 day, 3 day, Simhastha 2028 — complete itineraries. Custom package: +91 74007 24456';
+    ? 'उज्जैन टूर एंड ट्रैवल — उज्जैन दर्शन पैकेज (1/2/3 दिन), महाकाल दर्शन, ओंकारेश्वर व सिंहस्थ 2028 यात्रा। भरोसेमंद उज्जैन टूर ऑपरेटर। बुकिंग: +91 74007 24456'
+    : 'Tour and travel in Ujjain — Ujjain darshan packages (1/2/3 day), Mahakal darshan, Omkareshwar & Simhastha 2028 trips. Trusted Ujjain tour operator. Book: +91 74007 24456';
   const path = '/tour-and-travel-ujjain/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
