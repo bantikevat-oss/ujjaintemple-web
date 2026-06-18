@@ -29,9 +29,10 @@
       // gtag('config', 'G-XXXXXXX');  // add when GA4 property ready
     </script>
 
-    <title>UjjainTemple — Ujjain मंदिर, सिंहस्थ 2028, यात्रा गाइड | +91 74007 24456</title>
-    <meta name="description" content="उज्जैन के 35+ मंदिर, सिंहस्थ 2028 गाइड, होटल, ट्रांसपोर्ट, पूजा जानकारी — एक भरोसेमंद बिलिंगुअल गाइड। दर्शन प्लानिंग के लिए कॉल करें: +91 74007 24456" />
-    <link rel="canonical" href="https://ujjaintemple.com/" />
+    <!-- title / description / canonical are injected PER-PAGE by react-helmet-async (SEOHead) during SSG.
+         Hardcoding them here created DUPLICATE title+canonical on all 450 pages (homepage-canonical
+         shadowed every inner page → deindex risk). Removed 2026-06-18 — helmet emits one correct set per
+         route into the static HTML. Do NOT re-add title / canonical / description here. -->
   </head>
   <body class="bg-cream text-ink font-sans antialiased">
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded focus:shadow focus:border-2 focus:border-maroon focus:text-maroon focus:font-semibold">मुख्य सामग्री पर जाएँ</a>

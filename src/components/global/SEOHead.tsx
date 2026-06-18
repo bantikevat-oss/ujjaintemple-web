@@ -9,11 +9,13 @@ interface Props extends SeoMeta {
 }
 
 // ── Locale-specific keyword sets ──────────────────────────────────────────
+// Retargeted to high-traffic Ujjain temple + Simhastha 2028 clusters + business-intent (cab/hotel/tour/puja).
+// VIP-darshan / Bhasma-Aarti-booking / live-darshan terms REMOVED (hard-rule: no temple-side darshan authorization).
 const KEYWORDS_HI =
-  'मंगल दोष निवारण पूजा उज्जैन, काल सर्प दोष पूजा उज्जैन, उज्जैन में पंडित जी, ऑनलाइन पूजा बुकिंग उज्जैन, रुद्राभिषेक पूजा महाकालेश्वर, नवग्रह शांति पूजा मंगलनाथ, पितृ दोष निवारण सिद्धवट, महाकालेश्वर दर्शन, महाकालेश्वर भस्म आरती बुकिंग, महाकालेश्वर वीआईपी दर्शन, महाकाल लोक कॉरिडोर, काल भैरव मंदिर उज्जैन, हरसिद्धि माता मंदिर उज्जैन, मंगलनाथ मंदिर उज्जैन पूजा, महाकालेश्वर लाइव दर्शन, उज्जैन मंदिर टूर पैकेज, ओंकारेश्वर उज्जैन टूर, पंच ज्योतिर्लिंग टूर पैकेज, उज्जैन 2 दिन यात्रा, उज्जैन में घूमने की जगह, उज्जैन ट्रैवल एजेंसी, उज्जैन दर्शन कैब बुकिंग, इंदौर से उज्जैन टैक्सी, उज्जैन लोकल साइटसीइंग कैब, भोपाल से उज्जैन ट्रांसपोर्ट, महाकाल मंदिर के पास होटल, सिंहस्थ 2028 उज्जैन, उज्जैन कुम्भ मेला 2028, सिंहस्थ शाही स्नान तिथियाँ, उज्जैन कुम्भ आवास बुकिंग';
+  'उज्जैन मंदिर, उज्जैन के प्रसिद्ध मंदिर, महाकालेश्वर ज्योतिर्लिंग उज्जैन, महाकाल मंदिर उज्जैन, महाकाल लोक कॉरिडोर, काल भैरव मंदिर उज्जैन, हरसिद्धि शक्तिपीठ उज्जैन, मंगलनाथ मंदिर उज्जैन, चिंतामन गणेश मंदिर उज्जैन, सांदीपनि आश्रम उज्जैन, राम घाट उज्जैन, उज्जैन दर्शन यात्रा, उज्जैन में घूमने की जगह, उज्जैन टूर पैकेज, महाकाल मंदिर के पास होटल, इंदौर से उज्जैन टैक्सी, उज्जैन दर्शन कैब, भोपाल से उज्जैन ट्रांसपोर्ट, सिंहस्थ 2028 उज्जैन, सिंहस्थ 2028 तिथि, उज्जैन कुम्भ मेला 2028, शाही स्नान 2028, उज्जैन महाकुंभ 2028, ऑनलाइन पूजा बुकिंग उज्जैन, काल सर्प दोष पूजा उज्जैन, मंगल दोष निवारण पूजा उज्जैन, उज्जैन में पंडित जी';
 
 const KEYWORDS_EN =
-  'Mangal Dosh Nivaran Puja Ujjain, Kaal Sarp Dosh Puja Ujjain, Authentic Pandit in Ujjain, Online Puja Booking Ujjain, Rudrabhishek Puja Mahakaleshwar, Navgrah Shanti Puja Mangalnath, Pitru Dosh Nivaran Siddhwat, Ujjain Mahakaleshwar Darshan, Mahakaleshwar Bhasma Aarti Timings, Mahakal Lok Corridor Guide, Kal Bhairav Temple Ujjain, Harsiddhi Mata Mandir Ujjain, Mangalnath Mandir Ujjain Puja, Mahakaleshwar Live Darshan, Ujjain Temple Tour Package, Omkareshwar to Ujjain Tour, Panch Jyotirlinga Tour Package, Ujjain 2 Days Itinerary, Best Places to Visit in Ujjain, Ujjain Travel Agency, Ujjain Darshan Cab Booking, Indore to Ujjain Taxi Service, Ujjain Local Sightseeing Cab, Bhopal to Ujjain Transport, Best Hotels near Mahakal Temple, Simhastha 2028 Ujjain, Ujjain Kumbh Mela 2028, Simhastha Shahi Snan Dates, Ujjain Kumbh Mela Accommodation';
+  'Ujjain Temple, Famous Temples in Ujjain, Mahakaleshwar Jyotirlinga Ujjain, Mahakal Temple Ujjain, Mahakal Lok Corridor, Kal Bhairav Temple Ujjain, Harsiddhi Shaktipeeth Ujjain, Mangalnath Mandir Ujjain, Chintaman Ganesh Temple Ujjain, Sandipani Ashram Ujjain, Ram Ghat Ujjain, Ujjain Darshan, Places to Visit in Ujjain, Ujjain Tour Package, Hotels near Mahakal Temple, Indore to Ujjain Taxi, Ujjain Darshan Cab, Bhopal to Ujjain Transport, Simhastha 2028 Ujjain, Simhastha 2028 Dates, Ujjain Kumbh Mela 2028, Shahi Snan 2028, Ujjain Mahakumbh 2028, Online Puja Booking Ujjain, Kaal Sarp Dosh Puja Ujjain, Mangal Dosh Nivaran Puja Ujjain, Pandit in Ujjain';
 
 export function SEOHead({ title, description, path, locale, image, type = 'website', publishedTime, modifiedTime, schemas = [], children }: Props) {
   const canonical = locale === 'hi' ? `${SITE.url}${path}` : `${SITE.url}/en${path}`;
@@ -22,6 +24,7 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
   const keywords = locale === 'hi' ? KEYWORDS_HI : KEYWORDS_EN;
 
   return (
+    <>
     <Head>
       <html lang={locale === 'hi' ? 'hi-IN' : 'en-IN'} />
       <title>{title}</title>
@@ -86,11 +89,12 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
       {type === 'article' && <meta property="article:publisher" content={SITE.social.facebook} />}
       {type === 'article' && <meta property="article:section" content="Religion & Spirituality" />}
 
-      {/* ── Structured data ─────────────────────────────────────────────────── */}
-      {schemas.map((s, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
-      ))}
       {children}
     </Head>
+    {/* ── Structured data — render in BODY: vite-react-ssg <Head> strips ld+json during SSG (P0 fix 2026-06-18) ── */}
+    {schemas.map((s, i) => (
+      <script key={`ld-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+    ))}
+    </>
   );
 }

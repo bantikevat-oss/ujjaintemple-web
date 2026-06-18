@@ -285,7 +285,7 @@ export function SimhasthaLanding() {
                   filter: 'drop-shadow(0 6px 32px rgba(201,168,76,0.25))',
                 }}
               >
-                2028
+                <span className="sr-only">{locale === 'hi' ? 'सिंहस्थ 2028 उज्जैन महाकुंभ — शाही स्नान, अखाड़े व यात्रा गाइड · ' : 'Simhastha 2028 Ujjain Mahakumbh — Shahi Snan, Akhadas & Travel Guide · '}</span>2028
               </h1>
               <p className="text-cream/70 font-serif text-base sm:text-xl tracking-wide">
                 {locale === 'hi'
