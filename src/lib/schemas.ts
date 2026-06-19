@@ -239,8 +239,8 @@ export function simhastha2028EventSchema() {
     '@type': 'Event',
     name: 'Simhastha Mahakumbh 2028 — Ujjain Kumbh Mela',
     alternateName: ['Ujjain Kumbh 2028', 'Simhastha 2028', 'Ujjain Mahakumbh 2028'],
-    startDate: '2028-04-29',
-    endDate: '2028-05-27',
+    startDate: '2028-04-09',
+    endDate: '2028-05-08',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
@@ -259,6 +259,10 @@ export function simhastha2028EventSchema() {
     description:
       'Simhastha Mahakumbh 2028 — once-in-12-years grand pilgrimage at the sacred banks of Shipra river in Ujjain. Shahi Snan dates, kalpvas, 13 akhada processions, and darshan at Mahakaleshwar Jyotirlinga.',
     organizer: { '@type': 'Organization', name: 'Madhya Pradesh Government', url: 'https://mp.gov.in' },
+    performer: {
+      '@type': 'PerformingGroup',
+      name: '13 Akhadas — Naga Sadhus, Mahamandaleshwars & Saints',
+    },
     offers: {
       '@type': 'Offer',
       name: 'Simhastha 2028 Tour Package',
@@ -266,6 +270,7 @@ export function simhastha2028EventSchema() {
       price: '2500',
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
+      validFrom: '2026-06-01',
     },
     keywords: 'Simhastha 2028, Ujjain Kumbh Mela, Shahi Snan, Kalpvas, Naga Sadhu, Akhada',
     typicalAgeRange: 'All ages',
