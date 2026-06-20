@@ -7,7 +7,7 @@ import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { articlesByCategory, articlePath } from '../data/articles';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema, itemListSchema } from '../lib/schemas';
+import { breadcrumbSchema, itemListSchema, simhastha2028EventSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight } from 'lucide-react';
 
 // ─── Countdown ───────────────────────────────────────────────────
@@ -154,6 +154,44 @@ export function SimhasthaLanding() {
     ? 'सिंहस्थ महाकुम्भ 2028 (09 अप्रैल — 08 मई · 30 दिन) — 3 शाही स्नान, 13 अखाड़े, कल्पवास, होटल, ट्रांसपोर्ट की पूरी जानकारी। 30 करोड़+ श्रद्धालुओं का महापर्व। मदद: +91 74007 24456'
     : 'Simhastha Mahakumbh 2028 (09 April – 08 May · 30 days) — 3 Shahi Snans, 13 Akhadas, Kalpvas, hotels, transport. Guide for 30 crore+ pilgrims.';
 
+  const FAQS = [
+    {
+      q: { hi: 'उज्जैन सिंहस्थ 2028 कब है?', en: 'When is Ujjain Simhastha 2028?' },
+      a: {
+        hi: 'उज्जैन सिंहस्थ 2028 (महाकुम्भ) 09 अप्रैल 2028 से 08 मई 2028 तक — कुल 30 दिन — शिप्रा नदी के तट पर आयोजित होगा। तीन शाही स्नान हैं: 09 अप्रैल (चैत्र पूर्णिमा), 27 अप्रैल (अक्षय तृतीया) और 08 मई (वैशाख पूर्णिमा)।',
+        en: 'Ujjain Simhastha 2028 (Mahakumbh) runs from 09 April 2028 to 08 May 2028 — 30 days — on the banks of the Shipra river. The three Shahi Snans are 09 April (Chaitra Purnima), 27 April (Akshaya Tritiya) and 08 May (Vaisakh Purnima).',
+      },
+    },
+    {
+      q: { hi: 'सिंहस्थ 2028 उज्जैन में कहाँ होता है?', en: 'Where in Ujjain is Simhastha 2028 held?' },
+      a: {
+        hi: 'सिंहस्थ 2028 उज्जैन में पवित्र शिप्रा नदी के घाटों पर — विशेषकर राम घाट व सिंहस्थ नगर क्षेत्र में — होता है। मुख्य आकर्षण महाकालेश्वर ज्योतिर्लिंग के दर्शन भी रहते हैं।',
+        en: 'Simhastha 2028 takes place along the ghats of the sacred Shipra river in Ujjain — chiefly Ram Ghat and the Simhastha Nagar area — with darshan at the Mahakaleshwar Jyotirlinga as a key attraction.',
+      },
+    },
+    {
+      q: { hi: 'सिंहस्थ हर कितने साल में आता है?', en: 'How often does Simhastha happen?' },
+      a: {
+        hi: 'सिंहस्थ उज्जैन में हर 12 वर्ष में एक बार आता है, जब बृहस्पति सिंह राशि में और सूर्य मेष राशि में प्रवेश करते हैं। पिछला सिंहस्थ 2016 में हुआ था; अगला सिंहस्थ 2028 है।',
+        en: 'Simhastha is held in Ujjain once every 12 years, when Jupiter enters Leo (Simha) and the Sun enters Aries. The previous Simhastha was in 2016; the next is Simhastha 2028.',
+      },
+    },
+    {
+      q: { hi: 'सिंहस्थ 2028 के लिए उज्जैन कैसे पहुँचें?', en: 'How to reach Ujjain for Simhastha 2028?' },
+      a: {
+        hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद हेतु +91 74007 24456 पर संपर्क करें।',
+        en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, call +91 74007 24456.',
+      },
+    },
+    {
+      q: { hi: 'सिंहस्थ 2028 में कितने श्रद्धालु आने की संभावना है?', en: 'How many pilgrims are expected at Simhastha 2028?' },
+      a: {
+        hi: 'सिंहस्थ 2028 में 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है, जिससे यह विश्व के सबसे बड़े धार्मिक आयोजनों में से एक होगा। शाही स्नान वाले दिनों में सबसे अधिक भीड़ रहती है।',
+        en: 'Over 30 crore (300 million) pilgrims are expected at Simhastha 2028, making it one of the world\'s largest religious gatherings. Crowds peak on the Shahi Snan days.',
+      },
+    },
+  ] as const;
+
   const ESSENTIALS = [
     {
       icon: '🛕',
@@ -210,6 +248,8 @@ export function SimhasthaLanding() {
             description: a.shortIntro[locale],
             image: a.heroImage ? `${SITE.url}${a.heroImage}` : undefined,
           }))),
+          simhastha2028EventSchema(),
+          faqSchema(FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] }))),
         ]}
       />
       <Layout>
@@ -753,6 +793,34 @@ export function SimhasthaLanding() {
                 <PhoneCall className="w-5 h-5" />
                 {locale === 'hi' ? `${SITE.phone} — अभी कॉल करें` : `Call ${SITE.phone} Now`}
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 5.5 — FAQ (Ujjain Simhastha 2028)
+        ═══════════════════════════════════════════════════════════ */}
+        <section className="py-16 sm:py-20 px-4" style={{ background: 'linear-gradient(180deg, #1a0404 0%, #300707 100%)' }}>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-center mb-10" style={{ color: '#E0C374' }}>
+              {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 — अक्सर पूछे जाने वाले प्रश्न' : 'Ujjain Simhastha 2028 — Frequently Asked Questions'}
+            </h2>
+            <div className="space-y-4">
+              {FAQS.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-2xl p-6"
+                  style={{ background: 'rgba(48, 7, 7, 0.7)', border: '1.5px solid rgba(201,168,76,0.18)' }}
+                >
+                  <summary className="cursor-pointer list-none font-serif text-lg font-bold flex items-center justify-between gap-4" style={{ color: '#E0C374' }}>
+                    {faq.q[locale]}
+                    <span className="text-gold/60 transition-transform group-open:rotate-45 text-2xl leading-none select-none">+</span>
+                  </summary>
+                  <p className="mt-4 text-base leading-relaxed" style={{ color: 'rgba(251,245,236,0.72)' }}>
+                    {faq.a[locale]}
+                  </p>
+                </details>
+              ))}
             </div>
           </div>
         </section>
