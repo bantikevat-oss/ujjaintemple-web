@@ -123,7 +123,7 @@ const AKHADAS = {
       { hi: 'नया उदासीन अखाड़ा', en: 'Naya Udasin Akhada' },
       { hi: 'निर्मल अखाड़ा', en: 'Nirmal Akhada' },
     ],
-    color: '#2d5a3d',
+    color: '#7C2230',
   },
 } as const;
 
@@ -444,6 +444,59 @@ export function SimhasthaLanding() {
                   </span>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 2B — OVERVIEW / ABOUT (deep crawlable content)
+        ═══════════════════════════════════════════════════════════ */}
+        <section className="bg-white py-16 sm:py-24 border-b border-cream">
+          <div className="container-page max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+                {locale === 'hi' ? '— परिचय —' : '— Overview —'}
+              </p>
+              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon leading-tight">
+                {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 क्या है?' : 'What is Ujjain Simhastha 2028?'}
+              </h2>
+              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
+            </div>
+
+            <div className="space-y-6 text-ink-soft text-base sm:text-lg leading-relaxed">
+              {locale === 'hi' ? (
+                <>
+                  <p><strong className="text-maroon">उज्जैन सिंहस्थ 2028</strong> मध्य प्रदेश के उज्जैन में पवित्र शिप्रा नदी के तट पर आयोजित होने वाला महाकुम्भ है, जो हर 12 वर्ष में एक बार आता है। सिंहस्थ 2028 की अवधि <strong>09 अप्रैल 2028 से 08 मई 2028</strong> तक — कुल 30 दिन — रहेगी, जिसमें 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है। यह विश्व के सबसे बड़े आध्यात्मिक समागमों में से एक माना जाता है।</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ का ज्योतिषीय महत्व</h3>
+                  <p>"सिंहस्थ" नाम इस दुर्लभ ग्रह-स्थिति से आता है जब <strong>बृहस्पति (गुरु) सिंह राशि</strong> में और <strong>सूर्य मेष राशि</strong> में प्रवेश करते हैं। इसी कारण उज्जैन के इस कुम्भ को "सिंहस्थ" कहा जाता है। इस अवधि में शिप्रा में स्नान का विशेष धार्मिक महत्व माना जाता है — मान्यता है कि यह आत्मशुद्धि और पुण्य का अवसर है।</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">उज्जैन में ही क्यों?</h3>
+                  <p>उज्जैन बारह ज्योतिर्लिंगों में से एक — <strong>श्री महाकालेश्वर ज्योतिर्लिंग</strong> — की नगरी है और प्राचीन काल से धर्म, ज्योतिष व काल-गणना का केन्द्र रहा है। शिप्रा नदी के घाट, विशेषकर राम घाट, सिंहस्थ स्नान के मुख्य स्थल हैं। महाकाल की इसी पावन भूमि पर सिंहस्थ 2028 का आयोजन होता है।</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ 2028 में क्या देखने को मिलेगा</h3>
+                  <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 27 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे 30 दिन चलते हैं।</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">यात्रा की योजना कैसे बनाएँ</h3>
+                  <p>शाही स्नान वाले दिनों में उज्जैन में होटल, धर्मशाला व कुटिया की जगह बहुत जल्दी भर जाती है — इसलिए 6–8 महीने पहले बुकिंग करवाना समझदारी है। दिल्ली, मुम्बई व अहमदाबाद से सीधी ट्रेनें आती हैं और निकटतम हवाई अड्डा इंदौर (55 किमी) है। यात्रा, होटल व दर्शन में सहायता के लिए हमारी टीम से <strong>{SITE.phone}</strong> पर संपर्क करें।</p>
+                </>
+              ) : (
+                <>
+                  <p><strong className="text-maroon">Ujjain Simhastha 2028</strong> is the Mahakumbh held on the banks of the sacred Shipra river in Ujjain, Madhya Pradesh, once every 12 years. Simhastha 2028 runs from <strong>09 April 2028 to 08 May 2028</strong> — a full 30 days — and is expected to draw over 30 crore (300 million) pilgrims, making it one of the largest spiritual gatherings in the world.</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">Astrological significance of Simhastha</h3>
+                  <p>The name "Simhastha" comes from the rare planetary alignment when <strong>Jupiter enters Leo (Simha Rashi)</strong> and the <strong>Sun enters Aries (Mesha Rashi)</strong> — which is why Ujjain's Kumbh is called Simhastha. A holy dip in the Shipra during this period is held to be especially sacred, an occasion for inner purity and merit.</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">Why Ujjain?</h3>
+                  <p>Ujjain is the city of <strong>Shri Mahakaleshwar Jyotirlinga</strong>, one of the twelve Jyotirlingas, and has been a centre of dharma, astrology and time-reckoning since ancient times. The ghats of the Shipra — chiefly Ram Ghat — are the principal bathing sites. Simhastha 2028 unfolds on this sacred land of Mahakal.</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">What to expect at Simhastha 2028</h3>
+                  <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 27 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Alongside run Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events across all 30 days.</p>
+
+                  <h3 className="font-serif text-2xl font-bold text-maroon pt-2">How to plan your trip</h3>
+                  <p>Hotels, dharmshalas and kutiyas in Ujjain fill very fast on Shahi Snan days, so booking 6–8 months ahead is wise. Direct trains arrive from Delhi, Mumbai and Ahmedabad, and the nearest airport is Indore (55 km). For help with travel, stay and darshan, contact our team at <strong>{SITE.phone}</strong>.</p>
+                </>
+              )}
             </div>
           </div>
         </section>
