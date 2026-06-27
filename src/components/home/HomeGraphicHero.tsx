@@ -160,7 +160,7 @@ export function HomeGraphicHero() {
         .hf6 { animation: fadeUp .9s ease-out .92s both; }
         .hf7 { animation: fadeUp .9s ease-out 1.05s both; }
         .hero-photo {
-          transform-origin: 66% 46%;
+          transform-origin: 55% 68%;
           will-change: transform, opacity;
           animation: heroKB 26s ease-in-out infinite alternate, heroFade 1.6s ease-out both;
         }
@@ -173,12 +173,16 @@ export function HomeGraphicHero() {
 
       {/* ── Full-bleed image — entire section background ── */}
       <img
-        src="/images/hero/mahakal-real.webp"
-        alt={t.caption}
+        src="/images/hero/mahakaleshwar-jyotirlinga.webp"
+        alt="Mahakaleshwar Jyotirlinga, Ujjain — third of twelve Jyotirlingas"
         className="hero-photo absolute inset-0 w-full h-full object-cover z-0
-          object-[68%_center] lg:object-[72%_center]"
-        style={{ filter: 'brightness(0.82) saturate(1.02) contrast(1.03)' }}
-        onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero/mahakal-real.jpg'; }}
+          object-[55%_70%] lg:object-[55%_68%]"
+        style={{
+          filter: 'brightness(0.88) saturate(1.12) contrast(1.10)',
+          imageRendering: 'auto' as const,
+          WebkitBackfaceVisibility: 'hidden',
+        }}
+        onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero/mahakaleshwar-jyotirlinga.jpg'; }}
       />
 
       {/* Left-side text readability overlay — stronger for bright photo */}

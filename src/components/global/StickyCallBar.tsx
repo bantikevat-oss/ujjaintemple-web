@@ -14,7 +14,7 @@ export function StickyCallBar() {
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
-          title: 'UjjainTemple — उज्जैन मंदिर, सिंहस्थ 2028, यात्रा गाइड',
+          title: 'UjjainTemple — उज्जैन मंदिर, सिंहस्थ 2028, होटल, टैक्सी, दर्शन पैकेज',
           text: locale === 'hi' ? 'उज्जैन के मन्दिर एवं सिंहस्थ 2028 की प्रामाणिक गाइड' : 'Authoritative guide to Ujjain temples & Simhastha 2028',
           url: typeof window !== 'undefined' ? window.location.href : SITE.url,
         });

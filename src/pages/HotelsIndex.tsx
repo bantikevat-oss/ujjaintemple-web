@@ -80,11 +80,11 @@ export function HotelsIndex() {
   const tier = TIERS.find((t) => t.id === activeTier)!;
 
   const title = locale === 'hi'
-    ? 'उज्जैन के होटल — महाकाल के पास, बजट, परिवार, लक्ज़री | +91 74007 24456'
-    : 'Hotels in Ujjain — Near Mahakal, Budget, Family, Luxury | +91 74007 24456';
+    ? 'उज्जैन में होटल — महाकाल के पास, बजट से लक्ज़री, परिवार-अनुकूल | UjjainTemple'
+    : 'Hotel in Ujjain — Near Mahakal, Budget to Luxury, Family-Friendly | UjjainTemple';
   const description = locale === 'hi'
-    ? 'उज्जैन के सबसे अच्छे होटल — महाकालेश्वर के निकट, बजट से लक्ज़री तक, परिवार-अनुकूल। सत्यापित दूरी, सुविधाएँ। एक कॉल पर बुकिंग सहायता।'
-    : 'Best hotels in Ujjain — near Mahakaleshwar, budget to luxury, family-friendly. Verified distances, amenities, pricing. Booking help one call away.';
+    ? 'उज्जैन में होटल बुकिंग — महाकालेश्वर के निकट, बजट से लक्ज़री, परिवार-अनुकूल। सत्यापित दूरी, सुविधाएँ, रेट। एक कॉल पर सहायता: +91 74007 24456।'
+    : 'Hotel in Ujjain — booking near Mahakaleshwar, budget to luxury, family-friendly. Verified distances, amenities, pricing. Call: +91 74007 24456.';
 
   return (
     <>

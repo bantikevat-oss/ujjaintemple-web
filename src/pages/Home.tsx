@@ -109,11 +109,11 @@ export function Home() {
   const daysLeft = useSimhasthaCountdown();
 
   const title = locale === 'hi'
-    ? 'उज्जैन — महाकालेश्वर ज्योतिर्लिंग, सिंहस्थ 2028 और यात्रा गाइड | UjjainTemple'
-    : 'Ujjain — Mahakaleshwar Jyotirlinga, Simhastha 2028 & Travel Guide | UjjainTemple';
+    ? 'उज्जैन के मंदिर — सिंहस्थ 2028, होटल, टैक्सी व दर्शन पैकेज | UjjainTemple'
+    : 'Ujjain Temple Guide — Simhastha 2028, Hotels, Taxi & Darshan Packages | UjjainTemple';
   const description = locale === 'hi'
-    ? 'महाकालेश्वर दर्शन, काल सर्प दोष पूजा, मंगल दोष निवारण, सिंहस्थ 2028 — उज्जैन के 182+ मंदिर, टूर पैकेज, होटल बुकिंग। वैदिक पंडित जी उपलब्ध। कॉल करें: +91 74007 24456।'
-    : 'Mahakaleshwar darshan, Kaal Sarp Dosh puja, Mangal Dosh nivaran, Simhastha 2028 guide — 182+ Ujjain temples, tour packages, hotel booking. Authentic pandit services. Call +91 74007 24456.';
+    ? 'उज्जैन के 182+ मंदिर, सिंहस्थ 2028 गाइड, उज्जैन दर्शन पैकेज, उज्जैन में होटल व टैक्सी, काल सर्प / मंगल दोष / नाग बलि पूजा। वैदिक पंडित जी उपलब्ध। कॉल: +91 74007 24456।'
+    : 'Ujjain temples directory, Simhastha 2028 guide, Ujjain darshan packages, Hotel in Ujjain, Taxi in Ujjain, Kaal Sarp / Mangal Dosh / Nag Bali puja. Authentic pandits. Call +91 74007 24456.';
 
   return (
     <>

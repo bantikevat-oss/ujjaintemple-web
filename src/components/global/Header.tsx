@@ -158,7 +158,7 @@ export function Header() {
       <div className="bg-maroon text-white">
         <div className="container-page flex items-center justify-between gap-3 py-1.5 text-xs sm:text-sm">
           <span className="hidden opacity-90 sm:inline">
-            {locale === 'hi' ? 'उज्जैन — मंदिर, सिंहस्थ 2028, यात्रा गाइड' : 'Ujjain — Temple, Simhastha 2028 & Travel Guide'}
+            {locale === 'hi' ? 'उज्जैन मंदिर · सिंहस्थ 2028 · होटल · टैक्सी · दर्शन पैकेज' : 'Ujjain Temple · Simhastha 2028 · Hotel · Taxi · Darshan Package'}
           </span>
           <span className="text-xs opacity-90 sm:hidden">
             {locale === 'hi' ? '24×7 दर्शन सहायता' : '24×7 darshan help'}
