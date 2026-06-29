@@ -16,8 +16,8 @@ export function CabBookingLanding() {
   const articles = articlesByCategory('blog').slice(0, 3);
 
   const title = locale === 'hi'
-    ? 'उज्जैन में टैक्सी — महाकाल, ओंकारेश्वर, इंदौर, भोपाल कैब बुकिंग | UjjainTemple'
-    : 'Taxi in Ujjain — Cab Booking for Mahakal, Omkareshwar, Indore, Bhopal | UjjainTemple';
+    ? 'उज्जैन में टैक्सी — महाकाल, ओंकारेश्वर, इंदौर, भोपाल कैब बुकिंग'
+    : 'Taxi in Ujjain — Cab Booking for Mahakal, Omkareshwar, Indore, Bhopal';
   const description = locale === 'hi'
     ? 'उज्जैन में टैक्सी सेवा — महाकालेश्वर, ओंकारेश्वर, इंदौर एयरपोर्ट, भोपाल व लोकल दर्शन के लिए कैब बुकिंग। 24/7 उपलब्ध: +91 74007 24456।'
     : 'Taxi in Ujjain — book cabs for Mahakaleshwar darshan, Omkareshwar, Indore airport, Bhopal & local sightseeing. 24/7 service: +91 74007 24456.';
