@@ -5,7 +5,7 @@ import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema } from '../lib/schemas';
+import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { articlesByCategory, articlePath } from '../data/articles';
@@ -26,6 +26,12 @@ export function CabBookingLanding() {
   const [openFaq, setOpenFaq] = useState<number>(0);
 
   const faqs = [
+    {
+      q: locale === 'hi' ? 'उज्जैन में सबसे अच्छी टैक्सी सेवा कौन सी है?' : 'Which is the best taxi service in Ujjain?',
+      a: locale === 'hi'
+        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है। बुकिंग: +91 74007 24456।'
+        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: +91 74007 24456.'
+    },
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
       a: locale === 'hi'
@@ -65,13 +71,16 @@ export function CabBookingLanding() {
         description={description}
         path={path}
         locale={locale}
-        schemas={[breadcrumbSchema({
-          items: [
-            { name: locale === 'hi' ? 'होम' : 'Home', url: SITE.url },
-            { name: locale === 'hi' ? 'कैब बुकिंग' : 'Cab Booking', url: `${SITE.url}/cab-booking/` },
-            { name: title, url: `${SITE.url}${path}` },
-          ]
-        })]}
+        schemas={[
+          breadcrumbSchema({
+            items: [
+              { name: locale === 'hi' ? 'होम' : 'Home', url: SITE.url },
+              { name: locale === 'hi' ? 'कैब बुकिंग' : 'Cab Booking', url: `${SITE.url}/cab-booking/` },
+              { name: title, url: `${SITE.url}${path}` },
+            ]
+          }),
+          faqSchema(faqs.map((f) => ({ q: f.q, a: f.a }))),
+        ]}
       />
       <Layout>
         {/* ── LUXURY HERO SECTION ── */}
@@ -112,7 +121,7 @@ export function CabBookingLanding() {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="animate-fade-in">
               <h2 className="font-serif text-3xl sm:text-5xl font-bold text-maroon mb-6 relative pb-4 inline-block uppercase">
-                {locale === 'hi' ? 'उज्जैन में टैक्सी सेवा' : 'Taxi Service in Ujjain'}
+                {locale === 'hi' ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा' : 'Best Taxi Service in Ujjain'}
                 <div className="absolute bottom-0 left-0 w-1/2 h-1.5 bg-saffron rounded-full" />
               </h2>
               <div className="space-y-6 text-ink-soft leading-relaxed text-lg font-serif">
