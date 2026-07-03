@@ -1,4 +1,5 @@
-import { Phone, MapPin, Clock, Sparkles, Camera, Car, Users, Lightbulb, Star, Info } from 'lucide-react';
+import { Phone, MapPin, Clock, Sparkles, Camera, Car, Users, Lightbulb, Star, Info, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Layout } from '../../components/global/Layout';
 import { SEOHead } from '../../components/global/SEOHead';
 import { LeadForm } from '../../components/global/LeadForm';
@@ -55,6 +56,33 @@ const CROWD_COLOR: Record<string, string> = {
   'very-high': 'bg-maroon-50 text-maroon',
 };
 
+// ── Related-puja internal-link map (SEO: passes authority to high-value puja money pages) ──
+// Frames as puja/anushthan per hard-rule (no guaranteed-cure claims). Mangalnath → navgrah-shanti,
+// NOT mangal-dosh (MDP apna site owns that keyword — avoid internal cannibalisation).
+const PUJA_LINKS: Record<string, { hi: string; en: string; desc: { hi: string; en: string } }> = {
+  'rudrabhishek-ujjain': { hi: 'रुद्राभिषेक पूजा', en: 'Rudrabhishek Puja', desc: { hi: 'महाकालेश्वर में शिव कृपा हेतु प्रामाणिक वैदिक अभिषेक।', en: 'Authentic Vedic abhishek at Mahakaleshwar for Shiva blessings.' } },
+  'mahamrityunjaya-puja': { hi: 'महामृत्युंजय जाप', en: 'Mahamrityunjaya Jaap', desc: { hi: 'आरोग्य एवं दीर्घायु की कामना हेतु जाप अनुष्ठान।', en: 'Jaap anushthan for health and long life.' } },
+  'kaal-sarp-dosh-nivaran': { hi: 'काल सर्प दोष पूजा', en: 'Kaal Sarp Dosh Puja', desc: { hi: 'उज्जैन में प्रामाणिक वैदिक विधि से काल सर्प दोष पूजा।', en: 'Kaal Sarp Dosh puja by authentic Vedic vidhi in Ujjain.' } },
+  'pitru-dosh-nivaran': { hi: 'पितृ दोष निवारण', en: 'Pitru Dosh Nivaran', desc: { hi: 'पितृ शांति हेतु पूजा एवं तर्पण अनुष्ठान।', en: 'Puja and tarpan anushthan for Pitru shanti.' } },
+  'navgrah-shanti': { hi: 'नवग्रह शांति पूजा', en: 'Navgrah Shanti Puja', desc: { hi: 'ग्रह दोष शांति हेतु नवग्रह पूजा।', en: 'Navgrah puja for planetary peace.' } },
+};
+
+function relatedPujaSlugs(slug: string, templeType: string): string[] {
+  const bySlug: Record<string, string[]> = {
+    mangalnath: ['navgrah-shanti', 'kaal-sarp-dosh-nivaran'],
+    'kal-bhairav-ujjain': ['kaal-sarp-dosh-nivaran', 'pitru-dosh-nivaran'],
+    'navgraha-mandir-ujjain': ['navgrah-shanti', 'kaal-sarp-dosh-nivaran'],
+  };
+  if (bySlug[slug]) return bySlug[slug];
+  const byType: Record<string, string[]> = {
+    Jyotirlinga: ['rudrabhishek-ujjain', 'mahamrityunjaya-puja'],
+    Shiva: ['rudrabhishek-ujjain', 'mahamrityunjaya-puja'],
+    Bhairav: ['kaal-sarp-dosh-nivaran', 'pitru-dosh-nivaran'],
+    Navagraha: ['navgrah-shanti', 'kaal-sarp-dosh-nivaran'],
+  };
+  return byType[templeType] || [];
+}
+
 export function MandirDetail({ slug }: DetailProps) {
   const mandir = mandirBySlug.get(slug);
   const { locale } = useI18n();
@@ -72,6 +100,7 @@ export function MandirDetail({ slug }: DetailProps) {
     : `${mandir.shortIntro.en.substring(0, 150)}... Plan darshan: ${SITE.phone}`;
 
   const nearby = getNearbyMandirs(mandir);
+  const pujaSlugs = relatedPujaSlugs(mandir.slug, mandir.templeType).filter((s) => PUJA_LINKS[s]);
 
   const schemas = [
     placeOfWorshipSchema({
@@ -394,6 +423,39 @@ export function MandirDetail({ slug }: DetailProps) {
                   </summary>
                   <p className="mt-3 pr-10 text-base leading-relaxed text-ink-soft">{(f.answer || f.a)![locale]}</p>
                 </details>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ── RELATED PUJA (internal links → high-value puja pages) ── */}
+        {pujaSlugs.length > 0 && (
+          <section className="container-page pt-4 pb-7">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'पूजा एवं अनुष्ठान' : 'Puja & Anushthan'}</p>
+            <h2 className={`mt-2 mb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+              {locale === 'hi' ? `${mandir.name.hi} से जुड़ी पूजाएँ` : `Puja Related to ${mandir.name.en}`}
+            </h2>
+            <p className="mb-5 max-w-2xl text-sm leading-relaxed text-ink-soft">
+              {locale === 'hi'
+                ? 'उज्जैन के अनुभवी पंडितों द्वारा प्रामाणिक वैदिक विधि से पूजा एवं अनुष्ठान। बुकिंग सहायता हेतु सम्पर्क करें।'
+                : 'Puja and anushthan by experienced Ujjain pandits following authentic Vedic vidhi. Contact us for booking help.'}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {pujaSlugs.map((s) => (
+                <Link
+                  key={s}
+                  to={`${prefix}/puja-in-ujjain/${s}/`}
+                  className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+                >
+                  <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🪔</span>
+                  <div className="flex-1">
+                    <h3 className={`flex items-center gap-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-lg' : 'font-serif text-base'}`}>
+                      {PUJA_LINKS[s][locale]}
+                      <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{PUJA_LINKS[s].desc[locale]}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           </section>

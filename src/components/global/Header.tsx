@@ -15,6 +15,7 @@ interface NavItem {
 const navTree: NavItem[] = [
   { key: 'nav.home', href: '/' },
   { key: 'nav.mandirs', href: '/mandirs/' },
+  { labelHi: 'घूमने की जगह', labelEn: 'Things to Do', href: '/things-to-do-in-ujjain/' },
   {
     key: 'nav.tours',
     href: '/tour-and-travel-ujjain/',
@@ -63,6 +64,11 @@ const navTree: NavItem[] = [
         labelHi: 'उज्जैन में टैक्सी बुक करें',
         labelEn: 'Book Taxi in Ujjain',
         href: '/cab-booking/'
+      },
+      {
+        labelHi: 'उज्जैन से ओंकारेश्वर कैब',
+        labelEn: 'Ujjain to Omkareshwar Cab',
+        href: '/transport-in-ujjain/ujjain-to-omkareshwar-cab/'
       }
     ]
   },

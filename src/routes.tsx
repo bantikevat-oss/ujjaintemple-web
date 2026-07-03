@@ -9,6 +9,7 @@ import { SimhasthaLanding } from './pages/SimhasthaLanding';
 import { TransportLanding } from './pages/TransportLanding';
 import { PujaLanding } from './pages/PujaLanding';
 import { TourLanding } from './pages/TourLanding';
+import { ThingsToDo } from './pages/ThingsToDo';
 import { TourPackageDetail } from './pages/TourPackageDetail';
 import { CabBookingLanding } from './pages/CabBookingLanding';
 import { HotelsIndex } from './pages/HotelsIndex';
@@ -41,6 +42,9 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
 
     // Hotels
     { path: `${basePath}hotels/`, element: withLocale(locale, HotelsIndex) },
+
+    // Things to Do — tourism pillar (top-funnel, links to all money hubs)
+    { path: `${basePath}things-to-do-in-ujjain/`, element: withLocale(locale, ThingsToDo) },
 
     // About, Contact, Legal
     { path: `${basePath}about/`, element: withLocale(locale, AboutPage) },
