@@ -9,10 +9,22 @@ import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { articlesByCategory, articlePath } from '../data/articles';
+import type { ReactNode } from 'react';
+
+// Inline styled phone link — inherits surrounding font, renders premium maroon bold
+// (prevents browser auto-detection from styling the number in a jarring default font)
+const PhoneInline = () => (
+  <a
+    href={SITE.phoneTel}
+    className="text-maroon font-semibold no-underline hover:underline whitespace-nowrap"
+  >
+    {SITE.phone}
+  </a>
+);
 
 export function CabBookingLanding() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const articles = articlesByCategory('blog').slice(0, 3);
 
   const title = locale === 'hi'
@@ -25,12 +37,26 @@ export function CabBookingLanding() {
 
   const [openFaq, setOpenFaq] = useState<number>(0);
 
-  const faqs = [
+  // Gallery of popular Ujjain darshan destinations our cabs cover (files verified in public/images/mandirs/)
+  const gallery = [
+    { src: '/images/mandirs/mahakaleshwar.jpg', hi: 'महाकालेश्वर मंदिर, उज्जैन', en: 'Mahakaleshwar Temple, Ujjain' },
+    { src: '/images/mandirs/omkareshwar.png', hi: 'ओंकारेश्वर ज्योतिर्लिंग', en: 'Omkareshwar Jyotirlinga' },
+    { src: '/images/mandirs/harsiddhi-mata.jpg', hi: 'हरसिद्धि माता मंदिर', en: 'Harsiddhi Mata Temple' },
+    { src: '/images/mandirs/mangalnath.jpg', hi: 'मंगलनाथ मंदिर', en: 'Mangalnath Temple' },
+    { src: '/images/mandirs/ujjain-ghat-scene.jpg', hi: 'राम घाट, शिप्रा नदी', en: 'Ram Ghat, Shipra River' },
+    { src: '/images/mandirs/ujjain-temple-general.jpg', hi: 'उज्जैन दर्शन', en: 'Ujjain Darshan' },
+  ];
+
+  const faqs: { q: string; a: string; aNode?: ReactNode }[] = [
     {
       q: locale === 'hi' ? 'उज्जैन में सबसे अच्छी टैक्सी सेवा कौन सी है?' : 'Which is the best taxi service in Ujjain?',
+      // Plain string retained for the FAQ schema (SEO); aNode is what renders on-page
       a: locale === 'hi'
         ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है। बुकिंग: +91 74007 24456।'
-        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: +91 74007 24456.'
+        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: +91 74007 24456.',
+      aNode: locale === 'hi'
+        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है। बुकिंग: <PhoneInline />।</>)
+        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: <PhoneInline />.</>)
     },
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
@@ -90,7 +116,7 @@ export function CabBookingLanding() {
           
           {/* Main Image with refined gradient overlay */}
           <div className="absolute inset-0 z-0">
-            <img src="/images/services/ujjain_taxi_4k.webp" alt="Ujjain Cab Booking" className="h-full w-full object-cover opacity-60 mix-blend-luminosity" />
+            <img src="/images/services/ujjain_taxi_4k.webp" alt={locale === 'hi' ? 'उज्जैन कैब बुकिंग' : 'Ujjain Cab Booking'} className="h-full w-full object-cover opacity-80" />
             <div className="absolute inset-0 bg-gradient-to-b from-maroon-900/90 via-maroon-900/60 to-maroon-900/95" />
           </div>
 
@@ -110,7 +136,7 @@ export function CabBookingLanding() {
         <div className="bg-cream-light py-4 border-b border-cream">
           <div className="container-page">
             <Breadcrumb items={[
-              { label: locale === 'hi' ? 'कैब बुकिंग' : 'Cab Booking', url: '/cab-booking/' },
+              { label: locale === 'hi' ? 'कैब बुकिंग' : 'Cab Booking', href: '/cab-booking/' },
               { label: title }
             ]} />
           </div>
@@ -141,7 +167,7 @@ export function CabBookingLanding() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream">
-              <img src="/images/services/ujjain_taxi_4k.webp" alt="Ujjain Taxi Service" className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img src="/images/services/ujjain_taxi_4k.webp" alt={locale === 'hi' ? 'उज्जैन टैक्सी सेवा' : 'Ujjain Taxi Service'} loading="lazy" width={1280} height={853} className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>
@@ -151,7 +177,7 @@ export function CabBookingLanding() {
         <section className="bg-cream-dark/10 py-16">
           <div className="container-page max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-8 border-white flex-shrink-0 relative group">
-              <img src="/images/services/ujjain_tirthyatra_services_4k.webp" alt="TirthYatra Services" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+              <img src="/images/services/ujjain_tirthyatra_services_4k.webp" alt={locale === 'hi' ? 'तीर्थयात्रा सेवाएं' : 'TirthYatra Services'} loading="lazy" width={640} height={640} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
               <div className="absolute inset-0 bg-maroon/20 group-hover:bg-transparent transition-colors duration-500" />
             </div>
             
@@ -239,6 +265,36 @@ export function CabBookingLanding() {
 
         </section>
 
+        {/* ── DARSHAN GALLERY (cab-covered destinations) ── */}
+        <section className="container-page py-16 sm:py-20">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon mb-3 text-center uppercase">
+              {locale === 'hi' ? 'हमारी कैब से लोकप्रिय दर्शन स्थल' : 'Popular Darshan Destinations Our Cabs Cover'}
+            </h2>
+            <div className="w-24 h-1.5 bg-saffron rounded-full mx-auto mb-12" />
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+              {gallery.map((img) => (
+                <figure
+                  key={img.src}
+                  className="group relative rounded-2xl overflow-hidden shadow-lg border-4 border-cream bg-cream-dark/10"
+                >
+                  <img
+                    src={img.src}
+                    alt={locale === 'hi' ? img.hi : img.en}
+                    loading="lazy"
+                    width={640}
+                    height={480}
+                    className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-maroon-900/90 to-transparent px-4 pt-8 pb-3 text-white font-serif font-semibold text-sm sm:text-base">
+                    {locale === 'hi' ? img.hi : img.en}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── FAQs ── */}
         <section className="bg-cream-light py-20 border-t border-cream">
           <div className="container-page max-w-4xl mx-auto">
@@ -257,7 +313,7 @@ export function CabBookingLanding() {
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 sm:px-8 py-5 bg-white text-ink-soft border-t border-cream animate-fade-in leading-relaxed text-base sm:text-lg font-serif">
-                      {faq.a}
+                      {faq.aNode ?? faq.a}
                     </div>
                   )}
                 </div>
@@ -277,7 +333,7 @@ export function CabBookingLanding() {
             </h2>
             <a href={SITE.phoneTel} className="btn-primary bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)] text-xl px-8 py-3 rounded-full backdrop-blur-sm transition-all flex items-center gap-3">
               <PhoneCall className="w-5 h-5" />
-              {SITE.phoneDisplay}
+              {SITE.phone}
             </a>
           </div>
         </section>

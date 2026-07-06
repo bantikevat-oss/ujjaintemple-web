@@ -13,7 +13,7 @@ import { packagesData } from '../data/packages';
 
 export function TourLanding() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const articles = articlesByCategory('blog').slice(0, 3); // For News Feed
 
   const title = locale === 'hi' ? 'उज्जैन टूर एंड ट्रैवल — उज्जैन दर्शन पैकेज, टूर ऑपरेटर' : 'Tour and Travel in Ujjain — Ujjain Darshan Packages & Tour Operator';

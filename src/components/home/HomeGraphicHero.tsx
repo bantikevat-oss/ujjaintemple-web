@@ -83,7 +83,7 @@ function StatCircle({ icon }: { icon: string }) {
 /* ─── Main hero ──────────────────────────────────────────────────────────── */
 export function HomeGraphicHero() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
 
   const t = {
     hi: {

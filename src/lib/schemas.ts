@@ -199,7 +199,7 @@ export function articleSchema(a: ArticleSchemaInput) {
     },
     publisher: { '@id': `${SITE.url}/#organization` },
     mainEntityOfPage: { '@type': 'WebPage', '@id': a.url },
-    inLanguage: a.url.includes('/en/') ? 'en-IN' : 'hi-IN',
+    inLanguage: a.url.includes('/hi/') ? 'hi-IN' : 'en-IN',
     about: { '@type': 'Thing', name: 'Ujjain Temples & Pilgrimage' },
   };
 }

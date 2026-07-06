@@ -48,7 +48,7 @@ const COPY = {
       { label: 'टूर पैकेज', desc: 'एक से सात दिन की यात्रा योजना', href: '/tour-and-travel-ujjain/' },
       { label: 'पूजा जानकारी', desc: 'मंगल दोष · काल सर्प · नवग्रह शांति', href: '/puja-in-ujjain/' },
     ],
-    footnote: 'समस्त मंदिर समय एवं संपर्क सूचना स्थानीय स्रोतों से सत्यापित। अद्यतन तिथि प्रत्येक पृष्ठ पर अंकित।',
+    footnote: 'समस्त मंदिर समय एवं संपर्क सूचना स्थानीय स्रोतों से सत्यापित एवं नियमित पुनरीक्षित।',
   },
   en: {
     eyebrow: 'Ujjain Guide',
@@ -105,7 +105,7 @@ function useSimhasthaCountdown() {
 export function Home() {
   const { locale } = useI18n();
   const t = COPY[locale];
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const daysLeft = useSimhasthaCountdown();
 
   const title = locale === 'hi'

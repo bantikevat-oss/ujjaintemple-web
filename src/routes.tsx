@@ -3,6 +3,7 @@ import { I18nProvider, type Locale } from './i18n';
 import { Home } from './pages/Home';
 import { MandirIndex } from './pages/mandirs/Index';
 import { MandirDetail } from './pages/mandirs/Detail';
+import { Mahadev84Page } from './pages/Mahadev84';
 import { ArticleDetail } from './pages/articles/Detail';
 import { VerticalLanding } from './pages/VerticalLanding';
 import { SimhasthaLanding } from './pages/SimhasthaLanding';
@@ -35,6 +36,8 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
 
     // Mandirs
     { path: `${basePath}mandirs/`, element: withLocale(locale, MandirIndex) },
+    // 84 Mahadev of Ujjain — Chaurasi Mahadev list
+    { path: `${basePath}84-mahadev-ujjain/`, element: withLocale(locale, Mahadev84Page) },
     ...mandirs.map((m) => ({
       path: `${basePath}mandirs/${m.slug}/`,
       element: withLocaleProps(locale, MandirDetail, { slug: m.slug }),
@@ -122,7 +125,7 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
 }
 
 export const routes: RouteRecord[] = [
-  ...buildLocaleRoutes('hi', '/'),
-  ...buildLocaleRoutes('en', '/en/'),
-  { path: '*', element: withLocale('hi', NotFound) },
+  ...buildLocaleRoutes('en', '/'),
+  ...buildLocaleRoutes('hi', '/hi/'),
+  { path: '*', element: withLocale('en', NotFound) },
 ];

@@ -30,10 +30,10 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.map((u) => {
-  const isHi = !u.startsWith('/en/');
-  const cleanPath = isHi ? u : u.replace(/^\/en/, '');
-  const hiUrl = SITE + cleanPath;
-  const enUrl = SITE + '/en' + (cleanPath === '/' ? '' : cleanPath);
+  const isEn = !u.startsWith('/hi/');
+  const cleanPath = isEn ? u : u.replace(/^\/hi/, '');
+  const enUrl = SITE + cleanPath;
+  const hiUrl = SITE + '/hi' + (cleanPath === '/' ? '' : cleanPath);
   let priority = '0.7';
   if (u === '/') priority = '1.0';
   else if (u.includes('mandirs/') && u !== '/mandirs/') priority = '0.9';
@@ -46,7 +46,7 @@ ${urls.map((u) => {
     <priority>${priority}</priority>
     <xhtml:link rel="alternate" hreflang="hi-IN" href="${hiUrl}"/>
     <xhtml:link rel="alternate" hreflang="en-IN" href="${enUrl}"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${hiUrl}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${enUrl}"/>
   </url>`;
 }).join('\n')}
 </urlset>

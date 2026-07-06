@@ -4,7 +4,7 @@ import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 
 interface Props {
-  defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'simhastha';
+  defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'simhastha' | 'cab';
   variant?: 'card' | 'inline';
   sourcePage?: string;
 }

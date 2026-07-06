@@ -98,7 +98,7 @@ const FAQS = {
 // ─── Component ────────────────────────────────────────────────────
 export function PujaLanding() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const pujas = articlesByCategory('puja-info');
   const faqs = locale === 'hi' ? FAQS.hi : FAQS.en;

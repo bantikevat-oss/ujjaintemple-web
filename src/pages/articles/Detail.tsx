@@ -181,7 +181,7 @@ interface Props { category: Article['category']; slug: string; }
 export function ArticleDetail({ category, slug }: Props) {
   const article = articleBySlug.get(`${category}/${slug}`);
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
 
   if (!article) return null;
 
@@ -303,11 +303,6 @@ export function ArticleDetail({ category, slug }: Props) {
               <p className="text-cream text-lg sm:text-xl md:text-2xl font-serif italic max-w-3xl leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-8">
                 {article.shortIntro[locale]}
               </p>
-              <div className="flex items-center justify-center gap-4 text-sm text-cream/70 font-medium">
-                <span>{locale === 'hi' ? 'प्रकाशित:' : 'Published:'} {article.publishDate}</span>
-                <span className="w-1.5 h-1.5 rounded-full bg-gold"></span>
-                <span>{locale === 'hi' ? 'अद्यतन:' : 'Updated:'} {article.lastUpdated}</span>
-              </div>
             </div>
           </header>
 
@@ -393,13 +388,15 @@ export function ArticleDetail({ category, slug }: Props) {
                 </section>
               )}
 
-              {article.forwardCta && (
-                <PujaBookingForm
-                  pujaName={{
-                    hi: article.title.hi.split('—')[0].trim(),
-                    en: article.title.en.split('—')[0].trim(),
-                  }}
-                />
+              {article.category === 'puja-info' && (
+                <div id="puja-booking" className="scroll-mt-24">
+                  <PujaBookingForm
+                    pujaName={{
+                      hi: article.title.hi.split('—')[0].trim(),
+                      en: article.title.en.split('—')[0].trim(),
+                    }}
+                  />
+                </div>
               )}
 
               {/* ── FAQ ACCORDION ── */}

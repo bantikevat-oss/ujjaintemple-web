@@ -62,7 +62,7 @@ function ColHead({ children }: { children: React.ReactNode }) {
 /* ─── Main footer ────────────────────────────────────────────────────────── */
 export function Footer() {
   const { t, locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const year = new Date().getFullYear();
   const isHi = locale === 'hi';
 

@@ -27,7 +27,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'नीति में परिवर्तन',
-    body: `हम समय-समय पर इस गोपनीयता नीति को अद्यतन कर सकते हैं। महत्त्वपूर्ण परिवर्तनों की सूचना वेबसाइट पर दी जाएगी। अंतिम अद्यतन: जून 2026।`,
+    body: `हम समय-समय पर इस गोपनीयता नीति को अद्यतन कर सकते हैं। महत्त्वपूर्ण परिवर्तनों की सूचना वेबसाइट पर दी जाएगी।`,
   },
   {
     title: 'संपर्क',
@@ -58,7 +58,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'Policy updates',
-    body: `We may update this privacy policy from time to time. Notice of significant changes will be posted on the website. Last updated: June 2026.`,
+    body: `We may update this privacy policy from time to time. Notice of significant changes will be posted on the website.`,
   },
   {
     title: 'Contact',

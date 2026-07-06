@@ -22,8 +22,8 @@ export function EditorialStandards() {
     },
     {
       Icon: CalendarCheck2,
-      title: 'अद्यतन तिथि अंकित',
-      body: 'प्रत्येक पृष्ठ पर "अद्यतन" तिथि अंकित। तीन माह से पुरानी सूचना का त्रैमासिक पुनरीक्षण।',
+      title: 'त्रैमासिक पुनरीक्षण',
+      body: 'मन्दिर समय, शुल्क एवं त्यौहार तिथियों का नियमित त्रैमासिक पुनरीक्षण — पुरानी सूचना तुरन्त सुधारी जाती है।',
     },
     {
       Icon: MessageSquareText,
@@ -43,8 +43,8 @@ export function EditorialStandards() {
     },
     {
       Icon: CalendarCheck2,
-      title: 'Dated entries',
-      body: 'Every page shows a "last verified" date. Anything older than three months is re-reviewed each quarter.',
+      title: 'Quarterly review',
+      body: 'Temple timings, fees and festival dates are re-reviewed every quarter — stale information is corrected promptly.',
     },
     {
       Icon: MessageSquareText,
@@ -62,7 +62,7 @@ export function EditorialStandards() {
               {locale === 'hi' ? 'सम्पादकीय मानक' : 'Editorial Standards'}
             </p>
             <h2 className={`mt-3 font-bold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl md:text-5xl' : 'font-serif text-3xl sm:text-4xl md:text-5xl'}`}>
-              {locale === 'hi' ? 'सूचना — सत्यापित, स्रोतयुक्त, अद्यतन' : 'Information — verified, sourced, dated'}
+              {locale === 'hi' ? 'सूचना — सत्यापित, स्रोतयुक्त, पुनरीक्षित' : 'Information — verified, sourced, reviewed'}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-ink-soft">
               {locale === 'hi'

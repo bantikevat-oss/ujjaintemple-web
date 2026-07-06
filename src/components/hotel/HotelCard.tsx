@@ -8,7 +8,7 @@ interface Props { hotel: Hotel; }
 
 export function HotelCard({ hotel }: Props) {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const href = `${prefix}/hotels/${hotel.slug}/`;
   const photo = hotel.photos[0] || '/images/hotels/placeholder.webp';
 

@@ -15,7 +15,7 @@ const COPY = {
     missionEye: 'हमारा उद्देश्य',
     missionTitle: 'उज्जैन की यात्रा — सरल, प्रामाणिक, द्विभाषी',
     missionP1: 'UjjainTemple.com भारत के सबसे पवित्र नगरों में से एक — उज्जैन — के लिए एक प्रामाणिक, द्विभाषी डिजिटल गाइड है। हमारा लक्ष्य है कि प्रत्येक श्रद्धालु — चाहे वह हिंदी में पढ़े या अंग्रेज़ी में — उज्जैन के मंदिरों, पूजाओं, घाटों और सिंहस्थ महाकुम्भ की प्रामाणिक जानकारी एक ही जगह पाए।',
-    missionP2: '182 से अधिक मंदिर, 56 तीर्थ स्थल, 6 पूजाएँ, टूर पैकेज और कैब बुकिंग — यह सब स्थानीय स्रोतों से सत्यापित और नियमित रूप से अद्यतन किया जाता है।',
+    missionP2: 'उज्जैन के प्रमुख दर्शनीय मंदिर, चौरासी (84) महादेव, प्रमुख पूजाएँ, टूर पैकेज और कैब बुकिंग — यह सब स्थानीय स्रोतों से सत्यापित एवं नियमित पुनरीक्षित जानकारी है।',
     govEye: 'सरकारी मान्यता',
     govTitle: 'Startup India EIR — भारत सरकार का प्रथम अनुदान',
     govP: 'ByteFlow Technologies Pvt Ltd — UjjainTemple.com की संचालक कम्पनी — को DPIIT (भारत सरकार) द्वारा Startup India EIR योजना के अंतर्गत प्रथम अनुदान प्राप्त हुआ। यह मान्यता हमारी प्रामाणिकता और डिजिटल धरोहर संरक्षण की प्रतिबद्धता का प्रमाण है।',
@@ -41,7 +41,7 @@ const COPY = {
     missionEye: 'Our Mission',
     missionTitle: 'Ujjain pilgrimage — simple, authentic, bilingual',
     missionP1: 'UjjainTemple.com is an authoritative, bilingual digital guide to one of India\'s most sacred cities — Ujjain. Our goal: every devotee, whether they read Hindi or English, should find authentic information about Ujjain\'s temples, pujas, ghats and the Simhastha Mahakumbh in one place.',
-    missionP2: 'More than 182 temples, 56 tirtha sites, 6 pujas, tour packages and cab booking — all verified from local sources and regularly updated.',
+    missionP2: 'Ujjain’s major darshan temples, the 84 (Chaurasi) Mahadev, key pujas, tour packages and cab booking — all verified from local sources and reviewed regularly.',
     govEye: 'Government Recognition',
     govTitle: 'Startup India EIR — first grant from Govt of India',
     govP: 'ByteFlow Technologies Pvt Ltd — the entity that operates UjjainTemple.com — received its first grant under the Startup India EIR scheme from DPIIT, Govt of India. This recognition validates our commitment to authenticity and digital heritage preservation.',
@@ -65,7 +65,7 @@ export function AboutPage() {
   const { locale } = useI18n();
   const t = COPY[locale];
   const isHi = locale === 'hi';
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
 
   return (
     <>

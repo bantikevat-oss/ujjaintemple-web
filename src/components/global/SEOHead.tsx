@@ -19,7 +19,7 @@ const KEYWORDS_EN =
   'Ujjain Temple, Ujjain Temples, Temples in Ujjain, Famous Temples in Ujjain, Simhastha 2028, Ujjain Simhastha 2028, Ujjain Kumbh Mela 2028, Shahi Snan 2028, Ujjain Mahakumbh 2028, Hotel in Ujjain, Hotels in Ujjain, Hotels near Mahakal Temple, Taxi in Ujjain, Cab in Ujjain, Ujjain Taxi Booking, Indore to Ujjain Taxi, Bhopal to Ujjain Taxi, Ujjain to Omkareshwar Cab, Ujjain Darshan Package, Tour and Travel in Ujjain, Mahakal Darshan Tour, Pandit for Puja in Ujjain, Online Puja Booking Ujjain, Kaal Sarp Dosh Puja Ujjain, Mangal Dosh Nivaran Puja Ujjain, Nag Bali Puja Ujjain, Mahakaleshwar Jyotirlinga Ujjain, Mahakal Temple Ujjain, Mahakal Lok Corridor, Kal Bhairav Temple Ujjain, Harsiddhi Shaktipeeth Ujjain, Mangalnath Mandir Ujjain, Chintaman Ganesh Temple Ujjain, Sandipani Ashram Ujjain, Ram Ghat Ujjain';
 
 export function SEOHead({ title, description, path, locale, image, type = 'website', publishedTime, modifiedTime, schemas = [], children }: Props) {
-  const canonical = locale === 'hi' ? `${SITE.url}${path}` : `${SITE.url}/en${path}`;
+  const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
   const hreflangs = buildHreflang(path);
   const ogImage = image || `${SITE.url}/og/default.webp`;
   const keywords = locale === 'hi' ? KEYWORDS_HI : KEYWORDS_EN;

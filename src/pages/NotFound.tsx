@@ -7,7 +7,7 @@ import { SITE } from '../lib/site';
 
 export function NotFound() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   return (
     <>
       <SEOHead

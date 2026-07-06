@@ -86,7 +86,7 @@ function relatedPujaSlugs(slug: string, templeType: string): string[] {
 export function MandirDetail({ slug }: DetailProps) {
   const mandir = mandirBySlug.get(slug);
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
 
   if (!mandir) return null;
 

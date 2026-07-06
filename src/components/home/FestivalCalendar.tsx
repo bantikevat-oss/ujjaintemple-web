@@ -64,7 +64,7 @@ const FESTIVALS = [
 export function FestivalCalendar() {
   const { locale } = useI18n();
   const isHi = locale === 'hi';
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
 
   return (
     <section className="bg-white">

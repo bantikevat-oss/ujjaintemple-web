@@ -14,68 +14,57 @@ interface NavItem {
 
 const navTree: NavItem[] = [
   { key: 'nav.home', href: '/' },
-  { key: 'nav.mandirs', href: '/mandirs/' },
-  { labelHi: 'घूमने की जगह', labelEn: 'Things to Do', href: '/things-to-do-in-ujjain/' },
+  {
+    key: 'nav.mandirs',
+    href: '/mandirs/',
+    children: [
+      { labelHi: 'उज्जैन दर्शन सूची (10 मंदिर)', labelEn: 'Ujjain Darshan List (10 Temples)', href: '/mandirs/' },
+      { labelHi: '84 महादेव — चौरासी परिक्रमा', labelEn: '84 Mahadev — Chaurasi Parikrama', href: '/84-mahadev-ujjain/' },
+      { labelHi: 'महाकालेश्वर ज्योतिर्लिंग', labelEn: 'Mahakaleshwar Jyotirlinga', href: '/mandirs/mahakaleshwar/' },
+      { labelHi: 'श्री महाकाल लोक', labelEn: 'Shri Mahakal Lok', href: '/mandirs/mahakal-lok/' },
+      { labelHi: 'काल भैरव मंदिर', labelEn: 'Kal Bhairav Temple', href: '/mandirs/kal-bhairav-ujjain/' },
+      { labelHi: 'हरसिद्धि शक्तिपीठ', labelEn: 'Harsiddhi Shaktipeeth', href: '/mandirs/harsiddhi-mata/' },
+      { labelHi: 'मंगलनाथ मंदिर', labelEn: 'Mangalnath Temple', href: '/mandirs/mangalnath/' },
+      { labelHi: 'घूमने की जगह', labelEn: 'Things to Do', href: '/things-to-do-in-ujjain/' },
+    ],
+  },
   {
     key: 'nav.tours',
     href: '/tour-and-travel-ujjain/',
     children: [
-      {
-        labelHi: 'उज्जैन टूर पैकेज',
-        labelEn: 'Ujjain Tour Package',
-        href: '/tour-and-travel-ujjain/',
-        children: [
-          {
-            labelHi: 'उज्जैन-ओंकारेश्वर दर्शन टूर पैकेज (2 दिन)',
-            labelEn: 'Ujjain-Omkareshwar Jyotirlinga Darshan Tour Package',
-            href: '/tour-and-travel-ujjain/ujjain-omkareshwar-package/'
-          },
-          {
-            labelHi: 'उज्जैन दर्शन टैक्सी टूर पैकेज (1 दिन)',
-            labelEn: 'Ujjain Local Darshan Package (1 Day)',
-            href: '/tour-and-travel-ujjain/ujjain-darshan-package/'
-          },
-          {
-            labelHi: 'उज्जैन-ओंकारेश्वर-महेश्वर-मांडू टूर पैकेज (4 दिन)',
-            labelEn: 'Ujjain-Omkareshwar-Maheshwar-Mandu Tour Package (4 Days)',
-            href: '/tour-and-travel-ujjain/ujjain-omkareshwar-maheshwar-mandu-4-days/'
-          },
-          {
-            labelHi: 'उज्जैन-त्र्यंबकेश्वर-पंच ज्योतिर्लिंग टूर पैकेज (5 दिन)',
-            labelEn: 'Ujjain-Trimbakeshwar-Panch Jyotirlinga Tour Package (5 Days)',
-            href: '/tour-and-travel-ujjain/panch-jyotirlinga-5-days/'
-          },
-          {
-            labelHi: 'उज्जैन और माँ बगलामुखी दर्शन पैकेज (2 दिन)',
-            labelEn: 'Ujjain and Maa Baglamukhi Darshan Package (2 Days)',
-            href: '/tour-and-travel-ujjain/ujjain-baglamukhi-2-days/'
-          }
-        ]
-      }
-    ]
+      { labelHi: 'सभी टूर पैकेज', labelEn: 'All Tour Packages', href: '/tour-and-travel-ujjain/' },
+      { labelHi: 'उज्जैन-ओंकारेश्वर दर्शन (2 दिन)', labelEn: 'Ujjain-Omkareshwar Darshan (2 Days)', href: '/tour-and-travel-ujjain/ujjain-omkareshwar-package/' },
+      { labelHi: 'उज्जैन लोकल दर्शन (1 दिन)', labelEn: 'Ujjain Local Darshan (1 Day)', href: '/tour-and-travel-ujjain/ujjain-darshan-package/' },
+      { labelHi: 'ओंकारेश्वर-महेश्वर-मांडू (4 दिन)', labelEn: 'Omkareshwar-Maheshwar-Mandu (4 Days)', href: '/tour-and-travel-ujjain/ujjain-omkareshwar-maheshwar-mandu-4-days/' },
+      { labelHi: 'पंच ज्योतिर्लिंग (5 दिन)', labelEn: 'Panch Jyotirlinga (5 Days)', href: '/tour-and-travel-ujjain/panch-jyotirlinga-5-days/' },
+      { labelHi: 'माँ बगलामुखी दर्शन (2 दिन)', labelEn: 'Maa Baglamukhi Darshan (2 Days)', href: '/tour-and-travel-ujjain/ujjain-baglamukhi-2-days/' },
+    ],
+  },
+  {
+    key: 'nav.puja',
+    href: '/puja-in-ujjain/',
+    children: [
+      { labelHi: 'सभी पूजाएँ', labelEn: 'All Pujas', href: '/puja-in-ujjain/' },
+      { labelHi: 'काल सर्प दोष निवारण', labelEn: 'Kaal Sarp Dosh Nivaran', href: '/puja-in-ujjain/kaal-sarp-dosh-nivaran/' },
+      { labelHi: 'मंगल दोष निवारण', labelEn: 'Mangal Dosh Nivaran', href: '/puja-in-ujjain/mangal-dosh-nivaran/' },
+      { labelHi: 'पितृ दोष निवारण', labelEn: 'Pitru Dosh Nivaran', href: '/puja-in-ujjain/pitru-dosh-nivaran/' },
+      { labelHi: 'नवग्रह शांति', labelEn: 'Navgrah Shanti', href: '/puja-in-ujjain/navgrah-shanti/' },
+      { labelHi: 'महामृत्युंजय पूजा', labelEn: 'Mahamrityunjaya Puja', href: '/puja-in-ujjain/mahamrityunjaya-puja/' },
+      { labelHi: 'रुद्राभिषेक', labelEn: 'Rudrabhishek', href: '/puja-in-ujjain/rudrabhishek-ujjain/' },
+    ],
   },
   {
     key: 'nav.cabBooking',
     href: '/cab-booking/',
-    labelHi: 'कैब बुकिंग',
-    labelEn: 'Cab Booking',
     children: [
-      {
-        labelHi: 'उज्जैन में टैक्सी बुक करें',
-        labelEn: 'Book Taxi in Ujjain',
-        href: '/cab-booking/'
-      },
-      {
-        labelHi: 'उज्जैन से ओंकारेश्वर कैब',
-        labelEn: 'Ujjain to Omkareshwar Cab',
-        href: '/transport-in-ujjain/ujjain-to-omkareshwar-cab/'
-      }
-    ]
+      { labelHi: 'उज्जैन में टैक्सी बुक करें', labelEn: 'Book Taxi in Ujjain', href: '/cab-booking/' },
+      { labelHi: 'उज्जैन से ओंकारेश्वर कैब', labelEn: 'Ujjain to Omkareshwar Cab', href: '/transport-in-ujjain/ujjain-to-omkareshwar-cab/' },
+      { labelHi: 'यातायात गाइड', labelEn: 'Transport Guide', href: '/transport-in-ujjain/' },
+    ],
   },
   { key: 'nav.simhastha', href: '/simhastha-2028/' },
   { key: 'nav.hotels', href: '/hotels/' },
-  { key: 'nav.transport', href: '/transport-in-ujjain/' },
-  { key: 'nav.puja', href: '/puja-in-ujjain/' },
+  { key: 'nav.contact', href: '/contact/' },
 ];
 
 function MobileNavItem({ item, prefix, locale, t, depth = 0, closeMenu }: { item: NavItem, prefix: string, locale: 'hi' | 'en', t: (k: string) => string, depth?: number, closeMenu: () => void }) {
@@ -111,8 +100,8 @@ export function Header() {
   const { t, locale, altLocale } = useI18n();
   const [open, setOpen] = useState(false);
   const location = useLocation();
-  const prefix = locale === 'hi' ? '' : '/en';
-  const altPrefix = altLocale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
+  const altPrefix = altLocale === 'en' ? '' : '/hi';
 
   // Desktop recursive renderer
   const renderDesktopNav = (items: NavItem[], depth = 0) => {

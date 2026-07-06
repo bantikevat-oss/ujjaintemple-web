@@ -24,7 +24,7 @@ export function I18nProvider({ locale, children }: { locale: Locale; children: R
     locale,
     t: (key) => dictionaries[locale][key] ?? key,
     altLocale: locale === 'hi' ? 'en' : 'hi',
-    hreflangPath: (p) => locale === 'hi' ? `/en${p}` : p.replace(/^\/en/, '') || '/',
+    hreflangPath: (p) => locale === 'en' ? `/hi${p}` : p.replace(/^\/hi/, '') || '/',
   }), [locale]);
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

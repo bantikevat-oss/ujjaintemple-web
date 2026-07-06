@@ -24,7 +24,7 @@ interface Props {
 
 export function VerticalLanding({ category, titleHi, titleEn, introHi, introEn, metaHi, metaEn, path, defaultService }: Props) {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const list = articlesByCategory(category);
   const title = locale === 'hi' ? titleHi : titleEn;
   const intro = locale === 'hi' ? introHi : introEn;

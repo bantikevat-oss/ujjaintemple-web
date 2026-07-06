@@ -418,19 +418,15 @@ export function PujaGraphicHero({ article, locale, catLabel }: Props) {
           </div>
         )}
 
-        {/* CTA buttons */}
+        {/* CTA buttons — keep the devotee ON-SITE; scroll to the in-page booking form */}
         <div className="flex flex-wrap justify-center items-center gap-4">
-          {article.forwardCta && (
-            <a
-              href={article.forwardCta.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 rounded-md bg-gold px-7 py-4 text-sm font-bold text-maroon-900 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-200 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(212,175,55,0.4)]"
-            >
-              {locale === 'hi' ? 'पूजा बुक करें' : 'Book Puja'}
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          )}
+          <a
+            href="#puja-booking"
+            className="inline-flex items-center gap-2.5 rounded-md bg-gold px-7 py-4 text-sm font-bold text-maroon-900 shadow-[0_8px_32px_rgba(0,0,0,0.5)] transition-all duration-200 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_12px_40px_rgba(212,175,55,0.4)]"
+          >
+            {locale === 'hi' ? 'पूजा बुक करें' : 'Book Puja'}
+            <ArrowRight className="h-4 w-4" />
+          </a>
           <a
             href="#puja-content"
             className="inline-flex items-center gap-2 text-sm font-semibold text-white/65 transition-colors hover:text-gold"
@@ -438,13 +434,6 @@ export function PujaGraphicHero({ article, locale, catLabel }: Props) {
             {locale === 'hi' ? 'पूरी जानकारी पढ़ें' : 'Read Full Details'}
             <ArrowDown className="h-4 w-4" />
           </a>
-        </div>
-
-        {/* Timestamps */}
-        <div className="mt-8 flex flex-wrap justify-center gap-4 border-t border-white/10 pt-5 text-[11px] text-white/30">
-          <span>{locale === 'hi' ? 'प्रकाशित:' : 'Published:'} {article.publishDate}</span>
-          <span className="text-white/15">·</span>
-          <span>{locale === 'hi' ? 'अद्यतन:' : 'Updated:'} {article.lastUpdated}</span>
         </div>
       </div>
 

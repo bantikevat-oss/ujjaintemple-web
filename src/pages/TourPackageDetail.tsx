@@ -14,7 +14,7 @@ import { NotFound } from './NotFound';
 
 export function TourPackageDetail({ slug }: { slug: string }) {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const pkg = getPackageBySlug(slug);
 
   if (!pkg) {
@@ -57,7 +57,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
         <div className="bg-cream-light py-4 border-b border-cream">
           <div className="container-page">
             <Breadcrumb items={[
-              { label: locale === 'hi' ? 'टूर पैकेज' : 'Tour Packages', path: '/tour-and-travel-ujjain/' },
+              { label: locale === 'hi' ? 'टूर पैकेज' : 'Tour Packages', href: '/tour-and-travel-ujjain/' },
               { label: title }
             ]} />
           </div>
@@ -135,7 +135,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                 <h3 className="font-serif text-2xl font-bold text-maroon mb-6 text-center border-b-2 border-saffron pb-4 inline-block w-full">
                   {locale === 'hi' ? 'पैकेज बुक करें' : 'Request a Call Back'}
                 </h3>
-                <LeadForm variant="default" defaultService="tour" sourcePage={slug} />
+                <LeadForm variant="card" defaultService="tour" sourcePage={slug} />
               </div>
             </div>
 

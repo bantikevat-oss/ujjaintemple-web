@@ -9,6 +9,15 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.ujjaintemple\.com [NC]
 RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 
+# ── Removed content → closest live page (SEO 301) ──
+RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakal-lok-corridor/?$ /mandirs/mahakal-lok/ [L,R=301]
+RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /mandirs/mahakaleshwar/ [L,R=301]
+
+# ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──
+# Old English URLs (/en/...) permanently redirect to the new root-level English pages
+RewriteRule ^en/(.*)$ /$1 [L,R=301]
+RewriteRule ^en/?$ / [R=301,L]
+
 # Trailing slash for directory-style URLs (matches SSG output)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.(html|css|js|woff2|webp|jpg|png|svg|xml|txt|json|webmanifest|pdf|ico|php)$

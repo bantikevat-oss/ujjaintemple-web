@@ -5,7 +5,7 @@ import { SITE } from '../../lib/site';
 
 interface GlobalLeadSectionProps {
   sourcePage: string;
-  defaultService?: 'hotel' | 'cab' | 'tour' | 'simhastha' | 'transport';
+  defaultService?: 'darshanPlan' | 'hotel' | 'cab' | 'tour' | 'simhastha' | 'transport';
 }
 
 export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: GlobalLeadSectionProps) {

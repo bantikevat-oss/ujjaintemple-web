@@ -143,7 +143,7 @@ const POLICE_FACTS = [
 // ─── Component ────────────────────────────────────────────────────
 export function SimhasthaLanding() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const list = articlesByCategory('simhastha');
   const countdown = useCountdown();
 

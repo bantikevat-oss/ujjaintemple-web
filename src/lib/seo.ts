@@ -14,15 +14,15 @@ export interface SeoMeta {
 
 export function buildCanonical(path: string, locale: Locale): string {
   const cleanPath = path.replace(/^\/+|\/+$/g, '');
-  if (locale === 'hi') return `${SITE.url}/${cleanPath}${cleanPath ? '/' : ''}`;
-  return `${SITE.url}/en/${cleanPath}${cleanPath ? '/' : ''}`;
+  if (locale === 'en') return `${SITE.url}/${cleanPath}${cleanPath ? '/' : ''}`;
+  return `${SITE.url}/hi/${cleanPath}${cleanPath ? '/' : ''}`;
 }
 
 export function buildHreflang(path: string): Array<{ hreflang: string; href: string }> {
-  const cleanPath = path.replace(/^\/+|\/+$/g, '').replace(/^en\//, '');
+  const cleanPath = path.replace(/^\/+|\/+$/g, '').replace(/^hi\//, '');
   return [
-    { hreflang: 'hi-IN', href: `${SITE.url}/${cleanPath}${cleanPath ? '/' : ''}` },
-    { hreflang: 'en-IN', href: `${SITE.url}/en/${cleanPath}${cleanPath ? '/' : ''}` },
+    { hreflang: 'en-IN', href: `${SITE.url}/${cleanPath}${cleanPath ? '/' : ''}` },
+    { hreflang: 'hi-IN', href: `${SITE.url}/hi/${cleanPath}${cleanPath ? '/' : ''}` },
     { hreflang: 'x-default', href: `${SITE.url}/${cleanPath}${cleanPath ? '/' : ''}` },
   ];
 }

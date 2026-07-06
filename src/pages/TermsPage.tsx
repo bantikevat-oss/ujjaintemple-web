@@ -35,7 +35,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'शर्तों में परिवर्तन',
-    body: `हम इन शर्तों को बिना पूर्व सूचना के बदल सकते हैं। नवीनतम संस्करण सदैव इसी पेज पर उपलब्ध रहेगा। अंतिम अद्यतन: जून 2026।`,
+    body: `हम इन शर्तों को बिना पूर्व सूचना के बदल सकते हैं। नवीनतम संस्करण सदैव इसी पेज पर उपलब्ध रहेगा।`,
   },
 ];
 
@@ -70,7 +70,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'Changes to terms',
-    body: `We may update these terms without prior notice. The latest version will always be available on this page. Last updated: June 2026.`,
+    body: `We may update these terms without prior notice. The latest version will always be available on this page.`,
   },
 ];
 

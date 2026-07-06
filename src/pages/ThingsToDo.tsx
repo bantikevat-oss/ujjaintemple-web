@@ -16,7 +16,7 @@ import { Landmark, MapPinned, BedDouble, Car, CalendarDays, Flame, ArrowRight } 
 // hotels, cab, simhastha, puja). Internal-link hub, not a thin page.
 export function ThingsToDo() {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const path = '/things-to-do-in-ujjain/';
   const topMandirs = featuredMandirs.slice(0, 6);
 

@@ -1,0 +1,139 @@
+{
+  "slug": "mahakal-lok",
+  "name": {
+    "hi": "श्री महाकाल लोक कॉरिडोर",
+    "en": "Shri Mahakal Lok Corridor"
+  },
+  "deity": {
+    "hi": "भगवान शिव (महाकाल)",
+    "en": "Lord Shiva (Mahakal)"
+  },
+  "templeType": "Corridor / Heritage Walk",
+  "locationArea": "Mahakal Area",
+  "isFeatured": true,
+  "establishedEra": {
+    "hi": "आधुनिक — प्रथम चरण अक्टूबर 2022 में लोकार्पित",
+    "en": "Modern — Phase 1 inaugurated October 2022"
+  },
+  "architectureStyle": "Heritage Corridor + Shiva Purana Murals",
+  "shortIntro": {
+    "hi": "श्री महाकाल लोक महाकालेश्वर मंदिर के चारों ओर बना भव्य कॉरिडोर है — लगभग 900 मीटर लंबा रास्ता, 108 अलंकृत स्तंभ, और शिव पुराण की कथाओं को दर्शाती 50+ भित्ति-चित्र व मूर्तियाँ। शाम की रोशनी में यह पूरा लोक किसी दिव्य नगरी जैसा दिखता है।",
+    "en": "Shri Mahakal Lok is the grand corridor encircling the Mahakaleshwar Temple — a ~900-metre walkway lined with 108 ornate pillars and 50+ murals and statues depicting stories from the Shiva Purana. Under the evening lights, the entire Lok glows like a celestial city."
+  },
+  "history": {
+    "hi": "महाकाल लोक परियोजना का उद्देश्य महाकालेश्वर धाम को विश्वस्तरीय आध्यात्मिक अनुभव बनाना था। प्रथम चरण (महाकाल लोक) का लोकार्पण अक्टूबर 2022 में हुआ। यहाँ नंदी द्वार, पिनाकी द्वार, सप्तऋषि मंडल, त्रिपुरासुर वध, शिव-पार्वती विवाह और शिव तांडव जैसी अनेक कथाएँ पत्थर और धातु की मूर्तियों में जीवंत की गई हैं। कॉरिडोर के साथ कमल कुंड, फूड कोर्ट और भव्य प्रवेश द्वार भी बनाए गए हैं। यह अब उज्जैन आने वाले हर श्रद्धालु का पहला आकर्षण बन चुका है।",
+    "en": "The Mahakal Lok project was conceived to transform the Mahakaleshwar Dham into a world-class spiritual experience. Phase 1 (Mahakal Lok) was inaugurated in October 2022. Nandi Dwar, Pinaki Dwar, the Saptarishi Mandal, Tripurasura Vadh, the marriage of Shiva-Parvati and the Shiv Tandav are among the many legends brought alive here in stone and metal statues. A lotus pond (Kamal Kund), food court and grand gateways complement the corridor. It is now the first attraction for almost every devotee arriving in Ujjain."
+  },
+  "darshanTimingSummary": {
+    "hi": "पूरे दिन खुला (सुबह जल्दी – रात तक) · शाम की रोशनी सबसे सुंदर लगती है",
+    "en": "Open all day (early morning – night) · the evening illumination is the most beautiful"
+  },
+  "weeklyTiming": {
+    "monday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "tuesday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "wednesday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "thursday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "friday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "saturday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    },
+    "sunday": {
+      "hi": "सुबह जल्दी – रात तक (खुला)",
+      "en": "Early morning – night (open)"
+    }
+  },
+  "aartiTiming": {
+    "hi": "महाकाल लोक स्वयं एक दर्शन-पथ है; आरती महाकालेश्वर मंदिर में होती है (भस्म आरती प्रातः 4:00)।",
+    "en": "Mahakal Lok itself is a darshan walkway; aartis are held inside the Mahakaleshwar temple (Bhasma Aarti 4:00 AM)."
+  },
+  "specialOccasions": {
+    "hi": "महाशिवरात्रि व सावन सोमवार पर विशेष सजावट व रोशनी · सिंहस्थ 2028 में मुख्य प्रवेश-अनुभव",
+    "en": "Special decoration & illumination on Mahashivratri and Shravan Mondays · a key arrival experience during Simhastha 2028"
+  },
+  "entryFee": {
+    "hi": "प्रवेश निःशुल्क है। महाकाल लोक में घूमना फ्री है — केवल जल्दी दर्शन/भस्म आरती के लिए मंदिर की आधिकारिक बुकिंग लगती है।",
+    "en": "Entry is free. Walking through Mahakal Lok is free — only Shighra darshan/Bhasma Aarti need the temple's official booking."
+  },
+  "address": {
+    "hi": "श्री महाकाल लोक, महाकालेश्वर मंदिर परिसर, जयसिंहपुरा, उज्जैन, मध्य प्रदेश 456006",
+    "en": "Shri Mahakal Lok, Mahakaleshwar Temple Complex, Jaisinghpura, Ujjain, Madhya Pradesh 456006"
+  },
+  "geo": {
+    "lat": 23.1831,
+    "lng": 75.7674
+  },
+  "trust": "Shri Mahakaleshwar Mandir Prabandh Samiti",
+  "photos": [
+    "/images/mandirs/mahakaleshwar.jpg"
+  ],
+  "prasadInfo": {
+    "hi": "महाकाल लोक में फूड कोर्ट व प्रसाद काउंटर उपलब्ध हैं; मंदिर में लड्डू प्रसाद मिलता है।",
+    "en": "A food court and prasad counters are available at Mahakal Lok; laddoo prasad is offered at the temple."
+  },
+  "howToReach": {
+    "hi": "महाकालेश्वर मंदिर के मुख्य प्रवेश द्वार से जुड़ा हुआ · रेलवे स्टेशन से 1.5 किमी · इंदौर हवाई अड्डे से 55 किमी। ऑटो/ई-रिक्शा आसानी से मिल जाते हैं।",
+    "en": "Directly connected to the main entrance of Mahakaleshwar Temple · 1.5 km from the railway station · 55 km from Indore airport. Autos/e-rickshaws are easily available."
+  },
+  "nearbyMandirs": [
+    "mahakaleshwar",
+    "kal-bhairav-ujjain",
+    "harsiddhi-mata"
+  ],
+  "simhasthaRelevance": {
+    "hi": "सिंहस्थ 2028 में महाकाल लोक श्रद्धालुओं का मुख्य प्रवेश-अनुभव रहेगा — शाही स्नान के दिनों में सबसे अधिक भीड़ यहीं होती है।",
+    "en": "During Simhastha 2028, Mahakal Lok will be the main arrival experience for devotees — the heaviest footfall gathers here on shahi snan days."
+  },
+  "faqs": [
+    {
+      "q": {
+        "hi": "महाकाल लोक में प्रवेश शुल्क कितना है?",
+        "en": "What is the entry fee for Mahakal Lok?"
+      },
+      "a": {
+        "hi": "महाकाल लोक में प्रवेश पूरी तरह निःशुल्क है। यह एक खुला दर्शन-पथ है जिसे कोई भी घूम सकता है।",
+        "en": "Entry to Mahakal Lok is completely free. It is an open darshan walkway that anyone can explore."
+      }
+    },
+    {
+      "q": {
+        "hi": "महाकाल लोक घूमने में कितना समय लगता है?",
+        "en": "How long does it take to walk through Mahakal Lok?"
+      },
+      "a": {
+        "hi": "आराम से घूमने और तस्वीरें लेने में लगभग 45 मिनट से 1 घंटा लगता है। शाम की रोशनी में अनुभव सबसे सुंदर होता है।",
+        "en": "A relaxed walk with photos takes about 45 minutes to an hour. The experience is most beautiful under the evening illumination."
+      }
+    },
+    {
+      "q": {
+        "hi": "महाकाल लोक कब बना था?",
+        "en": "When was Mahakal Lok built?"
+      },
+      "a": {
+        "hi": "महाकाल लोक के प्रथम चरण का लोकार्पण अक्टूबर 2022 में हुआ था।",
+        "en": "Phase 1 of Mahakal Lok was inaugurated in October 2022."
+      }
+    }
+  ],
+  "lastVerified": "2026-07-06",
+  "primaryKeyword": {
+    "hi": "महाकाल लोक कॉरिडोर उज्जैन",
+    "en": "Mahakal Lok corridor Ujjain"
+  }
+}

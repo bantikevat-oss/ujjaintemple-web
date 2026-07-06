@@ -43,7 +43,7 @@ const PLACEHOLDER = '/images/mandir-placeholder.svg';
 
 export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
   const { locale } = useI18n();
-  const prefix = locale === 'hi' ? '' : '/en';
+  const prefix = locale === 'en' ? '' : '/hi';
   const href = `${prefix}/mandirs/${mandir.slug}/`;
   const rawPhoto = mandir.photos[0];
   // If no photo set, or it's the legacy placeholder, fall back to our SVG
@@ -108,8 +108,8 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
 
           {/* Footer */}
           <div className="mt-auto flex items-center justify-between border-t border-cream-dark pt-3">
-            <span className="text-[11px] text-ink-mute">
-              {locale === 'hi' ? 'अद्यतन' : 'Updated'} · {mandir.lastVerified || '2026-05-27'}
+            <span className="inline-flex items-center gap-1 text-[11px] font-medium uppercase tracking-wider text-saffron-700">
+              {locale === 'hi' ? 'दर्शन जानकारी' : 'Darshan Guide'}
             </span>
             <span className="inline-flex items-center gap-1 rounded-full bg-maroon px-3 py-1 text-[12px] font-semibold text-cream transition-colors group-hover:bg-saffron-600">
               {locale === 'hi' ? 'जानें' : 'Explore'}
