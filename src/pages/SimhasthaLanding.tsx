@@ -127,24 +127,10 @@ const AKHADAS = {
   },
 } as const;
 
-// Security & infrastructure — Ujjain Police official data
-const POLICE_FACTS = [
-  { numHi: '62,950', numEn: '62,950', labelHi: 'सुरक्षा बल', labelEn: 'Security Force' },
-  { numHi: '3,500',  numEn: '3,500',  labelHi: 'AI CCTV कैमरे', labelEn: 'AI CCTV Cameras' },
-  { numHi: '3,000',  numEn: '3,000',  labelHi: 'हेक्टेयर मेला क्षेत्र', labelEn: 'Hectares Mela Area' },
-  { numHi: '10',     numEn: '10',     labelHi: 'जोन', labelEn: 'Zones' },
-  { numHi: '40',     numEn: '40',     labelHi: 'सेक्टर', labelEn: 'Sectors' },
-  { numHi: '80',     numEn: '80',     labelHi: 'थाने', labelEn: 'Police Stations' },
-  { numHi: '500+',   numEn: '500+',   labelHi: 'राजपत्रित अधिकारी', labelEn: 'Gazetted Officers' },
-  { numHi: '100+',   numEn: '100+',   labelHi: 'पार्किंग स्थल', labelEn: 'Parking Spots' },
-  { numHi: '2.20 लाख', numEn: '2.20 Lakh', labelHi: 'वाहन क्षमता', labelEn: 'Vehicle Capacity' },
-];
-
 // ─── Component ────────────────────────────────────────────────────
 export function SimhasthaLanding() {
   const { locale } = useI18n();
   const prefix = locale === 'en' ? '' : '/hi';
-  const list = articlesByCategory('simhastha');
   const countdown = useCountdown();
 
   const title = locale === 'hi'
@@ -221,10 +207,10 @@ export function SimhasthaLanding() {
       titleEn: 'When to Go',
       descHi: 'कल्पवास: पूरे 30 दिन चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 27 अप्रैल, 08 मई)। परिवार के साथ जाना है तो वैशाख पूर्णिमा (08 मई 2028) सबसे अच्छा दिन है।',
       descEn: 'Kalpvas: all 30 days. 3 Shahi Snans (09 Apr, 27 Apr, 08 May). For families, target Vaisakh Purnima (08 May 2028).',
-      href: `${prefix}/simhastha-2028/simhastha-2028-complete-guide/`,
-      isExternal: false,
-      ctaHi: 'पूरी गाइड पढ़ें',
-      ctaEn: 'Read Full Guide',
+      href: SITE.phoneTel,
+      isExternal: true,
+      ctaHi: 'पूरी जानकारी — कॉल करें',
+      ctaEn: 'Full Info — Call',
     },
   ] as const;
 
@@ -242,12 +228,6 @@ export function SimhasthaLanding() {
               { name: title, url: `${SITE.url}/simhastha-2028/` },
             ],
           }),
-          itemListSchema(list.map((a) => ({
-            name: a.title[locale],
-            url: `${SITE.url}${prefix}${articlePath(a)}`,
-            description: a.shortIntro[locale],
-            image: a.heroImage ? `${SITE.url}${a.heroImage}` : undefined,
-          }))),
           simhastha2028EventSchema(),
           faqSchema(FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] }))),
         ]}
@@ -387,7 +367,7 @@ export function SimhasthaLanding() {
                 {locale === 'hi' ? 'यात्रा योजना बनाएँ' : 'Plan Your Trip'}
               </a>
               <a
-                href="#guides"
+                href="#akhadas"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 font-semibold"
                 style={{
                   border: '1.5px solid rgba(201,168,76,0.40)',
@@ -397,7 +377,7 @@ export function SimhasthaLanding() {
                 onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.8)'; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.40)'; }}
               >
-                {locale === 'hi' ? 'गाइड पढ़ें' : 'Read Guides'}
+                {locale === 'hi' ? 'पूरी जानकारी' : 'Full Details'}
                 <ArrowRight className="w-5 h-5" />
               </a>
             </div>
@@ -637,130 +617,6 @@ export function SimhasthaLanding() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════════════════════
-            SECTION 3C — Security & Infrastructure (Police data)
-        ═══════════════════════════════════════════════════════════ */}
-        <section className="bg-gradient-to-br from-maroon-950 to-maroon py-20 sm:py-24 border-b border-cream-dark">
-          <div className="container-page max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-gold font-serif text-sm tracking-[0.35em] uppercase mb-3">
-                {locale === 'hi' ? '— सुरक्षा एवं व्यवस्था —' : '— Security & Infrastructure —'}
-              </p>
-              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-cream">
-                {locale === 'hi' ? 'सिंहस्थ 2028 का प्रबंध' : 'Simhastha 2028 Management'}
-              </h2>
-              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
-              <p className="mt-5 text-cream/70 text-base max-w-2xl mx-auto">
-                {locale === 'hi'
-                  ? 'उज्जैन पुलिस की आधिकारिक तैयारी — आधुनिक तकनीक के साथ श्रद्धालुओं की सुरक्षा।'
-                  : 'Official preparation by Ujjain Police — modern tech for devotee safety.'}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
-              {POLICE_FACTS.map((fact, idx) => (
-                <div key={idx} className="rounded-xl border border-gold/30 bg-maroon-900/50 backdrop-blur p-5 text-center hover:border-gold/60 transition-colors">
-                  <p className="font-serif text-2xl sm:text-3xl font-extrabold text-gold">
-                    {locale === 'hi' ? fact.numHi : fact.numEn}
-                  </p>
-                  <p className="text-[11px] sm:text-xs text-cream/80 mt-2 leading-tight">
-                    {locale === 'hi' ? fact.labelHi : fact.labelEn}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center text-[11px] text-cream/50 font-serif italic mt-8">
-              {locale === 'hi' ? 'स्रोत: उज्जैन पुलिस — सिंहस्थ महाकुम्भ 2028 आधिकारिक प्रस्तुति' : 'Source: Ujjain Police — Simhastha Mahakumbh 2028 official presentation'}
-            </p>
-            <p className="text-center text-xs text-cream/70 mt-3">
-              {locale === 'hi' ? 'AI-CCTV · ड्रोन (UAV) · ICCC अत्याधुनिक निगरानी प्रणाली' : 'AI-CCTV · Drones (UAV) · ICCC advanced surveillance system'}
-            </p>
-          </div>
-        </section>
-
-        {/* ═══════════════════════════════════════════════════════════
-            SECTION 4 — COMPLETE GUIDE ARTICLES
-        ═══════════════════════════════════════════════════════════ */}
-        <section id="guides" className="bg-white py-20 sm:py-28 border-b border-cream">
-          <div className="container-page max-w-6xl mx-auto">
-
-            <div className="text-center mb-16">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
-                {locale === 'hi' ? '— प्रामाणिक जानकारी —' : '— Authentic Information —'}
-              </p>
-              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon">
-                {locale === 'hi' ? 'सम्पूर्ण मार्गदर्शिका' : 'Complete Guides'}
-              </h2>
-              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
-            </div>
-
-            {list.length === 0 ? (
-              <div className="text-center py-16 max-w-xl mx-auto">
-                <p className="text-5xl mb-6">ॐ</p>
-                <p className="text-xl font-serif text-ink-soft mb-8">
-                  {locale === 'hi' ? 'गाइड जल्द उपलब्ध होंगी। अभी सहायता के लिए:' : 'Guides coming soon. For immediate help:'}
-                </p>
-                <a href={SITE.phoneTel} className="btn-primary shadow-lg text-lg px-8 py-4 inline-flex items-center gap-3">
-                  <PhoneCall className="w-5 h-5" /> {SITE.phone}
-                </a>
-              </div>
-            ) : (
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {list.map((a) => (
-                  <Link
-                    key={a.slug}
-                    to={`${prefix}${articlePath(a)}`}
-                    className="group flex flex-col rounded-2xl overflow-hidden border border-cream shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 bg-white"
-                  >
-                    {/* Image */}
-                    <div className="relative h-52 overflow-hidden bg-maroon-900">
-                      {a.heroImage ? (
-                        <img
-                          src={a.heroImage}
-                          alt={a.title[locale]}
-                          loading="lazy"
-                          width="400"
-                          height="210"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <span className="text-gold/30 font-serif text-7xl">ॐ</span>
-                        </div>
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-maroon-900/75 via-maroon-900/15 to-transparent" />
-                      {/* Badge */}
-                      <div className="absolute top-4 left-4">
-                        <span
-                          className="text-xs font-bold px-3 py-1 rounded-full tracking-wider uppercase shadow-md"
-                          style={{ background: 'rgba(201,168,76,0.90)', color: '#1a0404' }}
-                        >
-                          {locale === 'hi' ? 'सिंहस्थ गाइड' : 'Simhastha Guide'}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Body */}
-                    <div className="flex flex-col flex-1 p-6 sm:p-7">
-                      <h3 className="font-serif text-xl font-bold text-maroon group-hover:text-saffron-700 transition-colors line-clamp-2 mb-3 leading-snug">
-                        {a.title[locale]}
-                      </h3>
-                      <p className="text-ink-soft text-sm leading-relaxed line-clamp-3 flex-1">
-                        {a.shortIntro[locale]}
-                      </p>
-                      <div className="mt-6 flex items-center gap-2 text-saffron-700 group-hover:text-maroon font-bold text-sm uppercase tracking-wide transition-colors">
-                        {locale === 'hi' ? 'पूरा पढ़ें' : 'Read Full Guide'}
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
           </div>
         </section>
 

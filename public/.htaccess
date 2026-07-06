@@ -12,6 +12,8 @@ RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 # ── Removed content → closest live page (SEO 301) ──
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakal-lok-corridor/?$ /mandirs/mahakal-lok/ [L,R=301]
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /mandirs/mahakaleshwar/ [L,R=301]
+# Simhastha sub-pages consolidated into single landing (SEO focus on 'simhastha 2028')
+RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 
 # ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──
 # Old English URLs (/en/...) permanently redirect to the new root-level English pages
