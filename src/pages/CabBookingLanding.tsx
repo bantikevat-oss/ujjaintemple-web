@@ -5,7 +5,7 @@ import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema, faqSchema } from '../lib/schemas';
+import { breadcrumbSchema, faqSchema, taxiServiceSchema } from '../lib/schemas';
 import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { articlesByCategory, articlePath } from '../data/articles';
@@ -28,11 +28,11 @@ export function CabBookingLanding() {
   const articles = articlesByCategory('blog').slice(0, 3);
 
   const title = locale === 'hi'
-    ? 'उज्जैन में टैक्सी — महाकाल, ओंकारेश्वर, इंदौर, भोपाल कैब बुकिंग'
-    : 'Taxi in Ujjain — Cab Booking for Mahakal, Omkareshwar, Indore, Bhopal';
+    ? 'उज्जैन में बेस्ट टैक्सी सेवा — महाकाल दर्शन, ओंकारेश्वर व आउटस्टेशन कैब बुकिंग'
+    : 'Best Taxi Service in Ujjain — Mahakal Darshan, Omkareshwar & Outstation Cab Booking';
   const description = locale === 'hi'
-    ? 'उज्जैन में टैक्सी सेवा — महाकालेश्वर, ओंकारेश्वर, इंदौर एयरपोर्ट, भोपाल व लोकल दर्शन के लिए कैब बुकिंग। 24/7 उपलब्ध: +91 74007 24456।'
-    : 'Taxi in Ujjain — book cabs for Mahakaleshwar darshan, Omkareshwar, Indore airport, Bhopal & local sightseeing. 24/7 service: +91 74007 24456.';
+    ? 'उज्जैन में बेस्ट टैक्सी सेवा — महाकालेश्वर दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व लोकल दर्शन के लिए कैब बुकिंग। फ़िक्स्ड किराया, 24/7 उपलब्ध: +91 74007 24456।'
+    : 'Best taxi service in Ujjain — cab booking for Mahakaleshwar darshan, Omkareshwar, Indore airport & local sightseeing. Fixed fares, 24/7 service: +91 74007 24456.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -106,6 +106,7 @@ export function CabBookingLanding() {
             ]
           }),
           faqSchema(faqs.map((f) => ({ q: f.q, a: f.a }))),
+          taxiServiceSchema(),
         ]}
       />
       <Layout>

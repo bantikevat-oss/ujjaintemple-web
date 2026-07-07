@@ -318,6 +318,27 @@ export function pujaServiceSchema() {
   };
 }
 
+export function taxiServiceSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TaxiService',
+    name: 'Ujjain Taxi Service — UjjainTemple Cab Booking',
+    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Fixed fares, 24/7.',
+    url: `${SITE.url}/cab-booking/`,
+    provider: { '@id': `${SITE.url}/#organization` },
+    areaServed: [
+      { '@type': 'City', name: 'Ujjain' },
+      { '@type': 'City', name: 'Indore' },
+      { '@type': 'City', name: 'Omkareshwar' },
+    ],
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      servicePhone: { '@type': 'ContactPoint', telephone: SITE.phoneIntl, contactType: 'reservations', availableLanguage: ['Hindi', 'English'] },
+      serviceUrl: `${SITE.url}/cab-booking/`,
+    },
+  };
+}
+
 export function itemListSchema(items: Array<{ name: string; url: string; description: string; image?: string }>) {
   return {
     '@context': 'https://schema.org',

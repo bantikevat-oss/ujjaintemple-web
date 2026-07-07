@@ -461,6 +461,46 @@ export function MandirDetail({ slug }: DetailProps) {
           </section>
         )}
 
+        {/* ── PLAN YOUR DARSHAN (internal links → cab + tour money pages) ── */}
+        <section className="container-page pt-4 pb-7">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'यात्रा योजना' : 'Plan Your Darshan'}</p>
+          <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+            {locale === 'hi' ? `${mandir.name.hi} दर्शन के लिए टैक्सी व टूर पैकेज` : `Taxi & Tour Packages for ${mandir.name.en} Darshan`}
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              to={`${prefix}/cab-booking/`}
+              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+            >
+              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🚕</span>
+              <div className="flex-1">
+                <h3 className={`flex items-center gap-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-lg' : 'font-serif text-base'}`}>
+                  {locale === 'hi' ? 'उज्जैन टैक्सी सेवा' : 'Taxi Service in Ujjain'}
+                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  {locale === 'hi' ? 'लोकल दर्शन, ओंकारेश्वर व इंदौर एयरपोर्ट के लिए कैब बुकिंग — 24/7 उपलब्ध।' : 'Cab booking for local darshan, Omkareshwar and Indore airport — available 24/7.'}
+                </p>
+              </div>
+            </Link>
+            <Link
+              to={`${prefix}/tour-and-travel-ujjain/`}
+              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+            >
+              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🛕</span>
+              <div className="flex-1">
+                <h3 className={`flex items-center gap-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-lg' : 'font-serif text-base'}`}>
+                  {locale === 'hi' ? 'उज्जैन टूर पैकेज' : 'Ujjain Tour Packages'}
+                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </h3>
+                <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                  {locale === 'hi' ? 'उज्जैन दर्शन पैकेज — मंदिर दर्शन, ठहरने व यात्रा की पूरी व्यवस्था एक जगह।' : 'Ujjain darshan packages — temple visits, stay and travel arranged end-to-end.'}
+                </p>
+              </div>
+            </Link>
+          </div>
+        </section>
+
         {/* ── NEARBY TEMPLES ── */}
         {nearby.length > 0 && (
           <>

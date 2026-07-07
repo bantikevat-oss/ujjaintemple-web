@@ -2,16 +2,16 @@
   "slug": "bhopal-to-ujjain",
   "category": "transport",
   "primaryKeyword": {
-    "hi": "भोपाल से उज्जैन ट्रांसपोर्ट गाइड",
-    "en": "Bhopal to Ujjain Transport Guide"
+    "hi": "भोपाल से उज्जैन टैक्सी",
+    "en": "Bhopal to Ujjain Taxi"
   },
   "title": {
-    "hi": "भोपाल से उज्जैन कैसे पहुँचें — ट्रेन, बस, टैक्सी, दूरी और समय 2026",
-    "en": "Bhopal to Ujjain — Train, Bus, Cab, Distance & Travel Time Guide 2026"
+    "hi": "भोपाल से उज्जैन टैक्सी, ट्रेन व बस — दूरी, किराया और समय गाइड 2026",
+    "en": "Bhopal to Ujjain Taxi, Train & Bus — Distance, Fare & Travel Time 2026"
   },
   "metaDescription": {
-    "hi": "भोपाल से उज्जैन — 184 km की दूरी, ट्रेन 2.5 घंटे, बस 3.5 घंटे, कैब 3 घंटे। सबसे सस्ता और तेज़ रास्ता। किराया, समय, बुकिंग जानकारी यहाँ पाएँ।",
-    "en": "Bhopal to Ujjain — 184 km distance, train 2.5 hrs, bus 3.5 hrs, cab 3 hrs. Cheapest and fastest route. Fare, timing and booking guide for 2026."
+    "hi": "भोपाल से उज्जैन टैक्सी — 184 km, कैब 3 घंटे (फ़िक्स्ड किराया), ट्रेन 2.5 घंटे, बस 3.5 घंटे। टैक्सी बुकिंग व किराया जानकारी: +91 74007 24456।",
+    "en": "Bhopal to Ujjain taxi — 184 km, cab 3 hrs with fixed fare, train 2.5 hrs, bus 3.5 hrs. Taxi booking, fare and timing guide 2026: +91 74007 24456."
   },
   "shortIntro": {
     "hi": "भोपाल से उज्जैन की दूरी 184 किलोमीटर है। ट्रेन सबसे तेज़ और सुविधाजनक विकल्प है — मात्र 2.5 घंटे में महाकाल की नगरी पहुँचें।",
@@ -24,19 +24,40 @@
   "heroImage": "/images/puja-info/gallery_2.webp",
   "publishDate": "2026-06-06",
   "lastUpdated": "2026-06-06",
-  "relatedSlugs": ["indore-to-ujjain", "ujjain-local-sightseeing-cab"],
+  "relatedSlugs": [
+    "indore-to-ujjain",
+    "ujjain-local-sightseeing-cab"
+  ],
   "faqs": [
     {
-      "q": { "hi": "भोपाल से उज्जैन की दूरी कितनी है?", "en": "What is the distance from Bhopal to Ujjain?" },
-      "a": { "hi": "भोपाल से उज्जैन सड़क मार्ग से 184 km है।", "en": "Bhopal to Ujjain is 184 km by road." }
+      "q": {
+        "hi": "भोपाल से उज्जैन की दूरी कितनी है?",
+        "en": "What is the distance from Bhopal to Ujjain?"
+      },
+      "a": {
+        "hi": "भोपाल से उज्जैन सड़क मार्ग से 184 km है।",
+        "en": "Bhopal to Ujjain is 184 km by road."
+      }
     },
     {
-      "q": { "hi": "भोपाल से उज्जैन ट्रेन से कितने घंटे लगते हैं?", "en": "How many hours does it take from Bhopal to Ujjain by train?" },
-      "a": { "hi": "ट्रेन से लगभग 2.5 घंटे लगते हैं।", "en": "It takes approximately 2.5 hours by train." }
+      "q": {
+        "hi": "भोपाल से उज्जैन ट्रेन से कितने घंटे लगते हैं?",
+        "en": "How many hours does it take from Bhopal to Ujjain by train?"
+      },
+      "a": {
+        "hi": "ट्रेन से लगभग 2.5 घंटे लगते हैं।",
+        "en": "It takes approximately 2.5 hours by train."
+      }
     },
     {
-      "q": { "hi": "भोपाल से उज्जैन टैक्सी का किराया कितना है?", "en": "What is the taxi fare from Bhopal to Ujjain?" },
-      "a": { "hi": "प्राइवेट टैक्सी ₹1,500–₹2,500 में मिलती है। शेयर टैक्सी ₹400-₹600 प्रति सीट।", "en": "Private taxi costs ₹1,500–₹2,500. Share taxi is ₹400-₹600 per seat." }
+      "q": {
+        "hi": "भोपाल से उज्जैन टैक्सी का किराया कितना है?",
+        "en": "What is the taxi fare from Bhopal to Ujjain?"
+      },
+      "a": {
+        "hi": "प्राइवेट टैक्सी ₹1,500–₹2,500 में मिलती है। शेयर टैक्सी ₹400-₹600 प्रति सीट।",
+        "en": "Private taxi costs ₹1,500–₹2,500. Share taxi is ₹400-₹600 per seat."
+      }
     }
   ],
   "photos": [
