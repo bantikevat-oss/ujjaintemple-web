@@ -342,6 +342,66 @@ export const packagesData: TourPackageData[] = [
         }
       }
     ]
+  },
+  {
+    slug: 'ujjain-budget-tour-package',
+    title: {
+      hi: 'उज्जैन बजट टूर पैकेज — किफ़ायती दर्शन यात्रा',
+      en: 'Ujjain Budget Tour Package — Affordable Darshan Trip'
+    },
+    heroImage: '/images/tours/ujjain-travel-package.webp',
+    description: {
+      hi: 'उज्जैन बजट टूर पैकेज उन यात्रियों के लिए है जो कम खर्च में सम्पूर्ण दर्शन चाहते हैं। इसमें साझा या किफ़ायती कैब, मंदिर के निकट सादगीपूर्ण धर्मशाला/बजट होटल सुझाव, और उज्जैन के सभी प्रमुख मंदिरों के दर्शन शामिल हैं। कोई छिपा शुल्क नहीं — पारदर्शी किराया। परिवार व समूह हेतु उपयुक्त, किफ़ायती उज्जैन यात्रा। बुकिंग: +91 74007 24456।',
+      en: 'The Ujjain budget tour package is for travellers who want complete darshan at a low cost. It includes a shared or economy cab, simple dharamshala/budget-hotel suggestions near the temple, and darshan of all major Ujjain temples. No hidden charges — transparent fare. An affordable Ujjain trip suited for families and groups. Booking: +91 74007 24456.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'किफ़ायती 1-दिन दर्शन', en: 'Economy 1-Day Darshan' },
+        content: {
+          hi: 'सुबह जल्दी शुरुआत — कम भीड़, कम खर्च। साझा/बजट कैब से सभी मुख्य दर्शन।',
+          en: 'Early morning start — less crowd, less cost. All main darshan by shared/economy cab.'
+        },
+        list: [
+          { hi: 'श्री महाकालेश्वर दर्शन (सामान्य लाइन)', en: 'Shree Mahakaleshwar darshan (general queue)' },
+          { hi: 'काल भैरव, हरसिद्धि, मंगलनाथ', en: 'Kaal Bhairav, Harsiddhi, Mangalnath' },
+          { hi: 'राम घाट व संदीपनि आश्रम', en: 'Ram Ghat and Sandipani Ashram' }
+        ],
+        note: {
+          hi: 'बजट अनुमान: ₹1,500 – 2,500 प्रति व्यक्ति/दिन (धर्मशाला + साझा कैब + भोजन)। दरें मौसम अनुसार बदल सकती हैं।',
+          en: 'Budget estimate: ₹1,500 – 2,500 per person/day (dharamshala + shared cab + meals). Rates may vary by season.'
+        }
+      }
+    ]
+  },
+  {
+    slug: 'ujjain-premium-tour-package',
+    title: {
+      hi: 'उज्जैन प्रीमियम टूर पैकेज — लक्ज़री दर्शन अनुभव',
+      en: 'Ujjain Premium Tour Package — Luxury Darshan Experience'
+    },
+    heroImage: '/images/mandirs/mahakaleshwar.jpg',
+    description: {
+      hi: 'उज्जैन प्रीमियम टूर पैकेज एक आरामदायक, निजी व लक्ज़री दर्शन अनुभव प्रदान करता है। इसमें निजी AC SUV (इनोवा), मंदिर के निकट प्रीमियम होटल सुझाव, अनुभवी गाइड सहायता, व लचीला इटिनरेरी शामिल है। जोड़ों (couple), परिवार व VIP अतिथियों हेतु आदर्श — बिना भागदौड़ के शांत, गरिमामय यात्रा। बुकिंग: +91 74007 24456।',
+      en: 'The Ujjain premium tour package offers a comfortable, private and luxury darshan experience. It includes a private AC SUV (Innova), premium-hotel suggestions near the temple, experienced guide assistance and a flexible itinerary. Ideal for couples, families and VIP guests — a calm, dignified trip without any rush. Booking: +91 74007 24456.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'निजी लक्ज़री दर्शन', en: 'Private Luxury Darshan' },
+        content: {
+          hi: 'निजी SUV, लचीला समय, आरामदायक गति से सभी प्रमुख दर्शन व गाइड सहायता।',
+          en: 'Private SUV, flexible timing, all major darshan at a comfortable pace with guide assistance.'
+        },
+        list: [
+          { hi: 'श्री महाकालेश्वर व महाकाल लोक', en: 'Shree Mahakaleshwar & Mahakal Lok' },
+          { hi: 'काल भैरव, हरसिद्धि शक्तिपीठ, मंगलनाथ', en: 'Kaal Bhairav, Harsiddhi Shaktipeeth, Mangalnath' },
+          { hi: 'संदीपनि आश्रम, वेध शाला, राम घाट संध्या आरती', en: 'Sandipani Ashram, Vedh Shala, Ram Ghat evening aarti' }
+        ],
+        note: {
+          hi: 'प्रीमियम अनुमान: ₹6,000+ प्रति व्यक्ति/दिन (लक्ज़री होटल + निजी SUV + गाइड)। पूर्णतः अनुकूलन योग्य।',
+          en: 'Premium estimate: ₹6,000+ per person/day (luxury hotel + private SUV + guide). Fully customizable.'
+        }
+      }
+    ]
   }
 ];
 

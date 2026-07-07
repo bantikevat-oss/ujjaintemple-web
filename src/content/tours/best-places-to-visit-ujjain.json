@@ -3,15 +3,15 @@
   "category": "tour",
   "primaryKeyword": {
     "hi": "उज्जैन में घूमने की जगह",
-    "en": "Best Places to Visit in Ujjain"
+    "en": "Places to Visit in Ujjain"
   },
   "title": {
     "hi": "उज्जैन में घूमने की 15 सबसे अच्छी जगहें — मंदिर, घाट, दर्शनीय स्थल 2026",
     "en": "15 Best Places to Visit in Ujjain — Temples, Ghats & Attractions 2026"
   },
   "metaDescription": {
-    "hi": "उज्जैन में घूमने की 15 बेहतरीन जगहें — महाकालेश्वर, काल भैरव, महाकाल लोक, रामघाट, वेधशाला, सांदीपनि आश्रम। दर्शन समय, एंट्री फीस और यात्रा टिप्स।",
-    "en": "15 best places to visit in Ujjain — Mahakaleshwar, Kal Bhairav, Mahakal Lok, Ramghat, Jantar Mantar, Sandipani Ashram. Timings, entry fee and travel tips."
+    "hi": "उज्जैन में घूमने की 15 बेस्ट जगहें — प्रसिद्ध मंदिर, घाट व पर्यटन स्थल। उज्जैन टूरिस्ट प्लेसेस, मस्ट-विज़िट स्थल व साइटसीइंग गाइड 2026। यात्रा सहायता: +91 74007 24456।",
+    "en": "15 best places to visit in Ujjain — famous temples, ghats and tourist attractions. Ujjain tourist places, must-visit spots and sightseeing guide 2026. Travel help: +91 74007 24456."
   },
   "shortIntro": {
     "hi": "उज्जैन — सात मोक्षदायिनी पुरियों में एक — में देखने के लिए एक से बढ़कर एक स्थान हैं। यह गाइड उन सभी 15 प्रमुख स्थानों की जानकारी देता है जो हर यात्री को अवश्य देखने चाहिए।",
@@ -23,20 +23,41 @@
   },
   "heroImage": "/images/puja-info/gallery_3.webp",
   "publishDate": "2026-06-06",
-  "lastUpdated": "2026-06-06",
-  "relatedSlugs": ["2-days-with-family", "indore-to-ujjain"],
+  "lastUpdated": "2026-07-07",
+  "relatedSlugs": [
+    "2-days-with-family",
+    "indore-to-ujjain"
+  ],
   "faqs": [
     {
-      "q": { "hi": "उज्जैन में सबसे ज़रूरी क्या देखें?", "en": "What are the must-see places in Ujjain?" },
-      "a": { "hi": "महाकालेश्वर मंदिर, महाकाल लोक कॉरिडोर, काल भैरव मंदिर और रामघाट आरती — ये चार स्थान अवश्य देखें।", "en": "Mahakaleshwar temple, Mahakal Lok Corridor, Kal Bhairav temple and Ramghat evening aarti — these four are absolute must-sees." }
+      "q": {
+        "hi": "उज्जैन में सबसे ज़रूरी क्या देखें?",
+        "en": "What are the must-see places in Ujjain?"
+      },
+      "a": {
+        "hi": "महाकालेश्वर मंदिर, महाकाल लोक कॉरिडोर, काल भैरव मंदिर और रामघाट आरती — ये चार स्थान अवश्य देखें।",
+        "en": "Mahakaleshwar temple, Mahakal Lok Corridor, Kal Bhairav temple and Ramghat evening aarti — these four are absolute must-sees."
+      }
     },
     {
-      "q": { "hi": "उज्जैन में कितने दिन रहना चाहिए?", "en": "How many days should I stay in Ujjain?" },
-      "a": { "hi": "2 दिन और 2 रातें आदर्श हैं। इसमें भस्म आरती, सभी प्रमुख मंदिर और रामघाट आरती सब कवर हो जाते हैं।", "en": "2 days and 2 nights is ideal. This covers Bhasma Aarti, all major temples and Ramghat evening aarti." }
+      "q": {
+        "hi": "उज्जैन में कितने दिन रहना चाहिए?",
+        "en": "How many days should I stay in Ujjain?"
+      },
+      "a": {
+        "hi": "2 दिन और 2 रातें आदर्श हैं। इसमें भस्म आरती, सभी प्रमुख मंदिर और रामघाट आरती सब कवर हो जाते हैं।",
+        "en": "2 days and 2 nights is ideal. This covers Bhasma Aarti, all major temples and Ramghat evening aarti."
+      }
     },
     {
-      "q": { "hi": "उज्जैन में प्रवेश शुल्क कितना है?", "en": "What is the entry fee for Ujjain attractions?" },
-      "a": { "hi": "अधिकांश मंदिरों में प्रवेश निःशुल्क है। वेधशाला में ₹15 शुल्क है। भस्म आरती पास ₹600 है।", "en": "Most temples are free. Jantar Mantar charges ₹15. Bhasma Aarti pass costs ₹600." }
+      "q": {
+        "hi": "उज्जैन में प्रवेश शुल्क कितना है?",
+        "en": "What is the entry fee for Ujjain attractions?"
+      },
+      "a": {
+        "hi": "अधिकांश मंदिरों में प्रवेश निःशुल्क है। वेधशाला में ₹15 शुल्क है। भस्म आरती पास ₹600 है।",
+        "en": "Most temples are free. Jantar Mantar charges ₹15. Bhasma Aarti pass costs ₹600."
+      }
     }
   ],
   "photos": [

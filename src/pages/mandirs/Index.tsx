@@ -15,11 +15,11 @@ export function MandirIndex() {
   const prefix = locale === 'en' ? '' : '/hi';
 
   const title = locale === 'hi'
-    ? `उज्जैन दर्शन सूची — ${mandirs.length} प्रमुख मंदिर, सत्यापित दर्शन समय, इतिहास व फ़ोटो`
-    : `Ujjain Darshan List — ${mandirs.length} Major Temples, Verified Timings, History & Photos`;
+    ? `उज्जैन के प्रसिद्ध मंदिर — ${mandirs.length} दर्शनीय मंदिर, दर्शन समय, इतिहास व फ़ोटो`
+    : `Temples to Visit in Ujjain — ${mandirs.length} Famous Temples, Timings, History & Photos`;
   const description = locale === 'hi'
-    ? `उज्जैन के प्रमुख दर्शनीय मंदिरों की क्यूरेटेड सूची — महाकालेश्वर, महाकाल लोक, काल भैरव, मंगलनाथ, चिंतामण गणेश, हरसिद्धि माता व अन्य। सत्यापित दर्शन समय, इतिहास, फ़ोटो। यात्रा सहायता: ${SITE.phone}`
-    : `Curated list of Ujjain's major darshan temples — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Mangalnath, Chintaman Ganesh, Harsiddhi Mata & more. Verified darshan timings, history, photos. Plan: ${SITE.phone}`;
+    ? `उज्जैन के प्रसिद्ध व दर्शनीय मंदिरों की सूची — महाकालेश्वर, महाकाल लोक, काल भैरव, मंगलनाथ, चिंतामण गणेश, हरसिद्धि माता व अन्य टॉप मंदिर। सत्यापित दर्शन समय, इतिहास, फ़ोटो। यात्रा सहायता: ${SITE.phone}`
+    : `Famous temples to visit in Ujjain — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Mangalnath, Chintaman Ganesh, Harsiddhi Mata & other top temples in Ujjain. Verified darshan timings, history, photos. Plan: ${SITE.phone}`;
 
   return (
     <>

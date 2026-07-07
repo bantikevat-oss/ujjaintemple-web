@@ -15,6 +15,7 @@ export function TourLanding() {
   const { locale } = useI18n();
   const prefix = locale === 'en' ? '' : '/hi';
   const articles = articlesByCategory('blog').slice(0, 3); // For News Feed
+  const guides = articlesByCategory('tour').slice(0, 6); // Travel guides & resources
 
   const title = locale === 'hi' ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज, टूर एंड ट्रैवल ऑपरेटर' : 'Ujjain Tour Packages — Darshan Packages, Tour and Travel in Ujjain';
   const description = locale === 'hi'
@@ -235,6 +236,39 @@ export function TourLanding() {
             </div>
           </div>
         </section>
+
+        {/* ── TRAVEL GUIDES & RESOURCES (internal links → tourist funnel) ── */}
+        {guides.length > 0 && (
+          <section className="bg-cream-dark/20 py-16 border-y border-cream">
+            <div className="container-page">
+              <div className="text-center mb-10">
+                <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon inline-block relative pb-4">
+                  {locale === 'hi' ? 'उज्जैन ट्रैवल गाइड व संसाधन' : 'Ujjain Travel Guides & Resources'}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1.5 bg-saffron rounded-full" />
+                </h2>
+                <p className="mt-4 max-w-2xl mx-auto text-ink-soft">
+                  {locale === 'hi'
+                    ? 'यात्रा प्लान करें — घूमने की जगहें, इटिनरेरी व परिवार/जोड़े/समूह के लिए सुझाव।'
+                    : 'Plan your trip — places to visit, itineraries and tips for family, couple and group travellers.'}
+                </p>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {guides.map((g) => (
+                  <Link
+                    key={g.slug}
+                    to={`${prefix}${articlePath(g)}`}
+                    className="group flex flex-col rounded-2xl border border-cream bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl hover:border-saffron/50"
+                  >
+                    <h3 className="font-serif text-lg font-bold text-maroon mb-2 line-clamp-2 group-hover:text-saffron-700">
+                      {g.title[locale]}
+                    </h3>
+                    <p className="text-sm text-ink-soft line-clamp-2">{g.shortIntro?.[locale] || g.metaDescription?.[locale]}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ── FESTIVALS IN UJJAIN ── */}
         <section className="bg-maroon text-white py-20 relative overflow-hidden">
