@@ -253,6 +253,95 @@ export const packagesData: TourPackageData[] = [
         note: { hi: 'दोपहर बाद नलखेड़ा से उज्जैन/इंदौर के लिए वापसी प्रस्थान।', en: 'Afternoon return departure from Nalkheda to Ujjain/Indore.' }
       }
     ]
+  },
+  {
+    slug: 'ujjain-sightseeing-package',
+    title: {
+      hi: 'उज्जैन साइटसीइंग पैकेज — पूरे शहर का भ्रमण',
+      en: 'Ujjain Sightseeing Package — Full City Tour'
+    },
+    heroImage: '/images/tours/ujjain-travel-package.webp',
+    description: {
+      hi: 'उज्जैन साइटसीइंग पैकेज में शहर के प्रमुख मंदिर, ऐतिहासिक व दर्शनीय स्थल एक ही दिन में आरामदायक AC कैब द्वारा कवर होते हैं। श्री महाकालेश्वर ज्योतिर्लिंग, काल भैरव, हरसिद्धि शक्तिपीठ, मंगलनाथ, संदीपनि आश्रम, राम घाट व वेध शाला (जंतर मंतर) — उज्जैन के सभी मुख्य आकर्षण अनुभवी चालक के साथ। फ़िक्स्ड पारदर्शी किराया, GST बिल, पिक-अप व ड्रॉप सहित। परिवार, दोस्तों या ग्रुप — सभी के लिए उपयुक्त उज्जैन साइटसीइंग टूर।',
+      en: 'The Ujjain sightseeing package covers all major temples, historical and tourist spots of the city in a single day by comfortable AC cab. Shree Mahakaleshwar Jyotirlinga, Kaal Bhairav, Harsiddhi Shaktipeeth, Mangalnath, Sandipani Ashram, Ram Ghat and Vedh Shala (Jantar Mantar) — every key Ujjain attraction with an experienced driver. Fixed transparent fare, GST bill, pick-up and drop included. A perfect Ujjain sightseeing tour for families, friends or groups.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'सुबह: महाकाल दर्शन से शुरुआत', en: 'Morning: Start with Mahakal Darshan' },
+        content: {
+          hi: 'निर्धारित समय पर आपके होटल/स्टेशन से पिक-अप। सबसे पहले श्री महाकालेश्वर ज्योतिर्लिंग के दर्शन, फिर पास के प्रमुख स्थल।',
+          en: 'Pick-up from your hotel/station at the scheduled time. Begin with darshan at Shree Mahakaleshwar Jyotirlinga, then the major nearby spots.'
+        },
+        list: [
+          { hi: 'श्री महाकालेश्वर ज्योतिर्लिंग — 12 ज्योतिर्लिंगों में से एक', en: 'Shree Mahakaleshwar Jyotirlinga — one of the 12 Jyotirlingas' },
+          { hi: 'महाकाल लोक कॉरिडोर — भव्य शिव गाथा', en: 'Mahakal Lok Corridor — grand Shiva narrative walk' },
+          { hi: 'हरसिद्धि शक्तिपीठ — 51 शक्तिपीठों में से एक', en: 'Harsiddhi Shaktipeeth — one of the 51 Shaktipeeths' },
+          { hi: 'काल भैरव मंदिर — उज्जैन के रक्षक देव', en: 'Kaal Bhairav Temple — guardian deity of Ujjain' }
+        ]
+      },
+      {
+        dayTitle: { hi: 'दोपहर: घाट, आश्रम व ऐतिहासिक स्थल', en: 'Afternoon: Ghats, Ashram & Historic Sites' },
+        content: {
+          hi: 'दोपहर में शिप्रा तट, ज्ञान-स्थली व खगोल विरासत का भ्रमण।',
+          en: 'In the afternoon, explore the Shipra riverfront, seat of learning and astronomical heritage.'
+        },
+        list: [
+          { hi: 'राम घाट — पवित्र शिप्रा नदी के तट पर', en: 'Ram Ghat — on the banks of the holy Shipra' },
+          { hi: 'मंगलनाथ मंदिर — मंगल ग्रह की जन्मभूमि', en: 'Mangalnath Temple — birthplace of Mars (Mangal)' },
+          { hi: 'संदीपनि आश्रम — भगवान कृष्ण की शिक्षा स्थली', en: 'Sandipani Ashram — where Lord Krishna studied' },
+          { hi: 'वेध शाला (जंतर मंतर) — प्राचीन खगोलीय वेधशाला', en: 'Vedh Shala (Jantar Mantar) — ancient astronomical observatory' },
+          { hi: 'चिंतामण गणेश व इस्कॉन मंदिर (समयानुसार)', en: 'Chintaman Ganesh & ISKCON Temple (as time permits)' }
+        ],
+        note: {
+          hi: 'साइटसीइंग क्रम व स्थल संख्या समय व भीड़ अनुसार समायोजित की जा सकती है। बुकिंग: +91 74007 24456।',
+          en: 'Sightseeing order and number of spots may be adjusted as per time and crowd. Booking: +91 74007 24456.'
+        }
+      }
+    ]
+  },
+  {
+    slug: 'ujjain-3-day-package',
+    title: {
+      hi: 'उज्जैन 3 दिवसीय टूर पैकेज — विस्तृत दर्शन यात्रा',
+      en: 'Ujjain 3 Day Tour Package — Extended Darshan Trip'
+    },
+    heroImage: '/images/mandirs/char-dham-ujjain.jpg',
+    description: {
+      hi: 'उज्जैन 3 दिवसीय टूर पैकेज उन यात्रियों के लिए है जो शहर के मंदिरों के साथ-साथ आसपास के तीर्थ भी शांति से देखना चाहते हैं। दिन 1 — उज्जैन के प्रमुख मंदिर व महाकाल भस्म आरती (एडवांस बुकिंग अनुसार); दिन 2 — ओंकारेश्वर ज्योतिर्लिंग की यात्रा; दिन 3 — शेष स्थानीय दर्शन, बाजार व विश्राम। आरामदायक AC कैब, अनुभवी चालक, होटल व्यवस्था सहायता — सब एक ही जगह। बुकिंग: +91 74007 24456।',
+      en: 'The Ujjain 3 day tour package is for travellers who want to cover the city temples plus nearby tirthas at a relaxed pace. Day 1 — major Ujjain temples and Mahakal Bhasma Aarti (as per advance booking); Day 2 — trip to Omkareshwar Jyotirlinga; Day 3 — remaining local darshan, markets and rest. Comfortable AC cab, experienced driver, hotel arrangement assistance — all in one place. Booking: +91 74007 24456.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'दिन 1: उज्जैन दर्शन', en: 'Day 1: Ujjain Darshan' },
+        content: {
+          hi: 'आगमन व होटल चेक-इन के बाद उज्जैन के प्रमुख मंदिरों के दर्शन।',
+          en: 'After arrival and hotel check-in, darshan of the major temples of Ujjain.'
+        },
+        list: [
+          { hi: 'श्री महाकालेश्वर ज्योतिर्लिंग व महाकाल लोक', en: 'Shree Mahakaleshwar Jyotirlinga & Mahakal Lok' },
+          { hi: 'काल भैरव, हरसिद्धि शक्तिपीठ, मंगलनाथ', en: 'Kaal Bhairav, Harsiddhi Shaktipeeth, Mangalnath' },
+          { hi: 'राम घाट संध्या आरती', en: 'Ram Ghat evening aarti' }
+        ],
+        note: {
+          hi: 'नोट: महाकालेश्वर भस्म आरती की बुकिंग केवल मंदिर की आधिकारिक वेबसाइट पर एडवांस में होती है।',
+          en: "Note: Mahakaleshwar Bhasma Aarti booking is done only in advance on the temple's official website."
+        }
+      },
+      {
+        dayTitle: { hi: 'दिन 2: ओंकारेश्वर ज्योतिर्लिंग', en: 'Day 2: Omkareshwar Jyotirlinga' },
+        content: {
+          hi: 'प्रातः कैब द्वारा ओंकारेश्वर प्रस्थान — नर्मदा तट पर स्थित ॐ आकार का पवित्र द्वीप। दर्शन के बाद उज्जैन वापसी।',
+          en: 'Morning departure by cab to Omkareshwar — the sacred Om-shaped island on the Narmada. Return to Ujjain after darshan.'
+        }
+      },
+      {
+        dayTitle: { hi: 'दिन 3: स्थानीय दर्शन व विदाई', en: 'Day 3: Local Darshan & Departure' },
+        content: {
+          hi: 'शेष स्थानीय स्थल — संदीपनि आश्रम, चिंतामण गणेश, इस्कॉन, स्थानीय बाजार। समयानुसार स्टेशन/एयरपोर्ट ड्रॉप।',
+          en: 'Remaining local spots — Sandipani Ashram, Chintaman Ganesh, ISKCON, local markets. Station/airport drop as per schedule.'
+        }
+      }
+    ]
   }
 ];
 

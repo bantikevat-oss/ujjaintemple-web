@@ -2,8 +2,8 @@
   "slug": "indore-to-ujjain",
   "category": "transport",
   "title": {
-    "hi": "इंदौर से उज्जैन — दूरी, समय, कैब, बस, ट्रेन (पूरी गाइड 2026)",
-    "en": "Indore to Ujjain — Distance, Time, Cab, Bus, Train (Complete 2026 Guide)"
+    "hi": "इंदौर से उज्जैन टैक्सी — किराया, दूरी, समय, कैब, बस, ट्रेन गाइड 2026",
+    "en": "Indore to Ujjain Taxi — Fare, Distance, Time, Cab, Bus & Train Guide 2026"
   },
   "metaDescription": {
     "hi": "इंदौर से उज्जैन कैसे पहुँचें — सबसे तेज़ मार्ग, कैब किराया, बस समय, रेल समय-सारणी। 55 किमी, 75-90 मिनट। बुकिंग सहायता: +91 74007 24456",
@@ -20,23 +20,45 @@
   "heroImage": "/images/transport/indore-ujjain-hero.png",
   "publishDate": "2026-05-27",
   "lastUpdated": "2026-05-27",
-  "relatedSlugs": ["bhopal-to-ujjain", "ujjain-bus-stand", "ujjain-airport"],
+  "relatedSlugs": [
+    "bhopal-to-ujjain",
+    "ujjain-bus-stand",
+    "ujjain-airport"
+  ],
   "faqs": [
     {
-      "q": { "hi": "इंदौर से उज्जैन कितनी दूरी है?", "en": "What is the distance from Indore to Ujjain?" },
-      "a": { "hi": "सड़क मार्ग से 55 किमी (राष्ट्रीय राजमार्ग-552), रेल मार्ग से 80 किमी। औसत यात्रा समय 75 से 90 मिनट।", "en": "55 km by road (NH-552 highway), 80 km by rail. Average travel time 75-90 minutes." }
+      "q": {
+        "hi": "इंदौर से उज्जैन कितनी दूरी है?",
+        "en": "What is the distance from Indore to Ujjain?"
+      },
+      "a": {
+        "hi": "सड़क मार्ग से 55 किमी (राष्ट्रीय राजमार्ग-552), रेल मार्ग से 80 किमी। औसत यात्रा समय 75 से 90 मिनट।",
+        "en": "55 km by road (NH-552 highway), 80 km by rail. Average travel time 75-90 minutes."
+      }
     },
     {
-      "q": { "hi": "रात में इंदौर से उज्जैन यात्रा सुरक्षित है?", "en": "Is it safe to travel from Indore to Ujjain at night?" },
-      "a": { "hi": "राष्ट्रीय राजमार्ग-552 चार-लेन का प्रकाशयुक्त राजमार्ग है — सामान्यतः सुरक्षित। फिर भी प्रामाणिक कैब सेवा से बुकिंग कराएँ, चालक का नाम तथा क्रमांक परिजनों से साझा करें।", "en": "NH-552 is a 4-lane well-lit highway — generally safe. Still, book via branded cab service, share driver name/number with family." }
+      "q": {
+        "hi": "रात में इंदौर से उज्जैन यात्रा सुरक्षित है?",
+        "en": "Is it safe to travel from Indore to Ujjain at night?"
+      },
+      "a": {
+        "hi": "राष्ट्रीय राजमार्ग-552 चार-लेन का प्रकाशयुक्त राजमार्ग है — सामान्यतः सुरक्षित। फिर भी प्रामाणिक कैब सेवा से बुकिंग कराएँ, चालक का नाम तथा क्रमांक परिजनों से साझा करें।",
+        "en": "NH-552 is a 4-lane well-lit highway — generally safe. Still, book via branded cab service, share driver name/number with family."
+      }
     },
     {
-      "q": { "hi": "क्या सीधी ट्रेन उपलब्ध है?", "en": "Are there direct trains?" },
-      "a": { "hi": "हाँ — प्रतिदिन 15 से अधिक रेलगाड़ियाँ इंदौर-उज्जैन के बीच। पैसेंजर तथा एक्सप्रेस दोनों। चरम काल में अग्रिम आरक्षण आवश्यक।", "en": "Yes — 15+ trains daily between Indore-Ujjain, both passenger and express. Advance reservation needed in peak season." }
+      "q": {
+        "hi": "क्या सीधी ट्रेन उपलब्ध है?",
+        "en": "Are there direct trains?"
+      },
+      "a": {
+        "hi": "हाँ — प्रतिदिन 15 से अधिक रेलगाड़ियाँ इंदौर-उज्जैन के बीच। पैसेंजर तथा एक्सप्रेस दोनों। चरम काल में अग्रिम आरक्षण आवश्यक।",
+        "en": "Yes — 15+ trains daily between Indore-Ujjain, both passenger and express. Advance reservation needed in peak season."
+      }
     }
   ],
   "primaryKeyword": {
-    "hi": "इंदौर से उज्जैन",
-    "en": "Indore to Ujjain"
+    "hi": "इंदौर से उज्जैन टैक्सी",
+    "en": "Indore to Ujjain Taxi"
   }
 }

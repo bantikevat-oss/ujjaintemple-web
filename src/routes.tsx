@@ -107,6 +107,14 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
       path: `${basePath}tour-and-travel-ujjain/ujjain-baglamukhi-2-days/`,
       element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-baglamukhi-2-days' }),
     },
+    {
+      path: `${basePath}tour-and-travel-ujjain/ujjain-sightseeing-package/`,
+      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-sightseeing-package' }),
+    },
+    {
+      path: `${basePath}tour-and-travel-ujjain/ujjain-3-day-package/`,
+      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-3-day-package' }),
+    },
     ...articlesByCategory('tour').map((a) => ({
       path: `${basePath}tour-and-travel-ujjain/${a.slug}/`,
       element: withLocaleProps(locale, ArticleDetail, { category: 'tour' as const, slug: a.slug }),

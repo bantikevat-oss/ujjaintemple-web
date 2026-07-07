@@ -2,12 +2,12 @@
   "slug": "ujjain-to-omkareshwar-cab",
   "category": "transport",
   "primaryKeyword": {
-    "hi": "उज्जैन से ओंकारेश्वर कैब",
-    "en": "Ujjain to Omkareshwar Cab"
+    "hi": "उज्जैन से ओंकारेश्वर टैक्सी",
+    "en": "Ujjain to Omkareshwar Taxi"
   },
   "title": {
-    "hi": "उज्जैन से ओंकारेश्वर — कैब किराया, दूरी, समय व बुकिंग (पूरी गाइड 2026)",
-    "en": "Ujjain to Omkareshwar — Cab Fare, Distance, Time & Booking (Complete 2026 Guide)"
+    "hi": "उज्जैन से ओंकारेश्वर टैक्सी व कैब — किराया, दूरी, समय व बुकिंग गाइड 2026",
+    "en": "Ujjain to Omkareshwar Taxi & Cab — Fare, Distance, Time & Booking Guide 2026"
   },
   "metaDescription": {
     "hi": "उज्जैन से ओंकारेश्वर कैसे पहुँचें — कैब किराया, दूरी 140 किमी, समय 3 घंटे, वन-वे व राउंड ट्रिप टैक्सी। दो ज्योतिर्लिंग एक यात्रा में। बुकिंग: +91 74007 24456",
@@ -24,23 +24,51 @@
   "heroImage": "/images/mandirs/omkareshwar.png",
   "publishDate": "2026-07-03",
   "lastUpdated": "2026-07-03",
-  "relatedSlugs": ["indore-to-ujjain", "ujjain-local-sightseeing-cab", "bhopal-to-ujjain"],
+  "relatedSlugs": [
+    "indore-to-ujjain",
+    "ujjain-local-sightseeing-cab",
+    "bhopal-to-ujjain"
+  ],
   "faqs": [
     {
-      "q": { "hi": "उज्जैन से ओंकारेश्वर की दूरी कितनी है?", "en": "What is the distance from Ujjain to Omkareshwar?" },
-      "a": { "hi": "सड़क मार्ग से लगभग 140 किमी (इंदौर होकर)। कैब द्वारा यात्रा समय 3 से 3.5 घंटे।", "en": "About 140 km by road via Indore. Travel time by cab is 3 to 3.5 hours." }
+      "q": {
+        "hi": "उज्जैन से ओंकारेश्वर की दूरी कितनी है?",
+        "en": "What is the distance from Ujjain to Omkareshwar?"
+      },
+      "a": {
+        "hi": "सड़क मार्ग से लगभग 140 किमी (इंदौर होकर)। कैब द्वारा यात्रा समय 3 से 3.5 घंटे।",
+        "en": "About 140 km by road via Indore. Travel time by cab is 3 to 3.5 hours."
+      }
     },
     {
-      "q": { "hi": "उज्जैन से ओंकारेश्वर कैब का किराया कितना है?", "en": "How much is the Ujjain to Omkareshwar cab fare?" },
-      "a": { "hi": "सेडान राउंड ट्रिप ₹3,500 – 4,500, एसयूवी ₹5,000 – 6,500। वन-वे सेडान ₹2,500 – 3,000। चरम काल में किराया अधिक रहता है।", "en": "Sedan round trip ₹3,500 – 4,500, SUV ₹5,000 – 6,500. One-way sedan ₹2,500 – 3,000. Fares rise in peak season." }
+      "q": {
+        "hi": "उज्जैन से ओंकारेश्वर कैब का किराया कितना है?",
+        "en": "How much is the Ujjain to Omkareshwar cab fare?"
+      },
+      "a": {
+        "hi": "सेडान राउंड ट्रिप ₹3,500 – 4,500, एसयूवी ₹5,000 – 6,500। वन-वे सेडान ₹2,500 – 3,000। चरम काल में किराया अधिक रहता है।",
+        "en": "Sedan round trip ₹3,500 – 4,500, SUV ₹5,000 – 6,500. One-way sedan ₹2,500 – 3,000. Fares rise in peak season."
+      }
     },
     {
-      "q": { "hi": "क्या उज्जैन से ओंकारेश्वर के लिए सीधी ट्रेन है?", "en": "Is there a direct train from Ujjain to Omkareshwar?" },
-      "a": { "hi": "कोई सुविधाजनक सीधी ट्रेन नहीं है। निकटतम रेलवे स्टेशन ओंकारेश्वर रोड (मोरटक्का) है, वहाँ से भी सड़क मार्ग लेना पड़ता है। इसलिए कैब सबसे सुगम विकल्प है।", "en": "There is no convenient direct train. The nearest station is Omkareshwar Road (Mortakka), from where you still need road transport. A cab is the easiest option." }
+      "q": {
+        "hi": "क्या उज्जैन से ओंकारेश्वर के लिए सीधी ट्रेन है?",
+        "en": "Is there a direct train from Ujjain to Omkareshwar?"
+      },
+      "a": {
+        "hi": "कोई सुविधाजनक सीधी ट्रेन नहीं है। निकटतम रेलवे स्टेशन ओंकारेश्वर रोड (मोरटक्का) है, वहाँ से भी सड़क मार्ग लेना पड़ता है। इसलिए कैब सबसे सुगम विकल्प है।",
+        "en": "There is no convenient direct train. The nearest station is Omkareshwar Road (Mortakka), from where you still need road transport. A cab is the easiest option."
+      }
     },
     {
-      "q": { "hi": "क्या एक दिन में महाकालेश्वर और ओंकारेश्वर दोनों दर्शन हो सकते हैं?", "en": "Can both Mahakaleshwar and Omkareshwar be covered in one day?" },
-      "a": { "hi": "हाँ, प्रातः जल्दी प्रस्थान करने पर एक ही दिन में दोनों ज्योतिर्लिंग दर्शन संभव हैं। आराम से दर्शन हेतु 2 दिवसीय पैकेज बेहतर रहता है।", "en": "Yes, with an early start both Jyotirlingas can be covered in a single day. For a relaxed darshan, a 2-day package is better." }
+      "q": {
+        "hi": "क्या एक दिन में महाकालेश्वर और ओंकारेश्वर दोनों दर्शन हो सकते हैं?",
+        "en": "Can both Mahakaleshwar and Omkareshwar be covered in one day?"
+      },
+      "a": {
+        "hi": "हाँ, प्रातः जल्दी प्रस्थान करने पर एक ही दिन में दोनों ज्योतिर्लिंग दर्शन संभव हैं। आराम से दर्शन हेतु 2 दिवसीय पैकेज बेहतर रहता है।",
+        "en": "Yes, with an early start both Jyotirlingas can be covered in a single day. For a relaxed darshan, a 2-day package is better."
+      }
     }
   ]
 }

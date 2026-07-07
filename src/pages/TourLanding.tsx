@@ -177,7 +177,7 @@ export function TourLanding() {
             </div>
             
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {packagesData.filter(p => !['ujjain-baglamukhi-2-days', 'panch-jyotirlinga-5-days'].includes(p.slug)).slice(0, 3).map((pkg) => (
+              {packagesData.map((pkg) => (
                 <div key={pkg.slug} className="bg-white rounded-2xl overflow-hidden shadow-xl border border-cream hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
                   <div className="relative h-56 overflow-hidden">
                     <img src={pkg.heroImage} alt={pkg.title[locale]} className="w-full h-full object-cover" />
