@@ -40,7 +40,7 @@ export function CabBookingLanding() {
   // Gallery of popular Ujjain darshan destinations our cabs cover (files verified in public/images/mandirs/)
   const gallery = [
     { src: '/images/mandirs/mahakaleshwar.jpg', hi: 'महाकालेश्वर मंदिर, उज्जैन', en: 'Mahakaleshwar Temple, Ujjain' },
-    { src: '/images/mandirs/omkareshwar.png', hi: 'ओंकारेश्वर ज्योतिर्लिंग', en: 'Omkareshwar Jyotirlinga' },
+    { src: '/images/mandirs/omkareshwar.jpg', hi: 'ओंकारेश्वर ज्योतिर्लिंग', en: 'Omkareshwar Jyotirlinga' },
     { src: '/images/mandirs/harsiddhi-mata.jpg', hi: 'हरसिद्धि माता मंदिर', en: 'Harsiddhi Mata Temple' },
     { src: '/images/mandirs/mangalnath.jpg', hi: 'मंगलनाथ मंदिर', en: 'Mangalnath Temple' },
     { src: '/images/mandirs/ujjain-ghat-scene.jpg', hi: 'राम घाट, शिप्रा नदी', en: 'Ram Ghat, Shipra River' },
@@ -52,11 +52,11 @@ export function CabBookingLanding() {
       q: locale === 'hi' ? 'उज्जैन में सबसे अच्छी टैक्सी सेवा कौन सी है?' : 'Which is the best taxi service in Ujjain?',
       // Plain string retained for the FAQ schema (SEO); aNode is what renders on-page
       a: locale === 'hi'
-        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है। बुकिंग: +91 74007 24456।'
-        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: +91 74007 24456.',
+        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।'
+        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.',
       aNode: locale === 'hi'
-        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है। बुकिंग: <PhoneInline />।</>)
-        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips. Booking: <PhoneInline />.</>)
+        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।</>)
+        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.</>)
     },
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
@@ -168,7 +168,7 @@ export function CabBookingLanding() {
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream">
-              <img src="/images/services/ujjain_taxi_4k.webp" alt={locale === 'hi' ? 'उज्जैन टैक्सी सेवा' : 'Ujjain Taxi Service'} loading="lazy" width={1280} height={853} className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
+              <img src="/images/mandirs/ujjain-ghat-scene.jpg" alt={locale === 'hi' ? 'राम घाट, शिप्रा नदी — उज्जैन' : 'Ram Ghat, Shipra River — Ujjain'} loading="lazy" width={1280} height={853} className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
           </div>

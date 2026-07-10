@@ -93,7 +93,7 @@ export function HomeGraphicHero() {
       tagline: 'आस्था और अध्यात्म की पावन भूमि',
       ctaA:    'मंदिर दर्शन करें',
       ctaB:    'अभी कॉल करें',
-      caption: 'महाकालेश्वर मंदिर, उज्जैन',
+      caption: 'महाकाल लोक कॉरिडोर, उज्जैन',
       temples: [
         { name: 'महाकालेश्वर', type: 'ज्योतिर्लिंग' },
         { name: 'काल भैरव',    type: 'भगवान' },
@@ -115,7 +115,7 @@ export function HomeGraphicHero() {
       tagline: 'Sacred land of faith and spirituality',
       ctaA:    'Visit Temples',
       ctaB:    'Call Now',
-      caption: 'Mahakaleshwar Temple, Ujjain',
+      caption: 'Mahakal Lok Corridor, Ujjain',
       temples: [
         { name: 'Mahakaleshwar', type: 'Jyotirlinga' },
         { name: 'Kal Bhairav',   type: 'Deity' },
@@ -173,16 +173,16 @@ export function HomeGraphicHero() {
 
       {/* ── Full-bleed image — entire section background ── */}
       <img
-        src="/images/hero/mahakaleshwar-jyotirlinga.webp"
-        alt="Mahakaleshwar Jyotirlinga, Ujjain — third of twelve Jyotirlingas"
+        src="/images/hero/mahakal-lok-hero.webp"
+        alt="Mahakal Lok corridor, Ujjain — grand statue gallery at the Mahakaleshwar temple complex"
         className="hero-photo absolute inset-0 w-full h-full object-cover z-0
-          object-[55%_70%] lg:object-[55%_68%]"
+          object-[50%_58%] lg:object-[50%_56%]"
         style={{
-          filter: 'brightness(0.88) saturate(1.12) contrast(1.10)',
+          filter: 'brightness(0.92) saturate(1.10) contrast(1.08)',
           imageRendering: 'auto' as const,
           WebkitBackfaceVisibility: 'hidden',
         }}
-        onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero/mahakaleshwar-jyotirlinga.jpg'; }}
+        onError={(e) => { (e.target as HTMLImageElement).src = '/images/hero/mahakal-lok-hero.jpg'; }}
       />
 
       {/* Left-side text readability overlay — stronger for bright photo */}

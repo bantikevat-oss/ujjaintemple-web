@@ -68,7 +68,7 @@ export const packagesData: TourPackageData[] = [
       hi: 'उज्जैन - ओंकारेश्वर पैकेज',
       en: 'Ujjain - Omkareshwar Package'
     },
-    heroImage: '/images/mandirs/omkareshwar.png',
+    heroImage: '/images/mandirs/omkareshwar.jpg',
     description: {
       hi: 'यह 2 दिवसीय विशेष यात्रा आपको भगवान शिव के दो सबसे प्रतिष्ठित ज्योतिर्लिंगों - उज्जैन में श्री महाकालेश्वर और ओंकारेश्वर ज्योतिर्लिंग के दर्शन कराती है। महाकालेश्वर (भस्म आरती के लिए प्रसिद्ध) और नर्मदा तट पर स्थित ओंकारेश्वर (ॐ के आकार का द्वीप) की यह यात्रा आध्यात्मिक शांति और मोक्ष की प्राप्ति के लिए अत्यंत महत्वपूर्ण मानी जाती है। इसके अतिरिक्त आप काल भैरव, हरसिद्धि माता और अन्य प्रमुख मंदिरों के दर्शन भी करेंगे।',
       en: 'This special 2-day spiritual journey takes you to two of the most revered Jyotirlingas of Lord Shiva - Shree Mahakaleshwar in Ujjain and Omkareshwar Jyotirlinga. Experience the divine aura of Mahakaleshwar (famous for its Bhasma Aarti) and Omkareshwar, uniquely situated on an Om-shaped island on the banks of the Narmada River. This sacred tour also includes visits to Kaal Bhairav, Harsiddhi Mata Temple, and other major historical shrines.'
