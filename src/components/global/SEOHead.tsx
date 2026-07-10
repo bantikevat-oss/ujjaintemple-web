@@ -72,7 +72,7 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
       <meta property="og:image:alt" content={title} />
       <meta property="og:locale" content={locale === 'hi' ? 'hi_IN' : 'en_IN'} />
       <meta property="og:locale:alternate" content={locale === 'hi' ? 'en_IN' : 'hi_IN'} />
-      <meta property="og:site_name" content="UjjainTemple — Ujjain Mandir, Puja & Travel Guide" />
+      <meta property="og:site_name" content="Ujjain Temple — Ujjain Mandir, Puja & Travel Guide" />
 
       {/* ── Twitter / X Card ────────────────────────────────────────────────── */}
       <meta name="twitter:card" content="summary_large_image" />

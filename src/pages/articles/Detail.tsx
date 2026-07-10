@@ -265,7 +265,7 @@ export function ArticleDetail({ category, slug }: Props) {
   return (
     <>
       <SEOHead
-        title={`${article.title[locale]} | UjjainTemple`}
+        title={`${article.title[locale]} | Ujjain Temple`}
         description={article.metaDescription[locale]}
         path={path}
         locale={locale}

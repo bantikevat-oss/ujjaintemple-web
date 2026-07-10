@@ -178,8 +178,8 @@ export function TransportLanding() {
 
   const faqs = locale === 'hi' ? FAQS_HI : FAQS_EN;
   const title = locale === 'hi'
-    ? 'उज्जैन कैसे पहुंचें — ट्रेन, बस, कैब, फ्लाइट पूरी गाइड'
-    : 'How to Reach Ujjain — Train, Bus, Cab, Flight Complete Guide';
+    ? 'उज्जैन कैसे पहुंचें — इंदौर, भोपाल, दिल्ली से दूरी, ट्रेन, बस, टैक्सी गाइड'
+    : 'How to Reach Ujjain — Distance from Indore, Bhopal, Delhi, Train, Bus & Taxi Guide';
   const description = locale === 'hi'
     ? 'उज्जैन यातायात गाइड — इंदौर से 55 किमी, भोपाल 195 किमी, दिल्ली से ट्रेन, बस टाइमिंग, कैब बुकिंग, लोकल ऑटो। महाकाल दर्शन + सिंहस्थ 2028 ट्रांसपोर्ट। सहायता: +91 74007 24456'
     : 'Ujjain transport guide — 55 km from Indore, 195 km Bhopal, Delhi train, bus timings, cab booking, local auto. Mahakal darshan + Simhastha 2028 transport. Help: +91 74007 24456';
@@ -210,7 +210,7 @@ export function TransportLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | UjjainTemple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple — ${SITE.phone}`}
         description={description}
         path="/transport-in-ujjain/"
         locale={locale}
@@ -297,6 +297,20 @@ export function TransportLanding() {
                   </span>
                 </div>
               ))}
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href={locale === 'hi' ? '/hi/cab-booking/' : '/cab-booking/'}
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-sm"
+                style={{ background: '#C9A84C', color: '#200505' }}>
+                <Car className="h-4 w-4" />
+                {locale === 'hi' ? 'उज्जैन टैक्सी बुक करें — स्टेशन/एयरपोर्ट पिकअप' : 'Book Ujjain Taxi — Station / Airport Pickup'}
+              </a>
+              <a href={locale === 'hi' ? '/hi/tour-and-travel-ujjain/' : '/tour-and-travel-ujjain/'}
+                className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-sm border"
+                style={{ borderColor: 'rgba(201,168,76,0.5)', color: '#E0C374' }}>
+                {locale === 'hi' ? 'दर्शन पैकेज देखें' : 'View Darshan Packages'}
+                <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </section>

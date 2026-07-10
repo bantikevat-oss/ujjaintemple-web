@@ -11,7 +11,7 @@ export function NotFound() {
   return (
     <>
       <SEOHead
-        title={locale === 'hi' ? 'पेज नहीं मिला (404) | UjjainTemple' : 'Page Not Found (404) | UjjainTemple'}
+        title={locale === 'hi' ? 'पेज नहीं मिला (404) | Ujjain Temple' : 'Page Not Found (404) | Ujjain Temple'}
         description={locale === 'hi' ? 'यह पेज उपलब्ध नहीं है। मुख्य पेज पर जाएँ या कॉल करें।' : 'This page is not available. Go to homepage or call us.'}
         path="/404/"
         locale={locale}

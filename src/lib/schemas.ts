@@ -5,8 +5,8 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'TravelAgency', 'ReligiousOrganization'],
     '@id': `${SITE.url}/#organization`,
-    name: 'UjjainTemple — Ujjain Mandir, Puja & Travel Guide',
-    alternateName: ['Ujjain Temple Guide', 'UjjainTemple.com', 'उज्जैन मंदिर गाइड'],
+    name: 'Ujjain Temple — Ujjain Mandir, Puja & Travel Guide',
+    alternateName: ['Ujjain Temple', 'Ujjain Temple Guide', 'UjjainTemple.com', 'उज्जैन मंदिर गाइड'],
     url: SITE.url,
     logo: `${SITE.url}/favicon.svg`,
     image: `${SITE.url}/og/default.webp`,
@@ -18,7 +18,7 @@ export function organizationSchema() {
     openingHours: 'Mo-Su 06:00-22:00',
     foundingDate: '2024',
     description:
-      "Ujjain's most trusted bilingual guide to 182+ temples, Simhastha Kumbh 2028, puja booking, hotels, and tour packages. Verified darshan timings, authentic pandit services, 24×7 support.",
+      "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Verified darshan timings, authentic pandit services, 24×7 support.",
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Mahakal Area',
@@ -53,13 +53,6 @@ export function organizationSchema() {
         availableLanguage: ['Hindi', 'English'],
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '1240',
-      bestRating: '5',
-      worstRating: '1',
-    },
     sameAs: [SITE.social.facebook, SITE.social.instagram, SITE.social.youtube],
     knowsAbout: [
       'Mahakaleshwar Jyotirlinga',
@@ -79,7 +72,8 @@ export function websiteSchema() {
     '@type': 'WebSite',
     '@id': `${SITE.url}/#website`,
     url: SITE.url,
-    name: 'UjjainTemple',
+    name: 'Ujjain Temple',
+    alternateName: ['UjjainTemple', 'UjjainTemple.com'],
     publisher: { '@id': `${SITE.url}/#organization` },
     inLanguage: ['hi-IN', 'en-IN'],
     potentialAction: {

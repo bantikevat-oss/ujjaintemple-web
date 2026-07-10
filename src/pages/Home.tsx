@@ -41,7 +41,7 @@ const COPY = {
     exploreEyebrow: 'विषय',
     exploreTitle: 'इस संग्रह में',
     exploreItems: [
-      { label: 'मंदिर', desc: 'महाकाल · काल भैरव · मंगलनाथ · हरसिद्धि और अन्य', href: '/mandirs/' },
+      { label: 'उज्जैन के प्रसिद्ध मंदिर', desc: 'महाकाल · काल भैरव · मंगलनाथ · हरसिद्धि और अन्य', href: '/mandirs/' },
       { label: 'सिंहस्थ 2028', desc: 'कल्पवास · घाट · शाही स्नान · अखाड़े', href: '/simhastha-2028/' },
       { label: 'होटल', desc: 'महाकाल के निकट ठहरने की व्यवस्था', href: '/hotels/' },
       { label: 'यातायात', desc: 'इंदौर, भोपाल, दिल्ली से उज्जैन', href: '/transport-in-ujjain/' },
@@ -78,7 +78,7 @@ const COPY = {
     exploreEyebrow: 'Sections',
     exploreTitle: 'In this collection',
     exploreItems: [
-      { label: 'Temples', desc: 'Mahakal · Kal Bhairav · Mangalnath · Harsiddhi and others', href: '/mandirs/' },
+      { label: 'Famous Temples in Ujjain', desc: 'Mahakal · Kal Bhairav · Mangalnath · Harsiddhi and others', href: '/mandirs/' },
       { label: 'Simhastha 2028', desc: 'Kalpvas · ghats · royal bath · akhadas', href: '/simhastha-2028/' },
       { label: 'Hotels', desc: 'Where to stay near Mahakaleshwar', href: '/hotels/' },
       { label: 'Transport', desc: 'Reaching Ujjain from Indore, Bhopal, Delhi', href: '/transport-in-ujjain/' },
@@ -109,10 +109,10 @@ export function Home() {
   const daysLeft = useSimhasthaCountdown();
 
   const title = locale === 'hi'
-    ? 'उज्जैन के मंदिर — सिंहस्थ 2028, होटल, टैक्सी व दर्शन पैकेज | UjjainTemple'
-    : 'Ujjain Temple Guide — Simhastha 2028, Hotels, Taxi & Darshan Packages | UjjainTemple';
+    ? 'उज्जैन के मंदिर — सिंहस्थ 2028, होटल, टैक्सी व दर्शन पैकेज | Ujjain Temple'
+    : 'Ujjain Temple Guide — Simhastha 2028, Hotels, Taxi & Darshan Packages | Ujjain Temple';
   const description = locale === 'hi'
-    ? 'उज्जैन के 182+ मंदिर, सिंहस्थ 2028 गाइड, उज्जैन दर्शन पैकेज, उज्जैन में होटल व टैक्सी, काल सर्प / मंगल दोष / नाग बलि पूजा। वैदिक पंडित जी उपलब्ध। कॉल: +91 74007 24456।'
+    ? 'उज्जैन के प्रसिद्ध मंदिर, सिंहस्थ 2028 गाइड, उज्जैन दर्शन पैकेज, उज्जैन में होटल व टैक्सी, काल सर्प / मंगल दोष / नाग बलि पूजा। वैदिक पंडित जी उपलब्ध। कॉल: +91 74007 24456।'
     : 'Ujjain temples directory, Simhastha 2028 guide, Ujjain darshan packages, Hotel in Ujjain, Taxi in Ujjain, Kaal Sarp / Mangal Dosh / Nag Bali puja. Authentic pandits. Call +91 74007 24456.';
 
   return (

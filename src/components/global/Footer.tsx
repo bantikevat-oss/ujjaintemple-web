@@ -210,7 +210,7 @@ export function Footer() {
               <Link to={`${prefix}/mandirs/`}
                 className="inline-flex items-center gap-1 text-[12px] font-semibold
                   text-gold/70 hover:text-gold transition-colors">
-                {isHi ? 'सभी 182+ मंदिर' : 'All 182+ temples'}
+                {isHi ? 'उज्जैन के सभी प्रसिद्ध मंदिर' : 'All famous temples in Ujjain'}
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </li>

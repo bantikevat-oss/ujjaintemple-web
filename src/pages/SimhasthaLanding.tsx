@@ -217,7 +217,7 @@ export function SimhasthaLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | UjjainTemple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple — ${SITE.phone}`}
         description={description}
         path="/simhastha-2028/"
         locale={locale}

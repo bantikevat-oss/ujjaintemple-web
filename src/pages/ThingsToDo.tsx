@@ -28,7 +28,7 @@ export function ThingsToDo() {
     : 'Things to do in Ujjain — top temples like Mahakaleshwar, Kal Bhairav, Harsiddhi, plus tour packages, hotels, cabs & Simhastha 2028. Complete Ujjain travel guide. Help: +91 74007 24456';
 
   const hubs = [
-    { icon: Landmark, to: `${prefix}/mandirs/`, hi: 'उज्जैन के मंदिर', en: 'Temples in Ujjain', dh: '182+ प्रमुख एवं प्राचीन मंदिर — दर्शन समय, इतिहास व कैसे पहुँचें।', de: '182+ ancient temples — darshan timings, history & how to reach.' },
+    { icon: Landmark, to: `${prefix}/mandirs/`, hi: 'उज्जैन के मंदिर', en: 'Temples in Ujjain', dh: 'प्रमुख एवं प्राचीन मंदिर — दर्शन समय, इतिहास व कैसे पहुँचें।', de: 'Famous ancient temples — darshan timings, history & how to reach.' },
     { icon: MapPinned, to: `${prefix}/tour-and-travel-ujjain/`, hi: 'टूर एंड ट्रैवल', en: 'Tour & Travel', dh: 'उज्जैन दर्शन पैकेज (1/2/3 दिन), ओंकारेश्वर व ज्योतिर्लिंग यात्रा।', de: 'Ujjain darshan packages (1/2/3 day), Omkareshwar & Jyotirlinga tours.' },
     { icon: BedDouble, to: `${prefix}/hotels/`, hi: 'उज्जैन में होटल', en: 'Hotels in Ujjain', dh: 'महाकाल मंदिर के पास बजट, फ़ैमिली व लक्ज़री होटल।', de: 'Budget, family & luxury hotels near Mahakal Temple.' },
     { icon: Car, to: `${prefix}/cab-booking/`, hi: 'टैक्सी व कैब', en: 'Taxi & Cab', dh: 'लोकल दर्शन, इंदौर, भोपाल व ओंकारेश्वर के लिए कैब बुकिंग।', de: 'Cab booking for local darshan, Indore, Bhopal & Omkareshwar.' },
@@ -66,7 +66,7 @@ export function ThingsToDo() {
   return (
     <>
       <SEOHead
-        title={`${title} | UjjainTemple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple — ${SITE.phone}`}
         description={description}
         path={path}
         locale={locale}
