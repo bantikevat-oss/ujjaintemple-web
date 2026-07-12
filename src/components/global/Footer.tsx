@@ -290,9 +290,9 @@ export function Footer() {
             <Link to={`${prefix}/terms/`} className="hover:text-gold transition-colors">
               {isHi ? 'शर्तें' : 'Terms'}
             </Link>
-            <Link to={`${prefix}/about/`} className="hover:text-gold transition-colors">
-              ByteFlow Technologies
-            </Link>
+            <a href="https://byteflowtech.in" target="_blank" rel="noopener" className="hover:text-gold transition-colors">
+              {isHi ? 'वेबसाइट: ByteFlow Technologies Pvt Ltd' : 'Website by ByteFlow Technologies Pvt Ltd'}
+            </a>
           </div>
         </div>
       </div>
