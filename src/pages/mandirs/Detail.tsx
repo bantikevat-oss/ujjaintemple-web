@@ -91,13 +91,13 @@ export function MandirDetail({ slug }: DetailProps) {
   if (!mandir) return null;
 
   const path = `/mandirs/${mandir.slug}/`;
-  const canonical = locale === 'hi' ? `${SITE.url}${path}` : `${SITE.url}/en${path}`;
-  const title = locale === 'hi'
+  const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
+  const title = mandir.seoTitle?.[locale] ?? (locale === 'hi'
     ? `${mandir.name.hi} उज्जैन — दर्शन समय, इतिहास, कैसे पहुँचें | ${SITE.phone}`
-    : `${mandir.name.en} Ujjain — Darshan Time, History, How to Reach | ${SITE.phone}`;
-  const description = locale === 'hi'
+    : `${mandir.name.en} Ujjain — Darshan Time, History, How to Reach | ${SITE.phone}`);
+  const description = mandir.seoDescription?.[locale] ?? (locale === 'hi'
     ? `${mandir.shortIntro.hi.substring(0, 150)}... यात्रा सहायता: ${SITE.phone}`
-    : `${mandir.shortIntro.en.substring(0, 150)}... Plan darshan: ${SITE.phone}`;
+    : `${mandir.shortIntro.en.substring(0, 150)}... Plan darshan: ${SITE.phone}`);
 
   const nearby = getNearbyMandirs(mandir);
   const pujaSlugs = relatedPujaSlugs(mandir.slug, mandir.templeType).filter((s) => PUJA_LINKS[s]);
@@ -250,6 +250,44 @@ export function MandirDetail({ slug }: DetailProps) {
             </div>
           </section>
         )}
+
+        {/* ── DARSHAN & AARTI TIMINGS — serves "timings" queries; data verified in content JSON ── */}
+        <section className="container-page py-8">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'दर्शन एवं आरती समय' : 'Darshan & Aarti Timings'}</p>
+          <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+            {locale === 'hi' ? `${mandir.name.hi} — दर्शन व आरती समय` : `${mandir.name.en} Timings`}
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="flex items-start gap-3 rounded-2xl border border-cream-dark bg-white p-5 shadow-sm">
+              <Clock className="mt-0.5 h-5 w-5 flex-shrink-0 text-maroon" />
+              <div>
+                <p className="text-xs font-bold uppercase tracking-wider text-ink-mute">{locale === 'hi' ? 'दर्शन समय' : 'Darshan Hours'}</p>
+                <p className="mt-1 text-base font-semibold text-ink">{mandir.darshanTimingSummary[locale]}</p>
+                {mandir.entryFee && (
+                  <p className="mt-2 text-sm text-ink-soft"><span className="font-semibold">{locale === 'hi' ? 'प्रवेश शुल्क: ' : 'Entry: '}</span>{mandir.entryFee[locale]}</p>
+                )}
+              </div>
+            </div>
+            {mandir.aartiTiming && (
+              <div className="flex items-start gap-3 rounded-2xl border border-gold/40 bg-gold-50/40 p-5 shadow-sm">
+                <Sparkles className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-saffron-700">{locale === 'hi' ? 'आरती समय' : 'Aarti Schedule'}</p>
+                  <ul className="mt-2 space-y-1">
+                    {mandir.aartiTiming[locale].split('·').map((a, i) => (
+                      <li key={i} className="text-sm leading-relaxed text-ink-soft">{a.trim()}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+          <p className="mt-3 text-[11px] text-ink-mute">
+            {locale === 'hi'
+              ? `समय स्थानीय स्रोतों से सत्यापित (अंतिम अद्यतन ${mandir.lastVerified})। पर्व एवं विशेष अवसरों पर परिवर्तन संभव।`
+              : `Timings verified from local sources (last updated ${mandir.lastVerified}). May change on festivals and special occasions.`}
+          </p>
+        </section>
 
         {/* ── PHOTOS — only extra photos (photos[1:]) to avoid duplicating hero image ── */}
         {mandir.photos.filter((p) => p && !p.includes('placeholder')).length > 1 && (

@@ -279,7 +279,6 @@ export function pujaServiceSchema() {
     { name: 'Rudrabhishek Puja', description: 'Rudrabhishek at Mahakaleshwar Jyotirlinga with Vedic mantras. Book online with authentic pandit Ji in Ujjain.', price: '1100' },
     { name: 'Navgrah Shanti Puja', description: 'Navgrah shanti puja at Mangalnath Mandir, Ujjain — the navgrah kshetra. Removes planetary doshas.', price: '3100' },
     { name: 'Pitru Dosh Nivaran Puja', description: 'Pitru dosh puja and tarpan at Siddhwat Ujjain — one of India\'s most sacred sites for ancestral rituals.', price: '2500' },
-    { name: 'Mahakaleshwar Bhasma Aarti Darshan', description: 'Assisted Bhasma Aarti booking for Mahakaleshwar temple, Ujjain. Very limited slots — book in advance.', price: '600' },
   ];
 
   return {

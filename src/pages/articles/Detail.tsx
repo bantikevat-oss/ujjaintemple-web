@@ -186,7 +186,7 @@ export function ArticleDetail({ category, slug }: Props) {
   if (!article) return null;
 
   const path = articlePath(article);
-  const canonical = locale === 'hi' ? `${SITE.url}${path}` : `${SITE.url}/en${path}`;
+  const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
   const cat = categoryMeta[article.category];
 
   const statsKey = `${category}/${slug}`;

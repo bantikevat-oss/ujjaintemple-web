@@ -38,6 +38,8 @@ export interface Mandir {
   parkingAvailable?: 'available' | 'limited' | 'shared' | 'none';
   lastVerified: string;
   primaryKeyword: Bilingual;
+  seoTitle?: Bilingual;
+  seoDescription?: Bilingual;
 }
 
 export interface Hotel {
