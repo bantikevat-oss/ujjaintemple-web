@@ -130,87 +130,35 @@ export function MandirDetail({ slug }: DetailProps) {
           { label: mandir.name[locale] },
         ]} />
 
-        {/* ── HERO ── */}
-        {mandir.photos[0] && !mandir.photos[0].includes('placeholder') ? (
-          /* ── PHOTO HERO — full-bleed when a real image is available ── */
-          <>
-            <header className="relative flex flex-col justify-end overflow-hidden bg-maroon-950 border-b-4 border-gold" style={{ minHeight: '52vh' }}>
-              <div className="absolute inset-0 z-0">
-                <img
-                  src={mandir.photos[0]}
-                  alt={mandir.name[locale]}
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-maroon-950 via-maroon-950/75 to-maroon-950/30" />
+        {/* ── HERO (text-only — image moved into content below) ── */}
+        <header className="relative overflow-hidden border-b-4 border-gold bg-maroon-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900" />
+          <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+          <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-saffron/10 blur-3xl" />
+          <div className="relative container-page py-14 sm:py-16">
+            <div className="max-w-3xl">
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-gold text-maroon-900 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-widest shadow">{typeLabel}</span>
+                <span className="bg-white/15 backdrop-blur-sm text-white rounded-full px-3 py-1 text-[11px] font-semibold">{areaLabel}</span>
               </div>
-              <div className="relative z-10 container-page pb-8 pt-32 sm:pb-12">
-                <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="bg-gold text-maroon-900 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-widest shadow">{typeLabel}</span>
-                  <span className="bg-white/20 backdrop-blur-sm text-white rounded-full px-3 py-1 text-[11px] font-semibold">{areaLabel}</span>
-                </div>
-                <h1 className={`font-extrabold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] leading-tight mb-1 ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-3xl sm:text-5xl md:text-6xl'}`}>
-                  {mandir.name[locale]}
-                </h1>
-                <p className="text-gold text-sm sm:text-base font-semibold mb-5">{mandir.deity[locale]}</p>
-                <div className="flex flex-wrap gap-3">
-                  <a href={SITE.phoneTel} className="btn-call">
-                    <Phone className="h-4 w-4" /> {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
-                  </a>
-                  <a href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
-                    <MapPin className="h-4 w-4" /> {locale === 'hi' ? 'रास्ता देखें' : 'Get Directions'}
-                  </a>
-                </div>
+              <h1 className={`font-extrabold text-white leading-tight mb-2 ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-3xl sm:text-5xl md:text-6xl'}`}>
+                {mandir.name[locale]}
+              </h1>
+              <p className="text-gold text-base font-semibold mb-4">{mandir.deity[locale]}</p>
+              <p className={`text-cream/85 leading-relaxed mb-6 max-w-2xl ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
+                {mandir.shortIntro[locale]}
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href={SITE.phoneTel} className="btn-call">
+                  <Phone className="h-4 w-4" /> {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
+                </a>
+                <a href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
+                  <MapPin className="h-4 w-4" /> {locale === 'hi' ? 'रास्ता देखें' : 'Get Directions'}
+                </a>
               </div>
-            </header>
-
-          </>
-        ) : (
-          /* ── TEXT-ONLY HERO fallback (no photo) ── */
-          <section className="container-page py-8 sm:py-10">
-            <div className="grid gap-8 lg:grid-cols-3">
-              <div className="lg:col-span-2">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-saffron-50 px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-saffron-700">{typeLabel}</span>
-                  <span className="rounded-full bg-cream-dark px-3 py-1 text-[11px] font-semibold text-ink-mute">{areaLabel}</span>
-                </div>
-                <h1 className={`mt-3 font-bold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl' : 'font-serif text-3xl sm:text-4xl md:text-5xl'}`}>
-                  {mandir.name[locale]}
-                </h1>
-                <p className="mt-1 text-base font-medium text-ink-mute">{mandir.deity[locale]}</p>
-                <p className={`mt-4 leading-relaxed text-ink-soft ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
-                  {mandir.shortIntro[locale]}
-                </p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <a href={SITE.phoneTel} className="btn-call">
-                    <Phone className="h-4 w-4" /> {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
-                  </a>
-                  <a href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-                    <MapPin className="h-4 w-4" /> {locale === 'hi' ? 'रास्ता देखें' : 'Get Directions'}
-                  </a>
-                </div>
-                <div className="mt-5 grid grid-cols-2 gap-3">
-                  <div className="flex items-center gap-2 rounded-lg bg-cream p-3">
-                    <Clock className="h-5 w-5 flex-shrink-0 text-maroon" />
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-ink-mute">{locale === 'hi' ? 'दर्शन समय' : 'Darshan'}</p>
-                      <p className="text-sm font-bold text-ink">{mandir.darshanTimingSummary[locale]}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 rounded-lg bg-cream p-3">
-                    <Sparkles className="h-5 w-5 flex-shrink-0 text-maroon" />
-                    <div>
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-ink-mute">{locale === 'hi' ? 'प्रवेश शुल्क' : 'Entry Fee'}</p>
-                      <p className="text-sm font-bold text-ink">{mandir.entryFee[locale]}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <aside className="lg:sticky lg:top-24 lg:self-start">
-                <LeadForm defaultService="darshanPlan" sourcePage={`mandir/${mandir.slug}`} />
-              </aside>
             </div>
-          </section>
-        )}
+          </div>
+        </header>
 
         {/* ── QUICK FACTS BAR ── */}
         {(mandir.crowdLevel || mandir.photographyAllowed !== undefined || mandir.parkingAvailable) && (
@@ -301,13 +249,23 @@ export function MandirDetail({ slug }: DetailProps) {
         <section className="container-page py-8">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="lg:col-span-2">
-              {/* Intro paragraph as blog lead */}
-              <p className={`leading-[1.9] text-ink first-letter:text-5xl first-letter:font-serif first-letter:font-bold first-letter:text-maroon first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:mt-1 ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
-                {mandir.shortIntro[locale]}
-              </p>
+              {/* Featured temple photo (moved from hero → content) */}
+              {mandir.photos[0] && !mandir.photos[0].includes('placeholder') && (
+                <figure className="mb-7 overflow-hidden rounded-2xl border border-cream-dark shadow-sm">
+                  <img
+                    src={mandir.photos[0]}
+                    alt={mandir.name[locale]}
+                    loading="lazy"
+                    className="w-full aspect-[16/10] object-cover"
+                  />
+                  <figcaption className="bg-cream px-4 py-2.5 text-xs text-ink-mute">
+                    {mandir.name[locale]} — {mandir.deity[locale]}
+                  </figcaption>
+                </figure>
+              )}
 
               {/* History heading */}
-              <p className="mt-8 text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
                 {locale === 'hi' ? 'इतिहास एवं पौराणिक महत्व' : 'History & Significance'}
               </p>
               <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
