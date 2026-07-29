@@ -28,11 +28,11 @@ export function CabBookingLanding() {
   const articles = articlesByCategory('blog').slice(0, 3);
 
   const title = locale === 'hi'
-    ? 'उज्जैन में बेस्ट टैक्सी सेवा — महाकाल दर्शन, ओंकारेश्वर व आउटस्टेशन कैब बुकिंग'
-    : 'Best Taxi Service in Ujjain — Mahakal Darshan, Omkareshwar & Outstation Cab Booking';
+    ? 'उज्जैन दर्शन कैब बुक करें — फ़िक्स्ड किराया, 24×7 पिकअप, आउटस्टेशन टैक्सी'
+    : 'Book Ujjain Darshan Cab — Fixed Fare, 24×7 Pickup, Outstation Taxi';
   const description = locale === 'hi'
-    ? 'उज्जैन में बेस्ट टैक्सी सेवा — महाकालेश्वर दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व लोकल दर्शन के लिए कैब बुकिंग। फ़िक्स्ड किराया, 24/7 उपलब्ध: +91 74007 24456।'
-    : 'Best taxi service in Ujjain — cab booking for Mahakaleshwar darshan, Omkareshwar, Indore airport & local sightseeing. Fixed fares, 24/7 service: +91 74007 24456.';
+    ? 'उज्जैन में कैब बुक करें — महाकालेश्वर दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व लोकल दर्शन के लिए। फ़िक्स्ड किराया, 24×7 पिकअप, WhatsApp पर तुरंत बुकिंग: +91 74007 24456।'
+    : 'Book a cab in Ujjain for Mahakaleshwar darshan, Omkareshwar, Indore airport & local sightseeing. Fixed fares, 24×7 pickup, instant WhatsApp booking: +91 74007 24456.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
