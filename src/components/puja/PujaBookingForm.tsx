@@ -54,7 +54,7 @@ export function PujaBookingForm({ pujaName }: Props) {
             </span>
           </div>
           
-          <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-cream mb-4 leading-tight">
+          <h3 className="font-serif text-3xl sm:text-4xl font-extrabold !text-cream mb-4 leading-tight">
             {locale === 'hi' 
               ? `${pujaName.hi} विधिवत सम्पन्न कराएँ` 
               : `Book Authentic ${pujaName.en}`}
@@ -112,7 +112,8 @@ export function PujaBookingForm({ pujaName }: Props) {
                 </label>
                 <div className="relative">
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gold/60" />
-                  <input id="pf-name" name="name" required type="text" 
+                  <input id="pf-name" name="name" required type="text"
+                    onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[0-9]/g, ''); }}
                     className="w-full bg-black/20 border border-gold/30 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
                     placeholder={locale === 'hi' ? 'अपना नाम दर्ज करें' : 'Enter your name'} />
                 </div>
@@ -124,7 +125,8 @@ export function PujaBookingForm({ pujaName }: Props) {
                 </label>
                 <div className="relative">
                   <PhoneCall className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gold/60" />
-                  <input id="pf-phone" name="phone" required type="tel" pattern="[0-9]{10}"
+                  <input id="pf-phone" name="phone" required type="tel" inputMode="numeric" pattern="[0-9]{10}" maxLength={10}
+                    onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10); }}
                     className="w-full bg-black/20 border border-gold/30 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
                     placeholder="10 digit mobile number" />
                 </div>

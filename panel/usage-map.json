@@ -1,0 +1,227 @@
+{
+  "generated": "2026-07-29",
+  "total": 115,
+  "usedCount": 41,
+  "unusedCount": 74,
+  "used": {
+    "hero/hero.png": [
+      "ThingsToDo page",
+      "Tour & Travel pages",
+      "indore-to-ujjain page",
+      "ujjain-to-indore-taxi page",
+      "ujjain-travel-guide page"
+    ],
+    "hero/mahakal-lok-hero.jpg": [
+      "Home page"
+    ],
+    "hero/mahakal-lok-hero.webp": [
+      "Home page"
+    ],
+    "hotels/ujjain_hotels_4k.png": [
+      "Hotels page"
+    ],
+    "mandir-placeholder.svg": [
+      "MandirCard page",
+      "PhotoGallery page"
+    ],
+    "mandirs/bade-ganesh-ji.jpg": [
+      "bade-ganesh-ji page"
+    ],
+    "mandirs/baglamukhi.jpg": [
+      "Tour packages"
+    ],
+    "mandirs/char-dham-ujjain.jpg": [
+      "Tour packages"
+    ],
+    "mandirs/chintaman-ganesh.jpg": [
+      "chintaman-ganesh page"
+    ],
+    "mandirs/gadkalika-mata.jpg": [
+      "gadkalika-mata page"
+    ],
+    "mandirs/harsiddhi-mata.jpg": [
+      "Cab Booking page",
+      "harsiddhi-mata page"
+    ],
+    "mandirs/kal-bhairav-ujjain.jpg": [
+      "kal-bhairav-ujjain page"
+    ],
+    "mandirs/mahakal-lok.jpg": [
+      "mahakal-lok page"
+    ],
+    "mandirs/mahakaleshwar.jpg": [
+      "Cab Booking page",
+      "Tour packages",
+      "mahakaleshwar page",
+      "mahakaleshwar-darshan-guide page"
+    ],
+    "mandirs/maheshwar.webp": [
+      "Tour packages"
+    ],
+    "mandirs/mangalnath.jpg": [
+      "Cab Booking page",
+      "mangalnath page"
+    ],
+    "mandirs/omkareshwar.jpg": [
+      "Cab Booking page",
+      "Tour packages"
+    ],
+    "mandirs/sandipani-ashram.jpg": [
+      "sandipani-ashram page"
+    ],
+    "mandirs/siddhavat-mandir.jpg": [
+      "siddhavat-mandir page"
+    ],
+    "mandirs/trimbakeshwar.webp": [
+      "Tour packages"
+    ],
+    "mandirs/ujjain-ghat-scene.jpg": [
+      "Cab Booking page"
+    ],
+    "mandirs/ujjain-temple-general.jpg": [
+      "Cab Booking page"
+    ],
+    "puja-info/abhishek_puja.webp": [
+      "Puja pages"
+    ],
+    "puja-info/ceremony_group.webp": [
+      "Puja pages"
+    ],
+    "puja-info/gallery_1.webp": [
+      "Cab Booking page",
+      "Puja pages",
+      "best-places-to-visit-ujjain page"
+    ],
+    "puja-info/gallery_2.webp": [
+      "Puja pages",
+      "bhopal-to-ujjain page"
+    ],
+    "puja-info/gallery_3.webp": [
+      "Puja pages",
+      "best-places-to-visit-ujjain page"
+    ],
+    "puja-info/gallery_4.webp": [
+      "Puja pages"
+    ],
+    "puja-info/gallery_5.webp": [
+      "Puja pages"
+    ],
+    "puja-info/gallery_6.webp": [
+      "Puja pages"
+    ],
+    "puja-info/gallery_7.webp": [
+      "Puja pages"
+    ],
+    "puja-info/gallery_8.webp": [
+      "Puja pages"
+    ],
+    "puja-info/offerings.webp": [
+      "Puja pages"
+    ],
+    "puja-info/puja_setup.webp": [
+      "Puja pages"
+    ],
+    "services/ujjain_taxi_4k.webp": [
+      "Cab Booking page"
+    ],
+    "services/ujjain_tirthyatra_services_4k.webp": [
+      "Cab Booking page"
+    ],
+    "simhastha/simhastha-hero.webp": [
+      "Simhastha 2028 page"
+    ],
+    "tours/tour-landing-hero.png": [
+      "ThingsToDo page",
+      "Tour & Travel pages",
+      "ujjain-travel-guide page"
+    ],
+    "tours/ujjain-travel-package.webp": [
+      "Tour & Travel pages",
+      "Tour packages"
+    ],
+    "transport/indore-ujjain-hero.png": [
+      "indore-to-ujjain page",
+      "ujjain-to-indore-taxi page"
+    ],
+    "trust/eir-startup-india.jpg": [
+      "AboutPage page",
+      "Home page"
+    ]
+  },
+  "unused": [
+    "hero/mahakal-real.jpg",
+    "hero/mahakal-real.webp",
+    "hero/mahakaleshwar-hero.jpg",
+    "hero/mahakaleshwar-hero.webp",
+    "hero/mahakaleshwar-jyotirlinga.jpg",
+    "hero/mahakaleshwar-jyotirlinga.webp",
+    "hotels/hotel-luxury-bedroom.png",
+    "hotels/hotel-luxury-dining.png",
+    "hotels/hotel-luxury-exterior.png",
+    "mandirs/adinath-jain-mandir.jpg",
+    "mandirs/ambika-mata-mandir.jpg",
+    "mandirs/angarkeshwar-mahadev.jpg",
+    "mandirs/annapurna-mata-mandir.jpg",
+    "mandirs/bajrang-bali-mandir.jpg",
+    "mandirs/bhartrihari-gufa.jpg",
+    "mandirs/brahma-mandir-ujjain.jpg",
+    "mandirs/chandraprabhu-jain-mandir.jpg",
+    "mandirs/chintaman-ganesh.webp",
+    "mandirs/chintamani-parsvanath-jain.jpg",
+    "mandirs/dwarkadhish-mandir.jpg",
+    "mandirs/gopal-mandir-ujjain.jpg",
+    "mandirs/hanuman-mandir-ramghat.jpg",
+    "mandirs/harsiddhi-mata.webp",
+    "mandirs/iskcon-ujjain.jpg",
+    "mandirs/kal-bhairav-ujjain.webp",
+    "mandirs/kali-mata-mandir-ujjain.jpg",
+    "mandirs/kedareshwar-mahadev.jpg",
+    "mandirs/krishna-sudama-mandir.jpg",
+    "mandirs/mahakaleshwar.webp",
+    "mandirs/mahakali-mandir-ujjain.jpg",
+    "mandirs/mahavir-swami-jain-mandir.jpg",
+    "mandirs/mangalnath.webp",
+    "mandirs/nagchandreshwar-mandir.jpg",
+    "mandirs/navgraha-mandir-ujjain.jpg",
+    "mandirs/neminath-jain-mandir.jpg",
+    "mandirs/omkareshwar.png",
+    "mandirs/panchmukhi-hanuman-mandir.jpg",
+    "mandirs/parashuram-mandir-ujjain.jpg",
+    "mandirs/parsvanath-jain-mandir.jpg",
+    "mandirs/pir-matsyendranath.jpg",
+    "mandirs/ram-mandir-ramghat.jpg",
+    "mandirs/shaneshwar-mahadev.jpg",
+    "mandirs/shantinath-jain-mandir.jpg",
+    "mandirs/shiva-variety-1.jpg",
+    "mandirs/shiva-variety-10.jpg",
+    "mandirs/shiva-variety-11.jpg",
+    "mandirs/shiva-variety-12.jpg",
+    "mandirs/shiva-variety-13.jpg",
+    "mandirs/shiva-variety-14.jpg",
+    "mandirs/shiva-variety-15.jpg",
+    "mandirs/shiva-variety-2.jpg",
+    "mandirs/shiva-variety-3.jpg",
+    "mandirs/shiva-variety-4.jpg",
+    "mandirs/shiva-variety-5.jpg",
+    "mandirs/shiva-variety-6.jpg",
+    "mandirs/shiva-variety-7.jpg",
+    "mandirs/shiva-variety-8.jpg",
+    "mandirs/shiva-variety-9.jpg",
+    "mandirs/triveni-sangam-mandir.jpg",
+    "mandirs/ujjain-ghat-temple.jpg",
+    "mandirs/ujjain-jain-temple.jpg",
+    "mandirs/ujjain-shiva-temple.jpg",
+    "mandirs/ujjain-shiva-temple2.jpg",
+    "mandirs/vikrant-bhairav.jpg",
+    "mandirs/yamraj-mandir-ujjain.jpg",
+    "simhastha/kumbh-vivah.jpg",
+    "simhastha/kumbh-vivah.webp",
+    "simhastha/ramghat-2.jpg",
+    "simhastha/ramghat-2.webp",
+    "simhastha/ramghat.jpg",
+    "simhastha/ramghat.webp",
+    "simhastha/simhastha-hero.jpg",
+    "tours/tour-hero-graphic.png",
+    "trust/eir-startup-india.webp"
+  ]
+}

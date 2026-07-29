@@ -1,0 +1,12 @@
+# UjjainTemple Image Panel — protect internals
+<FilesMatch "\.(php)$">
+  # allow index.php to run; deny direct access to config/secret
+</FilesMatch>
+<Files "config.php">
+  Require all denied
+</Files>
+<Files "secret.php">
+  Require all denied
+</Files>
+Options -Indexes
+DirectoryIndex index.php

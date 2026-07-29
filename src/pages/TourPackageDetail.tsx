@@ -43,14 +43,23 @@ export function TourPackageDetail({ slug }: { slug: string }) {
         })]}
       />
       <Layout>
-        {/* ── TOP MAROON BANNER ── */}
-        <section className="relative bg-maroon-900 py-16 sm:py-24 overflow-hidden border-b-[8px] border-saffron">
-          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-maroon-900/80" />
-          <div className="container-page relative z-10 text-center">
-            <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-xl tracking-wide uppercase">
-              {title}
-            </h1>
+        {/* ── TOP MAROON BANNER (plain, left-aligned — matches temple/puja hero) ── */}
+        <section className="relative overflow-hidden border-b-[8px] border-saffron bg-maroon-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900" />
+          <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
+          <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-saffron/10 blur-3xl" />
+          <div className="container-page relative z-10 py-14 sm:py-20">
+            <div className="max-w-3xl">
+              <span className="inline-block bg-gold text-maroon-900 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-widest shadow mb-4">
+                {locale === 'hi' ? 'टूर पैकेज' : 'Tour Package'}
+              </span>
+              <h1 className={`font-bold text-white leading-tight ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-3xl sm:text-5xl md:text-6xl'}`}>
+                {title}
+              </h1>
+              <p className={`mt-4 text-cream/85 leading-relaxed max-w-2xl ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
+                {descriptionText}
+              </p>
+            </div>
           </div>
         </section>
 

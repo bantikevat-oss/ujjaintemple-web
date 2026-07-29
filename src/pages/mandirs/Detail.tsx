@@ -311,7 +311,7 @@ export function MandirDetail({ slug }: DetailProps) {
             <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
               {locale === 'hi' ? 'पता एवं कैसे पहुँचें' : 'Address & How to Reach'}
             </h2>
-            <div className="grid gap-5 lg:grid-cols-2">
+            <div className="grid gap-5 lg:grid-cols-2 lg:items-start">
               {/* Address card */}
               <div className="flex items-start gap-4 rounded-2xl border border-cream-dark bg-white p-5 shadow-sm">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">

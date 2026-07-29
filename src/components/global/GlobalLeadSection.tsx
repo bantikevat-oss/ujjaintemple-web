@@ -47,9 +47,9 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
             </p>
 
             {/* Benefits */}
-            <ul className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 max-w-sm mx-auto lg:mx-0 text-left">
+            <ul className="mt-7 grid grid-cols-2 gap-x-6 gap-y-3 max-w-md mx-auto lg:mx-0 text-left">
               {benefits.map((b) => (
-                <li key={b} className="flex items-center gap-2.5 text-white/95 font-medium">
+                <li key={b} className="flex items-center gap-2.5 text-white/95 font-medium whitespace-nowrap">
                   <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gold/20">
                     <Check className="h-3 w-3 text-gold" />
                   </span>

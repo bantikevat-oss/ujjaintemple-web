@@ -56,12 +56,14 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-name">{t('form.name')} *</label>
             <input id="lf-name" name="name" required type="text" autoComplete="name"
+              onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[0-9]/g, ''); }}
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
               placeholder={locale === 'hi' ? 'आपका नाम' : 'Your name'} />
           </div>
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-phone">{t('form.phone')} *</label>
-            <input id="lf-phone" name="phone" required type="tel" autoComplete="tel" pattern="[0-9]{10}"
+            <input id="lf-phone" name="phone" required type="tel" autoComplete="tel" inputMode="numeric" pattern="[0-9]{10}" maxLength={10}
+              onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10); }}
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
               placeholder="10 digit mobile number" />
           </div>
