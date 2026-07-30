@@ -1,10 +1,12 @@
 ﻿import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
+import { articlesByCategory, articlePath } from '../data/articles';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight, Train, Bus, Car, Plane, MapPin, Clock, ChevronDown } from 'lucide-react';
 
@@ -175,6 +177,8 @@ const FAQS_EN = [
 export function TransportLanding() {
   const { locale } = useI18n();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const prefix = locale === 'en' ? '' : '/hi';
+  const routeGuides = articlesByCategory('transport');
 
   const faqs = locale === 'hi' ? FAQS_HI : FAQS_EN;
   const title = locale === 'hi'
@@ -298,6 +302,26 @@ export function TransportLanding() {
                 </div>
               ))}
             </div>
+
+            {/* Route guides — each major route has its own fare/time/booking page */}
+            {routeGuides.length > 0 && (
+              <div className="mt-10 pt-8" style={{ borderTop: '1px solid rgba(201,168,76,0.18)' }}>
+                <p className="text-center text-gold/60 text-xs tracking-[0.3em] uppercase mb-5">
+                  {locale === 'hi' ? '— रूट गाइड: किराया, समय और बुकिंग —' : '— Route Guides: Fare, Time & Booking —'}
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2.5">
+                  {routeGuides.map((r) => (
+                    <Link key={r.slug} to={`${prefix}${articlePath(r)}`}
+                      className="inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold border transition-colors hover:bg-gold/10"
+                      style={{ borderColor: 'rgba(201,168,76,0.35)', color: '#E0C374' }}>
+                      <MapPin className="h-3.5 w-3.5 shrink-0" />
+                      {r.primaryKeyword[locale]}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a href={locale === 'hi' ? '/hi/cab-booking/' : '/cab-booking/'}
                 className="inline-flex items-center gap-2 rounded-full px-6 py-3 font-bold text-sm"

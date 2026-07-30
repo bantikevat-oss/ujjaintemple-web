@@ -23,7 +23,7 @@ export const articlePath = (a: Article): string => {
   return `${map[a.category]}/${a.slug}/`;
 };
 
-export function getRelatedArticles(article: Article, limit = 3): Article[] {
+export function getRelatedArticles(article: Article, limit = 4): Article[] {
   if (!article.relatedSlugs?.length) {
     return articles.filter((a) => a.category === article.category && a.slug !== article.slug).slice(0, limit);
   }
