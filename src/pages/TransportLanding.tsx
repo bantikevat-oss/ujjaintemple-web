@@ -165,7 +165,7 @@ const FAQS_EN = [
   },
   {
     q: 'How to reach Ujjain during Simhastha 2028?',
-    a: 'Simhastha 2028 (09 April–08 May 2028) expects 12 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 74007 24456.',
+    a: 'Simhastha 2028 (09 April–08 May 2028) expects 30 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 74007 24456.',
   },
   {
     q: 'How far is Mahakaleshwar from Ujjain Junction?',
@@ -468,7 +468,7 @@ export function TransportLanding() {
             <p className="text-cream/70 font-serif italic text-base sm:text-lg max-w-2xl leading-relaxed">
               {locale === 'hi'
                 ? '09 अप्रैल — 08 मई 2028 को 30 करोड़+ श्रद्धालु उज्जैन आएंगे। शाही स्नान के दिनों में ट्रेन, बस, कैब — सब बुक हो जाएंगे। अभी से बुकिंग करें।'
-                : '12 crore+ pilgrims will visit Ujjain from 09 April – 08 May 2028. On Shahi Snan dates, trains, buses, cabs — all will be booked. Reserve now.'}
+                : '30 crore+ pilgrims will visit Ujjain from 09 April – 08 May 2028. On Shahi Snan dates, trains, buses, cabs — all will be booked. Reserve now.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={SITE.phoneTel}

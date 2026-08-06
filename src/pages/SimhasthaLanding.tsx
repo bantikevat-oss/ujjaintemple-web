@@ -44,46 +44,36 @@ const STATS = [
   { numHi: '30 करोड़+',  numEn: '30 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
 ];
 
-// Official data — Ujjain Police Simhastha 2028 presentation
+// Simhastha 2028 snan dates — sourced from published media reporting (Dainik Bhaskar,
+// Times Now, ETV Bharat, Patrika all carry the same three Shahi Snan dates).
+// Only publicly reported dates belong here. Weekday and tithi labels are asserted
+// only where independently corroborated — see the no-unverified-specifics rule in
+// the project HANDOFF.
 const SHAHI_SNANS = [
   {
     num: 1,
-    dateHi: '09 अप्रैल 2028 (रविवार)',   dateEn: '09 Apr 2028 (Sunday)',
-    nameHi: 'प्रथम शाही स्नान — चैत्र पूर्णिमा',   nameEn: 'First Shahi Snan — Chaitra Purnima',
-    noteHi: 'पहला शाही स्नान — सिंहस्थ की शुरुआत', noteEn: 'First Shahi Snan — Simhastha Opens',
+    dateHi: '09 अप्रैल 2028',   dateEn: '09 April 2028',
+    nameHi: 'प्रथम शाही स्नान',   nameEn: 'First Shahi Snan',
+    noteHi: 'पहला शाही स्नान — स्नान पर्व की शुरुआत', noteEn: 'First Shahi Snan — the bathing period opens',
     highlight: true,
   },
   {
     num: 2,
-    dateHi: '19–24 अप्रैल 2028 (6 दिन)',   dateEn: '19–24 Apr 2028 (6 days)',
-    nameHi: 'पंचकोशी यात्रा',   nameEn: 'Panchkoshi Yatra',
-    noteHi: '6 दिन की पवित्र परिक्रमा — उज्जैन के बाहरी क्षेत्र की पैदल यात्रा', noteEn: '6-day sacred circumambulation of greater Ujjain',
-    highlight: false,
-  },
-  {
-    num: 3,
-    dateHi: '24 अप्रैल 2028 (सोमवार)',   dateEn: '24 Apr 2028 (Monday)',
-    nameHi: 'सोमवती अमावस्या — वैशाख कृष्ण',   nameEn: 'Somvati Amavasya — Vaisakh Krishna',
-    noteHi: 'पितृ तर्पण और स्नान का खास दिन', noteEn: 'Special day for ancestral offerings and snan',
-    highlight: false,
-  },
-  {
-    num: 4,
-    dateHi: '27 अप्रैल 2028 (गुरुवार)',  dateEn: '27 Apr 2028 (Thursday)',
-    nameHi: 'द्वितीय शाही स्नान — अक्षय तृतीया',  nameEn: 'Second Shahi Snan — Akshaya Tritiya',
-    noteHi: 'दूसरा शाही स्नान — अक्षय पुण्य का दिन', noteEn: 'Second Shahi Snan — Akshaya Merit',
+    dateHi: '23 अप्रैल 2028',   dateEn: '23 April 2028',
+    nameHi: 'द्वितीय शाही स्नान',   nameEn: 'Second Shahi Snan',
+    noteHi: 'दूसरा शाही स्नान', noteEn: 'Second Shahi Snan',
     highlight: true,
   },
   {
-    num: 5,
-    dateHi: '08 मई 2028 (सोमवार)',       dateEn: '08 May 2028 (Monday)',
-    nameHi: 'तृतीय शाही स्नान — वैशाख पूर्णिमा',  nameEn: 'Third Shahi Snan — Vaisakh Purnima',
-    noteHi: 'तीसरा और आखिरी शाही स्नान — सिंहस्थ का समापन', noteEn: 'Third & Final Shahi Snan — Simhastha Closes',
+    num: 3,
+    dateHi: '08 मई 2028',       dateEn: '08 May 2028',
+    nameHi: 'तृतीय शाही स्नान',  nameEn: 'Third Shahi Snan',
+    noteHi: 'तीसरा और आखिरी शाही स्नान — स्नान पर्व का समापन', noteEn: 'Third and final Shahi Snan — the bathing period closes',
     highlight: true,
   },
 ];
 
-// 13 अखाड़े — Official list from Ujjain Police
+// The 13 akhadas and their three sampradayas are long-established public knowledge.
 const AKHADAS = {
   shaiv: {
     titleHi: 'शैव सम्प्रदाय — 7 अखाड़े',
@@ -146,8 +136,8 @@ export function SimhasthaLanding() {
     {
       q: { hi: 'उज्जैन सिंहस्थ 2028 कब है?', en: 'When is Ujjain Simhastha 2028?' },
       a: {
-        hi: 'उज्जैन सिंहस्थ 2028 (महाकुम्भ) 09 अप्रैल 2028 से 08 मई 2028 तक — कुल 30 दिन — शिप्रा नदी के तट पर आयोजित होगा। तीन शाही स्नान हैं: 09 अप्रैल (चैत्र पूर्णिमा), 27 अप्रैल (अक्षय तृतीया) और 08 मई (वैशाख पूर्णिमा)।',
-        en: 'Ujjain Simhastha 2028 (Mahakumbh) runs from 09 April 2028 to 08 May 2028 — 30 days — on the banks of the Shipra river. The three Shahi Snans are 09 April (Chaitra Purnima), 27 April (Akshaya Tritiya) and 08 May (Vaisakh Purnima).',
+        hi: 'उज्जैन सिंहस्थ 2028 (महाकुम्भ) 09 अप्रैल 2028 से 08 मई 2028 तक — कुल 30 दिन — शिप्रा नदी के तट पर आयोजित होगा। तीन शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को हैं।',
+        en: 'Ujjain Simhastha 2028 (Mahakumbh) runs from 09 April 2028 to 08 May 2028 — 30 days — on the banks of the Shipra river. The three Shahi Snans fall on 09 April, 23 April and 08 May 2028.',
       },
     },
     {
@@ -207,8 +197,8 @@ export function SimhasthaLanding() {
       icon: '📅',
       titleHi: 'कब जाएँ',
       titleEn: 'When to Go',
-      descHi: 'कल्पवास: पूरे 30 दिन चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 27 अप्रैल, 08 मई)। परिवार के साथ जाना है तो वैशाख पूर्णिमा (08 मई 2028) सबसे अच्छा दिन है।',
-      descEn: 'Kalpvas: all 30 days. 3 Shahi Snans (09 Apr, 27 Apr, 08 May). For families, target Vaisakh Purnima (08 May 2028).',
+      descHi: 'कल्पवास: पूरे 30 दिन चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 23 अप्रैल, 08 मई)। परिवार के साथ जाना है तो अंतिम शाही स्नान (08 मई 2028) सबसे अच्छा दिन है।',
+      descEn: 'Kalpvas: all 30 days. 3 Shahi Snans (09 Apr, 23 Apr, 08 May). For families, target the final Shahi Snan (08 May 2028).',
       href: SITE.phoneTel,
       isExternal: true,
       ctaHi: 'पूरी जानकारी — कॉल करें',
@@ -445,8 +435,8 @@ export function SimhasthaLanding() {
 
             <p className="mt-4 text-base leading-relaxed text-ink sm:text-lg">
               {locale === 'hi'
-                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 09 अप्रैल 2028 से 08 मई 2028 तक, कुल 30 दिन चलेगा। इस दौरान तीन शाही स्नान होंगे — 09 अप्रैल (चैत्र पूर्णिमा), 27 अप्रैल (अक्षय तृतीया) और 08 मई (वैशाख पूर्णिमा)। पंचकोशी यात्रा 19 से 24 अप्रैल 2028 तक होगी।'
-                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 09 April 2028 to 08 May 2028 — 30 days in total. Three Shahi Snans fall within it: 09 April (Chaitra Purnima), 27 April (Akshaya Tritiya) and 08 May (Vaisakh Purnima). The Panchkoshi Yatra runs 19–24 April 2028.'}
+                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 09 अप्रैल 2028 से 08 मई 2028 तक, कुल 30 दिन चलेगा। इस दौरान तीन शाही स्नान होंगे — 09 अप्रैल, 23 अप्रैल और 08 मई 2028।'
+                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 09 April 2028 to 08 May 2028 — 30 days in total. Three Shahi Snans fall within it: 09 April, 23 April and 08 May 2028.'}
             </p>
 
             <div className="mt-6 overflow-x-auto">
@@ -477,8 +467,8 @@ export function SimhasthaLanding() {
 
             <p className="mt-4 text-xs leading-relaxed text-ink-soft">
               {locale === 'hi'
-                ? 'स्रोत: उज्जैन पुलिस सिंहस्थ 2028 प्रस्तुति। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
-                : 'Source: Ujjain Police Simhastha 2028 presentation. Dates may be revised by the administration — please reconfirm before travelling.'}
+                ? 'स्रोत: प्रकाशित मीडिया रिपोर्ट्स (दैनिक भास्कर सहित)। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
+                : 'Source: published media reports, including Dainik Bhaskar. Dates may be revised by the administration — please reconfirm before travelling.'}
             </p>
           </div>
         </section>
@@ -510,7 +500,7 @@ export function SimhasthaLanding() {
                   <p>उज्जैन बारह ज्योतिर्लिंगों में से एक — <strong>श्री महाकालेश्वर ज्योतिर्लिंग</strong> — की नगरी है और प्राचीन काल से धर्म, ज्योतिष व काल-गणना का केन्द्र रहा है। शिप्रा नदी के घाट, विशेषकर राम घाट, सिंहस्थ स्नान के मुख्य स्थल हैं। महाकाल की इसी पावन भूमि पर सिंहस्थ 2028 का आयोजन होता है।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ 2028 में क्या देखने को मिलेगा</h3>
-                  <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 27 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे 30 दिन चलते हैं।</p>
+                  <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 23 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे 30 दिन चलते हैं।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">यात्रा की योजना कैसे बनाएँ</h3>
                   <p>शाही स्नान वाले दिनों में उज्जैन में होटल, धर्मशाला व कुटिया की जगह बहुत जल्दी भर जाती है — इसलिए 6–8 महीने पहले बुकिंग करवाना समझदारी है। दिल्ली, मुम्बई व अहमदाबाद से सीधी ट्रेनें आती हैं और निकटतम हवाई अड्डा इंदौर (55 किमी) है। यात्रा, होटल व दर्शन में सहायता के लिए हमारी टीम से <strong>{SITE.phone}</strong> पर संपर्क करें।</p>
@@ -526,7 +516,7 @@ export function SimhasthaLanding() {
                   <p>Ujjain is the city of <strong>Shri Mahakaleshwar Jyotirlinga</strong>, one of the twelve Jyotirlingas, and has been a centre of dharma, astrology and time-reckoning since ancient times. The ghats of the Shipra — chiefly Ram Ghat — are the principal bathing sites. Simhastha 2028 unfolds on this sacred land of Mahakal.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">What to expect at Simhastha 2028</h3>
-                  <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 27 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Alongside run Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events across all 30 days.</p>
+                  <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 23 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Alongside run Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events across all 30 days.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">How to plan your trip</h3>
                   <p>Hotels, dharmshalas and kutiyas in Ujjain fill very fast on Shahi Snan days, so booking 6–8 months ahead is wise. Direct trains arrive from Delhi, Mumbai and Ahmedabad, and the nearest airport is Indore (55 km). For help with travel, stay and darshan, contact our team at <strong>{SITE.phone}</strong>.</p>
@@ -620,13 +610,13 @@ export function SimhasthaLanding() {
                 : '* Exact dates will be confirmed via government notification. Minor variations possible per the panchang.'}
             </p>
             <p className="text-center text-[11px] text-ink-mute/70 font-serif italic mt-2 max-w-2xl mx-auto">
-              {locale === 'hi' ? 'स्रोत: उज्जैन पुलिस — सिंहस्थ महाकुम्भ 2028 आधिकारिक प्रस्तुति' : 'Source: Ujjain Police — Simhastha Mahakumbh 2028 official presentation'}
+              {locale === 'hi' ? 'स्रोत: प्रकाशित मीडिया रिपोर्ट्स (दैनिक भास्कर सहित)' : 'Source: published media reports, including Dainik Bhaskar'}
             </p>
           </div>
         </section>
 
         {/* ═══════════════════════════════════════════════════════════
-            SECTION 3B — 13 AKHADAS (Official Ujjain Police data)
+            SECTION 3B — 13 AKHADAS
         ═══════════════════════════════════════════════════════════ */}
         <section id="akhadas" className="bg-cream py-20 sm:py-24 border-b border-cream-dark">
           <div className="container-page max-w-6xl mx-auto">
