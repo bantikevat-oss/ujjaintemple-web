@@ -122,6 +122,7 @@ export function SimhasthaLanding() {
   const { locale } = useI18n();
   const prefix = locale === 'en' ? '' : '/hi';
   const countdown = useCountdown();
+  const simhasthaGuides = articlesByCategory('simhastha');
 
   // Lead with the exact head term, then the top long-tail modifier ("date"),
   // which is where almost all of this page's impressions come from.
@@ -778,6 +779,49 @@ export function SimhasthaLanding() {
             </div>
           </div>
         </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 5.6 — IN-DEPTH GUIDES (topical cluster)
+            A single landing page cannot outrank purpose-built Simhastha sites for
+            "simhastha 2028". These supporting articles are the topical cluster; the
+            links here are what let the landing page distribute and receive their
+            authority. Articles already link back to this page and to each other.
+        ═══════════════════════════════════════════════════════════ */}
+        {simhasthaGuides.length > 0 && (
+          <section className="bg-cream py-16 sm:py-20 border-b border-cream-dark">
+            <div className="container-page max-w-5xl mx-auto">
+              <h2 className={`text-center font-extrabold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+                {locale === 'hi' ? 'सिंहस्थ 2028 — विस्तृत मार्गदर्शिकाएँ' : 'Simhastha 2028 — In-depth Guides'}
+              </h2>
+              <p className="mt-3 text-center text-sm text-ink-soft sm:text-base">
+                {locale === 'hi'
+                  ? 'शाही स्नान घाट, अखाड़ा परम्परा, नागा साधु, कल्पवास और सिंहस्थ का इतिहास — विस्तार से।'
+                  : 'Snan ghats, akhada traditions, naga sadhus, kalpvas and the history of Simhastha — in detail.'}
+              </p>
+
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {simhasthaGuides.map((a) => (
+                  <Link
+                    key={a.slug}
+                    to={`${prefix}${articlePath(a)}`}
+                    className="group flex flex-col rounded-xl border border-gold/30 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-saffron/60 hover:shadow-md"
+                  >
+                    <h3 className={`font-bold text-maroon leading-snug ${locale === 'hi' ? 'font-sanskrit text-lg' : 'font-serif text-base'}`}>
+                      {a.title[locale]}
+                    </h3>
+                    <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-soft line-clamp-3">
+                      {a.shortIntro[locale]}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-maroon group-hover:text-saffron-700">
+                      {locale === 'hi' ? 'पढ़ें' : 'Read guide'}
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* ═══════════════════════════════════════════════════════════
             SECTION 6 — GLOBAL LEAD CTA

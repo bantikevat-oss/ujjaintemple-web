@@ -12,7 +12,12 @@ RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 # ── Removed content → closest live page (SEO 301) ──
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakal-lok-corridor/?$ /mandirs/mahakal-lok/ [L,R=301]
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /mandirs/mahakaleshwar/ [L,R=301]
-# Simhastha sub-pages consolidated into single landing (SEO focus on 'simhastha 2028')
+# Simhastha sub-pages: the 2026-07-06 consolidation 301'd every sub-page to the landing.
+# 2026-08-06 — five were restored to rebuild the topical cluster for 'simhastha 2028'
+# (a single page cannot outrank purpose-built Simhastha sites). Those five must serve
+# 200, so they are excluded here; every other sub-page still folds into the landing.
+# Keep this list in sync with src/content/simhastha/*.json.
+RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide)/?$
 RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 
 # ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──
