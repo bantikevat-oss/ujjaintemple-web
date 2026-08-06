@@ -66,7 +66,7 @@ export function ThingsToDo() {
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple`}
         description={description}
         path={path}
         locale={locale}

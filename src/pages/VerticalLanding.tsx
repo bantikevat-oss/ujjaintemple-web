@@ -33,7 +33,7 @@ export function VerticalLanding({ category, titleHi, titleEn, introHi, introEn, 
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple`}
         description={description}
         path={path}
         locale={locale}

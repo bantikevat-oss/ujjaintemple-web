@@ -25,6 +25,14 @@ export default defineConfig({
           if (id.includes('node_modules/lucide-react/')) {
             return 'icons';
           }
+          // Temple/tour/puja JSON is pulled in by an eager import.meta.glob, so all 183
+          // full records land in whatever chunk imports them. Left in the entry chunk
+          // they roughly tripled it (166 KB → 438 KB gzipped) and pushed mobile FCP from
+          // 3.5s to 4.4s. Splitting them out lets the app shell and the content download
+          // in parallel and keeps the content cacheable across navigations.
+          if (id.includes('/src/content/')) {
+            return 'content';
+          }
         },
       },
     },

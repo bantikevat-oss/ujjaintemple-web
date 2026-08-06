@@ -8,31 +8,27 @@ interface Props extends SeoMeta {
   children?: ReactNode;
 }
 
-// ── Locale-specific keyword sets ──────────────────────────────────────────
-// Priority order (Aman locked 2026-06-27): BRAND first ("Ujjain Temple", "Simhastha 2028") → MONEY (Hotel/Taxi-in-Ujjain,
-// darshan packages, cab routes, puja services) → SECONDARY brand (specific mandir names).
-// VIP-darshan / Bhasma-Aarti-booking / live-darshan terms REMOVED (hard-rule: no temple-side darshan authorization).
-const KEYWORDS_HI =
-  'उज्जैन के मंदिर, उज्जैन मंदिर, उज्जैन के प्रसिद्ध मंदिर, ujjain temple, सिंहस्थ 2028, सिंहस्थ 2028 उज्जैन, उज्जैन कुम्भ मेला 2028, शाही स्नान 2028, उज्जैन महाकुंभ 2028, simhastha 2028, उज्जैन में होटल, महाकाल मंदिर के पास होटल, उज्जैन में टैक्सी, उज्जैन कैब बुकिंग, इंदौर से उज्जैन टैक्सी, भोपाल से उज्जैन टैक्सी, उज्जैन दर्शन पैकेज, उज्जैन टूर एंड ट्रैवल, महाकाल दर्शन टूर, उज्जैन में पंडित जी, ऑनलाइन पूजा बुकिंग उज्जैन, काल सर्प दोष पूजा उज्जैन, मंगल दोष निवारण पूजा उज्जैन, नाग बलि पूजा उज्जैन, महाकालेश्वर ज्योतिर्लिंग उज्जैन, महाकाल मंदिर उज्जैन, महाकाल लोक कॉरिडोर, काल भैरव मंदिर उज्जैन, हरसिद्धि शक्तिपीठ उज्जैन, मंगलनाथ मंदिर उज्जैन, चिंतामन गणेश मंदिर उज्जैन, सांदीपनि आश्रम उज्जैन, राम घाट उज्जैन';
-
-const KEYWORDS_EN =
-  'Ujjain Temple, Ujjain Temples, Temples in Ujjain, Famous Temples in Ujjain, Simhastha 2028, Ujjain Simhastha 2028, Ujjain Kumbh Mela 2028, Shahi Snan 2028, Ujjain Mahakumbh 2028, Hotel in Ujjain, Hotels in Ujjain, Hotels near Mahakal Temple, Taxi in Ujjain, Cab in Ujjain, Ujjain Taxi Booking, Indore to Ujjain Taxi, Bhopal to Ujjain Taxi, Ujjain to Omkareshwar Cab, Ujjain Darshan Package, Tour and Travel in Ujjain, Mahakal Darshan Tour, Pandit for Puja in Ujjain, Online Puja Booking Ujjain, Kaal Sarp Dosh Puja Ujjain, Mangal Dosh Nivaran Puja Ujjain, Nag Bali Puja Ujjain, Mahakaleshwar Jyotirlinga Ujjain, Mahakal Temple Ujjain, Mahakal Lok Corridor, Kal Bhairav Temple Ujjain, Harsiddhi Shaktipeeth Ujjain, Mangalnath Mandir Ujjain, Chintaman Ganesh Temple Ujjain, Sandipani Ashram Ujjain, Ram Ghat Ujjain';
-
 export function SEOHead({ title, description, path, locale, image, type = 'website', publishedTime, modifiedTime, schemas = [], children }: Props) {
   const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
   const hreflangs = buildHreflang(path);
   const ogImage = image || `${SITE.url}/og/default.webp`;
-  const keywords = locale === 'hi' ? KEYWORDS_HI : KEYWORDS_EN;
 
   return (
     <>
     <Head>
+      {/* charset MUST be emitted first. react-helmet injects this block ahead of the
+          static tags in index.html, which pushed the template's <meta charset> to
+          ~byte 5000 — far past the 1024-byte window browsers scan, forcing an
+          encoding guess and a parser restart on every page. */}
+      <meta charSet="UTF-8" />
       <html lang={locale === 'hi' ? 'hi-IN' : 'en-IN'} />
       <title>{title}</title>
       <meta name="description" content={description} />
 
       {/* ── Core SEO ────────────────────────────────────────────────────────── */}
-      <meta name="keywords" content={keywords} />
+      {/* <meta name="keywords"> intentionally removed: Google dropped support in 2009 and
+          Bing treats stuffing as a negative signal. The same 812-char blob shipped on
+          every page, made all 442 pages look topically identical, and delayed charset. */}
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />

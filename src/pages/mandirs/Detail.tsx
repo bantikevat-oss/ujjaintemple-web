@@ -92,9 +92,17 @@ export function MandirDetail({ slug }: DetailProps) {
 
   const path = `/mandirs/${mandir.slug}/`;
   const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
+  // Many temple names already end in "Ujjain" ("Gopal Mandir Ujjain") — appending the
+  // city unconditionally produced "Gopal Mandir Ujjain Ujjain". Only add it when absent.
+  const nameHi = mandir.name.hi;
+  const nameEn = mandir.name.en;
+  const withCityHi = /उज्जैन/.test(nameHi) ? nameHi : `${nameHi} उज्जैन`;
+  const withCityEn = /\bUjjain\b/i.test(nameEn) ? nameEn : `${nameEn} Ujjain`;
+  // Phone number dropped from <title>: Google rewrites titles carrying one, and it
+  // burns SERP pixel width that the keyword needs. It stays in the description + CTAs.
   const title = mandir.seoTitle?.[locale] ?? (locale === 'hi'
-    ? `${mandir.name.hi} उज्जैन — दर्शन समय, इतिहास, कैसे पहुँचें | ${SITE.phone}`
-    : `${mandir.name.en} Ujjain — Darshan Time, History, How to Reach | ${SITE.phone}`);
+    ? `${withCityHi} — दर्शन समय, आरती, इतिहास व कैसे पहुँचें`
+    : `${withCityEn} — Darshan Timings, Aarti, History & How to Reach`);
   const description = mandir.seoDescription?.[locale] ?? (locale === 'hi'
     ? `${mandir.shortIntro.hi.substring(0, 150)}... यात्रा सहायता: ${SITE.phone}`
     : `${mandir.shortIntro.en.substring(0, 150)}... Plan darshan: ${SITE.phone}`);

@@ -12,3 +12,6 @@ coverage/
 .idea/
 .vscode/
 *.swp
+
+# image panel secret (server-only, never commit)
+panel/secret.php

@@ -214,7 +214,7 @@ export function TransportLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple`}
         description={description}
         path="/transport-in-ujjain/"
         locale={locale}

@@ -123,7 +123,10 @@ export function Home() {
         path="/"
         locale={locale}
         schemas={[organizationSchema(), websiteSchema(), simhastha2028EventSchema()]}
-      />
+      >
+        {/* LCP preload — home only. Keep in sync with HomeGraphicHero's <img> src. */}
+        <link rel="preload" as="image" href="/images/hero/mahakal-lok-hero.webp" type="image/webp" fetchPriority="high" />
+      </SEOHead>
       <Layout>
         {/* HERO — premium graphic, no photo dependency */}
         <HomeGraphicHero />

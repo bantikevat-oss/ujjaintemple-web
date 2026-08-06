@@ -48,6 +48,13 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
   const rawPhoto = mandir.photos[0];
   // If no photo set, or it's the legacy placeholder, fall back to our SVG
   const photoJpg = !rawPhoto || rawPhoto.includes('placeholder') ? PLACEHOLDER : rawPhoto;
+  // Cards render ~390px wide, but the source images are sized for the detail-page hero.
+  // scripts/gen-thumbs.mjs emits a 600px WebP per photo; use it here so a 183-card grid
+  // doesn't pull full-size photos. Falls back to the original, then to the SVG placeholder.
+  const thumb =
+    photoJpg === PLACEHOLDER
+      ? PLACEHOLDER
+      : photoJpg.replace(/^\/images\/mandirs\/(.+)\.[^.]+$/, '/images/mandirs/thumbs/$1.webp');
   const tType = locale === 'hi' ? (TEMPLE_TYPE_HI[mandir.templeType] || mandir.templeType) : mandir.templeType;
   const area = locale === 'hi' ? (AREA_HI[mandir.locationArea] || mandir.locationArea) : mandir.locationArea;
   const altName = locale === 'hi' ? mandir.name.en : mandir.name.hi;
@@ -62,7 +69,7 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
         {/* PHOTO — 3:2 ratio, image zoom on hover */}
         <div className="relative aspect-[3/2] overflow-hidden bg-maroon-900">
           <img
-            src={photoJpg}
+            src={thumb}
             alt={`${mandir.name[locale]} — ${altName} | Ujjain Mandir`}
             loading={loading}
             decoding="async"
@@ -70,7 +77,9 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
             height={400}
             onError={(e) => {
               const img = e.currentTarget;
-              if (!img.src.endsWith(PLACEHOLDER)) img.src = PLACEHOLDER;
+              // thumb missing → original photo → SVG placeholder
+              if (img.src.includes('/thumbs/') && photoJpg !== PLACEHOLDER) img.src = photoJpg;
+              else if (!img.src.endsWith(PLACEHOLDER)) img.src = PLACEHOLDER;
             }}
             className="h-full w-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.05]"
           />

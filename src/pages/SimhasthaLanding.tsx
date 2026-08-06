@@ -133,9 +133,11 @@ export function SimhasthaLanding() {
   const prefix = locale === 'en' ? '' : '/hi';
   const countdown = useCountdown();
 
+  // Lead with the exact head term, then the top long-tail modifier ("date"),
+  // which is where almost all of this page's impressions come from.
   const title = locale === 'hi'
-    ? 'सिंहस्थ 2028 उज्जैन — सम्पूर्ण गाइड'
-    : 'Simhastha 2028 Ujjain — Complete Guide';
+    ? 'सिंहस्थ 2028 उज्जैन — तिथि, शाही स्नान व सम्पूर्ण गाइड'
+    : 'Simhastha 2028 Ujjain — Dates, Shahi Snan & Complete Guide';
   const description = locale === 'hi'
     ? 'सिंहस्थ महाकुम्भ 2028 (09 अप्रैल — 08 मई · 30 दिन) — 3 शाही स्नान, 13 अखाड़े, कल्पवास, होटल, ट्रांसपोर्ट की पूरी जानकारी। 30 करोड़+ श्रद्धालुओं का महापर्व। मदद: +91 74007 24456'
     : 'Simhastha Mahakumbh 2028 (09 April – 08 May · 30 days) — 3 Shahi Snans, 13 Akhadas, Kalpvas, hotels, transport. Guide for 30 crore+ pilgrims.';
@@ -217,7 +219,7 @@ export function SimhasthaLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple`}
         description={description}
         path="/simhastha-2028/"
         locale={locale}
@@ -425,6 +427,59 @@ export function SimhasthaLanding() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 2A — DIRECT DATE ANSWER (featured-snippet target)
+            "simhastha 2028 date" is the single highest-volume query this page
+            gets impressions for, but the dates were previously buried in the
+            timeline further down. This is a short, self-contained answer block
+            placed high on the page: question as H2, ~50-word answer, compact table.
+        ═══════════════════════════════════════════════════════════ */}
+        <section className="bg-cream py-12 sm:py-16 border-b border-gold/25">
+          <div className="container-page max-w-3xl mx-auto">
+            <h2 className={`font-extrabold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+              {locale === 'hi' ? 'सिंहस्थ 2028 कब है?' : 'When is Simhastha 2028?'}
+            </h2>
+
+            <p className="mt-4 text-base leading-relaxed text-ink sm:text-lg">
+              {locale === 'hi'
+                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 09 अप्रैल 2028 से 08 मई 2028 तक, कुल 30 दिन चलेगा। इस दौरान तीन शाही स्नान होंगे — 09 अप्रैल (चैत्र पूर्णिमा), 27 अप्रैल (अक्षय तृतीया) और 08 मई (वैशाख पूर्णिमा)। पंचकोशी यात्रा 19 से 24 अप्रैल 2028 तक होगी।'
+                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 09 April 2028 to 08 May 2028 — 30 days in total. Three Shahi Snans fall within it: 09 April (Chaitra Purnima), 27 April (Akshaya Tritiya) and 08 May (Vaisakh Purnima). The Panchkoshi Yatra runs 19–24 April 2028.'}
+            </p>
+
+            <div className="mt-6 overflow-x-auto">
+              <table className="w-full min-w-[420px] border-collapse text-left text-sm sm:text-base">
+                <caption className="sr-only">
+                  {locale === 'hi' ? 'सिंहस्थ 2028 उज्जैन — शाही स्नान तिथियाँ' : 'Simhastha 2028 Ujjain — Shahi Snan dates'}
+                </caption>
+                <thead>
+                  <tr className="border-b-2 border-gold/50">
+                    <th scope="col" className="py-2.5 pr-4 font-semibold text-maroon">{locale === 'hi' ? 'तिथि' : 'Date'}</th>
+                    <th scope="col" className="py-2.5 font-semibold text-maroon">{locale === 'hi' ? 'अवसर' : 'Occasion'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {SHAHI_SNANS.map((s) => (
+                    <tr key={s.num} className="border-b border-gold/20 align-top">
+                      <td className={`py-2.5 pr-4 whitespace-nowrap ${s.highlight ? 'font-bold text-maroon' : 'text-ink-soft'}`}>
+                        {locale === 'hi' ? s.dateHi : s.dateEn}
+                      </td>
+                      <td className={`py-2.5 ${s.highlight ? 'font-semibold text-ink' : 'text-ink-soft'}`}>
+                        {locale === 'hi' ? s.nameHi : s.nameEn}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mt-4 text-xs leading-relaxed text-ink-soft">
+              {locale === 'hi'
+                ? 'स्रोत: उज्जैन पुलिस सिंहस्थ 2028 प्रस्तुति। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
+                : 'Source: Ujjain Police Simhastha 2028 presentation. Dates may be revised by the administration — please reconfirm before travelling.'}
+            </p>
           </div>
         </section>
 

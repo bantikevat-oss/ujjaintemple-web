@@ -122,7 +122,7 @@ export function PujaLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple — ${SITE.phone}`}
+        title={`${title} | Ujjain Temple`}
         description={description}
         path="/puja-in-ujjain/"
         locale={locale}
