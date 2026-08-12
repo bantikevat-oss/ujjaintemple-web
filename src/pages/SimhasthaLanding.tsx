@@ -440,7 +440,7 @@ export function SimhasthaLanding() {
             timeline further down. This is a short, self-contained answer block
             placed high on the page: question as H2, ~50-word answer, compact table.
         ═══════════════════════════════════════════════════════════ */}
-        <section className="bg-cream py-12 sm:py-16 border-b border-gold/25">
+        <section id="dates" className="bg-cream py-12 sm:py-16 border-b border-gold/25">
           <div className="container-page max-w-3xl mx-auto">
             <h2 className={`font-extrabold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
               {locale === 'hi' ? 'सिंहस्थ 2028 कब है?' : 'When is Simhastha 2028?'}
@@ -524,9 +524,48 @@ export function SimhasthaLanding() {
         </section>
 
         {/* ═══════════════════════════════════════════════════════════
+            SECTION 2A-ii — ON THIS PAGE (jump links)
+            The landing is one long page and was pulling zero clicks while a
+            single cluster article out-ranked it. Named section anchors plus a
+            visible index give Google something to build "jump to" sitelinks
+            from, and give readers a way into the section they actually came
+            for. Sits below the date answer so the snippet target stays first.
+        ═══════════════════════════════════════════════════════════ */}
+        <nav
+          aria-label={locale === 'hi' ? 'इस पृष्ठ पर' : 'On this page'}
+          className="bg-cream-light border-b border-gold/25 py-8 sm:py-10"
+        >
+          <div className="container-page max-w-3xl mx-auto">
+            <h2 className={`text-maroon font-bold ${locale === 'hi' ? 'font-sanskrit text-xl' : 'font-serif text-xl'}`}>
+              {locale === 'hi' ? 'इस पृष्ठ पर' : 'On this page'}
+            </h2>
+            <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-2.5">
+              {[
+                { id: 'dates',      hi: 'सिंहस्थ 2028 कब है',   en: 'When is Simhastha 2028' },
+                { id: 'overview',   hi: 'सिंहस्थ क्या है',        en: 'What is Simhastha' },
+                { id: 'shahi-snan', hi: 'शाही स्नान तिथियाँ',    en: 'Shahi Snan dates' },
+                { id: 'akhadas',    hi: '13 अखाड़े',              en: 'The 13 Akhadas' },
+                { id: 'planning',   hi: 'यात्रा की तैयारी',       en: 'Planning your trip' },
+                { id: 'faq',        hi: 'अक्सर पूछे प्रश्न',      en: 'FAQs' },
+                { id: 'guides',     hi: 'विस्तृत गाइड',           en: 'In-depth guides' },
+              ].map((item) => (
+                <li key={item.id}>
+                  <a
+                    href={`#${item.id}`}
+                    className="inline-flex min-h-[44px] items-center rounded-full border border-gold/40 bg-white/70 px-4 text-sm text-ink transition-colors hover:border-maroon hover:text-maroon"
+                  >
+                    {locale === 'hi' ? item.hi : item.en}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        {/* ═══════════════════════════════════════════════════════════
             SECTION 2B — OVERVIEW / ABOUT (deep crawlable content)
         ═══════════════════════════════════════════════════════════ */}
-        <section className="bg-white py-16 sm:py-24 border-b border-cream">
+        <section id="overview" className="bg-white py-16 sm:py-24 border-b border-cream">
           <div className="container-page max-w-3xl mx-auto">
             <div className="text-center mb-10">
               <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
@@ -579,7 +618,7 @@ export function SimhasthaLanding() {
         {/* ═══════════════════════════════════════════════════════════
             SECTION 3 — SHAHI SNAN TIMELINE
         ═══════════════════════════════════════════════════════════ */}
-        <section className="bg-cream-light py-20 sm:py-28 border-b border-cream-dark">
+        <section id="shahi-snan" className="bg-cream-light py-20 sm:py-28 border-b border-cream-dark">
           <div className="container-page max-w-5xl mx-auto">
 
             <div className="text-center mb-16">
@@ -718,7 +757,7 @@ export function SimhasthaLanding() {
         {/* ═══════════════════════════════════════════════════════════
             SECTION 5 — PLANNING ESSENTIALS (dark)
         ═══════════════════════════════════════════════════════════ */}
-        <section className="py-20 sm:py-28 border-b border-gold/15" style={{ background: 'linear-gradient(160deg, #200505 0%, #2f0707 50%, #1a0404 100%)' }}>
+        <section id="planning" className="py-20 sm:py-28 border-b border-gold/15" style={{ background: 'linear-gradient(160deg, #200505 0%, #2f0707 50%, #1a0404 100%)' }}>
           <div className="container-page max-w-5xl mx-auto">
 
             <div className="text-center mb-14">
@@ -804,7 +843,7 @@ export function SimhasthaLanding() {
         {/* ═══════════════════════════════════════════════════════════
             SECTION 5.5 — FAQ (Ujjain Simhastha 2028)
         ═══════════════════════════════════════════════════════════ */}
-        <section className="py-16 sm:py-20 px-4" style={{ background: 'linear-gradient(180deg, #1a0404 0%, #300707 100%)' }}>
+        <section id="faq" className="py-16 sm:py-20 px-4" style={{ background: 'linear-gradient(180deg, #1a0404 0%, #300707 100%)' }}>
           <div className="max-w-3xl mx-auto">
             <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-center mb-10" style={{ color: '#E0C374' }}>
               {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 — अक्सर पूछे जाने वाले प्रश्न' : 'Ujjain Simhastha 2028 — Frequently Asked Questions'}
@@ -837,7 +876,7 @@ export function SimhasthaLanding() {
             authority. Articles already link back to this page and to each other.
         ═══════════════════════════════════════════════════════════ */}
         {simhasthaGuides.length > 0 && (
-          <section className="bg-cream py-16 sm:py-20 border-b border-cream-dark">
+          <section id="guides" className="bg-cream py-16 sm:py-20 border-b border-cream-dark">
             <div className="container-page max-w-5xl mx-auto">
               <h2 className={`text-center font-extrabold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
                 {locale === 'hi' ? 'सिंहस्थ 2028 — विस्तृत मार्गदर्शिकाएँ' : 'Simhastha 2028 — In-depth Guides'}

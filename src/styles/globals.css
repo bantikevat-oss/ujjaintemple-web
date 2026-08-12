@@ -137,3 +137,9 @@
     @apply fixed inset-x-0 bottom-0 z-40 flex items-center justify-center gap-2 bg-maroon px-4 py-3 text-white shadow-[0_-4px_12px_rgba(0,0,0,0.12)] md:hidden;
   }
 }
+
+/* The header is sticky, so an in-page anchor jump would otherwise park the
+   target heading underneath it. Applies to whatever the URL fragment matches. */
+:target {
+  scroll-margin-top: 6rem;
+}
