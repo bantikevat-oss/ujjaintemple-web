@@ -233,8 +233,11 @@ export function simhastha2028EventSchema() {
     '@type': 'Event',
     name: 'Simhastha Mahakumbh 2028 — Ujjain Kumbh Mela',
     alternateName: ['Ujjain Kumbh 2028', 'Simhastha 2028', 'Ujjain Mahakumbh 2028'],
-    startDate: '2028-04-09',
-    endDate: '2028-05-08',
+    // Mela period, not the Shahi Snan window. Webdunia, Times Now Navbharat,
+    // Patrika and ETV Bharat all report 27 Mar – 27 May 2028 for the mela; the
+    // three Shahi Snans (9 Apr, 23 Apr, 8 May) sit inside it as subEvents below.
+    startDate: '2028-03-27',
+    endDate: '2028-05-27',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
@@ -251,7 +254,32 @@ export function simhastha2028EventSchema() {
     },
     image: `${SITE.url}/og/default.webp`,
     description:
-      'Simhastha Mahakumbh 2028 — once-in-12-years grand pilgrimage at the sacred banks of Shipra river in Ujjain. Shahi Snan dates, kalpvas, 13 akhada processions, and darshan at Mahakaleshwar Jyotirlinga.',
+      'Simhastha Mahakumbh 2028 — once-in-12-years grand pilgrimage at the sacred banks of Shipra river in Ujjain, held 27 March to 27 May 2028. Three Shahi Snans (9 April, 23 April, 8 May 2028) plus seven proposed parv snans, kalpvas, 13 akhada processions, and darshan at Mahakaleshwar Jyotirlinga.',
+    // The three Shahi Snans as subEvents — these are what "simhastha 2028 date"
+    // and "shahi snan dates" searchers actually want in the rich result.
+    subEvent: [
+      { date: '2028-04-09', name: 'First Shahi Snan — Simhastha 2028 Ujjain' },
+      { date: '2028-04-23', name: 'Second Shahi Snan — Simhastha 2028 Ujjain' },
+      { date: '2028-05-08', name: 'Third & Final Shahi Snan — Simhastha 2028 Ujjain' },
+    ].map(({ date, name }) => ({
+      '@type': 'Event',
+      name,
+      startDate: date,
+      endDate: date,
+      eventStatus: 'https://schema.org/EventScheduled',
+      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+      location: {
+        '@type': 'Place',
+        name: 'Shipra Ghat, Ujjain, Madhya Pradesh',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Ujjain',
+          addressRegion: 'Madhya Pradesh',
+          postalCode: '456001',
+          addressCountry: 'IN',
+        },
+      },
+    })),
     organizer: { '@type': 'Organization', name: 'Madhya Pradesh Government', url: 'https://mp.gov.in' },
     performer: {
       '@type': 'PerformingGroup',

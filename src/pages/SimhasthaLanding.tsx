@@ -11,7 +11,10 @@ import { breadcrumbSchema, itemListSchema, simhastha2028EventSchema, faqSchema }
 import { PhoneCall, ArrowRight } from 'lucide-react';
 
 // ─── Countdown ───────────────────────────────────────────────────
-const SIMHASTHA_START = new Date('2028-04-09T00:00:00');
+// Counts down to the start of the MELA (27 Mar 2028), not the first Shahi Snan.
+// Webdunia, Times Now Navbharat, Patrika and ETV Bharat all report the mela as
+// 27 Mar – 27 May 2028; the Shahi Snan window (9 Apr – 8 May) sits inside it.
+const SIMHASTHA_START = new Date('2028-03-27T00:00:00');
 
 type Countdown = { d: number; h: number; m: number; s: number; ready: boolean };
 
@@ -38,14 +41,16 @@ function useCountdown(): Countdown {
 
 // ─── Data ─────────────────────────────────────────────────────────
 const STATS = [
-  { numHi: '30 दिन',     numEn: '30 Days',     labelHi: 'महापर्व अवधि',         labelEn: 'Festival Duration' },
+  { numHi: '2 माह',      numEn: '2 Months',    labelHi: 'महापर्व अवधि',         labelEn: 'Festival Duration' },
   { numHi: '3',           numEn: '3',            labelHi: 'शाही स्नान',            labelEn: 'Shahi Snans' },
   { numHi: '13',          numEn: '13',           labelHi: 'अखाड़े',               labelEn: 'Akhadas' },
   { numHi: '30 करोड़+',  numEn: '30 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
 ];
 
-// Simhastha 2028 snan dates — sourced from published media reporting (Dainik Bhaskar,
-// Times Now, ETV Bharat, Patrika all carry the same three Shahi Snan dates).
+// Simhastha 2028 snan dates — sourced from published media reporting (Webdunia,
+// Times Now Navbharat, ETV Bharat, Patrika all carry the same three Shahi Snan
+// dates; re-verified 2026-08-12). Seven parv snans are also reported as proposed,
+// but no outlet has published their dates yet — so they are named, not dated.
 // Only publicly reported dates belong here. Weekday and tithi labels are asserted
 // only where independently corroborated — see the no-unverified-specifics rule in
 // the project HANDOFF.
@@ -127,18 +132,25 @@ export function SimhasthaLanding() {
   // Lead with the exact head term, then the top long-tail modifier ("date"),
   // which is where almost all of this page's impressions come from.
   const title = locale === 'hi'
-    ? 'सिंहस्थ 2028 उज्जैन — तिथि, शाही स्नान व सम्पूर्ण गाइड'
-    : 'Simhastha 2028 Ujjain — Dates, Shahi Snan & Complete Guide';
+    ? 'सिंहस्थ 2028 उज्जैन — तिथि 27 मार्च से 27 मई, शाही स्नान गाइड'
+    : 'Simhastha 2028 Ujjain — Dates: 27 March–27 May, Shahi Snan Guide';
   const description = locale === 'hi'
-    ? 'सिंहस्थ महाकुम्भ 2028 (09 अप्रैल — 08 मई · 30 दिन) — 3 शाही स्नान, 13 अखाड़े, कल्पवास, होटल, ट्रांसपोर्ट की पूरी जानकारी। 30 करोड़+ श्रद्धालुओं का महापर्व। मदद: +91 74007 24456'
-    : 'Simhastha Mahakumbh 2028 (09 April – 08 May · 30 days) — 3 Shahi Snans, 13 Akhadas, Kalpvas, hotels, transport. Guide for 30 crore+ pilgrims.';
+    ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 7 पर्व स्नान भी प्रस्तावित। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड। मदद: +91 74007 24456'
+    : 'Simhastha Mahakumbh 2028 Ujjain — mela runs 27 March to 27 May 2028 (2 months). 3 Shahi Snans: 09 April, 23 April, 08 May, plus 7 proposed parv snans. 13 Akhadas, Kalpvas, hotel & transport guide.';
 
   const FAQS = [
     {
-      q: { hi: 'उज्जैन सिंहस्थ 2028 कब है?', en: 'When is Ujjain Simhastha 2028?' },
+      q: { hi: 'उज्जैन सिंहस्थ 2028 कब से कब तक है?', en: 'When is Ujjain Simhastha 2028 — start and end dates?' },
       a: {
-        hi: 'उज्जैन सिंहस्थ 2028 (महाकुम्भ) 09 अप्रैल 2028 से 08 मई 2028 तक — कुल 30 दिन — शिप्रा नदी के तट पर आयोजित होगा। तीन शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को हैं।',
-        en: 'Ujjain Simhastha 2028 (Mahakumbh) runs from 09 April 2028 to 08 May 2028 — 30 days — on the banks of the Shipra river. The three Shahi Snans fall on 09 April, 23 April and 08 May 2028.',
+        hi: 'उज्जैन सिंहस्थ 2028 (महाकुम्भ) 27 मार्च 2028 से 27 मई 2028 तक — कुल दो माह — शिप्रा नदी के तट पर आयोजित होगा। इसी अवधि में तीन शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को हैं, तथा सात पर्व स्नान भी प्रस्तावित हैं।',
+        en: 'Ujjain Simhastha 2028 (Mahakumbh) runs from 27 March 2028 to 27 May 2028 — two months — on the banks of the Shipra river. Within it, the three Shahi Snans fall on 09 April, 23 April and 08 May 2028, and seven parv snans are also proposed.',
+      },
+    },
+    {
+      q: { hi: 'सिंहस्थ 2028 में शाही स्नान कब-कब है?', en: 'What are the Shahi Snan dates for Simhastha 2028?' },
+      a: {
+        hi: 'सिंहस्थ 2028 में तीन शाही स्नान हैं — प्रथम 09 अप्रैल 2028, द्वितीय 23 अप्रैल 2028 और तृतीय व अंतिम 08 मई 2028। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं, जिनकी तिथियाँ अभी घोषित नहीं हुई हैं। शाही स्नान वाले दिनों में सबसे अधिक भीड़ रहती है।',
+        en: 'Simhastha 2028 has three Shahi Snans — the first on 09 April 2028, the second on 23 April 2028, and the third and final on 08 May 2028. Seven parv snans are also proposed, but their dates have not been announced yet. Crowds peak on Shahi Snan days.',
       },
     },
     {
@@ -198,8 +210,8 @@ export function SimhasthaLanding() {
       icon: '📅',
       titleHi: 'कब जाएँ',
       titleEn: 'When to Go',
-      descHi: 'कल्पवास: पूरे 30 दिन चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 23 अप्रैल, 08 मई)। परिवार के साथ जाना है तो अंतिम शाही स्नान (08 मई 2028) सबसे अच्छा दिन है।',
-      descEn: 'Kalpvas: all 30 days. 3 Shahi Snans (09 Apr, 23 Apr, 08 May). For families, target the final Shahi Snan (08 May 2028).',
+      descHi: 'मेला 27 मार्च से 27 मई 2028 तक चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 23 अप्रैल, 08 मई)। परिवार के साथ जाना है तो अंतिम शाही स्नान (08 मई 2028) सबसे अच्छा दिन है।',
+      descEn: 'The mela runs 27 March to 27 May 2028. 3 Shahi Snans (09 Apr, 23 Apr, 08 May). For families, target the final Shahi Snan (08 May 2028).',
       href: SITE.phoneTel,
       isExternal: true,
       ctaHi: 'पूरी जानकारी — कॉल करें',
@@ -295,8 +307,8 @@ export function SimhasthaLanding() {
               </h1>
               <p className="text-cream/70 font-serif text-base sm:text-xl tracking-wide">
                 {locale === 'hi'
-                  ? '09 अप्रैल — 08 मई  ·  शिप्रा तट, उज्जैन'
-                  : '09 April — 08 May  ·  Shipra Ghat, Ujjain'}
+                  ? '27 मार्च — 27 मई 2028  ·  शिप्रा तट, उज्जैन'
+                  : '27 March — 27 May 2028  ·  Shipra Ghat, Ujjain'}
               </p>
             </div>
 
@@ -436,9 +448,40 @@ export function SimhasthaLanding() {
 
             <p className="mt-4 text-base leading-relaxed text-ink sm:text-lg">
               {locale === 'hi'
-                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 09 अप्रैल 2028 से 08 मई 2028 तक, कुल 30 दिन चलेगा। इस दौरान तीन शाही स्नान होंगे — 09 अप्रैल, 23 अप्रैल और 08 मई 2028।'
-                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 09 April 2028 to 08 May 2028 — 30 days in total. Three Shahi Snans fall within it: 09 April, 23 April and 08 May 2028.'}
+                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 27 मार्च 2028 से 27 मई 2028 तक, कुल दो माह चलेगा। इस अवधि में तीन शाही स्नान होंगे — 09 अप्रैल, 23 अप्रैल और 08 मई 2028 — तथा सात पर्व स्नान भी प्रस्तावित हैं।'
+                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 27 March 2028 to 27 May 2028 — two months in total. Three Shahi Snans fall within it — 09 April, 23 April and 08 May 2028 — and seven parv snans are also proposed.'}
             </p>
+
+            {/* At-a-glance: the mela window and the snan window are different
+                numbers and searchers ask for both. Keeping them side by side
+                stops the page from looking incomplete against competitors that
+                lead with "27 March – 27 May". */}
+            <dl className="mt-6 grid gap-3 sm:grid-cols-2">
+              {[
+                {
+                  termHi: 'मेला अवधि', termEn: 'Mela period',
+                  valHi: '27 मार्च — 27 मई 2028', valEn: '27 March — 27 May 2028',
+                  noteHi: 'पूरा सिंहस्थ, लगभग दो माह', noteEn: 'The full Simhastha, about two months',
+                },
+                {
+                  termHi: 'शाही स्नान अवधि', termEn: 'Shahi Snan window',
+                  valHi: '09 अप्रैल — 08 मई 2028', valEn: '09 April — 08 May 2028',
+                  noteHi: 'तीनों शाही स्नान इसी बीच', noteEn: 'All three Shahi Snans fall in here',
+                },
+              ].map((row) => (
+                <div key={row.termEn} className="rounded-lg border border-gold/30 bg-white/60 px-4 py-3">
+                  <dt className="font-serif text-xs uppercase tracking-wider text-ink-soft">
+                    {locale === 'hi' ? row.termHi : row.termEn}
+                  </dt>
+                  <dd className="mt-1 text-base font-bold text-maroon sm:text-lg">
+                    {locale === 'hi' ? row.valHi : row.valEn}
+                  </dd>
+                  <dd className="mt-0.5 text-xs text-ink-soft">
+                    {locale === 'hi' ? row.noteHi : row.noteEn}
+                  </dd>
+                </div>
+              ))}
+            </dl>
 
             <div className="mt-6 overflow-x-auto">
               <table className="w-full min-w-[420px] border-collapse text-left text-sm sm:text-base">
@@ -466,10 +509,16 @@ export function SimhasthaLanding() {
               </table>
             </div>
 
+            <p className="mt-5 rounded-lg border border-gold/30 bg-white/60 px-4 py-3 text-sm leading-relaxed text-ink">
+              {locale === 'hi'
+                ? 'इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं। इनकी तिथियाँ अभी आधिकारिक रूप से घोषित नहीं हुई हैं — घोषणा होते ही यहाँ अपडेट कर दी जाएँगी।'
+                : 'Seven parv snans are also proposed. Their dates have not been officially announced yet — this page will be updated as soon as they are.'}
+            </p>
+
             <p className="mt-4 text-xs leading-relaxed text-ink-soft">
               {locale === 'hi'
-                ? 'स्रोत: प्रकाशित मीडिया रिपोर्ट्स (दैनिक भास्कर सहित)। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
-                : 'Source: published media reports, including Dainik Bhaskar. Dates may be revised by the administration — please reconfirm before travelling.'}
+                ? 'स्रोत: प्रकाशित मीडिया रिपोर्ट्स (वेबदुनिया, टाइम्स नाउ नवभारत, पत्रिका, ईटीवी भारत)। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
+                : 'Source: published media reports (Webdunia, Times Now Navbharat, Patrika, ETV Bharat). Dates may be revised by the administration — please reconfirm before travelling.'}
             </p>
           </div>
         </section>
@@ -492,7 +541,7 @@ export function SimhasthaLanding() {
             <div className="space-y-6 text-ink-soft text-base sm:text-lg leading-relaxed">
               {locale === 'hi' ? (
                 <>
-                  <p><strong className="text-maroon">उज्जैन सिंहस्थ 2028</strong> मध्य प्रदेश के उज्जैन में पवित्र शिप्रा नदी के तट पर आयोजित होने वाला महाकुम्भ है, जो हर 12 वर्ष में एक बार आता है। सिंहस्थ 2028 की अवधि <strong>09 अप्रैल 2028 से 08 मई 2028</strong> तक — कुल 30 दिन — रहेगी, जिसमें 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है। यह विश्व के सबसे बड़े आध्यात्मिक समागमों में से एक माना जाता है।</p>
+                  <p><strong className="text-maroon">उज्जैन सिंहस्थ 2028</strong> मध्य प्रदेश के उज्जैन में पवित्र शिप्रा नदी के तट पर आयोजित होने वाला महाकुम्भ है, जो हर 12 वर्ष में एक बार आता है। सिंहस्थ 2028 की अवधि <strong>27 मार्च 2028 से 27 मई 2028</strong> तक — कुल दो माह — रहेगी, जिसमें 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है। यह विश्व के सबसे बड़े आध्यात्मिक समागमों में से एक माना जाता है।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ का ज्योतिषीय महत्व</h3>
                   <p>"सिंहस्थ" नाम इस दुर्लभ ग्रह-स्थिति से आता है जब <strong>बृहस्पति (गुरु) सिंह राशि</strong> में और <strong>सूर्य मेष राशि</strong> में प्रवेश करते हैं। इसी कारण उज्जैन के इस कुम्भ को "सिंहस्थ" कहा जाता है। इस अवधि में शिप्रा में स्नान का विशेष धार्मिक महत्व माना जाता है — मान्यता है कि यह आत्मशुद्धि और पुण्य का अवसर है।</p>
@@ -501,14 +550,14 @@ export function SimhasthaLanding() {
                   <p>उज्जैन बारह ज्योतिर्लिंगों में से एक — <strong>श्री महाकालेश्वर ज्योतिर्लिंग</strong> — की नगरी है और प्राचीन काल से धर्म, ज्योतिष व काल-गणना का केन्द्र रहा है। शिप्रा नदी के घाट, विशेषकर राम घाट, सिंहस्थ स्नान के मुख्य स्थल हैं। महाकाल की इसी पावन भूमि पर सिंहस्थ 2028 का आयोजन होता है।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ 2028 में क्या देखने को मिलेगा</h3>
-                  <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 23 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे 30 दिन चलते हैं।</p>
+                  <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 23 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे दो माह चलते हैं।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">यात्रा की योजना कैसे बनाएँ</h3>
                   <p>शाही स्नान वाले दिनों में उज्जैन में होटल, धर्मशाला व कुटिया की जगह बहुत जल्दी भर जाती है — इसलिए 6–8 महीने पहले बुकिंग करवाना समझदारी है। दिल्ली, मुम्बई व अहमदाबाद से सीधी ट्रेनें आती हैं और निकटतम हवाई अड्डा इंदौर (55 किमी) है। यात्रा, होटल व दर्शन में सहायता के लिए हमारी टीम से <strong>{SITE.phone}</strong> पर संपर्क करें।</p>
                 </>
               ) : (
                 <>
-                  <p><strong className="text-maroon">Ujjain Simhastha 2028</strong> is the Mahakumbh held on the banks of the sacred Shipra river in Ujjain, Madhya Pradesh, once every 12 years. Simhastha 2028 runs from <strong>09 April 2028 to 08 May 2028</strong> — a full 30 days — and is expected to draw over 30 crore (300 million) pilgrims, making it one of the largest spiritual gatherings in the world.</p>
+                  <p><strong className="text-maroon">Ujjain Simhastha 2028</strong> is the Mahakumbh held on the banks of the sacred Shipra river in Ujjain, Madhya Pradesh, once every 12 years. Simhastha 2028 runs from <strong>27 March 2028 to 27 May 2028</strong> — a full two months — and is expected to draw over 30 crore (300 million) pilgrims, making it one of the largest spiritual gatherings in the world.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">Astrological significance of Simhastha</h3>
                   <p>The name "Simhastha" comes from the rare planetary alignment when <strong>Jupiter enters Leo (Simha Rashi)</strong> and the <strong>Sun enters Aries (Mesha Rashi)</strong> — which is why Ujjain's Kumbh is called Simhastha. A holy dip in the Shipra during this period is held to be especially sacred, an occasion for inner purity and merit.</p>
@@ -517,7 +566,7 @@ export function SimhasthaLanding() {
                   <p>Ujjain is the city of <strong>Shri Mahakaleshwar Jyotirlinga</strong>, one of the twelve Jyotirlingas, and has been a centre of dharma, astrology and time-reckoning since ancient times. The ghats of the Shipra — chiefly Ram Ghat — are the principal bathing sites. Simhastha 2028 unfolds on this sacred land of Mahakal.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">What to expect at Simhastha 2028</h3>
-                  <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 23 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Alongside run Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events across all 30 days.</p>
+                  <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 23 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Seven parv snans are proposed alongside them. Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events run across all two months.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">How to plan your trip</h3>
                   <p>Hotels, dharmshalas and kutiyas in Ujjain fill very fast on Shahi Snan days, so booking 6–8 months ahead is wise. Direct trains arrive from Delhi, Mumbai and Ahmedabad, and the nearest airport is Indore (55 km). For help with travel, stay and darshan, contact our team at <strong>{SITE.phone}</strong>.</p>
@@ -535,7 +584,7 @@ export function SimhasthaLanding() {
 
             <div className="text-center mb-16">
               <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
-                {locale === 'hi' ? '— पाँच पवित्र तिथियाँ —' : '— Five Sacred Dates —'}
+                {locale === 'hi' ? '— तीन पवित्र तिथियाँ —' : '— Three Sacred Dates —'}
               </p>
               <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon leading-tight">
                 {locale === 'hi' ? 'शाही स्नान 2028' : 'Shahi Snan 2028'}
@@ -543,7 +592,7 @@ export function SimhasthaLanding() {
               <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
               <p className="text-ink-soft text-base sm:text-lg font-serif italic mt-6 max-w-2xl mx-auto leading-relaxed">
                 {locale === 'hi'
-                  ? 'तेरह अखाड़ों के संत‑महंत शोभायात्रा के साथ शिप्रा में स्नान करते हैं — ये हैं वे पाँच मुख्य तिथियाँ'
+                  ? 'तेरह अखाड़ों के संत‑महंत शोभायात्रा के साथ शिप्रा में स्नान करते हैं — ये हैं वे तीन मुख्य तिथियाँ'
                   : 'Saints of the thirteen akhadas process to the Shipra for the royal bath — these are the five key dates'}
               </p>
             </div>

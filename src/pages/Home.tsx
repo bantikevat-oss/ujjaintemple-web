@@ -34,9 +34,9 @@ const COPY = {
     featuredCta: 'पूरी मंदिर सूची',
     simhasthaEyebrow: 'महाकुम्भ',
     simhasthaTitle: 'सिंहस्थ 2028',
-    simhasthaDates: '09 अप्रैल — 08 मई 2028 · 30 दिवस',
+    simhasthaDates: '27 मार्च — 27 मई 2028 · शाही स्नान 09 अप्रैल, 23 अप्रैल, 08 मई',
     simhasthaP:
-      'बारह साल में एक बार। तीन शाही स्नान। 13 अखाड़े। पूरे 30 दिन का आयोजन। 3000 हेक्टेयर का मेला क्षेत्र। सिंहस्थ 2028 की पूरी गाइड — कल्पवास, घाट, अखाड़े, ट्रांसपोर्ट।',
+      'बारह साल में एक बार। तीन शाही स्नान। 13 अखाड़े। पूरे दो माह का आयोजन। 3000 हेक्टेयर का मेला क्षेत्र। सिंहस्थ 2028 की पूरी गाइड — कल्पवास, घाट, अखाड़े, ट्रांसपोर्ट।',
     simhasthaCta: 'गाइड पढ़ें',
     exploreEyebrow: 'विषय',
     exploreTitle: 'इस संग्रह में',
@@ -71,9 +71,9 @@ const COPY = {
     featuredCta: 'See full temple list',
     simhasthaEyebrow: 'Mahakumbh',
     simhasthaTitle: 'Simhastha 2028',
-    simhasthaDates: '09 April — 08 May 2028 · 30 days',
+    simhasthaDates: '27 March — 27 May 2028 · Shahi Snan 09 Apr, 23 Apr, 08 May',
     simhasthaP:
-      'Once in twelve years. Five royal baths. Three akhada traditions. A month of kalpvas. An evolving guide to Simhastha 2028 — kalpvas conduct, ghats, royal-bath calendar, akhada introductions, transit arrangements.',
+      'Once in twelve years. Three royal baths. 13 akhadas. Two months of mela across a 3,000-hectare ground. A full guide to Simhastha 2028 — kalpvas conduct, ghats, royal-bath calendar, akhada introductions, transit arrangements.',
     simhasthaCta: 'Read the guide',
     exploreEyebrow: 'Sections',
     exploreTitle: 'In this collection',
