@@ -16,8 +16,12 @@ RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /man
 # 2026-08-06 — five were restored to rebuild the topical cluster for 'simhastha 2028'
 # (a single page cannot outrank purpose-built Simhastha sites). Those five must serve
 # 200, so they are excluded here; every other sub-page still folds into the landing.
-# Keep this list in sync with src/content/simhastha/*.json.
-RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide)/?$
+# 2026-08-12 — five commercial pages added (accommodation, tour-package, transport,
+# from-indore-bhopal, budget): these carry the "simhastha 2028 + <intent>" long tail
+# and terminate in the hotel/cab/tour money pages.
+# Keep this list in sync with src/content/simhastha/*.json — a slug missing here is
+# built and sitemapped but 301s to the landing, so the page can never rank.
+RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide|simhastha-2028-accommodation|simhastha-2028-tour-package|simhastha-2028-transport-guide|simhastha-2028-from-indore-bhopal|simhastha-2028-budget-guide)/?$
 RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 
 # ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──

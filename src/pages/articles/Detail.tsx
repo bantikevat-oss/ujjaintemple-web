@@ -240,8 +240,20 @@ export function ArticleDetail({ category, slug }: Props) {
     });
   };
 
+  // Markdown links were previously not rendered at all — a body containing
+  // [label](/path) printed the raw brackets and passed no internal link. Only
+  // site-relative paths and tel: are accepted, so a body can never inject an
+  // off-site or javascript: href into the dangerouslySetInnerHTML below.
+  // Relative paths pick up the locale prefix so Hindi articles link to /hi/.
   const renderInline = (s: string) =>
-    s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>');
+    s
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(
+        /\[([^\]]+)\]\((\/[A-Za-z0-9\-._~/#?=&]*|tel:[+0-9\- ]+)\)/g,
+        (_m, label: string, href: string) =>
+          `<a href="${href.startsWith('/') ? prefix + href : href}">${label}</a>`,
+      );
 
   const related = getRelatedArticles(article);
 

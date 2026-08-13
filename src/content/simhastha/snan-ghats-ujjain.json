@@ -89,5 +89,11 @@
   "primaryKeyword": {
     "hi": "उज्जैन के स्नान घाट",
     "en": "Snan ghats Ujjain"
-  }
+  },
+  "relatedSlugs": [
+    "kalpvas-guide",
+    "akhada-traditions-ujjain",
+    "simhastha-2028-accommodation",
+    "simhastha-2028-from-indore-bhopal"
+  ]
 }
