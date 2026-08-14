@@ -154,6 +154,13 @@ export function SimhasthaLanding() {
       },
     },
     {
+      q: { hi: 'सिंहस्थ को और किन नामों से जाना जाता है?', en: 'Is Simhastha the same as Singhasth, Sinhasta or the Ujjain Kumbh?' },
+      a: {
+        hi: 'हाँ — सिंहस्थ को अंग्रेज़ी में Simhastha, Singhasth, Sinhasta या Sihast, कई वर्तनियों में लिखा जाता है, और इसे उज्जैन कुम्भ या सिंहस्थ महाकुम्भ भी कहा जाता है। ये सब एक ही आयोजन के नाम हैं — उज्जैन में शिप्रा तट पर हर 12 वर्ष में होने वाला महाकुम्भ, जो अगली बार 2028 में है।',
+        en: 'Yes — Simhastha is romanised in several ways (Singhasth, Sinhasta, Sihast) and is also called the Ujjain Kumbh or Simhastha Mahakumbh. They all name the same event: the Mahakumbh held on the Shipra in Ujjain every 12 years, next in 2028.',
+      },
+    },
+    {
       q: { hi: 'सिंहस्थ 2028 उज्जैन में कहाँ होता है?', en: 'Where in Ujjain is Simhastha 2028 held?' },
       a: {
         hi: 'सिंहस्थ 2028 उज्जैन में पवित्र शिप्रा नदी के घाटों पर — विशेषकर राम घाट व सिंहस्थ नगर क्षेत्र में — होता है। मुख्य आकर्षण महाकालेश्वर ज्योतिर्लिंग के दर्शन भी रहते हैं।',
@@ -482,6 +489,18 @@ export function SimhasthaLanding() {
                 </div>
               ))}
             </dl>
+
+            {/* GSC shows a large share of this page's impressions arriving on romanised
+                spellings the page never contains — "singhasth ujjain 2028" (pos 3.1),
+                "sinhasta 2028", "sihast 2028", "singhast kab hai". Google is fuzzy-matching
+                them today; naming the variants once, honestly, also reassures the searcher
+                who typed one that they landed on the right event. Kept out of the answer
+                paragraph above so the featured-snippet target stays clean. */}
+            <p className="mt-5 text-sm leading-relaxed text-ink-soft">
+              {locale === 'hi'
+                ? 'अंग्रेज़ी में इसे Simhastha, Singhasth, Sinhasta या Sihast — कई तरह से लिखा जाता है; ये सभी उज्जैन के इसी सिंहस्थ महाकुम्भ के नाम हैं, जिसे उज्जैन कुम्भ भी कहा जाता है।'
+                : 'Simhastha is also written Singhasth, Sinhasta or Sihast — all refer to this same Ujjain Mahakumbh, which is also called the Ujjain Kumbh.'}
+            </p>
 
             <div className="mt-6 overflow-x-auto">
               <table className="w-full min-w-[420px] border-collapse text-left text-sm sm:text-base">

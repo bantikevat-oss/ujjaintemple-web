@@ -15,6 +15,57 @@ import { placeOfWorshipSchema, breadcrumbSchema, faqSchema } from '../../lib/sch
 
 interface DetailProps { slug: string; }
 
+/**
+ * "<temple> timings" is the biggest query family this site ranks for (pos 5–11 on
+ * hundreds of impressions each) and it converted at ~0% CTR: every snippet *promised*
+ * "darshan timings, aarti schedule" without ever showing a time, so the answer the
+ * searcher wanted never appeared in the SERP. Lead the description with the actual
+ * hours; the rest of the hand-written copy follows in whatever room is left.
+ */
+const META_MAX = 165;
+
+function leadWithTiming(name: string, timing: string, base: string, locale: 'hi' | 'en') {
+  const head = locale === 'hi'
+    ? `${name} दर्शन समय: ${timing}। `
+    : `${name} darshan timings: ${timing}. `;
+  let tail = base.trim();
+  // Hand-written seoDescriptions open with "<Temple name> — <detail>". The head already
+  // names the temple, so drop that opener; the length guard keeps a genuine mid-sentence
+  // dash from being mistaken for one.
+  const dash = tail.search(/\s[—–-]\s/);
+  if (dash > 0 && dash < 60) tail = tail.slice(dash + 3).trim();
+  // Most of them then open the detail with the very thing the head just answered.
+  tail = tail
+    .replace(/darshan timings\s*(?:,|and)?\s*/gi, '')
+    .replace(/दर्शन समय\s*(?:,|एवं|और)?\s*/g, '');
+  // Trailing "Plan your visit: +91 …" gets truncated into a half phone number once the
+  // timing takes the front of the snippet — worse than no number. The phone stays on the
+  // page, in the CTAs and in the schema.
+  tail = tail.replace(/\s*[^.।]*\+91[\d\s+]*[.।]?\s*$/, '').trim();
+  if (locale === 'en' && tail) tail = tail.charAt(0).toUpperCase() + tail.slice(1);
+  const room = META_MAX - head.length;
+  if (room < 40 || !tail) return head.trim();
+  if (tail.length > room) tail = `${tail.slice(0, room).replace(/\s+\S*$/, '')}…`;
+  return head + tail;
+}
+
+/**
+ * schema.org openingHours needs `Mo-Su 06:00-21:00`; the content JSON carries a human
+ * string ("Approx. 6:00 AM – 9:00 PM", sometimes with a trailing note). Emitting the
+ * human string made the property unparseable on all 183 temple pages, so normalise it
+ * and simply omit the property when a timing does not fit the expected shape.
+ */
+function toSchemaHours(summary: string): string[] | undefined {
+  const m = summary.match(/(\d{1,2}):(\d{2})\s*(AM|PM)\s*[–-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!m) return undefined;
+  const to24 = (h: string, min: string, mer: string) => {
+    let hr = parseInt(h, 10) % 12;
+    if (mer.toUpperCase() === 'PM') hr += 12;
+    return `${String(hr).padStart(2, '0')}:${min}`;
+  };
+  return [`Mo-Su ${to24(m[1], m[2], m[3])}-${to24(m[4], m[5], m[6])}`];
+}
+
 const TEMPLE_TYPE_HI: Record<string, string> = {
   Jyotirlinga: 'ज्योतिर्लिंग',
   'Shakti Peeth': 'शक्ति पीठ',
@@ -103,9 +154,13 @@ export function MandirDetail({ slug }: DetailProps) {
   const title = mandir.seoTitle?.[locale] ?? (locale === 'hi'
     ? `${withCityHi} — दर्शन समय, आरती, इतिहास व कैसे पहुँचें`
     : `${withCityEn} — Darshan Timings, Aarti, History & How to Reach`);
-  const description = mandir.seoDescription?.[locale] ?? (locale === 'hi'
-    ? `${mandir.shortIntro.hi.substring(0, 150)}... यात्रा सहायता: ${SITE.phone}`
-    : `${mandir.shortIntro.en.substring(0, 150)}... Plan darshan: ${SITE.phone}`);
+  const nameForMeta = locale === 'hi' ? withCityHi : withCityEn;
+  const description = leadWithTiming(
+    nameForMeta,
+    mandir.darshanTimingSummary[locale],
+    mandir.seoDescription?.[locale] ?? mandir.shortIntro[locale],
+    locale,
+  );
 
   const nearby = getNearbyMandirs(mandir);
   const pujaSlugs = relatedPujaSlugs(mandir.slug, mandir.templeType).filter((s) => PUJA_LINKS[s]);
@@ -116,7 +171,7 @@ export function MandirDetail({ slug }: DetailProps) {
       description: mandir.shortIntro.en,
       image: `${SITE.url}${mandir.photos[0] || '/images/og/default.webp'}`,
       url: canonical, address: mandir.address.en, geo: mandir.geo,
-      hours: [`Mo-Su ${mandir.darshanTimingSummary.en}`], telephone: mandir.phone,
+      hours: toSchemaHours(mandir.darshanTimingSummary.en), telephone: mandir.phone,
     }),
     breadcrumbSchema({ items: [
       { name: locale === 'hi' ? 'होम' : 'Home', url: SITE.url },
