@@ -1,38 +1,6 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Building2, Clock, ShieldCheck, BadgeCheck } from 'lucide-react';
+import { MapPin, Phone, CalendarDays, ArrowRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
-
-/* ─── Trishul SVG ─────────────────────────────────────────────────────────── */
-function Trishul() {
-  return (
-    <svg width="30" height="50" viewBox="0 0 30 50" fill="none" aria-hidden>
-      <defs>
-        <linearGradient id="trg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%"   stopColor="#FFF5B0" />
-          <stop offset="35%"  stopColor="#FFD700" />
-          <stop offset="65%"  stopColor="#C8970A" />
-          <stop offset="100%" stopColor="#8B6914" />
-        </linearGradient>
-      </defs>
-      {/* Center prong */}
-      <path d="M15 0C15 0 12 7 12 12C12 16 13.2 18 15 20C16.8 18 18 16 18 12C18 7 15 0 15 0Z"
-        fill="url(#trg)" />
-      {/* Left prong */}
-      <path d="M7 5C7 5 5 9.5 5 12.5C5 15.5 6 17 7.5 18L9 16.5C9.5 15 10 13.5 10 12C10 9 7 5 7 5Z"
-        fill="url(#trg)" />
-      {/* Right prong */}
-      <path d="M23 5C23 5 20 9 20 12C20 13.5 20.5 15 21 16.5L22.5 18C24 17 25 15.5 25 12.5C25 9.5 23 5 23 5Z"
-        fill="url(#trg)" />
-      {/* Cross bar */}
-      <rect x="4" y="19" width="22" height="2.5" rx="1.2" fill="url(#trg)" />
-      {/* Staff */}
-      <rect x="13.8" y="21" width="2.4" height="22" rx="1" fill="url(#trg)" />
-      {/* Base knob */}
-      <ellipse cx="15" cy="44" rx="4.5" ry="3" fill="url(#trg)" opacity="0.85" />
-      <ellipse cx="15" cy="47" rx="2.5" ry="1.5" fill="url(#trg)" opacity="0.6" />
-    </svg>
-  );
-}
 
 /* ─── Temple silhouette icon ──────────────────────────────────────────────── */
 function TempleIcon({ v = 0 }: { v?: number }) {
@@ -63,23 +31,6 @@ function TempleIcon({ v = 0 }: { v?: number }) {
   );
 }
 
-/* ─── Stat icon circle ────────────────────────────────────────────────────── */
-function StatCircle({ icon }: { icon: string }) {
-  const cls = 'w-3.5 h-3.5 text-gold';
-  const el = {
-    building: <Building2 className={cls} />,
-    clock:    <Clock className={cls} />,
-    shield:   <ShieldCheck className={cls} />,
-    check:    <BadgeCheck className={cls} />,
-  }[icon] ?? <BadgeCheck className={cls} />;
-  return (
-    <div className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center flex-shrink-0"
-      style={{ background: 'rgba(212,175,55,0.08)' }}>
-      {el}
-    </div>
-  );
-}
-
 /* ─── Main hero ──────────────────────────────────────────────────────────── */
 export function HomeGraphicHero() {
   const { locale } = useI18n();
@@ -89,7 +40,8 @@ export function HomeGraphicHero() {
     hi: {
       om:      '|| ॐ नमः शिवाय ||',
       h1:      'उज्जैन',
-      sub:     'महाकाल की नगरी',
+      sub:     'महाकाल की नगरी — मंदिर, दर्शन व यात्रा गाइड',
+      simhastha: 'सिंहस्थ 2028 उज्जैन — पूरी गाइड',
       tagline: 'आस्था और अध्यात्म की पावन भूमि',
       ctaA:    'मंदिर दर्शन करें',
       ctaB:    'अभी कॉल करें',
@@ -101,17 +53,12 @@ export function HomeGraphicHero() {
         { name: 'मंगलनाथ',    type: 'मंदिर' },
         { name: 'रामघाट',     type: 'पवित्र स्थल' },
       ],
-      stats: [
-        { icon: 'building', val: '100+',   label: 'प्रमुख मंदिर' },
-        { icon: 'clock',    val: '24/7',   label: 'दर्शन सुविधा' },
-        { icon: 'shield',   val: 'सुरक्षित', label: 'श्रेष्ठ अनुभव' },
-        { icon: 'check',    val: 'आसान',   label: 'बुकिंग' },
-      ],
     },
     en: {
       om:      '|| Om Namah Shivay ||',
       h1:      'Ujjain',
-      sub:     'City of Mahakal',
+      sub:     'City of Mahakal — Temples, Darshan & Travel Guide',
+      simhastha: 'Simhastha 2028 Ujjain — Complete Guide',
       tagline: 'Sacred land of faith and spirituality',
       ctaA:    'Visit Temples',
       ctaB:    'Call Now',
@@ -122,12 +69,6 @@ export function HomeGraphicHero() {
         { name: 'Harsiddhi Mata', type: 'Shakti Peeth' },
         { name: 'Mangalnath',    type: 'Temple' },
         { name: 'Ramghat',       type: 'Sacred Site' },
-      ],
-      stats: [
-        { icon: 'building', val: '100+',  label: 'Major Temples' },
-        { icon: 'clock',    val: '24/7',  label: 'Darshan Access' },
-        { icon: 'shield',   val: 'Safe',  label: 'Best Experience' },
-        { icon: 'check',    val: 'Easy',  label: 'Booking' },
       ],
     },
   }[locale];
@@ -221,9 +162,39 @@ export function HomeGraphicHero() {
       >
         {/* no background — image already dark on left */}
 
-        {/* H1 — gold metallic text */}
+        {/* ── Simhastha 2028 entry pill ──────────────────────────────────────
+            The homepage is this site's highest-authority page and it carried NO
+            link to /simhastha-2028/ — the one page we are trying to rank #1.
+            A keyword-anchored link from here passes that authority; it is also
+            the thing a pilgrim landing on the homepage actually wants next.
+            Deliberately carries no dates: dates live on the Simhastha page,
+            under its disclaimer, in one place only. */}
+        <Link
+          to={`${prefix}/simhastha-2028/`}
+          className="hf2 relative inline-flex items-center gap-2 rounded-full backdrop-blur-sm
+            transition-all duration-200 hover:-translate-y-0.5 mb-3"
+          style={{
+            border: '1px solid rgba(212,175,55,0.45)',
+            background: 'rgba(0,0,0,0.42)',
+            color: 'rgba(255,245,210,0.95)',
+            padding: 'clamp(6px,0.9vw,8px) clamp(12px,1.8vw,18px)',
+            fontSize: 'clamp(0.68rem, 1.05vw, 0.8rem)',
+            letterSpacing: '0.04em',
+            boxShadow: '0 4px 18px rgba(0,0,0,0.45)',
+          }}
+        >
+          <CalendarDays className="w-3.5 h-3.5 flex-shrink-0" style={{ color: '#D4AF37' }} />
+          <span className="font-semibold">{t.simhastha}</span>
+          <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 opacity-80" />
+        </Link>
+
+        {/* H1 — gold metallic word + the keyword line the <title> actually targets.
+            Was: an <h1> containing only "उज्जैन" with the descriptive line sitting
+            outside it in an <h2>. The page title targets "उज्जैन के मंदिर — सिंहस्थ
+            2028…", so the H1 was answering a broader term than the page competes
+            for. Both lines now live inside the H1; the visual hierarchy is unchanged. */}
         <h1
-          className="hf3 relative font-sanskrit font-black tracking-tight"
+          className="hf3 relative font-sanskrit font-black tracking-tight text-center lg:text-left"
           style={{ fontSize: 'clamp(3.6rem, 8.5vw, 8rem)' }}
         >
           <span style={{
@@ -238,19 +209,18 @@ export function HomeGraphicHero() {
           }}>
             {t.h1}
           </span>
+          <span
+            className="hf4 block font-serif font-bold text-white mt-1"
+            style={{
+              fontSize: 'clamp(1.15rem, 2.9vw, 2.35rem)',
+              textShadow: '0 2px 16px rgba(0,0,0,0.7)',
+              letterSpacing: '0.02em',
+              lineHeight: 1.25,
+            }}
+          >
+            {t.sub}
+          </span>
         </h1>
-
-        {/* Subtitle */}
-        <h2
-          className="hf4 relative font-serif font-bold text-white mt-1"
-          style={{
-            fontSize: 'clamp(1.4rem, 3.5vw, 2.9rem)',
-            textShadow: '0 2px 16px rgba(0,0,0,0.7)',
-            letterSpacing: '0.02em',
-          }}
-        >
-          {t.sub}
-        </h2>
 
         {/* Tagline */}
         <p
@@ -265,12 +235,17 @@ export function HomeGraphicHero() {
         </p>
 
         {/* ── 5 temple badges ── */}
-        <div className="hf5 relative mt-5 flex items-stretch">
+        {/* Was a single non-wrapping row: at 375px the fifth badge ("रामघाट") ran off
+            the right edge and the two-line names collided with the row below. Wrapping
+            and centring on mobile keeps all five readable; the desktop row is unchanged.
+            The divider is dropped on mobile because a wrapped row leaves it dangling. */}
+        <div className="hf5 relative mt-5 flex flex-wrap justify-center lg:flex-nowrap lg:justify-start items-stretch gap-y-3">
           {t.temples.map((tm, i) => (
             <div
               key={tm.name}
-              className="flex flex-col items-center gap-1 px-3 first:pl-0"
-              style={{ borderRight: i < t.temples.length - 1 ? '1px solid rgba(212,175,55,0.22)' : 'none' }}
+              className="flex flex-col items-center gap-1 px-2.5 sm:px-3 lg:first:pl-0
+                border-r-0 lg:border-r"
+              style={{ borderRightColor: i < t.temples.length - 1 ? 'rgba(212,175,55,0.22)' : 'transparent' }}
             >
               <TempleIcon v={i} />
               <p className="text-white font-semibold text-center leading-tight"

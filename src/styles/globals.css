@@ -2,28 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted fonts — declare lightweight @font-face stubs.
-   Actual woff2 files dropped into /public/fonts/ via image-asset task. */
+/* Self-hosted fonts — local() only.
+   2026-08-21: the url('/fonts/*.woff2') sources were removed. Those six files were
+   never added to /public/fonts/ (nor to prod), so every page load fired six 404s
+   and then fell through to the stack below anyway. Removing the dead URLs changes
+   nothing visually — it only stops the failed requests.
+   TO RE-ENABLE PROPER WEBFONTS: drop the woff2 files into /public/fonts/, add
+   `, url('/fonts/<file>.woff2') format('woff2')` back after each local(), and
+   un-comment the two preload links in index.html. */
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('DM Sans'), url('/fonts/dmsans-400.woff2') format('woff2');
+  src: local('DM Sans');
 }
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('DM Sans Bold'), url('/fonts/dmsans-700.woff2') format('woff2');
+  src: local('DM Sans Bold');
 }
 @font-face {
   font-family: 'Noto Sans Devanagari';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Devanagari'), url('/fonts/notosans-devanagari-400.woff2') format('woff2');
+  src: local('Noto Sans Devanagari');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 @font-face {
@@ -31,7 +37,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Noto Sans Devanagari Bold'), url('/fonts/notosans-devanagari-700.woff2') format('woff2');
+  src: local('Noto Sans Devanagari Bold');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 @font-face {
@@ -39,14 +45,14 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Cormorant Garamond Bold'), url('/fonts/cormorant-700.woff2') format('woff2');
+  src: local('Cormorant Garamond Bold');
 }
 @font-face {
   font-family: 'Tiro Devanagari Sanskrit';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Tiro Devanagari Sanskrit'), url('/fonts/tiro-devanagari-400.woff2') format('woff2');
+  src: local('Tiro Devanagari Sanskrit');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 

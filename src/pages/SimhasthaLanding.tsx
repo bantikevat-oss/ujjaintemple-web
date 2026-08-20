@@ -935,6 +935,32 @@ export function SimhasthaLanding() {
         ═══════════════════════════════════════════════════════════ */}
         <GlobalLeadSection sourcePage="simhastha-landing" defaultService="simhastha" />
 
+        {/* ═══════════════════════════════════════════════════════════
+            SECTION 7 — PAGE-LEVEL DISCLAIMER (Aman, 2026-08-21)
+            The dates on this page come from published media reporting, NOT from
+            any official notification. Saying so in one visible place — rather than
+            only in the small source-note under the table — is what keeps the page
+            honest if the administration revises a date. Never cite or reproduce
+            the confidential government presentation here.
+        ═══════════════════════════════════════════════════════════ */}
+        <section
+          aria-label={locale === 'hi' ? 'अस्वीकरण' : 'Disclaimer'}
+          className="bg-cream-light border-t border-gold/25 py-8 sm:py-10"
+        >
+          <div className="container-page max-w-3xl mx-auto">
+            <div className="rounded-xl border border-gold/30 bg-white/70 px-5 py-4">
+              <h2 className={`text-maroon font-bold ${locale === 'hi' ? 'font-sanskrit text-base' : 'font-serif text-base'}`}>
+                {locale === 'hi' ? 'अस्वीकरण' : 'Disclaimer'}
+              </h2>
+              <p className="mt-2 text-[13px] leading-relaxed text-ink-soft">
+                {locale === 'hi'
+                  ? 'इस पृष्ठ पर दी गई सिंहस्थ 2028 की तिथियाँ प्रकाशित मीडिया रिपोर्ट्स पर आधारित हैं, किसी आधिकारिक अधिसूचना पर नहीं। मेला अवधि, शाही स्नान एवं पर्व स्नान की तिथियों में प्रशासन द्वारा संशोधन संभव है। यात्रा, होटल अथवा यात्रा-व्यवस्था की बुकिंग से पूर्व कृपया आधिकारिक घोषणा से पुष्टि अवश्य कर लें। UjjainTemple.com एक स्वतंत्र सूचना एवं यात्रा-सहायता मंच है — इसका मध्य प्रदेश शासन, जिला प्रशासन, मेला प्राधिकरण अथवा किसी मंदिर प्रबंध समिति से कोई आधिकारिक सम्बन्ध नहीं है।'
+                  : 'The Simhastha 2028 dates on this page are based on published media reports, not on any official notification. The mela window, Shahi Snan and parv snan dates may be revised by the administration. Please reconfirm against the official announcement before booking travel, hotels or any travel arrangement. UjjainTemple.com is an independent information and travel-assistance platform, and has no official affiliation with the Government of Madhya Pradesh, the district administration, the mela authority or any temple management committee.'}
+              </p>
+            </div>
+          </div>
+        </section>
+
       </Layout>
     </>
   );
