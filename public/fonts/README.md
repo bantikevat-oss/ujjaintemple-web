@@ -6,12 +6,16 @@ fallback stack — the intended typefaces were reaching nobody.
 
 | File | Family | Weight | Subset |
 |---|---|---|---|
-| `dmsans-400.woff2` | DM Sans | 400 | latin |
-| `dmsans-700.woff2` | DM Sans | 700 | latin |
+| `dmsans-variable.woff2` | DM Sans | 400–700 (variable) | latin |
 | `cormorant-700.woff2` | Cormorant Garamond | 700 | latin |
-| `notosans-devanagari-400.woff2` | Noto Sans Devanagari | 400 | devanagari |
-| `notosans-devanagari-700.woff2` | Noto Sans Devanagari | 700 | devanagari |
+| `notosans-devanagari-variable.woff2` | Noto Sans Devanagari | 400–700 (variable) | devanagari |
 | `tiro-devanagari-400.woff2` | Tiro Devanagari Sanskrit | 400 | devanagari |
+
+**Why only four files for six faces:** DM Sans and Noto Sans Devanagari are variable
+fonts, and Google serves a **byte-identical** file for weight 400 and weight 700
+(confirmed by md5, 2026-08-21). Downloading them as `-400` and `-700` made a Hindi
+page fetch the same 118 KB twice. Each is now one `@font-face` with
+`font-weight: 400 700`, and the browser instances the weight from the variable font.
 
 Source: the woff2 builds served by `fonts.googleapis.com/css2` (Chrome UA), fetched
 directly from `fonts.gstatic.com`. Only the subset each face is actually used for is

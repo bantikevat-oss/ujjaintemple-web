@@ -7,8 +7,12 @@
    never been uploaded, so every page load fired six 404s and silently fell through
    to the fallback stack — i.e. nobody was seeing the intended typefaces.
    Files are the Google Fonts woff2 builds, latin subset for the Latin faces and
-   devanagari subset for the two Devanagari ones — see fonts/README.md for the
-   exact sources and the OFL licence.
+   devanagari subset for the Devanagari ones — see fonts/README.md for the exact
+   sources and the OFL licence.
+   DM Sans and Noto Sans Devanagari are VARIABLE fonts: Google serves byte-identical
+   files for weight 400 and 700 (verified by md5 on 2026-08-21). Shipping them under
+   two names made a Hindi page pull the same 118 KB twice. One face each with a
+   `font-weight: 400 700` range fixes that — the browser instances the weight.
    local() stays FIRST on purpose: Noto Sans Devanagari ships on most Android
    devices, so a large share of this site's traffic skips the 118 KB download.
    NOTE — do NOT add <link rel=preload> for these. index.html is shared by both
@@ -18,31 +22,16 @@
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 700;   /* one VARIABLE file covers the range */
   font-display: swap;
-  src: local('DM Sans'), url('/fonts/dmsans-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'DM Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('DM Sans Bold'), url('/fonts/dmsans-700.woff2') format('woff2');
+  src: local('DM Sans'), url('/fonts/dmsans-variable.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Sans Devanagari';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400 700;   /* one VARIABLE file covers the range */
   font-display: swap;
-  src: local('Noto Sans Devanagari'), url('/fonts/notosans-devanagari-400.woff2') format('woff2');
-  unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
-}
-@font-face {
-  font-family: 'Noto Sans Devanagari';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Noto Sans Devanagari Bold'), url('/fonts/notosans-devanagari-700.woff2') format('woff2');
+  src: local('Noto Sans Devanagari'), url('/fonts/notosans-devanagari-variable.woff2') format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 @font-face {
