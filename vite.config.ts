@@ -25,13 +25,23 @@ export default defineConfig({
           if (id.includes('node_modules/lucide-react/')) {
             return 'icons';
           }
-          // Temple/tour/puja JSON is pulled in by an eager import.meta.glob, so all 183
-          // full records land in whatever chunk imports them. Left in the entry chunk
-          // they roughly tripled it (166 KB → 438 KB gzipped) and pushed mobile FCP from
-          // 3.5s to 4.4s. Splitting them out lets the app shell and the content download
-          // in parallel and keeps the content cacheable across navigations.
+          // Content JSON is pulled in by eager import.meta.globs, so it lands in whatever
+          // chunk imports it. It MUST be split by consumer, not lumped together:
+          //
+          // The 183 full mandir records (1.4 MB) are read by exactly one module,
+          // pages/mandirs/Detail.tsx, which is now behind a lazy route. Article JSON is
+          // read by the landing pages, which are eager. While both shared ONE manual
+          // chunk, the eager half kept the whole chunk in the entry graph and Vite
+          // modulepreloaded all 395 KB gzipped on EVERY page — home page included —
+          // for a site whose copy is already baked into the SSG HTML.
+          //
+          // Keeping them apart lets 'content-mandirs' become a genuinely async chunk
+          // that only the temple detail pages fetch.
+          if (id.includes('/src/content/mandirs/')) {
+            return 'content-mandirs';
+          }
           if (id.includes('/src/content/')) {
-            return 'content';
+            return 'content-articles';
           }
         },
       },

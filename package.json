@@ -6,11 +6,12 @@
   "description": "UjjainTemple.com — bilingual mandir + Simhastha 2028 + travel + puja info hub. SSG. Lead-gen primary.",
   "scripts": {
     "dev": "vite",
-    "build": "vite-react-ssg build && node scripts/sitemap-gen.mjs && node scripts/pagefind-build.mjs",
+    "build": "node scripts/content-index-gen.mjs && vite-react-ssg build && node scripts/sitemap-gen.mjs && node scripts/pagefind-build.mjs",
     "build:vite": "vite build",
     "preview": "vite preview --port 4173 --host",
     "lint": "tsc --noEmit",
-    "audit:content": "node scripts/content-audit.mjs"
+    "audit:content": "node scripts/content-audit.mjs",
+    "gen:content-index": "node scripts/content-index-gen.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

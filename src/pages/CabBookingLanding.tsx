@@ -8,7 +8,7 @@ import { SITE } from '../lib/site';
 import { breadcrumbSchema, faqSchema, taxiServiceSchema } from '../lib/schemas';
 import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { articlesByCategory, articlePath } from '../data/articles';
+import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import type { ReactNode } from 'react';
 
 // Inline styled phone link — inherits surrounding font, renders premium maroon bold

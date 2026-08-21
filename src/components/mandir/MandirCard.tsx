@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, ArrowUpRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
-import type { Mandir } from '../../lib/types';
+import type { MandirListItem } from '../../data/mandirs-index';
 
-interface Props { mandir: Mandir; featured?: boolean; index?: number; }
+/* Typed on the SLIM shape — this card only ever reads list fields, and typing it
+   on the full Mandir forced every caller to ship all 183 full records. A full
+   Mandir is still assignable, so Detail.tsx's "nearby" cards are unaffected. */
+interface Props { mandir: MandirListItem; featured?: boolean; index?: number; }
 
 const TEMPLE_TYPE_HI: Record<string, string> = {
   Jyotirlinga: 'ज्योतिर्लिंग',

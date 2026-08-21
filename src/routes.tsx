@@ -2,9 +2,7 @@ import type { RouteRecord } from 'vite-react-ssg';
 import { I18nProvider, type Locale } from './i18n';
 import { Home } from './pages/Home';
 import { MandirIndex } from './pages/mandirs/Index';
-import { MandirDetail } from './pages/mandirs/Detail';
 import { Mahadev84Page } from './pages/Mahadev84';
-import { ArticleDetail } from './pages/articles/Detail';
 import { VerticalLanding } from './pages/VerticalLanding';
 import { SimhasthaLanding } from './pages/SimhasthaLanding';
 import { TransportLanding } from './pages/TransportLanding';
@@ -19,8 +17,8 @@ import { ContactPage } from './pages/ContactPage';
 import { PrivacyPage } from './pages/PrivacyPage';
 import { TermsPage } from './pages/TermsPage';
 import { NotFound } from './pages/NotFound';
-import { mandirs } from './data/mandirs';
-import { articlesByCategory } from './data/articles';
+import { mandirList } from './data/mandirs-index';
+import { articleListByCategory as articlesByCategory } from './data/articles-index';
 
 const withLocale = (locale: Locale, Component: React.FC) => (
   <I18nProvider locale={locale}><Component /></I18nProvider>
@@ -38,9 +36,15 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     { path: `${basePath}mandirs/`, element: withLocale(locale, MandirIndex) },
     // 84 Mahadev of Ujjain — Chaurasi Mahadev list
     { path: `${basePath}84-mahadev-ujjain/`, element: withLocale(locale, Mahadev84Page) },
-    ...mandirs.map((m) => ({
+    // `lazy` (not `element`) on purpose — see pages/mandirs/DetailRoute.tsx. Detail.tsx
+    // is the only consumer of the 1.4 MB full-record glob; importing it statically here
+    // put that data in the entry graph and modulepreloaded it on every page.
+    ...mandirList.map((m) => ({
       path: `${basePath}mandirs/${m.slug}/`,
-      element: withLocaleProps(locale, MandirDetail, { slug: m.slug }),
+      lazy: async () => {
+        const mod = await import('./pages/mandirs/DetailRoute');
+        return { Component: locale === 'hi' ? mod.MandirDetailHi : mod.MandirDetailEn };
+      },
     })) as RouteRecord[],
 
     // Hotels
@@ -62,7 +66,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     },
     ...articlesByCategory('simhastha').map((a) => ({
       path: `${basePath}simhastha-2028/${a.slug}/`,
-      element: withLocaleProps(locale, ArticleDetail, { category: 'simhastha' as const, slug: a.slug }),
+      lazy: async () => {
+        const mod = await import('./pages/articles/DetailRoute');
+        return { Component: locale === 'hi' ? mod.ArticleDetailHi : mod.ArticleDetailEn };
+      },
     })) as RouteRecord[],
 
     // Transport
@@ -72,7 +79,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     },
     ...articlesByCategory('transport').map((a) => ({
       path: `${basePath}transport-in-ujjain/${a.slug}/`,
-      element: withLocaleProps(locale, ArticleDetail, { category: 'transport' as const, slug: a.slug }),
+      lazy: async () => {
+        const mod = await import('./pages/articles/DetailRoute');
+        return { Component: locale === 'hi' ? mod.ArticleDetailHi : mod.ArticleDetailEn };
+      },
     })) as RouteRecord[],
 
     // Cab Booking
@@ -125,7 +135,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     },
     ...articlesByCategory('tour').map((a) => ({
       path: `${basePath}tour-and-travel-ujjain/${a.slug}/`,
-      element: withLocaleProps(locale, ArticleDetail, { category: 'tour' as const, slug: a.slug }),
+      lazy: async () => {
+        const mod = await import('./pages/articles/DetailRoute');
+        return { Component: locale === 'hi' ? mod.ArticleDetailHi : mod.ArticleDetailEn };
+      },
     })) as RouteRecord[],
 
     // Puja Info
@@ -135,7 +148,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     },
     ...articlesByCategory('puja-info').map((a) => ({
       path: `${basePath}puja-in-ujjain/${a.slug}/`,
-      element: withLocaleProps(locale, ArticleDetail, { category: 'puja-info' as const, slug: a.slug }),
+      lazy: async () => {
+        const mod = await import('./pages/articles/DetailRoute');
+        return { Component: locale === 'hi' ? mod.ArticleDetailHi : mod.ArticleDetailEn };
+      },
     })) as RouteRecord[],
   ];
 }

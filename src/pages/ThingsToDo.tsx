@@ -5,7 +5,7 @@ import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
-import { featuredMandirs } from '../data/mandirs';
+import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
 import { packagesData } from '../data/packages';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';

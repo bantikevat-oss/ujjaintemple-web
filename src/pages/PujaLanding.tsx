@@ -5,7 +5,7 @@ import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
-import { articlesByCategory, articlePath } from '../data/articles';
+import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, faqSchema, pujaServiceSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight, CheckCircle2, ChevronDown, Star } from 'lucide-react';

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '../../i18n';
-import type { Mandir } from '../../lib/types';
+import type { MandirListItem } from '../../data/mandirs-index';
 
 // Compact list row used on the /mandirs/ hub for temples beyond each category's first few.
 //
@@ -11,7 +11,7 @@ import type { Mandir } from '../../lib/types';
 // keeping the page scannable — easier to read 183 names as a list than to scroll
 // 183 photos.
 interface Props {
-  mandir: Mandir;
+  mandir: MandirListItem;
 }
 
 const AREA_HI: Record<string, string> = {

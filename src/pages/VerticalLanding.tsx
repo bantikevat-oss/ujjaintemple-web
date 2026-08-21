@@ -4,7 +4,7 @@ import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
-import { articlesByCategory, articlePath } from '../data/articles';
+import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, itemListSchema } from '../lib/schemas';
 import { ArrowRight } from 'lucide-react';

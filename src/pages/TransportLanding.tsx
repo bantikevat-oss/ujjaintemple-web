@@ -6,7 +6,7 @@ import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
-import { articlesByCategory, articlePath } from '../data/articles';
+import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight, Train, Bus, Car, Plane, MapPin, Clock, ChevronDown } from 'lucide-react';
 

@@ -7,7 +7,7 @@ import { MandirRow } from '../../components/mandir/MandirRow';
 import { Breadcrumb } from '../../components/global/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../../i18n';
-import { mandirs } from '../../data/mandirs';
+import { mandirList as mandirs } from '../../data/mandirs-index';
 import { breadcrumbSchema, itemListSchema, faqSchema } from '../../lib/schemas';
 import { SITE } from '../../lib/site';
 

@@ -5,7 +5,7 @@ import { LeadForm } from '../components/global/LeadForm';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { useI18n } from '../i18n';
-import { articlesByCategory, articlePath } from '../data/articles';
+import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { getPackageBySlug } from '../data/packages';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema } from '../lib/schemas';
