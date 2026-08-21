@@ -343,8 +343,15 @@ export function SimhasthaLanding() {
                       }}
                     >
                       <span
-                        className="font-serif font-extrabold tabular-nums"
+                        className="font-serif font-extrabold"
                         style={{
+                          /* Cormorant Garamond defaults to OLD-STYLE figures, so once the
+                             real webfont started loading (2026-08-21) the countdown read
+                             "583" with the 5 and 8 dropping below the baseline — fine for
+                             running prose, wrong for a digit readout. Lining + tabular
+                             keeps every digit the same height and width so the numbers
+                             don't jump as the seconds tick. */
+                          fontVariantNumeric: 'lining-nums tabular-nums',
                           fontSize: 'clamp(1.6rem, 5vw, 2.6rem)',
                           lineHeight: 1,
                           background: 'linear-gradient(180deg, #E0C374 0%, #C9A84C 100%)',

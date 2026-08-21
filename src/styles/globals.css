@@ -2,34 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Self-hosted fonts — local() only.
-   2026-08-21: the url('/fonts/*.woff2') sources were removed. Those six files were
-   never added to /public/fonts/ (nor to prod), so every page load fired six 404s
-   and then fell through to the stack below anyway. Removing the dead URLs changes
-   nothing visually — it only stops the failed requests.
-   TO RE-ENABLE PROPER WEBFONTS: drop the woff2 files into /public/fonts/, add
-   `, url('/fonts/<file>.woff2') format('woff2')` back after each local(), and
-   un-comment the two preload links in index.html. */
+/* Self-hosted fonts — the six woff2 files now really exist in /public/fonts/
+   (added 2026-08-21, Aman's OK). Before that the url()s pointed at files that had
+   never been uploaded, so every page load fired six 404s and silently fell through
+   to the fallback stack — i.e. nobody was seeing the intended typefaces.
+   Files are the Google Fonts woff2 builds, latin subset for the Latin faces and
+   devanagari subset for the two Devanagari ones — see fonts/README.md for the
+   exact sources and the OFL licence.
+   local() stays FIRST on purpose: Noto Sans Devanagari ships on most Android
+   devices, so a large share of this site's traffic skips the 118 KB download.
+   NOTE — do NOT add <link rel=preload> for these. index.html is shared by both
+   locales, so preloading would pull the Devanagari faces on English pages (and
+   DM Sans on Hindi ones), and it would defeat the local() hit above.
+   font-display: swap already keeps text visible while they load. */
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('DM Sans');
+  src: local('DM Sans'), url('/fonts/dmsans-400.woff2') format('woff2');
 }
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('DM Sans Bold');
+  src: local('DM Sans Bold'), url('/fonts/dmsans-700.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Noto Sans Devanagari';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Noto Sans Devanagari');
+  src: local('Noto Sans Devanagari'), url('/fonts/notosans-devanagari-400.woff2') format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 @font-face {
@@ -37,7 +42,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Noto Sans Devanagari Bold');
+  src: local('Noto Sans Devanagari Bold'), url('/fonts/notosans-devanagari-700.woff2') format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 @font-face {
@@ -45,23 +50,28 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Cormorant Garamond Bold');
+  src: local('Cormorant Garamond Bold'), url('/fonts/cormorant-700.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Tiro Devanagari Sanskrit';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Tiro Devanagari Sanskrit');
+  src: local('Tiro Devanagari Sanskrit'), url('/fonts/tiro-devanagari-400.woff2') format('woff2');
   unicode-range: U+0900-097F, U+1CD0-1CFF, U+200C-200D, U+20F0, U+25CC, U+A8E0-A8FF;
 }
 
 @layer base {
+  /* 2026-08-21: these were written as [lang='hi'] / [lang='en'] but SEOHead emits
+     lang="hi-IN" / "en-IN", so the exact-match selectors never fired and all four
+     rules below were dead. `^=` makes them apply as intended. Rendering barely
+     shifts either way — each @font-face carries a unicode-range, so the browser
+     already routed Devanagari and Latin glyphs to the right file per codepoint. */
   html { -webkit-text-size-adjust: 100%; }
-  html[lang='hi'] body { font-family: 'Noto Sans Devanagari', 'DM Sans', system-ui, sans-serif; }
-  html[lang='en'] body { font-family: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif; }
+  html[lang^='hi'] body { font-family: 'Noto Sans Devanagari', 'DM Sans', system-ui, sans-serif; }
+  html[lang^='en'] body { font-family: 'DM Sans', 'Noto Sans Devanagari', system-ui, sans-serif; }
   h1, h2, h3 { font-family: 'Cormorant Garamond', 'Tiro Devanagari Sanskrit', serif; line-height: 1.15; }
-  html[lang='hi'] h1, html[lang='hi'] h2 { font-family: 'Tiro Devanagari Sanskrit', 'Cormorant Garamond', serif; }
+  html[lang^='hi'] h1, html[lang^='hi'] h2 { font-family: 'Tiro Devanagari Sanskrit', 'Cormorant Garamond', serif; }
   body { min-height: 100dvh; }
   img, video { max-width: 100%; height: auto; }
 }
