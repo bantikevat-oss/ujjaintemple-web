@@ -48,6 +48,8 @@ a{color:var(--link)}
 h1,h2,h3{font-family:'Tiro Devanagari Sanskrit','Noto Sans Devanagari',serif;line-height:1.3;color:var(--maroon);margin:1.6rem 0 .7rem}
 h1{font-size:2rem;margin-top:0}h2{font-size:1.4rem}h3{font-size:1.15rem}
 .wrap{max-width:760px;margin:0 auto;padding:0 1.1rem}
+/* The listing is a card grid; a 760px reading measure only ever fits two. */
+.wrap.wide{max-width:1180px}
 .top{background:var(--maroon);color:#fff;padding:.7rem 0;font-size:.92rem}
 .top a{color:#fff;text-decoration:none}.top .brand{font-weight:700}
 .crumb{font-size:.85rem;color:var(--muted);padding:1rem 0 .2rem}
@@ -69,12 +71,26 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
 .cta a{color:#fff;font-weight:700}
 .foot{border-top:1px solid var(--line);margin-top:2.5rem;padding:1.4rem 0 2.5rem;font-size:.87rem;color:var(--muted)}
 .empty{background:#fff;border:1px dashed var(--line);border-radius:10px;padding:1.6rem;text-align:center;color:var(--muted)}
+/* ── Blog grid: auto-fill so it lands on 4 / 3 / 2 / 1 columns by width, with
+      no breakpoint list to keep in step with the container. ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:1.3rem;margin:1.6rem 0 2rem}
+.post{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.post:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(139,26,26,.10);border-color:var(--gold)}
+.post .thumb{display:block;aspect-ratio:16/10;background:var(--cream);overflow:hidden}
+.post .thumb img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0}
+.post .body{padding:.9rem 1rem 1.1rem;display:flex;flex-direction:column;flex:1}
+.post h2{font-size:1.06rem;margin:.15rem 0 .4rem;line-height:1.4}
+.post h2 a{color:var(--maroon);text-decoration:none}
+.post:hover h2 a{color:var(--saffron)}
+.post .excerpt{color:var(--muted);font-size:.9rem;line-height:1.65;margin:0 0 .8rem;flex:1}
+.post .foot-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin-top:auto}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
 @media(max-width:520px){body{font-size:16px}h1{font-size:1.55rem}}
 </style>
 </head>
 <body>
 <div class="top"><div class="wrap"><a href="/hi/" class="brand">UjjainTemple.com</a> &nbsp;·&nbsp; <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></div></div>
-<div class="wrap">
+<div class="wrap<?= !empty($head['wide']) ? ' wide' : '' ?>">
 <?= $body ?>
 <div class="foot">
   <p><strong>UjjainTemple.com</strong> — उज्जैन के मंदिर, घाट और सिंहस्थ 2028 की जानकारी।

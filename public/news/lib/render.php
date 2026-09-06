@@ -48,7 +48,8 @@ function ujt_view_list($page)
     // LIMIT/OFFSET are ints we computed, never user strings — but they still cannot
     // be bound as params in MySQL prepared statements, so they are cast explicitly.
     $rows = ujt_all(
-        "SELECT a.slug, a.title, a.summary, a.published_at, c.name AS cat_name
+        "SELECT a.slug, a.title, a.summary, a.published_at,
+                a.featured_image, a.featured_image_alt, c.name AS cat_name
            FROM ujt_news_articles a
            LEFT JOIN ujt_news_categories c ON c.id = a.category_id
           WHERE a.status='published' AND a.language='hi'
@@ -77,6 +78,9 @@ function ujt_view_list($page)
         [
             'title' => $title, 'description' => $desc, 'canonical' => $canonical,
             'og_image' => $c['logo'],
+            // The listing is a card grid, not a reading column — it gets the wider
+            // wrap. Article pages keep the 760px measure.
+            'wide' => true,
             'robots' => $page > 1 ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
             'jsonld' => [
                 ujt_breadcrumbs([['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'], ['समाचार', $canonical]]),

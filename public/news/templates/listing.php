@@ -24,19 +24,37 @@ $c = ujt_news_config()['site'];
     <a href="/hi/simhastha-2028/">सिंहस्थ 2028 पृष्ठ</a> पर उपलब्ध है।</p>
   </div>
 <?php else: ?>
-  <?php foreach ($rows as $r): ?>
-    <?php $url = ujt_article_url($r['slug']); ?>
-    <div class="card">
-      <h2><a href="<?= ujt_e($url) ?>"><?= ujt_e($r['title']) ?></a></h2>
-      <p><?= ujt_e(ujt_clip($r['summary'], 190)) ?></p>
-      <p>
-        <?php if (!empty($r['cat_name'])): ?><span class="tag"><?= ujt_e($r['cat_name']) ?></span><?php endif; ?>
-        <?php if (!empty($r['published_at'])): ?>
-          <time datetime="<?= ujt_e(date('c', strtotime($r['published_at']))) ?>"><?= ujt_e(ujt_hindi_date($r['published_at'])) ?></time>
+  <?php /* Blog grid. The whole card is one link target, but only the heading
+           carries the anchor text — a thumbnail wrapped in its own bare <a> would
+           hand Google a second, anchor-text-less link to the same URL. */ ?>
+  <div class="grid">
+    <?php foreach ($rows as $i => $r): ?>
+      <?php
+        $url = ujt_article_url($r['slug']);
+        $img = trim((string) ($r['featured_image'] ?? ''));
+        $alt = trim((string) ($r['featured_image_alt'] ?? '')) ?: $r['title'];
+      ?>
+      <article class="post">
+        <?php if ($img !== ''): ?>
+          <a class="thumb" href="<?= ujt_e($url) ?>" tabindex="-1" aria-hidden="true">
+            <?php /* First row is above the fold on a wide screen; the rest are lazy. */ ?>
+            <img src="<?= ujt_e($img) ?>" alt="<?= ujt_e($alt) ?>" width="640" height="400"
+                 loading="<?= $i < 4 ? 'eager' : 'lazy' ?>" decoding="async">
+          </a>
         <?php endif; ?>
-      </p>
-    </div>
-  <?php endforeach; ?>
+        <div class="body">
+          <h2><a href="<?= ujt_e($url) ?>"><?= ujt_e($r['title']) ?></a></h2>
+          <p class="excerpt"><?= ujt_e(ujt_clip($r['summary'], 130)) ?></p>
+          <p class="foot-row">
+            <?php if (!empty($r['cat_name'])): ?><span class="tag"><?= ujt_e($r['cat_name']) ?></span><?php endif; ?>
+            <?php if (!empty($r['published_at'])): ?>
+              <time datetime="<?= ujt_e(date('c', strtotime($r['published_at']))) ?>"><?= ujt_e(ujt_hindi_date($r['published_at'])) ?></time>
+            <?php endif; ?>
+          </p>
+        </div>
+      </article>
+    <?php endforeach; ?>
+  </div>
 
   <?php if ($pages > 1): ?>
     <p class="meta">
