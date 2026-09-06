@@ -103,7 +103,7 @@ export function TestimonialsSection() {
             className={`font-bold text-maroon ${isHi ? 'font-sanskrit' : 'font-serif'}`}
             style={{ fontSize: 'clamp(1.6rem, 3vw, 2.6rem)' }}
           >
-            {isHi ? 'जिन्होंने अनुभव किया, वे बोलते हैं' : 'Those who experienced it, speak'}
+            {isHi ? 'जिन्होंने उज्जैन दर्शन किया, वे क्या कहते हैं?' : 'What do visitors say after their Ujjain darshan?'}
           </h2>
           <div className="mt-3 mx-auto w-14 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
         </div>

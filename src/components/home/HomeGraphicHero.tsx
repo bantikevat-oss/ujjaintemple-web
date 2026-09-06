@@ -42,7 +42,7 @@ export function HomeGraphicHero() {
       h1:      'उज्जैन',
       sub:     'महाकाल की नगरी — मंदिर, दर्शन व यात्रा गाइड',
       simhastha: 'सिंहस्थ 2028 उज्जैन — पूरी गाइड',
-      tagline: 'आस्था और अध्यात्म की पावन भूमि',
+      tagline: 'उज्जैन मध्य प्रदेश की प्राचीन नगरी है, जहाँ शिप्रा के तट पर बारह ज्योतिर्लिंगों में से एक श्री महाकालेश्वर विराजमान हैं। यहाँ 183 प्रमुख दर्शन मंदिर हैं, और अगला सिंहस्थ महाकुंभ 27 मार्च से 27 मई 2028 तक लगेगा।',
       ctaA:    'मंदिर दर्शन करें',
       ctaB:    'अभी कॉल करें',
       caption: 'महाकाल लोक कॉरिडोर, उज्जैन',
@@ -59,7 +59,7 @@ export function HomeGraphicHero() {
       h1:      'Ujjain',
       sub:     'City of Mahakal — Temples, Darshan & Travel Guide',
       simhastha: 'Simhastha 2028 Ujjain — Complete Guide',
-      tagline: 'Sacred land of faith and spirituality',
+      tagline: 'Ujjain is the ancient city in Madhya Pradesh where Shri Mahakaleshwar, one of the twelve Jyotirlingas, is enshrined on the bank of the Shipra river. The city holds 183 major darshan temples, the Chaurasi Mahadev circuit and the old ghats at Ram Ghat. The next Simhastha Mahakumbh runs here from 27 March to 27 May 2028. This guide covers temples, darshan, stay, cabs and puja in one place.',
       ctaA:    'Visit Temples',
       ctaB:    'Call Now',
       caption: 'Mahakal Lok Corridor, Ujjain',
@@ -224,9 +224,10 @@ export function HomeGraphicHero() {
 
         {/* Tagline */}
         <p
-          className="hf4 relative font-serif mt-2 max-w-md"
+          className="hf4 relative font-serif mt-3 max-w-xl"
           style={{
-            fontSize: 'clamp(0.82rem, 1.4vw, 1.02rem)',
+            fontSize: 'clamp(0.82rem, 1.25vw, 0.98rem)',
+            lineHeight: 1.65,
             color: 'rgba(255,248,232,0.95)',
             textShadow: '0 2px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)',
           }}

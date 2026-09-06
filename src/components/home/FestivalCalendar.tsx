@@ -79,7 +79,7 @@ export function FestivalCalendar() {
               className={`font-bold text-maroon ${isHi ? 'font-sanskrit' : 'font-serif'}`}
               style={{ fontSize: 'clamp(1.5rem, 3vw, 2.4rem)' }}
             >
-              {isHi ? 'उज्जैन पर्व कैलेंडर 2026' : 'Ujjain Festival Calendar 2026'}
+              {isHi ? 'उज्जैन में 2026 के प्रमुख पर्व कब हैं?' : 'When are the major Ujjain festivals in 2026?'}
             </h2>
           </div>
           <Link

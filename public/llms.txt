@@ -1,0 +1,48 @@
+# UjjainTemple.com
+
+> A bilingual (Hindi/English) reference guide to the temples, ghats and pilgrimage
+> logistics of Ujjain, Madhya Pradesh, India — and to Simhastha 2028, the Mahakumbh
+> held there once every twelve years.
+
+Ujjain is the city of Shri Mahakaleshwar, the only south-facing of the twelve
+Jyotirlingas, on the bank of the Shipra river. This site documents 183 major darshan
+temples, the Chaurasi (84) Mahadev circuit, the Shipra ghats, and the travel, stay and
+puja arrangements a visiting pilgrim needs. It is published by ByteFlow Technologies
+Pvt Ltd and is not affiliated with any temple committee or government body.
+
+## Key facts
+- Simhastha 2028 (Ujjain Mahakumbh) runs 27 March – 27 May 2028.
+- Its three Shahi Snans fall on 09 April, 23 April and 08 May 2028.
+- Seven parv snans are proposed; their dates have not been officially announced.
+- These dates follow published media reporting, not a government notification, and
+  may be revised — the site states this on the page itself.
+- Ujjain's nearest airport is Indore (55 km); Omkareshwar is ~140 km away.
+
+## Pages worth quoting
+- [Simhastha 2028 guide](https://ujjaintemple.com/simhastha-2028/): dates, Shahi Snan
+  calendar, the 13 akhadas, kalpvas, planning.
+- [Simhastha 2028 news](https://ujjaintemple.com/hi/simhastha-2028-news/): dated
+  updates on mela construction, snan arrangements, transport and darshan (Hindi).
+- [Temples in Ujjain](https://ujjaintemple.com/mandirs/): the full directory, grouped
+  by deity, with darshan timings.
+- [84 Mahadev of Ujjain](https://ujjaintemple.com/84-mahadev-ujjain/): the Chaurasi
+  Mahadev list with addresses.
+- [Transport to Ujjain](https://ujjaintemple.com/transport-in-ujjain/): distances and
+  routes from Indore, Bhopal, Delhi and Omkareshwar.
+- [Hotels in Ujjain](https://ujjaintemple.com/hotels/): where to stay near Mahakaleshwar.
+- [Puja in Ujjain](https://ujjaintemple.com/puja-in-ujjain/): Kaal Sarp, Mangal Dosh,
+  Navgrah Shanti — what each is and who performs it.
+
+## Hindi
+Every page above has a Hindi counterpart under /hi/ — for example
+https://ujjaintemple.com/hi/simhastha-2028/. The Hindi tree is the primary one for
+Simhastha queries.
+
+## What this site does not claim
+- No VIP darshan, Bhasma Aarti booking, or temple-side authorisation.
+- No guaranteed outcome from any puja.
+- Temple timings are approximate and change on festival days; call to confirm.
+
+## Contact
+Phone +91 74007 24456 · info@ujjaintemple.com · Ujjain, Madhya Pradesh, India
+Published by ByteFlow Technologies Pvt Ltd — https://byteflowtech.in/

@@ -53,7 +53,7 @@
       "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "saturday": {
-      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30 (शनि-पूजन हेतु भीड़ अधिक)",
+      "hi": "लगभग प्रातः 5:30 – रात्रि 9:30 (शनि-पूजन हेतु श्रद्धालु अधिक)",
       "en": "Approx. 5:30 AM – 9:30 PM (crowded — Shani puja day)"
     },
     "sunday": {
@@ -84,11 +84,11 @@
     "en": "The temple is approximately 0.4 km from Mahakaleshwar Temple in the Mahakal Area — an easy walk after Mahakal darshan. It is about 10 minutes by auto-rickshaw from Ujjain Railway Station."
   },
   "specialOccasions": {
-    "hi": "शनिवार — शनिदेव की विशेष पूजा, तेल-अर्पण एवं हनुमान स्तोत्र पाठ। अमावस्या — पितृ-दोष निवारण हेतु नवग्रह होम। गुरु पुष्य नक्षत्र — अत्यंत शुभ, बड़ी संख्या में भक्त आते हैं। सोमवार — चंद्रदेव की पूजा के लिए विशेष भीड़।",
+    "hi": "शनिवार — शनिदेव की विशेष पूजा, तेल-अर्पण एवं हनुमान स्तोत्र पाठ। अमावस्या — पितृ-दोष निवारण हेतु नवग्रह होम। गुरु पुष्य नक्षत्र — अत्यंत शुभ, बड़ी संख्या में भक्त आते हैं। सोमवार — चंद्रदेव की पूजा के लिए श्रद्धालु अधिक।",
     "en": "Saturday — special Shani puja with oil offering and Hanuman stotra. Amavasya — Navagraha homa for pitru-dosha relief. Guru Pushya Nakshatra — extremely auspicious, large devotee turnout. Monday — special rush for Chandra Dev worship."
   },
   "visitTips": {
-    "hi": "लगभग प्रातः 6:30–9:00 बजे सबसे शांत समय — नागर-प्रदक्षिणा के लिए आदर्श। शनिवार को भीड़ अधिक रहती है, यदि मुमकिन हो तो सप्ताह के अन्य दिन जाएँ। तेल-अर्पण एवं काले तिल प्रसाद मंदिर प्रांगण में उपलब्ध हैं। नवग्रह स्तोत्र पाठ करते हुए नौ बार परिक्रमा का विशेष फल बताया जाता है।",
+    "hi": "लगभग प्रातः 6:30–9:00 बजे सबसे शांत समय — नागर-प्रदक्षिणा के लिए आदर्श। शनिवार को श्रद्धालु अधिक रहते हैं, यदि मुमकिन हो तो सप्ताह के अन्य दिन जाएँ। तेल-अर्पण एवं काले तिल प्रसाद मंदिर प्रांगण में उपलब्ध हैं। नवग्रह स्तोत्र पाठ करते हुए नौ बार परिक्रमा का विशेष फल बताया जाता है।",
     "en": "6:30–9:00 AM is the most peaceful time for darshan and pradakshina. Saturdays are crowded — visit on a weekday if possible. Oil offerings and black sesame (til) prasad are available at the temple precinct. Chanting the Navagraha Stotra while completing nine pradakshinas is considered especially auspicious."
   },
   "localBeliefs": {
@@ -154,7 +154,7 @@
         "en": "What is the best time to visit Navgraha Mandir?"
       },
       "a": {
-        "hi": "लगभग प्रातः 6:30–9:00 बजे या संध्या 5:00–7:00 बजे सबसे शांत समय है। शनिवार को सर्वाधिक भीड़ होती है। नवग्रह-दोष से पीड़ित भक्त अमावस्या पर विशेष पूजन के लिए आते हैं।",
+        "hi": "लगभग प्रातः 6:30–9:00 बजे या संध्या 5:00–7:00 बजे सबसे शांत समय है। शनिवार को श्रद्धालुओं की संख्या सर्वाधिक होती है। नवग्रह-दोष से पीड़ित भक्त अमावस्या पर विशेष पूजन के लिए आते हैं।",
         "en": "6:30–9:00 AM or 5:00–7:00 PM are the calmest times for darshan. Saturdays see the highest footfall. Devotees with astrological afflictions often time their visit to Amavasya for special puja."
       }
     },

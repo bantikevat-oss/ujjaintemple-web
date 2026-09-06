@@ -19,9 +19,11 @@ RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /man
 # 2026-08-12 — five commercial pages added (accommodation, tour-package, transport,
 # from-indore-bhopal, budget): these carry the "simhastha 2028 + <intent>" long tail
 # and terminate in the hotel/cab/tour money pages.
+# 2026-09-06 — simhastha-2028-preparations added (city-wide readiness: roads, airport,
+# ghats, water, temple restoration, crowd-management command centre).
 # Keep this list in sync with src/content/simhastha/*.json — a slug missing here is
 # built and sitemapped but 301s to the landing, so the page can never rank.
-RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide|simhastha-2028-accommodation|simhastha-2028-tour-package|simhastha-2028-transport-guide|simhastha-2028-from-indore-bhopal|simhastha-2028-budget-guide)/?$
+RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide|simhastha-2028-accommodation|simhastha-2028-tour-package|simhastha-2028-transport-guide|simhastha-2028-from-indore-bhopal|simhastha-2028-budget-guide|simhastha-2028-preparations)/?$
 RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 
 # ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──
@@ -29,11 +31,28 @@ RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 RewriteRule ^en/(.*)$ /$1 [L,R=301]
 RewriteRule ^en/?$ / [R=301,L]
 
+# ── Simhastha news API (BNA tenant endpoints) ──
+# 🔴 /api/upload has no extension, so the trailing-slash rule below would 301 it —
+# and a 301 on POST loses the multipart body. This MUST stay above that rule.
+# The path itself is hardcoded in BNA (card_localizer.php), so it cannot move.
+RewriteRule ^api/upload/?$ /api/upload.php [L,QSA]
+
 # Trailing slash for directory-style URLs (matches SSG output)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !\.(html|css|js|woff2|webp|jpg|png|svg|xml|txt|json|webmanifest|pdf|ico|php)$
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# ── Simhastha 2028 news section (PHP-SSR, /news/index.php) ──
+# Deliberately NOT under /simhastha-2028/ — the blanket 301 above folds every
+# sub-path there into the landing, so an article would 301 away and never rank.
+# "simhastha-2028-news/" does not match "simhastha-2028/" so this path is safe.
+# Slugs are ASCII-only by construction (news/lib/slug.php) — keep the two in step.
+RewriteRule ^hi/simhastha-2028-news/feed\.xml$          /news/index.php?view=feed [L]
+RewriteRule ^hi/simhastha-2028-news/news-sitemap\.xml$  /news/index.php?view=sitemap [L]
+RewriteRule ^hi/simhastha-2028-news/page/([0-9]{1,4})/?$ /news/index.php?view=list&p=$1 [L]
+RewriteRule ^hi/simhastha-2028-news/?$                   /news/index.php?view=list [L]
+RewriteRule ^hi/simhastha-2028-news/([A-Za-z0-9_-]+)/?$  /news/index.php?view=article&slug=$1 [L]
 
 # Caching
 <IfModule mod_expires.c>

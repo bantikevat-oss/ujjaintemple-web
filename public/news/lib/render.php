@@ -1,0 +1,265 @@
+<?php
+if (!defined('UJT_NEWS')) { http_response_code(403); exit('Forbidden'); }
+require_once __DIR__ . '/sanitize.php';
+
+const UJT_PER_PAGE = 12;
+
+/** "5 सितंबर 2026" — month names are spelled out because a numeric date reads as US format. */
+function ujt_hindi_date($sql_dt)
+{
+    static $m = [1=>'जनवरी','फ़रवरी','मार्च','अप्रैल','मई','जून','जुलाई','अगस्त','सितंबर','अक्टूबर','नवंबर','दिसंबर'];
+    $ts = strtotime((string) $sql_dt);
+    if (!$ts) return '';
+    return (int) date('j', $ts) . ' ' . $m[(int) date('n', $ts)] . ' ' . date('Y', $ts);
+}
+
+function ujt_render($template, $vars, $head)
+{
+    extract($vars, EXTR_SKIP);
+    ob_start();
+    require __DIR__ . '/../templates/' . $template . '.php';
+    $body = ob_get_clean();
+    header('Content-Type: text/html; charset=utf-8');
+    require __DIR__ . '/../templates/layout.php';
+    exit;
+}
+
+function ujt_publisher_node()
+{
+    $c = ujt_news_config()['site'];
+    return [
+        '@type' => 'Organization',
+        'name'  => $c['publisher'],
+        'url'   => rtrim($c['base_url'], '/') . '/',
+        'logo'  => ['@type' => 'ImageObject', 'url' => $c['logo']],
+    ];
+}
+
+function ujt_view_list($page)
+{
+    $c = ujt_news_config()['site'];
+    $total = (int) ujt_one(
+        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi'"
+    )['n'];
+    $pages  = max(1, (int) ceil($total / UJT_PER_PAGE));
+    $page   = min($page, $pages);
+    $offset = ($page - 1) * UJT_PER_PAGE;
+
+    // LIMIT/OFFSET are ints we computed, never user strings — but they still cannot
+    // be bound as params in MySQL prepared statements, so they are cast explicitly.
+    $rows = ujt_all(
+        "SELECT a.slug, a.title, a.summary, a.published_at, c.name AS cat_name
+           FROM ujt_news_articles a
+           LEFT JOIN ujt_news_categories c ON c.id = a.category_id
+          WHERE a.status='published' AND a.language='hi'
+          ORDER BY a.published_at DESC, a.id DESC
+          LIMIT " . (int) UJT_PER_PAGE . " OFFSET " . (int) $offset
+    );
+    $cats = ujt_all('SELECT id, name, slug FROM ujt_news_categories ORDER BY sort_order, id');
+
+    $canonical = ujt_section_url() . ($page > 1 ? 'page/' . $page . '/' : '');
+    $title = $page > 1
+        ? "सिंहस्थ 2028 समाचार — पृष्ठ $page | UjjainTemple"
+        : 'सिंहस्थ 2028 समाचार — उज्जैन मेला, स्नान, यात्रा अपडेट';
+    $desc = 'सिंहस्थ 2028 उज्जैन (27 मार्च – 27 मई 2028) से जुड़ी ताज़ा जानकारी — शाही स्नान, '
+          . 'अखाड़े, ट्रेन-बस, होटल और दर्शन व्यवस्था, और उसका यात्रा पर असर।';
+
+    $itemlist = ['@context' => 'https://schema.org', '@type' => 'ItemList', 'itemListElement' => []];
+    foreach ($rows as $i => $r) {
+        $itemlist['itemListElement'][] = [
+            '@type' => 'ListItem', 'position' => $i + 1,
+            'url' => ujt_article_url($r['slug']), 'name' => $r['title'],
+        ];
+    }
+
+    ujt_render('listing',
+        compact('rows', 'cats', 'page', 'pages', 'total'),
+        [
+            'title' => $title, 'description' => $desc, 'canonical' => $canonical,
+            'og_image' => $c['logo'],
+            'robots' => $page > 1 ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
+            'jsonld' => [
+                ujt_breadcrumbs([['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'], ['समाचार', $canonical]]),
+                $itemlist,
+                ujt_faq_node([
+                    ['सिंहस्थ 2028 कब से कब तक है?',
+                     'सिंहस्थ 2028 उज्जैन में 27 मार्च से 27 मई 2028 तक चलेगा। तीन शाही स्नान 9 अप्रैल, 23 अप्रैल और 8 मई 2028 को हैं। सात पर्व स्नान प्रस्तावित हैं, जिनकी तारीखें अभी घोषित नहीं हुई हैं।'],
+                    ['इस खंड में किस तरह की ख़बरें मिलेंगी?',
+                     'मेला क्षेत्र और घाटों का निर्माण, स्नान तिथियों की पुष्टि, अखाड़ों की पेशवाई, विशेष ट्रेन और बस, पार्किंग और पैदल मार्ग, ठहरने की व्यवस्था, और मंदिरों की दर्शन व्यवस्था।'],
+                ]),
+            ],
+        ]
+    );
+}
+
+function ujt_view_article($slug)
+{
+    if ($slug === '') ujt_not_found();
+    $a = ujt_one(
+        "SELECT a.*, c.name AS cat_name
+           FROM ujt_news_articles a
+           LEFT JOIN ujt_news_categories c ON c.id = a.category_id
+          WHERE a.slug = ? AND a.status='published' LIMIT 1",
+        [$slug]
+    );
+    if (!$a) ujt_not_found();
+
+    // Best-effort counter; a locked row here must never cost us the pageview.
+    try { ujt_q('UPDATE ujt_news_articles SET view_count = view_count + 1 WHERE id = ?', [$a['id']]); }
+    catch (Exception $e) { /* ignore */ }
+
+    $related = ujt_all(
+        "SELECT slug, title, summary FROM ujt_news_articles
+          WHERE status='published' AND language='hi' AND id <> ?
+          ORDER BY published_at DESC, id DESC LIMIT 4",
+        [$a['id']]
+    );
+
+    $canonical = ujt_article_url($a['slug']);
+    $desc  = $a['meta_description'] ?: ujt_clip($a['summary'], 160);
+    $ogd   = $a['og_description'] ?: $desc;
+    $img   = $a['og_image'] ?: $a['featured_image'];
+    if ($img && strpos($img, '/') === 0) $img = rtrim(ujt_news_config()['site']['base_url'], '/') . $img;
+
+    $body_text = ujt_html_to_text($a['content_html']);
+    $news = [
+        '@context'         => 'https://schema.org',
+        '@type'            => 'NewsArticle',
+        'headline'         => ujt_clip($a['title'], 110),
+        'description'      => $desc,
+        'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => $canonical],
+        'url'              => $canonical,
+        'datePublished'    => date('c', strtotime($a['published_at'] ?: $a['created_at'])),
+        'dateModified'     => date('c', strtotime($a['updated_at'] ?: ($a['published_at'] ?: $a['created_at']))),
+        'inLanguage'       => 'hi-IN',
+        'articleSection'   => $a['cat_name'] ?: 'सिंहस्थ 2028',
+        'wordCount'        => str_word_count($body_text) ?: mb_strlen($body_text) / 5,
+        'author'           => ['@type' => 'Organization', 'name' => 'UjjainTemple Editorial',
+                               'url' => rtrim(ujt_news_config()['site']['base_url'], '/') . '/hi/about/'],
+        'publisher'        => ujt_publisher_node(),
+        'isAccessibleForFree' => true,
+    ];
+    if ($img) $news['image'] = [$img];
+    if ($a['tags_json']) {
+        $t = json_decode($a['tags_json'], true);
+        if ($t) $news['keywords'] = implode(', ', $t);
+    }
+
+    ujt_render('article', compact('a', 'related'), [
+        'title' => ujt_clip($a['meta_title'] ?: $a['title'], 70) . ' | UjjainTemple',
+        'description' => $desc, 'og_description' => $ogd,
+        'canonical' => $canonical, 'og_image' => $img, 'og_type' => 'article',
+        'jsonld' => [
+            $news,
+            ujt_breadcrumbs([
+                ['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'],
+                ['समाचार', ujt_section_url()], [ujt_clip($a['title'], 60), $canonical],
+            ]),
+        ],
+    ]);
+}
+
+function ujt_breadcrumbs($items)
+{
+    $base = rtrim(ujt_news_config()['site']['base_url'], '/');
+    $out = ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => []];
+    foreach ($items as $i => $it) {
+        $url = $it[1];
+        if (strpos($url, 'http') !== 0) $url = $base . $url;
+        $out['itemListElement'][] = ['@type' => 'ListItem', 'position' => $i + 1,
+                                     'name' => $it[0], 'item' => $url];
+    }
+    return $out;
+}
+
+function ujt_faq_node($qa)
+{
+    $out = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => []];
+    foreach ($qa as $p) {
+        $out['mainEntity'][] = ['@type' => 'Question', 'name' => $p[0],
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => $p[1]]];
+    }
+    return $out;
+}
+
+function ujt_not_found()
+{
+    http_response_code(404);
+    header('Content-Type: text/html; charset=utf-8');
+    $url = ujt_section_url();
+    echo '<!DOCTYPE html><html lang="hi-IN"><head><meta charset="UTF-8">'
+       . '<meta name="viewport" content="width=device-width,initial-scale=1">'
+       . '<title>पृष्ठ नहीं मिला | UjjainTemple</title><meta name="robots" content="noindex">'
+       . '</head><body style="font-family:system-ui;max-width:640px;margin:3rem auto;padding:0 1rem">'
+       . '<h1>यह समाचार नहीं मिला</h1><p>हो सकता है यह हटा दिया गया हो।</p>'
+       . '<p><a href="' . ujt_e($url) . '">सिंहस्थ 2028 समाचार</a> · '
+       . '<a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></p></body></html>';
+    exit;
+}
+
+/** RSS 2.0 for the section. Also what BNA/IndexNow-style pingers can watch. */
+function ujt_view_feed()
+{
+    $c    = ujt_news_config()['site'];
+    $rows = ujt_all(
+        "SELECT slug, title, summary, published_at FROM ujt_news_articles
+          WHERE status='published' AND language='hi'
+          ORDER BY published_at DESC, id DESC LIMIT 40"
+    );
+    header('Content-Type: application/rss+xml; charset=utf-8');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>' . "\n";
+    printf("<title>%s</title>\n", ujt_e('सिंहस्थ 2028 समाचार — UjjainTemple.com'));
+    printf("<link>%s</link>\n", ujt_e(ujt_section_url()));
+    printf("<atom:link href=\"%s\" rel=\"self\" type=\"application/rss+xml\"/>\n",
+        ujt_e(ujt_section_url() . 'feed.xml'));
+    printf("<description>%s</description>\n",
+        ujt_e('सिंहस्थ 2028 उज्जैन — मेला, स्नान, यात्रा और दर्शन की ताज़ा जानकारी'));
+    echo "<language>hi-in</language>\n";
+    foreach ($rows as $r) {
+        $u = ujt_article_url($r['slug']);
+        echo "<item>\n";
+        printf("<title>%s</title>\n", ujt_e($r['title']));
+        printf("<link>%s</link>\n", ujt_e($u));
+        printf("<guid isPermaLink=\"true\">%s</guid>\n", ujt_e($u));
+        if ($r['published_at']) {
+            printf("<pubDate>%s</pubDate>\n", date(DATE_RSS, strtotime($r['published_at'])));
+        }
+        printf("<description>%s</description>\n", ujt_e(ujt_clip($r['summary'], 300)));
+        echo "</item>\n";
+    }
+    echo "</channel></rss>";
+    exit;
+}
+
+/**
+ * Google News sitemap. The <news:> namespace is only valid for items published in
+ * the last 48 hours — older URLs must be dropped, not merely sorted lower, or the
+ * whole file gets rejected.
+ */
+function ujt_view_news_sitemap()
+{
+    $rows = ujt_all(
+        "SELECT slug, title, published_at FROM ujt_news_articles
+          WHERE status='published' AND language='hi'
+            AND published_at >= (NOW() - INTERVAL 48 HOUR)
+          ORDER BY published_at DESC LIMIT 1000"
+    );
+    header('Content-Type: application/xml; charset=utf-8');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+       . 'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">' . "\n";
+    foreach ($rows as $r) {
+        echo "<url>\n";
+        printf("<loc>%s</loc>\n", ujt_e(ujt_article_url($r['slug'])));
+        echo "<news:news>\n<news:publication>\n";
+        printf("<news:name>%s</news:name>\n", ujt_e('UjjainTemple.com'));
+        echo "<news:language>hi</news:language>\n</news:publication>\n";
+        printf("<news:publication_date>%s</news:publication_date>\n",
+            date('c', strtotime($r['published_at'])));
+        printf("<news:title>%s</news:title>\n", ujt_e($r['title']));
+        echo "</news:news>\n</url>\n";
+    }
+    echo '</urlset>';
+    exit;
+}

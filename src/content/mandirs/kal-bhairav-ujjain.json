@@ -42,7 +42,7 @@
       "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "tuesday": {
-      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (श्रद्धालु अधिक)",
       "en": "Approx. 6:00 AM – 9:00 PM (busy day)"
     },
     "wednesday": {
@@ -62,7 +62,7 @@
       "en": "Approx. 6:00 AM – 9:00 PM"
     },
     "sunday": {
-      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (विशेष भीड़)",
+      "hi": "लगभग प्रातः 6:00 – रात्रि 9:00 (श्रद्धालु अधिक)",
       "en": "Approx. 6:00 AM – 9:00 PM (busy day)"
     }
   },
@@ -71,7 +71,7 @@
     "en": "Morning aarti 7:00 AM · Evening aarti 7:00 PM"
   },
   "specialOccasions": {
-    "hi": "भैरव अष्टमी (कार्तिक माह) — मुख्य उत्सव · रविवार और मंगलवार विशेष भीड़",
+    "hi": "भैरव अष्टमी (कार्तिक माह) — मुख्य उत्सव · रविवार और मंगलवार — श्रद्धालु अधिक",
     "en": "Bhairav Ashtami (Kartik month) — main festival · Sundays and Tuesdays are peak crowd days"
   },
   "entryFee": {

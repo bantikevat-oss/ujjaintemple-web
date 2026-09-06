@@ -193,14 +193,23 @@ export function ArticleDetail({ category, slug }: Props) {
   const statsData = locale === 'hi' ? ARTICLE_STATS[statsKey] : ARTICLE_STATS_EN[statsKey];
 
   const renderBody = (md: string) => {
-    return md.split(/\n\n+/).map((block, i) => {
+    // A heading written with only a single newline before the text under it used
+    // to be swallowed whole into the <h2>/<h3> — 176 such blocks across six live
+    // articles rendered as one run-on heading with literal ** markers in it.
+    // Normalise first so the heading and its body always split into two blocks.
+    const normalised = md.replace(/^(#{2,3} .*)\n(?!\n)/gm, '$1\n\n');
+    return normalised.split(/\n\n+/).map((block, i) => {
       if (block.startsWith('## ')) return <h2 key={i}>{block.replace('## ', '')}</h2>;
       if (block.startsWith('### ')) return <h3 key={i}>{block.replace('### ', '')}</h3>;
       if (block.startsWith('> ')) {
         return (
-          <div key={i} className="not-prose my-8 px-6 py-5 rounded-xl border-l-4 border-saffron bg-saffron/5 text-maroon font-serif italic text-lg leading-relaxed">
-            {block.replace(/^> /gm, '')}
-          </div>
+          <div
+            key={i}
+            className="not-prose my-8 px-6 py-5 rounded-xl border-l-4 border-saffron bg-saffron/5 text-maroon font-serif italic text-lg leading-relaxed"
+            // Blockquotes were the one block type that skipped renderInline, so
+            // **bold** and [links](/path) inside a quote printed their raw markers.
+            dangerouslySetInnerHTML={{ __html: renderInline(block.replace(/^> /gm, '')) }}
+          />
         );
       }
       if (block.startsWith('- ') || block.startsWith('* ')) {
@@ -347,7 +356,13 @@ export function ArticleDetail({ category, slug }: Props) {
         <article className="container-page py-12" id="puja-content">
 
           <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
-            <div className="prose-temple max-w-prose">
+            {/* min-w-0: this div is a CSS grid item, and a grid item's default
+                min-width:auto lets it grow to its widest child. A body table (or the
+                stats grid) therefore stretched the whole column past the viewport —
+                every article page carrying a table scrolled sideways on a 375px
+                phone (budget-guide overflowed by 165px) and the table's own
+                overflow-x-auto wrapper never got a bounded width to scroll inside. */}
+            <div className="prose-temple max-w-prose min-w-0">
 
               {/* ── PULL QUOTE (shortIntro as luxury callout) ── */}
               {article.category !== 'puja-info' && (

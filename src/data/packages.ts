@@ -293,7 +293,7 @@ export const packagesData: TourPackageData[] = [
           { hi: 'चिंतामण गणेश व इस्कॉन मंदिर (समयानुसार)', en: 'Chintaman Ganesh & ISKCON Temple (as time permits)' }
         ],
         note: {
-          hi: 'साइटसीइंग क्रम व स्थल संख्या समय व भीड़ अनुसार समायोजित की जा सकती है। बुकिंग: +91 74007 24456।',
+          hi: 'साइटसीइंग क्रम व स्थल संख्या समय व श्रद्धालुओं की संख्या अनुसार समायोजित की जा सकती है। बुकिंग: +91 74007 24456।',
           en: 'Sightseeing order and number of spots may be adjusted as per time and crowd. Booking: +91 74007 24456.'
         }
       }
@@ -358,7 +358,7 @@ export const packagesData: TourPackageData[] = [
       {
         dayTitle: { hi: 'किफ़ायती 1-दिन दर्शन', en: 'Economy 1-Day Darshan' },
         content: {
-          hi: 'सुबह जल्दी शुरुआत — कम भीड़, कम खर्च। साझा/बजट कैब से सभी मुख्य दर्शन।',
+          hi: 'सुबह जल्दी शुरुआत — कम श्रद्धालु, कम खर्च। साझा/बजट कैब से सभी मुख्य दर्शन।',
           en: 'Early morning start — less crowd, less cost. All main darshan by shared/economy cab.'
         },
         list: [

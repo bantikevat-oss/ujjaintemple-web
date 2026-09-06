@@ -7,16 +7,16 @@ import { SITE } from '../../lib/site';
 function GoldDivider() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gold/40" />
+      <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gold/70" />
       <div className="flex items-center gap-1">
-        <div className="w-1 h-1 rotate-45 bg-gold/40" />
-        <svg width="18" height="18" viewBox="0 0 60 60" className="opacity-60">
+        <div className="w-1 h-1 rotate-45 bg-gold/70" />
+        <svg width="18" height="18" viewBox="0 0 60 60" className="opacity-90">
           <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle"
-            fontSize="44" fontFamily="serif" fill="#D4AF37">ॐ</text>
+            fontSize="44" fontFamily="serif" fill="#A48838">ॐ</text>
         </svg>
-        <div className="w-1 h-1 rotate-45 bg-gold/40" />
+        <div className="w-1 h-1 rotate-45 bg-gold/70" />
       </div>
-      <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gold/40" />
+      <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gold/70" />
     </div>
   );
 }
@@ -25,9 +25,9 @@ function GoldDivider() {
 function SocialBtn({ href, label, children }: { href: string; label: string; children: React.ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-      className="flex h-8 w-8 items-center justify-center rounded-full
-        border border-gold/20 text-cream/50 transition-all duration-200
-        hover:border-gold/60 hover:text-gold hover:bg-gold/10">
+      className="flex h-9 w-9 items-center justify-center rounded-full
+        border border-gold/50 bg-white/60 text-maroon transition-all duration-200
+        hover:border-saffron hover:text-saffron hover:bg-white">
       {children}
     </a>
   );
@@ -38,10 +38,10 @@ function FLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
     <li>
       <Link to={to}
-        className="group flex items-center gap-1.5 text-[13px] text-cream/55
-          transition-colors duration-150 hover:text-gold leading-relaxed">
+        className="group flex items-center gap-1.5 text-[14px] text-ink-soft
+          transition-colors duration-150 hover:text-saffron-600 leading-[1.9]">
         <span className="w-0 overflow-hidden group-hover:w-2 transition-all duration-200
-          text-gold text-[8px]">›</span>
+          text-saffron text-[8px]">›</span>
         {children}
       </Link>
     </li>
@@ -51,9 +51,9 @@ function FLink({ to, children }: { to: string; children: React.ReactNode }) {
 /* ─── Column heading ─────────────────────────────────────────────────────── */
 function ColHead({ children }: { children: React.ReactNode }) {
   return (
-    <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-gold/80
+    <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.16em] text-maroon
       flex items-center gap-2">
-      <span className="h-px w-4 bg-gold/40 flex-shrink-0" />
+      <span className="h-px w-4 bg-saffron/60 flex-shrink-0" />
       {children}
     </h4>
   );
@@ -69,39 +69,44 @@ export function Footer() {
   return (
     <footer
       className="relative mt-16 overflow-hidden pb-20 md:pb-0"
-      style={{ background: 'linear-gradient(to bottom, #1a0202 0%, #0f0101 100%)' }}
+      /* Was linear-gradient(#1a0202 → #0f0101) — a near-black slab under a cream
+         page, with every label set at cream/35–60 on top of it. Dark ground plus
+         faded ink read as heavy and muddy (and failed contrast). Now a warm sand
+         ground carrying full-strength maroon/ink text; palette stays this site's
+         own maroon-gold-cream. */
+      style={{ background: 'linear-gradient(to bottom, #F6EDDF 0%, #EFE2CE 100%)' }}
     >
       {/* Gold top accent */}
       <div className="h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
 
       {/* Subtle background mandala */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.025]" aria-hidden>
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06]" aria-hidden>
         <svg className="absolute right-0 top-0 w-[600px] h-[600px] translate-x-1/3 -translate-y-1/4">
           {[80, 120, 160, 200, 240, 280].map((r) => (
-            <circle key={r} cx="300" cy="300" r={r} stroke="#D4AF37" strokeWidth="0.8" fill="none" />
+            <circle key={r} cx="300" cy="300" r={r} stroke="#8B1A1A" strokeWidth="0.8" fill="none" />
           ))}
           {Array.from({ length: 12 }, (_, i) => {
             const a = (i * 30 * Math.PI) / 180;
             return <line key={i} x1={300 + 20 * Math.cos(a)} y1={300 + 20 * Math.sin(a)}
               x2={300 + 280 * Math.cos(a)} y2={300 + 280 * Math.sin(a)}
-              stroke="#D4AF37" strokeWidth="0.4" />;
+              stroke="#8B1A1A" strokeWidth="0.4" />;
           })}
-          <circle cx="300" cy="300" r="12" fill="#D4AF37" opacity="0.4" />
+          <circle cx="300" cy="300" r="12" fill="#8B1A1A" opacity="0.4" />
         </svg>
       </div>
 
       {/* ── PRE-FOOTER WhatsApp CTA STRIP ────────────────────────────────── */}
       <div
         className="relative border-b"
-        style={{ borderColor: 'rgba(212,175,55,0.12)', background: 'rgba(212,175,55,0.04)' }}
+        style={{ borderColor: 'rgba(201,168,76,0.35)', background: 'rgba(255,255,255,0.55)' }}
       >
         <div className="container-page py-7 flex flex-col sm:flex-row items-center
           justify-between gap-4">
           <div>
-            <p className={`font-bold text-white ${isHi ? 'font-sanskrit text-base sm:text-lg' : 'font-serif text-base sm:text-lg'}`}>
+            <p className={`font-bold text-maroon ${isHi ? 'font-sanskrit text-lg sm:text-xl' : 'font-serif text-lg sm:text-xl'}`}>
               {isHi ? 'पूजा बुकिंग या यात्रा योजना?' : 'Planning a puja or Ujjain visit?'}
             </p>
-            <p className="text-[12px] text-cream/50 mt-0.5">
+            <p className="text-[13px] text-[#5C554E] mt-1">
               {isHi ? 'सबसे तेज़ जवाब व्हाट्सऐप पर मिलता है' : 'Fastest response on WhatsApp'}
             </p>
           </div>
@@ -133,36 +138,36 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <svg width="32" height="32" viewBox="0 0 60 60" className="flex-shrink-0 opacity-90">
               <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle"
-                fontSize="46" fontFamily="serif" fill="#D4AF37">ॐ</text>
+                fontSize="46" fontFamily="serif" fill="#A48838">ॐ</text>
             </svg>
             <div>
-              <p className="font-serif text-xl font-bold text-white leading-tight">
+              <p className="font-serif text-2xl font-bold text-maroon leading-tight">
                 {t('site.name')}
               </p>
-              <p className="text-[10px] text-gold/60 uppercase tracking-widest">
+              <p className="text-[10px] text-saffron-700 uppercase tracking-widest">
                 Ujjain · Madhya Pradesh
               </p>
             </div>
           </div>
 
-          <p className="text-[13px] leading-[1.8] text-cream/55 max-w-xs">
+          <p className="text-[14px] leading-[1.9] text-ink-soft max-w-xs">
             {t('site.tagline')}
           </p>
 
           {/* Contact quick links */}
           <div className="space-y-2.5">
             <a href={SITE.phoneTel}
-              className="flex items-center gap-2.5 text-[13px] text-cream/60 hover:text-gold transition-colors group">
-              <Phone className="h-3.5 w-3.5 text-gold/50 flex-shrink-0 group-hover:text-gold" />
+              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-600 transition-colors group">
+              <Phone className="h-3.5 w-3.5 text-saffron flex-shrink-0 group-hover:text-saffron-600" />
               {SITE.phone}
             </a>
             <a href={`mailto:${SITE.email}`}
-              className="flex items-center gap-2.5 text-[13px] text-cream/60 hover:text-gold transition-colors group">
-              <Mail className="h-3.5 w-3.5 text-gold/50 flex-shrink-0 group-hover:text-gold" />
+              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-600 transition-colors group">
+              <Mail className="h-3.5 w-3.5 text-saffron flex-shrink-0 group-hover:text-saffron-600" />
               {SITE.email}
             </a>
-            <div className="flex items-center gap-2.5 text-[13px] text-cream/45">
-              <MapPin className="h-3.5 w-3.5 text-gold/40 flex-shrink-0" />
+            <div className="flex items-center gap-2.5 text-[14px] text-[#5C554E]">
+              <MapPin className="h-3.5 w-3.5 text-saffron/80 flex-shrink-0" />
               {SITE.address.locality}, {SITE.address.region}
             </div>
           </div>
@@ -200,7 +205,7 @@ export function Footer() {
             <FLink to={`${prefix}/mandirs/mangalnath/`}>
               {isHi ? 'मंगलनाथ' : 'Mangalnath'}
             </FLink>
-            <FLink to={`${prefix}/mandirs/harsiddhi-mandir/`}>
+            <FLink to={`${prefix}/mandirs/harsiddhi-mata/`}>
               {isHi ? 'हरसिद्धि माता' : 'Harsiddhi Mata'}
             </FLink>
             <FLink to={`${prefix}/mandirs/chintaman-ganesh/`}>
@@ -208,8 +213,8 @@ export function Footer() {
             </FLink>
             <li className="pt-1">
               <Link to={`${prefix}/mandirs/`}
-                className="inline-flex items-center gap-1 text-[12px] font-semibold
-                  text-gold/70 hover:text-gold transition-colors">
+                className="inline-flex items-center gap-1 text-[13px] font-semibold
+                  text-maroon hover:text-saffron-600 transition-colors">
                 {isHi ? 'उज्जैन के सभी प्रसिद्ध मंदिर' : 'All famous temples in Ujjain'}
                 <ArrowRight className="h-3 w-3" />
               </Link>
@@ -261,14 +266,14 @@ export function Footer() {
           </ul>
 
           {/* DPIIT badge */}
-          <div className="mt-6 rounded-xl border border-gold/15 bg-gold/5 p-4">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-gold/60 mb-1">
+          <div className="mt-6 rounded-xl border border-gold/45 bg-white/70 p-4">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-saffron-700 mb-1">
               {isHi ? 'सरकार से अप्रूव्ड' : 'Govt Recognised'}
             </p>
-            <p className="text-[11px] font-bold text-cream/70 leading-snug">
+            <p className="text-[12px] font-bold text-maroon leading-snug">
               Startup India EIR
             </p>
-            <p className="text-[10px] text-cream/40 mt-0.5">DPIIT · Govt of India</p>
+            <p className="text-[11px] text-[#5C554E] mt-0.5">DPIIT · Govt of India</p>
           </div>
         </div>
       </div>
@@ -277,20 +282,39 @@ export function Footer() {
       <div className="container-page pb-10 md:pb-8">
         <GoldDivider />
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between
-          gap-3 text-[11px] text-cream/35">
-          <p className="text-center sm:text-left leading-relaxed">
-            {t('footer.disclaimer')}
-          </p>
+          gap-3 text-[12px] text-[#5C554E]">
+          <div className="text-center sm:text-left leading-relaxed">
+            <p>{t('footer.disclaimer')}</p>
+            {/* Primary sources for the civic and historical claims on this site. These
+                are references, not affiliations — the disclaimer above still applies. */}
+            <p className="mt-2">
+              {isHi ? 'आधिकारिक स्रोत: ' : 'Official references: '}
+              <a href="https://ujjain.nic.in/" target="_blank" rel="noopener"
+                 className="underline decoration-gold/70 underline-offset-2 hover:text-maroon transition-colors">
+                {isHi ? 'उज्जैन ज़िला प्रशासन' : 'Ujjain District Administration'}
+              </a>
+              {' · '}
+              <a href="https://en.wikipedia.org/wiki/Ujjain_Simhastha" target="_blank" rel="noopener"
+                 className="underline decoration-gold/70 underline-offset-2 hover:text-maroon transition-colors">
+                {isHi ? 'सिंहस्थ (विकिपीडिया)' : 'Ujjain Simhastha (Wikipedia)'}
+              </a>
+              {' · '}
+              <a href="https://en.wikipedia.org/wiki/Mahakaleshwar_Jyotirlinga" target="_blank" rel="noopener"
+                 className="underline decoration-gold/70 underline-offset-2 hover:text-maroon transition-colors">
+                {isHi ? 'महाकालेश्वर (विकिपीडिया)' : 'Mahakaleshwar (Wikipedia)'}
+              </a>
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 flex-shrink-0">
             <span>© {year} {t('site.name')}</span>
-            <span className="hidden sm:block text-cream/20">·</span>
-            <Link to={`${prefix}/privacy-policy/`} className="hover:text-gold transition-colors">
+            <span className="hidden sm:block text-gold/60">·</span>
+            <Link to={`${prefix}/privacy-policy/`} className="hover:text-maroon transition-colors">
               {isHi ? 'गोपनीयता' : 'Privacy'}
             </Link>
-            <Link to={`${prefix}/terms/`} className="hover:text-gold transition-colors">
+            <Link to={`${prefix}/terms/`} className="hover:text-maroon transition-colors">
               {isHi ? 'शर्तें' : 'Terms'}
             </Link>
-            <a href="https://byteflowtech.in" target="_blank" rel="noopener" className="hover:text-gold transition-colors">
+            <a href="https://byteflowtech.in" target="_blank" rel="noopener" className="hover:text-maroon transition-colors">
               {isHi ? 'वेबसाइट: ByteFlow Technologies Pvt Ltd' : 'Website by ByteFlow Technologies Pvt Ltd'}
             </a>
           </div>

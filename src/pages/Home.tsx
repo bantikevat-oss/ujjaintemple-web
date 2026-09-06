@@ -22,7 +22,7 @@ const COPY = {
     ctaPrimary: 'मंदिर सूची',
     ctaSecondary: 'सिंहस्थ 2028 गाइड',
     section2Eyebrow: 'अवंतिका',
-    section2Title: 'विक्रमादित्य की राजधानी, काल के स्वामी की भूमि',
+    section2Title: 'उज्जैन को महाकाल की नगरी क्यों कहते हैं?',
     section2P1:
       'उज्जैन — प्राचीन भारत की सात मोक्षदायिनी पुरियों में से एक। महाभारत और स्कंद पुराण की कथाओं में अंकित यह नगर मध्य प्रदेश के पश्चिमी छोर पर शिप्रा नदी के तट पर स्थित है।',
     section2P2:
@@ -30,16 +30,16 @@ const COPY = {
     section2P3:
       'प्रत्येक बारह वर्ष में जब बृहस्पति सिंह राशि में प्रवेश करता है, उज्जैन में सिंहस्थ कुम्भ का आयोजन होता है। आगामी सिंहस्थ — सन् 2028 — के लिए यह संग्रह क्रमश: निर्मित हो रहा है।',
     featuredEyebrow: 'दर्शन',
-    featuredTitle: 'उज्जैन के प्रमुख मंदिर',
+    featuredTitle: 'उज्जैन में सबसे पहले कौन से मंदिर देखें?',
     featuredCta: 'पूरी मंदिर सूची',
     simhasthaEyebrow: 'महाकुम्भ',
-    simhasthaTitle: 'सिंहस्थ 2028',
+    simhasthaTitle: 'सिंहस्थ 2028 उज्जैन में कब है?',
     simhasthaDates: '27 मार्च — 27 मई 2028 · शाही स्नान 09 अप्रैल, 23 अप्रैल, 08 मई',
     simhasthaP:
       'बारह साल में एक बार। तीन शाही स्नान। 13 अखाड़े। पूरे दो माह का आयोजन। 3000 हेक्टेयर का मेला क्षेत्र। सिंहस्थ 2028 की पूरी गाइड — कल्पवास, घाट, अखाड़े, ट्रांसपोर्ट।',
     simhasthaCta: 'गाइड पढ़ें',
     exploreEyebrow: 'विषय',
-    exploreTitle: 'इस संग्रह में',
+    exploreTitle: 'इस उज्जैन गाइड में क्या-क्या है?',
     exploreItems: [
       { label: 'उज्जैन के प्रसिद्ध मंदिर', desc: 'महाकाल · काल भैरव · मंगलनाथ · हरसिद्धि और अन्य', href: '/mandirs/' },
       { label: 'सिंहस्थ 2028', desc: 'कल्पवास · घाट · शाही स्नान · अखाड़े', href: '/simhastha-2028/' },
@@ -59,7 +59,7 @@ const COPY = {
     ctaPrimary: 'Browse temples',
     ctaSecondary: 'Simhastha 2028 guide',
     section2Eyebrow: 'Avantika',
-    section2Title: 'Capital of Vikramaditya, abode of the lord of time',
+    section2Title: 'Why is Ujjain called the city of Mahakal?',
     section2P1:
       'Ujjain — one of the seven liberation-granting cities of ancient India. Mentioned across the Mahabharata and Skanda Purana, it lies on the western edge of Madhya Pradesh on the banks of the Shipra.',
     section2P2:
@@ -67,16 +67,16 @@ const COPY = {
     section2P3:
       'Once in twelve years, when Jupiter enters the sign of Leo, Ujjain hosts the Simhastha Kumbh. This collection is being readied for the next one — the Simhastha of 2028.',
     featuredEyebrow: 'Darshan',
-    featuredTitle: 'Principal temples of Ujjain',
+    featuredTitle: 'Which temples in Ujjain should you visit first?',
     featuredCta: 'See full temple list',
     simhasthaEyebrow: 'Mahakumbh',
-    simhasthaTitle: 'Simhastha 2028',
+    simhasthaTitle: 'When is Simhastha 2028 in Ujjain?',
     simhasthaDates: '27 March — 27 May 2028 · Shahi Snan 09 Apr, 23 Apr, 08 May',
     simhasthaP:
       'Once in twelve years. Three royal baths. 13 akhadas. Two months of mela across a 3,000-hectare ground. A full guide to Simhastha 2028 — kalpvas conduct, ghats, royal-bath calendar, akhada introductions, transit arrangements.',
     simhasthaCta: 'Read the guide',
     exploreEyebrow: 'Sections',
-    exploreTitle: 'In this collection',
+    exploreTitle: 'What does this Ujjain guide cover?',
     exploreItems: [
       { label: 'Famous Temples in Ujjain', desc: 'Mahakal · Kal Bhairav · Mangalnath · Harsiddhi and others', href: '/mandirs/' },
       { label: 'Simhastha 2028', desc: 'Kalpvas · ghats · royal bath · akhadas', href: '/simhastha-2028/' },
@@ -108,12 +108,14 @@ export function Home() {
   const prefix = locale === 'en' ? '' : '/hi';
   const daysLeft = useSimhasthaCountdown();
 
+  // Title ≤ 65 and description 140-160: past that Google rewrites the title and
+  // truncates the snippet, and the AI-readiness check scores the lengths directly.
   const title = locale === 'hi'
-    ? 'उज्जैन के मंदिर — सिंहस्थ 2028, होटल, टैक्सी व दर्शन पैकेज | Ujjain Temple'
-    : 'Ujjain Temple Guide — Simhastha 2028, Hotels, Taxi & Darshan Packages | Ujjain Temple';
+    ? 'उज्जैन के मंदिर — सिंहस्थ 2028, दर्शन व यात्रा गाइड'
+    : 'Ujjain Temples & Simhastha 2028 — Darshan and Travel Guide';
   const description = locale === 'hi'
-    ? 'उज्जैन के प्रसिद्ध मंदिर, सिंहस्थ 2028 गाइड, उज्जैन दर्शन पैकेज, उज्जैन में होटल व टैक्सी, काल सर्प / मंगल दोष / नाग बलि पूजा। वैदिक पंडित जी उपलब्ध। कॉल: +91 74007 24456।'
-    : 'Ujjain temples directory, Simhastha 2028 guide, Ujjain darshan packages, Hotel in Ujjain, Taxi in Ujjain, Kaal Sarp / Mangal Dosh / Nag Bali puja. Authentic pandits. Call +91 74007 24456.';
+    ? 'उज्जैन के 183 प्रमुख मंदिर, चौरासी महादेव, और सिंहस्थ 2028 (27 मार्च – 27 मई) की पूरी गाइड — दर्शन समय, होटल, कैब और पूजा की जानकारी एक जगह।'
+    : 'Guide to 183 Ujjain temples, the 84 Mahadev circuit and Simhastha 2028 (27 March – 27 May) — darshan timings, hotels, cabs and puja, all in one place.';
 
   return (
     <>
@@ -230,7 +232,7 @@ export function Home() {
               </p>
               <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)' }}>
-                {locale === 'hi' ? 'पवित्र पूजाएँ' : 'Sacred Pujas'}
+                {locale === 'hi' ? 'उज्जैन में कौन सी पूजा कराई जाती है?' : 'Which pujas are performed in Ujjain?'}
               </h2>
               <div className="mt-3 mx-auto w-14 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
             </div>

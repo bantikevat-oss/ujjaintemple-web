@@ -15,3 +15,11 @@ coverage/
 
 # image panel secret (server-only, never commit)
 panel/secret.php
+
+# Simhastha news section config (DB creds) — server copy lives above the webroot
+news-config.php
+
+# BNA uploads hero cards into this dir at runtime (server-only, kept by the
+# additive images rsync pass). Keep the directory, never the files.
+public/images/news/*
+!public/images/news/.gitkeep

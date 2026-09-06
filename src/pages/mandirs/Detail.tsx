@@ -231,7 +231,7 @@ export function MandirDetail({ slug }: DetailProps) {
                 {mandir.crowdLevel && (
                   <div className="flex items-center gap-2 text-sm">
                     <Users className="h-4 w-4 text-maroon" />
-                    <span className="font-semibold text-ink-soft">{locale === 'hi' ? 'भीड़' : 'Crowd'}:</span>
+                    <span className="font-semibold text-ink-soft">{locale === 'hi' ? 'श्रद्धालु' : 'Footfall'}:</span>
                     <span className={`rounded-full px-2 py-0.5 text-xs font-bold ${CROWD_COLOR[mandir.crowdLevel]}`}>
                       {locale === 'hi' ? CROWD_HI[mandir.crowdLevel] : CROWD_EN[mandir.crowdLevel]}
                     </span>

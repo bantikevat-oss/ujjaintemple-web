@@ -47,6 +47,21 @@ const STATS = [
   { numHi: '30 करोड़+',  numEn: '30 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
 ];
 
+// ─── Preparation snapshot (published media reports, September 2026) ──────────
+// The mela is still 18 months out, so "what is being built" is the freshest
+// thing this page can carry — and it is the one query family where no travel
+// aggregator competes. Figures are reported estimates, not official notification;
+// every one of them is restated with its source line in the linked article, and
+// this block links there rather than trying to be the whole story.
+const PREP = [
+  { numHi: '~₹25,000 करोड़', numEn: '~₹25,000 cr', labelHi: '129 प्रोजेक्ट · 55–60% पूर्ण', labelEn: '129 projects · 55–60% done' },
+  { numHi: '~350 किमी',       numEn: '~350 km',      labelHi: 'नई सड़कें एवं फ्लाईओवर',      labelEn: 'New roads and flyovers' },
+  { numHi: '~29.15 किमी',     numEn: '~29.15 km',    labelHi: 'शिप्रा पर नए घाट',            labelEn: 'New ghats on the Shipra' },
+  { numHi: '~437 एकड़',       numEn: '~437 acres',   labelHi: 'निर्माणाधीन हवाई अड्डा',      labelEn: 'Airport under construction' },
+  { numHi: '~₹1,125 करोड़',  numEn: '~₹1,125 cr',   labelHi: 'मंदिर सौंदर्यीकरण',            labelEn: 'Temple restoration' },
+  { numHi: '3,500+',           numEn: '3,500+',        labelHi: 'निगरानी कैमरे',                labelEn: 'Surveillance cameras' },
+];
+
 // Simhastha 2028 snan dates — sourced from published media reporting (Webdunia,
 // Times Now Navbharat, ETV Bharat, Patrika all carry the same three Shahi Snan
 // dates; re-verified 2026-08-12). Seven parv snans are also reported as proposed,
@@ -149,7 +164,7 @@ export function SimhasthaLanding() {
     {
       q: { hi: 'सिंहस्थ 2028 में शाही स्नान कब-कब है?', en: 'What are the Shahi Snan dates for Simhastha 2028?' },
       a: {
-        hi: 'सिंहस्थ 2028 में तीन शाही स्नान हैं — प्रथम 09 अप्रैल 2028, द्वितीय 23 अप्रैल 2028 और तृतीय व अंतिम 08 मई 2028। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं, जिनकी तिथियाँ अभी घोषित नहीं हुई हैं। शाही स्नान वाले दिनों में सबसे अधिक भीड़ रहती है।',
+        hi: 'सिंहस्थ 2028 में तीन शाही स्नान हैं — प्रथम 09 अप्रैल 2028, द्वितीय 23 अप्रैल 2028 और तृतीय व अंतिम 08 मई 2028। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं, जिनकी तिथियाँ अभी घोषित नहीं हुई हैं। शाही स्नान वाले दिनों में सबसे अधिक श्रद्धालु रहते हैं।',
         en: 'Simhastha 2028 has three Shahi Snans — the first on 09 April 2028, the second on 23 April 2028, and the third and final on 08 May 2028. Seven parv snans are also proposed, but their dates have not been announced yet. Crowds peak on Shahi Snan days.',
       },
     },
@@ -184,7 +199,7 @@ export function SimhasthaLanding() {
     {
       q: { hi: 'सिंहस्थ 2028 में कितने श्रद्धालु आने की संभावना है?', en: 'How many pilgrims are expected at Simhastha 2028?' },
       a: {
-        hi: 'सिंहस्थ 2028 में 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है, जिससे यह विश्व के सबसे बड़े धार्मिक आयोजनों में से एक होगा। शाही स्नान वाले दिनों में सबसे अधिक भीड़ रहती है।',
+        hi: 'सिंहस्थ 2028 में 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है, जिससे यह विश्व के सबसे बड़े धार्मिक आयोजनों में से एक होगा। शाही स्नान वाले दिनों में सबसे अधिक श्रद्धालु रहते हैं।',
         en: 'Over 30 crore (300 million) pilgrims are expected at Simhastha 2028, making it one of the world\'s largest religious gatherings. Crowds peak on the Shahi Snan days.',
       },
     },
@@ -642,6 +657,58 @@ export function SimhasthaLanding() {
         </section>
 
         {/* ═══════════════════════════════════════════════════════════
+            SECTION 2C — PREPARATION SNAPSHOT
+            "What is Ujjain building for Simhastha" is a live question with no
+            aggregator holding the SERP, and it is the only part of this page that
+            changes between now and 2028. Six numbers here, the full breakdown with
+            costs and deadlines in the linked article — an unlinked cluster page is
+            inert, which is exactly how the restored guides sat unread after 07-06.
+        ═══════════════════════════════════════════════════════════ */}
+        <section id="preparations" className="bg-cream-light py-14 sm:py-20 border-b border-cream-dark">
+          <div className="container-page max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+                {locale === 'hi' ? '— तैयारी —' : '— Preparations —'}
+              </p>
+              <h2 className={`font-extrabold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+                {locale === 'hi' ? 'सिंहस्थ 2028 के लिए उज्जैन में क्या बन रहा है?' : 'What is Ujjain building for Simhastha 2028?'}
+              </h2>
+              <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
+            </div>
+
+            <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-ink sm:text-lg">
+              {locale === 'hi'
+                ? 'प्रकाशित मीडिया रिपोर्ट्स के अनुसार (सितम्बर 2026) उज्जैन में सिंहस्थ 2028 से जुड़े लगभग 129 प्रोजेक्ट चल रहे हैं, कुल लागत लगभग ₹25 हज़ार करोड़, और लगभग 55 से 60 प्रतिशत काम पूरा हो चुका है। अधिकांश निर्माण की समय-सीमा दिसम्बर 2027 से फरवरी 2028 तक रखी गई है।'
+                : 'Per published media reports (September 2026), around 129 projects tied to Simhastha 2028 are under way in Ujjain at a combined estimated cost of about ₹25,000 crore, with roughly 55 to 60 percent of the work complete. Most construction carries a deadline between December 2027 and February 2028.'}
+            </p>
+
+            <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
+              {PREP.map((p, i) => (
+                <div key={i} className="rounded-xl border border-gold/30 bg-white px-4 py-5 text-center shadow-sm sm:px-5">
+                  <div className="font-serif text-xl font-extrabold leading-tight text-maroon sm:text-2xl">
+                    {locale === 'hi' ? p.numHi : p.numEn}
+                  </div>
+                  <div className="mt-2 text-[12px] leading-snug text-ink-soft sm:text-[13px]">
+                    {locale === 'hi' ? p.labelHi : p.labelEn}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-8 text-center text-sm sm:text-base">
+              <Link
+                to={`${prefix}/simhastha-2028/simhastha-2028-preparations/`}
+                className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 transition-colors hover:text-saffron"
+              >
+                {locale === 'hi'
+                  ? 'पूरी तैयारी — सड़क, हवाई अड्डा, घाट, पेयजल, मंदिर एवं श्रद्धालु-प्रबंधन, लागत और समय-सीमा सहित →'
+                  : 'The full picture — roads, airport, ghats, water, temples and crowd management, with costs and deadlines →'}
+              </Link>
+            </p>
+          </div>
+        </section>
+
+        {/* ═══════════════════════════════════════════════════════════
             SECTION 3 — SHAHI SNAN TIMELINE
         ═══════════════════════════════════════════════════════════ */}
         <section id="shahi-snan" className="bg-cream-light py-20 sm:py-28 border-b border-cream-dark">
@@ -912,6 +979,18 @@ export function SimhasthaLanding() {
                   ? 'शाही स्नान घाट, अखाड़ा परम्परा, नागा साधु, कल्पवास और सिंहस्थ का इतिहास — विस्तार से।'
                   : 'Snan ghats, akhada traditions, naga sadhus, kalpvas and the history of Simhastha — in detail.'}
               </p>
+
+              {/* Entry point to the PHP-SSR news section. A cluster nothing links to is
+                  inert — that is exactly how the restored articles sat unread after the
+                  07-06 consolidation. Hindi only: the section has no English tree yet. */}
+              {locale === 'hi' && (
+                <p className="mt-4 text-center text-sm sm:text-base">
+                  <a href="/hi/simhastha-2028-news/"
+                     className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 hover:text-saffron transition-colors">
+                    सिंहस्थ 2028 समाचार — ताज़ा तैयारी, स्नान और यात्रा अपडेट →
+                  </a>
+                </p>
+              )}
 
               <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {simhasthaGuides.map((a) => (

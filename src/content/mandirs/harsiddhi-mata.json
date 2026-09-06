@@ -42,7 +42,7 @@
       "en": "Approx. 5:00 AM – 9:00 PM"
     },
     "tuesday": {
-      "hi": "लगभग प्रातः 5:00 – रात्रि 9:00 (विशेष भीड़)",
+      "hi": "लगभग प्रातः 5:00 – रात्रि 9:00 (श्रद्धालु अधिक)",
       "en": "Approx. 5:00 AM – 9:00 PM (busy day)"
     },
     "wednesday": {
@@ -54,7 +54,7 @@
       "en": "Approx. 5:00 AM – 9:00 PM"
     },
     "friday": {
-      "hi": "लगभग प्रातः 5:00 – रात्रि 9:00 (विशेष भीड़)",
+      "hi": "लगभग प्रातः 5:00 – रात्रि 9:00 (श्रद्धालु अधिक)",
       "en": "Approx. 5:00 AM – 9:00 PM (busy day)"
     },
     "saturday": {
@@ -71,7 +71,7 @@
     "en": "Morning aarti 5:30 AM · Noon 12:00 PM · Evening aarti 7:30 PM"
   },
   "specialOccasions": {
-    "hi": "नवरात्र — 9 दिन भव्य उत्सव, दीप स्तंभ प्रज्वलित · अष्टमी/नवमी — विशेष भीड़ · पूर्णिमा — मुख्य पूजा",
+    "hi": "नवरात्र — 9 दिन भव्य उत्सव, दीप स्तंभ प्रज्वलित · अष्टमी/नवमी — श्रद्धालु अधिक · पूर्णिमा — मुख्य पूजा",
     "en": "Navratri — 9-day grand festival with lit lamp pillars · Ashtami/Navami — peak crowds · Purnima — main puja"
   },
   "entryFee": {
@@ -115,7 +115,7 @@
     "en": "Did you know? The two lamp pillars in front of the temple are about 15 feet tall and hold a combined 1,011 diyas that are lit simultaneously. This spectacular sight is unique to Harsiddhi and not seen at any other Shakti Peeth in India."
   },
   "visitTips": {
-    "hi": "सिर ढकने के लिए चुनरी या दुपट्टा साथ रखें — मंदिर परिसर में पारंपरिक वस्त्र उचित माने जाते हैं। नवरात्र की संध्या आरती (लगभग 7:30 बजे) दीप स्तंभ प्रज्वलन के साथ सर्वोत्तम अनुभव देती है। मंगलवार और शुक्रवार को भीड़ अधिक रहती है, इसलिए सुबह जल्दी दर्शन करना उत्तम है।",
+    "hi": "सिर ढकने के लिए चुनरी या दुपट्टा साथ रखें — मंदिर परिसर में पारंपरिक वस्त्र उचित माने जाते हैं। नवरात्र की संध्या आरती (लगभग 7:30 बजे) दीप स्तंभ प्रज्वलन के साथ सर्वोत्तम अनुभव देती है। मंगलवार और शुक्रवार को श्रद्धालु अधिक रहते हैं, इसलिए सुबह जल्दी दर्शन करना उत्तम है।",
     "en": "Carry a chunari or stole to cover your head — traditional attire is considered respectful within the temple complex. The Navratri evening aarti (around 7:30 PM) with the lit lamp pillars offers the most memorable experience. Tuesdays and Fridays see heavier crowds, so an early morning darshan is best for a peaceful visit."
   },
   "faqs": [

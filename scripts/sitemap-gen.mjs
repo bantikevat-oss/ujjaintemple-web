@@ -146,5 +146,68 @@ ${urls.map((u) => {
 </urlset>
 `;
 
-writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
-console.log(`✓ sitemap.xml — ${urls.length} URLs`);
+/**
+ * Extra non-HTML URLs that belong in the sitemap.
+ *
+ * The IndexNow key file is the important one: crawlers and auditors discover the key
+ * from the sitemap (robots.txt almost never lists it), and without it the IndexNow
+ * submissions we already make cannot be attributed to this host. The key file itself
+ * is untracked and server-only — never regenerate it, reuse the same key forever.
+ */
+const EXTRA = [];
+for (const f of readdirSync(ROOT)) {
+  if (/^[0-9a-f]{8,64}\.txt$/i.test(f)) EXTRA.push('/' + f);
+}
+if (existsSync(path.join(ROOT, 'llms.txt'))) EXTRA.push('/llms.txt');
+
+const extraXml = EXTRA.map((u) => `  <url>
+    <loc>${SITE}${u}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>`).join('\n');
+
+const finalXml = extraXml
+  ? xml.replace('</urlset>', extraXml + '\n</urlset>')
+  : xml;
+
+writeFileSync(path.join(ROOT, 'sitemap.xml'), finalXml);
+console.log(`✓ sitemap.xml — ${urls.length} URLs` +
+  (EXTRA.length ? ` + ${EXTRA.length} key/agent file(s): ${EXTRA.join(', ')}` : ''));
+
+/**
+ * /rss.xml at the conventional root path. The Simhastha news section has its own
+ * feed, but a feed reader — and every "does this site publish?" check — looks here.
+ * Content is the most recently changed pages by the same lastmod we just computed.
+ */
+const feedItems = urls
+  .filter((u) => !u.startsWith('/hi/'))
+  .map((u) => ({ u, d: lastmodFor(u) }))
+  .sort((a, b) => (a.d < b.d ? 1 : a.d > b.d ? -1 : 0))
+  .slice(0, 40);
+
+const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const titleFor = (u) => u === '/' ? 'Ujjain Temples & Simhastha 2028'
+  : u.replace(/^\/|\/$/g, '').split('/').pop().replace(/-/g, ' ')
+     .replace(/\b\w/g, (c) => c.toUpperCase());
+
+const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>UjjainTemple.com</title>
+  <link>${SITE}/</link>
+  <atom:link href="${SITE}/rss.xml" rel="self" type="application/rss+xml"/>
+  <description>Ujjain temples, the 84 Mahadev circuit, and Simhastha 2028 (27 March - 27 May 2028).</description>
+  <language>en-in</language>
+  <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+${feedItems.map(({ u, d }) => `  <item>
+    <title>${esc(titleFor(u))}</title>
+    <link>${SITE}${u}</link>
+    <guid isPermaLink="true">${SITE}${u}</guid>
+    <pubDate>${new Date(d + 'T00:00:00Z').toUTCString()}</pubDate>
+  </item>`).join('\n')}
+</channel>
+</rss>
+`;
+writeFileSync(path.join(ROOT, 'rss.xml'), rss);
+console.log(`✓ rss.xml — ${feedItems.length} items`);

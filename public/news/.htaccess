@@ -1,0 +1,8 @@
+# The engine is reachable only through the rewrites in the site .htaccess.
+# Everything except the front controller is denied directly.
+<FilesMatch "\.php$">
+  Require all denied
+</FilesMatch>
+<Files "index.php">
+  Require all granted
+</Files>

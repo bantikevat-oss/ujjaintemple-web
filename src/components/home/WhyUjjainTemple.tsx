@@ -61,8 +61,8 @@ export function WhyUjjainTemple() {
             style={{ fontSize: 'clamp(1.5rem, 3vw, 2.4rem)' }}
           >
             {isHi
-              ? 'UjjainTemple.com — आपकी यात्रा का विश्वसनीय साथी'
-              : 'UjjainTemple.com — your trusted sacred guide'}
+              ? 'UjjainTemple.com पर भरोसा क्यों करें?'
+              : 'Why trust UjjainTemple.com for your Ujjain visit?'}
           </h2>
           <div className="mt-3 mx-auto w-14 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent" />
         </div>

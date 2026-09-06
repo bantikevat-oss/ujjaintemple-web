@@ -38,7 +38,7 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
               className={`font-bold text-white leading-tight ${isHi ? 'font-sanskrit' : 'font-serif'}`}
               style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
             >
-              {isHi ? 'एक ही जगह — पूरी यात्रा व्यवस्था' : 'One Place — Your Entire Yatra Sorted'}
+              {isHi ? 'अपनी उज्जैन यात्रा कैसे बुक करें?' : 'How do you book your entire Ujjain yatra?'}
             </h2>
             <p className="mt-4 text-base sm:text-lg text-cream/80 max-w-md mx-auto lg:mx-0">
               {isHi
