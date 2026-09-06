@@ -6,6 +6,7 @@ import { SEOHead } from '../components/global/SEOHead';
 import { MandalaDivider } from '../components/global/MandalaDivider';
 import { HomeGraphicHero } from '../components/home/HomeGraphicHero';
 import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
+import { SimhasthaNews } from '../components/home/SimhasthaNews';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
@@ -222,6 +223,9 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── SIMHASTHA NEWS (Hindi only; headlines fill in client-side) ── */}
+        <SimhasthaNews />
 
         {/* ── PUJA CARDS ────────────────────────────────────────────────── */}
         <section id="pujas" style={{ background: 'linear-gradient(to bottom, #FCEFD8 0%, #FBF5EC 100%)' }}>

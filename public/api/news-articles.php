@@ -3,9 +3,15 @@
  * BNA article endpoint — create / update / delete.
  * Tenant config: articles_endpoint = /api/news-articles.php?action=create
  *
- * BNA derives the delete path by string-replacing `action=create` → `action=delete`
- * (publisher.php ~line 441), so the two actions MUST live on this one file and
- * differ only by that query param. Updates arrive as PUT with ?action=create.
+ * BNA derives both the delete and the update path by string-replacing
+ * `action=create` → `action=delete` / `action=update`, so all three actions MUST
+ * live on this one file and differ only by that query param.
+ *
+ * 🪤 Updates do NOT arrive as PUT. BNA's phpsession path sends **POST with
+ * ?action=update** (publisher.php::bna_update_published_article); only its
+ * nodejson path uses PUT. This file originally dispatched on the verb alone, so a
+ * repaint push was handled as a create — 500 on the live wire, 2026-09-06. Both
+ * shapes are accepted now.
  *
  * Field names are the phpsession payload from
  * news-agent/public/api/services/publisher.php::_bna_publish_phpsession().
@@ -22,9 +28,9 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 ujt_require_auth();
 
-if ($action === 'delete' || $method === 'DELETE') { ujt_news_delete(); }
-if ($method === 'PUT')                           { ujt_news_save(true); }
-if ($method === 'POST')                          { ujt_news_save(false); }
+if ($action === 'delete' || $method === 'DELETE')  { ujt_news_delete(); }
+if ($method === 'PUT' || $action === 'update')    { ujt_news_save(true); }
+if ($method === 'POST')                           { ujt_news_save(false); }
 ujt_json_err('Unsupported method', 405);
 
 
