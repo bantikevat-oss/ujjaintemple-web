@@ -9,6 +9,14 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.ujjaintemple\.com [NC]
 RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 
+# ── News engine internals — deny direct access ──
+# Only /news/index.php is ever requested (the rewrites further down route the
+# public URLs to it). Everything else under news/ is includes, SQL and templates.
+# Caught live on 2026-09-06: /news/sql/schema.sql was serving 200 — no secrets in
+# it, but the table layout has no business being public.
+RewriteRule ^news/(sql|lib|templates)/ - [F,L]
+RewriteRule ^news/boot\.php$ - [F,L]
+
 # ── Removed content → closest live page (SEO 301) ──
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakal-lok-corridor/?$ /mandirs/mahakal-lok/ [L,R=301]
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /mandirs/mahakaleshwar/ [L,R=301]
