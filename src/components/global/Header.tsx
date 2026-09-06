@@ -10,6 +10,11 @@ interface NavItem {
   labelEn?: string;
   href?: string;
   children?: NavItem[];
+  /** Href is already locale-qualified — do not prepend the /hi prefix. */
+  absolute?: boolean;
+  /** Hindi-only destination; hidden from the English tree rather than dumping
+   *  an English reader onto a Hindi page. */
+  hiOnly?: boolean;
 }
 
 const navTree: NavItem[] = [
@@ -62,7 +67,21 @@ const navTree: NavItem[] = [
       { labelHi: 'यातायात गाइड', labelEn: 'Transport Guide', href: '/transport-in-ujjain/' },
     ],
   },
-  { key: 'nav.simhastha', href: '/simhastha-2028/' },
+  {
+    // Reaching the news section used to mean opening this page and hunting for a
+    // text link inside "In-depth Guides", most of a scroll down. It is a menu now.
+    key: 'nav.simhastha',
+    href: '/simhastha-2028/',
+    children: [
+      { labelHi: 'सिंहस्थ 2028 — पूरी जानकारी', labelEn: 'Simhastha 2028 — Full Guide', href: '/simhastha-2028/' },
+      { labelHi: 'ताज़ा समाचार', labelEn: 'Latest News', href: '/hi/simhastha-2028-news/', absolute: true, hiOnly: true },
+      { labelHi: 'तैयारी — क्या बन रहा है', labelEn: 'Preparations — What Is Being Built', href: '/simhastha-2028/simhastha-2028-preparations/' },
+      { labelHi: 'स्नान घाट', labelEn: 'Bathing Ghats', href: '/simhastha-2028/snan-ghats-ujjain/' },
+      { labelHi: 'ठहरने की व्यवस्था', labelEn: 'Where to Stay', href: '/simhastha-2028/simhastha-2028-accommodation/' },
+      { labelHi: 'यात्रा गाइड', labelEn: 'Travel Guide', href: '/simhastha-2028/simhastha-2028-transport-guide/' },
+      { labelHi: 'अखाड़ा परम्परा', labelEn: 'Akhada Traditions', href: '/simhastha-2028/akhada-traditions-ujjain/' },
+    ],
+  },
   { key: 'nav.hotels', href: '/hotels/' },
   { key: 'nav.contact', href: '/contact/' },
 ];
@@ -71,7 +90,7 @@ function MobileNavItem({ item, prefix, locale, t, depth = 0, closeMenu }: { item
   const [isOpen, setIsOpen] = useState(false);
   const hasChildren = item.children && item.children.length > 0;
   const label = item.key ? t(item.key) : (locale === 'hi' ? item.labelHi : item.labelEn) || '';
-  const href = item.href ? `${prefix}${item.href}` : '#';
+  const href = item.href ? (item.absolute ? item.href : `${prefix}${item.href}`) : '#';
 
   return (
     <div className={`border-b border-cream-dark/50 ${depth > 0 ? 'ml-4 border-l-2 border-saffron/30 pl-2' : ''}`}>
@@ -87,7 +106,7 @@ function MobileNavItem({ item, prefix, locale, t, depth = 0, closeMenu }: { item
       </div>
       {hasChildren && isOpen && (
         <div className="flex flex-col">
-          {item.children!.map((child, idx) => (
+          {item.children!.filter((c) => !c.hiOnly || locale === 'hi').map((child, idx) => (
             <MobileNavItem key={idx} item={child} prefix={prefix} locale={locale} t={t} depth={depth + 1} closeMenu={closeMenu} />
           ))}
         </div>
@@ -105,10 +124,12 @@ export function Header() {
 
   // Desktop recursive renderer
   const renderDesktopNav = (items: NavItem[], depth = 0) => {
-    return items.map((item, idx) => {
+    // hiOnly entries point at the Hindi-only news section; showing them in the
+    // English tree would drop an English reader onto a Hindi page.
+    return items.filter((it) => !it.hiOnly || locale === 'hi').map((item, idx) => {
       const hasChildren = item.children && item.children.length > 0;
       const label = item.key ? t(item.key) : (locale === 'hi' ? item.labelHi : item.labelEn) || '';
-      const href = item.href ? `${prefix}${item.href}` : '#';
+      const href = item.href ? (item.absolute ? item.href : `${prefix}${item.href}`) : '#';
       const isActive = location.pathname === href;
 
       if (!hasChildren) {
@@ -199,7 +220,7 @@ export function Header() {
       {open && (
         <div className="border-t border-cream-dark bg-white px-4 pb-4 lg:hidden max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col">
-            {navTree.map((item, idx) => (
+            {navTree.filter((it) => !it.hiOnly || locale === 'hi').map((item, idx) => (
               <MobileNavItem key={idx} item={item} prefix={prefix} locale={locale as 'hi' | 'en'} t={t} closeMenu={() => setOpen(false)} />
             ))}
             <div className="pt-4 mt-2 border-t border-cream-dark flex justify-between items-center">

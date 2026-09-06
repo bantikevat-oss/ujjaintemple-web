@@ -414,6 +414,20 @@ export function SimhasthaLanding() {
                 {locale === 'hi' ? 'पूरी जानकारी' : 'Full Details'}
                 <ArrowRight className="w-5 h-5" />
               </a>
+              {/* The news section used to be reachable only by scrolling to the
+                  guides block near the bottom of this page. It belongs in the hero. */}
+              {locale === 'hi' && (
+                <a
+                  href="/hi/simhastha-2028-news/"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base sm:text-lg font-semibold transition-all duration-300"
+                  style={{ border: '1.5px solid rgba(201,168,76,0.40)', color: '#E0C374', background: 'rgba(201,168,76,0.06)' }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.8)'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(201,168,76,0.40)'; }}
+                >
+                  ताज़ा समाचार
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              )}
             </div>
           </div>
 
