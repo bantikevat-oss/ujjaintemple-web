@@ -30,6 +30,36 @@ rsync -az --delete -e ssh \
 rsync -az -e ssh dist/images/ pukhta:domains/ujjaintemple.com/public_html/images/
 ```
 
+## 🪤 `updated_at` means "last edited" — keep it that way
+
+`ujt_news_articles.updated_at` is `ON UPDATE CURRENT_TIMESTAMP`, and the article
+view bumps `view_count` on every request. A bare counter UPDATE therefore restamps
+the row on **every pageview**, which turns the column into "last read". The archive
+sitemap's `<lastmod>` is built from it, so that would have told Google every article
+changed on every visit — worse than shipping no lastmod, because it teaches Google
+to distrust the whole file.
+
+`render.php` now writes `updated_at = updated_at` alongside the counter to suppress
+the automatic restamp. **Do not drop that clause.**
+
+One-off data correction on 2026-09-07: the railway article's `updated_at` had already
+been polluted to `2026-09-07 15:43:49` by a pageview and was set back to its real
+last edit, `2026-09-07 12:24:42` (taken from the page's own `dateModified`). Not a
+migration — nothing to re-run.
+
+## Sitemaps
+
+| URL | What |
+|---|---|
+| `/hi/simhastha-2028-news/sitemap.xml` | archive — every published article, real lastmod |
+| `/hi/simhastha-2028-news/news-sitemap.xml` | Google News — 48-hour window, spec-bound |
+
+Neither can live in the site-wide `sitemap.xml`: that file is generated at build time
+by walking `dist/`, and these pages are rendered from the DB. Both are declared in
+robots.txt (Cloudflare Worker `ujjaintemple-robots`, source in
+`byteflow/services/ai-seo/edge/ujjaintemple.com/`) and both were submitted to Search
+Console on 2026-09-07.
+
 ## One-time setup (needs hPanel — Aman)
 
 1. **Create the database** in hPanel → Databases → MySQL:
