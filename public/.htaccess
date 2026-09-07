@@ -58,6 +58,7 @@ RewriteRule ^(.*)$ /$1/ [L,R=301]
 # Slugs are ASCII-only by construction (news/lib/slug.php) — keep the two in step.
 RewriteRule ^hi/simhastha-2028-news/feed\.xml$          /news/index.php?view=feed [L]
 RewriteRule ^hi/simhastha-2028-news/news-sitemap\.xml$  /news/index.php?view=sitemap [L]
+RewriteRule ^hi/simhastha-2028-news/sitemap\.xml$       /news/index.php?view=archive [L]
 RewriteRule ^hi/simhastha-2028-news/page/([0-9]{1,4})/?$ /news/index.php?view=list&p=$1 [L]
 RewriteRule ^hi/simhastha-2028-news/?$                   /news/index.php?view=list [L]
 RewriteRule ^hi/simhastha-2028-news/([A-Za-z0-9_-]+)/?$  /news/index.php?view=article&slug=$1 [L]

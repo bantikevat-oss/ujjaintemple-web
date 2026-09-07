@@ -109,7 +109,11 @@ function ujt_view_article($slug)
     if (!$a) ujt_not_found();
 
     // Best-effort counter; a locked row here must never cost us the pageview.
-    try { ujt_q('UPDATE ujt_news_articles SET view_count = view_count + 1 WHERE id = ?', [$a['id']]); }
+    // 🔴 `updated_at` is ON UPDATE CURRENT_TIMESTAMP, so a bare counter bump would
+    // restamp it on every single pageview — making it mean "last read" instead of
+    // "last edited", and turning the sitemap's <lastmod> into a value that is always
+    // "now". Assigning the column to itself suppresses the automatic update.
+    try { ujt_q('UPDATE ujt_news_articles SET view_count = view_count + 1, updated_at = updated_at WHERE id = ?', [$a['id']]); }
     catch (Exception $e) { /* ignore */ }
 
     $related = ujt_all(
@@ -241,6 +245,59 @@ function ujt_view_feed()
  * the last 48 hours — older URLs must be dropped, not merely sorted lower, or the
  * whole file gets rejected.
  */
+/**
+ * Archive sitemap — every published article, plus the section index and its
+ * listing pages.
+ *
+ * This is NOT the Google News sitemap below it, and the two are not
+ * interchangeable: the news sitemap is spec-bound to a 48-hour window, so an
+ * article older than two days falls out of it and — because the site-wide
+ * sitemap.xml is generated at BUILD time from dist/, where these PHP-SSR pages
+ * do not exist — would otherwise sit in no sitemap at all.
+ */
+function ujt_view_archive_sitemap()
+{
+    $rows = ujt_all(
+        "SELECT slug, published_at, updated_at FROM ujt_news_articles
+          WHERE status='published' AND language='hi'
+          ORDER BY published_at DESC, id DESC LIMIT 5000"
+    );
+    $total = (int) ujt_one(
+        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi'"
+    )['n'];
+    $pages = max(1, (int) ceil($total / UJT_PER_PAGE));
+
+    // W3C-datetime, and never a date in the future — a bogus lastmod gets the
+    // whole file distrusted rather than just that one URL.
+    $stamp = function ($v) {
+        $t = $v ? strtotime($v) : 0;
+        if (!$t || $t > time()) $t = time();
+        return date('c', $t);
+    };
+    $newest = $rows ? $stamp($rows[0]['updated_at'] ?: $rows[0]['published_at']) : date('c');
+
+    header('Content-Type: application/xml; charset=utf-8');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+    printf("<url>\n<loc>%s</loc>\n<lastmod>%s</lastmod>\n<changefreq>daily</changefreq>\n<priority>0.8</priority>\n</url>\n",
+        ujt_e(ujt_section_url()), $newest);
+
+    for ($p = 2; $p <= $pages; $p++) {
+        printf("<url>\n<loc>%spage/%d/</loc>\n<lastmod>%s</lastmod>\n<changefreq>daily</changefreq>\n<priority>0.4</priority>\n</url>\n",
+            ujt_e(ujt_section_url()), $p, $newest);
+    }
+
+    foreach ($rows as $r) {
+        printf("<url>\n<loc>%s</loc>\n<lastmod>%s</lastmod>\n<changefreq>monthly</changefreq>\n<priority>0.7</priority>\n</url>\n",
+            ujt_e(ujt_article_url($r['slug'])),
+            $stamp($r['updated_at'] ?: $r['published_at']));
+    }
+
+    echo '</urlset>';
+    exit;
+}
+
 function ujt_view_news_sitemap()
 {
     $rows = ujt_all(
