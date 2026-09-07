@@ -12,8 +12,9 @@ interface NavItem {
   children?: NavItem[];
   /** Href is already locale-qualified — do not prepend the /hi prefix. */
   absolute?: boolean;
-  /** Hindi-only destination; hidden from the English tree rather than dumping
-   *  an English reader onto a Hindi page. */
+  /** Hindi-only destination. Kept for entries that must stay out of the English
+   *  tree; the news section is NOT one — it is listed in both, with the English
+   *  label saying the articles are in Hindi so the click is not a surprise. */
   hiOnly?: boolean;
 }
 
@@ -74,7 +75,7 @@ const navTree: NavItem[] = [
     href: '/simhastha-2028/',
     children: [
       { labelHi: 'सिंहस्थ 2028 — पूरी जानकारी', labelEn: 'Simhastha 2028 — Full Guide', href: '/simhastha-2028/' },
-      { labelHi: 'ताज़ा समाचार', labelEn: 'Latest News', href: '/hi/simhastha-2028-news/', absolute: true, hiOnly: true },
+      { labelHi: 'ताज़ा समाचार', labelEn: 'Latest News (Hindi)', href: '/hi/simhastha-2028-news/', absolute: true },
       { labelHi: 'तैयारी — क्या बन रहा है', labelEn: 'Preparations — What Is Being Built', href: '/simhastha-2028/simhastha-2028-preparations/' },
       { labelHi: 'स्नान घाट', labelEn: 'Bathing Ghats', href: '/simhastha-2028/snan-ghats-ujjain/' },
       { labelHi: 'ठहरने की व्यवस्था', labelEn: 'Where to Stay', href: '/simhastha-2028/simhastha-2028-accommodation/' },
@@ -124,8 +125,8 @@ export function Header() {
 
   // Desktop recursive renderer
   const renderDesktopNav = (items: NavItem[], depth = 0) => {
-    // hiOnly entries point at the Hindi-only news section; showing them in the
-    // English tree would drop an English reader onto a Hindi page.
+    // hiOnly hides an entry from the English tree. Nothing uses it right now —
+    // the news section is listed in both locales and says "(Hindi)" in English.
     return items.filter((it) => !it.hiOnly || locale === 'hi').map((item, idx) => {
       const hasChildren = item.children && item.children.length > 0;
       const label = item.key ? t(item.key) : (locale === 'hi' ? item.labelHi : item.labelEn) || '';
