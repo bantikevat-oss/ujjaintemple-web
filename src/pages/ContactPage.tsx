@@ -5,6 +5,7 @@ import { TrustStrip } from '../components/global/TrustStrip';
 import { LeadForm } from '../components/global/LeadForm';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
+import { contactPageSchema, organizationSchema, breadcrumbSchema } from '../lib/schemas';
 
 const COPY = {
   hi: {
@@ -69,6 +70,7 @@ export function ContactPage() {
   const { locale } = useI18n();
   const t = COPY[locale];
   const isHi = locale === 'hi';
+  const prefix = isHi ? '/hi' : '';
 
   return (
     <>
@@ -77,6 +79,14 @@ export function ContactPage() {
         description={t.desc}
         path="/contact/"
         locale={locale}
+        schemas={[
+          contactPageSchema({ name: t.title, description: t.desc, url: `${SITE.url}${prefix}/contact/` }),
+          organizationSchema(),
+          breadcrumbSchema({ items: [
+            { name: isHi ? 'होम' : 'Home', url: `${SITE.url}${prefix}/` },
+            { name: t.eyebrow, url: `${SITE.url}${prefix}/contact/` },
+          ] }),
+        ]}
       />
       <Layout>
         <TrustStrip variant="thin" />

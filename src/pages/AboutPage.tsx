@@ -5,6 +5,7 @@ import { SEOHead } from '../components/global/SEOHead';
 import { TrustStrip } from '../components/global/TrustStrip';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
+import { aboutPageSchema, organizationSchema, breadcrumbSchema } from '../lib/schemas';
 
 const COPY = {
   hi: {
@@ -74,6 +75,14 @@ export function AboutPage() {
         description={t.desc}
         path="/about/"
         locale={locale}
+        schemas={[
+          aboutPageSchema({ name: t.title, description: t.desc, url: `${SITE.url}${prefix}/about/` }),
+          organizationSchema(),
+          breadcrumbSchema({ items: [
+            { name: locale === 'hi' ? 'होम' : 'Home', url: `${SITE.url}${prefix}/` },
+            { name: t.eyebrow, url: `${SITE.url}${prefix}/about/` },
+          ] }),
+        ]}
       />
       <Layout>
         <TrustStrip variant="thin" />

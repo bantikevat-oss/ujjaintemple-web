@@ -381,3 +381,40 @@ export function itemListSchema(items: Array<{ name: string; url: string; descrip
     }),
   };
 }
+
+/**
+ * /about/ and /contact/ shipped with no JSON-LD at all — the 2026-09-07 AI-readiness
+ * audit found them the only two sampled templates without any. They are the pages an
+ * answer engine reads to decide who this business IS, so they are the worst two to
+ * leave unmarked. Both point at the same Organization @id the rest of the site uses,
+ * so the entity stays one node rather than several look-alikes.
+ */
+export function aboutPageSchema({ name, description, url }: { name: string; description: string; url: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${url}#aboutpage`,
+    name,
+    description,
+    url,
+    inLanguage: url.includes('/hi/') ? 'hi-IN' : 'en-IN',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}/#organization` },
+    publisher: { '@id': `${SITE.url}/#organization` },
+  };
+}
+
+export function contactPageSchema({ name, description, url }: { name: string; description: string; url: string }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${url}#contactpage`,
+    name,
+    description,
+    url,
+    inLanguage: url.includes('/hi/') ? 'hi-IN' : 'en-IN',
+    isPartOf: { '@id': `${SITE.url}/#website` },
+    about: { '@id': `${SITE.url}/#organization` },
+    mainEntity: { '@id': `${SITE.url}/#organization` },
+  };
+}
