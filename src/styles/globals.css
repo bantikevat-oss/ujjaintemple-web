@@ -148,3 +148,22 @@
 :target {
   scroll-margin-top: 6rem;
 }
+
+/* ── Print — the 84-Mahadev sheet ────────────────────────────────────────────
+   `84 mahadev ujjain list pdf` is the site's highest-CTR query with volume, and
+   the intent is a list to keep. The page prints ITSELF instead of us shipping a
+   PDF that goes stale: on a print, everything but #print-list is dropped so the
+   browser's "Save as PDF" produces a clean, always-current sheet.
+   Scoped to pages that actually have #print-list — every other page prints as
+   before. ── */
+@media print {
+  body:has(#print-list) > *:not(:has(#print-list)) { display: none !important; }
+  body:has(#print-list) header,
+  body:has(#print-list) footer,
+  body:has(#print-list) nav { display: none !important; }
+  #print-list { margin: 0 !important; }
+  #print-list table { font-size: 11pt; }
+  #print-list thead { display: table-header-group; }
+  #print-list tr { break-inside: avoid; }
+  a[href]::after { content: none !important; }
+}

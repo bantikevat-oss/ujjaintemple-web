@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { MapPin, Search, Sparkles } from 'lucide-react';
+import { MapPin, Printer, Search, Sparkles } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { LeadForm } from '../components/global/LeadForm';
@@ -144,6 +144,64 @@ export function Mahadev84Page() {
               ))}
             </ul>
           )}
+
+          {/* ── Printable list ────────────────────────────────────────────────
+                `84 mahadev ujjain list pdf` is the highest-CTR query on this site
+                with real volume (8.4% at pos 4.6, GSC 90d) — people want the list
+                to KEEP, not just to read. Rather than ship a PDF file that goes
+                stale the moment a name or area is corrected, the page prints
+                itself: one table, all 84, no chrome. The browser's own "Save as
+                PDF" then produces a dated, always-current document.
+
+                🔴 Additive and below the fold on purpose — this page earns 87
+                clicks/28d and is a G2 protected asset, so nothing above here, and
+                no title/H1 change, ships with it. */}
+          <section id="print-list" className="mt-12">
+            <div className="flex flex-wrap items-end justify-between gap-3 print:hidden">
+              <div>
+                <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl' : 'font-serif text-2xl'}`}>
+                  {locale === 'hi' ? '84 महादेव की सूची — प्रिंट या PDF' : '84 Mahadev list — print or save as PDF'}
+                </h2>
+                <p className="mt-1 text-sm text-ink-soft">
+                  {locale === 'hi'
+                    ? 'पूरी सूची एक पन्ने पर — क्रमांक, नाम और क्षेत्र। यात्रा में साथ ले जाने के लिए।'
+                    : 'All 84 on one sheet — number, name and area. Made to carry on the parikrama.'}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                className="btn-secondary"
+              >
+                <Printer className="h-4 w-4" />
+                {locale === 'hi' ? 'प्रिंट / PDF सेव करें' : 'Print / Save as PDF'}
+              </button>
+            </div>
+
+            <div className="mt-4 overflow-x-auto rounded-xl border border-cream-dark bg-white">
+              <table className="w-full border-collapse text-sm">
+                <caption className="sr-only">
+                  {locale === 'hi' ? 'उज्जैन के 84 महादेव — क्रम, नाम और क्षेत्र' : 'The 84 Mahadev of Ujjain — order, name and area'}
+                </caption>
+                <thead>
+                  <tr className="bg-cream-dark/50 text-left text-xs uppercase tracking-wider text-ink-soft">
+                    <th scope="col" className="w-12 px-3 py-2">#</th>
+                    <th scope="col" className="px-3 py-2">{locale === 'hi' ? 'मंदिर' : 'Temple'}</th>
+                    <th scope="col" className="px-3 py-2">{locale === 'hi' ? 'क्षेत्र' : 'Area'}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {mahadev84.map((m) => (
+                    <tr key={m.n} className="border-t border-cream-dark/70 align-top">
+                      <td className="px-3 py-1.5 font-semibold text-saffron-700">{m.n}</td>
+                      <td className="px-3 py-1.5 text-ink">{locale === 'hi' ? m.hi : m.en}</td>
+                      <td className="px-3 py-1.5 text-ink-soft">{locale === 'hi' ? m.areaHi : m.areaEn}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
 
           {/* Editor's note */}
           <aside className="mt-12 rounded-xl border-l-4 border-gold bg-cream-dark/40 p-5 sm:p-6">

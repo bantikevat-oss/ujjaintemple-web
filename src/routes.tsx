@@ -2,6 +2,7 @@ import type { RouteRecord } from 'vite-react-ssg';
 import { I18nProvider, type Locale } from './i18n';
 import { Home } from './pages/Home';
 import { MandirIndex } from './pages/mandirs/Index';
+import { DeityListPage } from './pages/DeityList';
 import { Mahadev84Page } from './pages/Mahadev84';
 import { VerticalLanding } from './pages/VerticalLanding';
 import { SimhasthaLanding } from './pages/SimhasthaLanding';
@@ -18,6 +19,7 @@ import { PrivacyPage } from './pages/PrivacyPage';
 import { TermsPage } from './pages/TermsPage';
 import { NotFound } from './pages/NotFound';
 import { mandirList } from './data/mandirs-index';
+import { DEITY_LISTS } from './data/deity-lists';
 import { articleListByCategory as articlesByCategory } from './data/articles-index';
 
 const withLocale = (locale: Locale, Component: React.FC) => (
@@ -36,6 +38,12 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     { path: `${basePath}mandirs/`, element: withLocale(locale, MandirIndex) },
     // 84 Mahadev of Ujjain — Chaurasi Mahadev list
     { path: `${basePath}84-mahadev-ujjain/`, element: withLocale(locale, Mahadev84Page) },
+    // Deity-group list pages. Root-level, like 84-mahadev: a /mandirs/<slug>/ path
+    // would be swallowed by the temple Detail route below.
+    ...DEITY_LISTS.map((g) => ({
+      path: `${basePath}${g.slug}/`,
+      element: withLocale(locale, () => <DeityListPage slug={g.slug} />),
+    })),
     // `lazy` (not `element`) on purpose — see pages/mandirs/DetailRoute.tsx. Detail.tsx
     // is the only consumer of the 1.4 MB full-record glob; importing it statically here
     // put that data in the entry graph and modulepreloaded it on every page.

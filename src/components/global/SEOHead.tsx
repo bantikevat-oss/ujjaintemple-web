@@ -1,6 +1,6 @@
 import { Head } from 'vite-react-ssg';
 import type { ReactNode } from 'react';
-import { buildHreflang, type SeoMeta } from '../../lib/seo';
+import { buildHreflang, clampDescription, clampTitle, isTitleProtected, type SeoMeta } from '../../lib/seo';
 import { SITE } from '../../lib/site';
 
 interface Props extends SeoMeta {
@@ -10,6 +10,13 @@ interface Props extends SeoMeta {
 
 export function SEOHead({ title, description, path, locale, image, type = 'website', publishedTime, modifiedTime, schemas = [], children }: Props) {
   const canonical = locale === 'en' ? `${SITE.url}${path}` : `${SITE.url}/hi${path}`;
+  // One clamp for every page on the site, including the dynamic routes — see
+  // lib/seo.ts. Protected (≥50 clicks/28d) pages keep the title they earn with.
+  const serpTitle = isTitleProtected(path, locale) ? title : clampTitle(title);
+  // Descriptions are clamped on every page including protected ones: this only
+  // ever removes whole trailing sentences Google was cutting anyway, so there is
+  // no earning copy at risk.
+  const serpDescription = clampDescription(description);
   const hreflangs = buildHreflang(path);
   const ogImage = image || `${SITE.url}/og/default.webp`;
 
@@ -22,8 +29,8 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
           encoding guess and a parser restart on every page. */}
       <meta charSet="UTF-8" />
       <html lang={locale === 'hi' ? 'hi-IN' : 'en-IN'} />
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <title>{serpTitle}</title>
+      <meta name="description" content={serpDescription} />
 
       {/* ── Core SEO ────────────────────────────────────────────────────────── */}
       {/* <meta name="keywords"> intentionally removed: Google dropped support in 2009 and
@@ -57,8 +64,8 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
       <link rel="dns-prefetch" href="https://maps.google.com" />
 
       {/* ── Open Graph ──────────────────────────────────────────────────────── */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
+      <meta property="og:title" content={serpTitle} />
+      <meta property="og:description" content={serpDescription} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={ogImage} />
@@ -74,8 +81,8 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ujjaintemple" />
       <meta name="twitter:creator" content="@ujjaintemple" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
+      <meta name="twitter:title" content={serpTitle} />
+      <meta name="twitter:description" content={serpDescription} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
 

@@ -46,6 +46,21 @@ const CATEGORY_LABEL: Record<string, { en: string; hi: string }> = {
   'Multi-deity': { en: 'Multi-deity Temples in Ujjain', hi: 'उज्जैन के बहु-देव मंदिर' },
 };
 
+/**
+ * Categories that now have a dedicated list page of their own.
+ *
+ * 🪤 Those pages carry an H1 identical to this hub's H2 for the same group, which
+ * is exactly how a self-cannibalising pair starts (D3). The link below is the fix:
+ * it makes this section a POINTER to the dedicated page rather than a competitor
+ * for the same term, and it keeps the new pages out of the orphan class (D13).
+ * Add a row here whenever a group is added to data/deity-lists.ts.
+ */
+const CATEGORY_PAGE: Record<string, string> = {
+  Bhairav: 'bhairav-mandir-ujjain',
+  Ganesh: 'ganesh-mandir-ujjain',
+  Navagraha: 'navgrah-mandir-ujjain',
+};
+
 // 'Shakti Peeth' is a one-off legacy value — fold it into 'Shakti'.
 const normaliseType = (t: string | undefined) => (t === 'Shakti Peeth' ? 'Shakti' : t ?? 'Historical');
 
@@ -263,6 +278,14 @@ export function MandirIndex() {
               <h2 className={`mb-5 border-b border-gold/30 pb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
                 {CATEGORY_LABEL[cat][locale]}
                 <span className="ml-2 align-middle text-sm font-normal text-ink-soft">({items.length})</span>
+                {CATEGORY_PAGE[cat] && (
+                  <Link
+                    to={`${locale === 'en' ? '' : '/hi'}/${CATEGORY_PAGE[cat]}/`}
+                    className="ml-3 align-middle text-sm font-semibold text-saffron-700 underline-offset-4 hover:underline"
+                  >
+                    {locale === 'hi' ? 'पूरी सूची व दर्शन क्रम →' : 'full list & darshan order →'}
+                  </Link>
+                )}
               </h2>
               {/* First 3 of each category as photo cards; the long tail as compact rows.
                   Every temple stays a crawlable link either way — see MandirRow. */}

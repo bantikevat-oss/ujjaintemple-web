@@ -24,7 +24,7 @@ interface DetailProps { slug: string; }
  */
 const META_MAX = 165;
 
-function leadWithTiming(name: string, timing: string, base: string, locale: 'hi' | 'en') {
+function leadWithTiming(name: string, timing: string, base: string, locale: 'hi' | 'en', facts?: { aarti?: string; entry?: string }) {
   const head = locale === 'hi'
     ? `${name} दर्शन समय: ${timing}। `
     : `${name} darshan timings: ${timing}. `;
@@ -44,8 +44,31 @@ function leadWithTiming(name: string, timing: string, base: string, locale: 'hi'
   tail = tail.replace(/\s*[^.।]*\+91[\d\s+]*[.।]?\s*$/, '').trim();
   if (locale === 'en' && tail) tail = tail.charAt(0).toUpperCase() + tail.slice(1);
   const room = META_MAX - head.length;
-  if (room < 40 || !tail) return head.trim();
-  if (tail.length > room) tail = `${tail.slice(0, room).replace(/\s+\S*$/, '')}…`;
+  if (room < 40) return head.trim();
+
+  // 🔴 Never clip mid-sentence. The old `slice(…) + '…'` ended 266 of 464 snippets
+  // on a dangling half-clause ("…is a rare temple dedicated to…") — in the SERP
+  // that reads as a page that could not finish its own thought. Keep only whole
+  // sentences.
+  if (tail.length > room) {
+    const cut = Math.max(tail.lastIndexOf('।', room), tail.lastIndexOf('.', room));
+    tail = cut > 0 ? tail.slice(0, cut + 1).trim() : '';
+  }
+
+  // Nothing from the prose fits? Fall back to the structured facts rather than
+  // shipping a 70-character snippet that leaves half the SERP width unused. Aarti
+  // and entry are the next two things this query family asks after timings, they
+  // are already on the page, and they are short enough to always fit.
+  if (!tail && facts) {
+    const bits = locale === 'hi'
+      ? [facts.aarti && `आरती — ${facts.aarti}।`, facts.entry && `प्रवेश ${facts.entry}।`]
+      : [facts.aarti && `Aarti — ${facts.aarti}.`, facts.entry && `${facts.entry}.`];
+    tail = bits.filter(Boolean).join(' ').trim();
+    if (tail.length > room) tail = (bits[0] || '').trim();
+    if (tail.length > room) tail = '';
+  }
+
+  if (!tail) return head.trim();
   return head + tail;
 }
 
@@ -160,6 +183,7 @@ export function MandirDetail({ slug }: DetailProps) {
     mandir.darshanTimingSummary[locale],
     mandir.seoDescription?.[locale] ?? mandir.shortIntro[locale],
     locale,
+    { aarti: mandir.aartiTiming?.[locale], entry: mandir.entryFee?.[locale] },
   );
 
   const nearby = getNearbyMandirs(mandir);
