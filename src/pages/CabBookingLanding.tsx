@@ -27,12 +27,29 @@ export function CabBookingLanding() {
   const prefix = locale === 'en' ? '' : '/hi';
   const articles = articlesByCategory('blog').slice(0, 3);
 
+  /**
+   * This page owns the whole commercial taxi cluster in GSC (90d): `ujjain darshan
+   * cab` pos 4.7, `ujjain taxi service price` 6.4, `ujjain taxi contact number` 9.8,
+   * `ujjain taxi service number` 10.1 — and earned 4 clicks on 594 impressions.
+   *
+   * The number was already in the description, but at the very END, past where
+   * Google truncates; and the page said "fixed fares" while never naming one. Both
+   * are now in the first clause, because for `…contact number` and `…service price`
+   * the number and the fare ARE the answer — the same reasoning that put actual
+   * darshan hours at the front of every temple snippet.
+   *
+   * 🔴 The number is in the DESCRIPTION, never the <title>: a title carrying a phone
+   * number gets rewritten by Google and burns the pixel width the keyword needs.
+   * The title instead carries the WORDS people type ("service", "fare", "contact
+   * number"). Every figure below is published on this page and on
+   * /transport-in-ujjain/ujjain-local-sightseeing-cab/ — do not edit one without the other.
+   */
   const title = locale === 'hi'
-    ? 'उज्जैन दर्शन कैब बुक करें — फ़िक्स्ड किराया, 24×7 पिकअप, आउटस्टेशन टैक्सी'
-    : 'Book Ujjain Darshan Cab — Fixed Fare, 24×7 Pickup, Outstation Taxi';
+    ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
+    : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन में कैब बुक करें — महाकालेश्वर दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व लोकल दर्शन के लिए। फ़िक्स्ड किराया, 24×7 पिकअप, WhatsApp पर तुरंत बुकिंग: +91 74007 24456।'
-    : 'Book a cab in Ujjain for Mahakaleshwar darshan, Omkareshwar, Indore airport & local sightseeing. Fixed fares, 24×7 pickup, instant WhatsApp booking: +91 74007 24456.';
+    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹800 (हाफ डे), ₹1,500 (फुल डे); इंदौर एयरपोर्ट ₹1,500 से। फ़िक्स्ड किराया, 24×7, GST बिल।'
+    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab ₹800 half day, ₹1,500 full day; Indore airport from ₹1,500. Fixed fare, 24×7 pickup, GST bill.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);

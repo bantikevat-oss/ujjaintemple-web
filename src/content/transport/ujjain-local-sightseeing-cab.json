@@ -10,8 +10,8 @@
     "en": "Ujjain Local Sightseeing Cab — All Temples in One Day, Fare & Booking 2026"
   },
   "metaDescription": {
-    "hi": "उज्जैन में लोकल कैब बुक करें — महाकालेश्वर, काल भैरव, मंगलनाथ, हरसिद्धि सहित 8+ मंदिर एक दिन में। किराया ₹800 से शुरू। WhatsApp पर बुक करें।",
-    "en": "Book local cab in Ujjain — Mahakaleshwar, Kal Bhairav, Mangalnath, Harsiddhi and 8+ temples in one day. Fares from ₹800. Book on WhatsApp."
+    "en": "Ujjain darshan cab ₹800 half day, ₹1,500 full day — Mahakaleshwar, Kal Bhairav, Mangalnath, Harsiddhi and 8+ temples in one day. Book: +91 74007 24456.",
+    "hi": "उज्जैन दर्शन कैब ₹800 हाफ डे, ₹1,500 फुल डे — महाकालेश्वर, काल भैरव, मंगलनाथ, हरसिद्धि सहित 8+ मंदिर एक दिन में। बुकिंग: +91 74007 24456।"
   },
   "shortIntro": {
     "hi": "उज्जैन के सभी प्रमुख मंदिरों का दर्शन एक ही दिन में करना हो तो लोकल कैब सबसे अच्छा विकल्प है। हम भरोसेमंद, AC कैब और अनुभवी चालक उपलब्ध कराते हैं।",
@@ -24,19 +24,41 @@
   "heroImage": "/images/puja-info/gallery_1.webp",
   "publishDate": "2026-06-06",
   "lastUpdated": "2026-06-06",
-  "relatedSlugs": ["indore-to-ujjain", "bhopal-to-ujjain", "ujjain-to-indore-taxi"],
+  "relatedSlugs": [
+    "indore-to-ujjain",
+    "bhopal-to-ujjain",
+    "ujjain-to-indore-taxi"
+  ],
   "faqs": [
     {
-      "q": { "hi": "उज्जैन में लोकल दर्शन कैब का किराया कितना है?", "en": "What is the local sightseeing cab fare in Ujjain?" },
-      "a": { "hi": "हाफ डे (4-5 घंटे) ₹800-₹1,000 और फुल डे (8-9 घंटे) ₹1,500-₹2,000 में AC कैब मिलती है।", "en": "Half day (4-5 hrs) costs ₹800-₹1,000 and full day (8-9 hrs) costs ₹1,500-₹2,000 for an AC cab." }
+      "q": {
+        "hi": "उज्जैन में लोकल दर्शन कैब का किराया कितना है?",
+        "en": "What is the local sightseeing cab fare in Ujjain?"
+      },
+      "a": {
+        "hi": "हाफ डे (4-5 घंटे) ₹800-₹1,000 और फुल डे (8-9 घंटे) ₹1,500-₹2,000 में AC कैब मिलती है।",
+        "en": "Half day (4-5 hrs) costs ₹800-₹1,000 and full day (8-9 hrs) costs ₹1,500-₹2,000 for an AC cab."
+      }
     },
     {
-      "q": { "hi": "उज्जैन में एक दिन में कितने मंदिर घूम सकते हैं?", "en": "How many temples can be covered in Ujjain in one day?" },
-      "a": { "hi": "सुव्यवस्थित योजना से एक दिन में 6-8 प्रमुख मंदिर आराम से कवर होते हैं।", "en": "With proper planning, 6-8 major temples can comfortably be covered in one day." }
+      "q": {
+        "hi": "उज्जैन में एक दिन में कितने मंदिर घूम सकते हैं?",
+        "en": "How many temples can be covered in Ujjain in one day?"
+      },
+      "a": {
+        "hi": "सुव्यवस्थित योजना से एक दिन में 6-8 प्रमुख मंदिर आराम से कवर होते हैं।",
+        "en": "With proper planning, 6-8 major temples can comfortably be covered in one day."
+      }
     },
     {
-      "q": { "hi": "क्या Ola/Uber उज्जैन में उपलब्ध है?", "en": "Is Ola/Uber available in Ujjain?" },
-      "a": { "hi": "हाँ, Ola और Uber दोनों उज्जैन में उपलब्ध हैं। पर सभी मंदिरों के लिए प्रीबुक्ड कैब बेहतर रहती है।", "en": "Yes, both Ola and Uber are available in Ujjain. However a pre-booked cab is better for covering all temples." }
+      "q": {
+        "hi": "क्या Ola/Uber उज्जैन में उपलब्ध है?",
+        "en": "Is Ola/Uber available in Ujjain?"
+      },
+      "a": {
+        "hi": "हाँ, Ola और Uber दोनों उज्जैन में उपलब्ध हैं। पर सभी मंदिरों के लिए प्रीबुक्ड कैब बेहतर रहती है।",
+        "en": "Yes, both Ola and Uber are available in Ujjain. However a pre-booked cab is better for covering all temples."
+      }
     }
   ],
   "photos": [
