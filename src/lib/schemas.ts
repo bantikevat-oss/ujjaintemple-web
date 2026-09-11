@@ -344,7 +344,7 @@ export function taxiServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Ujjain Taxi Service — UjjainTemple Cab Booking',
-    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Fixed fares, 24/7.',
+    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Transparent fares quoted upfront, 24/7.',
     url: `${SITE.url}/cab-booking/`,
     provider: { '@id': `${SITE.url}/#organization` },
     areaServed: [

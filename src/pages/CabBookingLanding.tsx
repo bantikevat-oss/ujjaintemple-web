@@ -48,8 +48,8 @@ export function CabBookingLanding() {
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹800 (हाफ डे), ₹1,500 (फुल डे); इंदौर एयरपोर्ट ₹1,500 से। फ़िक्स्ड किराया, 24×7, GST बिल।'
-    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab ₹800 half day, ₹1,500 full day; Indore airport from ₹1,500. Fixed fare, 24×7 pickup, GST bill.';
+    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹800 से (हाफ डे), ₹1,500 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
+    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab from ₹800 half day, ₹1,500 full day. Fare depends on the date, season and vehicle — confirmed on call.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -69,17 +69,17 @@ export function CabBookingLanding() {
       q: locale === 'hi' ? 'उज्जैन में सबसे अच्छी टैक्सी सेवा कौन सी है?' : 'Which is the best taxi service in Ujjain?',
       // Plain string retained for the FAQ schema (SEO); aNode is what renders on-page
       a: locale === 'hi'
-        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।'
-        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.',
+        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।'
+        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.',
       aNode: locale === 'hi'
-        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, फ़िक्स्ड पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।</>)
-        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, fixed transparent fares, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.</>)
+        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।</>)
+        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.</>)
     },
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
       a: locale === 'hi'
-        ? 'इंदौर एयरपोर्ट से उज्जैन का कैब किराया सेडान के लिए ₹1500 और SUV के लिए ₹2000 से शुरू होता है। यह एयरपोर्ट पिकअप/ड्रॉप के लिए एक निश्चित कीमत है।'
-        : 'The taxi/cab fare from Indore Airport to Ujjain starts from ₹1500 for a sedan cab & ₹2000 for an SUV cab. It is a fixed price for airport pickup/drop.'
+        ? 'इंदौर एयरपोर्ट से उज्जैन का कैब किराया सेडान के लिए ₹1,500 और SUV के लिए ₹2,000 से शुरू होता है। यह शुरुआती दर है — त्योहार, श्रावण सोमवार, सिंहस्थ, लंबे वीकेंड और देर रात की फ्लाइट पर किराया इससे अधिक रहता है। आपकी तारीख़ का किराया बुकिंग कॉल पर तय होता है और उसके बाद नहीं बदलता।'
+        : 'The cab fare from Indore Airport to Ujjain starts from ₹1,500 for a sedan and ₹2,000 for an SUV. That is a starting rate — festival dates, Shravan Somvar, Simhastha, long weekends and late-night flights run higher. The fare for your date is confirmed on the booking call and does not change after that.'
     },
     {
       q: locale === 'hi' ? 'उज्जैन लोकल टैक्सी बुकिंग/कैंसिलेशन पॉलिसी क्या है?' : 'What is the Ujjain local taxi booking/cancellation policy?',
@@ -271,8 +271,8 @@ export function CabBookingLanding() {
             </h2>
             <p className="text-ink-soft text-lg leading-relaxed font-serif mb-4">
               {locale === 'hi'
-                ? 'उज्जैन टैक्सी सेवा उज्जैन में अन्य टैक्सी सेवा प्रदाताओं की तुलना में बहुत कम और सस्ती है। हम प्रति किलोमीटर आधार या पैकेज आधार पर कैब/टैक्सी प्रदान करते हैं। उज्जैन में टैक्सी की लागत आपके द्वारा बुक किए गए कैब के प्रकार पर निर्भर करती है। उज्जैन में कैब की शुरुआती कीमत सेडान के लिए 10/किमी और SUV के लिए 14/किमी है।'
-                : 'Ujjain taxi service is very low & affordable compared to other taxi service providers in Ujjain. We provide cab/taxi on a per km basis or package basis. The cost of taxi in Ujjain depends on the type of cab you book. The starting price of cab in Ujjain is 10/km for Sedan & 14/km for SUV.'}
+                ? 'हम प्रति किलोमीटर आधार या पैकेज आधार पर कैब/टैक्सी देते हैं। शुरुआती दर सेडान के लिए ₹10/किमी और SUV के लिए ₹14/किमी है। ये शुरुआती दरें हैं — किराया गाड़ी के प्रकार, तारीख़ और शहर की भीड़ पर निर्भर करता है। त्योहार, श्रावण सोमवार, महाशिवरात्रि, सिंहस्थ और लंबे वीकेंड पर माँग बढ़ जाती है, इसलिए उन तिथियों पर किराया अधिक रहता है। हम आपकी तारीख़ देखकर किराया कॉल पर बता देते हैं — बुकिंग के बाद वही रहता है, कोई छिपा हुआ चार्ज नहीं।'
+                : 'We run cabs on a per-kilometre basis or as a package. Starting rates are ₹10/km for a sedan and ₹14/km for an SUV. These are starting rates — the fare depends on the vehicle, the date and how busy the city is. Festival dates, Shravan Somvar, Mahashivratri, Simhastha and long weekends bring a rush, so fares on those dates run higher. We check your date and quote the fare on the call — it stays that price once booked, with no hidden charges.'}
             </p>
             <p className="text-ink-soft text-lg leading-relaxed font-serif">
               {locale === 'hi'
