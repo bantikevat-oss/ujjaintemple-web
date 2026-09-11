@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { isServerRoute } from '../../lib/serverRoutes';
 
 interface NavItem {
   key?: string;
@@ -96,9 +98,16 @@ function MobileNavItem({ item, prefix, locale, t, depth = 0, closeMenu }: { item
   return (
     <div className={`border-b border-cream-dark/50 ${depth > 0 ? 'ml-4 border-l-2 border-saffron/30 pl-2' : ''}`}>
       <div className="flex items-center justify-between">
-        <Link to={href} className="block py-3 flex-1 font-medium text-ink hover:text-maroon" onClick={closeMenu}>
-          {label}
-        </Link>
+        {/* 🪤 A server-rendered path has no React route — see lib/serverRoutes.ts. */}
+        {isServerRoute(href) ? (
+          <a href={href} className="block py-3 flex-1 font-medium text-ink hover:text-maroon" onClick={closeMenu}>
+            {label}
+          </a>
+        ) : (
+          <Link to={href} className="block py-3 flex-1 font-medium text-ink hover:text-maroon" onClick={closeMenu}>
+            {label}
+          </Link>
+        )}
         {hasChildren && (
           <button onClick={() => setIsOpen(!isOpen)} className="p-3 text-maroon hover:bg-cream-light rounded-md">
             <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
@@ -114,6 +123,17 @@ function MobileNavItem({ item, prefix, locale, t, depth = 0, closeMenu }: { item
       )}
     </div>
   );
+}
+
+/**
+ * `<Link>` for React routes, plain `<a>` for server-rendered ones.
+ * 🪤 Client-side routing to a PHP-SSR path renders the 404 page — see lib/serverRoutes.ts.
+ */
+function NavAnchor({ href, className, children }: { href: string; className: string; children: ReactNode }) {
+  if (isServerRoute(href)) {
+    return <a href={href} className={className}>{children}</a>;
+  }
+  return <Link to={href} className={className}>{children}</Link>;
 }
 
 export function Header() {
@@ -136,12 +156,12 @@ export function Header() {
       if (!hasChildren) {
         return (
           <li key={idx} className={`${depth > 0 ? 'block' : 'relative group'}`}>
-            <Link 
-              to={href} 
+            <NavAnchor
+              href={href}
               className={`${depth === 0 ? 'flex items-center h-16 font-medium px-2' : 'block px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
             >
               {label}
-            </Link>
+            </NavAnchor>
           </li>
         );
       }
@@ -149,13 +169,13 @@ export function Header() {
       // Dropdown Item
       return (
         <li key={idx} className="relative group cursor-pointer">
-          <Link 
-            to={href} 
+          <NavAnchor
+            href={href}
             className={`${depth === 0 ? 'flex items-center h-16 font-medium px-2' : 'flex items-center justify-between px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
           >
             {label}
             {depth === 0 ? <ChevronDown className="w-4 h-4 ml-1 opacity-70" /> : <ChevronRight className="w-4 h-4 ml-1 opacity-70" />}
-          </Link>
+          </NavAnchor>
           
           <ul className={`
             absolute left-0 top-full bg-white shadow-xl rounded-b-md rounded-tr-md min-w-[280px] py-2 border-t-[3px] border-saffron

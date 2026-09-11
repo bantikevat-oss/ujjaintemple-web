@@ -6,16 +6,26 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
 ?>
 <nav class="crumb">
   <a href="/hi/">होम</a> › <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a> ›
-  <a href="<?= ujt_e(ujt_section_url()) ?>">समाचार</a>
+  <a href="<?= ujt_e(ujt_section_url()) ?>">ब्लॉग</a>
 </nav>
 
 <article>
+  <?php if (!empty($a['cat_name'])): ?>
+    <p class="kicker"><span class="tag tag-solid"><?= ujt_e($a['cat_name']) ?></span></p>
+  <?php endif; ?>
   <h1><?= ujt_e($a['title']) ?></h1>
-  <p class="meta">
-    <?php if (!empty($a['cat_name'])): ?><span class="tag"><?= ujt_e($a['cat_name']) ?></span><?php endif; ?>
+
+  <?php /* Blog byline, not a newsroom dateline (Aman, 2026-09-11). The author name
+           matches the NewsArticle `author` in render.php — a visible byline that
+           disagrees with the markup is worse than none. */ ?>
+  <p class="byline">
+    <span class="avatar" aria-hidden="true">UT</span>
+    UjjainTemple संपादकीय
     <?php if (!empty($a['published_at'])): ?>
-      प्रकाशित <time datetime="<?= ujt_e(date('c', strtotime($a['published_at']))) ?>"><?= ujt_e(ujt_hindi_date($a['published_at'])) ?></time>
+      <span class="dot">·</span>
+      <time datetime="<?= ujt_e(date('c', strtotime($a['published_at']))) ?>"><?= ujt_e(ujt_hindi_date($a['published_at'])) ?></time>
     <?php endif; ?>
+    <span class="dot">·</span> <?= (int) ujt_read_minutes($a['content_html']) ?> मिनट पढ़ें
   </p>
 
   <?php if (!empty($a['summary'])): ?>
@@ -31,7 +41,7 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <div class="tablewrap-host"><?= $a['content_html'] ?></div>
 
   <?php if ($tags): ?>
-    <p class="meta"><?php foreach (array_slice($tags, 0, 8) as $t): ?><span class="tag"><?= ujt_e($t) ?></span><?php endforeach; ?></p>
+    <p class="tagrow"><?php foreach (array_slice($tags, 0, 8) as $t): ?><span class="tag"><?= ujt_e($t) ?></span><?php endforeach; ?></p>
   <?php endif; ?>
 </article>
 
@@ -46,7 +56,7 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
 </div>
 
 <?php if ($related): ?>
-  <h2>सिंहस्थ 2028 की और ख़बरें क्या हैं?</h2>
+  <h2 class="sec-head">सिंहस्थ 2028 पर और लेख</h2>
   <?php foreach ($related as $r): ?>
     <div class="card">
       <h3><a href="<?= ujt_e(ujt_article_url($r['slug'])) ?>"><?= ujt_e($r['title']) ?></a></h3>
@@ -55,4 +65,4 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <?php endforeach; ?>
 <?php endif; ?>
 
-<p class="meta"><a href="<?= ujt_e(ujt_section_url()) ?>">← सिंहस्थ 2028 समाचार</a></p>
+<p class="meta"><a href="<?= ujt_e(ujt_section_url()) ?>">← सिंहस्थ 2028 ब्लॉग</a></p>

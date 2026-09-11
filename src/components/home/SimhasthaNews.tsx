@@ -19,8 +19,13 @@ import { useI18n } from '../../i18n';
  * script never runs. Auto-advance respects prefers-reduced-motion — Aman's own Mac
  * has it on, and an animation-driven ticker simply freezes there.
  *
- * Hindi only: the section has no English tree yet, and a heading that leads
- * nowhere is worse than no heading.
+ * Shown in BOTH locales (Aman, 2026-09-11 — "jo bhi news dale vo home page me bhi
+ * aaye slide form me"). The articles themselves are Hindi-only for now, so the
+ * English heading says so rather than letting the click be a surprise — the same
+ * treatment the nav entry already uses.
+ *
+ * 🪤 Every card href points into the PHP-SSR section, so they are plain `<a>`
+ * elements. A react-router `<Link>` here would render the site's 404 page.
  */
 
 type NewsItem = { title: string; link: string; date: string; summary: string };
@@ -36,7 +41,7 @@ export function SimhasthaNews() {
   const paused = useRef(false);
 
   useEffect(() => {
-    if (locale !== 'hi' || typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return;
     let alive = true;
 
     (async () => {
@@ -58,7 +63,9 @@ export function SimhasthaNews() {
               summary: (it.querySelector('description')?.textContent ?? '').trim(),
               date:
                 d && !Number.isNaN(d.getTime())
-                  ? d.toLocaleDateString('hi-IN', { day: 'numeric', month: 'long', year: 'numeric' })
+                  ? d.toLocaleDateString(locale === 'hi' ? 'hi-IN' : 'en-IN', {
+                      day: 'numeric', month: 'long', year: 'numeric',
+                    })
                   : '',
             };
           })
@@ -130,7 +137,7 @@ export function SimhasthaNews() {
     return () => window.clearInterval(id);
   }, [items.length]);
 
-  if (locale !== 'hi') return null;
+  const hi = locale === 'hi';
 
   return (
     <section id="simhastha-news" className="bg-cream border-t border-cream-dark">
@@ -138,13 +145,15 @@ export function SimhasthaNews() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-              ताज़ा अपडेट
+              {hi ? 'ताज़ा अपडेट' : 'Latest updates'}
             </p>
             <h2 className="mt-2 font-sanskrit text-3xl font-bold leading-tight text-maroon sm:text-4xl">
-              सिंहस्थ 2028 समाचार
+              {hi ? 'सिंहस्थ 2028 ब्लॉग' : 'Simhastha 2028 Blog'}
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft sm:text-base">
-              तैयारी, स्नान, यात्रा और दर्शन से जुड़ी ताज़ा जानकारी — श्रद्धालु के नज़रिए से।
+              {hi
+                ? 'तैयारी, स्नान, यात्रा और दर्शन से जुड़ी ताज़ा जानकारी — श्रद्धालु के नज़रिए से।'
+                : 'Construction, bathing dates, travel and darshan — written for the pilgrim. Articles are in Hindi.'}
             </p>
           </div>
 
@@ -154,7 +163,7 @@ export function SimhasthaNews() {
                 <button
                   type="button"
                   onClick={() => nudge(-1)}
-                  aria-label="पिछला समाचार"
+                  aria-label={hi ? 'पिछला लेख' : 'Previous article'}
                   className="grid h-10 w-10 place-items-center rounded-full border border-maroon/30 text-maroon transition-colors hover:border-maroon hover:bg-maroon hover:text-white"
                 >
                   <ChevronLeft className="h-5 w-5" />
@@ -162,7 +171,7 @@ export function SimhasthaNews() {
                 <button
                   type="button"
                   onClick={() => nudge(1)}
-                  aria-label="अगला समाचार"
+                  aria-label={hi ? 'अगला लेख' : 'Next article'}
                   className="grid h-10 w-10 place-items-center rounded-full border border-maroon/30 text-maroon transition-colors hover:border-maroon hover:bg-maroon hover:text-white"
                 >
                   <ChevronRight className="h-5 w-5" />
@@ -173,7 +182,7 @@ export function SimhasthaNews() {
               href={SECTION}
               className="inline-flex items-center gap-2 rounded-md border border-maroon/30 px-5 py-3 text-sm font-semibold text-maroon transition-colors hover:border-maroon hover:bg-maroon hover:text-white"
             >
-              सभी समाचार
+              {hi ? 'सभी लेख' : 'All articles'}
               <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -208,7 +217,7 @@ export function SimhasthaNews() {
                   </p>
                 )}
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-maroon group-hover:text-saffron-700">
-                  पढ़ें
+                  {hi ? 'पढ़ें' : 'Read'}
                   <ArrowRight className="h-4 w-4" />
                 </span>
               </a>

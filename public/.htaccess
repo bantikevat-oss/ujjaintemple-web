@@ -14,7 +14,7 @@ RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 # public URLs to it). Everything else under news/ is includes, SQL and templates.
 # Caught live on 2026-09-06: /news/sql/schema.sql was serving 200 — no secrets in
 # it, but the table layout has no business being public.
-RewriteRule ^news/(sql|lib|templates)/ - [F,L]
+RewriteRule ^news/(sql|lib|templates|data)/ - [F,L]
 RewriteRule ^news/boot\.php$ - [F,L]
 
 # ── Removed content → closest live page (SEO 301) ──

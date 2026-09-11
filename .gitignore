@@ -23,3 +23,7 @@ news-config.php
 # additive images rsync pass). Keep the directory, never the files.
 public/images/news/*
 !public/images/news/.gitkeep
+
+# Local-only router that stands in for the .htaccess rewrites so the PHP-SSR news
+# section can be exercised with `php -S 127.0.0.1:8099 -t public news-router.local.php`.
+news-router.local.php

@@ -79,11 +79,66 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
 .post .thumb{display:block;aspect-ratio:16/10;background:var(--cream);overflow:hidden}
 .post .thumb img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0}
 .post .body{padding:.9rem 1rem 1.1rem;display:flex;flex-direction:column;flex:1}
-.post h2{font-size:1.06rem;margin:.15rem 0 .4rem;line-height:1.4}
-.post h2 a{color:var(--maroon);text-decoration:none}
-.post:hover h2 a{color:var(--saffron)}
+/* Cards use h3 inside the listing (the page's own h2s are section headings) and
+   h2 on any page that needs the card itself to be the heading — style both. */
+.post :is(h2,h3){font-size:1.06rem;margin:.15rem 0 .4rem;line-height:1.4}
+.post :is(h2,h3) a{color:var(--maroon);text-decoration:none}
+.post:hover :is(h2,h3) a{color:var(--saffron)}
 .post .excerpt{color:var(--muted);font-size:.9rem;line-height:1.65;margin:0 0 .8rem;flex:1}
 .post .foot-row{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;font-size:.8rem;color:var(--muted);margin-top:auto}
+/* ── Blog furniture (2026-09-11) ────────────────────────────────────────────
+   Aman: "ye news jaisa na lage, isko blog jaisa dalo". What actually does that
+   is the byline, the reading time, the lead post and the breathing room — not a
+   new palette. Colours stay the site's saffron/maroon/gold/cream.
+   No decorative green anywhere, per the sitewide rule. ── */
+.blog-head{padding:.6rem 0 0}
+.eyebrow{margin:0;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron)}
+.blog-head h1{margin:.45rem 0 .5rem}
+.byline{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin:.2rem 0 1rem;font-size:.9rem;color:var(--muted)}
+.byline .avatar{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--maroon);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.04em;font-family:system-ui,sans-serif}
+.byline time{color:inherit}
+.dot{opacity:.55}
+.kicker{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem;margin:0 0 .45rem;font-size:.78rem;color:var(--muted)}
+.tag-solid{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.sec-head{border-top:1px solid var(--line);padding-top:1.4rem;margin-top:2.2rem;font-size:1.25rem}
+.tagrow{display:flex;flex-wrap:wrap;gap:.35rem;margin:1.6rem 0 0;padding-top:1rem;border-top:1px solid var(--line)}
+
+/* Lead post — one wide card, image beside the text above 760px. */
+.lead-post{display:grid;grid-template-columns:1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:1.4rem 0 .4rem}
+.lead-post .thumb{display:block;aspect-ratio:16/10;background:var(--cream);overflow:hidden}
+.lead-post .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.lead-post .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column}
+.lead-post h2{margin:0 0 .5rem;font-size:1.5rem;line-height:1.35}
+.lead-post h2 a{color:var(--maroon);text-decoration:none}
+.lead-post:hover h2 a{color:var(--saffron)}
+.lead-post .excerpt{color:var(--muted);margin:0 0 .8rem}
+.lead-post .foot-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;font-size:.84rem;color:var(--muted);margin:0}
+.lead-post .more{margin:.9rem 0 0}
+.lead-post .more a{font-weight:700;text-decoration:none;color:var(--maroon)}
+.lead-post .more a:hover{color:var(--saffron)}
+@media(min-width:760px){
+  .lead-post{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch}
+  .lead-post .thumb{aspect-ratio:auto;height:100%}
+  .lead-post .body{padding:1.6rem 1.7rem}
+  .lead-post h2{font-size:1.75rem}
+}
+.pager{display:flex;align-items:center;gap:1rem;justify-content:center;font-size:.9rem;color:var(--muted);margin:1.6rem 0 0}
+
+/* ── मुख्यमंत्री block ── */
+.cm{background:#fff;border:1px solid var(--line);border-inline-start:4px solid var(--maroon);border-radius:0 14px 14px 0;padding:1.3rem 1.4rem 1.5rem;margin:2.4rem 0}
+.cm>h2{margin-top:0}
+.cm-intro{color:var(--muted);margin:0 0 1rem}
+.cm-list{list-style:none;margin:1.1rem 0 0;padding:0;border-inline-start:2px solid var(--gold);padding-inline-start:1.15rem}
+.cm-list>li{position:relative;padding:0 0 1.4rem}
+.cm-list>li:last-child{padding-bottom:0}
+/* The node on the timeline rail. Offset is the rail width + its own radius. */
+.cm-list>li::before{content:"";position:absolute;inset-inline-start:-1.51rem;top:.45rem;width:11px;height:11px;border-radius:50%;background:var(--saffron);box-shadow:0 0 0 3px #fff}
+.cm-date{margin:0;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--saffron)}
+.cm-list h3{margin:.2rem 0 .4rem;font-size:1.08rem}
+.cm-list p{margin:0 0 .5rem}
+.cm-impact{color:var(--ink);background:var(--cream);border-radius:8px;padding:.55rem .7rem;font-size:.93rem}
+.cm-src{font-size:.84rem;color:var(--muted);margin:0}
+.cm-note{font-size:.84rem;color:var(--muted);border-top:1px solid var(--line);margin:1.3rem 0 0;padding-top:.9rem}
 @media(max-width:400px){.grid{grid-template-columns:1fr}}
 @media(max-width:520px){body{font-size:16px}h1{font-size:1.55rem}}
 </style>

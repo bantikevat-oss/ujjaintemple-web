@@ -13,6 +13,74 @@ function ujt_hindi_date($sql_dt)
     return (int) date('j', $ts) . ' ' . $m[(int) date('n', $ts)] . ' ' . date('Y', $ts);
 }
 
+/**
+ * Reading time in whole minutes — the byline signal that makes a page read as a
+ * blog rather than a wire feed.
+ *
+ * 🪤 `str_word_count()` counts ZERO on Devanagari (it is byte/locale based), so
+ * it cannot be used here; splitting on Unicode whitespace is what actually works.
+ * 180 wpm is the conservative end for Hindi prose.
+ */
+function ujt_read_minutes($html)
+{
+    $text  = ujt_html_to_text((string) $html);
+    $words = preg_split('/\s+/u', trim($text), -1, PREG_SPLIT_NO_EMPTY);
+    $n     = $words ? count($words) : 0;
+    return max(1, (int) ceil($n / 180));
+}
+
+/**
+ * Same idea for a listing card, where the body was never fetched.
+ *
+ * Dividing raw HTML length by 1000 is deliberately conservative: the markup is
+ * counted along with the prose, so the estimate errs low rather than promising a
+ * longer read than the article delivers.
+ */
+function ujt_read_minutes_len($chars)
+{
+    return max(1, (int) round(((int) $chars) / 1000));
+}
+
+/**
+ * CM-related articles already published in this section.
+ *
+ * Matched two ways on purpose: the dedicated category if it exists on this host
+ * (it is seeded in sql/seed_categories.sql and has to be synced into BNA before
+ * the agent can pick it), and a plain title/tag match so an article filed under
+ * "सिंहस्थ तैयारी" that is in fact about the CM still surfaces here. Without the
+ * second arm the block would stay empty on every host where the category has not
+ * been synced yet — an empty heading is worse than no heading.
+ */
+function ujt_cm_articles($limit = 3)
+{
+    $like = '%मोहन यादव%';
+    $like2 = '%मुख्यमंत्री%';
+    return ujt_all(
+        "SELECT a.slug, a.title, a.summary, a.published_at, a.featured_image, a.featured_image_alt,
+                c.name AS cat_name
+           FROM ujt_news_articles a
+           LEFT JOIN ujt_news_categories c ON c.id = a.category_id
+          WHERE a.status='published' AND a.language='hi'
+            AND (c.slug = 'mukhyamantri-shasan'
+                 OR a.title LIKE ? OR a.title LIKE ?
+                 OR a.tags_json LIKE ? OR a.tags_json LIKE ?)
+          ORDER BY a.published_at DESC, a.id DESC
+          LIMIT " . (int) $limit,
+        [$like, $like2, $like, $like2]
+    );
+}
+
+/** Hand-curated, sourced CM announcements — see data/cm_simhastha.php. */
+function ujt_cm_updates()
+{
+    static $rows = null;
+    if ($rows === null) {
+        $f = __DIR__ . '/../data/cm_simhastha.php';
+        $rows = is_file($f) ? (require $f) : [];
+    }
+    return is_array($rows) ? $rows : [];
+}
+
 function ujt_render($template, $vars, $head)
 {
     extract($vars, EXTR_SKIP);
@@ -49,7 +117,8 @@ function ujt_view_list($page)
     // be bound as params in MySQL prepared statements, so they are cast explicitly.
     $rows = ujt_all(
         "SELECT a.slug, a.title, a.summary, a.published_at,
-                a.featured_image, a.featured_image_alt, c.name AS cat_name
+                a.featured_image, a.featured_image_alt, c.name AS cat_name,
+                CHAR_LENGTH(a.content_html) AS content_len
            FROM ujt_news_articles a
            LEFT JOIN ujt_news_categories c ON c.id = a.category_id
           WHERE a.status='published' AND a.language='hi'
@@ -58,12 +127,20 @@ function ujt_view_list($page)
     );
     $cats = ujt_all('SELECT id, name, slug FROM ujt_news_categories ORDER BY sort_order, id');
 
+    // मुख्यमंत्री block (Aman, 2026-09-11). Published CM articles first; the curated,
+    // sourced list below them is what makes the section useful before the engine has
+    // published any. Page 2+ skips it — it belongs on the section's front page only.
+    $cm_articles = $page === 1 ? ujt_cm_articles(3) : [];
+    $cm_updates  = $page === 1 ? ujt_cm_updates()   : [];
+
     $canonical = ujt_section_url() . ($page > 1 ? 'page/' . $page . '/' : '');
     $title = $page > 1
-        ? "सिंहस्थ 2028 समाचार — पृष्ठ $page | UjjainTemple"
-        : 'सिंहस्थ 2028 समाचार — उज्जैन मेला, स्नान, यात्रा अपडेट';
-    $desc = 'सिंहस्थ 2028 उज्जैन (27 मार्च – 27 मई 2028) से जुड़ी ताज़ा जानकारी — शाही स्नान, '
-          . 'अखाड़े, ट्रेन-बस, होटल और दर्शन व्यवस्था, और उसका यात्रा पर असर।';
+        ? "सिंहस्थ 2028 ब्लॉग — पृष्ठ $page | UjjainTemple"
+        // "ब्लॉग" leads because Aman wants the section to read as a blog, but
+        // "समाचार" stays in the tail — it is the word people actually search.
+        : 'सिंहस्थ 2028 ब्लॉग और समाचार — उज्जैन मेला, स्नान और यात्रा की जानकारी';
+    $desc = 'सिंहस्थ 2028 उज्जैन (27 मार्च – 27 मई 2028) पर लेख और ताज़ा जानकारी — शाही स्नान, '
+          . 'अखाड़े, ट्रेन-बस, होटल, दर्शन व्यवस्था, और मुख्यमंत्री डॉ. मोहन यादव की घोषणाएँ।';
 
     $itemlist = ['@context' => 'https://schema.org', '@type' => 'ItemList', 'itemListElement' => []];
     foreach ($rows as $i => $r) {
@@ -74,7 +151,7 @@ function ujt_view_list($page)
     }
 
     ujt_render('listing',
-        compact('rows', 'cats', 'page', 'pages', 'total'),
+        compact('rows', 'cats', 'page', 'pages', 'total', 'cm_articles', 'cm_updates'),
         [
             'title' => $title, 'description' => $desc, 'canonical' => $canonical,
             'og_image' => $c['logo'],
@@ -83,13 +160,15 @@ function ujt_view_list($page)
             'wide' => true,
             'robots' => $page > 1 ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
             'jsonld' => [
-                ujt_breadcrumbs([['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'], ['समाचार', $canonical]]),
+                ujt_breadcrumbs([['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'], ['ब्लॉग', $canonical]]),
                 $itemlist,
                 ujt_faq_node([
                     ['सिंहस्थ 2028 कब से कब तक है?',
                      'सिंहस्थ 2028 उज्जैन में 27 मार्च से 27 मई 2028 तक चलेगा। तीन शाही स्नान 9 अप्रैल, 23 अप्रैल और 8 मई 2028 को हैं। सात पर्व स्नान प्रस्तावित हैं, जिनकी तारीखें अभी घोषित नहीं हुई हैं।'],
-                    ['इस खंड में किस तरह की ख़बरें मिलेंगी?',
+                    ['इस ब्लॉग में किस तरह के लेख मिलेंगे?',
                      'मेला क्षेत्र और घाटों का निर्माण, स्नान तिथियों की पुष्टि, अखाड़ों की पेशवाई, विशेष ट्रेन और बस, पार्किंग और पैदल मार्ग, ठहरने की व्यवस्था, और मंदिरों की दर्शन व्यवस्था।'],
+                    ['मुख्यमंत्री डॉ. मोहन यादव ने सिंहस्थ 2028 को लेकर क्या कहा है?',
+                     'प्रकाशित मीडिया रिपोर्ट्स के अनुसार मुख्यमंत्री डॉ. मोहन यादव ने सिंहस्थ 2028 की तैयारियों की नियमित समीक्षा की है — इनमें शिप्रा पर 29 किलोमीटर घाट और 21 बैराज का भूमिपूजन, 945.20 करोड़ रुपये का 5.30 किलोमीटर एलिवेटेड कॉरिडोर, और विभागों को दीपावली 2027 तक काम पूरा करने के निर्देश शामिल हैं। इस पृष्ठ पर “मुख्यमंत्री और सिंहस्थ 2028” खंड में हर घोषणा स्रोत सहित दी गई है।'],
                 ]),
             ],
         ]

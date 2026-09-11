@@ -1,13 +1,32 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Phone, Home } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
+import { isServerRoute } from '../lib/serverRoutes';
 
 export function NotFound() {
   const { locale } = useI18n();
+  const location = useLocation();
   const prefix = locale === 'en' ? '' : '/hi';
+
+  /**
+   * Safety net for the PHP-SSR news section.
+   *
+   * Those paths have no React route, so a `<Link>` anywhere on the site lands the
+   * user here even though the server serves the page perfectly on a reload — the
+   * "first click 404s, refresh works" bug. Links are fixed at the source (see
+   * lib/serverRoutes.ts), but any link we miss now self-corrects with one real
+   * navigation instead of showing a dead end. `replace` keeps Back working.
+   */
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    if (isServerRoute(location.pathname)) {
+      window.location.replace(location.pathname + location.search + location.hash);
+    }
+  }, [location.pathname, location.search, location.hash]);
   return (
     <>
       <SEOHead
