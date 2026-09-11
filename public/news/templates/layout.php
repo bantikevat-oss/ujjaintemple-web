@@ -156,5 +156,30 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
   <p>© <?= date('Y') ?> <a href="https://byteflowtech.in/">ByteFlow Technologies Pvt Ltd</a></p>
 </div>
 </div>
+<?php /* GA4 — same property as the SSG site (G-2E9XG3RLPS). This section is served
+         by PHP and never sees index.html, so without this block every blog pageview
+         would be invisible in Analytics while the rest of the site reported fine.
+         Loaded on idle / first interaction, matching the main site's budget. */ ?>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-2E9XG3RLPS');
+  (function () {
+    var fired = false;
+    function loadGtag() {
+      if (fired) return; fired = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2E9XG3RLPS';
+      document.head.appendChild(s);
+    }
+    window.addEventListener('scroll', loadGtag, { once: true, passive: true });
+    window.addEventListener('click', loadGtag, { once: true });
+    window.addEventListener('touchstart', loadGtag, { once: true, passive: true });
+    if ('requestIdleCallback' in window) { requestIdleCallback(loadGtag, { timeout: 1200 }); }
+    else { setTimeout(loadGtag, 1200); }
+  })();
+</script>
 </body>
 </html>
