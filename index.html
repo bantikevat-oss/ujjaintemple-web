@@ -30,6 +30,20 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-2E9XG3RLPS');
+
+      // Lead clicks → GA4 events (marked as key events in GA). Only OUR line counts:
+      // the share button (wa.me/?text=) and temple phone numbers on mandir pages are
+      // not leads. tel: clicks are invisible to enhanced measurement, hence this.
+      // Capture phase + delegation, so React-rendered links are covered too.
+      document.addEventListener('click', function (e) {
+        var a = e.target && e.target.closest && e.target.closest('a[href]');
+        if (!a) return;
+        var href = a.getAttribute('href') || '';
+        var name = /^tel:\+?(91)?7400724456$/.test(href.replace(/[\s-]/g, '')) ? 'call_click'
+          : /(wa\.me|api\.whatsapp\.com\/send\?phone=)\/?917400724456/.test(href) ? 'whatsapp_click'
+          : null;
+        if (name) gtag('event', name, { link_url: href, transport_type: 'beacon' });
+      }, true);
     </script>
 
     <!-- title / description / canonical are injected PER-PAGE by react-helmet-async (SEOHead) during SSG.
