@@ -188,8 +188,8 @@ export function AppPlan() {
 
       <p className="mt-6 rounded-lg bg-white/70 p-3 text-xs leading-relaxed text-ink-mute">
         {hi
-          ? 'हम दर्शन, भस्म आरती या शीघ्र दर्शन की बुकिंग नहीं करते — वह व्यवस्था मंदिर समिति के अधीन है। आपका नंबर सिर्फ़ इस अनुरोध के लिए उपयोग होता है।'
-          : 'We do not book darshan, Bhasma Aarti or fast-track darshan — those are managed by the temple committees. Your number is used only for this request.'}
+          ? 'आपका नंबर सिर्फ़ इस अनुरोध के लिए उपयोग होता है।'
+          : 'Your number is used only for this request.'}
       </p>
     </AppShell>
   );

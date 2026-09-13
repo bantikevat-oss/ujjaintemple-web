@@ -166,8 +166,8 @@ export function AppHome() {
         <p className="font-semibold text-ink">{hi ? 'इस ऐप के बारे में' : 'About this app'}</p>
         <p className="mt-1">
           {hi
-            ? 'यह UjjainTemple.com का निजी सूचना ऐप है। यह सरकारी ऐप नहीं है और सिंहस्थ मेला प्रशासन, मंदिर समिति या किसी सरकारी विभाग से सम्बद्ध नहीं है। हम दर्शन, भस्म आरती या पूजा की बुकिंग नहीं करते — वह व्यवस्था मंदिर समिति के अधीन है।'
-            : 'This is an independent information app by UjjainTemple.com. It is not a government app and is not affiliated with the Simhastha mela administration, any temple committee or government department. We do not book darshan, Bhasma Aarti or puja — those are managed by the temple committees.'}
+            ? 'यह UjjainTemple.com का निजी सूचना ऐप है। यह सरकारी ऐप नहीं है और सिंहस्थ मेला प्रशासन, मंदिर समिति या किसी सरकारी विभाग से सम्बद्ध नहीं है।'
+            : 'This is an independent information app by UjjainTemple.com. It is not a government app and is not affiliated with the Simhastha mela administration, any temple committee or government department.'}
         </p>
         <p className="mt-2">
           <a href={NEWS_SECTION} className="text-link underline">{hi ? 'समाचार' : 'News'}</a>
