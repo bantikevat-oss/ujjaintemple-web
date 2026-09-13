@@ -24,7 +24,11 @@ function walk(dir, prefix = '') {
   return urls;
 }
 
-const urls = walk(ROOT).map((u) => u.replace(/\/+/g, '/'));
+// App screens (/app/, /hi/app/) are noindex — the Simhastha 2028 Guide PWA, not pages
+// meant to rank — so they stay out of the sitemap and the root RSS below.
+const urls = walk(ROOT)
+  .map((u) => u.replace(/\/+/g, '/'))
+  .filter((u) => !/^\/(hi\/)?app\//.test(u));
 
 const today = new Date().toISOString().split('T')[0];
 

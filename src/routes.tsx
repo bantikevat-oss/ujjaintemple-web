@@ -21,6 +21,7 @@ import { NotFound } from './pages/NotFound';
 import { mandirList } from './data/mandirs-index';
 import { DEITY_LISTS } from './data/deity-lists';
 import { articleListByCategory as articlesByCategory } from './data/articles-index';
+import { APP_TABS } from './app/lib';
 
 const withLocale = (locale: Locale, Component: React.FC) => (
   <I18nProvider locale={locale}><Component /></I18nProvider>
@@ -33,6 +34,16 @@ const withLocaleProps = <P extends object>(locale: Locale, Component: React.FC<P
 function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
   return [
     { path: `${basePath}`, element: withLocale(locale, Home) },
+
+    // Simhastha 2028 Guide app (PWA / Android TWA). `lazy` so no website page
+    // carries the app's code or its offline temple data in its entry graph.
+    ...APP_TABS.map((tab) => ({
+      path: `${basePath}app/${tab}`,
+      lazy: async () => {
+        const mod = await import('./app/routes');
+        return { Component: mod.APP_SCREENS[locale][tab] };
+      },
+    })) as RouteRecord[],
 
     // Mandirs
     { path: `${basePath}mandirs/`, element: withLocale(locale, MandirIndex) },

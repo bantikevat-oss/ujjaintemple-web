@@ -127,11 +127,37 @@ function ujt_news_save($is_update)
         $id = (int) ujt_db()->lastInsertId();
     }
 
-    ujt_json_ok(['article' => [
+    $payload = ['article' => [
         'id'   => $id,
         'slug' => $slug,
         'url'  => ujt_article_url($slug),
-    ]]);
+    ]];
+
+    // A brand-new published Hindi article notifies the app's subscribers. BNA gets its
+    // response FIRST: a slow or failing push service must never delay or fail a publish.
+    // Updates never notify — a repaint is not news.
+    if (!$is_update && $status === 'published' && $lang === 'hi') {
+        ignore_user_abort(true);
+        if (!headers_sent()) {
+            http_response_code(200);
+            header('Content-Type: application/json; charset=utf-8');
+            header('X-Content-Type-Options: nosniff');
+        }
+        echo json_encode(['success' => true, 'data' => $payload], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        if (function_exists('litespeed_finish_request')) litespeed_finish_request();
+        elseif (function_exists('fastcgi_finish_request')) fastcgi_finish_request();
+        else flush();
+        try {
+            require_once __DIR__ . '/../news/lib/webpush.php';
+            $sent = ujt_push_notify_all(['title' => $title, 'url' => ujt_article_url($slug)], 25);
+            error_log('[ujt-push] article ' . $id . ' notify ' . json_encode($sent, JSON_UNESCAPED_UNICODE));
+        } catch (Throwable $e) {
+            error_log('[ujt-push] broadcast failed: ' . $e->getMessage());
+        }
+        exit;
+    }
+
+    ujt_json_ok($payload);
 }
 
 function ujt_news_delete()

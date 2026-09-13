@@ -17,6 +17,19 @@ RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 RewriteRule ^news/(sql|lib|templates|data)/ - [F,L]
 RewriteRule ^news/boot\.php$ - [F,L]
 
+# ── Simhastha 2028 Guide app (PWA / Android TWA) ──
+# The service worker must never be cached long: the year-long JS expiry below would
+# otherwise pin an old worker (browsers cap SW update checks at 24h, but no-cache
+# makes a fixed worker reach phones on the next launch).
+<Files "app-sw.js">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache"
+  </IfModule>
+</Files>
+AddType application/manifest+json .webmanifest
+# Android TWA domain verification — must be served as JSON, never rewritten.
+AddType application/json .json
+
 # ── Removed content → closest live page (SEO 301) ──
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakal-lok-corridor/?$ /mandirs/mahakal-lok/ [L,R=301]
 RewriteRule ^(en/|hi/)?puja-in-ujjain/mahakaleshwar-bhasma-aarti-booking/?$ /mandirs/mahakaleshwar/ [L,R=301]

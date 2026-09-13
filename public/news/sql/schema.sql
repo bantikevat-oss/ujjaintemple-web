@@ -50,3 +50,20 @@ CREATE TABLE IF NOT EXISTS ujt_news_articles (
   KEY idx_live (status, language, published_at),
   KEY idx_cat (category_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Simhastha 2028 Guide app — Web Push subscribers (added 2026-09-13).
+-- Endpoint URL only: pushes carry no payload, so no keys or personal data are stored.
+-- ip_day_hash = sha256(IP|date), used only to cap new subscriptions per source per day.
+-- kind: 'webpush' (browser endpoint URL) | 'fcm' (Android app token, stored in `endpoint`).
+CREATE TABLE IF NOT EXISTS ujt_push_subscriptions (
+  id            INT AUTO_INCREMENT PRIMARY KEY,
+  kind          VARCHAR(8)   NOT NULL DEFAULT 'webpush',
+  endpoint_hash CHAR(64)     NOT NULL,
+  endpoint      VARCHAR(600) NOT NULL,
+  ip_day_hash   CHAR(64)     NULL,
+  fail_count    INT          NOT NULL DEFAULT 0,
+  last_ok_at    DATETIME     NULL,
+  created_at    DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_endpoint (endpoint_hash),
+  KEY idx_ip_day (ip_day_hash)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

@@ -1,0 +1,25 @@
+{
+  "id": "/hi/app/",
+  "name": "Ujjain Guide – Simhastha 2028 · UjjainTemple.Com",
+  "short_name": "Ujjain Guide",
+  "description": "सिंहस्थ 2028 उज्जैन — ताज़ा समाचार, शाही स्नान की तिथियाँ, पर्व कैलेंडर, मंदिर गाइड और 84 महादेव यात्रा। Independent app by UjjainTemple.com, not a government app.",
+  "lang": "hi-IN",
+  "dir": "ltr",
+  "start_url": "/hi/app/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF5EC",
+  "theme_color": "#8B1A1A",
+  "categories": ["travel", "news", "lifestyle"],
+  "icons": [
+    { "src": "/images/app/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/images/app/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/images/app/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "समाचार", "url": "/hi/app/news/", "icons": [{ "src": "/images/app/icon-192.png", "sizes": "192x192" }] },
+    { "name": "पर्व कैलेंडर", "url": "/hi/app/calendar/", "icons": [{ "src": "/images/app/icon-192.png", "sizes": "192x192" }] },
+    { "name": "84 महादेव", "url": "/hi/app/84-mahadev/", "icons": [{ "src": "/images/app/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

@@ -9,6 +9,7 @@ import { articleListByCategory as articlesByCategory, articlePath } from '../dat
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, itemListSchema, simhastha2028EventSchema, faqSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight } from 'lucide-react';
+import { SHAHI_SNANS } from '../data/simhastha-dates';
 
 // ─── Countdown ───────────────────────────────────────────────────
 // Counts down to the start of the MELA (27 Mar 2028), not the first Shahi Snan.
@@ -62,36 +63,8 @@ const PREP = [
   { numHi: '3,500+',           numEn: '3,500+',        labelHi: 'निगरानी कैमरे',                labelEn: 'Surveillance cameras' },
 ];
 
-// Simhastha 2028 snan dates — sourced from published media reporting (Webdunia,
-// Times Now Navbharat, ETV Bharat, Patrika all carry the same three Shahi Snan
-// dates; re-verified 2026-08-12). Seven parv snans are also reported as proposed,
-// but no outlet has published their dates yet — so they are named, not dated.
-// Only publicly reported dates belong here. Weekday and tithi labels are asserted
-// only where independently corroborated — see the no-unverified-specifics rule in
-// the project HANDOFF.
-const SHAHI_SNANS = [
-  {
-    num: 1,
-    dateHi: '09 अप्रैल 2028',   dateEn: '09 April 2028',
-    nameHi: 'प्रथम शाही स्नान',   nameEn: 'First Shahi Snan',
-    noteHi: 'पहला शाही स्नान — स्नान पर्व की शुरुआत', noteEn: 'First Shahi Snan — the bathing period opens',
-    highlight: true,
-  },
-  {
-    num: 2,
-    dateHi: '23 अप्रैल 2028',   dateEn: '23 April 2028',
-    nameHi: 'द्वितीय शाही स्नान',   nameEn: 'Second Shahi Snan',
-    noteHi: 'दूसरा शाही स्नान', noteEn: 'Second Shahi Snan',
-    highlight: true,
-  },
-  {
-    num: 3,
-    dateHi: '08 मई 2028',       dateEn: '08 May 2028',
-    nameHi: 'तृतीय शाही स्नान',  nameEn: 'Third Shahi Snan',
-    noteHi: 'तीसरा और आखिरी शाही स्नान — स्नान पर्व का समापन', noteEn: 'Third and final Shahi Snan — the bathing period closes',
-    highlight: true,
-  },
-];
+// Shahi Snan dates live in data/simhastha-dates.ts — shared with the app, so the
+// landing and the app's countdown can never disagree.
 
 // The 13 akhadas and their three sampradayas are long-established public knowledge.
 const AKHADAS = {
