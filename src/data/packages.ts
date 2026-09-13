@@ -56,8 +56,8 @@ export const packagesData: TourPackageData[] = [
           { hi: 'इस्कॉन मंदिर: भगवान कृष्ण के भजन और कीर्तन का आनंद लें।', en: 'ISKCON Temple: End your journey at ISKCON Temple, where faith and devotion will lift your spirit.' }
         ],
         note: {
-          hi: 'नोट: महाकालेश्वर भस्म आरती की बुकिंग केवल मंदिर की आधिकारिक वेबसाइट पर एडवांस में होती है।',
-          en: "Note: Mahakaleshwar Bhasma Aarti booking is done only in advance on the temple's official website."
+          hi: 'नोट: दर्शन का वर्तमान समय मंदिर की आधिकारिक वेबसाइट पर देख लें।',
+          en: "Note: Check the current darshan timings on the temple's official website."
         }
       }
     ]
@@ -70,8 +70,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/mandirs/omkareshwar.jpg',
     description: {
-      hi: 'यह 2 दिवसीय विशेष यात्रा आपको भगवान शिव के दो सबसे प्रतिष्ठित ज्योतिर्लिंगों - उज्जैन में श्री महाकालेश्वर और ओंकारेश्वर ज्योतिर्लिंग के दर्शन कराती है। महाकालेश्वर (भस्म आरती के लिए प्रसिद्ध) और नर्मदा तट पर स्थित ओंकारेश्वर (ॐ के आकार का द्वीप) की यह यात्रा आध्यात्मिक शांति और मोक्ष की प्राप्ति के लिए अत्यंत महत्वपूर्ण मानी जाती है। इसके अतिरिक्त आप काल भैरव, हरसिद्धि माता और अन्य प्रमुख मंदिरों के दर्शन भी करेंगे।',
-      en: 'This special 2-day spiritual journey takes you to two of the most revered Jyotirlingas of Lord Shiva - Shree Mahakaleshwar in Ujjain and Omkareshwar Jyotirlinga. Experience the divine aura of Mahakaleshwar (famous for its Bhasma Aarti) and Omkareshwar, uniquely situated on an Om-shaped island on the banks of the Narmada River. This sacred tour also includes visits to Kaal Bhairav, Harsiddhi Mata Temple, and other major historical shrines.'
+      hi: 'यह 2 दिवसीय विशेष यात्रा आपको भगवान शिव के दो सबसे प्रतिष्ठित ज्योतिर्लिंगों - उज्जैन में श्री महाकालेश्वर और ओंकारेश्वर ज्योतिर्लिंग के दर्शन कराती है। महाकालेश्वर और नर्मदा तट पर स्थित ओंकारेश्वर (ॐ के आकार का द्वीप) की यह यात्रा आध्यात्मिक शांति और मोक्ष की प्राप्ति के लिए अत्यंत महत्वपूर्ण मानी जाती है। इसके अतिरिक्त आप काल भैरव, हरसिद्धि माता और अन्य प्रमुख मंदिरों के दर्शन भी करेंगे।',
+      en: 'This special 2-day spiritual journey takes you to two of the most revered Jyotirlingas of Lord Shiva - Shree Mahakaleshwar in Ujjain and Omkareshwar Jyotirlinga. Experience the divine aura of Mahakaleshwar and Omkareshwar, uniquely situated on an Om-shaped island on the banks of the Narmada River. This sacred tour also includes visits to Kaal Bhairav, Harsiddhi Mata Temple, and other major historical shrines.'
     },
     itinerary: [
       {
@@ -175,7 +175,7 @@ export const packagesData: TourPackageData[] = [
     itinerary: [
       {
         dayTitle: { hi: 'पहला दिन: उज्जैन - महाकालेश्वर', en: 'Day 1: Ujjain - Mahakaleshwar' },
-        content: { hi: 'उज्जैन आगमन। विश्व प्रसिद्ध महाकालेश्वर ज्योतिर्लिंग (दक्षिणमुखी) के दर्शन और भस्म आरती में सम्मिलित होने का अवसर।', en: 'Arrival in Ujjain. Darshan of the world-famous Mahakaleshwar Jyotirlinga (South-facing) and opportunity to attend the Bhasma Aarti.' },
+        content: { hi: 'उज्जैन आगमन। विश्व प्रसिद्ध महाकालेश्वर ज्योतिर्लिंग (दक्षिणमुखी) के दर्शन।', en: 'Arrival in Ujjain. Darshan of the world-famous Mahakaleshwar Jyotirlinga (South-facing).' },
         list: [
           { hi: 'महाकालेश्वर ज्योतिर्लिंग दर्शन', en: 'Mahakaleshwar Jyotirlinga Darshan' },
           { hi: 'काल भैरव और हरसिद्धि माता मंदिर', en: 'Visit Kaal Bhairav and Harsiddhi Mata Temple' }
@@ -307,8 +307,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/mandirs/char-dham-ujjain.jpg',
     description: {
-      hi: 'उज्जैन 3 दिवसीय टूर पैकेज उन यात्रियों के लिए है जो शहर के मंदिरों के साथ-साथ आसपास के तीर्थ भी शांति से देखना चाहते हैं। दिन 1 — उज्जैन के प्रमुख मंदिर व महाकाल भस्म आरती (एडवांस बुकिंग अनुसार); दिन 2 — ओंकारेश्वर ज्योतिर्लिंग की यात्रा; दिन 3 — शेष स्थानीय दर्शन, बाजार व विश्राम। आरामदायक AC कैब, अनुभवी चालक, होटल व्यवस्था सहायता — सब एक ही जगह। बुकिंग: +91 74007 24456।',
-      en: 'The Ujjain 3 day tour package is for travellers who want to cover the city temples plus nearby tirthas at a relaxed pace. Day 1 — major Ujjain temples and Mahakal Bhasma Aarti (as per advance booking); Day 2 — trip to Omkareshwar Jyotirlinga; Day 3 — remaining local darshan, markets and rest. Comfortable AC cab, experienced driver, hotel arrangement assistance — all in one place. Booking: +91 74007 24456.'
+      hi: 'उज्जैन 3 दिवसीय टूर पैकेज उन यात्रियों के लिए है जो शहर के मंदिरों के साथ-साथ आसपास के तीर्थ भी शांति से देखना चाहते हैं। दिन 1 — उज्जैन के प्रमुख मंदिर व महाकाल दर्शन; दिन 2 — ओंकारेश्वर ज्योतिर्लिंग की यात्रा; दिन 3 — शेष स्थानीय दर्शन, बाजार व विश्राम। आरामदायक AC कैब, अनुभवी चालक, होटल व्यवस्था सहायता — सब एक ही जगह। बुकिंग: +91 74007 24456।',
+      en: 'The Ujjain 3 day tour package is for travellers who want to cover the city temples plus nearby tirthas at a relaxed pace. Day 1 — major Ujjain temples and Mahakal darshan; Day 2 — trip to Omkareshwar Jyotirlinga; Day 3 — remaining local darshan, markets and rest. Comfortable AC cab, experienced driver, hotel arrangement assistance — all in one place. Booking: +91 74007 24456.'
     },
     itinerary: [
       {
@@ -323,8 +323,8 @@ export const packagesData: TourPackageData[] = [
           { hi: 'राम घाट संध्या आरती', en: 'Ram Ghat evening aarti' }
         ],
         note: {
-          hi: 'नोट: महाकालेश्वर भस्म आरती की बुकिंग केवल मंदिर की आधिकारिक वेबसाइट पर एडवांस में होती है।',
-          en: "Note: Mahakaleshwar Bhasma Aarti booking is done only in advance on the temple's official website."
+          hi: 'नोट: दर्शन का वर्तमान समय मंदिर की आधिकारिक वेबसाइट पर देख लें।',
+          en: "Note: Check the current darshan timings on the temple's official website."
         }
       },
       {
