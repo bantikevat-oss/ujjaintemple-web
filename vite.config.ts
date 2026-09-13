@@ -4,6 +4,12 @@ import path from 'node:path';
 
 export default defineConfig({
   plugins: [react()],
+  // Build day in Ujjain. The homepage parv list is rendered from this at SSG time and the
+  // client's first render uses the same value, so hydration matches; an effect then moves
+  // the list to the visitor's actual today (see components/home/FestivalCalendar.tsx).
+  define: {
+    __BUILD_DATE_IST__: JSON.stringify(new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())),
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

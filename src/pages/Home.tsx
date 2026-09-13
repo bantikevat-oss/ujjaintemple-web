@@ -7,6 +7,7 @@ import { MandalaDivider } from '../components/global/MandalaDivider';
 import { HomeGraphicHero } from '../components/home/HomeGraphicHero';
 import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
 import { SimhasthaNews } from '../components/home/SimhasthaNews';
+import { FestivalCalendar } from '../components/home/FestivalCalendar';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
@@ -226,6 +227,9 @@ export function Home() {
 
         {/* ── SIMHASTHA NEWS (Hindi only; headlines fill in client-side) ── */}
         <SimhasthaNews />
+
+        {/* ── UPCOMING PARV (from data/ujjain-parv.ts, relative to IST today) ── */}
+        <FestivalCalendar />
 
         {/* ── PUJA CARDS ────────────────────────────────────────────────── */}
         <section id="pujas" style={{ background: 'linear-gradient(to bottom, #FCEFD8 0%, #FBF5EC 100%)' }}>
