@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
+import { AppPromo } from '../components/shared/AppPromo';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
@@ -1006,6 +1007,8 @@ export function SimhasthaLanding() {
         {/* ═══════════════════════════════════════════════════════════
             SECTION 6 — GLOBAL LEAD CTA
         ═══════════════════════════════════════════════════════════ */}
+        <AppPromo placement="simhastha-landing" className="py-10" />
+
         <GlobalLeadSection sourcePage="simhastha-landing" defaultService="simhastha" />
 
         {/* ═══════════════════════════════════════════════════════════

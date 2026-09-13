@@ -7,6 +7,7 @@ import { SHAHI_SNANS, SNAN_SOURCE_EN, SNAN_SOURCE_HI } from '../../data/simhasth
 import { UJJAIN_PARV } from '../../data/ujjain-parv';
 import { AppShell, SectionTitle } from '../AppShell';
 import { NotifyToggle } from '../NotifyToggle';
+import { InstallPrompt } from '../InstallPrompt';
 import {
   NEWS_SECTION, appPath, daysUntil, fetchNews, formatDate, googleCalendarLink, istToday, readStore, type NewsItem,
 } from '../lib';
@@ -60,6 +61,7 @@ export function AppHome() {
           <p className="mt-3 font-serif text-2xl font-bold">{hi ? 'सिंहस्थ 2028 के शाही स्नान सम्पन्न' : 'The Simhastha 2028 Shahi Snans are complete'}</p>
         )}
       </section>
+      <InstallPrompt />
 
       {/* Shahi Snan dates + reminders */}
       <SectionTitle>{hi ? 'शाही स्नान की तिथियाँ' : 'Shahi Snan dates'}</SectionTitle>

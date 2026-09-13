@@ -9,6 +9,7 @@ import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
 import { SimhasthaNews } from '../components/home/SimhasthaNews';
 import { FestivalCalendar } from '../components/home/FestivalCalendar';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
+import { AppPromo } from '../components/shared/AppPromo';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
 import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
@@ -314,6 +315,8 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        <AppPromo placement="home" className="py-10" />
 
         {/* ── LEAD FORM — main enquiry CTA ─────────────────────────────── */}
         <GlobalLeadSection sourcePage="home" defaultService="darshanPlan" />

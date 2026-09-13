@@ -2,6 +2,7 @@ import { Sparkles, ArrowUpRight } from 'lucide-react';
 import { Layout } from '../../components/global/Layout';
 import { SEOHead } from '../../components/global/SEOHead';
 import { LeadForm } from '../../components/global/LeadForm';
+import { AppPromo } from '../../components/shared/AppPromo';
 import { MandirCard } from '../../components/mandir/MandirCard';
 import { MandirRow } from '../../components/mandir/MandirRow';
 import { Breadcrumb } from '../../components/global/Breadcrumb';
@@ -338,6 +339,8 @@ export function MandirIndex() {
               </a>
             </p>
           </aside>
+
+          <AppPromo placement="mandirs-index" className="mt-12 !px-0" />
 
           <div className="mt-12 mx-auto max-w-2xl">
             <LeadForm sourcePage="mandirs-index" defaultService="darshanPlan" />

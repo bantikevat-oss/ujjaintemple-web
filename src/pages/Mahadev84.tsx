@@ -3,6 +3,7 @@ import { MapPin, Printer, Search, Sparkles } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { LeadForm } from '../components/global/LeadForm';
+import { AppPromo } from '../components/shared/AppPromo';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { mahadev84 } from '../data/mahadev84';
@@ -217,6 +218,8 @@ export function Mahadev84Page() {
               </a>
             </p>
           </aside>
+
+          <AppPromo placement="84-mahadev" className="mt-12 !px-0" />
 
           <div className="mx-auto mt-12 max-w-2xl">
             <LeadForm sourcePage="84-mahadev" defaultService="darshanPlan" />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../../components/global/Layout';
 import { SEOHead } from '../../components/global/SEOHead';
 import { LeadForm } from '../../components/global/LeadForm';
+import { AppPromo } from '../../components/shared/AppPromo';
 import { Breadcrumb } from '../../components/global/Breadcrumb';
 import { MandalaDivider } from '../../components/global/MandalaDivider';
 import { MandirCard } from '../../components/mandir/MandirCard';
@@ -376,6 +377,8 @@ export function MandirDetail({ slug }: DetailProps) {
             </aside>
           </div>
         </section>
+
+        <AppPromo placement="mandir-detail" className="pb-10" />
 
         {/* ── SPECIAL OCCASIONS ── */}
         {mandir.specialOccasions && (
