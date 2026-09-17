@@ -1,4 +1,16 @@
 # UjjainTemple.com — Hostinger origin config
+
+# ── Character encoding ──────────────────────────────────────────────────────
+# Hostinger serves a static .html as bare "Content-Type: text/html" — no charset.
+# This site is bilingual and 45% Devanagari across its 482 built pages, with
+# 1,395,870 non-ASCII characters in total. Read as Latin-1, all of it garbles.
+#
+# That is not hypothetical here: on 2026-09-16 the identical gap put panditg.in's
+# Hindi title into Google's SERP as "à¤ªà¥ à¤œà¤¾ …" (that repo's LANDMINES L-27).
+# This site already fixed the *other* half of the same family — SEOHead emits
+# <meta charSet> as the first child of <Head> so react-helmet cannot push it past
+# byte 1024 — but the meta tag only ever covered browsers. This covers the wire.
+AddDefaultCharset UTF-8
 RewriteEngine On
 
 # Force HTTPS
