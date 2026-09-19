@@ -469,7 +469,9 @@ function ujt_view_blog_list($page)
         'title' => $title, 'description' => $desc, 'canonical' => $canonical,
         'og_image' => $c['logo'],
         'wide' => true,
-        'robots' => $page > 1 ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
+        // An empty index is thin content linked from every page's header — keep it
+        // out of the index until the first post is live.
+        'robots' => ($page > 1 || $total === 0) ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
         'jsonld' => [
             ujt_breadcrumbs([['होम', '/hi/'], ['ब्लॉग', $canonical]]),
             $itemlist,
