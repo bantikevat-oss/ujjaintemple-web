@@ -69,11 +69,11 @@ export function CabBookingLanding() {
       q: locale === 'hi' ? 'उज्जैन में सबसे अच्छी टैक्सी सेवा कौन सी है?' : 'Which is the best taxi service in Ujjain?',
       // Plain string retained for the FAQ schema (SEO); aNode is what renders on-page
       a: locale === 'hi'
-        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।'
-        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.',
+        ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।'
+        : 'The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.',
       aNode: locale === 'hi'
-        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया, जीएसटी बिल और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।</>)
-        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront, GST bills and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.</>)
+        ? (<>उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा वह है जो साफ़-सुथरी कैब, अनुभवी व स्थानीय चालक, पहले से बताया गया पारदर्शी किराया और 24/7 उपलब्धता दे। हमारी उज्जैन टैक्सी सेवा महाकालेश्वर लोकल दर्शन, ओंकारेश्वर, इंदौर एयरपोर्ट व आउटस्टेशन — सभी के लिए भरोसेमंद विकल्प है।</>)
+        : (<>The best taxi service in Ujjain is one that offers clean cabs, experienced local drivers, a transparent fare quoted upfront and 24/7 availability. Our Ujjain taxi service is a trusted choice for Mahakaleshwar local darshan, Omkareshwar, Indore airport and outstation trips.</>)
     },
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',

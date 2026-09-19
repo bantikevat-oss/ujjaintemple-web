@@ -262,8 +262,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/tours/ujjain-travel-package.webp',
     description: {
-      hi: 'उज्जैन साइटसीइंग पैकेज में शहर के प्रमुख मंदिर, ऐतिहासिक व दर्शनीय स्थल एक ही दिन में आरामदायक AC कैब द्वारा कवर होते हैं। श्री महाकालेश्वर ज्योतिर्लिंग, काल भैरव, हरसिद्धि शक्तिपीठ, मंगलनाथ, संदीपनि आश्रम, राम घाट व वेध शाला (जंतर मंतर) — उज्जैन के सभी मुख्य आकर्षण अनुभवी चालक के साथ। फ़िक्स्ड पारदर्शी किराया, GST बिल, पिक-अप व ड्रॉप सहित। परिवार, दोस्तों या ग्रुप — सभी के लिए उपयुक्त उज्जैन साइटसीइंग टूर।',
-      en: 'The Ujjain sightseeing package covers all major temples, historical and tourist spots of the city in a single day by comfortable AC cab. Shree Mahakaleshwar Jyotirlinga, Kaal Bhairav, Harsiddhi Shaktipeeth, Mangalnath, Sandipani Ashram, Ram Ghat and Vedh Shala (Jantar Mantar) — every key Ujjain attraction with an experienced driver. Fixed transparent fare, GST bill, pick-up and drop included. A perfect Ujjain sightseeing tour for families, friends or groups.'
+      hi: 'उज्जैन साइटसीइंग पैकेज में शहर के प्रमुख मंदिर, ऐतिहासिक व दर्शनीय स्थल एक ही दिन में आरामदायक AC कैब द्वारा कवर होते हैं। श्री महाकालेश्वर ज्योतिर्लिंग, काल भैरव, हरसिद्धि शक्तिपीठ, मंगलनाथ, संदीपनि आश्रम, राम घाट व वेध शाला (जंतर मंतर) — उज्जैन के सभी मुख्य आकर्षण अनुभवी चालक के साथ। पहले से बताया गया किराया, पिक-अप व ड्रॉप सहित। परिवार, दोस्तों या ग्रुप — सभी के लिए उपयुक्त उज्जैन साइटसीइंग टूर।',
+      en: 'The Ujjain sightseeing package covers all major temples, historical and tourist spots of the city in a single day by comfortable AC cab. Shree Mahakaleshwar Jyotirlinga, Kaal Bhairav, Harsiddhi Shaktipeeth, Mangalnath, Sandipani Ashram, Ram Ghat and Vedh Shala (Jantar Mantar) — every key Ujjain attraction with an experienced driver. Fare quoted upfront, pick-up and drop included. A perfect Ujjain sightseeing tour for families, friends or groups.'
     },
     itinerary: [
       {
