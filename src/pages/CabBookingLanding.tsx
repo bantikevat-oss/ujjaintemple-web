@@ -48,8 +48,8 @@ export function CabBookingLanding() {
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹800 से (हाफ डे), ₹1,500 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
-    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab from ₹800 half day, ₹1,500 full day. Fare depends on the date, season and vehicle — confirmed on call.';
+    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹900 से (हाफ डे), ₹1,700 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
+    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab from ₹900 half day, ₹1,700 full day. Fare depends on the date, season and vehicle — confirmed on call.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -78,8 +78,8 @@ export function CabBookingLanding() {
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
       a: locale === 'hi'
-        ? 'इंदौर एयरपोर्ट से उज्जैन का कैब किराया सेडान के लिए ₹1,500 और SUV के लिए ₹2,000 से शुरू होता है। यह शुरुआती दर है — त्योहार, श्रावण सोमवार, सिंहस्थ, लंबे वीकेंड और देर रात की फ्लाइट पर किराया इससे अधिक रहता है। आपकी तारीख़ का किराया बुकिंग कॉल पर तय होता है और उसके बाद नहीं बदलता।'
-        : 'The cab fare from Indore Airport to Ujjain starts from ₹1,500 for a sedan and ₹2,000 for an SUV. That is a starting rate — festival dates, Shravan Somvar, Simhastha, long weekends and late-night flights run higher. The fare for your date is confirmed on the booking call and does not change after that.'
+        ? 'इंदौर एयरपोर्ट से उज्जैन का कैब किराया सेडान के लिए ₹1,700 और SUV के लिए ₹2,200 से शुरू होता है। यह शुरुआती दर है — त्योहार, श्रावण सोमवार, सिंहस्थ, लंबे वीकेंड और देर रात की फ्लाइट पर किराया इससे अधिक रहता है। आपकी तारीख़ का किराया बुकिंग कॉल पर तय होता है और उसके बाद नहीं बदलता।'
+        : 'The cab fare from Indore Airport to Ujjain starts from ₹1,700 for a sedan and ₹2,200 for an SUV. That is a starting rate — festival dates, Shravan Somvar, Simhastha, long weekends and late-night flights run higher. The fare for your date is confirmed on the booking call and does not change after that.'
     },
     {
       q: locale === 'hi' ? 'उज्जैन लोकल टैक्सी बुकिंग/कैंसिलेशन पॉलिसी क्या है?' : 'What is the Ujjain local taxi booking/cancellation policy?',
@@ -271,8 +271,8 @@ export function CabBookingLanding() {
             </h2>
             <p className="text-ink-soft text-lg leading-relaxed font-serif mb-4">
               {locale === 'hi'
-                ? 'हम प्रति किलोमीटर आधार या पैकेज आधार पर कैब/टैक्सी देते हैं। शुरुआती दर सेडान के लिए ₹10/किमी और SUV के लिए ₹14/किमी है। ये शुरुआती दरें हैं — किराया गाड़ी के प्रकार, तारीख़ और शहर की भीड़ पर निर्भर करता है। त्योहार, श्रावण सोमवार, महाशिवरात्रि, सिंहस्थ और लंबे वीकेंड पर माँग बढ़ जाती है, इसलिए उन तिथियों पर किराया अधिक रहता है। हम आपकी तारीख़ देखकर किराया कॉल पर बता देते हैं — बुकिंग के बाद वही रहता है, कोई छिपा हुआ चार्ज नहीं।'
-                : 'We run cabs on a per-kilometre basis or as a package. Starting rates are ₹10/km for a sedan and ₹14/km for an SUV. These are starting rates — the fare depends on the vehicle, the date and how busy the city is. Festival dates, Shravan Somvar, Mahashivratri, Simhastha and long weekends bring a rush, so fares on those dates run higher. We check your date and quote the fare on the call — it stays that price once booked, with no hidden charges.'}
+                ? 'हम प्रति किलोमीटर आधार या पैकेज आधार पर कैब/टैक्सी देते हैं। शुरुआती दर सेडान के लिए ₹11/किमी और SUV के लिए ₹16/किमी है। ये शुरुआती दरें हैं — किराया गाड़ी के प्रकार, तारीख़ और शहर की भीड़ पर निर्भर करता है। त्योहार, श्रावण सोमवार, महाशिवरात्रि, सिंहस्थ और लंबे वीकेंड पर माँग बढ़ जाती है, इसलिए उन तिथियों पर किराया अधिक रहता है। हम आपकी तारीख़ देखकर किराया कॉल पर बता देते हैं — बुकिंग के बाद वही रहता है, कोई छिपा हुआ चार्ज नहीं।'
+                : 'We run cabs on a per-kilometre basis or as a package. Starting rates are ₹11/km for a sedan and ₹16/km for an SUV. These are starting rates — the fare depends on the vehicle, the date and how busy the city is. Festival dates, Shravan Somvar, Mahashivratri, Simhastha and long weekends bring a rush, so fares on those dates run higher. We check your date and quote the fare on the call — it stays that price once booked, with no hidden charges.'}
             </p>
             <p className="text-ink-soft text-lg leading-relaxed font-serif">
               {locale === 'hi'
