@@ -137,7 +137,7 @@ function ujt_view_list($page)
           ORDER BY a.published_at DESC, a.id DESC
           LIMIT " . (int) UJT_PER_PAGE . " OFFSET " . (int) $offset
     );
-    $cats = ujt_all('SELECT id, name, slug FROM ujt_news_categories ORDER BY sort_order, id');
+    $cats = ujt_all('SELECT id, name, slug FROM ujt_news_categories WHERE ' . ujt_cat_cond() . ' ORDER BY sort_order, id');
 
     // मुख्यमंत्री block (Aman, 2026-09-11). Published CM articles first; the curated,
     // sourced list below them is what makes the section useful before the engine has

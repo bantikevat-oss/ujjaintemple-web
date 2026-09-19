@@ -65,16 +65,16 @@ function ujt_news_save($is_update)
     $og_desc   = ujt_clip($in['og_description'] ?? ($in['social_description'] ?? $meta_desc), 320);
 
     $cat = (int) ($in['category_id'] ?? 0);
-    if ($cat > 0 && !ujt_one('SELECT id FROM ujt_news_categories WHERE id = ?', [$cat])) $cat = 0;
+    if ($cat > 0 && !ujt_one('SELECT id FROM ujt_news_categories WHERE id = ? AND ' . ujt_cat_cond(), [$cat])) $cat = 0;
     if ($cat === 0) {
-        $first = ujt_one('SELECT id FROM ujt_news_categories ORDER BY sort_order, id LIMIT 1');
+        $first = ujt_one('SELECT id FROM ujt_news_categories WHERE ' . ujt_cat_cond() . ' ORDER BY sort_order, id LIMIT 1');
         $cat = $first ? (int) $first['id'] : 0;
     }
 
     $extra = [];
     foreach ((array) ($in['additional_category_ids'] ?? []) as $x) {
         $x = (int) $x;
-        if ($x > 0 && $x !== $cat) $extra[] = $x;
+        if ($x > 0 && $x !== $cat && ujt_one('SELECT id FROM ujt_news_categories WHERE id = ? AND ' . ujt_cat_cond(), [$x])) $extra[] = $x;
     }
     $tags = [];
     foreach ((array) ($in['tags'] ?? []) as $t) {

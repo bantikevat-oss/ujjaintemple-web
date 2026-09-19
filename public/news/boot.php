@@ -93,3 +93,16 @@ function ujt_article_url($slug, $sec = null)
 {
     return ujt_section_url($sec) . rawurlencode($slug) . '/';
 }
+
+/**
+ * Category scope of the current section. Both sections share ujt_news_categories;
+ * blog categories are the ones whose slug starts with "blog-". Keeps a blog post
+ * from being filed (and tagged on the page) under a Simhastha news desk, and keeps
+ * blog desks out of tenant 4's category sync.
+ */
+function ujt_cat_cond($alias = '')
+{
+    $col = ($alias !== '' ? $alias . '.' : '') . 'slug';
+    return ujt_section() === 'blog' ? "$col LIKE 'blog-%'" : "$col NOT LIKE 'blog-%'";
+}
+
