@@ -51,15 +51,45 @@ function ujt_news_config()
     return $cfg;
 }
 
+/**
+ * Sections served by this one engine (2026-09-19). Each is a separate public URL
+ * space over the same article table, split by `ujt_news_articles.section`:
+ *   news — /hi/simhastha-2028-news/  BNA tenant 4, NewsArticle + Google News sitemap
+ *   blog — /hi/blog/                 BNA blog tenant, evergreen BlogPosting, no news sitemap
+ * The key comes from the rewrite (`sec=`) on public pages and from `section=` on
+ * the API endpoint. Anything unknown falls back to 'news', which keeps every URL
+ * and payload that existed before this change behaving exactly as it did.
+ */
+function ujt_sections()
+{
+    $c = ujt_news_config()['site'];
+    return [
+        'news' => ['path' => $c['section_path'], 'name' => $c['section_name']],
+        'blog' => ['path' => '/hi/blog/',        'name' => 'उज्जैन यात्रा ब्लॉग'],
+    ];
+}
+
+/** Current section key. Set once by the front controller or API, read everywhere. */
+function ujt_section($set = null)
+{
+    static $key = 'news';
+    if ($set !== null) {
+        $key = array_key_exists((string) $set, ujt_sections()) ? (string) $set : 'news';
+    }
+    return $key;
+}
+
 /** Absolute public URL of the section index. */
-function ujt_section_url()
+function ujt_section_url($sec = null)
 {
     $c = ujt_news_config();
-    return rtrim($c['site']['base_url'], '/') . $c['site']['section_path'];
+    $all = ujt_sections();
+    $key = $sec !== null && isset($all[$sec]) ? $sec : ujt_section();
+    return rtrim($c['site']['base_url'], '/') . $all[$key]['path'];
 }
 
 /** Absolute public URL of one article. Single source of truth. */
-function ujt_article_url($slug)
+function ujt_article_url($slug, $sec = null)
 {
-    return ujt_section_url() . rawurlencode($slug) . '/';
+    return ujt_section_url($sec) . rawurlencode($slug) . '/';
 }

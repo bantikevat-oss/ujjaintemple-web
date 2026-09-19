@@ -4,6 +4,17 @@ require_once __DIR__ . '/sanitize.php';
 
 const UJT_PER_PAGE = 12;
 
+/**
+ * SQL condition pinning a query to the current section. The key is whitelisted by
+ * ujt_section() and quoted by PDO, so inlining it is safe. Every public query must
+ * carry it — otherwise a blog post would also resolve under the news URL (duplicate
+ * content) and leak into the news feeds.
+ */
+function ujt_sec_cond($alias = '')
+{
+    return ($alias !== '' ? $alias . '.' : '') . 'section = ' . ujt_db()->quote(ujt_section());
+}
+
 /** "5 सितंबर 2026" — month names are spelled out because a numeric date reads as US format. */
 function ujt_hindi_date($sql_dt)
 {
@@ -60,7 +71,7 @@ function ujt_cm_articles($limit = 3)
                 c.name AS cat_name
            FROM ujt_news_articles a
            LEFT JOIN ujt_news_categories c ON c.id = a.category_id
-          WHERE a.status='published' AND a.language='hi'
+          WHERE a.status='published' AND a.language='hi' AND " . ujt_sec_cond('a') . "
             AND (c.slug = 'mukhyamantri-shasan'
                  OR a.title LIKE ? OR a.title LIKE ?
                  OR a.tags_json LIKE ? OR a.tags_json LIKE ?)
@@ -105,9 +116,10 @@ function ujt_publisher_node()
 
 function ujt_view_list($page)
 {
+    if (ujt_section() === 'blog') { ujt_view_blog_list($page); return; }
     $c = ujt_news_config()['site'];
     $total = (int) ujt_one(
-        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi'"
+        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi' AND " . ujt_sec_cond()
     )['n'];
     $pages  = max(1, (int) ceil($total / UJT_PER_PAGE));
     $page   = min($page, $pages);
@@ -121,7 +133,7 @@ function ujt_view_list($page)
                 CHAR_LENGTH(a.content_html) AS content_len
            FROM ujt_news_articles a
            LEFT JOIN ujt_news_categories c ON c.id = a.category_id
-          WHERE a.status='published' AND a.language='hi'
+          WHERE a.status='published' AND a.language='hi' AND " . ujt_sec_cond('a') . "
           ORDER BY a.published_at DESC, a.id DESC
           LIMIT " . (int) UJT_PER_PAGE . " OFFSET " . (int) $offset
     );
@@ -182,7 +194,7 @@ function ujt_view_article($slug)
         "SELECT a.*, c.name AS cat_name
            FROM ujt_news_articles a
            LEFT JOIN ujt_news_categories c ON c.id = a.category_id
-          WHERE a.slug = ? AND a.status='published' LIMIT 1",
+          WHERE a.slug = ? AND a.status='published' AND " . ujt_sec_cond('a') . " LIMIT 1",
         [$slug]
     );
     if (!$a) ujt_not_found();
@@ -197,7 +209,7 @@ function ujt_view_article($slug)
 
     $related = ujt_all(
         "SELECT slug, title, summary FROM ujt_news_articles
-          WHERE status='published' AND language='hi' AND id <> ?
+          WHERE status='published' AND language='hi' AND " . ujt_sec_cond() . " AND id <> ?
           ORDER BY published_at DESC, id DESC LIMIT 4",
         [$a['id']]
     );
@@ -208,10 +220,13 @@ function ujt_view_article($slug)
     $img   = $a['og_image'] ?: $a['featured_image'];
     if ($img && strpos($img, '/') === 0) $img = rtrim(ujt_news_config()['site']['base_url'], '/') . $img;
 
+    $is_blog = ujt_section() === 'blog';
     $body_text = ujt_html_to_text($a['content_html']);
     $news = [
         '@context'         => 'https://schema.org',
-        '@type'            => 'NewsArticle',
+        // Blog posts are evergreen guides, not news: BlogPosting keeps them out of
+        // Google News treatment and matches the visible byline/date.
+        '@type'            => $is_blog ? 'BlogPosting' : 'NewsArticle',
         'headline'         => ujt_clip($a['title'], 110),
         'description'      => $desc,
         'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => $canonical],
@@ -219,7 +234,7 @@ function ujt_view_article($slug)
         'datePublished'    => date('c', strtotime($a['published_at'] ?: $a['created_at'])),
         'dateModified'     => date('c', strtotime($a['updated_at'] ?: ($a['published_at'] ?: $a['created_at']))),
         'inLanguage'       => 'hi-IN',
-        'articleSection'   => $a['cat_name'] ?: 'सिंहस्थ 2028',
+        'articleSection'   => $a['cat_name'] ?: ($is_blog ? 'उज्जैन यात्रा' : 'सिंहस्थ 2028'),
         'wordCount'        => str_word_count($body_text) ?: mb_strlen($body_text) / 5,
         'author'           => ['@type' => 'Organization', 'name' => 'UjjainTemple Editorial',
                                'url' => rtrim(ujt_news_config()['site']['base_url'], '/') . '/hi/about/'],
@@ -232,16 +247,16 @@ function ujt_view_article($slug)
         if ($t) $news['keywords'] = implode(', ', $t);
     }
 
-    ujt_render('article', compact('a', 'related'), [
+    ujt_render('article', compact('a', 'related', 'is_blog'), [
         'title' => ujt_clip($a['meta_title'] ?: $a['title'], 70) . ' | UjjainTemple',
         'description' => $desc, 'og_description' => $ogd,
         'canonical' => $canonical, 'og_image' => $img, 'og_type' => 'article',
         'jsonld' => [
             $news,
-            ujt_breadcrumbs([
-                ['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'],
-                ['समाचार', ujt_section_url()], [ujt_clip($a['title'], 60), $canonical],
-            ]),
+            ujt_breadcrumbs($is_blog
+                ? [['होम', '/hi/'], ['ब्लॉग', ujt_section_url()], [ujt_clip($a['title'], 60), $canonical]]
+                : [['होम', '/hi/'], ['सिंहस्थ 2028', '/hi/simhastha-2028/'],
+                   ['समाचार', ujt_section_url()], [ujt_clip($a['title'], 60), $canonical]]),
         ],
     ]);
 }
@@ -278,8 +293,8 @@ function ujt_not_found()
        . '<meta name="viewport" content="width=device-width,initial-scale=1">'
        . '<title>पृष्ठ नहीं मिला | UjjainTemple</title><meta name="robots" content="noindex">'
        . '</head><body style="font-family:system-ui;max-width:640px;margin:3rem auto;padding:0 1rem">'
-       . '<h1>यह समाचार नहीं मिला</h1><p>हो सकता है यह हटा दिया गया हो।</p>'
-       . '<p><a href="' . ujt_e($url) . '">सिंहस्थ 2028 समाचार</a> · '
+       . '<h1>' . (ujt_section() === 'blog' ? 'यह लेख नहीं मिला' : 'यह समाचार नहीं मिला') . '</h1><p>हो सकता है यह हटा दिया गया हो।</p>'
+       . '<p><a href="' . ujt_e($url) . '">' . ujt_e(ujt_sections()[ujt_section()]['name']) . '</a> · '
        . '<a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></p></body></html>';
     exit;
 }
@@ -290,18 +305,20 @@ function ujt_view_feed()
     $c    = ujt_news_config()['site'];
     $rows = ujt_all(
         "SELECT slug, title, summary, published_at FROM ujt_news_articles
-          WHERE status='published' AND language='hi'
+          WHERE status='published' AND language='hi' AND " . ujt_sec_cond() . "
           ORDER BY published_at DESC, id DESC LIMIT 40"
     );
     header('Content-Type: application/rss+xml; charset=utf-8');
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>' . "\n";
-    printf("<title>%s</title>\n", ujt_e('सिंहस्थ 2028 समाचार — UjjainTemple.com'));
+    $is_blog = ujt_section() === 'blog';
+    printf("<title>%s</title>\n", ujt_e($is_blog ? 'उज्जैन यात्रा ब्लॉग — UjjainTemple.com' : 'सिंहस्थ 2028 समाचार — UjjainTemple.com'));
     printf("<link>%s</link>\n", ujt_e(ujt_section_url()));
     printf("<atom:link href=\"%s\" rel=\"self\" type=\"application/rss+xml\"/>\n",
         ujt_e(ujt_section_url() . 'feed.xml'));
     printf("<description>%s</description>\n",
-        ujt_e('सिंहस्थ 2028 उज्जैन — मेला, स्नान, यात्रा और दर्शन की ताज़ा जानकारी'));
+        ujt_e($is_blog ? 'उज्जैन के मंदिर, दर्शन समय, यात्रा मार्ग और ठहरने पर गाइड'
+                       : 'सिंहस्थ 2028 उज्जैन — मेला, स्नान, यात्रा और दर्शन की ताज़ा जानकारी'));
     echo "<language>hi-in</language>\n";
     foreach ($rows as $r) {
         $u = ujt_article_url($r['slug']);
@@ -338,11 +355,11 @@ function ujt_view_archive_sitemap()
 {
     $rows = ujt_all(
         "SELECT slug, published_at, updated_at FROM ujt_news_articles
-          WHERE status='published' AND language='hi'
+          WHERE status='published' AND language='hi' AND " . ujt_sec_cond() . "
           ORDER BY published_at DESC, id DESC LIMIT 5000"
     );
     $total = (int) ujt_one(
-        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi'"
+        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi' AND " . ujt_sec_cond()
     )['n'];
     $pages = max(1, (int) ceil($total / UJT_PER_PAGE));
 
@@ -379,9 +396,11 @@ function ujt_view_archive_sitemap()
 
 function ujt_view_news_sitemap()
 {
+    // Google News sitemap is for the news section only; blog posts are evergreen.
+    if (ujt_section() !== 'news') ujt_not_found();
     $rows = ujt_all(
         "SELECT slug, title, published_at FROM ujt_news_articles
-          WHERE status='published' AND language='hi'
+          WHERE status='published' AND language='hi' AND " . ujt_sec_cond() . "
             AND published_at >= (NOW() - INTERVAL 48 HOUR)
           ORDER BY published_at DESC LIMIT 1000"
     );
@@ -402,4 +421,58 @@ function ujt_view_news_sitemap()
     }
     echo '</urlset>';
     exit;
+}
+
+
+/**
+ * /hi/blog/ listing — evergreen guides (temples, darshan timings, routes, stays).
+ * Same post grid as the news section; its own head, answer-first lede and CTA.
+ * Every post links to a page the site sells (cab / tour / hotels) — the blog
+ * exists to feed those, not to collect impressions.
+ */
+function ujt_view_blog_list($page)
+{
+    $c = ujt_news_config()['site'];
+    $total = (int) ujt_one(
+        "SELECT COUNT(*) n FROM ujt_news_articles WHERE status='published' AND language='hi' AND " . ujt_sec_cond()
+    )['n'];
+    $pages  = max(1, (int) ceil($total / UJT_PER_PAGE));
+    $page   = min($page, $pages);
+    $offset = ($page - 1) * UJT_PER_PAGE;
+    $rows = ujt_all(
+        "SELECT a.slug, a.title, a.summary, a.published_at,
+                a.featured_image, a.featured_image_alt, c.name AS cat_name,
+                CHAR_LENGTH(a.content_html) AS content_len
+           FROM ujt_news_articles a
+           LEFT JOIN ujt_news_categories c ON c.id = a.category_id
+          WHERE a.status='published' AND a.language='hi' AND " . ujt_sec_cond('a') . "
+          ORDER BY a.published_at DESC, a.id DESC
+          LIMIT " . (int) UJT_PER_PAGE . " OFFSET " . (int) $offset
+    );
+
+    $canonical = ujt_section_url() . ($page > 1 ? 'page/' . $page . '/' : '');
+    $title = $page > 1
+        ? "उज्जैन यात्रा ब्लॉग — पृष्ठ $page | UjjainTemple"
+        : 'उज्जैन यात्रा ब्लॉग — मंदिर, दर्शन समय, मार्ग और ठहरने की जानकारी';
+    $desc = 'उज्जैन के मंदिरों के दर्शन समय, ओंकारेश्वर सहित आसपास के तीर्थों की दूरी और मार्ग, '
+          . 'ठहरने के विकल्प और यात्रा की योजना पर UjjainTemple संपादकीय के लेख।';
+
+    $itemlist = ['@context' => 'https://schema.org', '@type' => 'ItemList', 'itemListElement' => []];
+    foreach ($rows as $i => $r) {
+        $itemlist['itemListElement'][] = [
+            '@type' => 'ListItem', 'position' => $i + 1,
+            'url' => ujt_article_url($r['slug']), 'name' => $r['title'],
+        ];
+    }
+
+    ujt_render('blog_listing', compact('rows', 'page', 'pages', 'total'), [
+        'title' => $title, 'description' => $desc, 'canonical' => $canonical,
+        'og_image' => $c['logo'],
+        'wide' => true,
+        'robots' => $page > 1 ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1',
+        'jsonld' => [
+            ujt_breadcrumbs([['होम', '/hi/'], ['ब्लॉग', $canonical]]),
+            $itemlist,
+        ],
+    ]);
 }

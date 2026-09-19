@@ -4,8 +4,9 @@ if (!defined('UJT_NEWS')) { http_response_code(403); exit('Forbidden'); }
 $c = ujt_news_config()['site'];
 $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
 ?>
+<?php $is_blog = !empty($is_blog); ?>
 <nav class="crumb">
-  <a href="/hi/">होम</a> › <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a> ›
+  <a href="/hi/">होम</a> ›<?php if (!$is_blog): ?> <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a> ›<?php endif; ?>
   <a href="<?= ujt_e(ujt_section_url()) ?>">ब्लॉग</a>
 </nav>
 
@@ -45,6 +46,14 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <?php endif; ?>
 </article>
 
+<?php if ($is_blog): ?>
+<div class="cta">
+  <p><strong>उज्जैन आने की योजना है?</strong><br>
+  कैब, होटल और दर्शन यात्रा के लिए <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
+  या <a href="/hi/cab-booking/">कैब बुकिंग</a>, <a href="/hi/hotels/">होटल</a> और
+  <a href="/hi/tour-and-travel-ujjain/">टूर पैकेज</a> देखें।</p>
+</div>
+<?php else: ?>
 <div class="cta">
   <p><strong>इसका आपकी सिंहस्थ यात्रा पर क्या असर है?</strong><br>
   सिंहस्थ 2028 उज्जैन में <strong>27 मार्च – 27 मई 2028</strong> तक है; शाही स्नान
@@ -54,9 +63,10 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें
   या <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें।</p>
 </div>
+<?php endif; ?>
 
 <?php if ($related): ?>
-  <h2 class="sec-head">सिंहस्थ 2028 पर और लेख</h2>
+  <h2 class="sec-head"><?= $is_blog ? 'ब्लॉग पर और लेख' : 'सिंहस्थ 2028 पर और लेख' ?></h2>
   <?php foreach ($related as $r): ?>
     <div class="card">
       <h3><a href="<?= ujt_e(ujt_article_url($r['slug'])) ?>"><?= ujt_e($r['title']) ?></a></h3>
@@ -65,4 +75,4 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <?php endforeach; ?>
 <?php endif; ?>
 
-<p class="meta"><a href="<?= ujt_e(ujt_section_url()) ?>">← सिंहस्थ 2028 ब्लॉग</a></p>
+<p class="meta"><a href="<?= ujt_e(ujt_section_url()) ?>">← <?= $is_blog ? 'उज्जैन यात्रा ब्लॉग' : 'सिंहस्थ 2028 ब्लॉग' ?></a></p>

@@ -10,12 +10,16 @@
  *   /hi/simhastha-2028-news/news-sitemap.xml → Google News sitemap (48h window)
  *   /hi/simhastha-2028-news/sitemap.xml      → archive sitemap (every article)
  *
+ *   /hi/blog/ … same shapes (list, page/<n>, <slug>, feed.xml, sitemap.xml) with
+ *   sec=blog — the evergreen blog section (2026-09-19). No news-sitemap for blog.
+ *
  * The section is deliberately PHP-SSR: the rest of the site is static SSG, and a
  * rebuild+rsync per published article would make daily publishing unusable.
  */
 require_once __DIR__ . '/boot.php';
 require_once __DIR__ . '/lib/render.php';
 
+ujt_section(isset($_GET['sec']) ? (string) $_GET['sec'] : 'news');
 $view = isset($_GET['view']) ? (string) $_GET['view'] : 'list';
 $slug = isset($_GET['slug']) ? (string) $_GET['slug'] : '';
 $page = max(1, (int) ($_GET['p'] ?? 1));
