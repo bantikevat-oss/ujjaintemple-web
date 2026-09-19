@@ -18,7 +18,7 @@ export function organizationSchema() {
     openingHours: 'Mo-Su 06:00-22:00',
     foundingDate: '2024',
     description:
-      "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Verified darshan timings, authentic pandit services, 24×7 support.",
+      "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Approximate darshan timings, puja information, 24×7 support.",
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Mahakal Area',
@@ -302,18 +302,18 @@ export function simhastha2028EventSchema() {
 
 export function pujaServiceSchema() {
   const services = [
-    { name: 'Mangal Dosh Nivaran Puja', description: 'Authentic Mangal Dosh puja at Mangalnath temple, Ujjain — the birth place of Mars (Mangal). Removes marriage and career obstacles.', price: '2100' },
-    { name: 'Kaal Sarp Dosh Puja', description: 'Complete Kaal Sarp Dosh nivaran puja at Mahakaleshwar or Siddhwat Ujjain by certified pandits. All 12 types covered.', price: '5100' },
-    { name: 'Rudrabhishek Puja', description: 'Rudrabhishek at Mahakaleshwar Jyotirlinga with Vedic mantras. Book online with authentic pandit Ji in Ujjain.', price: '1100' },
-    { name: 'Navgrah Shanti Puja', description: 'Navgrah shanti puja at Mangalnath Mandir, Ujjain — the navgrah kshetra. Removes planetary doshas.', price: '3100' },
-    { name: 'Pitru Dosh Nivaran Puja', description: 'Pitru dosh puja and tarpan at Siddhwat Ujjain — one of India\'s most sacred sites for ancestral rituals.', price: '2500' },
+    { name: 'Mangal Dosh Nivaran Puja', description: 'Mangal Dosh nivaran puja in Ujjain, the city of Mangalnath. Performed with Vedic mantras as per tradition.', price: '2100' },
+    { name: 'Kaal Sarp Dosh Puja', description: 'Kaal Sarp Dosh nivaran puja in Ujjain, performed with Vedic mantras as per tradition.', price: '5100' },
+    { name: 'Rudrabhishek Puja', description: 'Rudrabhishek puja in Ujjain with Vedic mantras, performed as per tradition.', price: '1100' },
+    { name: 'Navgrah Shanti Puja', description: 'Navgrah shanti puja in Ujjain, performed with Vedic mantras as per tradition.', price: '3100' },
+    { name: 'Pitru Dosh Nivaran Puja', description: 'Pitru dosh puja and tarpan in Ujjain, performed as per tradition.', price: '2500' },
   ];
 
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Puja Services in Ujjain',
-    description: 'Authentic puja booking services in Ujjain — Mangal Dosh, Kaal Sarp, Rudrabhishek, Navgrah, and more by certified pandits.',
+    description: 'Puja services in Ujjain — Mangal Dosh, Kaal Sarp, Rudrabhishek, Navgrah Shanti and Pitru Dosh, performed as per tradition.',
     url: `${SITE.url}/puja-in-ujjain/`,
     numberOfItems: services.length,
     itemListElement: services.map((s, i) => ({
