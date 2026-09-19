@@ -23,7 +23,7 @@
   },
   "heroImage": "/images/mandirs/omkareshwar.jpg",
   "publishDate": "2026-07-03",
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-09-19",
   "relatedSlugs": [
     "indore-to-ujjain",
     "ujjain-local-sightseeing-cab",
@@ -38,6 +38,26 @@
       "a": {
         "hi": "सड़क मार्ग से लगभग 140 किमी (इंदौर होकर)। कैब द्वारा यात्रा समय 3 से 3.5 घंटे।",
         "en": "About 140 km by road via Indore. Travel time by cab is 3 to 3.5 hours."
+      }
+    },
+    {
+      "q": {
+        "hi": "ओंकारेश्वर से उज्जैन की दूरी कितनी है?",
+        "en": "What is the distance from Omkareshwar to Ujjain?"
+      },
+      "a": {
+        "hi": "वापसी में भी दूरी वही है — सड़क मार्ग से लगभग 140 किमी, इंदौर होकर। कैब से 3 से 3.5 घंटे लगते हैं। राउंड ट्रिप कैब लेने पर वही गाड़ी आपको ओंकारेश्वर से उज्जैन वापस लाती है।",
+        "en": "The return distance is the same — about 140 km by road via Indore, 3 to 3.5 hours by cab. On a round-trip cab, the same car brings you back from Omkareshwar to Ujjain."
+      }
+    },
+    {
+      "q": {
+        "hi": "उज्जैन के महाकालेश्वर मंदिर से ओंकारेश्वर मंदिर कितनी दूर है?",
+        "en": "How far is Omkareshwar temple from Mahakaleshwar temple in Ujjain?"
+      },
+      "a": {
+        "hi": "महाकालेश्वर मंदिर से ओंकारेश्वर ज्योतिर्लिंग तक सड़क मार्ग से लगभग 140 किमी — उज्जैन से इंदौर (55 किमी), फिर इंदौर-खंडवा रोड से ओंकारेश्वर (85 किमी)। यात्रा समय 3 से 3.5 घंटे।",
+        "en": "From Mahakaleshwar temple to Omkareshwar Jyotirlinga is about 140 km by road — Ujjain to Indore (55 km), then the Indore-Khandwa road to Omkareshwar (85 km). Travel time is 3 to 3.5 hours."
       }
     },
     {
