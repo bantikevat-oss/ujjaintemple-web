@@ -1,4 +1,6 @@
 # UjjainTemple.com — Complete Internal Linking Map
+
+> COMPLIANCE EDIT 2026-09-22 (Aman-approved). Every reference to a “Mahakaleshwar Bhasma Aarti Booking” page has been REMOVED from this map. Per `~/.claude/CLAUDE.md` the three-shapes rule bans VIP darshan / tirth purohit / Mahakal puja, and the ritual phrase must appear nowhere — not as an offer, a booking, a disclaimer or timing. A puja/travel site may DESCRIBE Mahakaleshwar as the city’s identity but must never OFFER the temple’s own ritual. PILLAR 1 is repointed to the existing compliant temple page `/mandirs/mahakaleshwar/` (describes the temple; offers nothing). 🟡 STILL FLAGGED, NOT YET REMOVED — needs Aman’s call: the two `[future]` pages `/puja/mahakaleshwar-vip-darshan` and `/puja/mahakaleshwar-live-darshan` are the SAME banned class (VIP access to the temple) and must not be built either; left in place only because this edit was scoped to the ritual booking. Do not create any of these pages.
 **Total Pages:** ~450 (225 Hindi + 225 English)  
 **Last Updated:** 2026-06-06  
 **Strategy:** Pillar-Cluster model, 5 Pillars, 8 Topic Clusters
@@ -9,7 +11,7 @@
 
 ```
 HOME (/)
-├── PILLAR 1: Mahakaleshwar Bhasma Aarti (/puja/mahakaleshwar-bhasma-aarti-booking)
+├── PILLAR 1: Mahakaleshwar Mandir (/mandirs/mahakaleshwar)
 │   ├── Puja Landing (/puja)
 │   ├── 7 Puja Articles
 │   └── Mahakaleshwar Mandir Detail (/mandirs/mahakaleshwar)
@@ -39,9 +41,9 @@ HOME (/)
 
 ## SECTION 1 — 5 PILLAR PAGES
 
-### PILLAR 1: Mahakaleshwar Bhasma Aarti Booking
-**URL:** `/puja/mahakaleshwar-bhasma-aarti-booking`  
-**Target Keywords:** "mahakaleshwar bhasma aarti booking" (22,200/mo), "भस्म आरती उज्जैन"
+### PILLAR 1: Mahakaleshwar Mandir
+**URL:** `/mandirs/mahakaleshwar`  
+**Target Keywords:** "mahakaleshwar temple ujjain" (temple-description intent), "महाकालेश्वर उज्जैन"
 
 **यह Page Link करे इन Pages को:**
 
@@ -52,7 +54,7 @@ HOME (/)
 | `/puja/rudrabhishek-ujjain` | रुद्राभिषेक पूजा बुकिंग | Rudrabhishek Puja Booking |
 | `/puja/mahamrityunjaya-puja` | महामृत्युंजय पूजा | Mahamrityunjaya Puja |
 | `/transport/ujjain-local-sightseeing-cab` | उज्जैन लोकल कैब बुकिंग | Ujjain Local Cab Booking |
-| `/simhastha` | सिंहस्थ 2028 में भस्म आरती | Bhasma Aarti during Simhastha 2028 |
+| `/simhastha` | सिंहस्थ 2028 महाकालेश्वर दर्शन | Mahakaleshwar Darshan in Simhastha 2028 |
 | `/puja` | अन्य उज्जैन पूजाएँ | Other Ujjain Pujas |
 | `/hotels` | महाकालेश्वर के पास होटल | Hotels near Mahakaleshwar |
 
@@ -60,10 +62,10 @@ HOME (/)
 
 | Source Page | Anchor Text (HI) |
 |---|---|
-| Home | भस्म आरती बुकिंग करें |
-| `/mandirs/mahakaleshwar` | भस्म आरती की पूरी जानकारी |
-| `/simhastha` | सिंहस्थ में भस्म आरती |
-| `/puja` | भस्म आरती बुकिंग |
+| Home | महाकालेश्वर मंदिर की जानकारी |
+| `/mandirs/mahakaleshwar` | महाकालेश्वर मंदिर की जानकारी |
+| `/simhastha` | सिंहस्थ में महाकालेश्वर दर्शन |
+| `/puja` | महाकालेश्वर दर्शन जानकारी |
 | Every transport article | महाकालेश्वर दर्शन बुकिंग |
 
 ---
@@ -89,7 +91,7 @@ HOME (/)
 | `/simhastha/history-of-simhastha-ujjain` | सिंहस्थ का इतिहास | History of Simhastha |
 | `/simhastha/simhastha-2028-safety-tips` | सिंहस्थ यात्रा सुरक्षा टिप्स | Simhastha Safety Tips |
 | `/simhastha/simhastha-2028-tour-package` | सिंहस्थ टूर पैकेज | Simhastha Tour Package |
-| `/puja/mahakaleshwar-bhasma-aarti-booking` | सिंहस्थ में भस्म आरती | Bhasma Aarti Booking |
+| `/mandirs/mahakaleshwar` | सिंहस्थ में महाकालेश्वर दर्शन | Mahakaleshwar Darshan |
 | `/transport` | उज्जैन कैसे पहुँचें | How to Reach Ujjain |
 | `/hotels` | सिंहस्थ में होटल बुकिंग | Hotels for Simhastha |
 | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन | Mahakaleshwar Darshan |
@@ -177,14 +179,14 @@ HOME (/)
 | `/simhastha/simhastha-2028-from-indore-bhopal` | इंदौर-भोपाल से सिंहस्थ | From Indore/Bhopal |
 | `/tours` | उज्जैन टूर पैकेज | Ujjain Tour Packages |
 | `/hotels` | उज्जैन होटल | Ujjain Hotels |
-| `/puja/mahakaleshwar-bhasma-aarti-booking` | महाकालेश्वर दर्शन | Mahakaleshwar Darshan |
+| `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन | Mahakaleshwar Darshan |
 
 ---
 
 ## SECTION 2 — 8 TOPIC CLUSTERS
 
-### CLUSTER 1: Mahakaleshwar & Bhasma Aarti Cluster
-**Hub:** `/puja/mahakaleshwar-bhasma-aarti-booking`
+### CLUSTER 1: Mahakaleshwar Mandir Cluster
+**Hub:** `/mandirs/mahakaleshwar`
 
 ```
 Hub ──► mahakaleshwar (mandir detail)
@@ -200,9 +202,9 @@ Hub ──► mahakaleshwar (mandir detail)
 
 | From | To | Anchor Text |
 |---|---|---|
-| `rudrabhishek-ujjain` | `mahakaleshwar-bhasma-aarti-booking` | भस्म आरती के साथ रुद्राभिषेक |
+| `rudrabhishek-ujjain` | `mandirs/mahakaleshwar` | महाकालेश्वर में रुद्राभिषेक |
 | `mahamrityunjaya-puja` | `rudrabhishek-ujjain` | रुद्राभिषेक पूजा भी बुक करें |
-| `mahakal-lok-corridor` | `mahakaleshwar-bhasma-aarti-booking` | महाकालेश्वर भस्म आरती |
+| `mahakal-lok-corridor` | `mandirs/mahakaleshwar` | महाकालेश्वर मंदिर |
 | `nagchandreshwar-mandir` | `mahakaleshwar` (mandir) | महाकालेश्वर मंदिर परिसर |
 | `mahakaleshwar` (mandir) | `mahakal-lok-corridor` | महाकाल लोक कॉरिडोर |
 | `mahakaleshwar` (mandir) | `nagchandreshwar-mandir` | नागचंद्रेश्वर मंदिर (12वें महीने में खुलता है) |
@@ -220,7 +222,7 @@ Hub ──► kaal-sarp-dosh-nivaran (PILLAR 3)
      ──► rudrabhishek-ujjain
      ──► mahamrityunjaya-puja
      ──► [future] pandit-in-ujjain
-     ──► mahakaleshwar-bhasma-aarti-booking (PILLAR 1)
+     ──► mandirs/mahakaleshwar (PILLAR 1)
 ```
 
 **Spoke → Spoke Links:**
@@ -233,7 +235,7 @@ Hub ──► kaal-sarp-dosh-nivaran (PILLAR 3)
 | `mangal-dosh-nivaran` | `navgrah-shanti` | नवग्रह शांति पूजा उज्जैन |
 | `navgrah-shanti` | `kaal-sarp-dosh-nivaran` | काल सर्प दोष निवारण |
 | `pitru-dosh-nivaran` | `rudrabhishek-ujjain` | पितृ दोष में रुद्राभिषेक |
-| `rudrabhishek-ujjain` | `mahakaleshwar-bhasma-aarti-booking` | भस्म आरती के साथ रुद्राभिषेक |
+| `rudrabhishek-ujjain` | `mandirs/mahakaleshwar` | महाकालेश्वर में रुद्राभिषेक |
 | `mahamrityunjaya-puja` | `pitru-dosh-nivaran` | पितृ दोष निवारण पूजा |
 
 ---
@@ -310,7 +312,7 @@ Top Shiva temples और उनके inter-links:
 | `mahakaleshwar` | `kal-bhairav-ujjain` | काल भैरव मंदिर उज्जैन |
 | `mahakaleshwar` | `harsiddhi-mata` | हरसिद्धि माता मंदिर |
 | `mahakaleshwar` | `mahakal-lok-corridor` (article) | महाकाल लोक कॉरिडोर |
-| `mahakaleshwar` | `puja/mahakaleshwar-bhasma-aarti-booking` | भस्म आरती बुकिंग |
+| `mahakaleshwar` | `mandirs/mahakaleshwar` | महाकालेश्वर दर्शन जानकारी |
 | `mangalnath` | `mahakaleshwar` | महाकालेश्वर ज्योतिर्लिंग |
 | `mangalnath` | `navgraha-mandir-ujjain` | नवग्रह मंदिर उज्जैन |
 | `mangalnath` | `puja/kaal-sarp-dosh-nivaran` | काल सर्प दोष पूजा |
@@ -428,7 +430,7 @@ Top Shiva temples और उनके inter-links:
 | `ujjain-local-sightseeing-cab` | `indore-to-ujjain` | इंदौर से उज्जैन |
 | `ujjain-local-sightseeing-cab` | `/cab-booking` | अभी कैब बुक करें |
 | `ujjain-local-sightseeing-cab` | `/tours/best-places-to-visit-ujjain` | उज्जैन के दर्शनीय स्थल |
-| `ujjain-local-sightseeing-cab` | `/puja/mahakaleshwar-bhasma-aarti-booking` | महाकालेश्वर दर्शन |
+| `ujjain-local-sightseeing-cab` | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन |
 
 ---
 
@@ -463,7 +465,7 @@ Top Shiva temples और उनके inter-links:
 | From | To | Anchor Text |
 |---|---|---|
 | `/hotels` | `/simhastha` | सिंहस्थ 2028 होटल बुकिंग |
-| `/hotels` | `/puja/mahakaleshwar-bhasma-aarti-booking` | महाकालेश्वर के पास होटल |
+| `/hotels` | `/mandirs/mahakaleshwar` | महाकालेश्वर के पास होटल |
 | `/hotels` | `/transport` | उज्जैन कैसे पहुँचें |
 | `/hotels` | `/tours` | उज्जैन टूर पैकेज |
 | `simhastha-2028-accommodation` | `/hotels` | उज्जैन होटल बुकिंग |
@@ -483,7 +485,7 @@ Top Shiva temples और उनके inter-links:
 | `/about` | `/puja` | पूजा बुकिंग |
 | `/about` | `/tours` | टूर पैकेज |
 | `/contact` | `/about` | हमारे बारे में |
-| `/contact` | `/puja/mahakaleshwar-bhasma-aarti-booking` | भस्म आरती बुकिंग |
+| `/contact` | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन जानकारी |
 | `/contact` | `/cab-booking` | कैब बुकिंग |
 | Every article footer | `/about` | UjjainTemple के बारे में |
 | Every article footer | `/contact` | संपर्क करें |
@@ -496,7 +498,7 @@ Top Shiva temples और उनके inter-links:
 
 | Priority | Destination | Section in Page | Anchor Text |
 |---|---|---|---|
-| 🔴 | `/puja/mahakaleshwar-bhasma-aarti-booking` | Hero CTA | भस्म आरती बुकिंग करें |
+| 🔴 | `/mandirs/mahakaleshwar` | Hero CTA | महाकालेश्वर मंदिर की जानकारी |
 | 🔴 | `/simhastha` | Festival Banner | सिंहस्थ 2028 की पूरी जानकारी |
 | 🔴 | `/puja` | Puja Section | पूजा बुकिंग उज्जैन |
 | 🔴 | `/puja/kaal-sarp-dosh-nivaran` | Puja Cards | काल सर्प दोष निवारण |
@@ -530,7 +532,7 @@ Geographically/thematically related mandirs — see sub-cluster links above
 
 ### Block 3: "यहाँ होने वाली पूजाएँ" Section
 Relevant puja articles based on temple type:
-- Shiva temples → rudrabhishek, mahamrityunjaya, bhasma-aarti
+- Shiva temples → rudrabhishek, mahamrityunjaya
 - Navgraha temples → navgrah-shanti, kaal-sarp, mangal-dosh
 - Shakti temples → mata-puja articles
 
@@ -556,10 +558,10 @@ Relevant puja articles based on temple type:
 
 | # | From | To | Anchor Text | SEO Value |
 |---|---|---|---|---|
-| 1 | `mahakaleshwar` (mandir) | `/puja/mahakaleshwar-bhasma-aarti-booking` | भस्म आरती बुकिंग | ⭐⭐⭐⭐⭐ |
+| 1 | `mahakaleshwar` (mandir) | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन जानकारी | ⭐⭐⭐⭐⭐ |
 | 2 | `simhastha-2028-accommodation` | `/hotels` | उज्जैन होटल बुकिंग | ⭐⭐⭐⭐⭐ |
-| 3 | `bhopal-to-ujjain` | `/puja/mahakaleshwar-bhasma-aarti-booking` | महाकालेश्वर दर्शन बुकिंग | ⭐⭐⭐⭐⭐ |
-| 4 | `indore-to-ujjain` | `/puja/mahakaleshwar-bhasma-aarti-booking` | भस्म आरती उज्जैन | ⭐⭐⭐⭐⭐ |
+| 3 | `bhopal-to-ujjain` | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन बुकिंग | ⭐⭐⭐⭐⭐ |
+| 4 | `indore-to-ujjain` | `/mandirs/mahakaleshwar` | महाकालेश्वर उज्जैन | ⭐⭐⭐⭐⭐ |
 | 5 | `mangalnath` (mandir) | `/puja/kaal-sarp-dosh-nivaran` | काल सर्प दोष निवारण | ⭐⭐⭐⭐⭐ |
 | 6 | `navgraha-mandir-ujjain` | `/puja/navgrah-shanti` | नवग्रह शांति पूजा बुकिंग | ⭐⭐⭐⭐⭐ |
 | 7 | `simhastha-2028-transport-guide` | `/transport/bhopal-to-ujjain` | भोपाल से उज्जैन ट्रेन-बस | ⭐⭐⭐⭐ |
@@ -570,7 +572,7 @@ Relevant puja articles based on temple type:
 | 12 | `best-places-to-visit-ujjain` | `/mandirs/kal-bhairav-ujjain` | काल भैरव मंदिर उज्जैन | ⭐⭐⭐⭐ |
 | 13 | `kaal-sarp-dosh-nivaran` | `/mandirs/mangalnath` | मंगलनाथ मंदिर उज्जैन | ⭐⭐⭐⭐ |
 | 14 | `ujjain-local-sightseeing-cab` | `/mandirs/mahakaleshwar` | महाकालेश्वर मंदिर दर्शन | ⭐⭐⭐⭐ |
-| 15 | `2-days-with-family` | `/puja/mahakaleshwar-bhasma-aarti-booking` | भस्म आरती बुकिंग | ⭐⭐⭐⭐ |
+| 15 | `2-days-with-family` | `/mandirs/mahakaleshwar` | महाकालेश्वर दर्शन जानकारी | ⭐⭐⭐⭐ |
 | 16 | `shahi-snan-dates-2028` | `/mandirs/mahakaleshwar` | महाकालेश्वर स्नान | ⭐⭐⭐⭐ |
 | 17 | `snan-ghats-ujjain` | `/mandirs/ram-mandir-ramghat` | राम घाट उज्जैन | ⭐⭐⭐ |
 | 18 | `snan-ghats-ujjain` | `/mandirs/mangalnath` | मंगलनाथ स्नान | ⭐⭐⭐ |
@@ -595,7 +597,7 @@ Home | मंदिर | पूजा | टूर | सिंहस्थ 2028 |
 ```
 Column 1 - पूजा:
 → /puja (सभी पूजाएँ)
-→ /puja/mahakaleshwar-bhasma-aarti-booking
+→ /mandirs/mahakaleshwar
 → /puja/kaal-sarp-dosh-nivaran
 → /puja/rudrabhishek-ujjain
 
@@ -630,7 +632,7 @@ Column 5 - About:
 Home > [Section] > [Page Title]
 उदाहरण:
 होम > मंदिर > महाकालेश्वर मंदिर
-होम > पूजा > भस्म आरती बुकिंग
+होम > मंदिर > महाकालेश्वर दर्शन
 होम > सिंहस्थ 2028 > शाही स्नान तिथियाँ 2028
 होम > टूर > उज्जैन-ओंकारेश्वर पैकेज
 ```
@@ -640,7 +642,7 @@ Home > [Section] > [Page Title]
 ## SECTION 7 — ANCHOR TEXT RULES
 
 ### ✅ सही Anchor Text (Use करें)
-- Exact match keywords sparingly: "भस्म आरती बुकिंग", "काल सर्प दोष उज्जैन"
+- Exact match keywords sparingly: "महाकालेश्वर दर्शन जानकारी", "काल सर्प दोष उज्जैन"
 - Partial match: "महाकालेश्वर दर्शन", "उज्जैन मंदिर"
 - Natural Hindi: "यहाँ पढ़ें", "पूरी जानकारी", "दर्शन समय देखें"
 - Descriptive: "उज्जैन के नवग्रह मंदिर में पूजा"
@@ -681,7 +683,7 @@ Home > [Section] > [Page Title]
 
 ### Phase 1 — तुरंत करें (Deploy से पहले)
 - [ ] Home page के सभी 15 links verify करें
-- [ ] `/mandirs/mahakaleshwar` → `/puja/mahakaleshwar-bhasma-aarti-booking` link add करें
+- [ ] `/mandirs/mahakaleshwar` → `/mandirs/mahakaleshwar` link add करें
 - [ ] `/mandirs/mangalnath` → `/puja/kaal-sarp-dosh-nivaran` link add करें
 - [ ] `/mandirs/navgraha-mandir-ujjain` → `/puja/navgrah-shanti` link add करें
 - [ ] All 3 transport articles → `/cab-booking` link add करें
@@ -713,8 +715,8 @@ Home > [Section] > [Page Title]
 | Page | Target Keyword | Search Volume | Link से आएंगे |
 |---|---|---|---|
 | `/puja/pandit-in-ujjain` | pandit in ujjain | 4,400/mo | mahakaleshwar, puja landing, home |
-| `/puja/mahakaleshwar-vip-darshan` | mahakaleshwar vip darshan | 6,600/mo | bhasma-aarti, mahakaleshwar mandir, home |
-| `/puja/mahakaleshwar-live-darshan` | mahakaleshwar live darshan | 6,600/mo | bhasma-aarti article, home |
+| `/puja/mahakaleshwar-vip-darshan` | mahakaleshwar vip darshan | 6,600/mo | mahakaleshwar mandir, home |
+| `/puja/mahakaleshwar-live-darshan` | mahakaleshwar live darshan | 6,600/mo | mahakaleshwar mandir, home |
 | `/mandirs/ram-ghat-ujjain` | ram ghat ujjain | 3,600/mo | simhastha pages, snan-ghats |
 | `/tours/ujjain-indore-day-trip` | ujjain indore day trip | 1,200/mo | indore-to-ujjain transport |
 
