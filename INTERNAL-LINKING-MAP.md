@@ -1,6 +1,6 @@
 # UjjainTemple.com — Complete Internal Linking Map
 
-> COMPLIANCE EDIT 2026-09-22 (Aman-approved). Every reference to a “Mahakaleshwar Bhasma Aarti Booking” page has been REMOVED from this map. Per `~/.claude/CLAUDE.md` the three-shapes rule bans VIP darshan / tirth purohit / Mahakal puja, and the ritual phrase must appear nowhere — not as an offer, a booking, a disclaimer or timing. A puja/travel site may DESCRIBE Mahakaleshwar as the city’s identity but must never OFFER the temple’s own ritual. PILLAR 1 is repointed to the existing compliant temple page `/mandirs/mahakaleshwar/` (describes the temple; offers nothing). 🟡 STILL FLAGGED, NOT YET REMOVED — needs Aman’s call: the two `[future]` pages `/puja/mahakaleshwar-vip-darshan` and `/puja/mahakaleshwar-live-darshan` are the SAME banned class (VIP access to the temple) and must not be built either; left in place only because this edit was scoped to the ritual booking. Do not create any of these pages.
+> COMPLIANCE EDIT 2026-09-22 (Aman-approved). Every reference to a “Mahakaleshwar Bhasma Aarti Booking” page has been REMOVED from this map. Per `~/.claude/CLAUDE.md` the three-shapes rule bans VIP darshan / tirth purohit / Mahakal puja, and the ritual phrase must appear nowhere — not as an offer, a booking, a disclaimer or timing. A puja/travel site may DESCRIBE Mahakaleshwar as the city’s identity but must never OFFER the temple’s own ritual. PILLAR 1 is repointed to the existing compliant temple page `/mandirs/mahakaleshwar/` (describes the temple; offers nothing). Also REMOVED on Aman’s follow-up approval: the two `[future]` pages mahakaleshwar-vip-darshan and mahakaleshwar-live-darshan (VIP access to the temple — the SAME banned class). None of these three pages exists live and none is to be built. NOTE for a future editor: `/puja/pandit-in-ujjain` was left in place — offering our OWN pandit service is allowed; it is not a claim on the temple’s purohits. If it ever drifts toward “tirth purohit” / temple-access framing, it falls under the same rule.
 **Total Pages:** ~450 (225 Hindi + 225 English)  
 **Last Updated:** 2026-06-06  
 **Strategy:** Pillar-Cluster model, 5 Pillars, 8 Topic Clusters
@@ -194,8 +194,6 @@ Hub ──► mahakaleshwar (mandir detail)
      ──► rudrabhishek-ujjain
      ──► mahamrityunjaya-puja
      ──► mahakal-lok-corridor
-     ──► [future] mahakaleshwar-vip-darshan
-     ──► [future] mahakaleshwar-live-darshan
 ```
 
 **Spoke → Spoke Links (within cluster):**
@@ -715,8 +713,6 @@ Home > [Section] > [Page Title]
 | Page | Target Keyword | Search Volume | Link से आएंगे |
 |---|---|---|---|
 | `/puja/pandit-in-ujjain` | pandit in ujjain | 4,400/mo | mahakaleshwar, puja landing, home |
-| `/puja/mahakaleshwar-vip-darshan` | mahakaleshwar vip darshan | 6,600/mo | mahakaleshwar mandir, home |
-| `/puja/mahakaleshwar-live-darshan` | mahakaleshwar live darshan | 6,600/mo | mahakaleshwar mandir, home |
 | `/mandirs/ram-ghat-ujjain` | ram ghat ujjain | 3,600/mo | simhastha pages, snan-ghats |
 | `/tours/ujjain-indore-day-trip` | ujjain indore day trip | 1,200/mo | indore-to-ujjain transport |
 
