@@ -67,10 +67,14 @@ const AREAS = [
 ];
 
 const TRUST = [
+  // 🔴 '500+ families/month' and '100% verified hotels' removed 2026-10-01 — invented
+  // count and an unverifiable percentage, neither with a source. The site's whole lead
+  // volume is ~220/month across every service, so 500+ hotel families was not survivable
+  // as a claim. '12+ years' and '₹0 booking fee' are real and stay.
   { numHi: '12+', numEn: '12+', labelHi: 'वर्ष अनुभव', labelEn: 'Years Experience' },
-  { numHi: '500+', numEn: '500+', labelHi: 'परिवार प्रतिमाह', labelEn: 'Families/Month' },
-  { numHi: '100%', numEn: '100%', labelHi: 'सत्यापित होटल', labelEn: 'Verified Hotels' },
+  { numHi: '183', numEn: '183', labelHi: 'मंदिर प्रलेखित', labelEn: 'Temples Documented' },
   { numHi: '₹0', numEn: '₹0', labelHi: 'बुकिंग शुल्क', labelEn: 'Booking Fee' },
+  { numHi: '24×7', numEn: '24×7', labelHi: 'सहायता', labelEn: 'Support' },
 ];
 
 // ─── Component ────────────────────────────────────────────────────
@@ -123,7 +127,10 @@ export function HotelsIndex() {
             <div className="inline-flex items-center gap-2 border border-gold/30 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-gold-light" />
               <span className="text-gold-light font-serif tracking-[0.25em] uppercase text-xs sm:text-sm">
-                {locale === 'hi' ? 'उज्जैन का नम्बर 1 होटल सहायक' : 'Ujjain\'s Trusted Hotel Concierge'}
+                {/* 'उज्जैन का नम्बर 1' removed 2026-10-01: an unsubstantiated superiority
+                    claim, and the English half never made it — the two languages were
+                    saying different things to different readers. */}
+                {locale === 'hi' ? 'उज्जैन होटल सहायता' : 'Ujjain\'s Trusted Hotel Concierge'}
               </span>
             </div>
 

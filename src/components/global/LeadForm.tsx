@@ -53,6 +53,11 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
         </div>
       ) : (
         <form onSubmit={onSubmit} className="space-y-3">
+          {/* Honeypot — matches the `website` check in api/lead.php. */}
+          <input
+            type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"
+            className="absolute left-[-9999px] h-0 w-0 opacity-0"
+          />
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-name">{t('form.name')} *</label>
             <input id="lf-name" name="name" required type="text" autoComplete="name"

@@ -27,11 +27,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   exit;
 }
 
+/*
+ * 🔴 Recipient and sender are NOT configured here. They live in the server-only
+ * news-config.php 'mail' block (see smtp.php), because that file is outside public_html
+ * and holds the SMTP password. The old email_to / email_cc / from_email keys were left
+ * here after the switch to SMTP and were dead — editing them changed nothing, which is
+ * exactly the kind of thing that wastes an hour later. Removed 2026-10-01.
+ */
 $cfg = [
-  'email_to'   => '16amanshivhare@gmail.com',
-  'email_cc'   => 'leads@ujjaintemple.com',
-  'from_email' => 'noreply@ujjaintemple.com',
-  'csv_path'   => __DIR__ . '/leads.csv',
+  'csv_path' => __DIR__ . '/leads.csv',
 ];
 
 function clean($s) { return trim(strip_tags(substr((string)$s, 0, 500))); }
@@ -56,6 +60,37 @@ if (!preg_match('/^[0-9+\-\s]{10,15}$/', $phone)) {
   echo json_encode(['success' => false, 'error' => 'invalid phone']);
   exit;
 }
+
+/*
+ * Abuse guard. Until 2026-10-01 this endpoint's @mail() silently failed, so spam was
+ * invisible and free. Now every accepted POST sends a real SMTP mail through the shared
+ * no-reply@byteflowtech.in mailbox, and repeated sends are what trips Hostinger's
+ * account-wide abuse block — which would take mail down for the other properties on that
+ * mailbox too.
+ *
+ * 🔴 The throttle therefore limits the MAIL, never the capture. This site is
+ * mobile-dominant and Indian carriers run CGNAT, so one public IP can carry many genuine
+ * visitors — rejecting on a per-IP count would drop real leads, and losing a lead is far
+ * more expensive than receiving spam. So every accepted POST is always written to the
+ * CSV; only the notification is suppressed once a threshold is crossed.
+ */
+$spam = trim((string)($_POST['website'] ?? '')) !== '';   // honeypot: humans never see this field
+if ($spam) {
+  echo json_encode(['success' => true]);                  // look successful; drop silently
+  exit;
+}
+
+function ujt_over_cap($key, $cap) {
+  $f = sys_get_temp_dir() . '/ujt_lead_' . hash('sha256', $key) . '.cnt';
+  $n = (int) @file_get_contents($f);
+  @file_put_contents($f, (string)($n + 1), LOCK_EX);
+  return $n >= $cap;
+}
+
+$ip        = $_SERVER['REMOTE_ADDR'] ?? '';
+$burst     = $ip !== '' && ujt_over_cap('ip:' . $ip . ':' . date('Y-m-d-H'), 20);  // one IP, one hour
+$dayFlood  = ujt_over_cap('all:' . date('Y-m-d'), 150);                            // whole site, one day
+$mail_ok   = !$burst && !$dayFlood;
 
 // Append to CSV
 $row = [date('Y-m-d H:i:s'), $name, $phone, $service, $src, $locale, $message, $_SERVER['REMOTE_ADDR'] ?? '', $purpose, $channel];
@@ -111,7 +146,12 @@ $body .= "Call back: tel:" . preg_replace('/[^0-9]/', '', $phone) . "\n";
  * The CSV write above already happened, so a mail failure never loses the lead.
  */
 require_once __DIR__ . '/smtp.php';
-$sent = ujt_smtp_send($subject, $body);
-if (!$sent) error_log("ujt lead: SMTP send failed for $name / $phone");
+if ($mail_ok) {
+  $sent = ujt_smtp_send($subject, $body);
+  if (!$sent) error_log("ujt lead: SMTP send failed for $name / $phone");
+} else {
+  // Captured, deliberately not mailed. The row is in leads.csv either way.
+  error_log("ujt lead: mail throttled (burst=" . (int)$burst . " dayFlood=" . (int)$dayFlood . ") for $phone");
+}
 
 echo json_encode(['success' => true]);

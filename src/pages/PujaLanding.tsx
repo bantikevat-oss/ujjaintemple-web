@@ -11,10 +11,17 @@ import { breadcrumbSchema, faqSchema, pujaServiceSchema } from '../lib/schemas';
 import { PhoneCall, ArrowRight, CheckCircle2, ChevronDown, Star } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────
+/*
+ * 🔴 Every number here must be one we can point at. The previous set said "15+ years"
+ * (while the hotels page said 12+ — two numbers for one company, on one site, which is
+ * what gave them away), "10,000+ pujas performed" and "100% Vedic vidhi". None had a
+ * source. Replaced 2026-10-01 with counts that come from this site's own content and a
+ * price that is real. Rule: no invented counts, no unverifiable percentages.
+ */
 const TRUST_STATS = [
-  { numHi: '15+', numEn: '15+', labelHi: 'वर्ष अनुभव', labelEn: 'Years Experience' },
-  { numHi: '10,000+', numEn: '10,000+', labelHi: 'पूजा सम्पन्न', labelEn: 'Pujas Performed' },
-  { numHi: '100%', numEn: '100%', labelHi: 'वैदिक विधि', labelEn: 'Vedic Vidhi' },
+  { numHi: '12+', numEn: '12+', labelHi: 'वर्ष अनुभव', labelEn: 'Years Experience' },
+  { numHi: '183', numEn: '183', labelHi: 'मंदिर प्रलेखित', labelEn: 'Temples Documented' },
+  { numHi: '₹0', numEn: '₹0', labelHi: 'बुकिंग शुल्क', labelEn: 'Booking Fee' },
   { numHi: '₹3,100', numEn: '₹3,100', labelHi: 'से शुरू', labelEn: 'Starting' },
 ];
 
@@ -51,32 +58,6 @@ const WHY_POINTS = [
   { hi: 'हर पूजा का फल यहाँ कई गुना अधिक', en: 'Every puja\'s fruit is multiplied here' },
 ];
 
-const TESTIMONIALS = [
-  {
-    nameHi: 'राजेश शर्मा', nameEn: 'Rajesh Sharma',
-    cityHi: 'दिल्ली', cityEn: 'Delhi',
-    pujaHi: 'काल सर्प दोष निवारण', pujaEn: 'Kaal Sarp Dosh Nivaran',
-    textHi: 'पूजा के बाद जीवन में सकारात्मक बदलाव आया। पंडित जी ने बहुत विधिवत और श्रद्धा से पूजा कराई। उज्जैन टेम्पल की सेवा उत्तम है।',
-    textEn: 'There were positive changes in life after the puja. The panditji performed it very methodically and devoutly. UjjainTemple service is excellent.',
-    stars: 5,
-  },
-  {
-    nameHi: 'सुनीता देवी', nameEn: 'Sunita Devi',
-    cityHi: 'मुम्बई', cityEn: 'Mumbai',
-    pujaHi: 'मंगल दोष निवारण', pujaEn: 'Mangal Dosh Nivaran',
-    textHi: 'पुत्री के विवाह में बाधा थी। मंगलनाथ पर विधिवत पूजा के बाद योग बने। टीम ने हर कदम पर मार्गदर्शन किया।',
-    textEn: 'There were obstacles in my daughter\'s marriage. The right yoga formed after the proper puja at Mangalnath. The team guided us at every step.',
-    stars: 5,
-  },
-  {
-    nameHi: 'अमित वर्मा', nameEn: 'Amit Verma',
-    cityHi: 'भोपाल', cityEn: 'Bhopal',
-    pujaHi: 'नवग्रह शांति', pujaEn: 'Navgrah Shanti',
-    textHi: 'साढ़े साती बहुत कठिन थी। नवग्रह शांति पूजा के बाद धीरे-धीरे समस्याएं हल होने लगीं। पंडित जी बहुत अनुभवी हैं।',
-    textEn: 'Sade Sati was very difficult. After the Navgrah Shanti puja, the problems gradually started resolving. The panditji is very experienced.',
-    stars: 5,
-  },
-];
 
 const FAQS = {
   hi: [
@@ -84,14 +65,14 @@ const FAQS = {
     { q: 'क्या मैं उज्जैन आए बिना पूजा करा सकता हूँ?', a: 'हाँ — ऑनलाइन पूजा की सुविधा है। पंडित जी पूजा करते हैं, आप WhatsApp Video Call पर लाइव देख सकते हैं। परन्तु स्वयं उपस्थित रहने का फल अधिक होता है।' },
     { q: 'पूजा की फीस कितनी है?', a: 'पूजा के प्रकार और विधि पर निर्भर: साधारण पूजा ₹3,100 से, मध्यम ₹7,100-15,000, और विशेष हवन-यज्ञ ₹21,000-51,000 तक। कॉल करने पर सटीक जानकारी दी जाएगी।' },
     { q: 'पूजा के लिए कौन से दस्तावेज चाहिए?', a: 'जन्म कुंडली (यदि ग्रह दोष संबंधी पूजा है), जन्म तिथि, नाम, और गोत्र। यदि कुंडली नहीं है तो भी पूजा होती है — केवल नाम-गोत्र पर्याप्त है।' },
-    { q: 'क्या उज्जैन टेम्पल के पंडित प्रामाणिक हैं?', a: 'हाँ — हमारे सभी पंडित उज्जैन के मूल निवासी, 15+ वर्ष के अनुभव वाले, वैदिक परम्परा में प्रशिक्षित हैं। कोई कमीशन नहीं — सीधा पंडित-यजमान सम्बन्ध।' },
+    { q: 'क्या उज्जैन टेम्पल के पंडित प्रामाणिक हैं?', a: 'हाँ — हमारे पंडित उज्जैन के मूल निवासी एवं अनुभवी वाले, वैदिक परम्परा में प्रशिक्षित हैं। कोई कमीशन नहीं — सीधा पंडित-यजमान सम्बन्ध।' },
   ],
   en: [
     { q: 'How to book a puja in Ujjain?', a: 'Call or WhatsApp +91 89890 06759. Share the puja type, preferred date and your requirement. Our expert pandits will provide complete guidance and confirm the booking.' },
     { q: 'Can I get a puja done without coming to Ujjain?', a: 'Yes — online puja is available. The pandit performs the puja and you can watch live on WhatsApp Video Call. However, being personally present gives greater results.' },
     { q: 'What is the puja fee?', a: 'Depends on puja type and vidhi: basic puja from ₹3,100, medium ₹7,100-15,000, and special havan-yajna ₹21,000-51,000. Exact details given on call.' },
     { q: 'What documents are needed for the puja?', a: 'Birth horoscope (kundli) for planet-related pujas, birth date, name and gotra. If no kundli is available, the puja still proceeds — name and gotra suffice.' },
-    { q: 'Are UjjainTemple pandits authentic?', a: 'Yes — all our pandits are Ujjain natives, with 15+ years experience, trained in the Vedic tradition. No middlemen — direct pandit-yajaman relationship.' },
+    { q: 'Are UjjainTemple pandits authentic?', a: 'Yes — our pandits are Ujjain natives and experienced, trained in the Vedic tradition. No middlemen — direct pandit-yajaman relationship.' },
   ],
 };
 
@@ -107,8 +88,8 @@ export function PujaLanding() {
     ? 'उज्जैन में पूजा — मंगल दोष, काल सर्प, नवग्रह शांति, पितृ दोष'
     : 'Puja in Ujjain — Mangal Dosh, Kaal Sarp, Navgrah Shanti, Pitru Dosh';
   const description = locale === 'hi'
-    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। 15+ वर्ष, 10,000+ पूजा। प्रामाणिक वैदिक विधि। बुकिंग: +91 89890 06759'
-    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. 15+ years, 10,000+ pujas. Authentic Vedic vidhi. Booking: +91 89890 06759';
+    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। अनुभवी पंडित। प्रामाणिक वैदिक विधि। बुकिंग: +91 89890 06759'
+    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. Experienced pandits. Authentic Vedic vidhi. Booking: +91 89890 06759';
 
   const schemas = [
     breadcrumbSchema({ items: [
@@ -185,8 +166,8 @@ export function PujaLanding() {
             {/* Inline trust strip */}
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-4">
               {[
-                locale === 'hi' ? '✓ 15+ वर्ष अनुभव' : '✓ 15+ Years Experience',
-                locale === 'hi' ? '✓ 10,000+ पूजा सम्पन्न' : '✓ 10,000+ Pujas Done',
+                locale === 'hi' ? '✓ अनुभवी पंडित' : '✓ Experienced Pandits',
+                locale === 'hi' ? '✓ उज्जैन के मूल निवासी' : '✓ Ujjain-Born Pandits',
                 locale === 'hi' ? '✓ ₹0 छुपी फीस' : '✓ ₹0 Hidden Charges',
                 locale === 'hi' ? '✓ ऑनलाइन उपलब्ध' : '✓ Online Available',
               ].map((t, i) => (
@@ -387,7 +368,7 @@ export function PujaLanding() {
               </h3>
               <ul className="space-y-5">
                 {(locale === 'hi' ? [
-                  ['शास्त्रोक्त विधि', '15+ वर्ष अनुभवी पंडित, कोई समझौता नहीं'],
+                  ['शास्त्रोक्त विधि', 'अनुभवी पंडित, कोई समझौता नहीं'],
                   ['पारदर्शी मूल्य', 'पहले से तय फीस — पूजा के बाद कोई अतिरिक्त माँग नहीं'],
                   ['वन-स्टॉप', 'पूजा + मंदिर दर्शन + आवास + कैब — सब एक कॉल पर'],
                   ['ऑनलाइन विकल्प', 'घर बैठे WhatsApp पर लाइव देखें'],
@@ -420,49 +401,6 @@ export function PujaLanding() {
           </div>
         </section>
 
-        {/* ═══════════════════════════════════
-            TESTIMONIALS
-        ═══════════════════════════════════ */}
-        <section className="bg-cream-light py-16 sm:py-24 border-b border-cream-dark">
-          <div className="container-page max-w-5xl mx-auto">
-            <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
-                {locale === 'hi' ? '— श्रद्धालुओं के अनुभव —' : '— Devotee Experiences —'}
-              </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon">
-                {locale === 'hi' ? 'वे जो आए, उन्होंने क्या कहा' : 'What They Said'}
-              </h2>
-              <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
-            </div>
-
-            <div className="grid sm:grid-cols-3 gap-6">
-              {TESTIMONIALS.map((t, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-6 sm:p-7 border border-cream shadow-md flex flex-col gap-4 hover:shadow-lg transition-shadow">
-                  {/* Stars */}
-                  <div className="flex gap-0.5">
-                    {Array.from({ length: t.stars }).map((_, si) => (
-                      <Star key={si} className="w-4 h-4 text-gold-500" fill="#C9A84C" stroke="none" />
-                    ))}
-                  </div>
-                  {/* Text */}
-                  <p className="text-ink-soft text-sm leading-relaxed font-serif italic flex-1">
-                    "{locale === 'hi' ? t.textHi : t.textEn}"
-                  </p>
-                  {/* Author */}
-                  <div className="border-t border-cream pt-4">
-                    <p className="font-serif font-bold text-maroon text-base">
-                      {locale === 'hi' ? t.nameHi : t.nameEn}
-                    </p>
-                    <p className="text-xs text-ink-mute mt-0.5">
-                      {locale === 'hi' ? t.cityHi : t.cityEn} &nbsp;·&nbsp;
-                      <span className="text-saffron-700">{locale === 'hi' ? t.pujaHi : t.pujaEn}</span>
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* ═══════════════════════════════════
             FAQ

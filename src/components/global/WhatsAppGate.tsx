@@ -48,7 +48,6 @@ export function WhatsAppGateHost() {
   const [opts, setOpts] = useState<GateOpts>({});
   const [sending, setSending] = useState(false);
   const nameRef = useRef<HTMLInputElement>(null);
-  const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const onOpen = (e: Event) => {
@@ -73,8 +72,17 @@ export function WhatsAppGateHost() {
     };
   }, [open]);
 
-  // Always hand the visitor over to WhatsApp, even if our own capture fails —
-  // a broken mail server must never cost us the conversation.
+  /*
+   * Always hand the visitor over to WhatsApp, even if our own capture fails — a broken
+   * mail server must never cost us the conversation.
+   *
+   * 🔴 This MUST be called synchronously from the submit handler, never after an `await`.
+   * window.open() is only permitted while the user activation from the tap is still live
+   * (Chrome gives a few seconds of transient activation; Safari is stricter and wants the
+   * same call stack). Awaiting the capture POST first meant that on a slow mobile network
+   * the popup was blocked and the visitor got nothing — silently, on the path that carries
+   * ~52% of this site's leads. If the popup is blocked anyway, fall back to navigating.
+   */
   function handover(name: string, purpose: string) {
     const label = PURPOSES.find((p) => p.value === purpose);
     const intent = label ? (isHi ? label.hi : label.en) : '';
@@ -82,12 +90,13 @@ export function WhatsAppGateHost() {
       ? `नमस्ते! मैं ${name} हूँ। मुझे ${intent} के बारे में जानकारी चाहिए।`
       : `Hello! I am ${name}. I need information about: ${intent}.`;
     const url = `${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    const win = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!win) window.location.href = url;   // popup blocked → navigate instead
     setOpen(false);
     setSending(false);
   }
 
-  async function onSubmit(e: FormEvent<HTMLFormElement>) {
+  function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (sending) return;
     setSending(true);
@@ -103,11 +112,13 @@ export function WhatsAppGateHost() {
 
     window.gtag?.('event', 'whatsapp_gate_submit', { purpose });
 
-    try {
-      await fetch('/api/lead.php', { method: 'POST', body: data, keepalive: true });
-    } catch {
-      /* capture is best-effort — the handover below still happens */
-    }
+    // Fire-and-forget: `keepalive` lets this request outlive the navigation, so the lead
+    // is still captured while the visitor goes straight to WhatsApp. Awaiting it here is
+    // what broke the popup (see handover above).
+    fetch('/api/lead.php', { method: 'POST', body: data, keepalive: true }).catch(() => {
+      /* capture is best-effort — the handover still happens */
+    });
+
     form.reset();
     handover(name, purpose);
   }
@@ -135,7 +146,6 @@ export function WhatsAppGateHost() {
             </p>
           </div>
           <button
-            ref={closeRef}
             type="button"
             onClick={() => setOpen(false)}
             aria-label={isHi ? 'बंद करें' : 'Close'}
@@ -146,6 +156,12 @@ export function WhatsAppGateHost() {
         </div>
 
         <form onSubmit={onSubmit} className="space-y-3">
+          {/* Honeypot — matches the `website` check in api/lead.php. Off-screen rather than
+              display:none, which some bots skip; tabIndex/autoComplete keep humans out of it. */}
+          <input
+            type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true"
+            className="absolute left-[-9999px] h-0 w-0 opacity-0"
+          />
           <div>
             <label className="mb-1 block text-sm font-medium text-ink-soft" htmlFor="wag-name">
               {isHi ? 'नाम' : 'Name'} *
