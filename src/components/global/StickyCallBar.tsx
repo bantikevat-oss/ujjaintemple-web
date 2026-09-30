@@ -1,6 +1,7 @@
 import { Phone, MessageCircle, Share2 } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { openWhatsAppGate } from './WhatsAppGate';
 
 /**
  * Mobile-only premium sticky bottom bar — primary conversion surface.
@@ -43,16 +44,15 @@ export function StickyCallBar() {
           <Phone className="h-4 w-4" />
           <span>{locale === 'hi' ? 'कॉल करें' : 'Call'}</span>
         </a>
-        <a
-          href={SITE.whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          onClick={() => openWhatsAppGate({ sourcePage: typeof window !== 'undefined' ? window.location.pathname : '' })}
           className="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-cream py-2.5 text-sm font-bold text-maroon-900 shadow-md transition-transform active:scale-95"
           aria-label="WhatsApp"
         >
           <MessageCircle className="h-4 w-4" />
           <span>WhatsApp</span>
-        </a>
+        </button>
         <button
           onClick={handleShare}
           className="flex items-center justify-center gap-1.5 rounded-md border border-cream/40 bg-maroon-800 px-4 py-2.5 text-sm font-bold text-cream transition-transform active:scale-95"

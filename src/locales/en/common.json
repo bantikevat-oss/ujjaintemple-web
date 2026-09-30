@@ -35,6 +35,7 @@
   "form.service.hotel": "Hotel Booking",
   "form.service.transport": "Transport / Cab",
   "form.service.tour": "Tour Package",
+  "form.service.group": "Group Yatra (10+ people)",
   "form.service.simhastha": "Simhastha 2028 Help",
   "label.openNow": "Open Now",
   "label.closedNow": "Closed Now",

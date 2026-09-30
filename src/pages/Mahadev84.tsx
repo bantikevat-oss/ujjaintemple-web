@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { MapPin, Printer, Search, Sparkles } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
@@ -146,6 +147,29 @@ export function Mahadev84Page() {
             </ul>
           )}
 
+          {/* ── Parikrama package ─────────────────────────────────────────────
+                This page produced 16 lead events in 17 days (the site's #2 lead
+                source) with nothing to actually book — people tap call/WhatsApp
+                here because they want a vehicle and someone who knows the order.
+                This is that product. Added 2026-09-30.
+          ──────────────────────────────────────────────────────────────────── */}
+          <aside className="mt-10 rounded-xl border-2 border-gold bg-cream/60 p-5 sm:p-6">
+            <h2 className="font-serif text-xl font-bold text-maroon sm:text-2xl">
+              {locale === 'hi' ? 'परिक्रमा करनी है? कैब एवं मार्गदर्शक सहित व्यवस्था' : 'Planning the parikrama? Cab and guide arranged'}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
+              {locale === 'hi'
+                ? 'चौरासी महादेव एक दिन में नहीं हो पाते — शिवालय गलियों, खेतों और शहर के बाहरी छोर तक फैले हैं, और कई तक का रास्ता नक्शे पर नहीं मिलता। क्रमबद्ध मार्ग, पूरे समय साथ रहने वाला वाहन और स्थानीय मार्गदर्शक — एक या दो दिवसीय। समूह हेतु टेम्पो ट्रैवलर एवं बस भी।'
+                : 'The 84 Mahadev do not fit into one day — the shrines run through old lanes, farmland and the city’s outer edge, and the approach to several is not obvious on a map. A sequenced route, a vehicle that stays with you, and a local guide — one day or two. Tempo traveller and bus available for groups.'}
+            </p>
+            <Link
+              to={`${locale === 'hi' ? '/hi' : ''}/tour-and-travel-ujjain/84-mahadev-parikrama-package/`}
+              className="mt-4 inline-flex items-center gap-2 rounded-md bg-maroon px-5 py-3 text-sm font-bold text-cream shadow-md transition-transform active:scale-95 hover:bg-maroon-800"
+            >
+              {locale === 'hi' ? '84 महादेव परिक्रमा पैकेज देखें' : 'See the 84 Mahadev parikrama package'}
+            </Link>
+          </aside>
+
           {/* ── Printable list ────────────────────────────────────────────────
                 `84 mahadev ujjain list pdf` is the highest-CTR query on this site
                 with real volume (8.4% at pos 4.6, GSC 90d) — people want the list
@@ -213,7 +237,7 @@ export function Mahadev84Page() {
               {locale === 'hi'
                 ? '84 महादेव की सूची एवं स्थान पारंपरिक स्रोतों से संकलित हैं। कुछ शिवालय गलियों में स्थित हैं — दर्शन क्रम व मार्गदर्शन के लिए स्थानीय सहायता लें। कोई सुधार हो तो व्हाट्सऐप पर बताएं: '
                 : 'The list and locations of the 84 Mahadev are compiled from traditional sources. Some shrines lie within old lanes — take local help for the darshan order and directions. For corrections, message us on WhatsApp: '}
-              <a href={SITE.whatsapp} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
+              <a href={`${SITE.whatsapp}?text=${encodeURIComponent(locale === 'hi' ? 'नमस्ते! 84 महादेव सूची में एक सुधार बताना है: ' : 'Hello! I would like to report a correction in the 84 Mahadev list: ')}`} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
                 {SITE.phone}
               </a>
             </p>

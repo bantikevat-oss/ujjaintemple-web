@@ -2,6 +2,13 @@
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { LeadForm } from '../components/global/LeadForm';
+
+/**
+ * Group packages must capture a GROUP lead, not a generic tour one — a samiti booking
+ * and a family day-trip are different sales. lead.php scores 'group' as HOT and marks
+ * the mail subject [GROUP] so it is obvious in the inbox. (Aman, 2026-09-30.)
+ */
+const GROUP_SLUGS = new Set(['ujjain-group-tour-package']);
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { useI18n } from '../i18n';
@@ -144,7 +151,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                 <h3 className="font-serif text-2xl font-bold text-maroon mb-6 text-center border-b-2 border-saffron pb-4 inline-block w-full">
                   {locale === 'hi' ? 'पैकेज बुक करें' : 'Request a Call Back'}
                 </h3>
-                <LeadForm variant="card" defaultService="tour" sourcePage={slug} />
+                <LeadForm variant="card" defaultService={GROUP_SLUGS.has(slug) ? 'group' : 'tour'} sourcePage={slug} />
               </div>
             </div>
 
@@ -152,7 +159,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
         </section>
 
         {/* ── REQUEST A CALL BACK (FULL WIDTH BOTTOM) ── */}
-        <GlobalLeadSection sourcePage={`${slug}-bottom`} defaultService="tour" />
+        <GlobalLeadSection sourcePage={`${slug}-bottom`} defaultService={GROUP_SLUGS.has(slug) ? 'group' : 'tour'} />
 
         {/* ── NEWS FEED ── */}
         {articles.length > 0 && (

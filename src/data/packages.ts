@@ -402,7 +402,133 @@ export const packagesData: TourPackageData[] = [
         }
       }
     ]
-  }
+  },
+  {
+    slug: '84-mahadev-parikrama-package',
+    title: {
+      hi: '84 महादेव परिक्रमा पैकेज — कैब एवं मार्गदर्शक सहित',
+      en: '84 Mahadev Parikrama Package — with Cab and Guide'
+    },
+    heroImage: '/images/mandirs/mahakaleshwar.jpg',
+    description: {
+      hi: 'उज्जैन के चौरासी महादेव की परिक्रमा एक दिन में पूरी नहीं होती — शिवालय पुरानी गलियों, खेतों और शहर के बाहरी छोर तक फैले हैं, और कई तक पहुँचने का रास्ता नक्शे पर स्पष्ट नहीं मिलता। यह पैकेज उसी कठिनाई के लिए है: क्रमबद्ध मार्ग, पूरे समय के लिए वाहन, और स्थानीय मार्गदर्शक जो क्रम और पहुँच दोनों जानता है। दो दिवसीय व्यवस्था में लगभग समस्त प्रमुख शिवालय आ जाते हैं; एक दिवसीय में चुनिंदा। समूह के लिए बड़ा वाहन उपलब्ध है।',
+      en: 'The Chaurasi (84) Mahadev parikrama of Ujjain does not fit into one day — the shrines are spread through old lanes, farmland and the city’s outer edge, and the approach to several of them is not obvious on a map. This package exists for exactly that difficulty: a sequenced route, a vehicle for the full duration, and a local guide who knows both the order and the access. The two-day arrangement covers nearly all the major shrines; the one-day covers a selected set. Larger vehicles are available for groups.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'पहला दिन: नगर एवं समीपवर्ती शिवालय', en: 'Day 1: City and nearby shrines' },
+        content: {
+          hi: 'प्रातः आपके होटल, रेलवे स्टेशन अथवा बस स्टैंड से वाहन आरम्भ करता है। दिन का पहला भाग नगर के भीतर और समीप के शिवालयों का रहता है, जहाँ दूरी कम है पर गलियाँ सँकरी हैं।',
+          en: 'The vehicle starts in the morning from your hotel, the railway station or the bus stand. The first half of the day covers shrines inside and close to the city, where distances are short but the lanes are narrow.'
+        },
+        list: [
+          { hi: 'क्रमबद्ध मार्ग — परिक्रमा के पारंपरिक क्रम का पालन, इधर-उधर भटकाव नहीं।', en: 'A sequenced route — the traditional parikrama order, no doubling back.' },
+          { hi: 'स्थानीय मार्गदर्शक — जिन शिवालयों तक का रास्ता नक्शे पर नहीं मिलता, वहाँ तक पहुँच।', en: 'A local guide — for the shrines whose approach a map does not show.' },
+          { hi: 'वाहन पूरे दिन आपके साथ — प्रत्येक शिवालय पर प्रतीक्षा करता है।', en: 'The vehicle stays with you all day — it waits at every shrine.' },
+          { hi: 'जल एवं विश्राम के ठहराव — वृद्धजन सहित यात्रा के लिए गति समायोजित।', en: 'Water and rest stops — the pace adjusts when elders are travelling.' }
+        ],
+        note: {
+          hi: 'नोट: दर्शन का वर्तमान समय मन्दिर की आधिकारिक व्यवस्था पर निर्भर करता है; हम पहुँच और मार्ग की व्यवस्था करते हैं, दर्शन की कोई विशेष व्यवस्था नहीं।',
+          en: 'Note: darshan timings depend on each temple’s own arrangements. We arrange the route and the travel — not any special darshan arrangement.'
+        }
+      },
+      {
+        dayTitle: { hi: 'दूसरा दिन: बाहरी क्षेत्र के शिवालय', en: 'Day 2: Outlying shrines' },
+        content: {
+          hi: 'दूसरा दिन नगर के बाहरी छोर और ग्रामीण मार्ग के शिवालयों का रहता है। यहाँ दूरी अधिक है, इसलिए वाहन का होना आवश्यक हो जाता है। दिन के अन्त में स्टेशन अथवा होटल तक वापसी।',
+          en: 'The second day covers the shrines on the city’s outer edge and along the rural roads. Distances here are longer, which is where having the vehicle matters most. The day ends with a drop back at your hotel or the station.'
+        },
+        list: [
+          { hi: 'बड़े समूह हेतु टेम्पो ट्रैवलर अथवा बस — 10 से 40 व्यक्ति तक।', en: 'Tempo traveller or bus for larger groups — 10 to 40 people.' },
+          { hi: 'सूची एवं क्रम की मुद्रित प्रति — साथ ले जाने योग्य।', en: 'A printed copy of the list and the order — to carry along.' },
+          { hi: 'जीएसटी बिल उपलब्ध — संस्था अथवा समिति की यात्रा हेतु।', en: 'GST invoice available — for a trust or samiti booking.' }
+        ]
+      },
+      {
+        dayTitle: { hi: 'व्यवस्था एवं बुकिंग', en: 'Arrangements and booking' },
+        content: {
+          hi: 'एक दिवसीय अथवा दो दिवसीय — दोनों विकल्प उपलब्ध हैं। वाहन का प्रकार, व्यक्तियों की संख्या और तिथि के अनुसार दर तय होती है; कॉल पर पुष्टि कर दी जाती है और बुकिंग के पश्चात दर नहीं बदलती। समूह यात्रा के लिए तिथि से पूर्व सम्पर्क करें — त्योहार एवं श्रावण में वाहन सीमित रहते हैं।',
+          en: 'Both a one-day and a two-day option are available. The rate depends on the vehicle, the number of people and the date; it is confirmed on the call and does not change after booking. For group travel, contact us well before the date — vehicles are limited during festivals and Shravan.'
+        },
+        note: {
+          hi: 'सम्पूर्ण 84 महादेव की सूची एवं स्थान इसी वेबसाइट पर उपलब्ध हैं — सूची देखकर अपनी यात्रा की योजना बना सकते हैं।',
+          en: 'The full list of the 84 Mahadev with their locations is on this site — you can plan your own route from it as well.'
+        }
+      }
+    ]
+  },
+  {
+    slug: 'ujjain-group-tour-package',
+    title: {
+      hi: 'उज्जैन समूह यात्रा पैकेज — मंडल, समिति एवं संस्था हेतु',
+      en: 'Ujjain Group Tour Package — for Mandals, Samitis and Institutions'
+    },
+    heroImage: '/images/mandirs/mahakaleshwar.jpg',
+    description: {
+      hi: 'समूह में उज्जैन आना अकेले आने जैसा नहीं है। वाहन एक ही चाहिए, दर्शन का क्रम सबके लिए एक रखना पड़ता है, ठहरने और भोजन की व्यवस्था एक साथ करनी होती है, और भुगतान प्रायः संस्था के खाते से होता है। यह पैकेज उसी के लिए है — 10 से 50 व्यक्तियों तक के मंडल, समिति, विद्यालय, संस्था अथवा कार्यालय समूह हेतु। एक ही सम्पर्क व्यक्ति, तिथि से पहले सुरक्षित वाहन, और जीएसटी बिल।',
+      en: 'Coming to Ujjain as a group is not the same as coming alone. One vehicle has to serve everyone, the darshan order has to hold for everyone, stay and meals have to be arranged together, and payment usually comes from an institution’s account. This package is built for exactly that — mandals, samitis, schools, trusts and office groups of 10 to 50 people. One point of contact, the vehicle held before the date, and a GST invoice.'
+    },
+    itinerary: [
+      {
+        dayTitle: { hi: 'पैकेज में क्या सम्मिलित है', en: 'What the package covers' },
+        content: {
+          hi: 'समूह के आकार और तिथि के अनुसार व्यवस्था बनती है। नीचे वह सब है जो सामान्यतः एक समूह यात्रा में जोड़ा जाता है — आवश्यकता के अनुसार घटाया-बढ़ाया जा सकता है।',
+          en: 'The arrangement is built around the group size and the date. Below is what a group trip normally includes — it can be trimmed or extended as needed.'
+        },
+        list: [
+          { hi: 'वाहन पूरी यात्रा के लिए — टेम्पो ट्रैवलर (12–17), मिनी बस (21–32) अथवा बस (40–49)।', en: 'A vehicle for the whole trip — tempo traveller (12-17), mini bus (21-32) or bus (40-49).' },
+          { hi: 'क्रमबद्ध दर्शन मार्ग — बड़े समूह के लिए बनाया गया क्रम, जिसमें पैदल दूरी कम रहे।', en: 'A sequenced darshan route — ordered for a large group, keeping walking distances short.' },
+          { hi: 'ठहरने की व्यवस्था — मंदिर के समीप होटल अथवा धर्मशाला, समूह दर के साथ।', en: 'Stay — hotel or dharamshala near the temple, at a group rate.' },
+          { hi: 'स्थानीय समन्वयक — पूरी यात्रा के लिए एक ही सम्पर्क नम्बर।', en: 'A local coordinator — one contact number for the whole trip.' },
+          { hi: 'जीएसटी बिल — संस्था अथवा समिति के खाते से भुगतान हेतु।', en: 'GST invoice — so it can be paid from the institution’s account.' },
+          { hi: 'वृद्धजन सहित समूह — अधिक ठहराव एवं कम पैदल दूरी के साथ क्रम बदल दिया जाता है।', en: 'Groups with elders — the order is rearranged for more stops and less walking.' }
+        ],
+        note: {
+          hi: 'नोट: हम यात्रा, ठहरने एवं समन्वय की व्यवस्था करते हैं। दर्शन का समय एवं व्यवस्था मन्दिर की अपनी रहती है — किसी विशेष प्रवेश अथवा प्राथमिकता का दावा हम नहीं करते।',
+          en: 'Note: we arrange travel, stay and coordination. Darshan timings and arrangements remain the temple’s own — we make no claim to any special entry or priority.'
+        }
+      },
+      {
+        dayTitle: { hi: 'समूह का आकार एवं वाहन', en: 'Group size and vehicle' },
+        content: {
+          hi: 'वाहन का चुनाव समूह के आकार से तय होता है। दर तिथि, वातानुकूलित है या नहीं, और कुल दिनों पर निर्भर करती है — कॉल पर पथकर, पार्किंग एवं चालक भत्ता सहित एक ही दर बता दी जाती है, और बुकिंग के बाद वह नहीं बदलती।',
+          en: 'The vehicle follows from the group size. The rate depends on the date, whether it is AC, and the number of days — on the call we quote one figure inclusive of tolls, parking and driver allowance, and it does not change after booking.'
+        },
+        list: [
+          { hi: '10 – 17 व्यक्ति: टेम्पो ट्रैवलर (साधारण अथवा वातानुकूलित)।', en: '10-17 people: tempo traveller (AC or non-AC).' },
+          { hi: '18 – 32 व्यक्ति: मिनी बस।', en: '18-32 people: mini bus.' },
+          { hi: '33 – 49 व्यक्ति: वातानुकूलित बस।', en: '33-49 people: AC bus.' },
+          { hi: '50 से अधिक: एक से अधिक वाहन, एक ही समन्वयक के अधीन।', en: 'Over 50: more than one vehicle under a single coordinator.' }
+        ],
+        note: {
+          hi: 'श्रावण सोमवार, महाशिवरात्रि, नागपंचमी एवं लम्बे सप्ताहान्त पर बड़े वाहन सीमित रहते हैं — तिथि तय होते ही सम्पर्क कर लें।',
+          en: 'On Shravan Mondays, Mahashivratri, Nag Panchami and long weekends, large vehicles are limited — get in touch as soon as the date is fixed.'
+        }
+      },
+      {
+        dayTitle: { hi: 'एक दिवसीय एवं दो दिवसीय क्रम', en: 'One-day and two-day routes' },
+        content: {
+          hi: 'बड़े समूह के साथ एक दिन में सामान्यतः सात से आठ प्रमुख मन्दिर हो जाते हैं; वृद्धजन साथ हों तो पाँच से छह रखना व्यावहारिक रहता है।',
+          en: 'With a large group, seven to eight major temples in a day is usual; with elders travelling, five to six is more workable.'
+        },
+        list: [
+          { hi: 'पहला दिन: बड़े गणेश जी → महाकालेश्वर → महाकाल लोक → काल भैरव → हरसिद्धि माता → राम घाट → मंगलनाथ → संदीपनि आश्रम।', en: 'Day 1: Bade Ganesh Ji → Mahakaleshwar → Mahakal Lok → Kaal Bhairav → Harsiddhi Mata → Ram Ghat → Mangalnath → Sandipani Ashram.' },
+          { hi: 'दूसरा दिन (विकल्प): चौरासी महादेव परिक्रमा अथवा ओंकारेश्वर।', en: 'Day 2 (optional): the 84 Mahadev parikrama, or Omkareshwar.' }
+        ]
+      },
+      {
+        dayTitle: { hi: 'पूछताछ एवं बुकिंग', en: 'Enquiry and booking' },
+        content: {
+          hi: 'नीचे दिए फ़ॉर्म में समूह के व्यक्तियों की संख्या एवं यात्रा की सम्भावित तिथि लिख दें — उपलब्धता और पूरी दर के साथ हम कॉल कर लेंगे। संस्था अथवा समिति की यात्रा हो तो बिल किसके नाम से चाहिए, वह भी बता दें।',
+          en: 'In the form below, give the number of people and the likely date — we will call back with availability and the full rate. If it is a trust or samiti booking, mention the name the invoice should carry.'
+        },
+        note: {
+          hi: 'सिंहस्थ 2028 (अप्रैल–मई 2028) की समूह यात्रा की पूछताछ अभी से ली जा रही है। उस काल में वाहन एवं ठहरने की माँग वर्ष भर से कहीं अधिक रहेगी।',
+          en: 'Group enquiries for Simhastha 2028 (April-May 2028) are being taken now. Demand for vehicles and stay in that period will run far above the rest of the year.'
+        }
+      }
+    ]
+  },
 ];
 
 export const getPackageBySlug = (slug: string) => packagesData.find(p => p.slug === slug);

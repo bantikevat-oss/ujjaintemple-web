@@ -13,7 +13,7 @@ import { AppPromo } from '../components/shared/AppPromo';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
 import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
-import { organizationSchema, websiteSchema, simhastha2028EventSchema } from '../lib/schemas';
+import { organizationSchema, websiteSchema, simhastha2028EventSchema, ujjainGuideAppSchema } from '../lib/schemas';
 
 const COPY = {
   hi: {
@@ -127,7 +127,7 @@ export function Home() {
         description={description}
         path="/"
         locale={locale}
-        schemas={[organizationSchema(), websiteSchema(), simhastha2028EventSchema()]}
+        schemas={[organizationSchema(), websiteSchema(), simhastha2028EventSchema(), ujjainGuideAppSchema()]}
       >
         {/* LCP preload — home only. Keep in sync with HomeGraphicHero's <img> src. */}
         <link rel="preload" as="image" href="/images/hero/mahakal-lok-hero.webp" type="image/webp" fetchPriority="high" />

@@ -334,7 +334,7 @@ export function MandirIndex() {
               {locale === 'hi'
                 ? 'यहाँ सूचीबद्ध प्रत्येक मन्दिर का दर्शन समय एवं संपर्क जानकारी मन्दिर ट्रस्ट से सीधे अथवा अधिकृत स्रोतों से सत्यापित। यदि कोई जानकारी पुरानी प्रतीत हो — कृपया व्हाट्सऐप पर सूचित करें: '
                 : 'Each temple’s darshan timing and contact info has been verified directly with the temple trust or via authoritative sources. If any information appears outdated, please flag it on WhatsApp: '}
-              <a href={SITE.whatsapp} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
+              <a href={`${SITE.whatsapp}?text=${encodeURIComponent(locale === 'hi' ? 'नमस्ते! मन्दिर सूची में एक जानकारी पुरानी लग रही है: ' : 'Hello! Some information in the temple list looks outdated: ')}`} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
                 {SITE.phone}
               </a>
             </p>

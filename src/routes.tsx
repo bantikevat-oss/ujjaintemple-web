@@ -129,6 +129,14 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
       element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-omkareshwar-maheshwar-mandu-4-days' }),
     },
     {
+      path: `${basePath}tour-and-travel-ujjain/ujjain-group-tour-package/`,
+      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-group-tour-package' }),
+    },
+    {
+      path: `${basePath}tour-and-travel-ujjain/84-mahadev-parikrama-package/`,
+      element: withLocaleProps(locale, TourPackageDetail, { slug: '84-mahadev-parikrama-package' }),
+    },
+    {
       path: `${basePath}tour-and-travel-ujjain/panch-jyotirlinga-5-days/`,
       element: withLocaleProps(locale, TourPackageDetail, { slug: 'panch-jyotirlinga-5-days' }),
     },

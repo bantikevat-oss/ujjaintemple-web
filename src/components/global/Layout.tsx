@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { StickyCallBar } from './StickyCallBar';
+import { WhatsAppGateHost } from './WhatsAppGate';
 
 export function Layout({ children }: { children: ReactNode }) {
   const { pathname, hash } = useLocation();
@@ -17,6 +18,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <main id="main" className="min-h-[60vh]">{children}</main>
       <Footer />
       <StickyCallBar />
+      <WhatsAppGateHost />
     </>
   );
 }

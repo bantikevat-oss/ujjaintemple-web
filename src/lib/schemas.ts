@@ -418,3 +418,37 @@ export function contactPageSchema({ name, description, url }: { name: string; de
     mainEntity: { '@id': `${SITE.url}/#organization` },
   };
 }
+
+/**
+ * Ujjain Guide Android app — SoftwareApplication.
+ *
+ * Added 2026-09-30. The Play listing went live and, as the `simhastha-2028` SERP shows,
+ * a Play listing ranks in web results on its own (the government MPSeDC app holds #2
+ * there). This schema ties the app to the site so the two reinforce each other rather
+ * than competing as unrelated results.
+ *
+ * 🔴 No aggregateRating here — the app has no ratings yet and inventing them would be a
+ * fabricated-review violation. Add it only when Play reports real ones.
+ */
+export function ujjainGuideAppSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Ujjain Guide: Mandir & Yatra',
+    applicationCategory: 'TravelApplication',
+    operatingSystem: 'Android 7.0+',
+    url: 'https://ujjaintemple.com/hi/app/',
+    downloadUrl: 'https://play.google.com/store/apps/details?id=com.ujjaintemple.guide',
+    installUrl: 'https://play.google.com/store/apps/details?id=com.ujjaintemple.guide',
+    softwareVersion: '1.0.0',
+    inLanguage: ['hi', 'en'],
+    description:
+      'उज्जैन के 183 मंदिर बिना इंटरनेट, 84 महादेव सूची, पर्व कैलेंडर, सिंहस्थ 2028 की तिथियाँ और यात्रा योजना — एक ऐप में।',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'INR' },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ByteFlow Technologies Pvt Ltd',
+      url: 'https://byteflowtech.in',
+    },
+  };
+}

@@ -9,13 +9,14 @@ import { useI18n } from '../../i18n';
  * install channel. This card sends them to the app screens (/hi/app/), where Chrome
  * offers "install" and the Android app will be linked once its Play listing is live.
  *
- * To point Android visitors at Play later: set PLAY_URL below. One line, no layout change.
+ * PLAY_URL set 2026-09-30 — the Play listing went live (verified: id com.ujjaintemple.guide
+ * returns 200 as "Ujjain Guide: Mandir & Yatra" by ByteFlow Technologies Pvt Ltd).
  *
  * Inline card, not a popup or sticky bar: StickyCallBar already owns the bottom of the
  * screen, and nothing here may push the call/WhatsApp CTA out of the way.
  * GA4: `app_promo_click` with the placement, so installs can be traced to pages.
  */
-export const PLAY_URL = '';
+export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.ujjaintemple.guide';
 
 const FEATURES = [
   { Icon: WifiOff, hi: '183 मंदिर — बिना इंटरनेट', en: '183 temples — offline' },

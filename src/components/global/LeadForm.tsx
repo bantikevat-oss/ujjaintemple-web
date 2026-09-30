@@ -4,7 +4,7 @@ import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 
 interface Props {
-  defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'simhastha' | 'cab';
+  defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'group' | 'simhastha' | 'cab';
   variant?: 'card' | 'inline';
   sourcePage?: string;
 }
@@ -74,6 +74,7 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
               <option value="hotel">{t('form.service.hotel')}</option>
               <option value="transport">{t('form.service.transport')}</option>
               <option value="tour">{t('form.service.tour')}</option>
+              <option value="group">{t('form.service.group')}</option>
               <option value="simhastha">{t('form.service.simhastha')}</option>
             </select>
           </div>
