@@ -88,6 +88,15 @@ RewriteRule ^hi/simhastha-2028-news/page/([0-9]{1,4})/?$ /news/index.php?view=li
 RewriteRule ^hi/simhastha-2028-news/?$                   /news/index.php?view=list [L]
 RewriteRule ^hi/simhastha-2028-news/([A-Za-z0-9_-]+)/?$  /news/index.php?view=article&slug=$1 [L]
 
+# ── UjjainTemple blog (same engine, section=blog; 2026-09-19) ──
+# Evergreen guides. No Google News sitemap here — blog posts are not news.
+# /hi/blog/ does not exist in dist/, so the SSG never collides with these routes.
+RewriteRule ^hi/blog/feed\.xml$            /news/index.php?view=feed&sec=blog [L]
+RewriteRule ^hi/blog/sitemap\.xml$         /news/index.php?view=archive&sec=blog [L]
+RewriteRule ^hi/blog/page/([0-9]{1,4})/?$  /news/index.php?view=list&p=$1&sec=blog [L]
+RewriteRule ^hi/blog/?$                     /news/index.php?view=list&sec=blog [L]
+RewriteRule ^hi/blog/([A-Za-z0-9_-]+)/?$    /news/index.php?view=article&slug=$1&sec=blog [L]
+
 # Caching
 <IfModule mod_expires.c>
   ExpiresActive On

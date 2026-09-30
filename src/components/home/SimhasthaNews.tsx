@@ -30,11 +30,71 @@ import { useI18n } from '../../i18n';
 
 type NewsItem = { title: string; link: string; date: string; summary: string };
 
-const FEED = '/hi/simhastha-2028-news/feed.xml';
-const SECTION = '/hi/simhastha-2028-news/';
+/**
+ * The same slider serves the /hi/blog/ section (2026-09-19 — Aman: "blog section
+ * home page me dikha do"). Both sections are rendered by one PHP engine and expose
+ * the same RSS shape, so only the copy and the URLs differ.
+ *
+ * `hideWhenEmpty`: the blog starts with no posts. An empty heading on the homepage
+ * reads as a broken section, so the blog variant renders nothing until its feed
+ * has an item. (The header menu links the blog regardless, so it is never orphaned.)
+ */
+type Copy = { eyebrow: string; title: string; desc: string };
+type FeedSliderProps = {
+  id: string;
+  feed: string;
+  section: string;
+  hi: Copy;
+  en: Copy;
+  hideWhenEmpty?: boolean;
+};
+
 const AUTO_MS = 6000;
 
 export function SimhasthaNews() {
+  return (
+    <FeedSlider
+      id="simhastha-news"
+      feed="/hi/simhastha-2028-news/feed.xml"
+      section="/hi/simhastha-2028-news/"
+      hi={{
+        eyebrow: 'ताज़ा अपडेट',
+        title: 'सिंहस्थ 2028 ब्लॉग',
+        desc: 'तैयारी, स्नान, यात्रा और दर्शन से जुड़ी ताज़ा जानकारी — श्रद्धालु के नज़रिए से।',
+      }}
+      en={{
+        eyebrow: 'Latest updates',
+        title: 'Simhastha 2028 Blog',
+        desc: 'Construction, bathing dates, travel and darshan — written for the pilgrim. Articles are in Hindi.',
+      }}
+    />
+  );
+}
+
+export function UjjainBlog() {
+  return (
+    <FeedSlider
+      id="ujjain-blog"
+      feed="/hi/blog/feed.xml"
+      section="/hi/blog/"
+      hideWhenEmpty
+      hi={{
+        eyebrow: 'यात्रा गाइड',
+        title: 'उज्जैन यात्रा ब्लॉग',
+        desc: 'मंदिरों के दर्शन समय, ओंकारेश्वर सहित आसपास के तीर्थों की दूरी और मार्ग, और ठहरने की जानकारी।',
+      }}
+      en={{
+        eyebrow: 'Travel guides',
+        title: 'Ujjain Travel Blog',
+        desc: 'Temple timings, routes to Omkareshwar and nearby shrines, and where to stay. Articles are in Hindi.',
+      }}
+    />
+  );
+}
+
+function FeedSlider({ id, feed, section, hi: hiCopy, en: enCopy, hideWhenEmpty }: FeedSliderProps) {
+  const FEED = feed;
+  const SECTION = section;
   const { locale } = useI18n();
   const [items, setItems] = useState<NewsItem[]>([]);
   const trackRef = useRef<HTMLDivElement | null>(null);
@@ -138,22 +198,23 @@ export function SimhasthaNews() {
   }, [items.length]);
 
   const hi = locale === 'hi';
+  const copy = hi ? hiCopy : enCopy;
+
+  if (hideWhenEmpty && items.length === 0) return null;
 
   return (
-    <section id="simhastha-news" className="bg-cream border-t border-cream-dark">
+    <section id={id} className="bg-cream border-t border-cream-dark">
       <div className="container-page py-14 sm:py-16">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
-              {hi ? 'ताज़ा अपडेट' : 'Latest updates'}
+              {copy.eyebrow}
             </p>
             <h2 className="mt-2 font-sanskrit text-3xl font-bold leading-tight text-maroon sm:text-4xl">
-              {hi ? 'सिंहस्थ 2028 ब्लॉग' : 'Simhastha 2028 Blog'}
+              {copy.title}
             </h2>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-soft sm:text-base">
-              {hi
-                ? 'तैयारी, स्नान, यात्रा और दर्शन से जुड़ी ताज़ा जानकारी — श्रद्धालु के नज़रिए से।'
-                : 'Construction, bathing dates, travel and darshan — written for the pilgrim. Articles are in Hindi.'}
+              {copy.desc}
             </p>
           </div>
 

@@ -23,6 +23,10 @@ require_once __DIR__ . '/../news/lib/sanitize.php';
 ujt_json_error_mode();
 header('X-Robots-Tag: noindex, nofollow');
 
+// Section (2026-09-19): the blog tenant's articles_endpoint carries &section=blog.
+// BNA derives update/delete by replacing action=create, so the param survives on all
+// three. Absent = 'news', exactly as before.
+ujt_section($_GET['section'] ?? 'news');
 $action = $_GET['action'] ?? 'create';
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -61,16 +65,16 @@ function ujt_news_save($is_update)
     $og_desc   = ujt_clip($in['og_description'] ?? ($in['social_description'] ?? $meta_desc), 320);
 
     $cat = (int) ($in['category_id'] ?? 0);
-    if ($cat > 0 && !ujt_one('SELECT id FROM ujt_news_categories WHERE id = ?', [$cat])) $cat = 0;
+    if ($cat > 0 && !ujt_one('SELECT id FROM ujt_news_categories WHERE id = ? AND ' . ujt_cat_cond(), [$cat])) $cat = 0;
     if ($cat === 0) {
-        $first = ujt_one('SELECT id FROM ujt_news_categories ORDER BY sort_order, id LIMIT 1');
+        $first = ujt_one('SELECT id FROM ujt_news_categories WHERE ' . ujt_cat_cond() . ' ORDER BY sort_order, id LIMIT 1');
         $cat = $first ? (int) $first['id'] : 0;
     }
 
     $extra = [];
     foreach ((array) ($in['additional_category_ids'] ?? []) as $x) {
         $x = (int) $x;
-        if ($x > 0 && $x !== $cat) $extra[] = $x;
+        if ($x > 0 && $x !== $cat && ujt_one('SELECT id FROM ujt_news_categories WHERE id = ? AND ' . ujt_cat_cond(), [$x])) $extra[] = $x;
     }
     $tags = [];
     foreach ((array) ($in['tags'] ?? []) as $t) {
@@ -118,6 +122,8 @@ function ujt_news_save($is_update)
         ujt_q('UPDATE ujt_news_articles SET ' . implode(', ', $set) . ' WHERE id = ?', $vals);
     } else {
         $cols['published_at'] = ($status === 'published') ? date('Y-m-d H:i:s') : null;
+        // Set on create only — an update never moves a post between sections.
+        $cols['section'] = ujt_section();
         $names = array_keys($cols);
         $ph    = implode(', ', array_fill(0, count($names), '?'));
         ujt_q(

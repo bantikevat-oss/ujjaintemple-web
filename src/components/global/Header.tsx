@@ -34,6 +34,7 @@ const navTree: NavItem[] = [
       { labelHi: 'हरसिद्धि शक्तिपीठ', labelEn: 'Harsiddhi Shaktipeeth', href: '/mandirs/harsiddhi-mata/' },
       { labelHi: 'मंगलनाथ मंदिर', labelEn: 'Mangalnath Temple', href: '/mandirs/mangalnath/' },
       { labelHi: 'घूमने की जगह', labelEn: 'Things to Do', href: '/things-to-do-in-ujjain/' },
+      { labelHi: 'उज्जैन यात्रा ब्लॉग', labelEn: 'Ujjain Travel Blog (Hindi)', href: '/hi/blog/', absolute: true },
     ],
   },
   {

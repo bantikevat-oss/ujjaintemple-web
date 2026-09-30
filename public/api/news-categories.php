@@ -12,8 +12,11 @@ header('X-Robots-Tag: noindex, nofollow');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'GET') ujt_json_err('GET only', 405);
 
+// Blog tenant's categories_endpoint carries &section=blog (2026-09-19).
+ujt_section($_GET['section'] ?? 'news');
+
 $rows = ujt_all(
-    'SELECT id, name, slug, description FROM ujt_news_categories ORDER BY sort_order, id'
+    'SELECT id, name, slug, description FROM ujt_news_categories WHERE ' . ujt_cat_cond() . ' ORDER BY sort_order, id'
 );
 $out = [];
 foreach ($rows as $r) {

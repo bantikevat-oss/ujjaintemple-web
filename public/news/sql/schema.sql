@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS ujt_news_articles (
   extra_category_ids VARCHAR(200) NULL,
   tags_json          TEXT         NULL,
   language           VARCHAR(2)   NOT NULL DEFAULT 'hi',
+  section            VARCHAR(10)  NOT NULL DEFAULT 'news',  -- news | blog (2026-09-19)
   status             VARCHAR(12)  NOT NULL DEFAULT 'published',
   view_count         INT          NOT NULL DEFAULT 0,
   published_at       DATETIME     NULL,
@@ -48,6 +49,7 @@ CREATE TABLE IF NOT EXISTS ujt_news_articles (
   updated_at         DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   UNIQUE KEY uq_slug (slug),
   KEY idx_live (status, language, published_at),
+  KEY idx_section_live (section, status, language, published_at),
   KEY idx_cat (category_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
