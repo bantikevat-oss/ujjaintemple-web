@@ -237,7 +237,7 @@ export function Home() {
           <div className="container-page py-16 sm:py-20">
             <div className="text-center mb-10">
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
-                {locale === 'hi' ? 'महाकालेश्वर उज्जैन में अनुष्ठान' : 'Rituals at Mahakaleshwar Ujjain'}
+                {locale === 'hi' ? 'उज्जैन के पारंपरिक अनुष्ठान' : 'Traditional rituals of Ujjain'}
               </p>
               <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)' }}>
