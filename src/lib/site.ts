@@ -12,7 +12,11 @@ export const SITE = {
   address: {
     locality: 'Ujjain',
     region: 'Madhya Pradesh',
-    postalCode: '456001',
+    // 456010 matches the Google Business Profile. The site previously published 456001 in
+    // schema on 376 pages while the GBP said 456010 — an unexplained contradiction between
+    // a site and its own profile is a cheap reason for an engine to not resolve the entity
+    // (SEO_KIT §7). Street address deliberately NOT published; footer still shows city only.
+    postalCode: '456010',
     country: 'IN',
   },
   social: {

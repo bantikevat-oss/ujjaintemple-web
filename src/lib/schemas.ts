@@ -3,7 +3,13 @@ import { SITE } from './site';
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'TravelAgency', 'ReligiousOrganization'],
+    /*
+     * 🔴 'ReligiousOrganization' removed 2026-10-01. This is a travel and information
+     * business; typing it as a religious organization is the machine-readable version of
+     * the temple-authority claim the site's own rules forbid, and it is false. GSC reports
+     * ZERO search appearances for this site, so nothing was earned by it and nothing is lost.
+     */
+    '@type': ['LocalBusiness', 'TravelAgency'],
     '@id': `${SITE.url}/#organization`,
     name: 'Ujjain Temple — Ujjain Mandir, Puja & Travel Guide',
     alternateName: ['Ujjain Temple', 'Ujjain Temple Guide', 'UjjainTemple.com', 'उज्जैन मंदिर गाइड'],
@@ -19,20 +25,22 @@ export function organizationSchema() {
     foundingDate: '2024',
     description:
       "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Approximate darshan timings, puja information, 24×7 support.",
+    /*
+     * 🔴 Fixed 2026-10-01. This block used to say streetAddress 'Mahakal Area' with
+     * geo 23.1828/75.7682 and a hasMap pointing at Mahakaleshwar — i.e. it placed this
+     * business inside the temple precinct. All three were false: the business is at
+     * Mahasakti Nagar. streetAddress and geo are omitted rather than replaced, because
+     * Aman's decision (2026-10-01) is not to publish the street address yet; an omitted
+     * field is honest, an invented one is not. postalCode now matches the GBP (456010) —
+     * it previously said 456001 while the profile said 456010.
+     */
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Mahakal Area',
-      addressLocality: 'Ujjain',
-      addressRegion: 'Madhya Pradesh',
-      postalCode: '456001',
-      addressCountry: 'IN',
+      addressLocality: SITE.address.locality,
+      addressRegion: SITE.address.region,
+      postalCode: SITE.address.postalCode,
+      addressCountry: SITE.address.country,
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 23.1828,
-      longitude: 75.7682,
-    },
-    hasMap: 'https://maps.google.com/?q=Ujjain+Mahakaleshwar+Temple',
     areaServed: [
       { '@type': 'City', name: 'Ujjain' },
       { '@type': 'State', name: 'Madhya Pradesh' },
