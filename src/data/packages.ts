@@ -293,8 +293,8 @@ export const packagesData: TourPackageData[] = [
           { hi: 'चिंतामण गणेश व इस्कॉन मंदिर (समयानुसार)', en: 'Chintaman Ganesh & ISKCON Temple (as time permits)' }
         ],
         note: {
-          hi: 'साइटसीइंग क्रम व स्थल संख्या समय व श्रद्धालुओं की संख्या अनुसार समायोजित की जा सकती है। बुकिंग: +91 74007 24456।',
-          en: 'Sightseeing order and number of spots may be adjusted as per time and crowd. Booking: +91 74007 24456.'
+          hi: 'साइटसीइंग क्रम व स्थल संख्या समय व श्रद्धालुओं की संख्या अनुसार समायोजित की जा सकती है। बुकिंग: +91 89890 06759।',
+          en: 'Sightseeing order and number of spots may be adjusted as per time and crowd. Booking: +91 89890 06759.'
         }
       }
     ]
@@ -307,8 +307,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/mandirs/char-dham-ujjain.jpg',
     description: {
-      hi: 'उज्जैन 3 दिवसीय टूर पैकेज उन यात्रियों के लिए है जो शहर के मंदिरों के साथ-साथ आसपास के तीर्थ भी शांति से देखना चाहते हैं। दिन 1 — उज्जैन के प्रमुख मंदिर व महाकाल दर्शन; दिन 2 — ओंकारेश्वर ज्योतिर्लिंग की यात्रा; दिन 3 — शेष स्थानीय दर्शन, बाजार व विश्राम। आरामदायक AC कैब, अनुभवी चालक, होटल व्यवस्था सहायता — सब एक ही जगह। बुकिंग: +91 74007 24456।',
-      en: 'The Ujjain 3 day tour package is for travellers who want to cover the city temples plus nearby tirthas at a relaxed pace. Day 1 — major Ujjain temples and Mahakal darshan; Day 2 — trip to Omkareshwar Jyotirlinga; Day 3 — remaining local darshan, markets and rest. Comfortable AC cab, experienced driver, hotel arrangement assistance — all in one place. Booking: +91 74007 24456.'
+      hi: 'उज्जैन 3 दिवसीय टूर पैकेज उन यात्रियों के लिए है जो शहर के मंदिरों के साथ-साथ आसपास के तीर्थ भी शांति से देखना चाहते हैं। दिन 1 — उज्जैन के प्रमुख मंदिर व महाकाल दर्शन; दिन 2 — ओंकारेश्वर ज्योतिर्लिंग की यात्रा; दिन 3 — शेष स्थानीय दर्शन, बाजार व विश्राम। आरामदायक AC कैब, अनुभवी चालक, होटल व्यवस्था सहायता — सब एक ही जगह। बुकिंग: +91 89890 06759।',
+      en: 'The Ujjain 3 day tour package is for travellers who want to cover the city temples plus nearby tirthas at a relaxed pace. Day 1 — major Ujjain temples and Mahakal darshan; Day 2 — trip to Omkareshwar Jyotirlinga; Day 3 — remaining local darshan, markets and rest. Comfortable AC cab, experienced driver, hotel arrangement assistance — all in one place. Booking: +91 89890 06759.'
     },
     itinerary: [
       {
@@ -351,8 +351,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/tours/ujjain-travel-package.webp',
     description: {
-      hi: 'उज्जैन बजट टूर पैकेज उन यात्रियों के लिए है जो कम खर्च में सम्पूर्ण दर्शन चाहते हैं। इसमें साझा या किफ़ायती कैब, मंदिर के निकट सादगीपूर्ण धर्मशाला/बजट होटल सुझाव, और उज्जैन के सभी प्रमुख मंदिरों के दर्शन शामिल हैं। कोई छिपा शुल्क नहीं — पारदर्शी किराया। परिवार व समूह हेतु उपयुक्त, किफ़ायती उज्जैन यात्रा। बुकिंग: +91 74007 24456।',
-      en: 'The Ujjain budget tour package is for travellers who want complete darshan at a low cost. It includes a shared or economy cab, simple dharamshala/budget-hotel suggestions near the temple, and darshan of all major Ujjain temples. No hidden charges — transparent fare. An affordable Ujjain trip suited for families and groups. Booking: +91 74007 24456.'
+      hi: 'उज्जैन बजट टूर पैकेज उन यात्रियों के लिए है जो कम खर्च में सम्पूर्ण दर्शन चाहते हैं। इसमें साझा या किफ़ायती कैब, मंदिर के निकट सादगीपूर्ण धर्मशाला/बजट होटल सुझाव, और उज्जैन के सभी प्रमुख मंदिरों के दर्शन शामिल हैं। कोई छिपा शुल्क नहीं — पारदर्शी किराया। परिवार व समूह हेतु उपयुक्त, किफ़ायती उज्जैन यात्रा। बुकिंग: +91 89890 06759।',
+      en: 'The Ujjain budget tour package is for travellers who want complete darshan at a low cost. It includes a shared or economy cab, simple dharamshala/budget-hotel suggestions near the temple, and darshan of all major Ujjain temples. No hidden charges — transparent fare. An affordable Ujjain trip suited for families and groups. Booking: +91 89890 06759.'
     },
     itinerary: [
       {
@@ -381,8 +381,8 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/mandirs/mahakaleshwar.jpg',
     description: {
-      hi: 'उज्जैन प्रीमियम टूर पैकेज एक आरामदायक, निजी व लक्ज़री दर्शन अनुभव प्रदान करता है। इसमें निजी AC SUV (इनोवा), मंदिर के निकट प्रीमियम होटल सुझाव, अनुभवी गाइड सहायता, व लचीला इटिनरेरी शामिल है। जोड़ों (couple), परिवार व VIP अतिथियों हेतु आदर्श — बिना भागदौड़ के शांत, गरिमामय यात्रा। बुकिंग: +91 74007 24456।',
-      en: 'The Ujjain premium tour package offers a comfortable, private and luxury darshan experience. It includes a private AC SUV (Innova), premium-hotel suggestions near the temple, experienced guide assistance and a flexible itinerary. Ideal for couples, families and VIP guests — a calm, dignified trip without any rush. Booking: +91 74007 24456.'
+      hi: 'उज्जैन प्रीमियम टूर पैकेज एक आरामदायक, निजी व लक्ज़री दर्शन अनुभव प्रदान करता है। इसमें निजी AC SUV (इनोवा), मंदिर के निकट प्रीमियम होटल सुझाव, अनुभवी गाइड सहायता, व लचीला इटिनरेरी शामिल है। जोड़ों (couple), परिवार व VIP अतिथियों हेतु आदर्श — बिना भागदौड़ के शांत, गरिमामय यात्रा। बुकिंग: +91 89890 06759।',
+      en: 'The Ujjain premium tour package offers a comfortable, private and luxury darshan experience. It includes a private AC SUV (Innova), premium-hotel suggestions near the temple, experienced guide assistance and a flexible itinerary. Ideal for couples, families and VIP guests — a calm, dignified trip without any rush. Booking: +91 89890 06759.'
     },
     itinerary: [
       {

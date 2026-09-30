@@ -124,7 +124,7 @@ export function SimhasthaLanding() {
     ? 'सिंहस्थ 2028 उज्जैन — तिथि 27 मार्च से 27 मई, शाही स्नान गाइड'
     : 'Simhastha 2028 Ujjain — Dates: 27 March–27 May, Shahi Snan Guide';
   const description = locale === 'hi'
-    ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 7 पर्व स्नान भी प्रस्तावित। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड। मदद: +91 74007 24456'
+    ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 7 पर्व स्नान भी प्रस्तावित। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड। मदद: +91 89890 06759'
     : 'Simhastha Mahakumbh 2028 Ujjain — mela runs 27 March to 27 May 2028 (2 months). 3 Shahi Snans: 09 April, 23 April, 08 May, plus 7 proposed parv snans. 13 Akhadas, Kalpvas, hotel & transport guide.';
 
   const FAQS = [
@@ -166,8 +166,8 @@ export function SimhasthaLanding() {
     {
       q: { hi: 'सिंहस्थ 2028 के लिए उज्जैन कैसे पहुँचें?', en: 'How to reach Ujjain for Simhastha 2028?' },
       a: {
-        hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद हेतु +91 74007 24456 पर संपर्क करें।',
-        en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, call +91 74007 24456.',
+        hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद हेतु +91 89890 06759 पर संपर्क करें।',
+        en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, call +91 89890 06759.',
       },
     },
     {

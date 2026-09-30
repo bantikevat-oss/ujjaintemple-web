@@ -39,7 +39,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'संपर्क',
-    body: `गोपनीयता संबंधी किसी भी प्रश्न के लिए:\nईमेल: info@ujjaintemple.com\nफोन: +91 74007 24456\nपता: ByteFlow Technologies Pvt Ltd, उज्जैन, मध्य प्रदेश — 456001`,
+    body: `गोपनीयता संबंधी किसी भी प्रश्न के लिए:\nईमेल: info@ujjaintemple.com\nफोन: +91 89890 06759\nपता: ByteFlow Technologies Pvt Ltd, उज्जैन, मध्य प्रदेश — 456001`,
   },
 ];
 
@@ -74,7 +74,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'Contact',
-    body: `For any privacy-related questions:\nEmail: info@ujjaintemple.com\nPhone: +91 74007 24456\nAddress: ByteFlow Technologies Pvt Ltd, Ujjain, Madhya Pradesh — 456001`,
+    body: `For any privacy-related questions:\nEmail: info@ujjaintemple.com\nPhone: +91 89890 06759\nAddress: ByteFlow Technologies Pvt Ltd, Ujjain, Madhya Pradesh — 456001`,
   },
 ];
 

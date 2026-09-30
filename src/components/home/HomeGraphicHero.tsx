@@ -275,7 +275,7 @@ export function HomeGraphicHero() {
             {t.ctaA}
           </Link>
           <a
-            href="tel:+917400724456"
+            href="tel:+918989006759"
             className="inline-flex items-center gap-2.5 font-semibold rounded-md backdrop-blur-sm
               transition-all duration-200 hover:-translate-y-0.5"
             style={{

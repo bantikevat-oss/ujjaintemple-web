@@ -19,8 +19,8 @@ export function TourLanding() {
 
   const title = locale === 'hi' ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज, टूर एंड ट्रैवल ऑपरेटर' : 'Ujjain Tour Packages — Darshan Packages, Tour and Travel in Ujjain';
   const description = locale === 'hi'
-    ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज (1/2/3 दिन), महाकाल दर्शन, ओंकारेश्वर व सिंहस्थ 2028 यात्रा। भरोसेमंद उज्जैन टूर एंड ट्रैवल ऑपरेटर। बुकिंग: +91 74007 24456'
-    : 'Ujjain tour packages — Ujjain darshan packages (1/2/3 day), Mahakal darshan, Omkareshwar & Simhastha 2028 trips. Trusted tour and travel operator in Ujjain. Book: +91 74007 24456';
+    ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज (1/2/3 दिन), महाकाल दर्शन, ओंकारेश्वर व सिंहस्थ 2028 यात्रा। भरोसेमंद उज्जैन टूर एंड ट्रैवल ऑपरेटर। बुकिंग: +91 89890 06759'
+    : 'Ujjain tour packages — Ujjain darshan packages (1/2/3 day), Mahakal darshan, Omkareshwar & Simhastha 2028 trips. Trusted tour and travel operator in Ujjain. Book: +91 89890 06759';
   const path = '/tour-and-travel-ujjain/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);

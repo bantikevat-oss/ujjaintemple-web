@@ -138,8 +138,8 @@ export function MandirIndex() {
     {
       q: { hi: 'उज्जैन के मुख्य मंदिर देखने में कितने दिन लगते हैं?', en: 'How many days are needed to see the main temples of Ujjain?' },
       a: {
-        hi: 'मुख्य मंदिर — महाकालेश्वर, महाकाल लोक, काल भैरव, हरसिद्धि, मंगलनाथ और चिंतामण गणेश — एक पूरे दिन में देखे जा सकते हैं। सांदीपनि आश्रम, गढ़कालिका और चौरासी महादेव जोड़ने पर दो दिन आराम से लगते हैं। यात्रा नियोजन में सहायता हेतु +91 74007 24456 पर संपर्क करें।',
-        en: 'The main temples — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Harsiddhi, Mangalnath and Chintaman Ganesh — fit into one full day. Adding Sandipani Ashram, Gadkalika and the 84 Mahadev makes it a comfortable two days. For help planning a route, call +91 74007 24456.',
+        hi: 'मुख्य मंदिर — महाकालेश्वर, महाकाल लोक, काल भैरव, हरसिद्धि, मंगलनाथ और चिंतामण गणेश — एक पूरे दिन में देखे जा सकते हैं। सांदीपनि आश्रम, गढ़कालिका और चौरासी महादेव जोड़ने पर दो दिन आराम से लगते हैं। यात्रा नियोजन में सहायता हेतु +91 89890 06759 पर संपर्क करें।',
+        en: 'The main temples — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Harsiddhi, Mangalnath and Chintaman Ganesh — fit into one full day. Adding Sandipani Ashram, Gadkalika and the 84 Mahadev makes it a comfortable two days. For help planning a route, call +91 89890 06759.',
       },
     },
   ] as const;

@@ -402,7 +402,7 @@ export function Home() {
         <MandalaDivider />
 
         {/* ── CALL FLOATING BUTTON ──────────────────────────────────────── */}
-        <a href="tel:+917400724456"
+        <a href="tel:+918989006759"
           aria-label={locale === 'hi' ? 'अभी कॉल करें' : 'Call Now'}
           className="fixed bottom-6 right-5 z-50 flex items-center gap-2.5 rounded-full
             bg-gold py-3.5 pl-4 pr-5 text-maroon-900 font-bold

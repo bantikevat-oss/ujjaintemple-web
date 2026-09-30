@@ -149,7 +149,7 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
 <?= $body ?>
 <div class="foot">
   <p><strong>UjjainTemple.com</strong> — उज्जैन के मंदिर, घाट और सिंहस्थ 2028 की जानकारी।
-  यात्रा, ठहरने या पूजा में सहायता के लिए <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें।</p>
+  यात्रा, ठहरने या पूजा में सहायता के लिए <a href="tel:+918989006759"><?= ujt_e($c['phone']) ?></a> पर कॉल करें।</p>
   <p>सिंहस्थ 2028 की तारीखें प्रकाशित मीडिया रिपोर्ट्स पर आधारित हैं, किसी शासकीय अधिसूचना पर नहीं।
   प्रशासन द्वारा इनमें बदलाव संभव है — यात्रा से पहले पुष्टि कर लें।
   यह वेबसाइट किसी मंदिर समिति या प्रशासन से संबद्ध नहीं है।</p>
@@ -170,7 +170,7 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
     var a = e.target && e.target.closest && e.target.closest('a[href]');
     if (!a) return;
     var href = a.getAttribute('href') || '';
-    var name = /^tel:\+?(91)?7400724456$/.test(href.replace(/[\s-]/g, '')) ? 'call_click'
+    var name = /^tel:\+?(91)?(7400724456|8989006759)$/.test(href.replace(/[\s-]/g, '')) ? 'call_click'
       : /(wa\.me|api\.whatsapp\.com\/send\?phone=)\/?917400724456/.test(href) ? 'whatsapp_click'
       : null;
     if (name) gtag('event', name, { link_url: href, transport_type: 'beacon' });

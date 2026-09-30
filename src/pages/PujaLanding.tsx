@@ -80,14 +80,14 @@ const TESTIMONIALS = [
 
 const FAQS = {
   hi: [
-    { q: 'उज्जैन में पूजा बुकिंग कैसे करें?', a: '+91 74007 24456 पर कॉल या WhatsApp करें। पूजा का प्रकार, तारीख, और आपकी आवश्यकता बताएं। हमारे विशेषज्ञ पंडित आपको पूरी जानकारी देंगे और बुकिंग कन्फर्म करेंगे।' },
+    { q: 'उज्जैन में पूजा बुकिंग कैसे करें?', a: '+91 89890 06759 पर कॉल या WhatsApp करें। पूजा का प्रकार, तारीख, और आपकी आवश्यकता बताएं। हमारे विशेषज्ञ पंडित आपको पूरी जानकारी देंगे और बुकिंग कन्फर्म करेंगे।' },
     { q: 'क्या मैं उज्जैन आए बिना पूजा करा सकता हूँ?', a: 'हाँ — ऑनलाइन पूजा की सुविधा है। पंडित जी पूजा करते हैं, आप WhatsApp Video Call पर लाइव देख सकते हैं। परन्तु स्वयं उपस्थित रहने का फल अधिक होता है।' },
     { q: 'पूजा की फीस कितनी है?', a: 'पूजा के प्रकार और विधि पर निर्भर: साधारण पूजा ₹3,100 से, मध्यम ₹7,100-15,000, और विशेष हवन-यज्ञ ₹21,000-51,000 तक। कॉल करने पर सटीक जानकारी दी जाएगी।' },
     { q: 'पूजा के लिए कौन से दस्तावेज चाहिए?', a: 'जन्म कुंडली (यदि ग्रह दोष संबंधी पूजा है), जन्म तिथि, नाम, और गोत्र। यदि कुंडली नहीं है तो भी पूजा होती है — केवल नाम-गोत्र पर्याप्त है।' },
     { q: 'क्या उज्जैन टेम्पल के पंडित प्रामाणिक हैं?', a: 'हाँ — हमारे सभी पंडित उज्जैन के मूल निवासी, 15+ वर्ष के अनुभव वाले, वैदिक परम्परा में प्रशिक्षित हैं। कोई कमीशन नहीं — सीधा पंडित-यजमान सम्बन्ध।' },
   ],
   en: [
-    { q: 'How to book a puja in Ujjain?', a: 'Call or WhatsApp +91 74007 24456. Share the puja type, preferred date and your requirement. Our expert pandits will provide complete guidance and confirm the booking.' },
+    { q: 'How to book a puja in Ujjain?', a: 'Call or WhatsApp +91 89890 06759. Share the puja type, preferred date and your requirement. Our expert pandits will provide complete guidance and confirm the booking.' },
     { q: 'Can I get a puja done without coming to Ujjain?', a: 'Yes — online puja is available. The pandit performs the puja and you can watch live on WhatsApp Video Call. However, being personally present gives greater results.' },
     { q: 'What is the puja fee?', a: 'Depends on puja type and vidhi: basic puja from ₹3,100, medium ₹7,100-15,000, and special havan-yajna ₹21,000-51,000. Exact details given on call.' },
     { q: 'What documents are needed for the puja?', a: 'Birth horoscope (kundli) for planet-related pujas, birth date, name and gotra. If no kundli is available, the puja still proceeds — name and gotra suffice.' },
@@ -107,8 +107,8 @@ export function PujaLanding() {
     ? 'उज्जैन में पूजा — मंगल दोष, काल सर्प, नवग्रह शांति, पितृ दोष'
     : 'Puja in Ujjain — Mangal Dosh, Kaal Sarp, Navgrah Shanti, Pitru Dosh';
   const description = locale === 'hi'
-    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। 15+ वर्ष, 10,000+ पूजा। प्रामाणिक वैदिक विधि। बुकिंग: +91 74007 24456'
-    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. 15+ years, 10,000+ pujas. Authentic Vedic vidhi. Booking: +91 74007 24456';
+    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। 15+ वर्ष, 10,000+ पूजा। प्रामाणिक वैदिक विधि। बुकिंग: +91 89890 06759'
+    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. 15+ years, 10,000+ pujas. Authentic Vedic vidhi. Booking: +91 89890 06759';
 
   const schemas = [
     breadcrumbSchema({ items: [

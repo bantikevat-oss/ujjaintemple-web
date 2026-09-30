@@ -24,8 +24,8 @@ export function ThingsToDo() {
     ? 'उज्जैन में घूमने की जगह — प्रमुख दर्शन स्थल, टूर व यात्रा गाइड 2026'
     : 'Things to Do in Ujjain — Top Places to Visit, Darshan & Travel Guide 2026';
   const description = locale === 'hi'
-    ? 'उज्जैन में घूमने की जगह — महाकालेश्वर, काल भैरव, हरसिद्धि सहित प्रमुख मंदिर, टूर पैकेज, होटल, कैब व सिंहस्थ 2028 की पूरी यात्रा गाइड। यात्रा सहायता: +91 74007 24456'
-    : 'Things to do in Ujjain — top temples like Mahakaleshwar, Kal Bhairav, Harsiddhi, plus tour packages, hotels, cabs & Simhastha 2028. Complete Ujjain travel guide. Help: +91 74007 24456';
+    ? 'उज्जैन में घूमने की जगह — महाकालेश्वर, काल भैरव, हरसिद्धि सहित प्रमुख मंदिर, टूर पैकेज, होटल, कैब व सिंहस्थ 2028 की पूरी यात्रा गाइड। यात्रा सहायता: +91 89890 06759'
+    : 'Things to do in Ujjain — top temples like Mahakaleshwar, Kal Bhairav, Harsiddhi, plus tour packages, hotels, cabs & Simhastha 2028. Complete Ujjain travel guide. Help: +91 89890 06759';
 
   const hubs = [
     { icon: Landmark, to: `${prefix}/mandirs/`, hi: 'उज्जैन के मंदिर', en: 'Temples in Ujjain', dh: 'प्रमुख एवं प्राचीन मंदिर — दर्शन समय, इतिहास व कैसे पहुँचें।', de: 'Famous ancient temples — darshan timings, history & how to reach.' },

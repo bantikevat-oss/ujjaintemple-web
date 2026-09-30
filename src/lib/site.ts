@@ -2,10 +2,12 @@ export const SITE = {
   domain: 'ujjaintemple.com',
   url: 'https://ujjaintemple.com',
   name: 'UjjainTemple',
-  phone: '+91 74007 24456',
-  phoneIntl: '+917400724456',
-  phoneTel: 'tel:+917400724456',
+  phone: '+91 89890 06759',
+  phoneIntl: '+918989006759',
+  phoneTel: 'tel:+918989006759',
   email: 'info@ujjaintemple.com',
+  // 🔴 WhatsApp stays on the OLD number (Aman, 2026-10-01): the WhatsApp Business account
+  // lives there. Calls moved to 8989006759 (matches the GBP); chats did not.
   whatsapp: 'https://wa.me/917400724456',
   address: {
     locality: 'Ujjain',

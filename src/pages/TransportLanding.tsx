@@ -80,13 +80,13 @@ const MODES = [
       'इंदौर से 55 किमी — सिर्फ 1.5 घंटे, टोल ₹75',
       'भोपाल से 195 किमी — 3.5–4 घंटे',
       'इंदौर एयरपोर्ट से सीधे उज्जैन कैब उपलब्ध',
-      'उज्जैन टेम्पल कैब बुकिंग: +91 74007 24456',
+      'उज्जैन टेम्पल कैब बुकिंग: +91 89890 06759',
     ],
     pointsEn: [
       'Indore: 55 km — just 1.5 hrs, toll ₹75',
       'Bhopal: 195 km — 3.5–4 hours',
       'Direct cab from Indore airport to Ujjain',
-      'UjjainTemple cab booking: +91 74007 24456',
+      'UjjainTemple cab booking: +91 89890 06759',
     ],
     color: '#C9A84C',
   },
@@ -122,7 +122,7 @@ const LOCAL = [
 const FAQS_HI = [
   {
     q: 'इंदौर से उज्जैन कैसे पहुंचें?',
-    a: 'इंदौर से उज्जैन की दूरी 55 किमी है जो NH 52 पर 1.5 घंटे में तय होती है। कैब (₹600–800), बस (हर 20 मिनट, ₹60–120), ट्रेन (40 मिनट, ₹25 से) — तीनों विकल्प उपलब्ध हैं। इंदौर हवाई अड्डे से सीधे उज्जैन कैब बुकिंग के लिए +91 74007 24456 पर कॉल करें।',
+    a: 'इंदौर से उज्जैन की दूरी 55 किमी है जो NH 52 पर 1.5 घंटे में तय होती है। कैब (₹600–800), बस (हर 20 मिनट, ₹60–120), ट्रेन (40 मिनट, ₹25 से) — तीनों विकल्प उपलब्ध हैं। इंदौर हवाई अड्डे से सीधे उज्जैन कैब बुकिंग के लिए +91 89890 06759 पर कॉल करें।',
   },
   {
     q: 'भोपाल से उज्जैन कैसे जाएं?',
@@ -130,7 +130,7 @@ const FAQS_HI = [
   },
   {
     q: 'उज्जैन में मंदिर दर्शन के लिए कौन सा लोकल ट्रांसपोर्ट सबसे अच्छा है?',
-    a: 'उज्जैन दर्शन के लिए प्राइवेट कैब पैकेज (₹600–1,200 / दिन) सबसे सुविधाजनक है। इसमें महाकालेश्वर, काल भैरव, हरसिद्धि, मंगलनाथ — सब मंदिर कवर होते हैं। ऑटो रिक्शा भी ₹50–150 प्रति स्थान उपलब्ध है। बुकिंग के लिए +91 74007 24456।',
+    a: 'उज्जैन दर्शन के लिए प्राइवेट कैब पैकेज (₹600–1,200 / दिन) सबसे सुविधाजनक है। इसमें महाकालेश्वर, काल भैरव, हरसिद्धि, मंगलनाथ — सब मंदिर कवर होते हैं। ऑटो रिक्शा भी ₹50–150 प्रति स्थान उपलब्ध है। बुकिंग के लिए +91 89890 06759।',
   },
   {
     q: 'दिल्ली से उज्जैन कैसे पहुंचें?',
@@ -138,7 +138,7 @@ const FAQS_HI = [
   },
   {
     q: 'सिंहस्थ 2028 के दौरान उज्जैन कैसे पहुंचें?',
-    a: 'सिंहस्थ 2028 (09 अप्रैल–08 मई 2028) में 30 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें। सहायता: +91 74007 24456।',
+    a: 'सिंहस्थ 2028 (09 अप्रैल–08 मई 2028) में 30 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें। सहायता: +91 89890 06759।',
   },
   {
     q: 'उज्जैन जंक्शन से महाकालेश्वर कितनी दूर है?',
@@ -149,7 +149,7 @@ const FAQS_HI = [
 const FAQS_EN = [
   {
     q: 'How to reach Ujjain from Indore?',
-    a: 'Indore to Ujjain is 55 km via NH 52, taking 1.5 hours. Options: cab (₹600–800), bus (every 20 minutes, ₹60–120), train (40 minutes, from ₹25). For direct cab from Indore airport to Ujjain, call +91 74007 24456.',
+    a: 'Indore to Ujjain is 55 km via NH 52, taking 1.5 hours. Options: cab (₹600–800), bus (every 20 minutes, ₹60–120), train (40 minutes, from ₹25). For direct cab from Indore airport to Ujjain, call +91 89890 06759.',
   },
   {
     q: 'How to reach Ujjain from Bhopal?',
@@ -157,7 +157,7 @@ const FAQS_EN = [
   },
   {
     q: 'Which local transport is best for temple darshan in Ujjain?',
-    a: 'A private cab package (₹600–1,200 / day) is the most convenient for Ujjain darshan. It covers Mahakaleshwar, Kal Bhairav, Harsiddhi, Mangalnath and more. Auto rickshaws are also available at ₹50–150 per spot. For booking call +91 74007 24456.',
+    a: 'A private cab package (₹600–1,200 / day) is the most convenient for Ujjain darshan. It covers Mahakaleshwar, Kal Bhairav, Harsiddhi, Mangalnath and more. Auto rickshaws are also available at ₹50–150 per spot. For booking call +91 89890 06759.',
   },
   {
     q: 'How to reach Ujjain from Delhi?',
@@ -165,7 +165,7 @@ const FAQS_EN = [
   },
   {
     q: 'How to reach Ujjain during Simhastha 2028?',
-    a: 'Simhastha 2028 (09 April–08 May 2028) expects 30 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 74007 24456.',
+    a: 'Simhastha 2028 (09 April–08 May 2028) expects 30 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 89890 06759.',
   },
   {
     q: 'How far is Mahakaleshwar from Ujjain Junction?',
@@ -185,8 +185,8 @@ export function TransportLanding() {
     ? 'उज्जैन कैसे पहुंचें — इंदौर, भोपाल, दिल्ली से दूरी, ट्रेन, बस, टैक्सी गाइड'
     : 'How to Reach Ujjain — Distance from Indore, Bhopal, Delhi, Train, Bus & Taxi Guide';
   const description = locale === 'hi'
-    ? 'उज्जैन यातायात गाइड — इंदौर से 55 किमी, भोपाल 195 किमी, दिल्ली से ट्रेन, बस टाइमिंग, कैब बुकिंग, लोकल ऑटो। महाकाल दर्शन + सिंहस्थ 2028 ट्रांसपोर्ट। सहायता: +91 74007 24456'
-    : 'Ujjain transport guide — 55 km from Indore, 195 km Bhopal, Delhi train, bus timings, cab booking, local auto. Mahakal darshan + Simhastha 2028 transport. Help: +91 74007 24456';
+    ? 'उज्जैन यातायात गाइड — इंदौर से 55 किमी, भोपाल 195 किमी, दिल्ली से ट्रेन, बस टाइमिंग, कैब बुकिंग, लोकल ऑटो। महाकाल दर्शन + सिंहस्थ 2028 ट्रांसपोर्ट। सहायता: +91 89890 06759'
+    : 'Ujjain transport guide — 55 km from Indore, 195 km Bhopal, Delhi train, bus timings, cab booking, local auto. Mahakal darshan + Simhastha 2028 transport. Help: +91 89890 06759';
 
   const pageSchemas = [
     breadcrumbSchema({ items: [

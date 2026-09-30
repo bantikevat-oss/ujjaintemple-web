@@ -48,8 +48,8 @@ export function CabBookingLanding() {
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 74007 24456। लोकल दर्शन कैब ₹900 से (हाफ डे), ₹1,700 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
-    : 'Ujjain taxi service — call +91 74007 24456. Local darshan cab from ₹900 half day, ₹1,700 full day. Fare depends on the date, season and vehicle — confirmed on call.';
+    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 89890 06759। लोकल दर्शन कैब ₹900 से (हाफ डे), ₹1,700 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
+    : 'Ujjain taxi service — call +91 89890 06759. Local darshan cab from ₹900 half day, ₹1,700 full day. Fare depends on the date, season and vehicle — confirmed on call.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
