@@ -73,6 +73,11 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
               placeholder="10 digit mobile number" />
           </div>
           <div>
+            <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-date">{t('form.travelDate')}</label>
+            <input id="lf-date" name="travelDate" type="date"
+              className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon" />
+          </div>
+          <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-service">{t('form.service')}</label>
             <select id="lf-service" name="service" defaultValue={defaultService}
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon">

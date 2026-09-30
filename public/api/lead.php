@@ -48,6 +48,8 @@ $src       = clean($_POST['sourcePage'] ?? '');
 $locale    = clean($_POST['locale'] ?? '');
 $purpose   = clean($_POST['purpose'] ?? '');     // raw-lead filter (WhatsApp gate)
 $channel   = clean($_POST['channel'] ?? 'form'); // 'form' | 'whatsapp'
+$travel    = clean($_POST['travelDate'] ?? '');  // yyyy-mm-dd, optional — the field that
+                                                 // decides vehicle availability and price
 
 if (!$name || !$phone) {
   http_response_code(400);
@@ -93,11 +95,11 @@ $dayFlood  = ujt_over_cap('all:' . date('Y-m-d'), 150);                         
 $mail_ok   = !$burst && !$dayFlood;
 
 // Append to CSV
-$row = [date('Y-m-d H:i:s'), $name, $phone, $service, $src, $locale, $message, $_SERVER['REMOTE_ADDR'] ?? '', $purpose, $channel];
+$row = [date('Y-m-d H:i:s'), $name, $phone, $service, $src, $locale, $message, $_SERVER['REMOTE_ADDR'] ?? '', $purpose, $channel, $travel];
 $fp = @fopen($cfg['csv_path'], 'a');
 if ($fp) {
   if (filesize($cfg['csv_path']) === 0) {
-    fputcsv($fp, ['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel']);
+    fputcsv($fp, ['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date']);
   }
   fputcsv($fp, $row);
   fclose($fp);
@@ -125,29 +127,58 @@ else                                         { $tier = 'WARM'; $mark = '[LEAD]';
 
 $subject = "$mark UjjainTemple — $name · $plabel";
 
-$body  = "$tier lead from UjjainTemple.com\n";
-$body .= str_repeat('-', 44) . "\n";
-$body .= "Name:     $name\n";
-$body .= "Phone:    $phone\n";
-$body .= "Purpose:  $plabel\n";
-$body .= "Channel:  $channel\n";
-$body .= "Service:  $service\n";
-$body .= "Source:   $src\n";
-$body .= "Locale:   $locale\n";
-if ($message !== '') $body .= "Message:  $message\n";
-$body .= "Time:     " . date('Y-m-d H:i:s') . " IST\n";
-$body .= "IP:       " . ($_SERVER['REMOTE_ADDR'] ?? '') . "\n";
-$body .= str_repeat('-', 44) . "\n";
-$body .= "Call back: tel:" . preg_replace('/[^0-9]/', '', $phone) . "\n";
-
 /*
- * 🔴 NOT mail(). Local sendmail is disabled on this account (550 …contact support) and
- * the old @mail() call failed silently for every lead ever captured. SMTP or nothing.
- * The CSV write above already happened, so a mail failure never loses the lead.
+ * The mail is the product here — Aman reads it on a phone and decides whether to call.
+ * So: the number is one tap, the travel date says how urgent it is, and the tier is
+ * visible before any scrolling. HTML because a plain-text block of "Name: / Phone:" is
+ * where a real lead goes to hide.
  */
+$tierColor = $tier === 'HOT' ? '#B8860B' : ($tier === 'COLD' ? '#6b7280' : '#7A1220');
+$digits    = preg_replace('/[^0-9]/', '', $phone);
+$waNum     = strlen($digits) === 10 ? '91' . $digits : $digits;
+
+// "in 6 days" is the bit that decides what gets called first.
+$whenLine = '—';
+if ($travel !== '' && ($ts = strtotime($travel)) !== false) {
+  $days = (int) floor(($ts - strtotime('today')) / 86400);
+  $rel  = $days < 0 ? 'beet chuki' : ($days === 0 ? 'AAJ' : ($days === 1 ? 'KAL' : "$days din baad"));
+  $whenLine = date('d M Y', $ts) . ' · <strong>' . $rel . '</strong>';
+  if ($days >= 0 && $days <= 7) $subject = '⏰ ' . $subject;   // travelling within a week
+}
+
+$e = function ($v) { return htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8'); };
+$row = function ($k, $v) use ($e) {
+  return '<tr><td style="padding:7px 14px 7px 0;color:#6b7280;font-size:13px;white-space:nowrap;vertical-align:top">'
+       . $e($k) . '</td><td style="padding:7px 0;color:#111827;font-size:14px">' . $v . '</td></tr>';
+};
+
+$body  = '<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f5f2;padding:18px">';
+$body .= '<div style="max-width:560px;margin:0 auto;background:#fff;border:1px solid #e7e3da;border-radius:12px;overflow:hidden">';
+$body .= '<div style="background:' . $tierColor . ';color:#fff;padding:13px 18px;font-size:14px;font-weight:700">'
+       . $e($tier) . ' · ' . $e($plabel) . '</div>';
+$body .= '<div style="padding:18px">';
+$body .= '<div style="font-size:21px;font-weight:700;color:#111827;margin-bottom:3px">' . $e($name) . '</div>';
+$body .= '<a href="tel:+' . $e($waNum) . '" style="font-size:20px;font-weight:700;color:#7A1220;text-decoration:none">'
+       . $e($phone) . '</a>';
+$body .= '<div style="margin:15px 0 5px">'
+       . '<a href="tel:+' . $e($waNum) . '" style="display:inline-block;background:#7A1220;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px">Call</a>'
+       . '<a href="https://wa.me/' . $e($waNum) . '" style="display:inline-block;background:#25D366;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp</a>'
+       . '</div>';
+$body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
+$body .= $row('Yatra date', $whenLine);
+$body .= $row('Chahiye', $e($plabel));
+$body .= $row('Aaya kahan se', $channel === 'whatsapp' ? 'WhatsApp button' : 'Website form');
+$body .= $row('Page', '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src ?: '—') . '</a>');
+if ($message !== '') $body .= $row('Message', nl2br($e($message)));
+$body .= $row('Time', date('d M Y, g:i A') . ' IST');
+$body .= '</table></div>';
+$body .= '<div style="background:#faf9f6;padding:10px 18px;color:#9ca3af;font-size:11px;border-top:1px solid #eee">'
+       . 'UjjainTemple.com &nbsp;·&nbsp; leads.csv me bhi save ho chuki hai</div>';
+$body .= '</div></div>';
+
 require_once __DIR__ . '/smtp.php';
 if ($mail_ok) {
-  $sent = ujt_smtp_send($subject, $body);
+  $sent = ujt_smtp_send($subject, $body, null, true);
   if (!$sent) error_log("ujt lead: SMTP send failed for $name / $phone");
 } else {
   // Captured, deliberately not mailed. The row is in leads.csv either way.

@@ -197,6 +197,20 @@ export function WhatsAppGateHost() {
             </select>
           </div>
 
+          {/* Optional on purpose. This is the highest-volume lead path (~52% of lead
+              events); making the date required would buy better leads by losing leads.
+              Whoever fills it gets called first — lead.php puts "in N days" in the mail. */}
+          <div>
+            <label className="mb-1 block text-sm font-medium text-ink-soft" htmlFor="wag-date">
+              {isHi ? 'यात्रा की तारीख' : 'Travel date'}{' '}
+              <span className="font-normal text-ink-mute">({isHi ? 'वैकल्पिक' : 'optional'})</span>
+            </label>
+            <input
+              id="wag-date" name="travelDate" type="date"
+              className="w-full rounded-md border border-cream-dark bg-white px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
+            />
+          </div>
+
           <button
             type="submit" disabled={sending}
             className="flex w-full items-center justify-center gap-2 rounded-md bg-maroon py-3 text-base font-bold text-cream shadow-md transition-transform active:scale-95 disabled:opacity-70"

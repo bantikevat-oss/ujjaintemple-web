@@ -29,7 +29,7 @@ function ujt_mail_config(): ?array {
     return (is_array($cfg) && !empty($cfg['mail']['host'])) ? $cfg['mail'] : null;
 }
 
-function ujt_smtp_send(string $subject, string $body, ?array $cfg = null): bool {
+function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $html = false): bool {
     $cfg = $cfg ?? ujt_mail_config();
     if (!$cfg) return false;
 
@@ -76,7 +76,7 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null): bool 
         $headers .= 'To: <' . $to . ">\r\n";
         $headers .= 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        $headers .= 'Content-Type: text/' . ($html ? 'html' : 'plain') . "; charset=UTF-8\r\n";
         $headers .= "Content-Transfer-Encoding: base64\r\n";
         $headers .= 'Date: ' . date('r') . "\r\n";
         // Leading dots must be escaped, or SMTP reads them as end-of-data.
