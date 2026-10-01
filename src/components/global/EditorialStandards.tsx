@@ -58,7 +58,7 @@ export function EditorialStandards() {
       <div className="container-page py-16 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
               {locale === 'hi' ? 'सम्पादकीय मानक' : 'Editorial Standards'}
             </p>
             <h2 className={`mt-3 font-bold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl md:text-5xl' : 'font-serif text-3xl sm:text-4xl md:text-5xl'}`}>

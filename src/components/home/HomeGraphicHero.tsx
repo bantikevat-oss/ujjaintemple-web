@@ -143,7 +143,7 @@ export function HomeGraphicHero() {
 
       {/* Caption badge */}
       <div className="hidden lg:block absolute bottom-8 right-8 z-20">
-        <span className="rounded-full border border-gold/30 bg-black/50 px-3 py-1.5
+        <span className="rounded-full border border-gold/40 bg-black/50 px-3 py-1.5
           text-[10px] font-medium tracking-widest backdrop-blur-sm"
           style={{ color: 'rgba(212,175,55,0.75)' }}>
           {t.caption}
@@ -194,7 +194,7 @@ export function HomeGraphicHero() {
             2028…", so the H1 was answering a broader term than the page competes
             for. Both lines now live inside the H1; the visual hierarchy is unchanged. */}
         <h1
-          className="hf3 relative font-sanskrit font-black tracking-tight text-center lg:text-left"
+          className="hf3 relative font-sanskrit font-normal tracking-tight text-center lg:text-left"
           style={{ fontSize: 'clamp(3.6rem, 8.5vw, 8rem)' }}
         >
           <span style={{

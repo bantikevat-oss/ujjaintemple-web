@@ -120,7 +120,7 @@ export function AppMahadev84() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={hi ? `${m.hi} — नक्शे में खोजें` : `${m.en} — find on map`}
-                className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-maroon hover:bg-maroon-50"
+                className="grid h-10 w-10 shrink-0 place-items-center rounded-full text-maroon hover:bg-cream-dark"
               >
                 <MapPin className="h-5 w-5" aria-hidden />
               </a>

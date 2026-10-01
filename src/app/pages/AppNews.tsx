@@ -37,7 +37,7 @@ export function AppNews() {
           type="button"
           onClick={load}
           aria-label={hi ? 'फिर से लोड करें' : 'Reload'}
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-maroon/30 text-maroon hover:bg-maroon-50"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-maroon/30 text-maroon hover:bg-cream-dark"
         >
           <RefreshCw className="h-4 w-4" aria-hidden />
         </button>
@@ -62,7 +62,7 @@ export function AppNews() {
               <li key={n.link}>
                 <a href={n.link} className="block rounded-xl border border-gold/40 bg-white p-4 transition-colors hover:border-saffron">
                   {n.iso && (
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-saffron-700">{formatDate(n.iso, locale)}</span>
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-ink-label">{formatDate(n.iso, locale)}</span>
                   )}
                   <span className="mt-1 block font-hindi text-lg font-bold leading-snug text-maroon">{n.title}</span>
                   {n.summary && <span className="mt-1.5 line-clamp-3 block text-sm leading-relaxed text-ink-soft">{n.summary}</span>}

@@ -49,13 +49,40 @@ const LIST_FIELDS = [
 
 const files = readdirSync(mandirDir).filter((f) => f.endsWith('.json'));
 
-const records = files.map((f) => {
-  const full = JSON.parse(readFileSync(join(mandirDir, f), 'utf8'));
+/**
+ * Walking distance from Mahakaleshwar, computed HERE rather than shipped as coordinates.
+ *
+ * The /mandirs/ hub groups temples by how far they are from Mahakaleshwar, because the
+ * pilgrim question behind "ujjain mandir list" is which temples can be done on foot in one
+ * morning — 114 of the 183 are inside a kilometre. Doing that in the component would mean
+ * putting `geo` in LIST_FIELDS, i.e. two floats per temple on every page that touches the
+ * index. One pre-computed number is smaller, and the haversine never reaches the browser.
+ */
+const EARTH_KM = 6371;
+const rad = (d) => (d * Math.PI) / 180;
+function haversineKm(a, b) {
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * EARTH_KM * Math.asin(Math.sqrt(h));
+}
+
+const fullRecords = files.map((f) => ({ f, full: JSON.parse(readFileSync(join(mandirDir, f), 'utf8')) }));
+const mahakal = fullRecords.find((r) => r.full.slug === 'mahakaleshwar')?.full?.geo;
+if (!mahakal) throw new Error('mahakaleshwar.json has no geo — the distance cut on /mandirs/ depends on it');
+
+const records = fullRecords.map(({ f, full }) => {
   const slim = {};
   for (const k of LIST_FIELDS) {
     if (full[k] !== undefined) slim[k] = full[k];
   }
   if (!slim.slug) throw new Error(`${f}: missing "slug" — the index is keyed on it`);
+  // Two decimals is ~10 m — finer than the coordinates deserve and finer than anyone walks.
+  if (full.geo?.lat != null && full.geo?.lng != null) {
+    slim.kmFromMahakal = Math.round(haversineKm(mahakal, full.geo) * 100) / 100;
+  }
   return slim;
 });
 

@@ -32,7 +32,7 @@ export function StickyCallBar() {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gold/60 bg-maroon-900 px-3 py-2 shadow-[0_-8px_24px_rgba(0,0,0,0.18)] lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-gold bg-maroon-900 px-3 py-2 shadow-[0_-8px_24px_rgba(0,0,0,0.18)] lg:hidden">
       {/* gold top hairline */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent" />
       <div className="flex items-center gap-2">

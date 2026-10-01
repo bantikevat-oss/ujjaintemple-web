@@ -48,7 +48,17 @@ export function buildHreflang(path: string): Array<{ hreflang: string; href: str
 
 export const TITLE_MAX = 60;
 
-/** `${locale}:${path}` of every page at ≥50 clicks / 28d (GSC 2026-08-11→09-08). */
+/**
+ * Pages exempt from clampTitle, from GSC 2026-08-11→09-08.
+ *
+ * 🔴 Do NOT grow this list to cover newly high-earning pages. It looks like the obvious
+ * place for them and it is a trap: every page not in here has been live with a CLAMPED
+ * title since 2026-09-11, so adding a page here does not "protect" its title — it
+ * UN-clamps it and silently changes what the SERP shows. Caught 2026-10-01 after adding
+ * six entries moved two live titles and pushed the over-60 count from 7 to 8.
+ *
+ * To keep a high-earning page away from a NEW rewrite, use TITLE_NO_REWRITE below.
+ */
 const TITLE_PROTECTED = new Set([
   'hi:/transport-in-ujjain/ujjain-to-omkareshwar-cab/', // 95 clicks
   'en:/84-mahadev-ujjain/',                             // 87 clicks
@@ -58,6 +68,36 @@ const TITLE_PROTECTED = new Set([
 
 export function isTitleProtected(path: string, locale: Locale): boolean {
   return TITLE_PROTECTED.has(`${locale}:${path}`);
+}
+
+/**
+ * The G2 protected-asset gate: `${locale}:${path}` of every page at ≥50 clicks / 28d.
+ * A page in here keeps whatever title it is already earning with — no new rewrite may
+ * touch it, because without a baseline a rewrite is a bet, not a fix.
+ *
+ * Unlike TITLE_PROTECTED this set changes nothing on its own; it only blocks new title
+ * logic from applying. That is why it is safe to re-read it every run — and it must be
+ * re-read, from the GSC **page** dimension (the query report sees only ~35% of this
+ * site's clicks; the rest are anonymised).
+ *
+ * Re-read 2026-10-01 from GSC 2026-08-30→09-27 (28d). Grew 4 → 10 as traffic grew.
+ */
+const TITLE_NO_REWRITE = new Set([
+  'hi:/transport-in-ujjain/ujjain-to-omkareshwar-cab/',    // 402 clicks
+  'hi:/84-mahadev-ujjain/',                                // 180 clicks
+  'hi:/mandirs/',                                          // 176 clicks
+  'hi:/mandirs/kal-bhairav-ujjain/',                       // 119 clicks
+  'en:/mandirs/chitragupta-mandir-ujjain/',                //  69 clicks
+  'en:/84-mahadev-ujjain/',                                //  55 clicks
+  'en:/mandirs/kal-bhairav-ujjain/',                       //  52 clicks
+  'hi:/mandirs/harsiddhi-mata/',                           //  50 clicks
+  'en:/mandirs/gadkalika-mata/',                           //  50 clicks
+  'en:/transport-in-ujjain/ujjain-local-sightseeing-cab/', //  50 clicks
+]);
+
+/** True when `path` earns ≥50 clicks/28d and must keep the title it already has. */
+export function isTitleNoRewrite(path: string, locale: Locale): boolean {
+  return TITLE_NO_REWRITE.has(`${locale}:${path}`);
 }
 
 /**

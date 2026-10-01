@@ -96,7 +96,7 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
             <h3 className={`font-bold text-maroon leading-tight line-clamp-2 ${locale === 'hi' ? 'font-sanskrit text-xl' : 'font-serif text-lg'}`}>
               {mandir.name[locale]}
             </h3>
-            <p className="mt-1 text-[12px] uppercase tracking-wider text-saffron-700 line-clamp-1">
+            <p className="mt-1 text-[12px] uppercase tracking-wider text-ink-label line-clamp-1">
               {mandir.deity[locale]} · {tType}
             </p>
           </div>
@@ -120,7 +120,7 @@ export function MandirCard({ mandir, featured = false, index = 0 }: Props) {
 
           {/* Footer */}
           <div className="mt-auto flex items-center justify-between border-t border-cream-dark pt-3">
-            <span className="inline-flex items-center gap-1 text-[11px] font-medium uppercase tracking-wider text-saffron-700">
+            <span className="inline-flex items-center gap-1 text-[11px] font-medium uppercase tracking-wider text-ink-label">
               {locale === 'hi' ? 'दर्शन जानकारी' : 'Darshan Guide'}
             </span>
             <span className="inline-flex items-center gap-1 rounded-full bg-maroon px-3 py-1 text-[12px] font-semibold text-cream transition-colors group-hover:bg-saffron-600">

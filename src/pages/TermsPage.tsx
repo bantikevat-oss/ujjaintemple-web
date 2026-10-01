@@ -114,7 +114,7 @@ export function TermsPage() {
           <div className="container-page py-14 sm:py-20 max-w-3xl">
             <div className="space-y-6">
               {sections.map((s, i) => (
-                <div key={i} className="rounded-2xl bg-white border border-gold/15 p-7">
+                <div key={i} className="rounded-2xl bg-white border border-gold/25 p-7">
                   <h2 className={`font-bold text-maroon mb-3 flex items-start gap-2.5
                     ${isHi ? 'font-sanskrit text-base sm:text-lg' : 'font-serif text-base sm:text-lg'}`}>
                     <span className="inline-flex items-center justify-center w-6 h-6 rounded-full
@@ -131,7 +131,7 @@ export function TermsPage() {
             </div>
 
             {/* Contact CTA */}
-            <div className="mt-10 rounded-2xl border border-gold/30 p-7 text-center"
+            <div className="mt-10 rounded-2xl border border-gold/40 p-7 text-center"
               style={{ background: 'linear-gradient(135deg, #fff 0%, #fdf8f0 100%)' }}>
               <p className={`font-bold text-maroon mb-2 ${isHi ? 'font-sanskrit text-base' : 'font-serif text-base'}`}>
                 {isHi ? 'कोई प्रश्न है?' : 'Have a question?'}

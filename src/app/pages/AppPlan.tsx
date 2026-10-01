@@ -67,6 +67,26 @@ export function AppPlan() {
     data.append('message', `[App] ${summary()}`);
     data.append('sourcePage', `${hi ? '/hi' : ''}/app/plan/`);
     data.append('locale', locale);
+    /*
+     * This form already asks the two questions that decide whether a lead is worth
+     * calling first — the travel date and the headcount — and until now both were
+     * posted only inside the free-text `message`, where neither the lead mail's
+     * "X din baad" line nor the CSV's travel_date column could see them. So the app,
+     * which collects the best-structured enquiry on the whole site, produced the
+     * weakest row. Send them as the fields api/lead.php already understands.
+     */
+    data.append('travelDate', form.date);          // '' when not picked — endpoint treats it as absent
+    data.append('channel', 'app');
+    /*
+     * 10+ travellers is the enquiry Aman most wants to see instantly, and lead.php tiers
+     * `group` as HOT and puts [GROUP] at the front of the subject. The website form has
+     * to ask for this; here the number is already on screen, so derive it.
+     */
+    const people = Number(form.people);
+    const purpose = Number.isFinite(people) && people >= 10
+      ? 'group'
+      : ({ transport: 'cab', hotel: 'hotel', tour: 'tour' } as const)[service];
+    data.append('purpose', purpose);
     try {
       const res = await fetch('/api/lead.php', { method: 'POST', body: data });
       if (!res.ok) throw new Error(String(res.status));

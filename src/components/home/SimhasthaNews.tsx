@@ -207,7 +207,7 @@ function FeedSlider({ id, feed, section, hi: hiCopy, en: enCopy, hideWhenEmpty }
       <div className="container-page py-14 sm:py-16">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
               {copy.eyebrow}
             </p>
             <h2 className="mt-2 font-sanskrit text-3xl font-bold leading-tight text-maroon sm:text-4xl">
@@ -262,10 +262,10 @@ function FeedSlider({ id, feed, section, hi: hiCopy, en: enCopy, hideWhenEmpty }
               <a
                 key={n.link}
                 href={n.link}
-                className="group flex w-[85%] shrink-0 snap-start flex-col rounded-xl border border-gold/30 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-saffron/60 hover:shadow-md sm:w-[46%] lg:w-[31.5%]"
+                className="group flex w-[85%] shrink-0 snap-start flex-col rounded-xl border border-gold/40 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-saffron/60 hover:shadow-md sm:w-[46%] lg:w-[31.5%]"
               >
                 {n.date && (
-                  <span className="text-[11px] font-semibold uppercase tracking-widest text-saffron-700">
+                  <span className="text-[11px] font-semibold uppercase tracking-widest text-ink-label">
                     {n.date}
                   </span>
                 )}

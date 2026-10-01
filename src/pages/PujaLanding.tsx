@@ -131,14 +131,14 @@ export function PujaLanding() {
 
           <div className="relative z-10 container-page max-w-5xl mx-auto text-center py-20 sm:py-28 px-4 flex flex-col items-center gap-7">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 border border-gold/30 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
+            <div className="inline-flex items-center gap-2 border border-gold/40 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-gold-light" />
               <span className="text-gold-light font-serif tracking-[0.25em] uppercase text-xs sm:text-sm">
                 {locale === 'hi' ? 'उज्जैन — पूजा की पावन भूमि' : 'Ujjain — Sacred Land of Puja'}
               </span>
             </div>
 
-            <h1 className="font-serif font-extrabold text-white leading-tight" style={{ fontSize: 'clamp(2.4rem,7vw,5rem)' }}>
+            <h1 className="font-serif font-bold text-white leading-tight" style={{ fontSize: 'clamp(2.4rem,7vw,5rem)' }}>
               {locale === 'hi' ? 'उज्जैन में पूजा\nकराएँ — प्रामाणिक, वैदिक' : 'Authentic Vedic\nPuja in Ujjain'}
             </h1>
 
@@ -193,7 +193,7 @@ export function PujaLanding() {
               {TRUST_STATS.map((s, i) => (
                 <div key={i} className="flex flex-col items-center justify-center py-7 px-4 text-center gap-1"
                   style={{ borderRight: i < 3 ? '1px solid rgba(201,168,76,0.12)' : 'none', borderBottom: i < 2 ? '1px solid rgba(201,168,76,0.12)' : 'none' }}>
-                  <span className="font-serif font-extrabold" style={{
+                  <span className="font-serif font-bold" style={{
                     fontSize: 'clamp(1.5rem,4vw,2.4rem)', lineHeight: 1,
                     background: 'linear-gradient(180deg,#E0C374,#C9A84C)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
@@ -214,10 +214,10 @@ export function PujaLanding() {
         <section id="pujas" className="bg-cream-light py-16 sm:py-24 border-b border-cream-dark">
           <div className="container-page max-w-6xl mx-auto">
             <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— दोष निवारण सेवाएँ —' : '— Dosh Nivaran Services —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-maroon">
                 {locale === 'hi' ? 'सभी पूजाएँ' : 'All Pujas'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -301,10 +301,10 @@ export function PujaLanding() {
         <section className="bg-white py-16 sm:py-24 border-b border-cream">
           <div className="container-page max-w-4xl mx-auto">
             <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— सरल प्रक्रिया —' : '— Simple Process —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon">
                 {locale === 'hi' ? 'पूजा कैसे बुक करें?' : 'How to Book a Puja?'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -318,7 +318,7 @@ export function PujaLanding() {
                 <div key={idx} className="flex flex-col items-center text-center group">
                   <div className="relative z-10 w-20 h-20 rounded-full flex flex-col items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
                     style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', boxShadow: '0 0 30px rgba(201,168,76,0.30)' }}>
-                    <span className="font-serif font-extrabold text-maroon-900 text-xl leading-none">{s.step}</span>
+                    <span className="font-serif font-bold text-maroon-900 text-xl leading-none">{s.step}</span>
                   </div>
                   <h3 className="font-serif text-xl font-bold text-maroon mb-3">
                     {locale === 'hi' ? s.titleHi : s.titleEn}
@@ -335,7 +335,7 @@ export function PujaLanding() {
         {/* ═══════════════════════════════════
             WHY UJJAIN + WHY US
         ═══════════════════════════════════ */}
-        <section className="py-16 sm:py-24 border-b border-gold/15" style={{ background: 'linear-gradient(160deg,#200505,#2f0707,#1a0404)' }}>
+        <section className="py-16 sm:py-24 border-b border-gold/25" style={{ background: 'linear-gradient(160deg,#200505,#2f0707,#1a0404)' }}>
           <div className="container-page max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
             {/* Why Ujjain */}
@@ -343,7 +343,7 @@ export function PujaLanding() {
               <p className="text-gold/60 font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— क्यों उज्जैन? —' : '— Why Ujjain? —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold mb-7" style={{ color: '#E0C374' }}>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-7" style={{ color: '#E0C374' }}>
                 {locale === 'hi' ? 'उज्जैन — पूजा की सर्वोच्च भूमि' : 'Ujjain — Supreme Land of Puja'}
               </h2>
               <ul className="space-y-4">
@@ -363,7 +363,7 @@ export function PujaLanding() {
               <p className="text-gold/60 font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— हमें क्यों चुनें? —' : '— Why Choose Us? —'}
               </p>
-              <h3 className="font-serif text-2xl sm:text-3xl font-extrabold mb-7" style={{ color: '#E0C374' }}>
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold mb-7" style={{ color: '#E0C374' }}>
                 {locale === 'hi' ? 'उज्जैन टेम्पल का वादा' : 'UjjainTemple Promise'}
               </h3>
               <ul className="space-y-5">
@@ -408,10 +408,10 @@ export function PujaLanding() {
         <section className="bg-white py-16 sm:py-24 border-b border-cream">
           <div className="container-page max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— सामान्य प्रश्न —' : '— FAQs —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon">
                 {locale === 'hi' ? 'पूजा के बारे में प्रश्न' : 'Puja FAQ'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -423,7 +423,7 @@ export function PujaLanding() {
                   <button onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                     className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-cream/60 transition-colors">
                     <span className="font-serif font-bold text-base sm:text-lg text-maroon leading-snug">{faq.q}</span>
-                    <ChevronDown className={`w-5 h-5 text-saffron flex-shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-5 h-5 text-saffron-700 flex-shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 pb-6 pt-2 text-ink-soft text-sm sm:text-base leading-relaxed font-serif border-t border-cream animate-fade-in bg-white">

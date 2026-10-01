@@ -42,7 +42,7 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
         <p className="mt-1 text-sm text-ink-soft">
           {locale === 'hi' ? 'होटल, कैब, टूर — फ़ॉर्म भरें अथवा सीधे सम्पर्क करें' : 'Hotel, cab, tour — fill the form or call us directly'}
         </p>
-        <a href={SITE.phoneTel} className="mt-3 inline-flex items-center gap-2 font-bold text-maroon hover:text-saffron">
+        <a href={SITE.phoneTel} className="mt-3 inline-flex items-center gap-2 font-bold text-maroon hover:text-saffron-700">
           <Phone className="h-4 w-4" /> {SITE.phone}
         </a>
       </div>

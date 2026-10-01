@@ -289,7 +289,7 @@ export function SimhasthaLanding() {
                 {locale === 'hi' ? '— सिंहस्थ —' : '— Simhastha —'}
               </span>
               <h1
-                className="font-serif font-extrabold leading-none"
+                className="font-serif font-bold leading-none"
                 style={{
                   fontSize: 'clamp(5rem, 16vw, 11rem)',
                   background: 'linear-gradient(180deg, #F5E8B0 0%, #C9A84C 45%, #7E682A 100%)',
@@ -332,7 +332,7 @@ export function SimhasthaLanding() {
                       }}
                     >
                       <span
-                        className="font-serif font-extrabold"
+                        className="font-serif font-bold"
                         style={{
                           /* Cormorant Garamond defaults to OLD-STYLE figures, so once the
                              real webfont started loading (2026-08-21) the countdown read
@@ -429,7 +429,7 @@ export function SimhasthaLanding() {
                   style={{ borderRight: i < 3 ? '1px solid rgba(201,168,76,0.15)' : 'none', borderBottom: i < 2 ? '1px solid rgba(201,168,76,0.15)' : 'none' }}
                 >
                   <span
-                    className="font-serif font-extrabold"
+                    className="font-serif font-bold"
                     style={{
                       fontSize: 'clamp(1.8rem, 4.5vw, 3rem)',
                       lineHeight: 1,
@@ -459,7 +459,7 @@ export function SimhasthaLanding() {
         ═══════════════════════════════════════════════════════════ */}
         <section id="dates" className="bg-cream py-12 sm:py-16 border-b border-gold/25">
           <div className="container-page max-w-3xl mx-auto">
-            <h2 className={`font-extrabold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+            <h2 className={` text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit font-normal text-3xl sm:text-4xl' : 'font-serif font-bold text-3xl sm:text-4xl'}`}>
               {locale === 'hi' ? 'सिंहस्थ 2028 कब है?' : 'When is Simhastha 2028?'}
             </h2>
 
@@ -486,7 +486,7 @@ export function SimhasthaLanding() {
                   noteHi: 'तीनों शाही स्नान इसी बीच', noteEn: 'All three Shahi Snans fall in here',
                 },
               ].map((row) => (
-                <div key={row.termEn} className="rounded-lg border border-gold/30 bg-white/60 px-4 py-3">
+                <div key={row.termEn} className="rounded-lg border border-gold/40 bg-white/60 px-4 py-3">
                   <dt className="font-serif text-xs uppercase tracking-wider text-ink-soft">
                     {locale === 'hi' ? row.termHi : row.termEn}
                   </dt>
@@ -518,14 +518,14 @@ export function SimhasthaLanding() {
                   {locale === 'hi' ? 'सिंहस्थ 2028 उज्जैन — शाही स्नान तिथियाँ' : 'Simhastha 2028 Ujjain — Shahi Snan dates'}
                 </caption>
                 <thead>
-                  <tr className="border-b-2 border-gold/50">
+                  <tr className="border-b-2 border-gold">
                     <th scope="col" className="py-2.5 pr-4 font-semibold text-maroon">{locale === 'hi' ? 'तिथि' : 'Date'}</th>
                     <th scope="col" className="py-2.5 font-semibold text-maroon">{locale === 'hi' ? 'अवसर' : 'Occasion'}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {SHAHI_SNANS.map((s) => (
-                    <tr key={s.num} className="border-b border-gold/20 align-top">
+                    <tr key={s.num} className="border-b border-gold/25 align-top">
                       <td className={`py-2.5 pr-4 whitespace-nowrap ${s.highlight ? 'font-bold text-maroon' : 'text-ink-soft'}`}>
                         {locale === 'hi' ? s.dateHi : s.dateEn}
                       </td>
@@ -538,7 +538,7 @@ export function SimhasthaLanding() {
               </table>
             </div>
 
-            <p className="mt-5 rounded-lg border border-gold/30 bg-white/60 px-4 py-3 text-sm leading-relaxed text-ink">
+            <p className="mt-5 rounded-lg border border-gold/40 bg-white/60 px-4 py-3 text-sm leading-relaxed text-ink">
               {locale === 'hi'
                 ? 'इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं। इनकी तिथियाँ अभी आधिकारिक रूप से घोषित नहीं हुई हैं — घोषणा होते ही यहाँ अपडेट कर दी जाएँगी।'
                 : 'Seven parv snans are also proposed. Their dates have not been officially announced yet — this page will be updated as soon as they are.'}
@@ -597,10 +597,10 @@ export function SimhasthaLanding() {
         <section id="overview" className="bg-white py-16 sm:py-24 border-b border-cream">
           <div className="container-page max-w-3xl mx-auto">
             <div className="text-center mb-10">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.35em] uppercase mb-3">
                 {locale === 'hi' ? '— परिचय —' : '— Overview —'}
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon leading-tight">
+              <h2 className="font-serif text-4xl sm:text-5xl font-bold text-maroon leading-tight">
                 {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 क्या है?' : 'What is Ujjain Simhastha 2028?'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
@@ -655,10 +655,10 @@ export function SimhasthaLanding() {
         <section id="preparations" className="bg-cream-light py-14 sm:py-20 border-b border-cream-dark">
           <div className="container-page max-w-5xl mx-auto">
             <div className="text-center mb-10">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.35em] uppercase mb-3">
                 {locale === 'hi' ? '— तैयारी —' : '— Preparations —'}
               </p>
-              <h2 className={`font-extrabold text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+              <h2 className={` text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit font-normal text-3xl sm:text-4xl' : 'font-serif font-bold text-3xl sm:text-4xl'}`}>
                 {locale === 'hi' ? 'सिंहस्थ 2028 के लिए उज्जैन में क्या बन रहा है?' : 'What is Ujjain building for Simhastha 2028?'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
@@ -672,8 +672,8 @@ export function SimhasthaLanding() {
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
               {PREP.map((p, i) => (
-                <div key={i} className="rounded-xl border border-gold/30 bg-white px-4 py-5 text-center shadow-sm sm:px-5">
-                  <div className="font-serif text-xl font-extrabold leading-tight text-maroon sm:text-2xl">
+                <div key={i} className="rounded-xl border border-gold/40 bg-white px-4 py-5 text-center shadow-sm sm:px-5">
+                  <div className="font-serif text-xl font-bold leading-tight text-maroon sm:text-2xl">
                     {locale === 'hi' ? p.numHi : p.numEn}
                   </div>
                   <div className="mt-2 text-[12px] leading-snug text-ink-soft sm:text-[13px]">
@@ -686,7 +686,7 @@ export function SimhasthaLanding() {
             <p className="mt-8 text-center text-sm sm:text-base">
               <Link
                 to={`${prefix}/simhastha-2028/simhastha-2028-preparations/`}
-                className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 transition-colors hover:text-saffron"
+                className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 transition-colors hover:text-saffron-700"
               >
                 {locale === 'hi'
                   ? 'पूरी तैयारी — सड़क, हवाई अड्डा, घाट, पेयजल, मंदिर एवं श्रद्धालु-प्रबंधन, लागत और समय-सीमा सहित →'
@@ -703,10 +703,10 @@ export function SimhasthaLanding() {
           <div className="container-page max-w-5xl mx-auto">
 
             <div className="text-center mb-16">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.35em] uppercase mb-3">
                 {locale === 'hi' ? '— तीन पवित्र तिथियाँ —' : '— Three Sacred Dates —'}
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon leading-tight">
+              <h2 className="font-serif text-4xl sm:text-5xl font-bold text-maroon leading-tight">
                 {locale === 'hi' ? 'शाही स्नान 2028' : 'Shahi Snan 2028'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
@@ -729,7 +729,7 @@ export function SimhasthaLanding() {
 
                     {/* Node circle */}
                     <div
-                      className="relative z-10 w-12 h-12 lg:w-12 lg:h-12 rounded-full flex items-center justify-center font-serif font-extrabold text-base transition-all duration-300 group-hover:scale-110"
+                      className="relative z-10 w-12 h-12 lg:w-12 lg:h-12 rounded-full flex items-center justify-center font-serif font-bold text-base transition-all duration-300 group-hover:scale-110"
                       style={snan.highlight ? {
                         background: 'linear-gradient(135deg, #E0C374, #C9A84C)',
                         color: '#1a0404',
@@ -791,10 +791,10 @@ export function SimhasthaLanding() {
         <section id="akhadas" className="bg-cream py-20 sm:py-24 border-b border-cream-dark">
           <div className="container-page max-w-6xl mx-auto">
             <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.35em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.35em] uppercase mb-3">
                 {locale === 'hi' ? '— 13 अखाड़े —' : '— 13 Akhadas —'}
               </p>
-              <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-maroon">
+              <h2 className="font-serif text-4xl sm:text-5xl font-bold text-maroon">
                 {locale === 'hi' ? 'अखाड़ों का परिचय' : 'The 13 Akhadas'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-5 rounded-full" style={{ background: 'linear-gradient(90deg, #D4621A, #C9A84C)' }} />
@@ -838,14 +838,14 @@ export function SimhasthaLanding() {
         {/* ═══════════════════════════════════════════════════════════
             SECTION 5 — PLANNING ESSENTIALS (dark)
         ═══════════════════════════════════════════════════════════ */}
-        <section id="planning" className="py-20 sm:py-28 border-b border-gold/15" style={{ background: 'linear-gradient(160deg, #200505 0%, #2f0707 50%, #1a0404 100%)' }}>
+        <section id="planning" className="py-20 sm:py-28 border-b border-gold/25" style={{ background: 'linear-gradient(160deg, #200505 0%, #2f0707 50%, #1a0404 100%)' }}>
           <div className="container-page max-w-5xl mx-auto">
 
             <div className="text-center mb-14">
               <p className="text-gold/60 font-serif text-sm tracking-[0.35em] uppercase mb-3">
                 {locale === 'hi' ? '— यात्रा की तीन आवश्यकताएँ —' : '— Three Essentials —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold" style={{ color: '#E0C374' }}>
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold" style={{ color: '#E0C374' }}>
                 {locale === 'hi' ? 'अभी से योजना बनाएँ' : 'Plan Early, Travel Easy'}
               </h2>
               <div className="w-16 h-px mx-auto mt-5" style={{ background: 'linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent)' }} />
@@ -926,7 +926,7 @@ export function SimhasthaLanding() {
         ═══════════════════════════════════════════════════════════ */}
         <section id="faq" className="py-16 sm:py-20 px-4" style={{ background: 'linear-gradient(180deg, #1a0404 0%, #300707 100%)' }}>
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-serif text-4xl sm:text-5xl font-extrabold text-center mb-10" style={{ color: '#E0C374' }}>
+            <h2 className="font-serif text-4xl sm:text-5xl font-bold text-center mb-10" style={{ color: '#E0C374' }}>
               {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 — अक्सर पूछे जाने वाले प्रश्न' : 'Ujjain Simhastha 2028 — Frequently Asked Questions'}
             </h2>
             <div className="space-y-4">
@@ -959,7 +959,7 @@ export function SimhasthaLanding() {
         {simhasthaGuides.length > 0 && (
           <section id="guides" className="bg-cream py-16 sm:py-20 border-b border-cream-dark">
             <div className="container-page max-w-5xl mx-auto">
-              <h2 className={`text-center font-extrabold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-3xl sm:text-4xl'}`}>
+              <h2 className={`text-center text-maroon ${locale === 'hi' ? 'font-sanskrit font-normal text-3xl sm:text-4xl' : 'font-serif font-bold text-3xl sm:text-4xl'}`}>
                 {locale === 'hi' ? 'सिंहस्थ 2028 — विस्तृत मार्गदर्शिकाएँ' : 'Simhastha 2028 — In-depth Guides'}
               </h2>
               <p className="mt-3 text-center text-sm text-ink-soft sm:text-base">
@@ -974,7 +974,7 @@ export function SimhasthaLanding() {
               {locale === 'hi' && (
                 <p className="mt-4 text-center text-sm sm:text-base">
                   <a href="/hi/simhastha-2028-news/"
-                     className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 hover:text-saffron transition-colors">
+                     className="font-semibold text-maroon underline decoration-gold/60 underline-offset-4 hover:text-saffron-700 transition-colors">
                     सिंहस्थ 2028 समाचार — ताज़ा तैयारी, स्नान और यात्रा अपडेट →
                   </a>
                 </p>
@@ -985,7 +985,7 @@ export function SimhasthaLanding() {
                   <Link
                     key={a.slug}
                     to={`${prefix}${articlePath(a)}`}
-                    className="group flex flex-col rounded-xl border border-gold/30 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-saffron/60 hover:shadow-md"
+                    className="group flex flex-col rounded-xl border border-gold/40 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-saffron/60 hover:shadow-md"
                   >
                     <h3 className={`font-bold text-maroon leading-snug ${locale === 'hi' ? 'font-sanskrit text-lg' : 'font-serif text-base'}`}>
                       {a.title[locale]}
@@ -1024,7 +1024,7 @@ export function SimhasthaLanding() {
           className="bg-cream-light border-t border-gold/25 py-8 sm:py-10"
         >
           <div className="container-page max-w-3xl mx-auto">
-            <div className="rounded-xl border border-gold/30 bg-white/70 px-5 py-4">
+            <div className="rounded-xl border border-gold/40 bg-white/70 px-5 py-4">
               <h2 className={`text-maroon font-bold ${locale === 'hi' ? 'font-sanskrit text-base' : 'font-serif text-base'}`}>
                 {locale === 'hi' ? 'अस्वीकरण' : 'Disclaimer'}
               </h2>

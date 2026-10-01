@@ -191,7 +191,7 @@ export function Home() {
             <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-cream to-cream-dark/40 p-8 sm:p-12 lg:p-16">
               <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-end lg:gap-16">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
                     {t.simhasthaEyebrow} · {t.simhasthaDates}
                   </p>
                   <h2 className={`mt-3 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-4xl sm:text-5xl md:text-6xl leading-[1.05]`}>
@@ -208,7 +208,7 @@ export function Home() {
                         style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
                         {daysLeft.toLocaleString('en-IN')}
                       </span>
-                      <span className="text-sm font-bold uppercase tracking-widest text-saffron-700">
+                      <span className="text-sm font-bold uppercase tracking-widest text-ink-label">
                         {locale === 'hi' ? 'दिन शेष' : 'days left'}
                       </span>
                     </div>
@@ -239,7 +239,7 @@ export function Home() {
         <section id="pujas" style={{ background: 'linear-gradient(to bottom, #FCEFD8 0%, #FBF5EC 100%)' }}>
           <div className="container-page py-16 sm:py-20">
             <div className="text-center mb-10">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
                 {locale === 'hi' ? 'उज्जैन के पारंपरिक अनुष्ठान' : 'Traditional rituals of Ujjain'}
               </p>
               <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
@@ -257,8 +257,8 @@ export function Home() {
                 { slug: 'pitru-dosh-nivaran', hi: 'पितृ दोष निवारण', en: 'Pitru Dosh Nivaran', symbol: '🪔', mantra: 'ॐ पितृभ्यो नमः' },
               ].map((p) => (
                 <Link key={p.slug} to={`${prefix}/puja-in-ujjain/${p.slug}/`}
-                  className="group relative flex flex-col rounded-xl overflow-hidden bg-white border border-gold/30
-                    shadow-sm hover:border-gold/60 transition-all duration-300 hover:-translate-y-1
+                  className="group relative flex flex-col rounded-xl overflow-hidden bg-white border border-gold/40
+                    shadow-sm hover:border-gold transition-all duration-300 hover:-translate-y-1
                     hover:shadow-[0_14px_40px_rgba(139,26,26,0.12)]">
                   <div className="h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
                   <div className="p-6 flex flex-col items-center text-center flex-1">
@@ -292,7 +292,7 @@ export function Home() {
           <div className="container-page py-16 sm:py-20">
             <div className="mb-10 flex items-end justify-between gap-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
                   {t.featuredEyebrow}
                 </p>
                 <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-3xl sm:text-4xl`}>
@@ -329,7 +329,7 @@ export function Home() {
           <div className="container-page py-16 sm:py-20">
             <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
                   {t.section2Eyebrow}
                 </p>
                 <h2 className={`mt-3 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-3xl sm:text-4xl leading-tight`}>
@@ -362,7 +362,7 @@ export function Home() {
                 />
               </a>
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
                   {locale === 'hi' ? 'मान्यता एवं सम्मान' : 'Recognition & Honours'}
                 </p>
                 <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
@@ -376,7 +376,7 @@ export function Home() {
                     : "Our founder Priyanka Shivhare was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing dosh nivaran pujas to devotees across India and Indians living abroad."}
                 </p>
                 <div className="mt-5 grid gap-3 sm:grid-cols-2 max-w-2xl">
-                  <div className="rounded-lg border border-gold/30 bg-white px-4 py-3">
+                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
                     <p className="text-[13px] font-bold text-maroon">
                       {locale === 'hi' ? 'DPIIT पंजीकृत स्टार्टअप' : 'DPIIT-Registered Startup'}
                     </p>
@@ -384,7 +384,7 @@ export function Home() {
                       {locale === 'hi' ? 'भारत सरकार · Startup India पहल' : 'Government of India · Startup India initiative'}
                     </p>
                   </div>
-                  <div className="rounded-lg border border-gold/30 bg-white px-4 py-3">
+                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
                     <p className="text-[13px] font-bold text-maroon">
                       {locale === 'hi' ? 'राष्ट्रीय प्रेस में प्रकाशित' : 'Featured in National Press'}
                     </p>

@@ -70,10 +70,10 @@ function ArticleStatsStrip({ stats }: { stats: StatItem[] }) {
       {stats.map((s, i) => (
         <div
           key={i}
-          className="relative overflow-hidden rounded-2xl bg-maroon-900 border border-gold/30 px-5 py-6 text-center shadow-lg group hover:border-gold/60 transition-all duration-300"
+          className="relative overflow-hidden rounded-2xl bg-maroon-900 border border-gold/40 px-5 py-6 text-center shadow-lg group hover:border-gold transition-all duration-300"
         >
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent" />
-          <p className="font-serif text-3xl sm:text-4xl font-extrabold text-gold leading-none mb-2 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]">
+          <p className="font-serif text-3xl sm:text-4xl font-bold text-gold leading-none mb-2 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]">
             {s.value}
           </p>
           <p className="text-xs sm:text-sm font-semibold text-cream/80 uppercase tracking-wide leading-snug">
@@ -109,7 +109,7 @@ function FaqAccordion({ faqs, locale }: { faqs: FaqItem[]; locale: 'hi' | 'en' }
       <div className="flex items-center gap-4 mb-8">
         <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
         <div className="text-center">
-          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-saffron-700 mb-1">
+          <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-ink-label mb-1">
             {locale === 'hi' ? 'सामान्य प्रश्न' : 'Frequently Asked'}
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl font-bold text-maroon">
@@ -130,7 +130,7 @@ function FaqAccordion({ faqs, locale }: { faqs: FaqItem[]; locale: 'hi' | 'en' }
               className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 isOpen
                   ? 'border-gold bg-white shadow-xl shadow-gold/10'
-                  : 'border-cream bg-white shadow-sm hover:shadow-md hover:border-gold/50'
+                  : 'border-cream bg-white shadow-sm hover:shadow-md hover:border-gold'
               }`}
             >
               <button
@@ -162,7 +162,7 @@ function FaqAccordion({ faqs, locale }: { faqs: FaqItem[]; locale: 'hi' | 'en' }
 
               {isOpen && (
                 <div className="px-6 pb-6 pt-0">
-                  <div className="ml-11 pl-0 border-l-2 border-gold/30 pl-4">
+                  <div className="ml-11 pl-0 border-l-2 border-gold/40 pl-4">
                     <p className="text-ink-soft text-base leading-relaxed">{answer}</p>
                   </div>
                 </div>
@@ -318,7 +318,7 @@ export function ArticleDetail({ category, slug }: Props) {
             </div>
             <div className="relative z-10 text-center px-4 flex flex-col items-center max-w-5xl mx-auto">
               <p className="text-sm sm:text-base font-bold uppercase tracking-widest text-gold mb-4">{cat[locale]}</p>
-              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
                 {article.title[locale]}
               </h1>
               <p className="text-cream text-lg sm:text-xl md:text-2xl font-serif italic max-w-3xl leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] mb-8">
@@ -331,8 +331,8 @@ export function ArticleDetail({ category, slug }: Props) {
 
           /* No-image fallback hero */
           <header className="container-page py-12 text-center">
-            <p className="text-sm font-bold uppercase tracking-widest text-saffron-700 mb-4">{cat[locale]}</p>
-            <h1 className="font-serif text-4xl font-extrabold text-maroon sm:text-5xl md:text-6xl leading-tight mb-6">{article.title[locale]}</h1>
+            <p className="text-sm font-bold uppercase tracking-widest text-ink-label mb-4">{cat[locale]}</p>
+            <h1 className="font-serif text-4xl font-bold text-maroon sm:text-5xl md:text-6xl leading-tight mb-6">{article.title[locale]}</h1>
             <p className="text-lg text-ink-soft sm:text-xl font-serif italic mb-6 max-w-2xl mx-auto leading-relaxed">{article.shortIntro[locale]}</p>
             <div className="flex items-center justify-center gap-4 text-sm text-ink-mute font-medium">
               <span>{locale === 'hi' ? 'प्रकाशित:' : 'Published:'} {article.publishDate}</span>
@@ -381,7 +381,7 @@ export function ArticleDetail({ category, slug }: Props) {
                   <div className="mb-6 flex items-center gap-3">
                     <span className="text-gold font-serif text-2xl leading-none" aria-hidden>ॐ</span>
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-saffron-700 mb-1">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-ink-label mb-1">
                         {locale === 'hi' ? 'पूजा अनुष्ठान' : 'Puja Ceremonies'}
                       </p>
                       <h2 className="font-sanskrit text-2xl font-bold text-maroon leading-none">
@@ -468,7 +468,7 @@ export function ArticleDetail({ category, slug }: Props) {
                       </div>
                     ) : (
                       <div className="bg-cream-dark p-4 flex items-center justify-between border-b border-cream">
-                        <span className="text-xs font-bold uppercase text-saffron-700">{categoryMeta[r.category][locale]}</span>
+                        <span className="text-xs font-bold uppercase text-ink-label">{categoryMeta[r.category][locale]}</span>
                       </div>
                     )}
                     <div className="p-6 flex-1 flex flex-col justify-between">

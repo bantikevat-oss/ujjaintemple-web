@@ -1,5 +1,5 @@
 import { useI18n } from '../../i18n';
-import { ShieldCheck, Sparkles, Building2 } from 'lucide-react';
+import { ShieldCheck, Award, Building2 } from 'lucide-react';
 
 /**
  * TrustStrip — thin signal strip used in header / above hero.
@@ -12,18 +12,18 @@ export function TrustStrip({ variant = 'thin' }: { variant?: 'thin' | 'block' })
     locale === 'hi'
       ? [
           { Icon: ShieldCheck, text: 'DPIIT पंजीकृत स्टार्टअप', sub: 'भारत सरकार मान्यता' },
-          { Icon: Sparkles, text: 'Startup India EIR', sub: 'भारत सरकार से प्रथम अनुदान' },
+          { Icon: Award, text: 'Startup India EIR', sub: 'भारत सरकार से प्रथम अनुदान' },
           { Icon: Building2, text: '12+ वर्षों का अनुभव', sub: 'तीर्थ यात्रा सेवा' },
         ]
       : [
           { Icon: ShieldCheck, text: 'DPIIT-Registered Startup', sub: 'Recognised by Govt of India' },
-          { Icon: Sparkles, text: 'Startup India EIR', sub: 'First grant under EIR scheme — Govt of India' },
+          { Icon: Award, text: 'Startup India EIR', sub: 'First grant under EIR scheme — Govt of India' },
           { Icon: Building2, text: '12+ Years of Experience', sub: 'Pilgrimage Services' },
         ];
 
   if (variant === 'thin') {
     return (
-      <div className="border-b border-gold/30 bg-cream-dark/40">
+      <div className="border-b border-gold/40 bg-cream-dark/40">
         <div className="container-page flex flex-wrap items-center justify-center gap-x-8 gap-y-2 py-2.5 text-xs sm:text-[13px]">
           {items.map(({ Icon, text }, i) => (
             <span key={i} className="flex items-center gap-1.5 text-ink-soft">
@@ -40,7 +40,7 @@ export function TrustStrip({ variant = 'thin' }: { variant?: 'thin' | 'block' })
   return (
     <div className="grid gap-4 sm:grid-cols-3">
       {items.map(({ Icon, text, sub }, i) => (
-        <div key={i} className="flex items-start gap-3 rounded-lg border border-gold/30 bg-white p-4">
+        <div key={i} className="flex items-start gap-3 rounded-lg border border-gold/40 bg-white p-4">
           <Icon className="mt-0.5 h-6 w-6 flex-shrink-0 text-gold" />
           <div>
             <p className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-base' : 'font-serif text-sm'}`}>

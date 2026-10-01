@@ -81,7 +81,7 @@ export function AppHome() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-maroon/30 px-3 py-2 text-xs font-semibold text-maroon hover:bg-maroon-50"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-maroon/30 px-3 py-2 text-xs font-semibold text-maroon hover:bg-cream-dark"
             >
               <CalendarPlus className="h-4 w-4" aria-hidden />
               {hi ? 'रिमाइंडर' : 'Remind me'}
@@ -104,7 +104,7 @@ export function AppHome() {
           { to: appPath(locale, 'plan/'), Icon: Route, hi: 'यात्रा योजना', en: 'Plan a trip', subHi: 'कैब · होटल · टूर', subEn: 'Cab · hotel · tour' },
         ].map((t) => (
           <Link key={t.to} to={t.to} className="rounded-xl border border-gold/40 bg-white p-3 transition-colors hover:border-saffron">
-            <t.Icon className="h-6 w-6 text-saffron-600" aria-hidden />
+            <t.Icon className="h-6 w-6 text-saffron-700" aria-hidden />
             <p className="mt-2 font-semibold leading-tight text-maroon">{hi ? t.hi : t.en}</p>
             <p className="mt-0.5 text-xs text-ink-mute">{hi ? t.subHi : t.subEn}</p>
           </Link>
@@ -146,7 +146,7 @@ export function AppHome() {
             <li key={n.link}>
               {/* Plain <a>: articles are server-rendered PHP, not React routes. */}
               <a href={n.link} className="flex items-start gap-3 rounded-xl border border-gold/40 bg-white p-3 hover:border-saffron">
-                <Newspaper className="mt-0.5 h-5 w-5 shrink-0 text-saffron-600" aria-hidden />
+                <Newspaper className="mt-0.5 h-5 w-5 shrink-0 text-saffron-700" aria-hidden />
                 <span className="min-w-0">
                   <span className="block font-hindi font-semibold leading-snug text-maroon">{n.title}</span>
                   {n.iso && <span className="mt-1 block text-xs text-ink-mute">{formatDate(n.iso, locale)}</span>}

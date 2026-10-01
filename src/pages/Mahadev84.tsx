@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Printer, Search, Sparkles } from 'lucide-react';
+import { MapPin, Printer, Search } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { LeadForm } from '../components/global/LeadForm';
@@ -53,13 +53,11 @@ export function Mahadev84Page() {
         {/* HERO */}
         <section className="relative overflow-hidden bg-gradient-to-b from-maroon-900 via-maroon-800 to-maroon-700 py-16 sm:py-24">
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/4 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" />
-            <div className="absolute right-1/4 bottom-0 h-72 w-72 translate-x-1/2 rounded-full bg-saffron/10 blur-3xl" />
           </div>
           <div className="container-page relative z-10">
             <div className="mx-auto max-w-3xl text-center">
               <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-                <Sparkles className="h-3.5 w-3.5" /> {locale === 'hi' ? '॥ चौरासी महादेव यात्रा ॥' : '✦ Chaurasi Mahadev Parikrama ✦'}
+                {locale === 'hi' ? '॥ चौरासी महादेव यात्रा ॥' : '✦ Chaurasi Mahadev Parikrama ✦'}
               </p>
               <h1 className={`mt-4 font-bold leading-tight text-cream ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-4xl sm:text-5xl md:text-6xl'}`}>
                 {locale === 'hi' ? 'उज्जैन के 84 महादेव' : 'The 84 Mahadev of Ujjain'}
@@ -230,7 +228,7 @@ export function Mahadev84Page() {
 
           {/* Editor's note */}
           <aside className="mt-12 rounded-xl border-l-4 border-gold bg-cream-dark/40 p-5 sm:p-6">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-saffron-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-label">
               {locale === 'hi' ? 'सम्पादक की टिप्पणी' : "Editor’s Note"}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">

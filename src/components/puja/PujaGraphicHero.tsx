@@ -340,7 +340,7 @@ export function PujaGraphicHero({ article, locale, catLabel }: Props) {
         {/* Category pill */}
         <div className="mb-6 flex items-center gap-3">
           <OmSVG />
-          <span className="rounded-full border border-gold/55 bg-black/35 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.28em] text-gold backdrop-blur-sm">
+          <span className="rounded-full border border-gold bg-black/35 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.28em] text-gold backdrop-blur-sm">
             {catLabel} · {locale === 'hi' ? 'महाकालेश्वर उज्जैन' : 'Mahakaleshwar Ujjain'}
           </span>
         </div>
@@ -406,7 +406,7 @@ export function PujaGraphicHero({ article, locale, catLabel }: Props) {
             ].map((s, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2.5 rounded-lg border border-gold/35 bg-black/45 px-4 py-2.5 backdrop-blur-sm"
+                className="flex items-center gap-2.5 rounded-lg border border-gold/40 bg-black/45 px-4 py-2.5 backdrop-blur-sm"
               >
                 <span className="text-gold text-sm">{s.icon}</span>
                 <div>

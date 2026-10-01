@@ -28,7 +28,13 @@ export type MandirListItem = Pick<
   | 'deity'
   | 'locationArea'
   | 'darshanTimingSummary'
->;
+> & {
+  /**
+   * Straight-line km from Mahakaleshwar, pre-computed by the generator so the
+   * coordinates and the haversine never ship. Absent only if a record has no `geo`.
+   */
+  kmFromMahakal?: number;
+};
 
 /** Pre-sorted by the generator: Mahakaleshwar first, then featured, then A-Z (en). */
 export const mandirList = indexJson as MandirListItem[];

@@ -64,7 +64,7 @@ export function FestivalCalendar() {
         {/* Header */}
         <div className="mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
               {isHi ? 'पर्व · त्यौहार · उत्सव' : 'Festivals & Sacred Events'}
             </p>
             <h2
@@ -92,7 +92,7 @@ export function FestivalCalendar() {
             return (
               <li
                 key={`${p.date}-${p.en}`}
-                className="group flex items-start gap-4 sm:gap-6 rounded-2xl border border-gold/20
+                className="group flex items-start gap-4 sm:gap-6 rounded-2xl border border-gold/25
                   bg-cream/50 p-5 sm:p-6 hover:border-gold/40 hover:bg-cream
                   transition-all duration-200 hover:shadow-sm"
               >

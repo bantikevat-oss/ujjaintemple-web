@@ -21,6 +21,27 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.ujjaintemple\.com [NC]
 RewriteRule ^(.*)$ https://ujjaintemple.com/$1 [L,R=301]
 
+# ── Slug near-misses that Google ranks and this server 404s ──────────────────
+# SEO-AUDIT-2026-09-30 defect D1, recommendation R1. Google indexed a slug variant
+# that either never existed or was renamed, and the 301 was never written — so the
+# ranking is real and the page behind it is a 404.
+#
+#   /hi/…/best-places-to-visit-in-ujjain/   190 impressions at position 2.8
+#   /mandirs/pingleshwar-mandir/             15 impressions at position 1.0
+#
+# All three re-verified against production on 2026-10-02: the old paths return 404,
+# the targets return 200. Purely additive — no existing URL changes behaviour, which
+# is what keeps this inside the G1 zero-regression gate (audit also cleared G7).
+#
+# Deliberately NOT redirected: the nested crawl-artifact paths
+# (…/best-places-to-visit-ujjain/beast-places-to-visit-ujjain/ and friends). They
+# carry 1–9 impressions each, are the residue of an old relative-link bug, and a true
+# 404 is the correct answer for a URL that should never have existed. Adding 301s for
+# garbage teaches Google the garbage is real.
+Redirect 301 /hi/tour-and-travel-ujjain/best-places-to-visit-in-ujjain/ /hi/tour-and-travel-ujjain/best-places-to-visit-ujjain/
+Redirect 301 /mandirs/pingleshwar-mandir/ /mandirs/pingleshwar-mahadev/
+Redirect 301 /hi/mandirs/pingleshwar-mandir/ /hi/mandirs/pingleshwar-mahadev/
+
 # ── News engine internals — deny direct access ──
 # Only /news/index.php is ever requested (the rewrites further down route the
 # public URLs to it). Everything else under news/ is includes, SQL and templates.

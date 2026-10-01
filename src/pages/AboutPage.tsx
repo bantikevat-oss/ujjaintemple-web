@@ -111,7 +111,7 @@ export function AboutPage() {
           <div className="container-page py-16 sm:py-20">
             <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16 items-start">
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
                   {t.missionEye}
                 </p>
                 <h2 className={`font-bold text-maroon ${isHi ? 'font-sanskrit' : 'font-serif'} text-2xl sm:text-3xl leading-tight`}>
@@ -129,13 +129,13 @@ export function AboutPage() {
         {/* Values */}
         <section className="bg-cream">
           <div className="container-page py-16 sm:py-20">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
               {t.valuesEye}
             </p>
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
               {t.values.map((v, i) => (
                 <div key={i}
-                  className="group relative flex flex-col rounded-2xl bg-white border border-gold/20
+                  className="group relative flex flex-col rounded-2xl bg-white border border-gold/25
                     p-7 hover:border-gold/40 hover:shadow-md transition-all duration-300">
                   <div className="absolute inset-x-0 top-0 h-[2px] rounded-t-2xl opacity-0
                     group-hover:opacity-100 transition-opacity duration-300
@@ -168,7 +168,7 @@ export function AboutPage() {
                 />
               </a>
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+                <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
                   {t.govEye}
                 </p>
                 <h2 className={`font-bold text-maroon mb-4 ${isHi ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
@@ -183,7 +183,7 @@ export function AboutPage() {
         {/* Team */}
         <section className="bg-cream">
           <div className="container-page py-14 sm:py-16 max-w-3xl">
-            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-2">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
               {t.teamEye}
             </p>
             <h2 className={`font-bold text-maroon mt-1 mb-5 ${isHi ? 'font-sanskrit text-2xl' : 'font-serif text-xl'}`}>

@@ -1,5 +1,5 @@
 import { useI18n } from '../../i18n';
-import { Users, MapPin, Headphones, Sparkles } from 'lucide-react';
+import { Users, MapPin, Headphones, Route } from 'lucide-react';
 
 const REASONS = [
   {
@@ -32,7 +32,7 @@ const REASONS = [
     statLabel: 'Support',
   },
   {
-    Icon: Sparkles,
+    Icon: Route,
     color: '#c2410c',
     bg: 'rgba(194,65,12,0.08)',
     titleHi: 'व्यक्तिगत यात्रा योजना',
@@ -53,7 +53,7 @@ export function WhyUjjainTemple() {
       <div className="container-page py-16 sm:py-20">
         {/* Header */}
         <div className="mb-10 text-center">
-          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-saffron-700 mb-3">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-3">
             {isHi ? 'हम क्यों?' : 'Why Us'}
           </p>
           <h2
@@ -72,8 +72,8 @@ export function WhyUjjainTemple() {
           {REASONS.map((r, i) => (
             <div
               key={i}
-              className="group relative flex flex-col rounded-2xl bg-white border border-gold/20
-                p-7 hover:border-gold/50 hover:shadow-lg transition-all duration-300
+              className="group relative flex flex-col rounded-2xl bg-white border border-gold/25
+                p-7 hover:border-gold hover:shadow-lg transition-all duration-300
                 hover:-translate-y-0.5"
             >
               {/* Top accent */}

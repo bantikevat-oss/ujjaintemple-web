@@ -1,10 +1,10 @@
-import { Sparkles, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Layout } from '../../components/global/Layout';
 import { SEOHead } from '../../components/global/SEOHead';
 import { LeadForm } from '../../components/global/LeadForm';
 import { AppPromo } from '../../components/shared/AppPromo';
 import { MandirCard } from '../../components/mandir/MandirCard';
-import { MandirRow } from '../../components/mandir/MandirRow';
+import { MandirRow, AREA_HI } from '../../components/mandir/MandirRow';
 import { Breadcrumb } from '../../components/global/Breadcrumb';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../../i18n';
@@ -89,6 +89,34 @@ export function MandirIndex() {
   // "total temples in ujjain" pos 6.2, "list of temples in ujjain" pos 8.0) while the
   // page never states the answer in one place. Same gap the Simhastha date block
   // closed: rank without an answer earns impressions, not clicks.
+  // R2 cut 1 — walking bands. Only the sub-kilometre temples: past that it stops being a
+  // walk and the claim stops being useful. `kmFromMahakal` is pre-computed by
+  // scripts/content-index-gen.mjs so no coordinates ship (see data/mandirs-index.ts).
+  const walkable = mandirs
+    .filter((m) => typeof m.kmFromMahakal === 'number' && (m.kmFromMahakal as number) <= 1)
+    .sort((a, b) => (a.kmFromMahakal as number) - (b.kmFromMahakal as number));
+  const walkBands = [
+    { key: 'inner', max: 0.5, label: { hi: '500 मीटर के भीतर', en: 'Under 500 m' } },
+    { key: 'outer', max: 1, label: { hi: '500 मीटर – 1 किमी', en: '500 m – 1 km' } },
+  ]
+    .map((b, i, arr) => ({
+      ...b,
+      items: walkable.filter(
+        (m) => (m.kmFromMahakal as number) <= b.max && (i === 0 || (m.kmFromMahakal as number) > arr[i - 1].max),
+      ),
+    }))
+    .filter((b) => b.items.length > 0);
+
+  // R2 cut 2 — by area, biggest first.
+  const areaCounts = mandirs.reduce<Record<string, number>>((acc, m) => {
+    const a = typeof m.locationArea === 'string' ? m.locationArea : (m.locationArea as { en?: string })?.en;
+    if (a) acc[a] = (acc[a] ?? 0) + 1;
+    return acc;
+  }, {});
+  const byArea = Object.entries(areaCounts)
+    .map(([area, count]) => ({ area, count }))
+    .sort((a, b) => b.count - a.count);
+
   const countOf = (cat: string) => grouped.find((g) => g.cat === cat)?.items.length ?? 0;
   const breakdown = (
     [
@@ -180,13 +208,11 @@ export function MandirIndex() {
         {/* HERO — rich maroon gradient */}
         <section className="relative overflow-hidden bg-gradient-to-b from-maroon-900 via-maroon-800 to-maroon-700 py-14 sm:py-20">
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/4 top-0 h-64 w-64 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" />
-            <div className="absolute right-1/4 bottom-0 h-64 w-64 translate-x-1/2 rounded-full bg-saffron/10 blur-3xl" />
           </div>
           <div className="container-page relative z-10">
             <div className="mx-auto max-w-3xl text-center">
               <p className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-gold">
-                <Sparkles className="h-3.5 w-3.5" /> {locale === 'hi' ? '॥ उज्जैन दर्शन सूची ॥' : '✦ Ujjain Darshan List ✦'}
+                {locale === 'hi' ? '॥ उज्जैन दर्शन सूची ॥' : '✦ Ujjain Darshan List ✦'}
               </p>
               <h1 className={`mt-4 font-bold text-cream leading-tight ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-4xl sm:text-5xl md:text-6xl'}`}>
                 {locale === 'hi' ? 'उज्जैन के मंदिर' : 'Temples in Ujjain'}
@@ -210,11 +236,10 @@ export function MandirIndex() {
           <div className="container-page py-4">
             <Link
               to={`${prefix}/84-mahadev-ujjain/`}
-              className="group flex flex-col items-start justify-between gap-2 rounded-xl border border-gold/30 bg-white px-5 py-4 shadow-sm transition-all hover:border-saffron/50 hover:shadow-md sm:flex-row sm:items-center"
+              className="group flex flex-col items-start justify-between gap-2 rounded-xl border border-gold/40 bg-white px-5 py-4 shadow-sm transition-all hover:border-saffron/50 hover:shadow-md sm:flex-row sm:items-center"
             >
               <span className="flex items-center gap-2 text-sm text-ink-soft">
-                <Sparkles className="h-4 w-4 text-saffron-700" />
-                {locale === 'hi'
+                                {locale === 'hi'
                   ? 'उज्जैन के 84 महादेव (चौरासी महादेव) की पूरी सूची भी देखें'
                   : 'Also see the complete list of the 84 Mahadev (Chaurasi Mahadev) of Ujjain'}
               </span>
@@ -239,7 +264,7 @@ export function MandirIndex() {
                 Kept short and stated once, high on the page, so it can be lifted as a
                 featured snippet. The number is honest about what it counts: Ujjain has
                 no official temple total, and claiming one would be a fabricated figure. */}
-            <section id="how-many" className="mt-8 scroll-mt-24 rounded-xl border border-gold/30 bg-cream-dark/30 p-5 sm:p-6">
+            <section id="how-many" className="mt-8 scroll-mt-24 rounded-xl border border-gold/40 bg-cream-dark/30 p-5 sm:p-6">
               <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
                 {locale === 'hi' ? 'उज्जैन में कितने मंदिर हैं?' : 'How many temples are there in Ujjain?'}
               </h2>
@@ -272,11 +297,82 @@ export function MandirIndex() {
           </div>
         </section>
 
+        {/*
+          TWO MORE WAYS INTO THE SAME 183 — SEO-AUDIT-2026-09-30 recommendation R2.
+          The deity cut below already works: after the deity-list pages shipped (ef56bb0)
+          this hub went 5,970 → 16,513 impressions and 45 → 136 clicks in 17 days. The
+          list family around it still sits at positions 6–12 — `ujjain mandir list` 307
+          impressions at 8.0, `ujjain main mandir list` 275 at 6.7, `ujjain me kon kon se
+          mandir hai` 214 at 7.3 — and list intent is the one thing Google cannot answer
+          in a snippet, because there is no 183-item answer box.
+
+          🔴 Deliberately NOT another pass at the bare `ujjain mandir` term (1,441
+          impressions, position 12.1). KIT §9: page 2 → page 1 is an authority gap, and
+          on-page work does not buy it. That term already survived one rewrite.
+
+          Additive only — no existing URL, heading or link changes, which is what keeps
+          this inside G1.
+        */}
+        <section className="container-page pb-2">
+          {/* BY WALKING DISTANCE. The real question behind "ujjain mandir list" is which
+              temples fit into one morning on foot, and 114 of the 183 are inside a
+              kilometre of Mahakaleshwar. The distance is the new information here — it is
+              not stated anywhere else on the site. */}
+          <div id="paidal-duri" className="scroll-mt-24 rounded-xl border border-gold/40 bg-white p-5 sm:p-6">
+            <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+              {locale === 'hi' ? 'महाकालेश्वर से पैदल दूरी पर' : 'Within walking distance of Mahakaleshwar'}
+            </h2>
+            <p className="mt-2 max-w-prose text-sm leading-relaxed text-ink-soft">
+              {locale === 'hi'
+                ? `उज्जैन के ${walkBands.reduce((n, b) => n + b.items.length, 0)} मंदिर महाकालेश्वर से 1 किमी के भीतर हैं — एक ही सुबह में पैदल दर्शन हो सकते हैं। दूरी सीधी रेखा में है, पैदल रास्ता थोड़ा अधिक पड़ेगा।`
+                : `${walkBands.reduce((n, b) => n + b.items.length, 0)} of Ujjain's temples sit within 1 km of Mahakaleshwar — one morning covers them on foot. Distances are straight-line; the walk is a little longer.`}
+            </p>
+            {walkBands.map((band) => (
+              <div key={band.key} className="mt-5">
+                <p className="mb-2 text-[11px] uppercase tracking-[0.18em] text-ink-label">
+                  {band.label[locale]} <span className="text-ink-mute">({band.items.length})</span>
+                </p>
+                <ul className="columns-1 gap-x-6 sm:columns-2 lg:columns-3">
+                  {band.items.map((m) => (
+                    <li key={m.slug} className="break-inside-avoid py-1 text-sm">
+                      <Link to={`${prefix}/mandirs/${m.slug}/`} className="text-maroon hover:underline">
+                        {m.name[locale]}
+                      </Link>
+                      <span className="ml-1.5 text-xs text-ink-mute">
+                        {m.kmFromMahakal === 0
+                          ? (locale === 'hi' ? 'परिसर' : 'on site')
+                          : `${Math.round((m.kmFromMahakal ?? 0) * 1000)} m`}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* BY AREA. Answers "<area> me kaun sa mandir" and gives the hub a second
+              crawlable axis. Counts only, linking into the deity anchors — re-listing all
+              183 a third time would add DOM without adding information. */}
+          <div id="kshetra" className="mt-6 scroll-mt-24 rounded-xl border border-gold/25 bg-cream-dark p-5 sm:p-6">
+            <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+              {locale === 'hi' ? 'क्षेत्र के अनुसार मंदिर' : 'Temples by area of Ujjain'}
+            </h2>
+            <ul className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+              {byArea.map(({ area, count }) => (
+                <li key={area} className="flex items-baseline justify-between gap-3 border-b border-cream-dark/80 py-1.5 text-sm">
+                  <span className="text-ink">{locale === 'hi' ? AREA_HI[area] ?? area : area}</span>
+                  <span className="shrink-0 text-xs text-ink-mute">{count}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* GRID — grouped by deity */}
         <section className="container-page py-10 sm:py-14">
           {grouped.map(({ cat, items }) => (
             <div key={cat} className="mb-12 scroll-mt-24 last:mb-0" id={slugifyCategory(cat)}>
-              <h2 className={`mb-5 border-b border-gold/30 pb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
+              <h2 className={`mb-5 border-b border-gold/40 pb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
                 {CATEGORY_LABEL[cat][locale]}
                 <span className="ml-2 align-middle text-sm font-normal text-ink-soft">({items.length})</span>
                 {CATEGORY_PAGE[cat] && (
@@ -308,7 +404,7 @@ export function MandirIndex() {
           {/* FAQ — feeds FAQPage schema and covers the "famous temples" / "which
               Jyotirlinga" / "how many days" intents that land on this hub. */}
           <section id="faq" className="mt-12 scroll-mt-24 mx-auto max-w-3xl">
-            <h2 className={`mb-5 border-b border-gold/30 pb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
+            <h2 className={`mb-5 border-b border-gold/40 pb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
               {locale === 'hi' ? 'उज्जैन के मंदिर — अक्सर पूछे जाने वाले प्रश्न' : 'Temples in Ujjain — Frequently Asked Questions'}
             </h2>
             <dl className="space-y-5">
@@ -327,7 +423,7 @@ export function MandirIndex() {
 
           {/* Editor's note — institutional human voice */}
           <aside className="mt-12 rounded-xl border-l-4 border-gold bg-cream-dark/40 p-5 sm:p-6">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-saffron-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-label">
               {locale === 'hi' ? 'सम्पादक की टिप्पणी' : "Editor’s Note"}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">

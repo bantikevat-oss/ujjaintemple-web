@@ -40,6 +40,12 @@ export default {
           DEFAULT: '#1A1A1A',
           soft: '#3A3A3A',
           mute: '#6B6B6B',
+          // Eyebrow / label tone, added 2026-10-02. Hue 26 deg keeps it inside this
+          // palette's warm family; saturation 13% against maroon's 68% and saffron's
+          // 70% is the whole point — a label that shouts competes with the heading
+          // under it. Passes 4.5:1 on cream (5.85), cream-dark (5.12) and white (6.34),
+          // which ink-mute #6B6B6B did NOT (4.31 on cream-dark).
+          label: '#6B5D52',
         },
         // Status colors — DEEP BLUE (never green)
         statusOpen: '#1A56A0',

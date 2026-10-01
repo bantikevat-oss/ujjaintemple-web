@@ -235,14 +235,14 @@ export function TransportLanding() {
           <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 70%)' }} />
 
           <div className="relative z-10 container-page max-w-4xl mx-auto text-center flex flex-col items-center gap-6 px-4">
-            <div className="inline-flex items-center gap-2 border border-gold/30 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
+            <div className="inline-flex items-center gap-2 border border-gold/40 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-gold-light" />
               <span className="text-gold-light font-serif tracking-[0.25em] uppercase text-xs sm:text-sm">
                 {locale === 'hi' ? 'पूरी यातायात मार्गदर्शिका' : 'Complete Transport Guide'}
               </span>
             </div>
 
-            <h1 className="font-serif font-extrabold text-white leading-tight" style={{ fontSize: 'clamp(2.2rem, 6vw, 4.5rem)' }}>
+            <h1 className="font-serif font-bold text-white leading-tight" style={{ fontSize: 'clamp(2.2rem, 6vw, 4.5rem)' }}>
               {locale === 'hi'
                 ? 'उज्जैन कैसे पहुंचें?'
                 : 'How to Reach Ujjain?'}
@@ -291,7 +291,7 @@ export function TransportLanding() {
                 <div key={r.fromEn}
                   className="flex flex-col items-center text-center p-4 rounded-xl border"
                   style={{ background: 'rgba(48,7,7,0.7)', borderColor: `${r.color}35` }}>
-                  <span className="font-serif font-extrabold text-xl mb-1" style={{ color: r.color }}>
+                  <span className="font-serif font-bold text-xl mb-1" style={{ color: r.color }}>
                     {locale === 'hi' ? r.fromHi : r.fromEn}
                   </span>
                   <span className="text-gold-light font-bold text-2xl">{r.km} <span className="text-sm font-normal text-cream/50">km</span></span>
@@ -345,10 +345,10 @@ export function TransportLanding() {
         <section className="bg-cream-light py-16 sm:py-24 border-b border-cream-dark">
           <div className="container-page max-w-6xl mx-auto">
             <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— कैसे पहुंचें —' : '— How to Get Here —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-maroon">
                 {locale === 'hi' ? 'यातायात के साधन' : 'Transport Options'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -368,7 +368,7 @@ export function TransportLanding() {
                         <Icon className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-serif text-xl font-extrabold" style={{ color: m.color }}>
+                        <h3 className="font-serif text-xl font-bold" style={{ color: m.color }}>
                           {locale === 'hi' ? m.titleHi : m.titleEn}
                         </h3>
                         <p className="text-xs text-ink-mute flex items-center gap-1 mt-0.5">
@@ -399,10 +399,10 @@ export function TransportLanding() {
         <section className="bg-white py-16 sm:py-24 border-b border-cream">
           <div className="container-page max-w-5xl mx-auto">
             <div className="text-center mb-14">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— शहर के अंदर —' : '— Within the City —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon">
                 {locale === 'hi' ? 'उज्जैन में लोकल यातायात' : 'Local Transport in Ujjain'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -460,7 +460,7 @@ export function TransportLanding() {
               <span className="text-gold animate-pulse">⚠</span>
               <span className="text-gold-light text-sm font-serif tracking-[0.2em] uppercase">Simhastha 2028</span>
             </div>
-            <h2 className="font-serif font-extrabold leading-tight" style={{ fontSize: 'clamp(1.6rem,4vw,2.8rem)', color: '#E0C374' }}>
+            <h2 className="font-serif font-bold leading-tight" style={{ fontSize: 'clamp(1.6rem,4vw,2.8rem)', color: '#E0C374' }}>
               {locale === 'hi'
                 ? 'सिंहस्थ 2028 यातायात — अभी से तैयारी करें'
                 : 'Simhastha 2028 Transport — Plan Right Now'}
@@ -492,10 +492,10 @@ export function TransportLanding() {
         <section className="bg-cream-light py-16 sm:py-24 border-b border-cream-dark">
           <div className="container-page max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— अक्सर पूछे जाने वाले प्रश्न —' : '— Frequently Asked Questions —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon">
                 {locale === 'hi' ? 'यात्रा के सामान्य प्रश्न' : 'Travel FAQs'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -509,7 +509,7 @@ export function TransportLanding() {
                     className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 hover:bg-cream/30 transition-colors"
                   >
                     <span className="font-serif font-bold text-base sm:text-lg text-maroon leading-snug">{faq.q}</span>
-                    <ChevronDown className={`w-5 h-5 text-saffron flex-shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-5 h-5 text-saffron-700 flex-shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 pb-6 pt-2 text-ink-soft text-sm sm:text-base leading-relaxed font-serif border-t border-cream animate-fade-in">

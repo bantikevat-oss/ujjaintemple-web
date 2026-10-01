@@ -1,4 +1,4 @@
-import { Phone, MapPin, Clock, Sparkles, Camera, Car, Users, Lightbulb, Star, Info, ChevronRight } from 'lucide-react';
+import { Phone, MapPin, Clock, Bell, Camera, Car, Users, Lightbulb, Star, Info, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Layout } from '../../components/global/Layout';
 import { SEOHead } from '../../components/global/SEOHead';
@@ -12,6 +12,7 @@ import { ShareButtons } from '../../components/shared/ShareButtons';
 import { useI18n } from '../../i18n';
 import { mandirBySlug, getNearbyMandirs } from '../../data/mandirs';
 import { SITE } from '../../lib/site';
+import { TITLE_MAX, isTitleNoRewrite } from '../../lib/seo';
 import { placeOfWorshipSchema, breadcrumbSchema, faqSchema } from '../../lib/schemas';
 
 interface DetailProps { slug: string; }
@@ -24,6 +25,51 @@ interface DetailProps { slug: string; }
  * hours; the rest of the hand-written copy follows in whatever room is left.
  */
 const META_MAX = 165;
+
+/**
+ * The 2026-08-14 pass put the real hours into the <meta description> and that was only
+ * half the fix: Google renders a <title> very nearly verbatim but rewrites descriptions
+ * most of the time, so on "<temple> timings" — still this site's biggest query family —
+ * the answer was in the one element the SERP is free to throw away. Measured 2026-10-01
+ * (GSC 08-30→09-27): 42 pages sit at position 5.0–9.0 with >=1000 impressions and their
+ * CTR ranges from 3.83% down to 0.04% — a 96x spread at the SAME ranking, so the title
+ * is the variable, not the position. The three best in that band all put a concrete
+ * number in the title; the timing pages promised a category ("Timings, Aarti, History")
+ * and showed no time.
+ *
+ * So compact the timing enough to sit in a title: "लगभग प्रातः 6:00 – रात्रि 9:00"
+ * becomes "प्रातः 6–रात्रि 9". Minutes are kept only when they are not :00, because
+ * "6:00" buys nothing over "6" and the pixels belong to the keyword.
+ *
+ * 🔴 The "लगभग"/"Approx." hedge is NOT dropped — it moves to the end of the title.
+ * The locked content rule on this site is that no timing may be stated as exact, and a
+ * title is the most prominent place that rule has to hold, not the first place to bend it.
+ *
+ * Returns null when the string is not a plain range (Mahakal Lok is "open all day",
+ * Nagchandreshwar opens only on Nag Panchami). Those keep their existing title rather
+ * than get a fabricated range.
+ */
+const HI_PART = 'प्रातः|सुबह|सायं|शाम|दोपहर|रात्रि|रात';
+
+export function compactTiming(timing: string | undefined, locale: 'hi' | 'en'): string | null {
+  const t = (timing ?? '').trim();
+  if (!t) return null;
+
+  if (locale === 'hi') {
+    const m = t.match(
+      new RegExp(`^लगभग\\s+(${HI_PART})\\s*(\\d{1,2}):(\\d{2})\\s*[–-]\\s*(${HI_PART})\\s*(\\d{1,2}):(\\d{2})`),
+    );
+    if (!m) return null;
+    const part = (word: string, hour: string, min: string) => `${word} ${hour}${min === '00' ? '' : `:${min}`}`;
+    return `${part(m[1], m[2], m[3])}–${part(m[4], m[5], m[6])}`;
+  }
+
+  const m = t.match(/^Approx\.\s*(\d{1,2}):(\d{2})\s*(AM|PM)\s*[–-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if (!m) return null;
+  const part = (hour: string, min: string, mer: string) =>
+    `${hour}${min === '00' ? '' : `:${min}`} ${mer.toUpperCase()}`;
+  return `${part(m[1], m[2], m[3])}–${part(m[4], m[5], m[6])}`;
+}
 
 function leadWithTiming(name: string, timing: string, base: string, locale: 'hi' | 'en', facts?: { aarti?: string; entry?: string }) {
   const head = locale === 'hi'
@@ -126,9 +172,9 @@ const CROWD_EN: Record<string, string> = {
 };
 const CROWD_COLOR: Record<string, string> = {
   low: 'bg-blue-50 text-blue-700',
-  moderate: 'bg-saffron-50 text-saffron-700',
+  moderate: 'bg-cream-dark text-saffron-700',
   high: 'bg-orange-50 text-orange-700',
-  'very-high': 'bg-maroon-50 text-maroon',
+  'very-high': 'bg-cream-dark text-maroon',
 };
 
 // ── Related-puja internal-link map (SEO: passes authority to high-value puja money pages) ──
@@ -175,9 +221,39 @@ export function MandirDetail({ slug }: DetailProps) {
   const withCityEn = /\bUjjain\b/i.test(nameEn) ? nameEn : `${nameEn} Ujjain`;
   // Phone number dropped from <title>: Google rewrites titles carrying one, and it
   // burns SERP pixel width that the keyword needs. It stays in the description + CTAs.
-  const title = mandir.seoTitle?.[locale] ?? (locale === 'hi'
+  // The generic suffix ("…, आरती, इतिहास व कैसे पहुँचें") cost ~30 characters and told
+  // the searcher nothing they had not already typed. Spend those characters on the hours
+  // instead; keep the exact-match head term ("<temple> उज्जैन") first, because that is
+  // what ranks and none of this is worth a position.
+  //
+  // Two constraints shape the exact wording, both learned the hard way in this session:
+  //
+  // 1. The hedge goes BEFORE the number ("दर्शन लगभग 6–9", not "दर्शन 6–9 (लगभग)").
+  //    A trailing "(लगभग)" is the first thing a truncating SERP drops, and a timing that
+  //    loses its hedge is worse than one that never showed — it becomes an exact claim,
+  //    which this site's content rules forbid.
+  // 2. No comma in the suffix, and the whole thing must fit TITLE_MAX natively.
+  //    clampTitle() shortens a comma-separated promise list from the right and, failing
+  //    that, falls back to the subject alone — so an over-budget "…— दर्शन लगभग X, आरती"
+  //    would have been clamped down to just the temple name and lost the timing entirely.
+  //    Long names (the 84-Mahadev tail runs to 48 chars in English) therefore keep the
+  //    generic title rather than get a half-rendered one.
+  const generic = locale === 'hi'
     ? `${withCityHi} — दर्शन समय, आरती, इतिहास व कैसे पहुँचें`
-    : `${withCityEn} — Darshan Timings, Aarti, History & How to Reach`);
+    : `${withCityEn} — Darshan Timings, Aarti, History & How to Reach`;
+  // G2: a page already earning ≥50 clicks/28d keeps the title it earns with. This change
+  // is a hypothesis about CTR, and the pages with the most to lose are exactly the ones
+  // where it must not be tested blind — they get measured first, rewritten later.
+  const shortTiming = isTitleNoRewrite(path, locale)
+    ? null
+    : compactTiming(mandir.darshanTimingSummary[locale], locale);
+  const withTiming = shortTiming
+    ? (locale === 'hi'
+        ? `${withCityHi} — दर्शन लगभग ${shortTiming}`
+        : `${withCityEn} — Darshan approx. ${shortTiming}`)
+    : null;
+  const title = mandir.seoTitle?.[locale]
+    ?? (withTiming && withTiming.length <= TITLE_MAX ? withTiming : generic);
   const nameForMeta = locale === 'hi' ? withCityHi : withCityEn;
   const description = leadWithTiming(
     nameForMeta,
@@ -219,29 +295,62 @@ export function MandirDetail({ slug }: DetailProps) {
         ]} />
 
         {/* ── HERO (text-only — image moved into content below) ── */}
-        <header className="relative overflow-hidden border-b-4 border-gold bg-maroon-900">
-          <div className="absolute inset-0 bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900" />
-          <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-          <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-saffron/10 blur-3xl" />
-          <div className="relative container-page py-14 sm:py-16">
+        {/*
+          HERO — rebuilt 2026-10-02 (Aman: "ek dum premium, AI jaise na dikhe").
+          What was here read as machine-made, and specifically so:
+            · `bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900` — a gradient
+              that starts and ends on the SAME colour. It carried no information and no
+              light direction; it was texture for its own sake.
+            · two `blur-3xl` rounded blobs bled into the corners — the single most
+              recognisable "generated layout" signature on the web right now.
+            · `bg-white/15 backdrop-blur-sm` glass chips and `rounded-full` pills, which a
+              print editor would never reach for to label a temple.
+          Replaced with the devices a real editorial page uses: one flat ink field, a
+          hairline rule, letter-spaced small caps for the standfirst, and type doing the
+          hierarchy instead of boxes. Nothing here is decoration that could be deleted
+          without losing meaning — that is the whole test.
+        */}
+        <header className="relative border-b border-gold/40 bg-maroon-900">
+          <div className="container-page py-16 sm:py-20">
             <div className="max-w-3xl">
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-gold text-maroon-900 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-widest shadow">{typeLabel}</span>
-                <span className="bg-white/15 backdrop-blur-sm text-white rounded-full px-3 py-1 text-[11px] font-semibold">{areaLabel}</span>
-              </div>
-              <h1 className={`font-extrabold text-white leading-tight mb-2 ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-3xl sm:text-5xl md:text-6xl'}`}>
+              {/* Standfirst: category · locality, as a line of small caps over a rule —
+                  the same job the two chips did, without pretending to be buttons. */}
+              <p className="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[0.18em] text-gold">
+                <span className="h-px w-8 shrink-0 bg-gold/70" aria-hidden="true" />
+                <span>{typeLabel}</span>
+                <span className="text-gold/40" aria-hidden="true">·</span>
+                <span className="text-cream/70">{areaLabel}</span>
+              </p>
+              {/*
+                Weights are the real ones the woff2 files ship: Tiro Devanagari Sanskrit
+                exists only at 400 and Cormorant Garamond only at 700, so the old shared
+                `font-extrabold` was a browser-synthesised fake on both — smeared strokes
+                on exactly the headline Hindi readers see first, and Hindi is ~90% of this
+                site's traffic. A large Devanagari serif at its true 400 is also simply
+                how this is set in print.
+              */}
+              <h1 className={`text-white mb-3 ${locale === 'hi' ? 'font-sanskrit font-normal text-4xl leading-[1.15] sm:text-5xl md:text-6xl' : 'font-serif font-bold text-3xl leading-[1.1] sm:text-5xl md:text-6xl'}`}>
                 {mandir.name[locale]}
               </h1>
-              <p className="text-gold text-base font-semibold mb-4">{mandir.deity[locale]}</p>
-              <p className={`text-cream/85 leading-relaxed mb-6 max-w-2xl ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
+              <p className={`mb-6 text-cream/60 ${locale === 'hi' ? 'font-sanskrit text-xl' : 'font-serif text-xl italic'}`}>
+                {mandir.deity[locale]}
+              </p>
+              <p className={`mb-8 max-w-[62ch] leading-relaxed text-cream/85 ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
                 {mandir.shortIntro[locale]}
               </p>
-              <div className="flex flex-wrap gap-3">
+              {/* One icon, on the one action that is a phone call. The directions link is
+                  a link and is allowed to look like one. */}
+              <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
                 <a href={SITE.phoneTel} className="btn-call">
                   <Phone className="h-4 w-4" /> {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
                 </a>
-                <a href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/20 transition-colors">
-                  <MapPin className="h-4 w-4" /> {locale === 'hi' ? 'रास्ता देखें' : 'Get Directions'}
+                <a
+                  href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-cream/35 pb-0.5 text-sm font-semibold text-cream transition-colors hover:border-gold hover:text-gold"
+                >
+                  {locale === 'hi' ? 'रास्ता देखें' : 'Get Directions'}
                 </a>
               </div>
             </div>
@@ -289,7 +398,7 @@ export function MandirDetail({ slug }: DetailProps) {
 
         {/* ── DARSHAN & AARTI TIMINGS — serves "timings" queries; data verified in content JSON ── */}
         <section className="container-page py-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'दर्शन एवं आरती समय' : 'Darshan & Aarti Timings'}</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'दर्शन एवं आरती समय' : 'Darshan & Aarti Timings'}</p>
           <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
             {locale === 'hi' ? `${mandir.name.hi} — दर्शन व आरती समय` : `${mandir.name.en} Timings`}
           </h2>
@@ -305,10 +414,10 @@ export function MandirDetail({ slug }: DetailProps) {
               </div>
             </div>
             {mandir.aartiTiming && (
-              <div className="flex items-start gap-3 rounded-2xl border border-gold/40 bg-gold-50/40 p-5 shadow-sm">
-                <Sparkles className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
+              <div className="flex items-start gap-3 rounded-2xl border border-gold/40 bg-cream-dark p-5 shadow-sm">
+                <Bell className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-saffron-700">{locale === 'hi' ? 'आरती समय' : 'Aarti Schedule'}</p>
+                  <p className="text-xs font-bold uppercase tracking-wider text-ink-label">{locale === 'hi' ? 'आरती समय' : 'Aarti Schedule'}</p>
                   <ul className="mt-2 space-y-1">
                     {mandir.aartiTiming[locale].split('·').map((a, i) => (
                       <li key={i} className="text-sm leading-relaxed text-ink-soft">{a.trim()}</li>
@@ -353,7 +462,7 @@ export function MandirDetail({ slug }: DetailProps) {
               )}
 
               {/* History heading */}
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
                 {locale === 'hi' ? 'इतिहास एवं पौराणिक महत्व' : 'History & Significance'}
               </p>
               <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
@@ -362,7 +471,7 @@ export function MandirDetail({ slug }: DetailProps) {
               <div className="mt-4">
                 <p className="text-base leading-[1.9] text-ink-soft sm:text-lg">{mandir.history[locale]}</p>
                 {mandir.establishedEra && (
-                  <div className="mt-5 flex gap-3 rounded-lg border-l-4 border-gold bg-gold-50/60 p-4">
+                  <div className="mt-5 flex gap-3 rounded-lg border-l-4 border-gold bg-cream-dark p-4">
                     <Info className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600" />
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider text-gold-700">{locale === 'hi' ? 'स्थापना काल' : 'Established Era'}</p>
@@ -397,7 +506,7 @@ export function MandirDetail({ slug }: DetailProps) {
         {/* ── LOCATION & HOW TO REACH ── */}
         <section className="bg-cream-dark/30 py-7">
           <div className="container-page">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'स्थान एवं यात्रा' : 'Location & Getting There'}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'स्थान एवं यात्रा' : 'Location & Getting There'}</p>
             <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
               {locale === 'hi' ? 'पता एवं कैसे पहुँचें' : 'Address & How to Reach'}
             </h2>
@@ -433,7 +542,7 @@ export function MandirDetail({ slug }: DetailProps) {
                   <div className="flex gap-3 rounded-xl border border-cream-dark bg-white p-4">
                     <span className="flex-shrink-0 text-lg">🪔</span>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-saffron-700">{locale === 'hi' ? 'प्रसाद एवं अर्पण' : 'Prasad & Offerings'}</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-ink-label">{locale === 'hi' ? 'प्रसाद एवं अर्पण' : 'Prasad & Offerings'}</p>
                       <p className="mt-1 text-sm leading-relaxed text-ink-soft">{mandir.prasadInfo[locale]}</p>
                     </div>
                   </div>
@@ -454,13 +563,13 @@ export function MandirDetail({ slug }: DetailProps) {
           <section className="container-page pt-5 pb-4">
             <div className="grid gap-6 lg:grid-cols-2">
               {mandir.visitTips && (
-                <div className="rounded-2xl border border-saffron/30 bg-saffron-50 p-5 sm:p-6">
+                <div className="rounded-2xl border border-saffron/30 bg-cream-dark p-5 sm:p-6">
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-saffron text-white">
                       <Lightbulb className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-wider text-saffron-700">{locale === 'hi' ? 'यात्री सुझाव' : 'Visitor Tips'}</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-ink-label">{locale === 'hi' ? 'यात्री सुझाव' : 'Visitor Tips'}</p>
                       <h3 className={`mt-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-xl' : 'font-serif text-lg'}`}>
                         {locale === 'hi' ? 'जानने योग्य बातें' : 'What You Should Know'}
                       </h3>
@@ -471,7 +580,7 @@ export function MandirDetail({ slug }: DetailProps) {
               )}
               {mandir.localBeliefs && (
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'स्थानीय मान्यताएँ' : 'Local Traditions'}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'स्थानीय मान्यताएँ' : 'Local Traditions'}</p>
                   <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
                     {locale === 'hi' ? 'जनश्रुति एवं परंपरा' : 'Folk Beliefs & Traditions'}
                   </h2>
@@ -496,7 +605,7 @@ export function MandirDetail({ slug }: DetailProps) {
         {/* ── FAQs ── */}
         {mandir.faqs && mandir.faqs.length > 0 && (
           <section className="container-page pt-4 pb-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'सामान्य प्रश्न' : 'Frequently Asked'}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'सामान्य प्रश्न' : 'Frequently Asked'}</p>
             <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
               {locale === 'hi' ? 'अक्सर पूछे जाने वाले प्रश्न' : 'Frequently Asked Questions'}
             </h2>
@@ -517,7 +626,7 @@ export function MandirDetail({ slug }: DetailProps) {
         {/* ── RELATED PUJA (internal links → high-value puja pages) ── */}
         {pujaSlugs.length > 0 && (
           <section className="container-page pt-4 pb-7">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'पूजा एवं अनुष्ठान' : 'Puja & Anushthan'}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'पूजा एवं अनुष्ठान' : 'Puja & Anushthan'}</p>
             <h2 className={`mt-2 mb-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
               {locale === 'hi' ? `${mandir.name.hi} से जुड़ी पूजाएँ` : `Puja Related to ${mandir.name.en}`}
             </h2>
@@ -531,7 +640,7 @@ export function MandirDetail({ slug }: DetailProps) {
                 <Link
                   key={s}
                   to={`${prefix}/puja-in-ujjain/${s}/`}
-                  className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+                  className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-cream-dark"
                 >
                   <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🪔</span>
                   <div className="flex-1">
@@ -549,14 +658,14 @@ export function MandirDetail({ slug }: DetailProps) {
 
         {/* ── PLAN YOUR DARSHAN (internal links → cab + tour money pages) ── */}
         <section className="container-page pt-4 pb-7">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'यात्रा योजना' : 'Plan Your Darshan'}</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'यात्रा योजना' : 'Plan Your Darshan'}</p>
           <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
             {locale === 'hi' ? `${mandir.name.hi} दर्शन के लिए टैक्सी व टूर पैकेज` : `Taxi & Tour Packages for ${mandir.name.en} Darshan`}
           </h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <Link
               to={`${prefix}/cab-booking/`}
-              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-cream-dark"
             >
               <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🚕</span>
               <div className="flex-1">
@@ -571,7 +680,7 @@ export function MandirDetail({ slug }: DetailProps) {
             </Link>
             <Link
               to={`${prefix}/tour-and-travel-ujjain/`}
-              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-gold-50"
+              className="group flex items-start gap-3 rounded-2xl border border-gold/40 bg-gradient-to-br from-gold-50/60 to-cream p-5 transition-colors hover:border-maroon/40 hover:bg-cream-dark"
             >
               <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-maroon-900 text-gold">🛕</span>
               <div className="flex-1">
@@ -593,7 +702,7 @@ export function MandirDetail({ slug }: DetailProps) {
             <MandalaDivider />
             <section className="bg-cream py-8">
               <div className="container-page">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'आसपास के मंदिर' : 'Explore Nearby'}</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'आसपास के मंदिर' : 'Explore Nearby'}</p>
                 <h2 className={`mt-2 mb-5 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
                   {locale === 'hi' ? 'निकटतम मंदिर' : 'Nearby Temples'}
                 </h2>

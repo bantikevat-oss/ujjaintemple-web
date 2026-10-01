@@ -47,7 +47,7 @@ $message   = clean($_POST['message'] ?? '');
 $src       = clean($_POST['sourcePage'] ?? '');
 $locale    = clean($_POST['locale'] ?? '');
 $purpose   = clean($_POST['purpose'] ?? '');     // raw-lead filter (WhatsApp gate)
-$channel   = clean($_POST['channel'] ?? 'form'); // 'form' | 'whatsapp'
+$channel   = clean($_POST['channel'] ?? 'form'); // 'form' | 'whatsapp' | 'app'
 $travel    = clean($_POST['travelDate'] ?? '');  // yyyy-mm-dd, optional — the field that
                                                  // decides vehicle availability and price
 
@@ -94,12 +94,35 @@ $burst     = $ip !== '' && ujt_over_cap('ip:' . $ip . ':' . date('Y-m-d-H'), 20)
 $dayFlood  = ujt_over_cap('all:' . date('Y-m-d'), 150);                            // whole site, one day
 $mail_ok   = !$burst && !$dayFlood;
 
-// Append to CSV
+/*
+ * Append to CSV.
+ *
+ * 🔴 The header is only ever written for a brand-new file, so when `purpose`, `channel`
+ * and `travel_date` were added on 2026-10-01 the LIVE file kept its original 8-column
+ * header while this code began appending 11 fields. Nothing broke yet only because no
+ * lead arrived between that deploy and 2026-10-02 — the first one would have landed as
+ * an 11-field row under an 8-field header, and any positional reader (the lead.byteflowtech.in
+ * ingest among them) would have silently mis-mapped every column after `ip`.
+ *
+ * Fixing it from here is the wrong place: rewriting a live data file from inside a web
+ * request, concurrently with other writes, risks the 22 real leads sitting in it. So the
+ * migration is an explicit, backed-up step in the deploy runbook
+ * (scripts/migrate-leads-csv-header.sh) and this code only refuses to hide the problem.
+ */
+const LEAD_CSV_HEADER = ['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date'];
+
 $row = [date('Y-m-d H:i:s'), $name, $phone, $service, $src, $locale, $message, $_SERVER['REMOTE_ADDR'] ?? '', $purpose, $channel, $travel];
 $fp = @fopen($cfg['csv_path'], 'a');
 if ($fp) {
   if (filesize($cfg['csv_path']) === 0) {
-    fputcsv($fp, ['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date']);
+    fputcsv($fp, LEAD_CSV_HEADER);
+  } else {
+    // Loud, once per write, and cheap: read only the first line and compare widths.
+    $head = @fgetcsv(@fopen($cfg['csv_path'], 'r') ?: fopen('php://memory', 'r'));
+    if (is_array($head) && count($head) !== count(LEAD_CSV_HEADER)) {
+      error_log('ujt lead: leads.csv header has ' . count($head) . ' columns, rows now carry '
+        . count(LEAD_CSV_HEADER) . ' — run scripts/migrate-leads-csv-header.sh before trusting a positional read');
+    }
   }
   fputcsv($fp, $row);
   fclose($fp);
@@ -167,7 +190,8 @@ $body .= '<div style="margin:15px 0 5px">'
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
 $body .= $row('Yatra date', $whenLine);
 $body .= $row('Chahiye', $e($plabel));
-$body .= $row('Aaya kahan se', $channel === 'whatsapp' ? 'WhatsApp button' : 'Website form');
+$channelLabels = ['whatsapp' => 'WhatsApp button', 'app' => 'Android app', 'form' => 'Website form'];
+$body .= $row('Aaya kahan se', $e($channelLabels[$channel] ?? 'Website form'));
 $body .= $row('Page', '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src ?: '—') . '</a>');
 if ($message !== '') $body .= $row('Message', nl2br($e($message)));
 $body .= $row('Time', date('d M Y, g:i A') . ' IST');

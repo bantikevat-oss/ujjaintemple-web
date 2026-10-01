@@ -64,9 +64,9 @@ export function AppMandirs() {
 
       <Link
         to={appPath(locale, '84-mahadev/')}
-        className="mt-4 flex items-center gap-3 rounded-xl border border-saffron/50 bg-saffron-50 p-3 hover:border-saffron"
+        className="mt-4 flex items-center gap-3 rounded-xl border border-saffron/50 bg-cream-dark p-3 hover:border-saffron"
       >
-        <ListChecks className="h-6 w-6 shrink-0 text-saffron-600" aria-hidden />
+        <ListChecks className="h-6 w-6 shrink-0 text-saffron-700" aria-hidden />
         <span className="min-w-0">
           <span className="block font-semibold text-maroon">{hi ? '84 महादेव यात्रा चेकलिस्ट' : '84 Mahadev yatra checklist'}</span>
           <span className="block text-xs text-ink-soft">{hi ? 'हर दर्शन पर निशान लगाएँ' : 'Tick off each darshan'}</span>
@@ -135,7 +135,7 @@ export function AppMandirs() {
 
             <dl className="mt-4 space-y-3 text-sm">
               <div className="flex gap-3">
-                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-saffron-600" aria-hidden />
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-saffron-700" aria-hidden />
                 <div>
                   <dt className="font-semibold text-ink">{hi ? 'दर्शन समय' : 'Darshan timings'}</dt>
                   <dd className="text-ink-soft">{pick(open.darshanTimingSummary, hi)}</dd>
@@ -144,7 +144,7 @@ export function AppMandirs() {
               </div>
               {open.entryFee && (
                 <div className="flex gap-3">
-                  <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-saffron-600" aria-hidden />
+                  <IndianRupee className="mt-0.5 h-4 w-4 shrink-0 text-saffron-700" aria-hidden />
                   <div>
                     <dt className="font-semibold text-ink">{hi ? 'प्रवेश' : 'Entry'}</dt>
                     <dd className="text-ink-soft">{pick(open.entryFee, hi)}</dd>
@@ -153,7 +153,7 @@ export function AppMandirs() {
               )}
               {open.address && (
                 <div className="flex gap-3">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-saffron-600" aria-hidden />
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-saffron-700" aria-hidden />
                   <div>
                     <dt className="font-semibold text-ink">{hi ? 'पता' : 'Address'}</dt>
                     <dd className="text-ink-soft">{pick(open.address, hi)}</dd>

@@ -121,7 +121,7 @@ export function TourLanding() {
           </div>
 
           <div className="relative z-10 text-center px-4 flex flex-col items-center max-w-5xl mx-auto">
-            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider uppercase text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider uppercase text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
               {title}
             </h1>
             
@@ -222,7 +222,7 @@ export function TourLanding() {
                   <div className="absolute top-0 left-0 w-2 h-full bg-saffron" />
                   <div className="flex items-start gap-4">
                     <div className="bg-cream-light p-3 rounded-full mt-1">
-                      <CheckCircle2 className="w-6 h-6 text-saffron" />
+                      <CheckCircle2 className="w-6 h-6 text-saffron-700" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-maroon font-serif mb-2">{item.title}</h3>
@@ -279,7 +279,7 @@ export function TourLanding() {
             </h2>
             <div className="space-y-6">
               {festivals.map((fest, idx) => (
-                <div key={idx} className="bg-maroon-800/80 p-6 sm:p-8 rounded-2xl border border-gold/20 shadow-xl flex items-start gap-4">
+                <div key={idx} className="bg-maroon-800/80 p-6 sm:p-8 rounded-2xl border border-gold/25 shadow-xl flex items-start gap-4">
                   <div className="w-3 h-3 bg-gold rounded-full mt-2.5 flex-shrink-0 shadow-[0_0_10px_rgba(232,185,35,0.5)]" />
                   <div>
                     <h3 className="text-2xl font-bold font-serif text-gold-light mb-2">{fest.title}</h3>
@@ -306,7 +306,7 @@ export function TourLanding() {
                     className="w-full text-left px-6 sm:px-8 py-5 sm:py-6 bg-white text-maroon hover:bg-cream/30 flex justify-between items-center transition-colors"
                   >
                     <span className="font-serif font-bold text-lg sm:text-xl pr-4">{faq.q}</span>
-                    <ChevronDown className={`w-6 h-6 text-saffron flex-shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-6 h-6 text-saffron-700 flex-shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 sm:px-8 py-5 sm:py-6 bg-cream-light/30 text-ink-soft border-t border-cream animate-fade-in leading-relaxed text-base sm:text-lg font-serif">

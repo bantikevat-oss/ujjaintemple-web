@@ -52,9 +52,6 @@ export function TourPackageDetail({ slug }: { slug: string }) {
       <Layout>
         {/* ── TOP MAROON BANNER (plain, left-aligned — matches temple/puja hero) ── */}
         <section className="relative overflow-hidden border-b-[8px] border-saffron bg-maroon-900">
-          <div className="absolute inset-0 bg-gradient-to-br from-maroon-900 via-maroon-800 to-maroon-900" />
-          <div className="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-          <div className="absolute -bottom-24 -left-16 h-72 w-72 rounded-full bg-saffron/10 blur-3xl" />
           <div className="container-page relative z-10 py-14 sm:py-20">
             <div className="max-w-3xl">
               <span className="inline-block bg-gold text-maroon-900 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-widest shadow mb-4">
@@ -123,7 +120,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                       </ol>
                     )}
                     {day.note && (
-                      <p className="mt-6 text-saffron font-bold italic bg-saffron/10 p-4 rounded-lg border border-saffron/20">
+                      <p className="mt-6 text-saffron-700 font-bold italic bg-saffron/10 p-4 rounded-lg border border-saffron/20">
                         {day.note[locale]}
                       </p>
                     )}

@@ -80,7 +80,7 @@ export function AppShell({ tab, title, children }: { tab: AppTab; title: string;
 
         <nav
           aria-label={hi ? 'ऐप नेविगेशन' : 'App navigation'}
-          className="fixed inset-x-0 bottom-0 z-30 border-t border-gold/30 bg-white/95 backdrop-blur"
+          className="fixed inset-x-0 bottom-0 z-30 border-t border-gold/40 bg-white/95 backdrop-blur"
           style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
         >
           <ul className="mx-auto grid max-w-xl grid-cols-5">

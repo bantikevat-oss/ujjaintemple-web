@@ -26,8 +26,8 @@ function SocialBtn({ href, label, children }: { href: string; label: string; chi
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
       className="flex h-9 w-9 items-center justify-center rounded-full
-        border border-gold/50 bg-white/60 text-maroon transition-all duration-200
-        hover:border-saffron hover:text-saffron hover:bg-white">
+        border border-gold bg-white/60 text-maroon transition-all duration-200
+        hover:border-saffron hover:text-saffron-700 hover:bg-white">
       {children}
     </a>
   );
@@ -39,9 +39,9 @@ function FLink({ to, children }: { to: string; children: React.ReactNode }) {
     <li>
       <Link to={to}
         className="group flex items-center gap-1.5 text-[14px] text-ink-soft
-          transition-colors duration-150 hover:text-saffron-600 leading-[1.9]">
+          transition-colors duration-150 hover:text-saffron-700 leading-[1.9]">
         <span className="w-0 overflow-hidden group-hover:w-2 transition-all duration-200
-          text-saffron text-[8px]">›</span>
+          text-saffron-700 text-[8px]">›</span>
         {children}
       </Link>
     </li>
@@ -144,7 +144,7 @@ export function Footer() {
               <p className="font-serif text-2xl font-bold text-maroon leading-tight">
                 {t('site.name')}
               </p>
-              <p className="text-[10px] text-saffron-700 uppercase tracking-widest">
+              <p className="text-[10px] text-ink-label uppercase tracking-widest">
                 Ujjain · Madhya Pradesh
               </p>
             </div>
@@ -157,13 +157,13 @@ export function Footer() {
           {/* Contact quick links */}
           <div className="space-y-2.5">
             <a href={SITE.phoneTel}
-              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-600 transition-colors group">
-              <Phone className="h-3.5 w-3.5 text-saffron flex-shrink-0 group-hover:text-saffron-600" />
+              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-700 transition-colors group">
+              <Phone className="h-3.5 w-3.5 text-saffron-700 flex-shrink-0 group-hover:text-saffron-700" />
               {SITE.phone}
             </a>
             <a href={`mailto:${SITE.email}`}
-              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-600 transition-colors group">
-              <Mail className="h-3.5 w-3.5 text-saffron flex-shrink-0 group-hover:text-saffron-600" />
+              className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-700 transition-colors group">
+              <Mail className="h-3.5 w-3.5 text-saffron-700 flex-shrink-0 group-hover:text-saffron-700" />
               {SITE.email}
             </a>
             <div className="flex items-center gap-2.5 text-[14px] text-[#5C554E]">
@@ -214,7 +214,7 @@ export function Footer() {
             <li className="pt-1">
               <Link to={`${prefix}/mandirs/`}
                 className="inline-flex items-center gap-1 text-[13px] font-semibold
-                  text-maroon hover:text-saffron-600 transition-colors">
+                  text-maroon hover:text-saffron-700 transition-colors">
                 {isHi ? 'उज्जैन के सभी प्रसिद्ध मंदिर' : 'All famous temples in Ujjain'}
                 <ArrowRight className="h-3 w-3" />
               </Link>
@@ -266,8 +266,8 @@ export function Footer() {
           </ul>
 
           {/* DPIIT badge */}
-          <div className="mt-6 rounded-xl border border-gold/45 bg-white/70 p-4">
-            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-saffron-700 mb-1">
+          <div className="mt-6 rounded-xl border border-gold/40 bg-white/70 p-4">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-ink-label mb-1">
               {isHi ? 'सरकार से अप्रूव्ड' : 'Govt Recognised'}
             </p>
             <p className="text-[12px] font-bold text-maroon leading-snug">

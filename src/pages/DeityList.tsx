@@ -106,9 +106,9 @@ export function DeityListPage({ slug }: { slug: string }) {
               <li key={m.slug} className="flex">
                 <Link
                   to={`${prefix}/mandirs/${m.slug}/`}
-                  className="group flex w-full flex-col rounded-xl border border-gold/30 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-saffron/60 hover:shadow-md"
+                  className="group flex w-full flex-col rounded-xl border border-gold/40 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-saffron/60 hover:shadow-md"
                 >
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-saffron-700">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink-label">
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <h2 className="mt-1 font-sanskrit text-lg font-bold leading-snug text-maroon group-hover:text-saffron-700">

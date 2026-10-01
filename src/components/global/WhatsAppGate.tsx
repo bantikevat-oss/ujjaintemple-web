@@ -222,7 +222,7 @@ export function WhatsAppGateHost() {
           </button>
         </form>
 
-        <a href={SITE.phoneTel} className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-maroon hover:text-saffron">
+        <a href={SITE.phoneTel} className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-maroon hover:text-saffron-700">
           <Phone className="h-4 w-4" />
           {isHi ? 'या सीधे कॉल करें' : 'Or call directly'} — {SITE.phone}
         </a>

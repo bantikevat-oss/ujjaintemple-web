@@ -55,7 +55,7 @@ export function NotifyToggle() {
         onClick={toggle}
         disabled={state === 'busy'}
         className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold transition-colors disabled:opacity-60 ${
-          on ? 'border border-maroon/40 text-maroon hover:bg-maroon-50' : 'bg-maroon text-white hover:bg-maroon-600'
+          on ? 'border border-maroon/40 text-maroon hover:bg-cream-dark' : 'bg-maroon text-white hover:bg-maroon-600'
         }`}
       >
         {on ? <BellOff className="h-4 w-4" aria-hidden /> : <Bell className="h-4 w-4" aria-hidden />}

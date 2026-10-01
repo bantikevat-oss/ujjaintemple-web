@@ -87,7 +87,7 @@ export function ThingsToDo() {
           </div>
           <div className="relative z-10 container-page text-center">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.25em] text-gold">{locale === 'hi' ? 'उज्जैन यात्रा गाइड' : 'Ujjain Travel Guide'}</p>
-            <h1 className={`mx-auto max-w-4xl font-extrabold leading-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.8)] ${locale === 'hi' ? 'font-sanskrit text-4xl sm:text-5xl md:text-6xl' : 'font-serif text-3xl sm:text-5xl md:text-6xl'}`}>
+            <h1 className={`mx-auto max-w-4xl leading-tight text-white drop-shadow-[0_3px_8px_rgba(0,0,0,0.8)] ${locale === 'hi' ? 'font-sanskrit font-normal text-4xl sm:text-5xl md:text-6xl' : 'font-serif font-bold text-3xl sm:text-5xl md:text-6xl'}`}>
               {locale === 'hi' ? 'उज्जैन में घूमने की जगह' : 'Things to Do in Ujjain'}
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
@@ -145,7 +145,7 @@ export function ThingsToDo() {
         <section className="container-page py-12 sm:py-16">
           <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'सबसे लोकप्रिय' : 'Most Popular'}</p>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'सबसे लोकप्रिय' : 'Most Popular'}</p>
               <h2 className={`mt-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
                 {locale === 'hi' ? 'उज्जैन के प्रमुख मंदिर' : 'Top Temples in Ujjain'}
               </h2>
@@ -164,7 +164,7 @@ export function ThingsToDo() {
           <div className="container-page">
             <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700">{locale === 'hi' ? 'दर्शन योजना' : 'Plan Your Darshan'}</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'दर्शन योजना' : 'Plan Your Darshan'}</p>
                 <h2 className={`mt-1 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
                   {locale === 'hi' ? 'उज्जैन दर्शन टूर पैकेज' : 'Ujjain Darshan Tour Packages'}
                 </h2>

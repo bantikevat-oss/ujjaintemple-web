@@ -147,7 +147,7 @@ export function ContactPage() {
               </div>
 
               {/* Phone */}
-              <div className="group relative flex flex-col rounded-2xl border border-gold/20
+              <div className="group relative flex flex-col rounded-2xl border border-gold/25
                 bg-white p-7 hover:border-gold/40 hover:shadow-md transition-all duration-300">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl
                   bg-maroon/8 border border-maroon/15">
@@ -166,7 +166,7 @@ export function ContactPage() {
               </div>
 
               {/* Email */}
-              <div className="group relative flex flex-col rounded-2xl border border-gold/20
+              <div className="group relative flex flex-col rounded-2xl border border-gold/25
                 bg-white p-7 hover:border-gold/40 hover:shadow-md transition-all duration-300">
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl
                   bg-maroon/8 border border-maroon/15">
@@ -187,7 +187,7 @@ export function ContactPage() {
 
             {/* Address + Hours row */}
             <div className="mt-5 grid gap-5 sm:grid-cols-2">
-              <div className="flex items-start gap-4 rounded-2xl border border-gold/20 bg-white p-7">
+              <div className="flex items-start gap-4 rounded-2xl border border-gold/25 bg-white p-7">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-maroon/8">
                   <MapPin className="h-5 w-5 text-maroon" />
                 </div>
@@ -199,7 +199,7 @@ export function ContactPage() {
                   <p className="text-xs text-ink-mute mt-0.5">ByteFlow Technologies Pvt Ltd · DPIIT Registered</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl border border-gold/20 bg-white p-7">
+              <div className="flex items-start gap-4 rounded-2xl border border-gold/25 bg-white p-7">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-maroon/8">
                   <Clock className="h-5 w-5 text-maroon" />
                 </div>
@@ -226,7 +226,7 @@ export function ContactPage() {
           <div className="container-page py-12 sm:py-16">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-saffron-700 mb-2">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label mb-2">
                   {isHi ? 'यात्रा सहायता' : 'Trip Assistance'}
                 </p>
                 <h2 className={`font-bold text-maroon leading-tight ${isHi ? 'font-sanskrit text-3xl sm:text-4xl' : 'font-serif text-2xl sm:text-3xl'}`}>
@@ -264,7 +264,7 @@ export function ContactPage() {
             </h2>
             <div className="space-y-4">
               {t.faqs.map((faq, i) => (
-                <div key={i} className="rounded-2xl border border-gold/20 bg-cream p-6">
+                <div key={i} className="rounded-2xl border border-gold/25 bg-cream p-6">
                   <h3 className={`font-bold text-maroon mb-2 ${isHi ? 'font-sanskrit text-base' : 'font-serif text-[15px]'}`}>
                     {faq.q}
                   </h3>

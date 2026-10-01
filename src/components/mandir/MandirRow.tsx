@@ -14,7 +14,8 @@ interface Props {
   mandir: MandirListItem;
 }
 
-const AREA_HI: Record<string, string> = {
+/** Exported so the /mandirs/ hub's "by area" cut names the same places this row does. */
+export const AREA_HI: Record<string, string> = {
   'Mahakal Area': 'महाकाल क्षेत्र',
   'City Center': 'शहर केंद्र',
   'Shipra Bank': 'शिप्रा तट',

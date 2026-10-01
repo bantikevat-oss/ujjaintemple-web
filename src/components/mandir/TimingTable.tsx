@@ -32,7 +32,7 @@ export function TimingTable({ mandir }: { mandir: Mandir }) {
             </tr>
           ))}
           {mandir.specialOccasions && (
-            <tr className="bg-saffron-50">
+            <tr className="bg-cream-dark">
               <td className="px-4 py-2.5 font-bold text-saffron-700">{locale === 'hi' ? 'विशेष' : 'Special'}</td>
               <td className="px-4 py-2.5 text-ink">{mandir.specialOccasions[locale]}</td>
             </tr>

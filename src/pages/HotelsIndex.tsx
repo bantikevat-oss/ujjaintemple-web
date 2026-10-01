@@ -124,7 +124,7 @@ export function HotelsIndex() {
           </div>
 
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6">
-            <div className="inline-flex items-center gap-2 border border-gold/30 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
+            <div className="inline-flex items-center gap-2 border border-gold/40 rounded-full px-5 py-2" style={{ background: 'rgba(201,168,76,0.08)' }}>
               <span className="w-1.5 h-1.5 rounded-full bg-gold-light" />
               <span className="text-gold-light font-serif tracking-[0.25em] uppercase text-xs sm:text-sm">
                 {/* 'उज्जैन का नम्बर 1' removed 2026-10-01: an unsubstantiated superiority
@@ -134,7 +134,7 @@ export function HotelsIndex() {
               </span>
             </div>
 
-            <h1 className="font-serif font-extrabold text-white leading-tight" style={{ fontSize: 'clamp(2.4rem, 7vw, 5rem)' }}>
+            <h1 className="font-serif font-bold text-white leading-tight" style={{ fontSize: 'clamp(2.4rem, 7vw, 5rem)' }}>
               {locale === 'hi' ? 'उज्जैन के बेहतरीन\nहोटल' : 'Best Hotels\nin Ujjain'}
             </h1>
 
@@ -173,7 +173,7 @@ export function HotelsIndex() {
               {TRUST.map((s, i) => (
                 <div key={i} className="flex flex-col items-center justify-center py-7 px-4 text-center gap-1"
                   style={{ borderRight: i < 3 ? '1px solid rgba(201,168,76,0.12)' : 'none', borderBottom: i < 2 ? '1px solid rgba(201,168,76,0.12)' : 'none' }}>
-                  <span className="font-serif font-extrabold" style={{
+                  <span className="font-serif font-bold" style={{
                     fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1,
                     background: 'linear-gradient(180deg, #E0C374 0%, #C9A84C 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
@@ -197,10 +197,10 @@ export function HotelsIndex() {
 
             {/* Section header */}
             <div className="text-center mb-12">
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— अपना बजट चुनें —' : '— Choose Your Budget —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-5xl font-extrabold text-maroon">
+              <h2 className="font-serif text-3xl sm:text-5xl font-bold text-maroon">
                 {locale === 'hi' ? 'बजट के अनुसार होटल' : 'Hotels By Budget'}
               </h2>
               <div className="w-20 h-1 mx-auto mt-4 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
@@ -260,7 +260,7 @@ export function HotelsIndex() {
                       {locale === 'hi' ? tier.tagHi : tier.tagEn}
                     </span>
                   </div>
-                  <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-white mt-2">
+                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
                     {locale === 'hi' ? tier.labelHi : tier.labelEn}
                   </h3>
                 </div>
@@ -325,10 +325,10 @@ export function HotelsIndex() {
 
             {/* Areas */}
             <div>
-              <p className="text-saffron-700 font-serif text-sm tracking-[0.3em] uppercase mb-3">
+              <p className="text-ink-label font-serif text-sm tracking-[0.3em] uppercase mb-3">
                 {locale === 'hi' ? '— क्षेत्र के अनुसार —' : '— By Location —'}
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-maroon mb-8 relative pb-4 inline-block">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-maroon mb-8 relative pb-4 inline-block">
                 {locale === 'hi' ? 'उज्जैन में कहाँ रुकें?' : 'Where to Stay in Ujjain?'}
                 <div className="absolute bottom-0 left-0 h-1 w-2/3 rounded-full" style={{ background: 'linear-gradient(90deg,#D4621A,#C9A84C)' }} />
               </h2>
@@ -371,7 +371,7 @@ export function HotelsIndex() {
                     {locale === 'hi' ? 'हमारा वादा' : 'Our Promise'}
                   </span>
                 </div>
-                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold leading-snug mb-5" style={{ color: '#E0C374' }}>
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold leading-snug mb-5" style={{ color: '#E0C374' }}>
                   {locale === 'hi'
                     ? 'हम हर होटल क्यों नहीं दिखाते?'
                     : 'Why we don\'t list every hotel?'}

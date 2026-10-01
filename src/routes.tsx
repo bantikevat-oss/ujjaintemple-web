@@ -1,23 +1,9 @@
 import type { RouteRecord } from 'vite-react-ssg';
 import { I18nProvider, type Locale } from './i18n';
-import { Home } from './pages/Home';
-import { MandirIndex } from './pages/mandirs/Index';
-import { DeityListPage } from './pages/DeityList';
-import { Mahadev84Page } from './pages/Mahadev84';
-import { VerticalLanding } from './pages/VerticalLanding';
-import { SimhasthaLanding } from './pages/SimhasthaLanding';
-import { TransportLanding } from './pages/TransportLanding';
-import { PujaLanding } from './pages/PujaLanding';
-import { TourLanding } from './pages/TourLanding';
-import { ThingsToDo } from './pages/ThingsToDo';
-import { TourPackageDetail } from './pages/TourPackageDetail';
-import { CabBookingLanding } from './pages/CabBookingLanding';
-import { HotelsIndex } from './pages/HotelsIndex';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { PrivacyPage } from './pages/PrivacyPage';
-import { TermsPage } from './pages/TermsPage';
 import { NotFound } from './pages/NotFound';
+// Eager on purpose: 9 props from a config object, nothing in the URL to rebuild them
+// from, and 8 KB — the smallest page here. See pages/DiscoverRoute.tsx.
+import { VerticalLanding } from './pages/VerticalLanding';
 import { mandirList } from './data/mandirs-index';
 import { DEITY_LISTS } from './data/deity-lists';
 import { articleListByCategory as articlesByCategory } from './data/articles-index';
@@ -33,7 +19,10 @@ const withLocaleProps = <P extends object>(locale: Locale, Component: React.FC<P
 
 function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
   return [
-    { path: `${basePath}`, element: withLocale(locale, Home) },
+    { path: `${basePath}`, lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.HomeHi : mod.HomeEn };
+    } },
 
     // Simhastha 2028 Guide app (PWA / Android TWA). `lazy` so no website page
     // carries the app's code or its offline temple data in its entry graph.
@@ -46,14 +35,23 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     })) as RouteRecord[],
 
     // Mandirs
-    { path: `${basePath}mandirs/`, element: withLocale(locale, MandirIndex) },
+    { path: `${basePath}mandirs/`, lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.MandirIndexHi : mod.MandirIndexEn };
+    } },
     // 84 Mahadev of Ujjain — Chaurasi Mahadev list
-    { path: `${basePath}84-mahadev-ujjain/`, element: withLocale(locale, Mahadev84Page) },
+    { path: `${basePath}84-mahadev-ujjain/`, lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.Mahadev84Hi : mod.Mahadev84En };
+    } },
     // Deity-group list pages. Root-level, like 84-mahadev: a /mandirs/<slug>/ path
     // would be swallowed by the temple Detail route below.
     ...DEITY_LISTS.map((g) => ({
       path: `${basePath}${g.slug}/`,
-      element: withLocale(locale, () => <DeityListPage slug={g.slug} />),
+      lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.DeityListHi : mod.DeityListEn };
+    },
     })),
     // `lazy` (not `element`) on purpose — see pages/mandirs/DetailRoute.tsx. Detail.tsx
     // is the only consumer of the 1.4 MB full-record glob; importing it statically here
@@ -67,21 +65,47 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     })) as RouteRecord[],
 
     // Hotels
-    { path: `${basePath}hotels/`, element: withLocale(locale, HotelsIndex) },
+    { path: `${basePath}hotels/`, lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.HotelsHi : mod.HotelsEn };
+    } },
 
     // Things to Do — tourism pillar (top-funnel, links to all money hubs)
-    { path: `${basePath}things-to-do-in-ujjain/`, element: withLocale(locale, ThingsToDo) },
+    { path: `${basePath}things-to-do-in-ujjain/`, lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.ThingsToDoHi : mod.ThingsToDoEn };
+    } },
 
     // About, Contact, Legal
-    { path: `${basePath}about/`, element: withLocale(locale, AboutPage) },
-    { path: `${basePath}contact/`, element: withLocale(locale, ContactPage) },
-    { path: `${basePath}privacy-policy/`, element: withLocale(locale, PrivacyPage) },
-    { path: `${basePath}terms/`, element: withLocale(locale, TermsPage) },
+    // The four standing pages share one lazy chunk — see pages/LegalRoute.tsx.
+    // Statically imported they rode in the entry chunk on every temple and transport
+    // page, read by nobody who was there to book a cab.
+    { path: `${basePath}about/`, lazy: async () => {
+      const mod = await import('./pages/LegalRoute');
+      return { Component: locale === 'hi' ? mod.AboutHi : mod.AboutEn };
+    } },
+    { path: `${basePath}contact/`, lazy: async () => {
+      const mod = await import('./pages/LegalRoute');
+      return { Component: locale === 'hi' ? mod.ContactHi : mod.ContactEn };
+    } },
+    { path: `${basePath}privacy-policy/`, lazy: async () => {
+      const mod = await import('./pages/LegalRoute');
+      return { Component: locale === 'hi' ? mod.PrivacyHi : mod.PrivacyEn };
+    } },
+    { path: `${basePath}terms/`, lazy: async () => {
+      const mod = await import('./pages/LegalRoute');
+      return { Component: locale === 'hi' ? mod.TermsHi : mod.TermsEn };
+    } },
 
     // Simhastha
+    // `lazy` — the largest page component in the codebase (1,044 lines) and the
+    // worst-converting cluster on the site (0.43% CTR). See pages/SimhasthaRoute.tsx.
     {
       path: `${basePath}simhastha-2028/`,
-      element: withLocale(locale, SimhasthaLanding),
+      lazy: async () => {
+        const mod = await import('./pages/SimhasthaRoute');
+        return { Component: locale === 'hi' ? mod.SimhasthaHi : mod.SimhasthaEn };
+      },
     },
     ...articlesByCategory('simhastha').map((a) => ({
       path: `${basePath}simhastha-2028/${a.slug}/`,
@@ -94,7 +118,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     // Transport
     {
       path: `${basePath}transport-in-ujjain/`,
-      element: withLocale(locale, TransportLanding),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TransportHi : mod.TransportEn };
+    },
     },
     ...articlesByCategory('transport').map((a) => ({
       path: `${basePath}transport-in-ujjain/${a.slug}/`,
@@ -107,58 +134,97 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     // Cab Booking
     {
       path: `${basePath}cab-booking/`,
-      element: withLocale(locale, CabBookingLanding),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.CabBookingHi : mod.CabBookingEn };
+    },
     },
 
     // Tours Landing
     {
       path: `${basePath}tour-and-travel-ujjain/`,
-      element: withLocale(locale, TourLanding),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourHi : mod.TourEn };
+    },
     },
     // Tour Packages (Specific Detailed Pages)
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-darshan-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-darshan-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-omkareshwar-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-omkareshwar-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-omkareshwar-maheshwar-mandu-4-days/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-omkareshwar-maheshwar-mandu-4-days' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-group-tour-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-group-tour-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/84-mahadev-parikrama-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: '84-mahadev-parikrama-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/panch-jyotirlinga-5-days/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'panch-jyotirlinga-5-days' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-baglamukhi-2-days/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-baglamukhi-2-days' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-sightseeing-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-sightseeing-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-3-day-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-3-day-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-budget-tour-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-budget-tour-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     {
       path: `${basePath}tour-and-travel-ujjain/ujjain-premium-tour-package/`,
-      element: withLocaleProps(locale, TourPackageDetail, { slug: 'ujjain-premium-tour-package' }),
+      lazy: async () => {
+      const mod = await import('./pages/CommerceRoute');
+      return { Component: locale === 'hi' ? mod.TourPackageHi : mod.TourPackageEn };
+    },
     },
     ...articlesByCategory('tour').map((a) => ({
       path: `${basePath}tour-and-travel-ujjain/${a.slug}/`,
@@ -171,7 +237,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
     // Puja Info
     {
       path: `${basePath}puja-in-ujjain/`,
-      element: withLocale(locale, PujaLanding),
+      lazy: async () => {
+      const mod = await import('./pages/DiscoverRoute');
+      return { Component: locale === 'hi' ? mod.PujaHi : mod.PujaEn };
+    },
     },
     ...articlesByCategory('puja-info').map((a) => ({
       path: `${basePath}puja-in-ujjain/${a.slug}/`,

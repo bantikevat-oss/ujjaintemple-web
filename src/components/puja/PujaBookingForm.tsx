@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { Sparkles, CalendarDays, User, PhoneCall } from 'lucide-react';
+import { CalendarDays, User, PhoneCall, Check } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 
@@ -36,7 +36,7 @@ export function PujaBookingForm({ pujaName }: Props) {
   }
 
   return (
-    <aside className="my-10 relative overflow-hidden rounded-2xl border-2 border-gold/60 p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
+    <aside className="my-10 relative overflow-hidden rounded-2xl border-2 border-gold p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
       style={{ background: 'linear-gradient(160deg, #1a0404 0%, #2f0707 45%, #200505 100%)' }}>
       {/* Background Ornaments */}
       <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
@@ -47,14 +47,15 @@ export function PujaBookingForm({ pujaName }: Props) {
       <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_1.2fr] items-center">
         {/* Left Side: Copy & Info */}
         <div className="text-white">
-          <div className="inline-flex items-center gap-2 border border-gold/40 bg-maroon-900/80 rounded-full px-4 py-1.5 mb-6">
-            <Sparkles className="w-4 h-4 text-gold-light" />
-            <span className="text-xs sm:text-sm font-semibold tracking-widest text-gold-light uppercase">
-              {locale === 'hi' ? 'विशेषज्ञ पंडित बुकिंग' : 'Expert Pandit Booking'}
-            </span>
-          </div>
+          {/* Was a rounded-full chip with a Sparkles icon — a label dressed as a button,
+              which is the generated-UI house style. A standfirst over a rule says the same
+              thing and stops competing with the real CTA further down. */}
+          <p className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-gold-light sm:text-sm">
+            <span className="h-px w-8 shrink-0 bg-gold/60" aria-hidden="true" />
+            {locale === 'hi' ? 'विशेषज्ञ पंडित बुकिंग' : 'Expert Pandit Booking'}
+          </p>
           
-          <h3 className="font-serif text-3xl sm:text-4xl font-extrabold !text-cream mb-4 leading-tight">
+          <h3 className="font-serif text-3xl sm:text-4xl font-bold !text-cream mb-4 leading-tight">
             {locale === 'hi' 
               ? `${pujaName.hi} विधिवत सम्पन्न कराएँ` 
               : `Book Authentic ${pujaName.en}`}
@@ -68,19 +69,19 @@ export function PujaBookingForm({ pujaName }: Props) {
 
           <div className="space-y-4">
             <div className="flex items-center gap-4 text-cream/90">
-              <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center bg-gold/10">
+              <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/10">
                 <span className="text-gold font-serif font-bold">1</span>
               </div>
               <span className="text-sm sm:text-base">{locale === 'hi' ? 'फॉर्म भरें या कॉल करें' : 'Fill form or Call us'}</span>
             </div>
             <div className="flex items-center gap-4 text-cream/90">
-              <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center bg-gold/10">
+              <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/10">
                 <span className="text-gold font-serif font-bold">2</span>
               </div>
               <span className="text-sm sm:text-base">{locale === 'hi' ? 'पंडित जी से निःशुल्क परामर्श' : 'Free consultation with Pandit Ji'}</span>
             </div>
             <div className="flex items-center gap-4 text-cream/90">
-              <div className="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center bg-gold/10">
+              <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/10">
                 <span className="text-gold font-serif font-bold">3</span>
               </div>
               <span className="text-sm sm:text-base">{locale === 'hi' ? 'मुहूर्त अनुसार पूजा सम्पन्न' : 'Puja performed as per Muhurta'}</span>
@@ -89,11 +90,15 @@ export function PujaBookingForm({ pujaName }: Props) {
         </div>
 
         {/* Right Side: Form */}
-        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 sm:p-8">
+        {/* Was `bg-white/5 backdrop-blur-md` — frosted glass under a form. Two problems,
+            not one: it is the generated-UI signature, and it leaves input text sitting on
+            whatever happens to be behind it, which is the one place contrast must not be
+            left to chance. A form belongs on a solid surface. */}
+        <div className="rounded-xl border border-gold/25 bg-maroon-900 p-6 shadow-[0_1px_0_rgba(212,175,55,0.18)_inset] sm:p-8">
           {status === 'success' ? (
             <div className="text-center py-10">
-              <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold/50">
-                <Sparkles className="w-8 h-8 text-gold" />
+              <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold">
+                <Check className="w-8 h-8 text-gold" />
               </div>
               <h4 className="font-serif text-2xl font-bold text-gold mb-2">
                 {locale === 'hi' ? 'आवेदन प्राप्त हुआ' : 'Request Received'}
@@ -114,7 +119,7 @@ export function PujaBookingForm({ pujaName }: Props) {
                   <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gold/60" />
                   <input id="pf-name" name="name" required type="text"
                     onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[0-9]/g, ''); }}
-                    className="w-full bg-black/20 border border-gold/30 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
+                    className="w-full bg-black/20 border border-gold/40 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
                     placeholder={locale === 'hi' ? 'अपना नाम दर्ज करें' : 'Enter your name'} />
                 </div>
               </div>
@@ -127,7 +132,7 @@ export function PujaBookingForm({ pujaName }: Props) {
                   <PhoneCall className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gold/60" />
                   <input id="pf-phone" name="phone" required type="tel" inputMode="numeric" pattern="[0-9]{10}" maxLength={10}
                     onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10); }}
-                    className="w-full bg-black/20 border border-gold/30 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
+                    className="w-full bg-black/20 border border-gold/40 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
                     placeholder="10 digit mobile number" />
                 </div>
               </div>
@@ -139,7 +144,7 @@ export function PujaBookingForm({ pujaName }: Props) {
                 <div className="relative">
                   <CalendarDays className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gold/60" />
                   <input id="pf-date" name="message" type="text"
-                    className="w-full bg-black/20 border border-gold/30 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
+                    className="w-full bg-black/20 border border-gold/40 rounded-lg py-2.5 pl-10 pr-4 text-cream placeholder-cream/30 focus:outline-none focus:border-gold focus:bg-black/40 transition-colors"
                     placeholder={locale === 'hi' ? 'उदा. अगले हफ्ते' : 'e.g., Next week'} />
                 </div>
               </div>

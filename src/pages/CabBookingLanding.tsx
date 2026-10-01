@@ -139,7 +139,7 @@ export function CabBookingLanding() {
           </div>
 
           <div className="relative z-10 text-center px-4 flex flex-col items-center max-w-5xl mx-auto">
-            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-wider uppercase text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider uppercase text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
               {title}
             </h1>
             
@@ -205,19 +205,19 @@ export function CabBookingLanding() {
               </h2>
               <div className="grid grid-cols-2 gap-6 text-lg sm:text-xl font-medium text-ink-soft mb-8">
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-saffron" />
+                  <CheckCircle2 className="w-6 h-6 text-saffron-700" />
                   {locale === 'hi' ? 'सर्वश्रेष्ठ आवास' : 'Best Accommodation'}
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-saffron" />
+                  <CheckCircle2 className="w-6 h-6 text-saffron-700" />
                   {locale === 'hi' ? 'ट्रांसपोर्ट / कैब' : 'Transport Cabs'}
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-saffron" />
+                  <CheckCircle2 className="w-6 h-6 text-saffron-700" />
                   {locale === 'hi' ? 'पूजा बुकिंग' : 'Puja Booking'}
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-saffron" />
+                  <CheckCircle2 className="w-6 h-6 text-saffron-700" />
                   {locale === 'hi' ? 'कस्टमाइज्ड पैकेज' : 'Customized Packages'}
                 </div>
               </div>
@@ -327,7 +327,7 @@ export function CabBookingLanding() {
                     className={`w-full text-left px-6 sm:px-8 py-5 flex justify-between items-center transition-colors ${openFaq === idx ? 'bg-maroon text-white' : 'bg-cream-dark/10 text-maroon'}`}
                   >
                     <span className="font-serif font-bold text-lg sm:text-xl pr-4">{faq.q}</span>
-                    <ChevronDown className={`w-6 h-6 flex-shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-white' : 'text-saffron'}`} />
+                    <ChevronDown className={`w-6 h-6 flex-shrink-0 transform transition-transform duration-300 ${openFaq === idx ? 'rotate-180 text-white' : 'text-saffron-700'}`} />
                   </button>
                   {openFaq === idx && (
                     <div className="px-6 sm:px-8 py-5 bg-white text-ink-soft border-t border-cream animate-fade-in leading-relaxed text-base sm:text-lg font-serif">

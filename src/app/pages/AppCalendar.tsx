@@ -94,7 +94,7 @@ export function AppCalendar() {
             {rows.map((r) => {
               const special = r.kind === 'simhastha';
               return (
-                <li key={r.date + r.en} className={`flex gap-3 p-3 ${special ? 'bg-gold-50' : ''}`}>
+                <li key={r.date + r.en} className={`flex gap-3 p-3 ${special ? 'bg-cream-dark' : ''}`}>
                   <div className="w-12 shrink-0 text-center">
                     <p className="font-serif text-2xl font-bold leading-none text-maroon">{Number(r.date.slice(8))}</p>
                     <p className="mt-1 text-[11px] text-ink-mute">{formatDate(r.date, locale, { weekday: 'short' })}</p>
@@ -113,7 +113,7 @@ export function AppCalendar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={hi ? `${r.hi} — कैलेंडर में जोड़ें` : `${r.en} — add to calendar`}
-                    className="grid h-10 w-10 shrink-0 place-items-center self-center rounded-full text-maroon hover:bg-maroon-50"
+                    className="grid h-10 w-10 shrink-0 place-items-center self-center rounded-full text-maroon hover:bg-cream-dark"
                   >
                     <CalendarPlus className="h-5 w-5" aria-hidden />
                   </a>
