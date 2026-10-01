@@ -51,6 +51,38 @@ const META_MAX = 165;
  */
 const HI_PART = 'प्रातः|सुबह|सायं|शाम|दोपहर|रात्रि|रात';
 
+/**
+ * The one timing string that is a bulk default rather than a researched fact.
+ *
+ * 117 of the 183 temples carry exactly this value, and 108 of those 117 were stamped
+ * `lastVerified: 2026-05-31` — the single big import batch. The 66 temples with a
+ * distinctive timing skew to the later 2026-06-03 batch, where someone was clearly
+ * filling in real hours. So this is almost certainly "we did not know, put something
+ * plausible", not "we checked and it is 6 to 9".
+ *
+ * It has been live in the <meta description> since 2026-08-14 and that is tolerable —
+ * it is hedged with लगभग and sits in a sentence. Promoting it into the <title> is not:
+ * the title is the one element Google renders close to verbatim, and this site's content
+ * rules are explicit that an unverified specific does not get stated as fact.
+ *
+ * 🔧 Self-healing on purpose: the moment someone verifies a temple's real hours and edits
+ * its JSON, the string stops matching this constant and that page's title gains its time
+ * automatically. Nothing else to remember, no second list to keep in sync.
+ *
+ * Cost of this gate, measured 2026-10-02 against the 31 low-CTR target pages: four of them
+ * lose the timed title (26 clicks / 7,448 impressions of a 1,196-click, 173,490-impression
+ * opportunity). The other 14 mandir targets have real timings and keep theirs.
+ *
+ * Matched on the RANGE at the start of the string, not on the whole string: Ashta Bhairav
+ * carries the same default with a qualifier appended ("… (हर मंदिर)"), and an exact-equality
+ * test let that one page through. Anchoring to the range catches the qualified variants
+ * while a genuinely different range — 5:30 to 10, 7 to 7 — simply does not match.
+ */
+const UNVERIFIED_DEFAULT_TIMING: Record<'hi' | 'en', RegExp> = {
+  hi: /^लगभग\s+प्रातः\s*6:00\s*[–-]\s*रात्रि\s*9:00/,
+  en: /^Approx\.\s*6:00\s*AM\s*[–-]\s*9:00\s*PM/i,
+};
+
 export function compactTiming(timing: string | undefined, locale: 'hi' | 'en'): string | null {
   const t = (timing ?? '').trim();
   if (!t) return null;
@@ -244,9 +276,11 @@ export function MandirDetail({ slug }: DetailProps) {
   // G2: a page already earning ≥50 clicks/28d keeps the title it earns with. This change
   // is a hypothesis about CTR, and the pages with the most to lose are exactly the ones
   // where it must not be tested blind — they get measured first, rewritten later.
-  const shortTiming = isTitleNoRewrite(path, locale)
-    ? null
-    : compactTiming(mandir.darshanTimingSummary[locale], locale);
+  const rawTiming = mandir.darshanTimingSummary[locale];
+  const shortTiming =
+    isTitleNoRewrite(path, locale) || UNVERIFIED_DEFAULT_TIMING[locale].test((rawTiming ?? '').trim())
+      ? null
+      : compactTiming(rawTiming, locale);
   const withTiming = shortTiming
     ? (locale === 'hi'
         ? `${withCityHi} — दर्शन लगभग ${shortTiming}`
