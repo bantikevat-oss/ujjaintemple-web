@@ -74,9 +74,7 @@
     "lat": 23.1845,
     "lng": 75.7658
   },
-  "photos": [
-    "/images/mandirs/kali-mata-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.4 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is approximately 0.4 km from Mahakaleshwar Temple. It can be reached from Ujjain Railway Station by auto-rickshaw in about 15 minutes."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "कंकाली माता मंदिर उज्जैन",
     "en": "Kankali Mata Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/kali-mata-mandir-ujjain.jpg",
+    "reason": "showed kali-mata-mandir-ujjain — a different, named temple on this same site (defect D12)"
   }
 }

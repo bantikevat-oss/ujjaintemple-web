@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/siddhavat-mandir.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -114,5 +112,11 @@
   "primaryKeyword": {
     "hi": "राधास्वामी सत्संग उज्जैन",
     "en": "Radhaswami Satsang Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/siddhavat-mandir.jpg",
+    "reason": "showed siddhavat-mandir — a different, named temple on this same site (defect D12)"
   }
 }

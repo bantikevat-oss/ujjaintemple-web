@@ -74,9 +74,7 @@
     "lat": 23.1788,
     "lng": 75.773
   },
-  "photos": [
-    "/images/mandirs/harsiddhi-mata.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 1.5 किमी दूर फ्रीगंज में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा 10 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is situated in Freeganj, approximately 1.5 km from Ujjain Railway Station. It is about 10 minutes by auto-rickshaw from Mahakaleshwar Temple."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "महालक्ष्मी मंदिर उज्जैन",
     "en": "Mahalaxmi Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/harsiddhi-mata.jpg",
+    "reason": "showed harsiddhi-mata — a different, named temple on this same site (defect D12)"
   }
 }

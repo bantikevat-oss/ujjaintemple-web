@@ -74,9 +74,7 @@
     "lat": 23.176,
     "lng": 75.778
   },
-  "photos": [
-    "/images/mandirs/kali-mata-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर नानाखेड़ा क्षेत्र में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 10 मिनट का रास्ता है।",
     "en": "The temple is located in Nanakheda, approximately 2 km from Ujjain Railway Station. It is about a 10-minute auto-rickshaw ride from Mahakaleshwar Temple."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "शीतला माता मंदिर उज्जैन",
     "en": "Shitala Mata Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/kali-mata-mandir-ujjain.jpg",
+    "reason": "showed kali-mata-mandir-ujjain — a different, named temple on this same site (defect D12)"
   }
 }

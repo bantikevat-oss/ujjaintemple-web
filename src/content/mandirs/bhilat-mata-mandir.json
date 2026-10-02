@@ -74,9 +74,7 @@
     "lat": 23.1692,
     "lng": 75.7718
   },
-  "photos": [
-    "/images/mandirs/kali-mata-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 2 किमी दक्षिण में जवासिया क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is located approximately 2 km south of Mahakaleshwar Temple in the Jawasiya area. It can be reached from Ujjain Railway Station by auto-rickshaw or cycle-rickshaw in about 15 minutes."
@@ -130,5 +128,11 @@
         "en": "Photography is generally permitted in the outer complex, but it is advisable to seek the priest's permission before taking pictures near the sanctum or the deity's idol."
       }
     }
-  ]
+  ],
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/kali-mata-mandir-ujjain.jpg",
+    "reason": "showed kali-mata-mandir-ujjain — a different, named temple on this same site (defect D12)"
+  }
 }

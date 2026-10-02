@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/harsiddhi-mata.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -156,5 +154,11 @@
   "visitTips": {
     "hi": "स्वच्छ एवं शालीन वस्त्र पहनकर आएँ — सिर ढकना शुभ माना जाता है। मंत्र-जप हेतु रुद्राक्ष या तुलसी की माला साथ लाएँ। प्रातःकाल का समय शांत वातावरण और सूर्योदय के समय गायत्री-उपासना के लिए सर्वश्रेष्ठ है।",
     "en": "Wear clean, modest clothing — covering the head is considered auspicious. Carry a rudraksha or tulsi mala if you wish to chant the mantra. Early morning is the best time, offering a serene atmosphere ideal for Gayatri sadhana around sunrise."
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/harsiddhi-mata.jpg",
+    "reason": "showed harsiddhi-mata — a different, named temple on this same site (defect D12)"
   }
 }

@@ -74,9 +74,7 @@
     "lat": 23.1826,
     "lng": 75.7677
   },
-  "photos": [
-    "/images/mandirs/siddhavat-mandir.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से अत्यंत निकट, महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is very close to Mahakaleshwar Temple within the Mahakal precinct. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10 minutes."
@@ -130,5 +128,11 @@
         "en": "Is Chitragupta Mandir close to Mahakaleshwar Temple?"
       }
     }
-  ]
+  ],
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/siddhavat-mandir.jpg",
+    "reason": "showed siddhavat-mandir — a different, named temple on this same site (defect D12)"
+  }
 }

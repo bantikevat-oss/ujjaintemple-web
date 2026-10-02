@@ -74,9 +74,7 @@
     "lat": 23.179,
     "lng": 75.7738
   },
-  "photos": [
-    "/images/mandirs/chintaman-ganesh.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 1.5 किमी दूर फ्रीगंज मुख्य बाजार के निकट है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 10 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is approximately 1.5 km from Ujjain Railway Station, near the Freeganj main market. It can be reached in about 10 minutes by auto-rickshaw from Mahakaleshwar Mandir."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "ऋद्धि सिद्धि गणेश मंदिर उज्जैन",
     "en": "Riddhi Siddhi Ganesh Temple Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/chintaman-ganesh.jpg",
+    "reason": "showed chintaman-ganesh — a different, named temple on this same site (defect D12)"
   }
 }

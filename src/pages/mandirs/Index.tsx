@@ -117,6 +117,23 @@ export function MandirIndex() {
     .map(([area, count]) => ({ area, count }))
     .sort((a, b) => b.count - a.count);
 
+  // R2 cut 3 — THE PRINCIPAL TEMPLES. This is the best-converting query in the whole
+  // Ujjain family and the page had no section answering it (GSC 28d to 2026-09-29):
+  //   ujjain main mandir list   284 impr · pos 6.3 · 2.46% ← best in the cluster
+  //   ujjain all mandir list    144 impr · pos 7.3 · 0.69%
+  //   ujjain mandir list        317 impr · pos 8.0 · 1.26%
+  // "Main" is not our opinion: these are the temples that carry a Jyotirlinga, a
+  // Shakti Peeth, a Char Dham seat or a named-in-the-Puranas identity, which is a
+  // stated criterion a reader can check — not a ranking we invented.
+  const PRINCIPAL = [
+    'mahakaleshwar', 'kal-bhairav-ujjain', 'harsiddhi-mata', 'chintaman-ganesh',
+    'mangalnath', 'bade-ganesh-ji', 'gadkalika-mata', 'sandipani-ashram',
+    'siddhavat-mandir', 'gopal-mandir-ujjain', 'chaubis-khamba-mata', 'bhartrihari-gufa',
+  ];
+  const principal = PRINCIPAL
+    .map((s) => mandirs.find((m) => m.slug === s))
+    .filter(Boolean) as typeof mandirs;
+
   const countOf = (cat: string) => grouped.find((g) => g.cat === cat)?.items.length ?? 0;
   const breakdown = (
     [
@@ -349,6 +366,34 @@ export function MandirIndex() {
               </div>
             ))}
           </div>
+
+          {/* PRINCIPAL TEMPLES — see R2 cut 3 above. A short, ordered list is what the
+              query asks for; the full 183 are already below, grouped by deity. */}
+          {principal.length > 0 && (
+            <div id="mukhya-mandir" className="mt-6 scroll-mt-24 rounded-xl border border-gold/40 bg-white p-5 sm:p-6">
+              <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
+                {locale === 'hi' ? 'उज्जैन के मुख्य मंदिर' : 'The main temples of Ujjain'}
+              </h2>
+              <p className="mt-2 max-w-[70ch] text-sm leading-relaxed text-ink-soft">
+                {locale === 'hi'
+                  ? `उज्जैन के ${principal.length} मंदिर वे हैं जिनकी पहचान ज्योतिर्लिंग, शक्तिपीठ, चार धाम स्थान या पुराणों में नामित होने से बनती है। पहली यात्रा में प्रायः यही देखे जाते हैं; शेष सूची नीचे देवता के अनुसार दी गई है।`
+                  : `These ${principal.length} are the temples whose standing comes from a Jyotirlinga, a Shakti Peeth, a Char Dham seat or being named in the Puranas. They are what a first visit usually covers; the full list is grouped by deity below.`}
+              </p>
+              <ol className="mt-4 grid gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+                {principal.map((m, i) => (
+                  <li key={m.slug} className="flex items-baseline gap-2.5 border-b border-cream-dark/80 py-1.5 text-sm">
+                    <span className="shrink-0 text-xs text-ink-mute">{i + 1}</span>
+                    <Link
+                      to={`${locale === 'en' ? '' : '/hi'}/mandirs/${m.slug}/`}
+                      className="text-ink underline decoration-gold/50 underline-offset-4 hover:decoration-gold"
+                    >
+                      {typeof m.name === 'string' ? m.name : (m.name as Record<string, string>)[locale]}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
 
           {/* BY AREA. Answers "<area> me kaun sa mandir" and gives the hub a second
               crawlable axis. Counts only, linking into the deity anchors — re-listing all

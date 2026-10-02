@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/vikrant-bhairav.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -156,5 +154,11 @@
   "visitTips": {
     "hi": "मंदिर में प्रवेश हेतु सादे एवं शालीन वस्त्र पहनें। दर्शन के लिए प्रातःकाल या संध्या आरती का समय श्रेष्ठ है। साथ में दूध, बेसन के लड्डू, पुष्प और बेलपत्र लेकर जाएँ। मोबाइल साइलेंट रखें और मंदिर परिसर में शांति बनाए रखें।",
     "en": "Wear simple and modest clothing when visiting the temple. Early morning or evening aarti time is best for darshan. Carry milk, besan ladoos, flowers and bel leaves as offerings. Keep mobile phones on silent and maintain reverent silence within the temple premises."
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/vikrant-bhairav.jpg",
+    "reason": "showed vikrant-bhairav — a different, named temple on this same site (defect D12)"
   }
 }

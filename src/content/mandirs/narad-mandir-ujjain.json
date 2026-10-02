@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/sandipani-ashram.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -114,5 +112,11 @@
   "primaryKeyword": {
     "hi": "नारद मंदिर उज्जैन",
     "en": "Narad Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/sandipani-ashram.jpg",
+    "reason": "showed sandipani-ashram — a different, named temple on this same site (defect D12)"
   }
 }

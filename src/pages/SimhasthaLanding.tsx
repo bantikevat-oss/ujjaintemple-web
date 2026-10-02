@@ -120,12 +120,24 @@ export function SimhasthaLanding() {
 
   // Lead with the exact head term, then the top long-tail modifier ("date"),
   // which is where almost all of this page's impressions come from.
+  //
+  // 🔴 The romanised spellings are in the DESCRIPTION on purpose (GSC 28d to 2026-09-29):
+  //   singhasth ujjain      163 impr · pos 5.4 · 0 clicks
+  //   sihast kab hai        315 impr · pos 6.3 · 1 click
+  //   singhasth ujjain 2028 180 impr · pos 7.2 · 0 clicks
+  // Those are the BEST positions this page holds — better than the correct spelling —
+  // and they earn nothing, because someone who types "sihast kab hai" is shown a result
+  // that says "Simhastha" and does not recognise it as an answer to what they asked.
+  // The variants were already in an FAQ answer, which never reaches the SERP.
+  // They stay OUT of the on-page answer block under "When is Simhastha 2028?" — that
+  // paragraph is written to be lifted as a featured snippet and spelling clutter in it
+  // would cost more than it wins.
   const title = locale === 'hi'
     ? 'सिंहस्थ 2028 उज्जैन — तिथि 27 मार्च से 27 मई, शाही स्नान गाइड'
     : 'Simhastha 2028 Ujjain — Dates: 27 March–27 May, Shahi Snan Guide';
   const description = locale === 'hi'
-    ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 7 पर्व स्नान भी प्रस्तावित। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड। मदद: +91 89890 06759'
-    : 'Simhastha Mahakumbh 2028 Ujjain — mela runs 27 March to 27 May 2028 (2 months). 3 Shahi Snans: 09 April, 23 April, 08 May, plus 7 proposed parv snans. 13 Akhadas, Kalpvas, hotel & transport guide.';
+    ? 'सिंहस्थ (सिंहस्त / Singhasth / Sihast) महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड।'
+    : 'Simhastha Mahakumbh 2028 Ujjain, also written Singhasth or Sihast — mela runs 27 March to 27 May 2028. 3 Shahi Snans: 09 April, 23 April, 08 May. 13 Akhadas, Kalpvas, hotel & transport guide.';
 
   const FAQS = [
     {

@@ -74,9 +74,7 @@
     "lat": 23.1834,
     "lng": 75.7688
   },
-  "photos": [
-    "/images/mandirs/bade-ganesh-ji.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा लगभग 15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is approximately 200 metres from Mahakaleshwar Mandir. From Ujjain Railway Station, it can be reached in about 15 minutes by auto-rickshaw or cycle-rickshaw."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "महागणपति मंदिर उज्जैन",
     "en": "Mahaganpati Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/bade-ganesh-ji.jpg",
+    "reason": "showed bade-ganesh-ji — a different, named temple on this same site (defect D12)"
   }
 }

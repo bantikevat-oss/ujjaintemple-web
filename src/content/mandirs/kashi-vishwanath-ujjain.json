@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/mahakaleshwar.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -114,5 +112,11 @@
   "primaryKeyword": {
     "hi": "काशी विश्वनाथ उज्जैन",
     "en": "Kashi Vishwanath Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/mahakaleshwar.jpg",
+    "reason": "showed mahakaleshwar — a different, named temple on this same site (defect D12)"
   }
 }

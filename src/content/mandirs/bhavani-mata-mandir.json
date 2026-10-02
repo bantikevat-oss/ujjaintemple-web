@@ -74,9 +74,7 @@
     "lat": 23.182,
     "lng": 75.7666
   },
-  "photos": [
-    "/images/mandirs/mahakali-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से पैदल दूरी पर महाकाल क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा लगभग 10-15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is within walking distance of Mahakaleshwar Temple in the Mahakal area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 10-15 minutes."
@@ -130,5 +128,11 @@
   "primaryKeyword": {
     "hi": "भवानी माता मंदिर उज्जैन",
     "en": "Bhavani Mata Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/mahakali-mandir-ujjain.jpg",
+    "reason": "showed mahakali-mandir-ujjain — a different, named temple on this same site (defect D12)"
   }
 }

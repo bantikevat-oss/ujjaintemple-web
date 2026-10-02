@@ -74,9 +74,7 @@
     "lat": 23.1833,
     "lng": 75.7687
   },
-  "photos": [
-    "/images/mandirs/ram-mandir-ramghat.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 200 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is approximately 200 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto-rickshaw from Ujjain Railway Station."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "रघुनाथ मंदिर उज्जैन",
     "en": "Raghunath Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/ram-mandir-ramghat.jpg",
+    "reason": "showed ram-mandir-ramghat — a different, named temple on this same site (defect D12)"
   }
 }

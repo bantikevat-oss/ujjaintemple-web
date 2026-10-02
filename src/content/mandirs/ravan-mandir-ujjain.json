@@ -74,9 +74,7 @@
     "lat": 23.18,
     "lng": 75.766
   },
-  "photos": [
-    "/images/mandirs/bhartrihari-gufa.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 0.5 किमी की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा 12-15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is approximately 0.5 km from Mahakaleshwar Temple. It can be reached from Ujjain Railway Station by auto-rickshaw in 12–15 minutes."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "रावण मंदिर उज्जैन",
     "en": "Ravan Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/bhartrihari-gufa.jpg",
+    "reason": "showed bhartrihari-gufa — a different, named temple on this same site (defect D12)"
   }
 }

@@ -74,9 +74,7 @@
     "lat": 23.1755,
     "lng": 75.779
   },
-  "photos": [
-    "/images/mandirs/kali-mata-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर उज्जैन रेलवे स्टेशन से लगभग 2 किमी दूर नानाखेड़ा में स्थित है। महाकालेश्वर मंदिर से ऑटो द्वारा लगभग 12 मिनट का रास्ता है।",
     "en": "The temple is approximately 2 km from Ujjain Railway Station in the Nanakheda area. It is about 12 minutes by auto-rickshaw from Mahakaleshwar Temple."
@@ -130,5 +128,11 @@
         "en": "Photography is usually not permitted inside the sanctum, though the temple courtyard and exterior may be photographed. It is best to follow local rules, especially during Navratri."
       }
     }
-  ]
+  ],
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/kali-mata-mandir-ujjain.jpg",
+    "reason": "showed kali-mata-mandir-ujjain — a different, named temple on this same site (defect D12)"
+  }
 }

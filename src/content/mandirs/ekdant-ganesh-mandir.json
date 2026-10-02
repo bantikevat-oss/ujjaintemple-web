@@ -74,9 +74,7 @@
     "lat": 23.1828,
     "lng": 75.7683
   },
-  "photos": [
-    "/images/mandirs/chintaman-ganesh.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 300 मीटर की दूरी पर स्थित है। उज्जैन रेलवे स्टेशन से ऑटो-रिक्शा द्वारा 15 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is located approximately 300 metres from Mahakaleshwar Mandir. It can be reached in about 15 minutes by auto-rickshaw from Ujjain Railway Station."
@@ -130,5 +128,11 @@
         "en": "Devotees typically offer modaks, boondi laddoos, durva grass, and red flowers; students often place books and pens before the deity to seek blessings."
       }
     }
-  ]
+  ],
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/chintaman-ganesh.jpg",
+    "reason": "showed chintaman-ganesh — a different, named temple on this same site (defect D12)"
+  }
 }

@@ -74,9 +74,7 @@
     "lat": 23.1748,
     "lng": 75.7808
   },
-  "photos": [
-    "/images/mandirs/harsiddhi-mata.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 2.5 किमी उत्तर में नानाखेड़ा क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो या रिक्शा द्वारा 15-20 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is located approximately 2.5 km north of Mahakaleshwar Temple in the Nanakheda area. It can be reached from Ujjain Railway Station by auto-rickshaw or taxi in 15-20 minutes."
@@ -86,5 +84,11 @@
   "primaryKeyword": {
     "hi": "वैष्णो देवी मंदिर उज्जैन",
     "en": "Vaishno Devi Mandir Ujjain"
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/harsiddhi-mata.jpg",
+    "reason": "showed harsiddhi-mata — a different, named temple on this same site (defect D12)"
   }
 }

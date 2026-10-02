@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/kal-bhairav-ujjain.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -156,5 +154,11 @@
   "visitTips": {
     "hi": "पूर्ण अष्ट भैरव परिक्रमा के लिए पूरा दिन रखें—प्रातः जल्दी आरंभ करें। पारंपरिक व ढके वस्त्र पहनें, पैदल चलने योग्य आरामदायक जूते साथ रखें। प्रत्येक मंदिर में चढ़ाने हेतु पुष्प, नारियल और दीप-धूप पास रखें; गर्मियों में पानी की बोतल अवश्य ले जाएं।",
     "en": "Set aside a full day for the complete Ashta Bhairav parikrama and start early in the morning. Wear modest, traditional clothing and comfortable walking shoes since the route covers considerable distance. Carry flowers, a coconut, and incense for offerings at each shrine, and keep a water bottle during summer months."
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/kal-bhairav-ujjain.jpg",
+    "reason": "showed kal-bhairav-ujjain — a different, named temple on this same site (defect D12)"
   }
 }

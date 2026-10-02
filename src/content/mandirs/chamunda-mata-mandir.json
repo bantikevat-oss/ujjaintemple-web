@@ -74,9 +74,7 @@
     "lat": 23.19,
     "lng": 75.766
   },
-  "photos": [
-    "/images/mandirs/mahakali-mandir-ujjain.jpg"
-  ],
+  "photos": [],
   "howToReach": {
     "hi": "यह मंदिर महाकालेश्वर मंदिर से लगभग 1.5 किमी उत्तर में भैरवगढ़ क्षेत्र में स्थित है। उज्जैन रेलवे स्टेशन से ऑटो द्वारा 20 मिनट में पहुँचा जा सकता है।",
     "en": "The temple is located approximately 1.5 km north of Mahakaleshwar Temple in the Bhairavgarh area. It can be reached from Ujjain Railway Station by auto-rickshaw in about 20 minutes."
@@ -130,5 +128,11 @@
         "en": "Photography inside the sanctum is generally not permitted, though the outer premises usually allow it. It is best to confirm with the priest before taking pictures."
       }
     }
-  ]
+  ],
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/mahakali-mandir-ujjain.jpg",
+    "reason": "showed mahakali-mandir-ujjain — a different, named temple on this same site (defect D12)"
+  }
 }

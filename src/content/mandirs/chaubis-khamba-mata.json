@@ -78,9 +78,7 @@
     "lat": 23.1765,
     "lng": 75.7885
   },
-  "photos": [
-    "/images/mandirs/harsiddhi-mata.jpg"
-  ],
+  "photos": [],
   "prasadInfo": {
     "hi": "प्रसाद उपलब्ध · पुष्प, बेलपत्र, धूप-दीप",
     "en": "Prasad available · flowers, bel leaves, incense, lamps"
@@ -146,5 +144,11 @@
   "visitTips": {
     "hi": "मंदिर परिसर में प्रवेश से पहले जूते-चप्पल बाहर उतारें और शालीन वस्त्र पहनें। ग्रीष्म ऋतु में सुबह या संध्या समय दर्शन अधिक सुखद रहता है — पानी की बोतल साथ रखें। चूँकि यह ASI संरक्षित स्थल है, स्तंभों या नक्काशी को न छुएँ और फोटोग्राफी से पहले स्थानीय नियम जाँच लें।",
     "en": "Remove footwear before entering the temple premises and wear modest clothing. In summer, early morning or evening visits are more comfortable — carry a water bottle. As this is an ASI-protected site, avoid touching the pillars or carvings and check local rules before photography."
+  },
+  "photoNeeded": true,
+  "photoRemoved": {
+    "date": "2026-10-02",
+    "was": "/images/mandirs/harsiddhi-mata.jpg",
+    "reason": "showed harsiddhi-mata — a different, named temple on this same site (defect D12)"
   }
 }
