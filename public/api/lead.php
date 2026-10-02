@@ -209,4 +209,32 @@ if ($mail_ok) {
   error_log("ujt lead: mail throttled (burst=" . (int)$burst . " dayFlood=" . (int)$dayFlood . ") for $phone");
 }
 
+/* ── mirror into the central CRM ──────────────────────────────────────────────
+ * Last, deliberately. The lead is already in leads.csv and the owner mail has
+ * already been attempted; this is a copy, and a copy must never be able to cost
+ * us the original. crm_push() swallows everything and spools on failure.
+ *
+ * Credentials live in the same server-only news-config.php the SMTP block uses,
+ * under a 'crm' key — never in this file, which is inside public_html.
+ * 🔴 With no 'crm' block present this is a silent no-op, which is the correct
+ * behaviour on a box that has not been configured yet.
+ */
+$crm_cfg_path = __DIR__ . '/../../news-config.php';
+$crm_cfg = is_readable($crm_cfg_path) ? (include $crm_cfg_path) : null;
+if (is_array($crm_cfg) && !empty($crm_cfg['crm']['key'])) {
+  require_once __DIR__ . '/crm-push.php';
+  crm_push($crm_cfg['crm'], [
+    'name'        => $name,
+    'phone'       => $phone,
+    'service'     => $service,
+    'message'     => $message,
+    'source_page' => $src,
+    'channel'     => $channel ?: 'form',
+    'travel_date' => $travel ?: null,
+    'city'        => 'Ujjain',
+    'vertical'    => 'travel',
+    'created_at'  => date('Y-m-d H:i:s'),
+  ]);
+}
+
 echo json_encode(['success' => true]);
