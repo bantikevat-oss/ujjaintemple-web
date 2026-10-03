@@ -16,8 +16,10 @@
  *     'user' => 'no-reply@byteflowtech.in',
  *     'pass' => '…',
  *     'from' => 'no-reply@byteflowtech.in',
- *     'to'   => '16amanshivhare@gmail.com',
+ *     'to'   => '16amanshivhare@gmail.com, dheeraj.byteflow@gmail.com',
  *   ],
+ *
+ * 'to' takes one address, a comma-separated list, or an array — every lead goes to all of them.
  *
  * 🪤 Stop after 3 failed AUTHs — repeated failures trip Hostinger's abuse block.
  */
@@ -36,7 +38,10 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
     $host = $cfg['host']; $port = (int)($cfg['port'] ?? 465);
     $user = $cfg['user']; $pass = $cfg['pass'];
     $from = $cfg['from'] ?? $user;
-    $to   = $cfg['to']   ?? $user;
+    $toRaw = $cfg['to'] ?? $user;
+    $to = array_values(array_filter(array_map('trim', is_array($toRaw) ? $toRaw : explode(',', $toRaw)),
+        function ($a) { return filter_var($a, FILTER_VALIDATE_EMAIL) !== false; }));
+    if (!$to) { error_log('ujt_smtp: no valid recipient'); return false; }
 
     $transport = ($port === 465) ? "ssl://$host" : $host;
     $fp = @stream_socket_client("$transport:$port", $errno, $errstr, 12);
@@ -68,12 +73,12 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
     $ok = $ok && $cmd(base64_encode($user), '334');
     $ok = $ok && $cmd(base64_encode($pass), '235');
     $ok = $ok && $cmd('MAIL FROM:<' . $from . '>', '250');
-    $ok = $ok && $cmd('RCPT TO:<' . $to . '>', '250');
+    foreach ($to as $rcpt) $ok = $ok && $cmd('RCPT TO:<' . $rcpt . '>', '250');
     $ok = $ok && $cmd('DATA', '354');
 
     if ($ok) {
         $headers  = 'From: UjjainTemple Leads <' . $from . ">\r\n";
-        $headers .= 'To: <' . $to . ">\r\n";
+        $headers .= 'To: ' . implode(', ', array_map(function ($a) { return '<' . $a . '>'; }, $to)) . "\r\n";
         $headers .= 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= 'Content-Type: text/' . ($html ? 'html' : 'plain') . "; charset=UTF-8\r\n";
