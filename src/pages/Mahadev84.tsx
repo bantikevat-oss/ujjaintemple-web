@@ -109,6 +109,31 @@ export function Mahadev84Page() {
 
         {/* GRID */}
         <section className="container-page py-10 sm:py-14">
+          {/* ── Parikrama package ─────────────────────────────────────────────
+                This page produced 16 lead events in 17 days (the site's #2 lead
+                source) with nothing to actually book — people tap call/WhatsApp
+                here because they want a vehicle and someone who knows the order.
+                This is that product. Added 2026-09-30. Moved ABOVE the list 2026-10-06 — it sat under 84 rows,
+                so almost nobody reached it. `84 महादेव की यात्रा कैसे करें` ranks pos 6.0
+                and `84 mahadev yatra ujjain` pos 6.8 with the answer nowhere on the
+                page, so the heading now asks the question and the text answers it.
+          ──────────────────────────────────────────────────────────────────── */}
+          <aside className="mb-10 rounded-xl border-2 border-gold bg-cream/60 p-5 sm:p-6">
+            <h2 className="font-serif text-xl font-bold text-maroon sm:text-2xl">
+              {locale === 'hi' ? '84 महादेव की यात्रा कैसे करें — दो दिन का क्रमबद्ध मार्ग' : 'How to do the 84 Mahadev yatra — a two-day sequenced route'}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
+              {locale === 'hi'
+                ? 'पहले दिन नगर एवं समीप के शिवालय, दूसरे दिन बाहरी क्षेत्र एवं ग्रामीण मार्ग के — इसी क्रम में चौरासी महादेव पूरे होते हैं। एक दिन में नहीं हो पाते — शिवालय गलियों, खेतों और शहर के बाहरी छोर तक फैले हैं, और कई तक का रास्ता नक्शे पर नहीं मिलता। क्रमबद्ध मार्ग, पूरे समय साथ रहने वाला वाहन और स्थानीय मार्गदर्शक — एक या दो दिवसीय। समूह हेतु टेम्पो ट्रैवलर एवं बस भी।'
+                : 'Day one covers the shrines in and near the city, day two the outlying and rural ones — that is the order in which the Chaurasi Mahadev get completed. They do not fit into one day — the shrines run through old lanes, farmland and the city’s outer edge, and the approach to several is not obvious on a map. A sequenced route, a vehicle that stays with you, and a local guide — one day or two. Tempo traveller and bus available for groups.'}
+            </p>
+            <Link
+              to={`${locale === 'hi' ? '/hi' : ''}/tour-and-travel-ujjain/84-mahadev-parikrama-package/`}
+              className="mt-4 inline-flex items-center gap-2 rounded-md bg-maroon px-5 py-3 text-sm font-bold text-cream shadow-md transition-transform active:scale-95 hover:bg-maroon-800"
+            >
+              {locale === 'hi' ? '84 महादेव परिक्रमा पैकेज देखें' : 'See the 84 Mahadev parikrama package'}
+            </Link>
+          </aside>
           {filtered.length === 0 ? (
             <div className="rounded-xl border border-cream-dark bg-cream-dark/30 p-10 text-center">
               <p className="text-base text-ink-soft">
@@ -145,28 +170,6 @@ export function Mahadev84Page() {
             </ul>
           )}
 
-          {/* ── Parikrama package ─────────────────────────────────────────────
-                This page produced 16 lead events in 17 days (the site's #2 lead
-                source) with nothing to actually book — people tap call/WhatsApp
-                here because they want a vehicle and someone who knows the order.
-                This is that product. Added 2026-09-30.
-          ──────────────────────────────────────────────────────────────────── */}
-          <aside className="mt-10 rounded-xl border-2 border-gold bg-cream/60 p-5 sm:p-6">
-            <h2 className="font-serif text-xl font-bold text-maroon sm:text-2xl">
-              {locale === 'hi' ? 'परिक्रमा करनी है? कैब एवं मार्गदर्शक सहित व्यवस्था' : 'Planning the parikrama? Cab and guide arranged'}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
-              {locale === 'hi'
-                ? 'चौरासी महादेव एक दिन में नहीं हो पाते — शिवालय गलियों, खेतों और शहर के बाहरी छोर तक फैले हैं, और कई तक का रास्ता नक्शे पर नहीं मिलता। क्रमबद्ध मार्ग, पूरे समय साथ रहने वाला वाहन और स्थानीय मार्गदर्शक — एक या दो दिवसीय। समूह हेतु टेम्पो ट्रैवलर एवं बस भी।'
-                : 'The 84 Mahadev do not fit into one day — the shrines run through old lanes, farmland and the city’s outer edge, and the approach to several is not obvious on a map. A sequenced route, a vehicle that stays with you, and a local guide — one day or two. Tempo traveller and bus available for groups.'}
-            </p>
-            <Link
-              to={`${locale === 'hi' ? '/hi' : ''}/tour-and-travel-ujjain/84-mahadev-parikrama-package/`}
-              className="mt-4 inline-flex items-center gap-2 rounded-md bg-maroon px-5 py-3 text-sm font-bold text-cream shadow-md transition-transform active:scale-95 hover:bg-maroon-800"
-            >
-              {locale === 'hi' ? '84 महादेव परिक्रमा पैकेज देखें' : 'See the 84 Mahadev parikrama package'}
-            </Link>
-          </aside>
 
           {/* ── Printable list ────────────────────────────────────────────────
                 `84 mahadev ujjain list pdf` is the highest-CTR query on this site
