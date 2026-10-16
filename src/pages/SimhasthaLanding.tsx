@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
+import { SimhasthaEnquiry } from '../components/global/SimhasthaEnquiry';
 import { AppPromo } from '../components/shared/AppPromo';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
@@ -585,6 +586,7 @@ export function SimhasthaLanding() {
                 { id: 'dates',      hi: 'सिंहस्थ 2028 कब है',   en: 'When is Simhastha 2028' },
                 { id: 'overview',   hi: 'सिंहस्थ क्या है',        en: 'What is Simhastha' },
                 { id: 'shahi-snan', hi: 'शाही स्नान तिथियाँ',    en: 'Shahi Snan dates' },
+                { id: 'enquiry',    hi: 'यात्रा की योजना',        en: 'Plan your trip' },
                 { id: 'akhadas',    hi: '13 अखाड़े',              en: 'The 13 Akhadas' },
                 { id: 'planning',   hi: 'यात्रा की तैयारी',       en: 'Planning your trip' },
                 { id: 'faq',        hi: 'अक्सर पूछे प्रश्न',      en: 'FAQs' },
@@ -725,7 +727,7 @@ export function SimhasthaLanding() {
               <p className="text-ink-soft text-base sm:text-lg font-serif italic mt-6 max-w-2xl mx-auto leading-relaxed">
                 {locale === 'hi'
                   ? 'तेरह अखाड़ों के संत‑महंत शोभायात्रा के साथ शिप्रा में स्नान करते हैं — ये हैं वे तीन मुख्य तिथियाँ'
-                  : 'Saints of the thirteen akhadas process to the Shipra for the royal bath — these are the five key dates'}
+                  : 'Saints of the thirteen akhadas process to the Shipra for the royal bath — these are the three key dates'}
               </p>
             </div>
 
@@ -796,6 +798,8 @@ export function SimhasthaLanding() {
             </p>
           </div>
         </section>
+
+        <SimhasthaEnquiry sourcePage={locale === 'hi' ? '/hi/simhastha-2028/' : '/simhastha-2028/'} />
 
         {/* ═══════════════════════════════════════════════════════════
             SECTION 3B — 13 AKHADAS
