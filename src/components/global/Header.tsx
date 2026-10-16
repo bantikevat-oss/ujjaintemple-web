@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { LogoMark } from './LogoMark';
 import { isServerRoute } from '../../lib/serverRoutes';
 
 interface NavItem {
@@ -199,7 +200,7 @@ export function Header() {
             {locale === 'hi' ? 'उज्जैन मंदिर · सिंहस्थ 2028 · होटल · टैक्सी · दर्शन पैकेज' : 'Ujjain Temple · Simhastha 2028 · Hotel · Taxi · Darshan Package'}
           </span>
           <span className="text-xs opacity-90 sm:hidden">
-            {locale === 'hi' ? '24×7 दर्शन सहायता' : '24×7 darshan help'}
+            {locale === 'hi' ? '24×7 यात्रा सहायता' : '24×7 yatra help'}
           </span>
           <a href={SITE.phoneTel} className="flex items-center gap-1.5 whitespace-nowrap font-bold hover:opacity-90" aria-label={t('cta.call')}>
             <Phone className="h-3.5 w-3.5" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
@@ -209,12 +210,15 @@ export function Header() {
 
       {/* Main nav */}
       <nav className="container-page flex items-center justify-between">
-        <Link to={`${prefix}/`} className="flex items-center gap-2 py-3" aria-label="UjjainTemple home">
-          <span className="font-serif text-xl font-bold text-maroon sm:text-2xl">UjjainTemple</span>
+        <Link to={`${prefix}/`} className="flex items-center gap-2 py-2.5" aria-label="UjjainTemple home">
+          <LogoMark className="h-9 w-9 shrink-0 sm:h-11 sm:w-11 lg:h-9 lg:w-9 xl:h-11 xl:w-11" />
+          <span className="font-serif text-xl font-bold text-maroon sm:text-2xl lg:text-xl xl:text-2xl">UjjainTemple</span>
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex items-center gap-3 text-sm">
+        {/* lg (1024–1279) is tight: with the logo mark the nav overflowed by 52px, so the mark,
+            wordmark and gaps step down one size there and back up at xl. */}
+        <ul className="hidden lg:flex items-center gap-2 xl:gap-3 text-sm">
           {renderDesktopNav(navTree)}
           <li className="ml-2">
             <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm flex items-center gap-2">

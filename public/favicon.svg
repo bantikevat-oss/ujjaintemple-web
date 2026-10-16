@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <rect width="64" height="64" rx="10" fill="#8B1A1A"/>
-  <path d="M32 12 L40 24 H48 L40 32 L44 44 L32 38 L20 44 L24 32 L16 24 H24 Z" fill="#C9A84C"/>
-  <circle cx="32" cy="32" r="4" fill="#FBF5EC"/>
+  <!-- UjjainTemple emblem, favicon cut: mirrors src/components/global/LogoMark.tsx by hand
+       (simplified for 16-32px — no arc, no side shikhars, one river line). -->
+  <rect width="64" height="64" rx="12" fill="#8B1A1A"/>
+  <path d="M32 15 V5" stroke="#FBF5EC" stroke-width="2" stroke-linecap="round"/>
+  <path d="M33 5.2 L45 8.6 L33 12.2 Z" fill="#D4621A"/>
+  <path d="M19 46 V37.5 C19 29 24.5 19.5 32 11.5 C39.5 19.5 45 29 45 37.5 V46 Z" fill="#C9A84C"/>
+  <path d="M26.5 46 V40 A5.5 5.5 0 0 1 37.5 40 V46 Z" fill="#8B1A1A"/>
+  <rect x="11" y="46" width="42" height="3.5" rx="1" fill="#FBF5EC"/>
+  <path d="M9 56 C16 52 22 60 29 56 S42 52 49 56 S55 58 57 56.5" stroke="#D4621A" stroke-width="3" stroke-linecap="round"/>
 </svg>

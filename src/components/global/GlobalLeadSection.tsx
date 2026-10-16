@@ -32,7 +32,7 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
           {/* ── Value side ── */}
           <div className="text-center lg:text-left">
             <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-gold/80 mb-3">
-              {isHi ? 'नि:शुल्क यात्रा परामर्श' : 'Free Travel Consultation'}
+              {isHi ? 'यात्रा परामर्श' : 'Travel Consultation'}
             </p>
             <h2
               className={`font-bold text-white leading-tight ${isHi ? 'font-sanskrit' : 'font-serif'}`}
