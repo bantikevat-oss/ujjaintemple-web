@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, FormEvent } from 'react';
 import { X, MessageCircle, Phone } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { TripShapeFields, TRIP_SHAPES, TRAVELLERS } from './TripShapeFields';
 
 /**
  * WhatsApp capture gate (Aman, 2026-09-30 — option A).
@@ -83,12 +84,16 @@ export function WhatsAppGateHost() {
    * the popup was blocked and the visitor got nothing — silently, on the path that carries
    * ~52% of this site's leads. If the popup is blocked anyway, fall back to navigating.
    */
-  function handover(name: string, purpose: string) {
+  function handover(name: string, purpose: string, shape: string, people: string) {
     const label = PURPOSES.find((p) => p.value === purpose);
     const intent = label ? (isHi ? label.hi : label.en) : '';
+    // The trip shape goes into the chat too, so whoever answers WhatsApp sees it first.
+    const s = TRIP_SHAPES.find((x) => x.value === shape);
+    const t = TRAVELLERS.find((x) => x.value === people);
+    const extra = [s && (isHi ? s.hi : s.en), t && (isHi ? t.hi : t.en)].filter(Boolean).join(', ');
     const text = isHi
-      ? `नमस्ते! मैं ${name} हूँ। मुझे ${intent} के बारे में जानकारी चाहिए।`
-      : `Hello! I am ${name}. I need information about: ${intent}.`;
+      ? `नमस्ते! मैं ${name} हूँ। मुझे ${intent} के बारे में जानकारी चाहिए।${extra ? ` (${extra})` : ''}`
+      : `Hello! I am ${name}. I need information about: ${intent}.${extra ? ` (${extra})` : ''}`;
     const url = `${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
     const win = window.open(url, '_blank', 'noopener,noreferrer');
     if (!win) window.location.href = url;   // popup blocked → navigate instead
@@ -104,13 +109,15 @@ export function WhatsAppGateHost() {
     const data = new FormData(form);
     const name = String(data.get('name') || '').trim();
     const purpose = String(data.get('purpose') || '');
+    const shape = String(data.get('tripShape') || '');
+    const people = String(data.get('travellers') || '');
 
     data.append('sourcePage', opts.sourcePage || (typeof window !== 'undefined' ? window.location.pathname : ''));
     data.append('locale', locale);
     data.append('channel', 'whatsapp');
     if (opts.service) data.append('service', opts.service);
 
-    window.gtag?.('event', 'whatsapp_gate_submit', { purpose });
+    window.gtag?.('event', 'whatsapp_gate_submit', { purpose, trip_shape: shape || 'none', group_size: people || 'unknown' });
 
     // Fire-and-forget: `keepalive` lets this request outlive the navigation, so the lead
     // is still captured while the visitor goes straight to WhatsApp. Awaiting it here is
@@ -120,20 +127,22 @@ export function WhatsAppGateHost() {
     });
 
     form.reset();
-    handover(name, purpose);
+    handover(name, purpose, shape, people);
   }
 
   if (!open) return null;
 
   return (
     <div
-      className="fixed inset-0 z-[60] flex items-end justify-center bg-ink/60 p-0 sm:items-center sm:p-4"
+      className="fixed inset-0 z-[110] flex items-end justify-center bg-ink/60 p-0 sm:items-center sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="wag-title"
       onMouseDown={(e) => { if (e.target === e.currentTarget) setOpen(false); }}
     >
-      <div className="w-full max-w-md rounded-t-2xl border-2 border-gold bg-white p-5 shadow-xl sm:rounded-2xl">
+      {/* Scrolls inside itself: with the trip fields the sheet is ~780px, taller than a 667px phone,
+          and body scroll is locked while open — without this the name field sat off-screen. */}
+      <div className="max-h-[100dvh] w-full max-w-md overflow-y-auto overscroll-contain rounded-t-2xl border-2 border-gold bg-white p-5 shadow-xl sm:max-h-[92vh] sm:rounded-2xl">
         <div className="mb-3 flex items-start justify-between gap-3">
           <div>
             <h3 id="wag-title" className="font-serif text-xl font-bold text-maroon">
@@ -196,6 +205,8 @@ export function WhatsAppGateHost() {
               ))}
             </select>
           </div>
+
+          <TripShapeFields idPrefix="wag" compact />
 
           {/* Optional on purpose. This is the highest-volume lead path (~52% of lead
               events); making the date required would buy better leads by losing leads.

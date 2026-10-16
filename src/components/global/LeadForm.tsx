@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { Phone, Send } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { TripShapeFields } from './TripShapeFields';
 
 interface Props {
   defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'group' | 'simhastha' | 'cab';
@@ -24,6 +25,12 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
       if (!res.ok) throw new Error('submit failed');
       setStatus('success');
       (e.target as HTMLFormElement).reset();
+      // Form submits were invisible to GA4 until 2026-10-16 (only tel:/wa.me clicks counted).
+      window.gtag?.('event', 'generate_lead', {
+        form_id: 'lead_form',
+        trip_shape: String(data.get('tripShape') || 'none'),
+        group_size: String(data.get('travellers') || 'unknown'),
+      });
     } catch {
       setStatus('error');
     }
@@ -77,6 +84,7 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
             <input id="lf-date" name="travelDate" type="date"
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon" />
           </div>
+          <TripShapeFields idPrefix="lf" />
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-service">{t('form.service')}</label>
             <select id="lf-service" name="service" defaultValue={defaultService}

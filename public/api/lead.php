@@ -51,6 +51,19 @@ $channel   = clean($_POST['channel'] ?? 'form'); // 'form' | 'whatsapp' | 'app'
 $travel    = clean($_POST['travelDate'] ?? '');  // yyyy-mm-dd, optional — the field that
                                                  // decides vehicle availability and price
 
+/*
+ * Trip shape — the premium-lead fields (Aman, 2026-10-16: "sab cheap lead hai, kisi ko
+ * sirf gadi chahiye"). All optional and whitelisted: an unknown value is dropped, never
+ * guessed. They decide the PREMIUM / QUICK tier below and ride into `message`, so the
+ * CSV keeps its 11 columns and the CRM gets them without a schema change.
+ */
+function pick($v, $allowed) { return in_array($v, $allowed, true) ? $v : ''; }
+$people    = pick(clean($_POST['travellers'] ?? ''), ['1-2', '3-5', '6-9', '10+']);
+$tripDays  = pick(clean($_POST['tripDays'] ?? ''), ['1', '2', '3+']);
+$shape     = pick(clean($_POST['tripShape'] ?? ''), ['cab', 'cab_hotel', 'full_plan']);
+$fromCity  = trim(preg_replace('/[^\p{L}\s.\-]/u', '', clean($_POST['fromCity'] ?? '')));
+$fromCity  = function_exists('mb_substr') ? mb_substr($fromCity, 0, 40) : substr($fromCity, 0, 40);
+
 if (!$name || !$phone) {
   http_response_code(400);
   echo json_encode(['success' => false, 'error' => 'name + phone required']);
@@ -109,7 +122,38 @@ $mail_ok   = !$burst && !$dayFlood;
  * migration is an explicit, backed-up step in the deploy runbook
  * (scripts/migrate-leads-csv-header.sh) and this code only refuses to hide the problem.
  */
-const LEAD_CSV_HEADER = ['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date'];
+/*
+ * Premium vs quick, decided here so the tier is written into the CSV/CRM message too.
+ * Plain rules on purpose — no scoring weights to argue about later:
+ *   PREMIUM = 10+ people, 6–9 people, 2+ days, cab + hotel, or a full trip plan.
+ *   QUICK   = cab only (by shape or purpose) AND travelling within 2 days AND not premium
+ *             — someone already on the way who needs a car. Still a lead; just called last.
+ * Nothing is inferred from free text: if a visitor skipped the fields, the lead keeps
+ * the old WARM/COLD treatment.
+ */
+$leadDays = null;
+if ($travel !== '' && ($ts0 = strtotime($travel)) !== false) {
+  $leadDays = (int) floor(($ts0 - strtotime('today')) / 86400);
+}
+$shapeLabels = ['cab' => 'Sirf cab', 'cab_hotel' => 'Cab + hotel', 'full_plan' => 'Poora trip plan'];
+$isPremium = $purpose === 'group'
+  || in_array($people, ['6-9', '10+'], true)
+  || in_array($tripDays, ['2', '3+'], true)
+  || in_array($shape, ['cab_hotel', 'full_plan'], true);
+$cabOnly  = $shape === 'cab' || ($shape === '' && in_array($purpose, ['cab'], true))
+  || ($shape === '' && $purpose === '' && in_array($service, ['cab', 'transport'], true));
+$isQuick  = !$isPremium && $cabOnly && $leadDays !== null && $leadDays >= 0 && $leadDays <= 2;
+
+$trip = [];
+if ($people !== '')   $trip[] = "Log: $people";
+if ($tripDays !== '') $trip[] = "Din: $tripDays";
+if ($shape !== '')    $trip[] = 'Plan: ' . $shapeLabels[$shape];
+if ($fromCity !== '') $trip[] = "Kahan se: $fromCity";
+if ($isPremium)       $trip[] = 'Tier: PREMIUM';
+elseif ($isQuick)     $trip[] = 'Tier: QUICK';
+if ($trip) $message = implode(' · ', $trip) . ($message !== '' ? "\n" . $message : '');
+
+const LEAD_CSV_HEADER =['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date'];
 
 $row = [date('Y-m-d H:i:s'), $name, $phone, $service, $src, $locale, $message, $_SERVER['REMOTE_ADDR'] ?? '', $purpose, $channel, $travel];
 $fp = @fopen($cfg['csv_path'], 'a');
@@ -143,7 +187,9 @@ $labels = [
 ];
 $plabel = $labels[$purpose] ?? ($service ?: 'General');
 
-if ($purpose === 'group')                    { $tier = 'HOT';  $mark = '[GROUP]'; }
+if ($isPremium)                              { $tier = 'PREMIUM'; $mark = $purpose === 'group' || $people === '10+' ? '[PREMIUM · GROUP]' : '[PREMIUM]'; }
+elseif ($isQuick)                            { $tier = 'QUICK'; $mark = '[QUICK CAB]'; }
+elseif ($purpose === 'group')                { $tier = 'HOT';  $mark = '[GROUP]'; }
 elseif (in_array($purpose, ['cab','tour','hotel'], true)) { $tier = 'WARM'; $mark = '[LEAD]'; }
 elseif ($purpose === 'info')                 { $tier = 'COLD'; $mark = '[INFO]'; }
 else                                         { $tier = 'WARM'; $mark = '[LEAD]'; }
@@ -156,7 +202,8 @@ $subject = "$mark UjjainTemple — $name · $plabel";
  * visible before any scrolling. HTML because a plain-text block of "Name: / Phone:" is
  * where a real lead goes to hide.
  */
-$tierColor = $tier === 'HOT' ? '#B8860B' : ($tier === 'COLD' ? '#6b7280' : '#7A1220');
+$tierColor = in_array($tier, ['PREMIUM', 'HOT'], true) ? '#B8860B'
+           : (in_array($tier, ['COLD', 'QUICK'], true) ? '#6b7280' : '#7A1220');
 $digits    = preg_replace('/[^0-9]/', '', $phone);
 $waNum     = strlen($digits) === 10 ? '91' . $digits : $digits;
 
@@ -190,6 +237,10 @@ $body .= '<div style="margin:15px 0 5px">'
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
 $body .= $row('Yatra date', $whenLine);
 $body .= $row('Chahiye', $e($plabel));
+if ($shape !== '')    $body .= $row('Plan', '<strong>' . $e($shapeLabels[$shape]) . '</strong>');
+if ($people !== '')   $body .= $row('Log', $e($people));
+if ($tripDays !== '') $body .= $row('Kitne din', $e($tripDays));
+if ($fromCity !== '') $body .= $row('Kahan se', $e($fromCity));
 $channelLabels = ['whatsapp' => 'WhatsApp button', 'app' => 'Android app', 'form' => 'Website form'];
 $body .= $row('Aaya kahan se', $e($channelLabels[$channel] ?? 'Website form'));
 $body .= $row('Page', '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src ?: '—') . '</a>');

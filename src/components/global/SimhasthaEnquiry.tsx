@@ -76,6 +76,12 @@ export function SimhasthaEnquiry({ sourcePage }: { sourcePage: string }) {
     data.append('sourcePage', sourcePage);
     data.append('locale', locale);
     if (snan) data.append('travelDate', snan.iso);
+    // Same fields LeadForm sends, so lead.php tiers this lead the same way (10+ / 6–9 / cab + hotel → PREMIUM).
+    if (group) data.append('travellers', group);
+    const shape = needs.includes('tour') ? 'full_plan'
+      : needs.includes('hotel') && needs.includes('cab') ? 'cab_hotel'
+      : needs.length === 1 && needs[0] === 'cab' ? 'cab' : '';
+    if (shape) data.append('tripShape', shape);
     data.append(
       'message',
       [`Simhastha 2028`, `When: ${whenLabel}`, `People: ${groupLabel}`, `Needs: ${needLabel}`, note && `Note: ${note}`]
