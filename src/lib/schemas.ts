@@ -61,7 +61,9 @@ export function organizationSchema() {
         availableLanguage: ['Hindi', 'English'],
       },
     ],
-    sameAs: [SITE.social.facebook, SITE.social.instagram, SITE.social.youtube],
+    // YouTube dropped 2026-10-24: youtube.com/@ujjaintemple is a hard 404 (no channel exists),
+    // and a dead sameAs is a false claim about the entity.
+    sameAs: [SITE.social.facebook, SITE.social.instagram],
     knowsAbout: [
       'Mahakaleshwar Jyotirlinga',
       'Ujjain Temples',

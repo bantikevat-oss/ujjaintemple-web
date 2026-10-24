@@ -7,6 +7,7 @@ import { Breadcrumb } from '../../components/global/Breadcrumb';
 import { PujaBookingForm } from '../../components/puja/PujaBookingForm';
 import { PujaGraphicHero } from '../../components/puja/PujaGraphicHero';
 import { ShareButtons } from '../../components/shared/ShareButtons';
+import { TripNextStep } from '../../components/global/TripNextStep';
 import { useI18n } from '../../i18n';
 import { articleBySlug, getRelatedArticles, articlePath } from '../../data/articles';
 import { SITE } from '../../lib/site';
@@ -424,6 +425,11 @@ export function ArticleDetail({ category, slug }: Props) {
                     }}
                   />
                 </div>
+              )}
+
+              {/* Tour + transport readers are planning a trip; hand them the trip (see TripNextStep). */}
+              {(article.category === 'tour' || article.category === 'transport') && (
+                <TripNextStep inline source={`${article.category}/${article.slug}`} />
               )}
 
               {/* ── FAQ ACCORDION ── */}

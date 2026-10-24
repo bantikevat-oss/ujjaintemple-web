@@ -154,11 +154,11 @@ export function SimhasthaEnquiry({ sourcePage }: { sourcePage: string }) {
                 <div>
                   <label className={label} htmlFor="se-phone">{isHi ? 'मोबाइल नंबर' : 'Mobile number'} *</label>
                   <input
-                    id="se-phone" name="phone" required type="tel" autoComplete="tel" inputMode="numeric"
-                    pattern="[6-9][0-9]{9}" maxLength={10}
-                    title={isHi ? '10 अंकों का मोबाइल नंबर' : '10-digit mobile number'}
-                    onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10); }}
-                    className={field} placeholder={isHi ? '10 अंकों का नंबर' : '10-digit number'}
+                    id="se-phone" name="phone" required type="tel" autoComplete="tel" inputMode="tel"
+                    pattern="(\+[0-9][0-9 \-]{8,16})|([6-9][0-9]{9})" maxLength={18}
+                    title={isHi ? '10 अंकों का मोबाइल नंबर, या विदेश का नंबर +देश कोड के साथ' : '10-digit mobile number, or a foreign number with +country code'}
+                    onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9+\- ]/g, '').slice(0, 18); }}
+                    className={field} placeholder={isHi ? '10 अंकों का नंबर / +देश कोड' : '10-digit number or +country code'}
                   />
                 </div>
               </div>

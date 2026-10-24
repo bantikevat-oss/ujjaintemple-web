@@ -70,11 +70,17 @@ if (!$name || !$phone) {
   exit;
 }
 
-if (!preg_match('/^[0-9+\-\s]{10,15}$/', $phone)) {
+// Up to 18 chars so a spaced foreign number fits ("+971 50 123 4567" is 16); 10-15 digits is
+// the E.164 range. Until 2026-10-24 the cap was 15 chars and the site's forms took 10 digits only.
+$phoneDigits = preg_replace('/[^0-9]/', '', $phone);
+if (!preg_match('/^\+?[0-9\-\s]{10,18}$/', $phone) || strlen($phoneDigits) < 10 || strlen($phoneDigits) > 15) {
   http_response_code(400);
   echo json_encode(['success' => false, 'error' => 'invalid phone']);
   exit;
 }
+// Abroad = typed with a + and not India's +91. A visitor planning from abroad is planning a
+// whole trip, not hailing a cab, so it is treated as premium below.
+$isAbroad = substr(ltrim($phone), 0, 1) === '+' && substr($phoneDigits, 0, 2) !== '91';
 
 /*
  * Abuse guard. Until 2026-10-01 this endpoint's @mail() silently failed, so spam was
@@ -125,7 +131,8 @@ $mail_ok   = !$burst && !$dayFlood;
 /*
  * Premium vs quick, decided here so the tier is written into the CSV/CRM message too.
  * Plain rules on purpose — no scoring weights to argue about later:
- *   PREMIUM = 10+ people, 6–9 people, 2+ days, cab + hotel, or a full trip plan.
+ *   PREMIUM = 10+ people, 6–9 people, 2+ days, cab + hotel, a full trip plan, or a
+ *             phone number from abroad (+ code other than +91).
  *   QUICK   = cab only (by shape or purpose) AND travelling within 2 days AND not premium
  *             — someone already on the way who needs a car. Still a lead; just called last.
  * Nothing is inferred from free text: if a visitor skipped the fields, the lead keeps
@@ -137,6 +144,7 @@ if ($travel !== '' && ($ts0 = strtotime($travel)) !== false) {
 }
 $shapeLabels = ['cab' => 'Sirf cab', 'cab_hotel' => 'Cab + hotel', 'full_plan' => 'Poora trip plan'];
 $isPremium = $purpose === 'group'
+  || $isAbroad
   || in_array($people, ['6-9', '10+'], true)
   || in_array($tripDays, ['2', '3+'], true)
   || in_array($shape, ['cab_hotel', 'full_plan'], true);
@@ -149,6 +157,7 @@ if ($people !== '')   $trip[] = "Log: $people";
 if ($tripDays !== '') $trip[] = "Din: $tripDays";
 if ($shape !== '')    $trip[] = 'Plan: ' . $shapeLabels[$shape];
 if ($fromCity !== '') $trip[] = "Kahan se: $fromCity";
+if ($isAbroad)        $trip[] = 'Videsh se (country code ke saath number)';
 if ($isPremium)       $trip[] = 'Tier: PREMIUM';
 elseif ($isQuick)     $trip[] = 'Tier: QUICK';
 if ($trip) $message = implode(' · ', $trip) . ($message !== '' ? "\n" . $message : '');

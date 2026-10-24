@@ -22,7 +22,7 @@ export const SITE = {
   social: {
     facebook: 'https://facebook.com/ujjaintemple',
     instagram: 'https://instagram.com/ujjaintemple',
-    youtube: 'https://youtube.com/@ujjaintemple',
+    // youtube: none — @ujjaintemple does not exist (404, checked 2026-10-24). Add it back only once a channel is live.
   },
   // Forward targets (ByteFlow asset network)
   forwards: {

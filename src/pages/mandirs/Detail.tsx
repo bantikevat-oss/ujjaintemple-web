@@ -9,6 +9,7 @@ import { MandalaDivider } from '../../components/global/MandalaDivider';
 import { MandirCard } from '../../components/mandir/MandirCard';
 import { PhotoGallery } from '../../components/mandir/PhotoGallery';
 import { ShareButtons } from '../../components/shared/ShareButtons';
+import { TripNextStep } from '../../components/global/TripNextStep';
 import { useI18n } from '../../i18n';
 import { mandirBySlug, getNearbyMandirs } from '../../data/mandirs';
 import { SITE } from '../../lib/site';
@@ -430,6 +431,16 @@ export function MandirDetail({ slug }: DetailProps) {
           </section>
         )}
 
+        {/* "maheshwar temple timings" / "maheshwar temple ujjain" (~700 impr/90d) land on these two
+            pages, but that SERP is all Mahakaleshwar — most of those searchers misspelled it. */}
+        {(mandir.slug === 'uma-maheshwar-mandir' || mandir.slug === 'maheshwar-mahadev-ujjain') && (
+          <div className="container-page pt-6">
+            <Link to={`${locale === 'hi' ? '/hi' : ''}/mandirs/mahakaleshwar/`} className="inline-flex items-center gap-1 rounded-lg border border-gold/50 bg-cream-dark/50 px-4 py-2 text-sm font-semibold text-maroon hover:text-saffron-700">
+              {locale === 'hi' ? 'महाकालेश्वर ज्योतिर्लिंग के दर्शन समय देख रहे हैं? यहाँ देखें' : 'Looking for Mahakaleshwar Jyotirlinga timings? See them here'} <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+        )}
+
         {/* ── DARSHAN & AARTI TIMINGS — serves "timings" queries; data verified in content JSON ── */}
         <section className="container-page py-8">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">{locale === 'hi' ? 'दर्शन एवं आरती समय' : 'Darshan & Aarti Timings'}</p>
@@ -467,6 +478,9 @@ export function MandirDetail({ slug }: DetailProps) {
               : `Timings verified from local sources (last updated ${mandir.lastVerified}). May change on festivals and special occasions.`}
           </p>
         </section>
+
+        {/* Right after the timings — the answer most visitors came for — and before they leave. */}
+        <TripNextStep source={`mandir/${mandir.slug}`} className="!pt-0" />
 
         {/* ── PHOTOS — only extra photos (photos[1:]) to avoid duplicating hero image ── */}
         {mandir.photos.filter((p) => p && !p.includes('placeholder')).length > 1 && (

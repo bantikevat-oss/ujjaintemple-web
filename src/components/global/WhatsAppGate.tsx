@@ -186,8 +186,9 @@ export function WhatsAppGateHost() {
               {isHi ? 'मोबाइल नंबर' : 'Mobile number'} *
             </label>
             <input
-              id="wag-phone" name="phone" required type="tel" inputMode="numeric" autoComplete="tel"
-              pattern="[0-9+\- ]{10,15}" maxLength={15}
+              id="wag-phone" name="phone" required type="tel" inputMode="tel" autoComplete="tel"
+              pattern="[0-9+\- ]{10,18}" maxLength={18}
+              placeholder={isHi ? '10 अंक / विदेश: +देश कोड' : '10 digits / abroad: +country code'}
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
             />
           </div>

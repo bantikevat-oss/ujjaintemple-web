@@ -144,7 +144,7 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><a href="/hi/" class="brand">UjjainTemple.com</a> &nbsp;·&nbsp; <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></div></div>
+<div class="top"><div class="wrap"><a href="/hi/" class="brand"><img src="/favicon.svg" width="22" height="22" alt="" style="vertical-align:-5px;margin-right:6px;border-radius:4px">UjjainTemple.com</a> &nbsp;·&nbsp; <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></div></div>
 <div class="wrap<?= !empty($head['wide']) ? ' wide' : '' ?>">
 <?= $body ?>
 <div class="foot">

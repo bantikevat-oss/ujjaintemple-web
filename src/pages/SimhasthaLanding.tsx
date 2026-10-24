@@ -112,6 +112,11 @@ const AKHADAS = {
   },
 } as const;
 
+// Weekday is computed from the ISO date — arithmetic, not a sourced claim — so the
+// date table reads "रविवार, 09 अप्रैल 2028" the way people plan a trip.
+const weekday = (iso: string, locale: 'hi' | 'en') =>
+  new Date(`${iso}T12:00:00+05:30`).toLocaleDateString(locale === 'hi' ? 'hi-IN' : 'en-IN', { weekday: 'long', timeZone: 'Asia/Kolkata' });
+
 // ─── Component ────────────────────────────────────────────────────
 export function SimhasthaLanding() {
   const { locale } = useI18n();
@@ -134,8 +139,8 @@ export function SimhasthaLanding() {
   // paragraph is written to be lifted as a featured snippet and spelling clutter in it
   // would cost more than it wins.
   const title = locale === 'hi'
-    ? 'सिंहस्थ 2028 उज्जैन — तिथि 27 मार्च से 27 मई, शाही स्नान गाइड'
-    : 'Simhastha 2028 Ujjain — Dates: 27 March–27 May, Shahi Snan Guide';
+    ? 'उज्जैन सिंहस्थ 2028 कब है — 27 मार्च से 27 मई, शाही स्नान'
+    : 'Simhastha 2028 Ujjain Date: 27 Mar–27 May · Shahi Snan Dates';
   const description = locale === 'hi'
     ? 'सिंहस्थ (सिंहस्त / Singhasth / Sihast) महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड।'
     : 'Simhastha Mahakumbh 2028 Ujjain, also written Singhasth or Sihast — mela runs 27 March to 27 May 2028. 3 Shahi Snans: 09 April, 23 April, 08 May. 13 Akhadas, Kalpvas, hotel & transport guide.';
@@ -152,7 +157,7 @@ export function SimhasthaLanding() {
       q: { hi: 'सिंहस्थ 2028 में शाही स्नान कब-कब है?', en: 'What are the Shahi Snan dates for Simhastha 2028?' },
       a: {
         hi: 'सिंहस्थ 2028 में तीन शाही स्नान हैं — प्रथम 09 अप्रैल 2028, द्वितीय 23 अप्रैल 2028 और तृतीय व अंतिम 08 मई 2028। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं, जिनकी तिथियाँ अभी घोषित नहीं हुई हैं। शाही स्नान वाले दिनों में सबसे अधिक श्रद्धालु रहते हैं।',
-        en: 'Simhastha 2028 has three Shahi Snans — the first on 09 April 2028, the second on 23 April 2028, and the third and final on 08 May 2028. Seven parv snans are also proposed, but their dates have not been announced yet. Crowds peak on Shahi Snan days.',
+        en: 'Simhastha 2028 has three Shahi Snans — the first on 09 April 2028, the second on 23 April 2028, and the third and final on 08 May 2028. Seven parv snans are also proposed, but their dates have not been announced yet. Pilgrim numbers are highest on Shahi Snan days.',
       },
     },
     {
@@ -187,7 +192,7 @@ export function SimhasthaLanding() {
       q: { hi: 'सिंहस्थ 2028 में कितने श्रद्धालु आने की संभावना है?', en: 'How many pilgrims are expected at Simhastha 2028?' },
       a: {
         hi: 'सिंहस्थ 2028 में 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है, जिससे यह विश्व के सबसे बड़े धार्मिक आयोजनों में से एक होगा। शाही स्नान वाले दिनों में सबसे अधिक श्रद्धालु रहते हैं।',
-        en: 'Over 30 crore (300 million) pilgrims are expected at Simhastha 2028, making it one of the world\'s largest religious gatherings. Crowds peak on the Shahi Snan days.',
+        en: 'Over 30 crore (300 million) pilgrims are expected at Simhastha 2028, making it one of the world\'s largest religious gatherings. Pilgrim numbers are highest on the Shahi Snan days.',
       },
     },
   ] as const;
@@ -245,7 +250,9 @@ export function SimhasthaLanding() {
           simhastha2028EventSchema(),
           faqSchema(FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] }))),
         ]}
-      />
+      >
+        <link rel="preload" as="image" href="/images/simhastha/simhastha-hero.webp" fetchPriority="high" />
+      </SEOHead>
       <Layout>
 
         {/* ═══════════════════════════════════════════════════════════
@@ -259,6 +266,8 @@ export function SimhasthaLanding() {
               src="/images/simhastha/simhastha-hero.webp"
               alt=""
               aria-hidden="true"
+              fetchPriority="high"
+              decoding="async"
               className="h-full w-full object-cover object-center"
               style={{ opacity: 0.32, mixBlendMode: 'luminosity' }}
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -298,10 +307,12 @@ export function SimhasthaLanding() {
 
             {/* Title block */}
             <div className="flex flex-col items-center gap-1">
-              <span className="text-gold/60 font-serif tracking-[0.4em] uppercase text-base sm:text-xl" style={{ fontVariantNumeric: 'oldstyle-nums' }}>
-                {locale === 'hi' ? '— सिंहस्थ —' : '— Simhastha —'}
+              <h1 className="flex flex-col items-center gap-1">
+              {/* Letter-spacing breaks Devanagari conjuncts apart ("उ ज्जै न"), so the Hindi label is set plain. */}
+              <span className={`text-gold/70 font-serif text-base sm:text-xl ${locale === 'hi' ? 'font-sanskrit text-lg sm:text-2xl' : 'tracking-[0.4em] uppercase'}`} style={{ fontVariantNumeric: 'oldstyle-nums' }}>
+                {locale === 'hi' ? 'उज्जैन सिंहस्थ' : 'Ujjain Simhastha'}
               </span>
-              <h1
+              <span
                 className="font-serif font-bold leading-none"
                 style={{
                   fontSize: 'clamp(5rem, 16vw, 11rem)',
@@ -312,7 +323,8 @@ export function SimhasthaLanding() {
                   filter: 'drop-shadow(0 6px 32px rgba(201,168,76,0.25))',
                 }}
               >
-                <span className="sr-only">{locale === 'hi' ? 'सिंहस्थ 2028 उज्जैन महाकुंभ — शाही स्नान, अखाड़े व यात्रा गाइड · ' : 'Simhastha 2028 Ujjain Mahakumbh — Shahi Snan, Akhadas & Travel Guide · '}</span>2028
+                2028
+              </span>
               </h1>
               <p className="text-cream/70 font-serif text-base sm:text-xl tracking-wide">
                 {locale === 'hi'
@@ -473,13 +485,13 @@ export function SimhasthaLanding() {
         <section id="dates" className="bg-cream py-12 sm:py-16 border-b border-gold/25">
           <div className="container-page max-w-3xl mx-auto">
             <h2 className={` text-maroon leading-tight ${locale === 'hi' ? 'font-sanskrit font-normal text-3xl sm:text-4xl' : 'font-serif font-bold text-3xl sm:text-4xl'}`}>
-              {locale === 'hi' ? 'सिंहस्थ 2028 कब है?' : 'When is Simhastha 2028?'}
+              {locale === 'hi' ? 'उज्जैन सिंहस्थ 2028 कब है?' : 'When is Simhastha 2028?'}
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-ink sm:text-lg">
               {locale === 'hi'
-                ? 'सिंहस्थ महाकुम्भ 2028 उज्जैन में 27 मार्च 2028 से 27 मई 2028 तक, कुल दो माह चलेगा। इस अवधि में तीन शाही स्नान होंगे — 09 अप्रैल, 23 अप्रैल और 08 मई 2028 — तथा सात पर्व स्नान भी प्रस्तावित हैं।'
-                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 27 March 2028 to 27 May 2028 — two months in total. Three Shahi Snans fall within it — 09 April, 23 April and 08 May 2028 — and seven parv snans are also proposed.'}
+                ? 'उज्जैन सिंहस्थ महाकुम्भ 2028, 27 मार्च 2028 से 27 मई 2028 तक, कुल दो माह चलेगा। इस अवधि में तीन शाही स्नान होंगे — रविवार 09 अप्रैल, रविवार 23 अप्रैल और सोमवार 08 मई 2028 — तथा सात पर्व स्नान भी प्रस्तावित हैं।'
+                : 'Simhastha Mahakumbh 2028 in Ujjain runs from 27 March 2028 to 27 May 2028 — two months in total. Three Shahi Snans fall within it — Sunday 09 April, Sunday 23 April and Monday 08 May 2028 — and seven parv snans are also proposed.'}
             </p>
 
             {/* At-a-glance: the mela window and the snan window are different
@@ -541,6 +553,7 @@ export function SimhasthaLanding() {
                     <tr key={s.num} className="border-b border-gold/25 align-top">
                       <td className={`py-2.5 pr-4 whitespace-nowrap ${s.highlight ? 'font-bold text-maroon' : 'text-ink-soft'}`}>
                         {locale === 'hi' ? s.dateHi : s.dateEn}
+                        <span className="block text-xs font-normal text-ink-soft">{weekday(s.iso, locale)}</span>
                       </td>
                       <td className={`py-2.5 ${s.highlight ? 'font-semibold text-ink' : 'text-ink-soft'}`}>
                         {locale === 'hi' ? s.nameHi : s.nameEn}
@@ -550,6 +563,12 @@ export function SimhasthaLanding() {
                 </tbody>
               </table>
             </div>
+
+            <p className="mt-5 text-xs leading-relaxed text-ink-soft">
+              {locale === 'hi'
+                ? 'स्थिति (अक्टूबर 2026): मेला अवधि और तीनों शाही स्नान की तिथियाँ प्रकाशित मीडिया रिपोर्ट्स पर आधारित हैं; राज्य शासन की अंतिम अधिसूचना आने पर यह पेज उसी के अनुसार अपडेट होगा।'
+                : 'Status (October 2026): the mela window and the three Shahi Snan dates follow published media reports; this page will follow the state government’s final notification once it is issued.'}
+            </p>
 
             <p className="mt-5 rounded-lg border border-gold/40 bg-white/60 px-4 py-3 text-sm leading-relaxed text-ink">
               {locale === 'hi'

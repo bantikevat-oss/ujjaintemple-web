@@ -71,8 +71,8 @@
     "en": "Morning aarti 7:00 AM · Evening aarti 7:00 PM"
   },
   "specialOccasions": {
-    "hi": "भैरव अष्टमी (कार्तिक माह) — मुख्य उत्सव · रविवार और मंगलवार — श्रद्धालु अधिक",
-    "en": "Bhairav Ashtami (Kartik month) — main festival · Sundays and Tuesdays are peak crowd days"
+    "hi": "कालभैरव जयंती / भैरव अष्टमी (मार्गशीर्ष कृष्ण अष्टमी; 2026 में 1 दिसंबर) — मुख्य उत्सव · रविवार और मंगलवार — श्रद्धालु अधिक",
+    "en": "Kalabhairav Jayanti / Bhairav Ashtami (Margashirsha Krishna Ashtami; 1 December in 2026) — main festival · Sundays and Tuesdays are the busiest days"
   },
   "entryFee": {
     "hi": "फ्री · मदिरा प्रसाद बाहर की दुकानों पर मिलता है",
@@ -94,8 +94,8 @@
     "en": "Liquor (unique offering) · coconut, flowers, sindoor · prasad shops outside the temple"
   },
   "howToReach": {
-    "hi": "महाकालेश्वर से 15 किमी (15-20 मिनट कैब/ऑटो) · रेलवे स्टेशन से 8.5 किमी · पार्किंग उपलब्ध",
-    "en": "15 km from Mahakaleshwar (15-20 min by cab/auto) · 8.5 km from railway station · parking available"
+    "hi": "महाकालेश्वर से लगभग 5 किमी (15-20 मिनट कैब/ऑटो) · रेलवे स्टेशन से लगभग 5 किमी · पार्किंग उपलब्ध",
+    "en": "About 5 km from Mahakaleshwar (15-20 min by cab/auto) · about 5 km from the railway station · parking available"
   },
   "nearbyMandirs": [
     "mahakaleshwar",
@@ -125,6 +125,36 @@
       "a": {
         "hi": "तकनीकी रूप से हाँ, लेकिन परंपरा के अनुसार महाकाल पहले फिर काल भैरव — दोनों मिलकर ही उज्जैन यात्रा पूर्ण होती है।",
         "en": "Technically yes, but tradition recommends Mahakal first, then Kal Bhairav — together they complete the Ujjain pilgrimage."
+      }
+    },
+    {
+      "q": {
+        "hi": "उज्जैन का काल भैरव मंदिर कब तक खुला रहता है?",
+        "en": "What time does the Kal Bhairav temple in Ujjain open and close?"
+      },
+      "a": {
+        "hi": "काल भैरव मंदिर लगभग प्रातः 6:00 से रात्रि 9:00 बजे तक दर्शन के लिए खुला रहता है। पर्व और विशेष अवसरों पर समय बदल सकता है।",
+        "en": "The Kal Bhairav temple is open for darshan from about 6:00 AM to 9:00 PM. Timings can change on festivals and special occasions."
+      }
+    },
+    {
+      "q": {
+        "hi": "काल भैरव अष्टमी (कालभैरव जयंती) 2026 कब है?",
+        "en": "When is Kalabhairav Jayanti (Bhairav Ashtami) in 2026?"
+      },
+      "a": {
+        "hi": "कालभैरव जयंती 2026 मंगलवार, 1 दिसंबर 2026 को है। यह उज्जैन के काल भैरव मंदिर का प्रमुख पर्व है और इस दिन श्रद्धालु सामान्य दिनों से कहीं अधिक आते हैं, इसलिए सुबह जल्दी पहुँचना सुविधाजनक रहता है।",
+        "en": "Kalabhairav Jayanti 2026 falls on Tuesday, 1 December 2026. It is the main festival of the Kal Bhairav temple in Ujjain and draws far more devotees than a normal day, so arriving early in the morning is easier."
+      }
+    },
+    {
+      "q": {
+        "hi": "उज्जैन के काल भैरव की मान्यता क्या है?",
+        "en": "What is the belief behind Kal Bhairav of Ujjain?"
+      },
+      "a": {
+        "hi": "मान्यता है कि काल भैरव उज्जैन नगरी के कोतवाल यानी रक्षक हैं। इसी कारण महाकालेश्वर दर्शन के साथ काल भैरव के दर्शन की परंपरा है, और यहाँ भोग में मदिरा अर्पित की जाती है।",
+        "en": "Kal Bhairav is believed to be the kotwal — the guardian — of Ujjain. That is why a visit to Mahakaleshwar is traditionally paired with darshan of Kal Bhairav, where liquor is offered as bhog."
       }
     }
   ],

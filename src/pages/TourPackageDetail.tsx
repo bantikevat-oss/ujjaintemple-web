@@ -15,7 +15,8 @@ import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { getPackageBySlug } from '../data/packages';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema } from '../lib/schemas';
+import { breadcrumbSchema, faqSchema } from '../lib/schemas';
+import { PackageBookingGuide, PACKAGE_FAQS } from '../components/global/PackageBookingGuide';
 import { Phone, PhoneCall } from 'lucide-react';
 import { NotFound } from './NotFound';
 
@@ -47,7 +48,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
             { name: locale === 'hi' ? 'टूर पैकेज' : 'Tour Packages', url: `${SITE.url}/tour-and-travel-ujjain/` },
             { name: title, url: `${SITE.url}${path}` },
           ]
-        })]}
+        }), faqSchema(PACKAGE_FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] })))]}
       />
       <Layout>
         {/* ── TOP MAROON BANNER (plain, left-aligned — matches temple/puja hero) ── */}
@@ -127,6 +128,8 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                   </div>
                 ))}
               </div>
+
+              <PackageBookingGuide locale={locale} />
 
               {/* Need Help Banner */}
               <div className="bg-maroon rounded-2xl p-8 sm:p-12 shadow-xl border border-maroon-800 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6">

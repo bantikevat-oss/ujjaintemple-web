@@ -74,10 +74,16 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
           </div>
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-phone">{t('form.phone')} *</label>
-            <input id="lf-phone" name="phone" required type="tel" autoComplete="tel" inputMode="numeric" pattern="[0-9]{10}" maxLength={10}
-              onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10); }}
+            {/* A visitor abroad types +1 / +44 / +971 — until 2026-10-24 this field kept digits only and
+                cut at 10, so a foreign number could not be entered at all. lead.php accepts the same shape. */}
+            <input id="lf-phone" name="phone" required type="tel" autoComplete="tel" inputMode="tel"
+              pattern="(\+[0-9][0-9 \-]{8,16})|([0-9]{10})" maxLength={18}
+              onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9+\- ]/g, '').slice(0, 18); }}
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
-              placeholder="10 digit mobile number" />
+              placeholder={locale === 'hi' ? '10 अंकों का मोबाइल नंबर' : '10-digit mobile, or +country code'} />
+            <p className="mt-1 text-[11px] text-ink-mute">
+              {locale === 'hi' ? 'विदेश से? नंबर +देश कोड के साथ लिखें (जैसे +1, +44, +971)।' : 'Outside India? Add your country code (e.g. +1, +44, +971).'}
+            </p>
           </div>
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-date">{t('form.travelDate')}</label>
