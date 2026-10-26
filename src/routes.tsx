@@ -100,6 +100,10 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
       const mod = await import('./pages/LegalRoute');
       return { Component: locale === 'hi' ? mod.RefundHi : mod.RefundEn };
     } },
+    { path: `${basePath}pricing/`, lazy: async () => {
+      const mod = await import('./pages/LegalRoute');
+      return { Component: locale === 'hi' ? mod.PricingHi : mod.PricingEn };
+    } },
 
     // Simhastha
     // `lazy` — the largest page component in the codebase (1,044 lines) and the

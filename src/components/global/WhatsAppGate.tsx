@@ -24,6 +24,11 @@ import { TripShapeFields, TRIP_SHAPES, TRAVELLERS } from './TripShapeFields';
 export interface GateOpts {
   service?: string;
   sourcePage?: string;
+  /** What the visitor picked (e.g. "Omkareshwar round trip · Ertiga · ₹3,800"). Goes into the
+      lead's message and the WhatsApp text, so whoever answers sees the exact fare asked about. */
+  note?: string;
+  /** Pre-selects the purpose dropdown (e.g. 'cab' from a fare table). */
+  purpose?: string;
 }
 
 const EVT = 'ujt:whatsapp-gate';
@@ -91,9 +96,13 @@ export function WhatsAppGateHost() {
     const s = TRIP_SHAPES.find((x) => x.value === shape);
     const t = TRAVELLERS.find((x) => x.value === people);
     const extra = [s && (isHi ? s.hi : s.en), t && (isHi ? t.hi : t.en)].filter(Boolean).join(', ');
-    const text = isHi
-      ? `नमस्ते! मैं ${name} हूँ। मुझे ${intent} के बारे में जानकारी चाहिए।${extra ? ` (${extra})` : ''}`
-      : `Hello! I am ${name}. I need information about: ${intent}.${extra ? ` (${extra})` : ''}`;
+    const text = opts.note
+      ? (isHi
+          ? `नमस्ते! मैं ${name} हूँ। मुझे ये कैब बुक करनी है: ${opts.note}${extra ? ` (${extra})` : ''}`
+          : `Hello! I am ${name}. I want to book this cab: ${opts.note}${extra ? ` (${extra})` : ''}`)
+      : isHi
+        ? `नमस्ते! मैं ${name} हूँ। मुझे ${intent} के बारे में जानकारी चाहिए।${extra ? ` (${extra})` : ''}`
+        : `Hello! I am ${name}. I need information about: ${intent}.${extra ? ` (${extra})` : ''}`;
     const url = `${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
     const win = window.open(url, '_blank', 'noopener,noreferrer');
     if (!win) window.location.href = url;   // popup blocked → navigate instead
@@ -116,6 +125,7 @@ export function WhatsAppGateHost() {
     data.append('locale', locale);
     data.append('channel', 'whatsapp');
     if (opts.service) data.append('service', opts.service);
+    if (opts.note) data.append('message', `Fare picked: ${opts.note}`);
 
     window.gtag?.('event', 'whatsapp_gate_submit', { purpose, trip_shape: shape || 'none', group_size: people || 'unknown' });
 
@@ -148,6 +158,9 @@ export function WhatsAppGateHost() {
             <h3 id="wag-title" className="font-serif text-xl font-bold text-maroon">
               {isHi ? 'व्हाट्सएप पर बात करें' : 'Talk to us on WhatsApp'}
             </h3>
+            {opts.note && (
+              <p className="mt-1 rounded-md bg-cream-light px-2 py-1 text-sm font-semibold text-maroon">{opts.note}</p>
+            )}
             <p className="mt-1 text-sm text-ink-soft">
               {isHi
                 ? 'नाम और नंबर बता दें — यदि चैट छूट जाए तो हम स्वयं कॉल कर लेंगे।'
@@ -197,7 +210,7 @@ export function WhatsAppGateHost() {
               {isHi ? 'किस लिए?' : 'What for?'} *
             </label>
             <select
-              id="wag-purpose" name="purpose" required defaultValue=""
+              id="wag-purpose" name="purpose" required defaultValue={opts.purpose ?? ''}
               className="w-full rounded-md border border-cream-dark bg-white px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
             >
               <option value="" disabled>{isHi ? 'चुनें' : 'Select'}</option>

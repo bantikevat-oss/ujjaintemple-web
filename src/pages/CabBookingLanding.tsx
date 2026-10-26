@@ -2,6 +2,7 @@
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
+import { CabFareTable } from '../components/global/CabFareTable';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
@@ -41,15 +42,15 @@ export function CabBookingLanding() {
    * 🔴 The number is in the DESCRIPTION, never the <title>: a title carrying a phone
    * number gets rewritten by Google and burns the pixel width the keyword needs.
    * The title instead carries the WORDS people type ("service", "fare", "contact
-   * number"). Every figure below is published on this page and on
-   * /transport-in-ujjain/ujjain-local-sightseeing-cab/ — do not edit one without the other.
+   * number"). Every fare figure must match data/rates.ts (the one rate card) — the table
+   * below reads it directly; the copy strings here repeat it by hand, so edit both.
    */
   const title = locale === 'hi'
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — कॉल करें +91 89890 06759। लोकल दर्शन कैब ₹900 से (हाफ डे), ₹1,700 से (फुल डे)। किराया तिथि, सीज़न व गाड़ी पर निर्भर — कॉल पर तय।'
-    : 'Ujjain taxi service — call +91 89890 06759. Local darshan cab from ₹900 half day, ₹1,700 full day. Fare depends on the date, season and vehicle — confirmed on call.';
+    ? 'उज्जैन टैक्सी सेवा — तय किराया: लोकल दर्शन (8 घंटे / 80 किमी) ₹2,500, ओंकारेश्वर राउंड ट्रिप ₹3,200, इंदौर एयरपोर्ट ₹1,700। टोल व पार्किंग शामिल। कॉल: +91 89890 06759।'
+    : 'Ujjain taxi service with fixed fares: local darshan (8 hr / 80 km) ₹2,500, Omkareshwar round trip ₹3,200, Indore Airport ₹1,700. Toll and parking included. Call +91 89890 06759.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -78,14 +79,14 @@ export function CabBookingLanding() {
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
       a: locale === 'hi'
-        ? 'इंदौर एयरपोर्ट से उज्जैन का कैब किराया सेडान के लिए ₹1,700 और SUV के लिए ₹2,200 से शुरू होता है। यह शुरुआती दर है — त्योहार, श्रावण सोमवार, सिंहस्थ, लंबे वीकेंड और देर रात की फ्लाइट पर किराया इससे अधिक रहता है। आपकी तारीख़ का किराया बुकिंग कॉल पर तय होता है और उसके बाद नहीं बदलता।'
-        : 'The cab fare from Indore Airport to Ujjain starts from ₹1,700 for a sedan and ₹2,200 for an SUV. That is a starting rate — festival dates, Shravan Somvar, Simhastha, long weekends and late-night flights run higher. The fare for your date is confirmed on the booking call and does not change after that.'
+        ? 'इंदौर एयरपोर्ट से उज्जैन (या उज्जैन से एयरपोर्ट) का तय किराया: Dzire ₹1,700 और Ertiga ₹2,200, एक तरफ़। टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल है। Innova का किराया कॉल पर बताया जाता है।'
+        : 'The fixed fare from Indore Airport to Ujjain (or Ujjain to the airport) is ₹1,700 in a Dzire and ₹2,200 in an Ertiga, one way. Toll, parking, fuel and driver charges are included. The Innova fare is quoted on the call.'
     },
     {
       q: locale === 'hi' ? 'उज्जैन लोकल टैक्सी बुकिंग/कैंसिलेशन पॉलिसी क्या है?' : 'What is the Ujjain local taxi booking/cancellation policy?',
       a: locale === 'hi'
-        ? 'हम सुविधाजनक कैंसिलेशन पॉलिसी प्रदान करते हैं। आप यात्रा से पहले आसानी से अपनी बुकिंग बदल या कैंसल कर सकते हैं।'
-        : 'We offer a flexible cancellation policy. You can easily modify or cancel your booking prior to your journey.'
+        ? 'यात्रा शुरू होने के 48 घंटे या पहले रद्द करने पर पूरा किराया वापस, 24 से 48 घंटे पहले 50%, और 24 घंटे से कम या न पहुँचने पर वापसी नहीं। पूरी शर्तें रद्दीकरण और रिफ़ंड नीति पेज पर हैं।'
+        : 'Cancel 48 hours or more before the trip for a full refund, 24 to 48 hours before for 50%, and less than 24 hours before or a no-show is not refunded. Full terms are on the Cancellation & Refund Policy page.'
     },
     {
       q: locale === 'hi' ? 'क्या मैं आउटस्टेशन के लिए उज्जैन से टैक्सी बुक कर सकता हूँ?' : 'Can I book a taxi from Ujjain for outstation?',
@@ -271,9 +272,10 @@ export function CabBookingLanding() {
             </h2>
             <p className="text-ink-soft text-lg leading-relaxed font-serif mb-4">
               {locale === 'hi'
-                ? 'हम प्रति किलोमीटर आधार या पैकेज आधार पर कैब/टैक्सी देते हैं। शुरुआती दर सेडान के लिए ₹11/किमी और SUV के लिए ₹16/किमी है। ये शुरुआती दरें हैं — किराया गाड़ी के प्रकार, तारीख़ और शहर की भीड़ पर निर्भर करता है। त्योहार, श्रावण सोमवार, महाशिवरात्रि, सिंहस्थ और लंबे वीकेंड पर माँग बढ़ जाती है, इसलिए उन तिथियों पर किराया अधिक रहता है। हम आपकी तारीख़ देखकर किराया कॉल पर बता देते हैं — बुकिंग के बाद वही रहता है, कोई छिपा हुआ चार्ज नहीं।'
-                : 'We run cabs on a per-kilometre basis or as a package. Starting rates are ₹11/km for a sedan and ₹16/km for an SUV. These are starting rates — the fare depends on the vehicle, the date and how busy the city is. Festival dates, Shravan Somvar, Mahashivratri, Simhastha and long weekends bring a rush, so fares on those dates run higher. We check your date and quote the fare on the call — it stays that price once booked, with no hidden charges.'}
+                ? 'हर गाड़ी का एक तय किराया है — टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल, कोई छिपा चार्ज नहीं। अपनी गाड़ी चुनें और WhatsApp पर बुक करें।'
+                : 'Every car has one fixed fare — toll, parking, fuel and driver charges included, no hidden charges. Pick your car and book on WhatsApp.'}
             </p>
+            <CabFareTable routes={['omkareshwar-round', 'omkareshwar-oneway', 'ujjain-local', 'indore-airport']} locale={locale} source="cab-booking" />
             <p className="text-ink-soft text-lg leading-relaxed font-serif">
               {locale === 'hi'
                 ? 'हमारे पास उज्जैन, ओंकारेश्वर, महेश्वर, मांडू के लिए विशेष टूर पैकेज हैं। हम उज्जैन में लोकल साइटसीइंग, उज्जैन से ओंकारेश्वर टैक्सी, उज्जैन से इंदौर एयरपोर्ट टैक्सी के लिए कैब/टैक्सी प्रदान करते हैं।'

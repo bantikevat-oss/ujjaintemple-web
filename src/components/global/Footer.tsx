@@ -261,6 +261,9 @@ export function Footer() {
             <FLink to={`${prefix}/cancellation-refund-policy/`}>
               {isHi ? 'रद्दीकरण और रिफ़ंड' : 'Cancellation & Refund'}
             </FLink>
+            <FLink to={`${prefix}/pricing/`}>
+              {isHi ? 'किराया और दाम' : 'Pricing'}
+            </FLink>
           </ul>
 
           {/* DPIIT badge */}
