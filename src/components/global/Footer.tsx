@@ -258,6 +258,9 @@ export function Footer() {
             <FLink to={`${prefix}/terms/`}>
               {isHi ? 'उपयोग की शर्तें' : 'Terms of Use'}
             </FLink>
+            <FLink to={`${prefix}/cancellation-refund-policy/`}>
+              {isHi ? 'रद्दीकरण और रिफ़ंड' : 'Cancellation & Refund'}
+            </FLink>
           </ul>
 
           {/* DPIIT badge */}
@@ -308,6 +311,9 @@ export function Footer() {
             </Link>
             <Link to={`${prefix}/terms/`} className="hover:text-maroon transition-colors">
               {isHi ? 'शर्तें' : 'Terms'}
+            </Link>
+            <Link to={`${prefix}/cancellation-refund-policy/`} className="hover:text-maroon transition-colors">
+              {isHi ? 'रिफ़ंड' : 'Refunds'}
             </Link>
             <a href="https://byteflowtech.in" target="_blank" rel="noopener" className="hover:text-maroon transition-colors">
               {isHi ? 'वेबसाइट: ByteFlow Technologies Pvt Ltd' : 'Website by ByteFlow Technologies Pvt Ltd'}

@@ -341,7 +341,8 @@ export function PujaGraphicHero({ article, locale, catLabel }: Props) {
         <div className="mb-6 flex items-center gap-3">
           <OmSVG />
           <span className="rounded-full border border-gold bg-black/35 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.28em] text-gold backdrop-blur-sm">
-            {catLabel} · {locale === 'hi' ? 'महाकालेश्वर उज्जैन' : 'Mahakaleshwar Ujjain'}
+            {/* City, not the temple — a puja page must not read as the temple's own puja. */}
+            {catLabel} · {locale === 'hi' ? 'उज्जैन' : 'Ujjain'}
           </span>
         </div>
 

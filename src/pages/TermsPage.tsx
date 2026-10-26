@@ -11,7 +11,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'सेवाओं का विवरण',
-    body: `UjjainTemple.com उज्जैन के मंदिरों, पूजाओं, टूर पैकेज, होटल और यातायात की जानकारी प्रदान करती है। पूजा बुकिंग और टूर पैकेज हेतु संपर्क WhatsApp / फोन के माध्यम से होता है।`,
+    body: `UjjainTemple.com उज्जैन के मंदिरों, पूजाओं, टूर पैकेज, होटल और यातायात की जानकारी प्रदान करती है। इसी वेबसाइट के माध्यम से ByteFlow Technologies Pvt Ltd कैब और टैक्सी बुकिंग, टूर पैकेज, होटल बुकिंग सहायता और अनुभवी पंडितों द्वारा पूजा की व्यवस्था भी करती है। बुकिंग की पुष्टि WhatsApp, फ़ोन या ईमेल से होती है, और भुगतान ऑनलाइन या हमारे द्वारा भेजे गए पेमेंट लिंक से किया जा सकता है। बुकिंग रद्द करने और रिफ़ंड पर हमारी रद्दीकरण और रिफ़ंड नीति लागू होती है।`,
   },
   {
     title: 'जानकारी की सटीकता',
@@ -23,7 +23,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'बाहरी लिंक और पार्टनर',
-    body: `हमारी वेबसाइट कुछ बाहरी सेवाओं (पूजा बुकिंग, कैब, होटल) की ओर redirect करती है। इन सेवाओं की गुणवत्ता और नीतियों के लिए UjjainTemple.com उत्तरदायी नहीं है।`,
+    body: `कुछ पेज दूसरी वेबसाइटों से जुड़ते हैं — जैसे हमारे नेटवर्क की अन्य पूजा वेबसाइटें, और Google Maps तथा WhatsApp जैसी सेवाएँ। किसी दूसरी वेबसाइट से बुकिंग करने पर उसी वेबसाइट की शर्तें और नीतियाँ लागू होती हैं।`,
   },
   {
     title: 'दायित्व की सीमा',
@@ -46,7 +46,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'Description of services',
-    body: `UjjainTemple.com provides information on Ujjain temples, pujas, tour packages, hotels and transport. Puja bookings and tour packages are arranged via WhatsApp/phone contact.`,
+    body: `UjjainTemple.com provides information on Ujjain temples, pujas, tour packages, hotels and transport. Through this website, ByteFlow Technologies Pvt Ltd also arranges cab and taxi bookings, tour packages, hotel booking assistance and puja arrangements with experienced pandits. Bookings are confirmed by WhatsApp, phone or email, and payment can be made online or through a payment link we send. Cancellations and refunds follow our Cancellation & Refund Policy.`,
   },
   {
     title: 'Accuracy of information',
@@ -58,7 +58,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'External links and partners',
-    body: `Our website redirects to some external services (puja booking, cab, hotels). UjjainTemple.com is not responsible for the quality or policies of those services.`,
+    body: `Some pages link to other websites — including other puja websites in our network, and services such as Google Maps and WhatsApp. When you book through another website, that website's own terms and policies apply.`,
   },
   {
     title: 'Limitation of liability',

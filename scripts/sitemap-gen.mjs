@@ -82,6 +82,7 @@ const ROUTE_COMPONENT = {
   'contact': 'ContactPage.tsx',
   'privacy-policy': 'PrivacyPage.tsx',
   'terms': 'TermsPage.tsx',
+  'cancellation-refund-policy': 'RefundPage.tsx',
   'simhastha-2028': 'SimhasthaLanding.tsx',
   'transport-in-ujjain': 'TransportLanding.tsx',
   'cab-booking': 'CabBookingLanding.tsx',
