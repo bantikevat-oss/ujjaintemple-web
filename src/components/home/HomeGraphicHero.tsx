@@ -42,34 +42,20 @@ export function HomeGraphicHero() {
       h1:      'उज्जैन',
       sub:     'महाकाल की नगरी — मंदिर, दर्शन व यात्रा गाइड',
       simhastha: 'सिंहस्थ 2028 उज्जैन — पूरी गाइड',
-      tagline: 'उज्जैन मध्य प्रदेश की प्राचीन नगरी है, जहाँ शिप्रा के तट पर बारह ज्योतिर्लिंगों में से एक श्री महाकालेश्वर विराजमान हैं। यहाँ 183 प्रमुख दर्शन मंदिर हैं, और अगला सिंहस्थ महाकुंभ 27 मार्च से 27 मई 2028 तक लगेगा।',
       ctaA:    'मंदिर दर्शन करें',
       ctaB:    'अभी कॉल करें',
       caption: 'महाकाल लोक कॉरिडोर, उज्जैन',
-      temples: [
-        { name: 'महाकालेश्वर', type: 'ज्योतिर्लिंग' },
-        { name: 'काल भैरव',    type: 'भगवान' },
-        { name: 'हरसिद्धि माता', type: 'शक्ति पीठ' },
-        { name: 'मंगलनाथ',    type: 'मंदिर' },
-        { name: 'रामघाट',     type: 'पवित्र स्थल' },
-      ],
+      temples: ['महाकालेश्वर', 'काल भैरव', 'हरसिद्धि माता', 'मंगलनाथ', 'रामघाट'],
     },
     en: {
       om:      '|| Om Namah Shivay ||',
       h1:      'Ujjain',
       sub:     'City of Mahakal — Temples, Darshan & Travel Guide',
       simhastha: 'Simhastha 2028 Ujjain — Complete Guide',
-      tagline: 'Ujjain is the ancient city in Madhya Pradesh where Shri Mahakaleshwar, one of the twelve Jyotirlingas, is enshrined on the bank of the Shipra river. The city holds 183 major darshan temples, the Chaurasi Mahadev circuit and the old ghats at Ram Ghat. The next Simhastha Mahakumbh runs here from 27 March to 27 May 2028. This guide covers temples, darshan, stay, cabs and puja in one place.',
       ctaA:    'Visit Temples',
       ctaB:    'Call Now',
       caption: 'Mahakal Lok Corridor, Ujjain',
-      temples: [
-        { name: 'Mahakaleshwar', type: 'Jyotirlinga' },
-        { name: 'Kal Bhairav',   type: 'Deity' },
-        { name: 'Harsiddhi Mata', type: 'Shakti Peeth' },
-        { name: 'Mangalnath',    type: 'Temple' },
-        { name: 'Ramghat',       type: 'Sacred Site' },
-      ],
+      temples: ['Mahakaleshwar', 'Kal Bhairav', 'Harsiddhi Mata', 'Mangalnath', 'Ramghat'],
     },
   }[locale];
 
@@ -209,10 +195,12 @@ export function HomeGraphicHero() {
           }}>
             {t.h1}
           </span>
+          {/* One line from laptop width up (Aman, 2026-10-26) — it wrapped to two at 1440px.
+              Phones still wrap: ~50 characters cannot fit 375px at a readable size. */}
           <span
-            className="hf4 block font-serif font-bold text-white mt-1"
+            className="hf4 block font-serif font-bold text-white mt-1 lg:whitespace-nowrap"
             style={{
-              fontSize: 'clamp(1.15rem, 2.9vw, 2.35rem)',
+              fontSize: 'clamp(1.15rem, 2.1vw, 2rem)',
               textShadow: '0 2px 16px rgba(0,0,0,0.7)',
               letterSpacing: '0.02em',
               lineHeight: 1.25,
@@ -222,18 +210,9 @@ export function HomeGraphicHero() {
           </span>
         </h1>
 
-        {/* Tagline */}
-        <p
-          className="hf4 relative font-serif mt-3 max-w-xl"
-          style={{
-            fontSize: 'clamp(0.82rem, 1.25vw, 0.98rem)',
-            lineHeight: 1.65,
-            color: 'rgba(255,248,232,0.95)',
-            textShadow: '0 2px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.9)',
-          }}
-        >
-          {t.tagline}
-        </p>
+        {/* No paragraph here (Aman, 2026-10-26): hero = headline + one line + CTAs. The
+            4–5 line description pushed the CTAs below the fold on a laptop screen, and the
+            same facts are repeated in the sections below. */}
 
         {/* ── 5 temple badges ── */}
         {/* Was a single non-wrapping row: at 375px the fifth badge ("रामघाट") ran off
@@ -241,18 +220,16 @@ export function HomeGraphicHero() {
             and centring on mobile keeps all five readable; the desktop row is unchanged.
             The divider is dropped on mobile because a wrapped row leaves it dangling. */}
         <div className="hf5 relative mt-5 flex flex-wrap justify-center lg:flex-nowrap lg:justify-start items-stretch gap-y-3">
-          {t.temples.map((tm, i) => (
+          {t.temples.map((name, i) => (
             <div
-              key={tm.name}
+              key={name}
               className="flex flex-col items-center gap-1 px-2.5 sm:px-3 lg:first:pl-0
                 border-r-0 lg:border-r"
               style={{ borderRightColor: i < t.temples.length - 1 ? 'rgba(212,175,55,0.22)' : 'transparent' }}
             >
               <TempleIcon v={i} />
               <p className="text-white font-semibold text-center leading-tight"
-                style={{ fontSize: 'clamp(0.6rem, 1vw, 0.75rem)' }}>{tm.name}</p>
-              <p className="text-center leading-tight"
-                style={{ fontSize: 'clamp(0.52rem, 0.85vw, 0.65rem)', color: 'rgba(212,175,55,0.65)' }}>{tm.type}</p>
+                style={{ fontSize: 'clamp(0.6rem, 1vw, 0.75rem)' }}>{name}</p>
             </div>
           ))}
         </div>

@@ -34,14 +34,11 @@ export function AppPromo({ placement, className = '' }: { placement: string; cla
   const hi = locale === 'hi';
   const appHref = `${hi ? '/hi' : ''}/app/?source=promo-${placement}`;
 
-  const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    window.gtag?.('event', 'app_promo_click', { placement, target: PLAY_URL ? 'play' : 'app' });
-    // Android visitors go to Play once the listing exists; everyone else opens the app screens.
-    if (PLAY_URL && /Android/i.test(navigator.userAgent)) {
-      e.preventDefault();
-      window.location.href = PLAY_URL;
-    }
-  };
+  // The main button is the Play Store listing for everyone (Aman, 2026-10-26) — it used to
+  // open the in-browser app screens on desktop and iPhone, so the Play link never showed.
+  // The browser version stays as a secondary link for people without Android.
+  const track = (target: 'play' | 'app') => () =>
+    window.gtag?.('event', 'app_promo_click', { placement, target });
 
   return (
     <section className={`container-page ${className}`} aria-label={hi ? 'उज्जैन गाइड ऐप' : 'Ujjain Guide app'}>
@@ -49,8 +46,9 @@ export function AppPromo({ placement, className = '' }: { placement: string; cla
         <img src="/images/app/icon-192.png" alt="" width={72} height={72} loading="lazy"
           className="h-16 w-16 shrink-0 rounded-2xl shadow-md sm:h-[72px] sm:w-[72px]" />
         <div className="min-w-0 flex-1">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-light">
-            {hi ? 'निःशुल्क ऐप' : 'Free app'}
+          {/* No "free" / "निःशुल्क" — cheap-word rule. No tracking on the Hindi label (splits conjuncts). */}
+          <p className={`text-[11px] font-semibold text-gold-light ${hi ? '' : 'uppercase tracking-[0.2em]'}`}>
+            {hi ? 'Android ऐप · Google Play पर' : 'Android app · on Google Play'}
           </p>
           <h2 className={`mt-1 text-xl font-bold leading-snug sm:text-2xl ${hi ? 'font-sanskrit' : 'font-serif'}`}>
             {hi ? 'उज्जैन गाइड — यात्रा में जेब में' : 'Ujjain Guide — in your pocket'}
@@ -64,14 +62,21 @@ export function AppPromo({ placement, className = '' }: { placement: string; cla
             ))}
           </ul>
         </div>
-        <a
-          href={appHref}
-          onClick={onClick}
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-gold px-5 py-3 font-bold text-maroon-900 shadow-md transition-transform hover:bg-gold-light active:scale-95"
-        >
-          {hi ? 'ऐप खोलें' : 'Open the app'}
-          <ArrowRight className="h-4 w-4" aria-hidden />
-        </a>
+        <div className="flex shrink-0 flex-col items-center gap-2">
+          <a
+            href={PLAY_URL}
+            target="_blank"
+            rel="noopener"
+            onClick={track('play')}
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-5 py-3 font-bold text-maroon-900 shadow-md transition-transform hover:bg-gold-light active:scale-95"
+          >
+            {hi ? 'Google Play से डाउनलोड करें' : 'Get it on Google Play'}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </a>
+          <a href={appHref} onClick={track('app')} className="text-xs text-white/75 underline underline-offset-2 hover:text-white">
+            {hi ? 'या ब्राउज़र में खोलें' : 'or open in your browser'}
+          </a>
+        </div>
       </div>
     </section>
   );

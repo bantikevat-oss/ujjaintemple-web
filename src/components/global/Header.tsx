@@ -160,7 +160,7 @@ export function Header() {
           <li key={idx} className={`${depth > 0 ? 'block' : 'relative group'}`}>
             <NavAnchor
               href={href}
-              className={`${depth === 0 ? 'flex items-center h-16 font-medium px-2' : 'block px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
+              className={`${depth === 0 ? 'flex items-center h-16 font-medium whitespace-nowrap px-1.5 xl:px-2' : 'block px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
             >
               {label}
             </NavAnchor>
@@ -173,7 +173,7 @@ export function Header() {
         <li key={idx} className="relative group cursor-pointer">
           <NavAnchor
             href={href}
-            className={`${depth === 0 ? 'flex items-center h-16 font-medium px-2' : 'flex items-center justify-between px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
+            className={`${depth === 0 ? 'flex items-center h-16 font-medium whitespace-nowrap px-1.5 xl:px-2' : 'flex items-center justify-between px-4 py-2.5 text-sm hover:bg-cream-light hover:text-maroon'} ${isActive ? 'text-maroon font-semibold' : 'text-ink'}`}
           >
             {label}
             {depth === 0 ? <ChevronDown className="w-4 h-4 ml-1 opacity-70" /> : <ChevronRight className="w-4 h-4 ml-1 opacity-70" />}
@@ -217,15 +217,17 @@ export function Header() {
 
         {/* Desktop Nav */}
         {/* lg (1024–1279) is tight: with the logo mark the nav overflowed by 52px, so the mark,
-            wordmark and gaps step down one size there and back up at xl. */}
-        <ul className="hidden lg:flex items-center gap-2 xl:gap-3 text-sm">
+            wordmark and gaps step down one size there and back up at xl. Labels never wrap
+            (Aman, 2026-10-26: "Puja Info", "Cab Booking", "Call Now" were breaking onto two
+            lines at 1024px) — padding shrinks instead. */}
+        <ul className="hidden lg:flex items-center gap-0.5 xl:gap-3 text-sm">
           {renderDesktopNav(navTree)}
-          <li className="ml-2">
-            <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm flex items-center gap-2">
+          <li className="ml-1 xl:ml-2">
+            <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-3 xl:!px-4 text-sm flex items-center gap-2 whitespace-nowrap">
               <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
             </a>
           </li>
-          <li className="ml-2">
+          <li className="ml-1 xl:ml-2">
             <Link to={`${altPrefix}/`} className="text-xs font-semibold text-link hover:underline bg-cream-light px-2 py-1 rounded" aria-label="Switch language">
               {t('lang.switchTo')}
             </Link>
