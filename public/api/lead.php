@@ -17,6 +17,14 @@
 ini_set('display_errors', '0');
 error_reporting(E_ALL);
 
+/*
+ * The Hostinger box runs in UTC, but every time this file writes is read as IST: the owner
+ * mail says "IST", and the CRM (which runs in Asia/Kolkata) parses created_at as local time.
+ * Without this, mail and CRM both showed leads 5h30m early, and "N din baad" for the travel
+ * date was a day off between 00:00 and 05:30 IST. leads.csv rows before 2026-10-26 are UTC.
+ */
+date_default_timezone_set('Asia/Kolkata');
+
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: https://ujjaintemple.com');
 header('Access-Control-Allow-Methods: POST');
