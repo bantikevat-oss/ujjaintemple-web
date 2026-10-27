@@ -3,6 +3,7 @@ import { Car, Hotel, MapPinned, MessageCircle, Phone, Send } from 'lucide-react'
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { AppShell } from '../AppShell';
+import { CabCard } from '../CabCard';
 import { istToday } from '../lib';
 
 type Service = 'transport' | 'hotel' | 'tour';
@@ -118,6 +119,7 @@ export function AppPlan() {
           <MessageCircle className="h-4 w-4" aria-hidden /> WhatsApp
         </a>
       </div>
+      <CabCard />
 
       {status === 'done' ? (
         <div className="mt-6 rounded-2xl border border-gold/40 bg-white p-5 text-center">

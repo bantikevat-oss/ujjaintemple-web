@@ -20,7 +20,7 @@ import {
 
 type Preset = { from: PlaceId; to: PlaceId; type: TripType };
 
-const ADVANCE = 500;   // ₹500 flat advance (Aman, 2026-10-27) — the server sets the real amount
+export const ADVANCE = 500;   // ₹500 flat advance (Aman, 2026-10-27) — the server sets the real amount
 
 /* Razorpay Checkout, loaded only when someone actually pays. */
 type RzpResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string };
