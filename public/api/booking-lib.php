@@ -90,6 +90,11 @@ function ut_rzp_call($method, $path, $keyId, $keySecret, $body = null) {
   if ($body !== null) curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($body));
   $res  = curl_exec($ch);
   $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  if ($code === 0) {          // network blip (seen once on 2026-10-27): one retry before giving up
+    usleep(400000);
+    $res  = curl_exec($ch);
+    $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  }
   curl_close($ch);
   return [$code, $res === false ? null : json_decode($res, true)];
 }

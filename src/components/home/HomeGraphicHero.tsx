@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, CalendarDays, ArrowRight } from 'lucide-react';
+import { MapPin, Car, CalendarDays, ArrowRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 
 /* ─── Temple silhouette icon ──────────────────────────────────────────────── */
@@ -43,7 +43,7 @@ export function HomeGraphicHero() {
       sub:     'महाकाल की नगरी — मंदिर, दर्शन व यात्रा गाइड',
       simhastha: 'सिंहस्थ 2028 उज्जैन — पूरी गाइड',
       ctaA:    'मंदिर दर्शन करें',
-      ctaB:    'अभी कॉल करें',
+      ctaB:    'कैब बुक करें',
       caption: 'महाकाल लोक कॉरिडोर, उज्जैन',
       temples: ['महाकालेश्वर', 'काल भैरव', 'हरसिद्धि माता', 'मंगलनाथ', 'रामघाट'],
     },
@@ -53,7 +53,7 @@ export function HomeGraphicHero() {
       sub:     'City of Mahakal — Temples, Darshan & Travel Guide',
       simhastha: 'Simhastha 2028 Ujjain — Complete Guide',
       ctaA:    'Visit Temples',
-      ctaB:    'Call Now',
+      ctaB:    'Book a cab',
       caption: 'Mahakal Lok Corridor, Ujjain',
       temples: ['Mahakaleshwar', 'Kal Bhairav', 'Harsiddhi Mata', 'Mangalnath', 'Ramghat'],
     },
@@ -251,8 +251,10 @@ export function HomeGraphicHero() {
             <MapPin className="w-4 h-4 flex-shrink-0" />
             {t.ctaA}
           </Link>
+          {/* Was "Call Now" — the header, top bar and floating button already call. This one sells
+              the cab (Aman, 2026-10-27) and jumps to the booking form under the hero. */}
           <a
-            href="tel:+918989006759"
+            href="#book-cab"
             className="inline-flex items-center gap-2.5 font-semibold rounded-md backdrop-blur-sm
               transition-all duration-200 hover:-translate-y-0.5"
             style={{
@@ -264,7 +266,7 @@ export function HomeGraphicHero() {
               boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
             }}
           >
-            <Phone className="w-4 h-4 flex-shrink-0" />
+            <Car className="w-4 h-4 flex-shrink-0" />
             {t.ctaB}
           </a>
         </div>

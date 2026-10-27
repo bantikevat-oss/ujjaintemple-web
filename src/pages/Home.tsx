@@ -10,6 +10,7 @@ import { SimhasthaNews, UjjainBlog } from '../components/home/SimhasthaNews';
 import { FestivalCalendar } from '../components/home/FestivalCalendar';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { AppPromo } from '../components/shared/AppPromo';
+import { CabBookingWidget } from '../components/global/CabBookingWidget';
 import { MandirCard } from '../components/mandir/MandirCard';
 import { useI18n } from '../i18n';
 import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
@@ -135,6 +136,14 @@ export function Home() {
       <Layout>
         {/* HERO — premium graphic, no photo dependency */}
         <HomeGraphicHero />
+
+        {/* ── CAB BOOKING — right under the hero, lifted over its bottom edge (Savaari-style).
+            Aman, 2026-10-27: "home page me bhi isko promote karo". Fixed fares + ₹500 advance. */}
+        <section id="book-cab" aria-label={locale === 'hi' ? 'कैब बुक करें' : 'Book a cab'} className="relative z-20 -mt-8 px-4 pb-8 sm:-mt-12">
+          <div className="mx-auto max-w-6xl">
+            <CabBookingWidget locale={locale} source="home" />
+          </div>
+        </section>
 
         {/* ── SERVICE QUICK BAR ─────────────────────────────────────────── */}
         <section id="services" className="bg-white border-b border-cream-dark">

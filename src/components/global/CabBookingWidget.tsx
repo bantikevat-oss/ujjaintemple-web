@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Calendar, Car, Check, CheckCircle2, Clock, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, ShieldCheck, User, Users } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
-import { openWhatsAppGate } from './WhatsAppGate';
 import {
   CAB_ROUTES, PICKUPS, PLACES, TRIP_TYPES, VEHICLES, VEHICLE_ORDER,
   dropsFor, inr, routeFor, tripTypesFor,
@@ -152,9 +151,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   };
 
   const tripNote = fare !== null ? `${tripLine} · ${VEHICLES[vehicle].name} · ${inr(fare)} · ${dayLabel}, ${slotLabel}` : '';
-  const viaWhatsApp = () =>
-    openWhatsAppGate({ service: 'transport', purpose: 'cab', sourcePage: `booking:${source}`, note: tripNote });
-
   /* Gateway off or failed AFTER the visitor already gave name + mobile (Aman, 2026-10-27: the
      WhatsApp gate asked for them a second time). Save the lead directly, open WhatsApp with the
      whole trip, and show "request received" — never "booked", because nothing was paid. */
@@ -220,7 +216,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       prefill: { name: name.trim(), contact: phone.trim() },
       notes: { booking_id: order.booking_id },
       theme: { color: '#8B1A1A' },
-      modal: { ondismiss: () => { setPaying(false); setError(hi ? 'पेमेंट पूरा नहीं हुआ — दोबारा कोशिश करें या WhatsApp पर बुक करें' : 'Payment not completed — try again or book on WhatsApp'); } },
+      modal: { ondismiss: () => { setPaying(false); setError(hi ? 'पेमेंट पूरा नहीं हुआ — दोबारा कोशिश करें' : 'Payment not completed — please try again'); } },
       handler: async (r: RzpResponse) => {
         const v = new FormData();
         Object.entries(r).forEach(([k, val]) => v.append(k, val));
@@ -457,9 +453,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 : `Balance ${fare !== null ? inr(fare - ADVANCE) : ''} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
             </p>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
-            <button type="button" onClick={viaWhatsApp} className="mx-auto flex items-center gap-1.5 text-sm font-semibold text-maroon hover:underline">
-              <MessageCircle className="h-4 w-4" aria-hidden /> {hi ? 'या WhatsApp पर बुक करें' : 'Or book on WhatsApp'}
-            </button>
           </div>
         ) : requested ? (
           <div className="space-y-4 py-2 text-center">
