@@ -134,20 +134,11 @@ export function Footer() {
 
         {/* Brand column */}
         <div className="space-y-5">
-          {/* Logo + OM */}
-          <div className="flex items-center gap-3">
-            <svg width="32" height="32" viewBox="0 0 60 60" className="flex-shrink-0 opacity-90">
-              <text x="50%" y="56%" dominantBaseline="middle" textAnchor="middle"
-                fontSize="46" fontFamily="serif" fill="#A48838">ॐ</text>
-            </svg>
-            <div>
-              <p className="font-serif text-2xl font-bold text-maroon leading-tight">
-                {t('site.name')}
-              </p>
-              <p className="text-[10px] text-ink-label uppercase tracking-widest">
-                Ujjain · Madhya Pradesh
-              </p>
-            </div>
+          {/* Logo (stacked version of Aman's 2026-10-27 logo) */}
+          <div>
+            <img src="/images/brand/logo-stacked.png" alt={t('site.name')} width={314} height={240}
+              loading="lazy" decoding="async" className="h-24 w-auto" />
+            <p className="mt-2 text-[11px] text-ink-label">Ujjain · Madhya Pradesh</p>
           </div>
 
           <p className="text-[14px] leading-[1.9] text-ink-soft max-w-xs">

@@ -60,7 +60,7 @@ export function AppShell({ tab, title, children }: { tab: AppTab; title: string;
         >
           <div className="mx-auto flex h-14 max-w-xl items-center justify-between gap-3 px-4">
             <Link to={appPath(locale)} className="flex min-w-0 items-center gap-2">
-              <img src="/favicon.svg" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-md" />
+              <img src="/favicon-192.png" alt="" width={28} height={28} className="h-7 w-7 shrink-0 rounded-md" />
               <span className={`truncate font-bold ${hi ? 'font-hindi text-lg' : 'text-base'}`}>{APP_NAME[locale]}</span>
             </Link>
             <Link

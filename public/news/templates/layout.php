@@ -32,7 +32,7 @@ $base = rtrim($c['base_url'], '/');
 <?php endif; ?>
 <meta name="twitter:title" content="<?= ujt_e($head['title']) ?>">
 <meta name="twitter:description" content="<?= ujt_e($head['og_description'] ?? $head['description']) ?>">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32"><link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <?php foreach (($head['jsonld'] ?? []) as $blob): ?>
 <script type="application/ld+json"><?= json_encode($blob, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
 <?php endforeach; ?>
@@ -144,7 +144,7 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap"><a href="/hi/" class="brand"><img src="/favicon.svg" width="22" height="22" alt="" style="vertical-align:-5px;margin-right:6px;border-radius:4px">UjjainTemple.com</a> &nbsp;·&nbsp; <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></div></div>
+<div class="top"><div class="wrap"><a href="/hi/" class="brand"><img src="/favicon-48.png" width="22" height="22" alt="" style="vertical-align:-5px;margin-right:6px;border-radius:4px">UjjainTemple.com</a> &nbsp;·&nbsp; <a href="/hi/simhastha-2028/">सिंहस्थ 2028</a></div></div>
 <div class="wrap<?= !empty($head['wide']) ? ' wide' : '' ?>">
 <?= $body ?>
 <div class="foot">

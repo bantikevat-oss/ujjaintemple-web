@@ -14,7 +14,7 @@ export function organizationSchema() {
     name: 'Ujjain Temple — Ujjain Mandir, Puja & Travel Guide',
     alternateName: ['Ujjain Temple', 'Ujjain Temple Guide', 'UjjainTemple.com', 'उज्जैन मंदिर गाइड'],
     url: SITE.url,
-    logo: `${SITE.url}/favicon.svg`,
+    logo: `${SITE.url}/favicon-512.png`,
     image: `${SITE.url}/og/default.webp`,
     telephone: SITE.phoneIntl,
     email: SITE.email,

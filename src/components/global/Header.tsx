@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
-import { LogoMark } from './LogoMark';
 import { isServerRoute } from '../../lib/serverRoutes';
 
 interface NavItem {
@@ -211,8 +210,10 @@ export function Header() {
       {/* Main nav */}
       <nav className="container-page flex items-center justify-between">
         <Link to={`${prefix}/`} className="flex items-center gap-2 py-2.5" aria-label="UjjainTemple home">
-          <LogoMark className="h-9 w-9 shrink-0 sm:h-11 sm:w-11 lg:h-9 lg:w-9 xl:h-11 xl:w-11" />
-          <span className="font-serif text-xl font-bold text-maroon sm:text-2xl lg:text-xl xl:text-2xl">UjjainTemple</span>
+          {/* Aman's logo (2026-10-27, GPT sheet in byteflow/projects/ujjaintemple/brand/) — mark + wordmark in one image.
+              Height steps down at lg, where the nav has ~14px spare (LANDMINES). */}
+          <img src="/images/brand/logo-horizontal.png" alt="UjjainTemple" width={336} height={112}
+            className="h-11 w-auto sm:h-12 lg:h-10 xl:h-12" decoding="async" />
         </Link>
 
         {/* Desktop Nav */}
