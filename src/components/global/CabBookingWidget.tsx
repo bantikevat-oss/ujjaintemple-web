@@ -280,13 +280,13 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
 
             {fare !== null ? (
               <button type="button" onClick={book}
-                className="flex w-full items-center justify-center gap-3 rounded-xl bg-maroon py-3.5 text-lg font-bold text-white shadow-lg hover:bg-maroon/90 active:scale-[0.99]">
+                className="mx-auto flex w-full max-w-sm items-center justify-center gap-3 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99]">
                 {hi ? `${VEHICLES[vehicle].name} बुक करें` : `Book ${VEHICLES[vehicle].name}`}
                 <span className="rounded-md bg-white/15 px-2 py-0.5">{inr(fare)}</span>
                 <ArrowRight className="h-5 w-5" aria-hidden />
               </button>
             ) : (
-              <a href={SITE.phoneTel} className="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
+              <a href={SITE.phoneTel} className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
                 <Phone className="h-5 w-5" aria-hidden /> {hi ? 'कॉल करें' : 'Call'}
               </a>
             )}
