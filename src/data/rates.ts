@@ -72,10 +72,57 @@ export const FARE_INCLUDES: B = {
   en: 'Fares include toll, parking, fuel and driver charges — no hidden charges.',
 };
 
-/** Transport article slug → the rate rows shown on that page. */
-export const FARE_ROUTES_BY_SLUG: Record<string, RouteId[]> = {
-  'ujjain-to-omkareshwar-cab': ['omkareshwar-round', 'omkareshwar-oneway'],
-  'ujjain-local-sightseeing-cab': ['ujjain-local', 'omkareshwar-round', 'indore-airport'],
+
+/* ── Booking widget: pickup → drop → trip type, resolved to one rate row ───────────────
+   Only combinations Aman has priced are offered; anything else is not in the dropdowns. */
+
+export type PlaceId = 'ujjain' | 'indore' | 'idr' | 'omkareshwar' | 'ujjain-local';
+export type TripType = 'oneway' | 'round' | 'local';
+
+export const PLACES: Record<PlaceId, B> = {
+  ujjain:        { hi: 'उज्जैन', en: 'Ujjain' },
+  indore:        { hi: 'इंदौर (शहर)', en: 'Indore (city)' },
+  idr:           { hi: 'इंदौर एयरपोर्ट', en: 'Indore Airport' },
+  omkareshwar:   { hi: 'ओंकारेश्वर', en: 'Omkareshwar' },
+  'ujjain-local': { hi: 'उज्जैन लोकल दर्शन', en: 'Ujjain local darshan' },
+};
+
+export const TRIP_TYPES: Record<TripType, B> = {
+  oneway: { hi: 'वन-वे (सिर्फ़ छोड़ना)', en: 'One way (drop only)' },
+  round:  { hi: 'राउंड ट्रिप (वापसी सहित)', en: 'Round trip (with return)' },
+  local:  { hi: 'लोकल (8 घंटे / 80 किमी)', en: 'Local (8 hr / 80 km)' },
+};
+
+/** pickup → drop → the trip types offered and the rate row each one uses. */
+export const ROUTE_MAP: Partial<Record<PlaceId, Partial<Record<PlaceId, Partial<Record<TripType, RouteId>>>>>> = {
+  ujjain: {
+    omkareshwar: { round: 'omkareshwar-round', oneway: 'omkareshwar-oneway' },
+    'ujjain-local': { local: 'ujjain-local' },
+    idr: { oneway: 'indore-airport' },
+  },
+  indore: {
+    omkareshwar: { round: 'omkareshwar-round', oneway: 'omkareshwar-oneway' },
+  },
+  idr: {
+    ujjain: { oneway: 'indore-airport' },
+  },
+  omkareshwar: {
+    ujjain: { oneway: 'omkareshwar-oneway' },
+    indore: { oneway: 'omkareshwar-oneway' },
+  },
+};
+
+export const PICKUPS = Object.keys(ROUTE_MAP) as PlaceId[];
+export const dropsFor = (from: PlaceId) => Object.keys(ROUTE_MAP[from] ?? {}) as PlaceId[];
+export const tripTypesFor = (from: PlaceId, to: PlaceId) =>
+  Object.keys(ROUTE_MAP[from]?.[to] ?? {}) as TripType[];
+export const routeFor = (from: PlaceId, to: PlaceId, type: TripType): RouteId | null =>
+  ROUTE_MAP[from]?.[to]?.[type] ?? null;
+
+/** Transport article slug → where the booking widget starts on that page. */
+export const BOOKING_PRESET_BY_SLUG: Record<string, { from: PlaceId; to: PlaceId; type: TripType }> = {
+  'ujjain-to-omkareshwar-cab': { from: 'ujjain', to: 'omkareshwar', type: 'round' },
+  'ujjain-local-sightseeing-cab': { from: 'ujjain', to: 'ujjain-local', type: 'local' },
 };
 
 export const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;

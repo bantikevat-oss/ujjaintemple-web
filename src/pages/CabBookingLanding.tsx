@@ -2,7 +2,7 @@
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
-import { CabFareTable } from '../components/global/CabFareTable';
+import { CabBookingWidget } from '../components/global/CabBookingWidget';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
@@ -161,6 +161,11 @@ export function CabBookingLanding() {
           </div>
         </div>
 
+        {/* ── BOOKING — first thing under the hero (Aman, 2026-10-27: book like Ola/Uber) ── */}
+        <section className="container-page max-w-4xl pt-4">
+          <CabBookingWidget locale={locale} source="cab-booking" />
+        </section>
+
         {/* ── TAXI SERVICE SECTION ── */}
         <section className="container-page py-16 sm:py-24">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -272,10 +277,9 @@ export function CabBookingLanding() {
             </h2>
             <p className="text-ink-soft text-lg leading-relaxed font-serif mb-4">
               {locale === 'hi'
-                ? 'हर गाड़ी का एक तय किराया है — टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल, कोई छिपा चार्ज नहीं। अपनी गाड़ी चुनें और WhatsApp पर बुक करें।'
-                : 'Every car has one fixed fare — toll, parking, fuel and driver charges included, no hidden charges. Pick your car and book on WhatsApp.'}
+                ? 'हर गाड़ी का एक तय किराया है — टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल, कोई छिपा चार्ज नहीं। कहाँ से, कहाँ तक, तारीख़ और गाड़ी चुनें और बुक करें।'
+                : 'Every car has one fixed fare — toll, parking, fuel and driver charges included, no hidden charges. Choose pickup, drop, date and car, and book.'}
             </p>
-            <CabFareTable routes={['omkareshwar-round', 'omkareshwar-oneway', 'ujjain-local', 'indore-airport']} locale={locale} source="cab-booking" />
             <p className="text-ink-soft text-lg leading-relaxed font-serif">
               {locale === 'hi'
                 ? 'हमारे पास उज्जैन, ओंकारेश्वर, महेश्वर, मांडू के लिए विशेष टूर पैकेज हैं। हम उज्जैन में लोकल साइटसीइंग, उज्जैन से ओंकारेश्वर टैक्सी, उज्जैन से इंदौर एयरपोर्ट टैक्सी के लिए कैब/टैक्सी प्रदान करते हैं।'

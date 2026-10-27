@@ -8,8 +8,8 @@ import { PujaBookingForm } from '../../components/puja/PujaBookingForm';
 import { PujaGraphicHero } from '../../components/puja/PujaGraphicHero';
 import { ShareButtons } from '../../components/shared/ShareButtons';
 import { TripNextStep } from '../../components/global/TripNextStep';
-import { CabFareTable } from '../../components/global/CabFareTable';
-import { FARE_ROUTES_BY_SLUG } from '../../data/rates';
+import { CabBookingWidget } from '../../components/global/CabBookingWidget';
+import { BOOKING_PRESET_BY_SLUG } from '../../data/rates';
 import { useI18n } from '../../i18n';
 import { articleBySlug, getRelatedArticles, articlePath } from '../../data/articles';
 import { SITE } from '../../lib/site';
@@ -375,9 +375,9 @@ export function ArticleDetail({ category, slug }: Props) {
               {/* ── KEY STATS STRIP ── */}
               {statsData && <ArticleStatsStrip stats={statsData} />}
 
-              {/* ── FIXED CAB FARES — above the body, so the price is the first answer ── */}
-              {article.category === 'transport' && FARE_ROUTES_BY_SLUG[article.slug] && (
-                <CabFareTable routes={FARE_ROUTES_BY_SLUG[article.slug]} locale={locale} source={`transport/${article.slug}`} />
+              {/* ── CAB BOOKING — above the body, so the fixed fare is the first answer ── */}
+              {article.category === 'transport' && BOOKING_PRESET_BY_SLUG[article.slug] && (
+                <CabBookingWidget locale={locale} source={`transport/${article.slug}`} preset={BOOKING_PRESET_BY_SLUG[article.slug]} />
               )}
 
               {/* ── ARTICLE BODY ── */}
