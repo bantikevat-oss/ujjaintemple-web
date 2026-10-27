@@ -129,7 +129,7 @@ export function CabBookingLanding() {
       />
       <Layout>
         {/* ── LUXURY HERO SECTION ── */}
-        <section className="relative flex flex-col items-center justify-center overflow-hidden bg-maroon-900 py-16 sm:py-24 lg:py-32 border-b-[8px] border-gold">
+        <section className="relative flex flex-col items-center justify-center overflow-hidden bg-maroon-900 pt-6 pb-8 sm:pt-8 sm:pb-10 border-b-[6px] border-gold">
           {/* SVG Pattern Background */}
           <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23e8b923\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
           
@@ -139,16 +139,18 @@ export function CabBookingLanding() {
             <div className="absolute inset-0 bg-gradient-to-b from-maroon-900/90 via-maroon-900/60 to-maroon-900/95" />
           </div>
 
-          <div className="relative z-10 text-center px-4 flex flex-col items-center max-w-5xl mx-auto">
-            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold tracking-wider uppercase text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)] mb-6 leading-tight">
+          {/* Compact hero (Aman, 2026-10-27): the booking form IS the hero, so it is fully on
+              screen without scrolling — like Savaari / oneway.cab. */}
+          <div className="relative z-10 w-full px-4 max-w-6xl mx-auto">
+            <h1 className={`text-center font-bold text-white drop-shadow-[0_3px_6px_rgba(0,0,0,0.8)] leading-tight text-2xl sm:text-3xl md:text-4xl ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}>
               {title}
             </h1>
-            
-            <p className="text-cream text-lg sm:text-2xl font-serif italic max-w-3xl leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              {locale === 'hi' 
-                ? 'उज्जैन और आसपास के दर्शन के लिए सुरक्षित, आरामदायक और किफायती कैब सेवा।'
-                : 'Safe, comfortable, and affordable cab service for Ujjain and outstation sightseeing.'}
+            <p className="mt-1.5 mb-5 text-center text-cream/90 text-sm sm:text-base">
+              {locale === 'hi'
+                ? 'तय किराया · टोल-पार्किंग शामिल · उज्जैन, ओंकारेश्वर और इंदौर एयरपोर्ट'
+                : 'Fixed fares · toll and parking included · Ujjain, Omkareshwar and Indore Airport'}
             </p>
+            <CabBookingWidget locale={locale} source="cab-booking" showTitle={false} />
           </div>
         </section>
 
@@ -160,11 +162,6 @@ export function CabBookingLanding() {
             ]} />
           </div>
         </div>
-
-        {/* ── BOOKING — first thing under the hero (Aman, 2026-10-27: book like Ola/Uber) ── */}
-        <section className="container-page max-w-4xl pt-4">
-          <CabBookingWidget locale={locale} source="cab-booking" />
-        </section>
 
         {/* ── TAXI SERVICE SECTION ── */}
         <section className="container-page py-16 sm:py-24">
