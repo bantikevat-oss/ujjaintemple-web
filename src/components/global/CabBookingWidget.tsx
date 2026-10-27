@@ -100,6 +100,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [pickupNote, setPickupNote] = useState('');
   const [paying, setPaying] = useState(false);
   const [bookingId, setBookingId] = useState('');
+  const [requested, setRequested] = useState(false);   // step 4 without payment (gateway off)
   const [error, setError] = useState('');
 
   // Date options are built after mount: the page is pre-rendered at build time, and "Today"
@@ -107,11 +108,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [days, setDays] = useState<{ iso: string; label: string }[]>([]);
   useEffect(() => {
     const out: { iso: string; label: string }[] = [];
-    for (let i = 0; i < 60; i++) {
+    // No same-day bookings (Aman, 2026-10-27): the list starts tomorrow; today's trips go to a call.
+    for (let i = 1; i <= 60; i++) {
       const d = new Date(); d.setDate(d.getDate() + i);
       const dm = d.toLocaleDateString(hi ? 'hi-IN' : 'en-IN', { day: 'numeric', month: 'short' });
       const wd = d.toLocaleDateString(hi ? 'hi-IN' : 'en-IN', { weekday: 'short' });
-      const lead = i === 0 ? (hi ? 'आज' : 'Today') : i === 1 ? (hi ? 'कल' : 'Tomorrow') : wd;
+      const lead = i === 1 ? (hi ? 'कल' : 'Tomorrow') : wd;
       out.push({ iso: isoOf(d), label: `${lead} · ${dm}` });
     }
     setDays(out);
@@ -153,6 +155,28 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const viaWhatsApp = () =>
     openWhatsAppGate({ service: 'transport', purpose: 'cab', sourcePage: `booking:${source}`, note: tripNote });
 
+  /* Gateway off or failed AFTER the visitor already gave name + mobile (Aman, 2026-10-27: the
+     WhatsApp gate asked for them a second time). Save the lead directly, open WhatsApp with the
+     whole trip, and show "request received" — never "booked", because nothing was paid. */
+  const requestWithoutPayment = () => {
+    const fd = new FormData();
+    Object.entries({
+      name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'whatsapp',
+      sourcePage: `booking:${source}`, locale, travelDate: date,
+      message: `Booking request (no advance): ${tripNote}${pickupNote ? ` · Pickup: ${pickupNote}` : ''}`,
+    }).forEach(([k, v]) => fd.append(k, v));
+    fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* WhatsApp still opens */ });
+    window.gtag?.('event', 'generate_lead', { form_id: 'cab_booking', route: routeId, vehicle });
+    const text = hi
+      ? `नमस्ते! मैं ${name.trim()} हूँ। मुझे ये कैब बुक करनी है: ${tripNote}${pickupNote ? ` · पिकअप: ${pickupNote}` : ''}`
+      : `Hello! I am ${name.trim()}. I want to book this cab: ${tripNote}${pickupNote ? ` · Pickup: ${pickupNote}` : ''}`;
+    const url = `${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
+    const win = window.open(url, '_blank', 'noopener,noreferrer');
+    if (!win) window.location.href = url;
+    setRequested(true);
+    setStep(4);
+  };
+
   const book = () => {
     if (!route || fare === null) return;
     window.gtag?.('event', 'fare_book_click', { route: routeId, vehicle, fare, source });
@@ -180,11 +204,11 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     // Gateway not available → never lose the booking: hand it to WhatsApp with the trip filled in.
     if (!order.success || !order.order_id) {
       setPaying(false);
-      if (order.fallback !== false) { viaWhatsApp(); return; }
+      if (order.fallback !== false) { requestWithoutPayment(); return; }
       setError(hi ? 'जानकारी जाँचें और दोबारा कोशिश करें' : 'Check the details and try again');
       return;
     }
-    if (!(await loadRazorpay()) || !window.Razorpay) { setPaying(false); viaWhatsApp(); return; }
+    if (!(await loadRazorpay()) || !window.Razorpay) { setPaying(false); requestWithoutPayment(); return; }
 
     const rzp = new window.Razorpay({
       key: order.key_id,
@@ -319,6 +343,10 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               {hi ? 'किराया देखें' : 'See cab fares'} <ArrowRight className="h-5 w-5" aria-hidden />
             </button>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
+            <p className="text-center text-xs text-ink-mute">
+              {hi ? 'आज ही यात्रा है? ' : 'Travelling today? '}
+              <a href={SITE.phoneTel} className="font-semibold text-maroon underline">{hi ? `कॉल करें ${SITE.phone}` : `Call ${SITE.phone}`}</a>
+            </p>
           </div>
         ) : step === 2 ? (
           <div className="space-y-4">
@@ -432,6 +460,21 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             <button type="button" onClick={viaWhatsApp} className="mx-auto flex items-center gap-1.5 text-sm font-semibold text-maroon hover:underline">
               <MessageCircle className="h-4 w-4" aria-hidden /> {hi ? 'या WhatsApp पर बुक करें' : 'Or book on WhatsApp'}
             </button>
+          </div>
+        ) : requested ? (
+          <div className="space-y-4 py-2 text-center">
+            <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
+            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit' : 'font-serif'}`}>{hi ? 'बुकिंग की रिक्वेस्ट मिल गई' : 'Booking request received'}</h3>
+            <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {fare !== null ? inr(fare) : ''} · {dayLabel}, {slotLabel}</p>
+            <p className="text-sm text-ink-soft">
+              {hi
+                ? 'WhatsApp पर आपकी यात्रा की पूरी जानकारी के साथ चैट खुल गई है — मैसेज भेज दें। हमारी टीम कॉल करके बुकिंग पक्की करेगी।'
+                : 'WhatsApp has opened with your trip details — send the message. Our team will call you to confirm the booking.'}
+            </p>
+            <a href={SITE.phoneTel}
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
+              <Phone className="h-5 w-5" aria-hidden /> {hi ? `अभी कॉल करें ${SITE.phone}` : `Call now ${SITE.phone}`}
+            </a>
           </div>
         ) : (
           <div className="space-y-4 py-2 text-center">

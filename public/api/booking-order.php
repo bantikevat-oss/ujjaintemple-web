@@ -32,7 +32,8 @@ if ($fare === null)                                                ut_json(400, 
 if (mb_strlen($name) < 2)                                          ut_json(400, ['success' => false, 'error' => 'name']);
 $digits = ltrim($phone, '+');
 if (!preg_match('/^\+?[0-9]{10,15}$/', $phone) || strlen($digits) < 10) ut_json(400, ['success' => false, 'error' => 'phone']);
-if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date) || $date < date('Y-m-d')) ut_json(400, ['success' => false, 'error' => 'date']);
+// No same-day bookings (Aman, 2026-10-27): tomorrow onward only.
+if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date) || $date <= date('Y-m-d')) ut_json(400, ['success' => false, 'error' => 'date']);
 if (!preg_match('/^([01]\d|2[0-3]):[0-5]\d$/', $time))           ut_json(400, ['success' => false, 'error' => 'time']);
 if (strlen($digits) === 10) $phone = '+91' . $digits;              // bare Indian mobile
 
