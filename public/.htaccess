@@ -158,5 +158,14 @@ RewriteRule ^hi/blog/([A-Za-z0-9_-]+)/?$    /news/index.php?view=article&slug=$1
   Order allow,deny
   Deny from all
 </Files>
+# Cab bookings (2026-10-27): the booking record and the include-only PHP are never served.
+<Files "bookings.csv">
+  Order allow,deny
+  Deny from all
+</Files>
+<FilesMatch "^(booking-lib|cab-rates)\.php$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
 
 ErrorDocument 404 /404.html

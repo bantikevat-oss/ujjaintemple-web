@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Calendar, Car, Check, Clock, MapPin, Navigation, Phone, ShieldCheck, Users } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Calendar, Car, Check, CheckCircle2, Clock, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, ShieldCheck, User, Users } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { openWhatsAppGate } from './WhatsAppGate';
@@ -19,6 +19,25 @@ import {
  */
 
 type Preset = { from: PlaceId; to: PlaceId; type: TripType };
+
+const ADVANCE = 500;   // ₹500 flat advance (Aman, 2026-10-27) — the server sets the real amount
+
+/* Razorpay Checkout, loaded only when someone actually pays. */
+type RzpResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string };
+type RzpInstance = { open: () => void; on: (ev: string, cb: (r: { error?: { description?: string } }) => void) => void };
+declare global { interface Window { Razorpay?: new (opts: Record<string, unknown>) => RzpInstance } }
+let rzpLoader: Promise<boolean> | null = null;
+const loadRazorpay = () => {
+  if (window.Razorpay) return Promise.resolve(true);
+  rzpLoader = rzpLoader ?? new Promise<boolean>((resolve) => {
+    const sc = document.createElement('script');
+    sc.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    sc.onload = () => resolve(true);
+    sc.onerror = () => { rzpLoader = null; resolve(false); };
+    document.body.appendChild(sc);
+  });
+  return rzpLoader;
+};
 
 const isoOf = (d: Date) => {
   const x = new Date(d);
@@ -75,7 +94,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [vehicle, setVehicle] = useState<VehicleId>('dzire');
-  const [step, setStep] = useState<1 | 2>(1);
+  const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [pickupNote, setPickupNote] = useState('');
+  const [paying, setPaying] = useState(false);
+  const [bookingId, setBookingId] = useState('');
   const [error, setError] = useState('');
 
   // Date options are built after mount: the page is pre-rendered at build time, and "Today"
@@ -125,11 +149,75 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setStep(2);
   };
 
+  const tripNote = fare !== null ? `${tripLine} · ${VEHICLES[vehicle].name} · ${inr(fare)} · ${dayLabel}, ${slotLabel}` : '';
+  const viaWhatsApp = () =>
+    openWhatsAppGate({ service: 'transport', purpose: 'cab', sourcePage: `booking:${source}`, note: tripNote });
+
   const book = () => {
     if (!route || fare === null) return;
-    const note = `${tripLine} · ${VEHICLES[vehicle].name} · ${inr(fare)} · ${dayLabel}, ${slotLabel}`;
     window.gtag?.('event', 'fare_book_click', { route: routeId, vehicle, fare, source });
-    openWhatsAppGate({ service: 'transport', purpose: 'cab', sourcePage: `booking:${source}`, note });
+    setError('');
+    setStep(3);
+  };
+
+  const pay = async () => {
+    if (paying || !routeId || fare === null) return;
+    const digits = phone.replace(/[^0-9]/g, '');
+    if (name.trim().length < 2) { setError(hi ? 'अपना नाम लिखें' : 'Enter your name'); return; }
+    if (digits.length < 10 || digits.length > 15) { setError(hi ? 'सही मोबाइल नंबर लिखें (विदेश से हों तो +देश कोड के साथ)' : 'Enter a valid mobile number (add the +country code if abroad)'); return; }
+    setError('');
+    setPaying(true);
+
+    const fd = new FormData();
+    Object.entries({ route: routeId, vehicle, name: name.trim(), phone: phone.trim(), date, time, trip: `${tripLine} · ${VEHICLES[vehicle].name}`, pickupNote, locale, source })
+      .forEach(([k, v]) => fd.append(k, v));
+    let order: { success?: boolean; fallback?: boolean; booking_id?: string; order_id?: string; key_id?: string; amount?: number } = {};
+    try {
+      const res = await fetch('/api/booking-order.php', { method: 'POST', body: fd });
+      order = await res.json();
+    } catch { order = { success: false, fallback: true }; }
+
+    // Gateway not available → never lose the booking: hand it to WhatsApp with the trip filled in.
+    if (!order.success || !order.order_id) {
+      setPaying(false);
+      if (order.fallback !== false) { viaWhatsApp(); return; }
+      setError(hi ? 'जानकारी जाँचें और दोबारा कोशिश करें' : 'Check the details and try again');
+      return;
+    }
+    if (!(await loadRazorpay()) || !window.Razorpay) { setPaying(false); viaWhatsApp(); return; }
+
+    const rzp = new window.Razorpay({
+      key: order.key_id,
+      order_id: order.order_id,
+      amount: order.amount,
+      currency: 'INR',
+      name: 'UjjainTemple.com',
+      description: hi ? `कैब बुकिंग एडवांस · ${order.booking_id}` : `Cab booking advance · ${order.booking_id}`,
+      prefill: { name: name.trim(), contact: phone.trim() },
+      notes: { booking_id: order.booking_id },
+      theme: { color: '#8B1A1A' },
+      modal: { ondismiss: () => { setPaying(false); setError(hi ? 'पेमेंट पूरा नहीं हुआ — दोबारा कोशिश करें या WhatsApp पर बुक करें' : 'Payment not completed — try again or book on WhatsApp'); } },
+      handler: async (r: RzpResponse) => {
+        const v = new FormData();
+        Object.entries(r).forEach(([k, val]) => v.append(k, val));
+        try {
+          const res = await fetch('/api/booking-verify.php', { method: 'POST', body: v });
+          const out = await res.json();
+          if (out.success) {
+            window.gtag?.('event', 'purchase', { transaction_id: order.booking_id, value: ADVANCE, currency: 'INR', items: [{ item_name: `${routeId}:${vehicle}` }] });
+            setBookingId(order.booking_id || '');
+            setStep(4);
+          } else {
+            setError(hi ? `पेमेंट की पुष्टि नहीं हो सकी — बुकिंग ID ${order.booking_id} के साथ हमें कॉल करें` : `Could not confirm the payment — call us with booking ID ${order.booking_id}`);
+          }
+        } catch {
+          setError(hi ? `पेमेंट हो गया हो तो बुकिंग ID ${order.booking_id} के साथ हमें कॉल करें` : `If you were charged, call us with booking ID ${order.booking_id}`);
+        }
+        setPaying(false);
+      },
+    });
+    rzp.on('payment.failed', (e) => { setPaying(false); setError(e.error?.description || (hi ? 'पेमेंट फेल हुआ — दोबारा कोशिश करें' : 'Payment failed — please try again')); });
+    rzp.open();
   };
 
   const box = 'flex items-center gap-2.5 rounded-xl border border-cream-dark bg-white px-3 focus-within:border-maroon focus-within:ring-1 focus-within:ring-maroon';
@@ -137,7 +225,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const cap = 'mb-1 block text-[11px] font-bold text-ink-mute';
 
   const trust = useMemo(() => ([
-    { Icon: BadgeIndianRupee, t: hi ? 'बुक करने के लिए अभी भुगतान नहीं' : 'No payment to book' },
+    { Icon: BadgeIndianRupee, t: hi ? `सिर्फ़ ₹${ADVANCE} एडवांस — बाकी ड्राइवर को` : `Only ₹${ADVANCE} advance — rest to the driver` },
     { Icon: Check, t: hi ? 'टोल, पार्किंग, ड्राइवर शामिल' : 'Toll, parking, driver included' },
     { Icon: ShieldCheck, t: hi ? '48 घंटे पहले रद्द — पूरा रिफ़ंड' : 'Cancel 48 h ahead — full refund' },
   ]), [hi]);
@@ -149,7 +237,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           <h2 className={`text-lg font-bold sm:text-xl ${hi ? 'font-sanskrit' : 'font-serif'}`}>
             {hi ? 'कैब बुक करें — तय किराया' : 'Book a cab — fixed fare'}
           </h2>
-          <span className="text-xs text-cream/80">{hi ? `चरण ${step}/2` : `Step ${step}/2`}</span>
+          <span className="text-xs text-cream/80">{step < 4 ? (hi ? `चरण ${step}/3` : `Step ${step}/3`) : ''}</span>
         </div>
       )}
 
@@ -232,7 +320,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             </button>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
           </div>
-        ) : (
+        ) : step === 2 ? (
           <div className="space-y-4">
             {/* Trip summary */}
             <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
@@ -290,6 +378,77 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 <Phone className="h-5 w-5" aria-hidden /> {hi ? 'कॉल करें' : 'Call'}
               </a>
             )}
+          </div>
+        ) : step === 3 ? (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
+              <div className="min-w-0">
+                <p className="truncate text-sm font-bold text-ink">{tripLine} · {VEHICLES[vehicle].name}</p>
+                <p className="text-xs text-ink-mute">{dayLabel}, {slotLabel} · {hi ? 'कुल' : 'Total'} {fare !== null ? inr(fare) : ''}</p>
+              </div>
+              <button type="button" onClick={() => { setStep(2); setError(''); }} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-maroon hover:underline">
+                <ArrowLeft className="h-4 w-4" aria-hidden /> {hi ? 'बदलें' : 'Change'}
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div>
+                <label className={cap} htmlFor={`${source}-name`}>{hi ? 'आपका नाम' : 'YOUR NAME'}</label>
+                <div className={box}>
+                  <User className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <input id={`${source}-name`} className={sel} autoComplete="name" value={name} maxLength={60}
+                    onChange={(e) => { setName(e.target.value); setError(''); }} placeholder={hi ? 'जैसे राहुल शर्मा' : 'e.g. Rahul Sharma'} />
+                </div>
+              </div>
+              <div>
+                <label className={cap} htmlFor={`${source}-phone`}>{hi ? 'मोबाइल नंबर' : 'MOBILE NUMBER'}</label>
+                <div className={box}>
+                  <Phone className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <input id={`${source}-phone`} className={sel} type="tel" inputMode="tel" autoComplete="tel" value={phone} maxLength={18}
+                    onChange={(e) => { setPhone(e.target.value.replace(/[^0-9+ ]/g, '')); setError(''); }} placeholder={hi ? '10 अंक, या +देश कोड' : '10 digits, or +country code'} />
+                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <label className={cap} htmlFor={`${source}-note`}>{hi ? 'पिकअप की जगह (वैकल्पिक)' : 'PICKUP POINT (OPTIONAL)'}</label>
+                <div className={box}>
+                  <MapPin className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <input id={`${source}-note`} className={sel} value={pickupNote} maxLength={160}
+                    onChange={(e) => setPickupNote(e.target.value)} placeholder={hi ? 'होटल का नाम, स्टेशन या फ़्लाइट नंबर' : 'Hotel name, station or flight number'} />
+                </div>
+              </div>
+            </div>
+
+            <button type="button" onClick={pay} disabled={paying}
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
+              {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
+              {hi ? `₹${ADVANCE} एडवांस देकर पक्का करें` : `Pay ₹${ADVANCE} advance to confirm`}
+            </button>
+            <p className="text-center text-xs text-ink-mute">
+              {hi
+                ? `बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में · Razorpay से सुरक्षित भुगतान (UPI, कार्ड, नेटबैंकिंग)`
+                : `Balance ${fare !== null ? inr(fare - ADVANCE) : ''} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
+            </p>
+            {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
+            <button type="button" onClick={viaWhatsApp} className="mx-auto flex items-center gap-1.5 text-sm font-semibold text-maroon hover:underline">
+              <MessageCircle className="h-4 w-4" aria-hidden /> {hi ? 'या WhatsApp पर बुक करें' : 'Or book on WhatsApp'}
+            </button>
+          </div>
+        ) : (
+          <div className="space-y-4 py-2 text-center">
+            <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
+            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit' : 'font-serif'}`}>{hi ? 'बुकिंग पक्की हो गई' : 'Your cab is booked'}</h3>
+            <p className="text-sm text-ink-soft">{hi ? 'बुकिंग ID' : 'Booking ID'}: <b className="text-ink">{bookingId}</b></p>
+            <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {dayLabel}, {slotLabel}</p>
+            <p className="text-sm text-ink-soft">
+              {hi
+                ? `₹${ADVANCE} एडवांस मिल गया। बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में। गाड़ी और ड्राइवर की जानकारी यात्रा से पहले WhatsApp पर भेजी जाएगी।`
+                : `₹${ADVANCE} advance received. Balance ${fare !== null ? inr(fare - ADVANCE) : ''} to the driver in cash or UPI. Car and driver details will be sent on WhatsApp before your trip.`}
+            </p>
+            <a href={`${SITE.whatsapp}?text=${encodeURIComponent((hi ? 'नमस्ते, मेरी बुकिंग ID ' : 'Hello, my booking ID is ') + bookingId)}`}
+              target="_blank" rel="noopener"
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-maroon py-3 font-bold text-white hover:bg-maroon/90">
+              <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर बुकिंग ID भेजें' : 'Send booking ID on WhatsApp'}
+            </a>
           </div>
         )}
 

@@ -36,7 +36,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'राशि कब तक वापस आएगी',
-    body: `स्वीकृत रिफ़ंड 2 कार्य दिवस के भीतर शुरू कर दिया जाता है और उसी माध्यम में वापस जाता है जिससे भुगतान किया गया था। आपके बैंक के अनुसार राशि खाते में आने में 5 से 7 कार्य दिवस लग सकते हैं।`,
+    body: `स्वीकृत रिफ़ंड 24 घंटे के भीतर शुरू कर दिया जाता है और उसी माध्यम में वापस जाता है जिससे भुगतान किया गया था। आपके बैंक के अनुसार राशि खाते में आने में 5 से 7 कार्य दिवस लग सकते हैं।`,
   },
   {
     title: 'सेवा कैसे दी जाती है',
@@ -71,7 +71,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'Refund timeline',
-    body: `Approved refunds are initiated within 2 working days and returned to the original payment method. Depending on your bank, the amount can take 5 to 7 working days to reach your account.`,
+    body: `Approved refunds are initiated within 24 hours and returned to the original payment method. Depending on your bank, the amount can take 5 to 7 working days to reach your account.`,
   },
   {
     title: 'Service delivery',
