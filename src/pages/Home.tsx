@@ -137,9 +137,10 @@ export function Home() {
         {/* HERO — premium graphic, no photo dependency */}
         <HomeGraphicHero />
 
-        {/* ── CAB BOOKING — right under the hero, lifted over its bottom edge (Savaari-style).
-            Aman, 2026-10-27: "home page me bhi isko promote karo". Fixed fares + ₹500 advance. */}
-        <section id="book-cab" aria-label={locale === 'hi' ? 'कैब बुक करें' : 'Book a cab'} className="relative z-20 -mt-8 px-4 pb-8 sm:-mt-12">
+        {/* ── CAB BOOKING — its own band right under the hero. Aman, 2026-10-27: "home page me bhi
+            isko promote karo"; 10-28: lifted over the hero it crowded the hero's buttons and photo
+            caption, so it now starts below the hero's gold edge. Fixed fares + ₹500 advance. */}
+        <section id="book-cab" aria-label={locale === 'hi' ? 'कैब बुक करें' : 'Book a cab'} className="scroll-mt-24 bg-cream px-4 pt-6 pb-8 sm:pt-8">
           <div className="mx-auto max-w-6xl">
             <CabBookingWidget locale={locale} source="home" />
           </div>
