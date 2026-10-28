@@ -121,7 +121,7 @@ $rest = $rows ? array_slice($rows, 1) : [];
 
 <div class="cta">
   <p><strong>सिंहस्थ 2028 की यात्रा की योजना बना रहे हैं?</strong><br>
-  होटल, कैब और दर्शन की व्यवस्था के लिए <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
+  होटल, कैब और दर्शन की व्यवस्था के लिए <a href="tel:+918989006759"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
   या <a href="/hi/simhastha-2028/simhastha-2028-accommodation/">ठहरने की गाइड</a> और
   <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें।</p>
 </div>

@@ -44,7 +44,7 @@ function ujt_news_config()
         'section_name' => 'सिंहस्थ 2028 समाचार',
         'publisher'    => 'UjjainTemple.com',
         'logo'         => 'https://ujjaintemple.com/images/og/default.webp',
-        'phone'        => '+91 74007 24456',
+        'phone'        => '+91 89890 06759',
         'uploads_dir'  => __DIR__ . '/../images/news',
         'uploads_url'  => '/images/news',
     ];

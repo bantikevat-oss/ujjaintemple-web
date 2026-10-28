@@ -6,9 +6,9 @@ export const SITE = {
   phoneIntl: '+918989006759',
   phoneTel: 'tel:+918989006759',
   email: 'info@ujjaintemple.com',
-  // 🔴 WhatsApp stays on the OLD number (Aman, 2026-10-01): the WhatsApp Business account
-  // lives there. Calls moved to 8989006759 (matches the GBP); chats did not.
-  whatsapp: 'https://wa.me/917400724456',
+  // One number for calls AND WhatsApp (Aman, 2026-10-28): 89890 06759 runs the WhatsApp Business
+  // app. The old 74007 24456 is retired everywhere — do not bring it back.
+  whatsapp: 'https://wa.me/918989006759',
   address: {
     locality: 'Ujjain',
     region: 'Madhya Pradesh',

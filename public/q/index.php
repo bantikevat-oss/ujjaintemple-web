@@ -27,7 +27,7 @@ $t = function ($hiText, $enText) use ($hi) { return $hi ? $hiText : $enText; };
 $PHONE = UT_QUOTE_CALL;
 $TEL = 'tel:+918989006759';
 $WA_NUM = UT_QUOTE_WA;
-$WA = 'https://wa.me/917400724456';
+$WA = 'https://wa.me/918989006759';
 
 /** A day's details: "Something:" lines become sub-headings, the rest bullet lists (one line = a paragraph). */
 function ut_q_day($s) {

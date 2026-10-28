@@ -49,7 +49,7 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
 <?php if ($is_blog): ?>
 <div class="cta">
   <p><strong>उज्जैन आने की योजना है?</strong><br>
-  कैब, होटल और दर्शन यात्रा के लिए <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
+  कैब, होटल और दर्शन यात्रा के लिए <a href="tel:+918989006759"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
   या <a href="/hi/cab-booking/">कैब बुकिंग</a>, <a href="/hi/hotels/">होटल</a> और
   <a href="/hi/tour-and-travel-ujjain/">टूर पैकेज</a> देखें।</p>
 </div>
@@ -61,7 +61,7 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   कैब सबसे पहले भरते हैं। योजना बनाने के लिए
   <a href="/hi/simhastha-2028/simhastha-2028-accommodation/">ठहरने की गाइड</a>,
   <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें
-  या <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें।</p>
+  या <a href="tel:+918989006759"><?= ujt_e($c['phone']) ?></a> पर कॉल करें।</p>
 </div>
 <?php endif; ?>
 

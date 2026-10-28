@@ -170,8 +170,8 @@ article :is(th,td){border:1px solid var(--line);padding:.5rem .6rem;text-align:s
     var a = e.target && e.target.closest && e.target.closest('a[href]');
     if (!a) return;
     var href = a.getAttribute('href') || '';
-    var name = /^tel:\+?(91)?(7400724456|8989006759)$/.test(href.replace(/[\s-]/g, '')) ? 'call_click'
-      : /(wa\.me|api\.whatsapp\.com\/send\?phone=)\/?917400724456/.test(href) ? 'whatsapp_click'
+    var name = /^tel:\+?(91)?8989006759$/.test(href.replace(/[\s-]/g, '')) ? 'call_click'
+      : /(wa\.me|api\.whatsapp\.com\/send\?phone=)\/?918989006759/.test(href) ? 'whatsapp_click'
       : null;
     if (name) gtag('event', name, { link_url: href, transport_type: 'beacon' });
   }, true);

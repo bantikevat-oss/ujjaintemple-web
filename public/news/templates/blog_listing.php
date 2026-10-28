@@ -42,7 +42,7 @@ $lead = $rows ? $rows[0] : null;
 
 <div class="cta">
   <p><strong>उज्जैन यात्रा की योजना बना रहे हैं?</strong><br>
-  कैब, होटल और दर्शन यात्रा के लिए <a href="tel:+917400724456"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
+  कैब, होटल और दर्शन यात्रा के लिए <a href="tel:+918989006759"><?= ujt_e($c['phone']) ?></a> पर कॉल करें,
   या <a href="/hi/cab-booking/">कैब बुकिंग</a>, <a href="/hi/hotels/">होटल</a> और
   <a href="/hi/tour-and-travel-ujjain/">टूर पैकेज</a> देखें।</p>
 </div>

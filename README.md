@@ -2,7 +2,7 @@
 
 Ujjain's bilingual (Hindi + English) authoritative guide — 35+ mandirs, Simhastha 2028, hotels, transport, tour itineraries, puja info.
 
-**Lead-gen primary:** +91 74007 24456 prominent on every page.
+**Lead-gen primary:** +91 89890 06759 (calls + WhatsApp) prominent on every page.
 
 ## Stack
 

@@ -120,9 +120,9 @@ function ut_quote_url(array $q) { return 'https://ujjaintemple.com/q/?k=' . $q['
 // Whatever the team typed is tidied here, so the page, the PDF and the WhatsApp text all agree.
 
 /** Hotel meal plans as the trade writes them. */
-/** Contact on every quote — calls on 89890 (matches the GBP), chats on 74007 (src/lib/site.ts). */
+/** Contact on every quote — one number for calls and WhatsApp (Aman 2026-10-28; same as src/lib/site.ts). */
 const UT_QUOTE_CALL = '+91 89890 06759';
-const UT_QUOTE_WA   = '+91 74007 24456';
+const UT_QUOTE_WA   = '+91 89890 06759';
 
 const UT_QUOTE_MEALS = [
   'EP'  => ['hi' => 'EP — केवल कमरा',                 'en' => 'EP (Room only)'],
