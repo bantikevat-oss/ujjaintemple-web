@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /q/
 Disallow: /search/?q=
 Disallow: /*?utm_*
 Disallow: /*?ref=
@@ -10,10 +11,12 @@ Disallow: /*?fbclid=
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
+Disallow: /q/
 
 User-agent: Bingbot
 Allow: /
 Disallow: /api/
+Disallow: /q/
 
 User-agent: facebookexternalhit
 Allow: /

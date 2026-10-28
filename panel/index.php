@@ -215,7 +215,7 @@ $SITE = rtrim($cfg['site_url'], '/');
 <?php else: ?>
   <header class="top">
     <b>Ujjain<span class="gold">Temple</span> · Image Panel</b>
-    <a class="out" href="?do=logout">Logout</a>
+    <span><a class="out" href="quotes.php" style="margin-right:6px">Quotes</a><a class="out" href="?do=logout">Logout</a></span>
   </header>
   <div class="wrap">
     <?php if ($msg): ?><div class="flash ok"><?= $msg ?></div><?php endif; ?>

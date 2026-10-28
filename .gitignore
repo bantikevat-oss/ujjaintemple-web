@@ -29,3 +29,5 @@ public/images/news/*
 news-router.local.php
 # OTP codes (public/api/otp.php) — local runs write here; live it sits above public_html
 ut-otp/
+# Custom quotes (panel/quotes.php) — local runs write here; live it sits above public_html
+ut-quotes/
