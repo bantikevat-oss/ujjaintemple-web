@@ -6,8 +6,9 @@
  * null = not sold at a fixed price (quoted on call), so it cannot be booked online.
  */
 return [
-  'omkareshwar-round'  => ['dzire' => 3200, 'ertiga' => 3800, 'innova' => 4500],
-  'omkareshwar-oneway' => ['dzire' => 2700, 'ertiga' => 3300, 'innova' => 4000],
-  'ujjain-local'       => ['dzire' => 2500, 'ertiga' => 3000, 'innova' => 4500],
-  'indore-airport'     => ['dzire' => 1700, 'ertiga' => 2200, 'innova' => null],
+  'omkareshwar-round'  => ['dzire' => 3700, 'ertiga' => 4400, 'innova' => 6300],
+  'omkareshwar-oneway' => ['dzire' => 3700, 'ertiga' => 4400, 'innova' => 6300],
+  'ujjain-local'       => ['dzire' => 2100, 'ertiga' => 2500, 'innova' => 4000],
+  'ujjain-fullday'     => ['dzire' => 2900, 'ertiga' => 3400, 'innova' => 5200],
+  'indore-airport'     => ['dzire' => 1700, 'ertiga' => 1900, 'innova' => 2700],
 ];

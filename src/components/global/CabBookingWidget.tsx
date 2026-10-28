@@ -140,7 +140,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const dayLabel = days.find((d) => d.iso === date)?.label ?? '';
   const slotLabel = SLOTS.find((s) => s.value === time)?.label ?? '';
   const tripLine = type === 'local'
-    ? `${PLACES[from][locale]} · ${TRIP_TYPES.local[locale]}`
+    ? `${PLACES[from][locale]} · ${TRIP_TYPES.local[locale]} · ${PLACES[to][locale]}`
     : `${PLACES[from][locale]} → ${PLACES[to][locale]} · ${TRIP_TYPES[type][locale]}`;
 
   const seeFares = () => {
@@ -295,10 +295,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               </button>
               {tab === 'local' ? (
                 <div className="col-span-2 lg:col-span-1">
-                  <span className={cap}>{hi ? 'पैकेज' : 'PACKAGE'}</span>
-                  <div className={`${box} py-2.5 text-[15px] font-semibold text-ink`}>
+                  <label className={cap} htmlFor={`${source}-pkg`}>{hi ? 'पैकेज' : 'PACKAGE'}</label>
+                  <div className={box}>
                     <Clock className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                    {hi ? '8 घंटे / 80 किमी' : '8 hr / 80 km'}
+                    <select id={`${source}-pkg`} className={sel} value={to} onChange={(e) => setTo(e.target.value as PlaceId)}>
+                      {dropsForTab(from, tab).map((p) => <option key={p} value={p}>{PLACES[p][locale]}</option>)}
+                    </select>
                   </div>
                 </div>
               ) : (
@@ -385,8 +387,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             {route?.extra && (
               <p className="text-xs text-ink-mute">
                 {hi
-                  ? `80 किमी / 8 घंटे से ज़्यादा: ₹${route.extra[vehicle].km}/किमी · ₹${route.extra[vehicle].hour}/घंटा`
-                  : `Beyond 80 km / 8 hours: ₹${route.extra[vehicle].km}/km · ₹${route.extra[vehicle].hour}/hour`}
+                  ? `पैकेज से ज़्यादा: ₹${route.extra[vehicle].km}/किमी · ₹${route.extra[vehicle].hour}/घंटा`
+                  : `Beyond the package: ₹${route.extra[vehicle].km}/km · ₹${route.extra[vehicle].hour}/hour`}
               </p>
             )}
 

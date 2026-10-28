@@ -5,11 +5,15 @@
  * number) reads from here, so two pages can never show two prices for the same trip.
  * These are business terms, not copy: change a number only on Aman's word.
  *
+ * 2026-10-28 — from the vendor's sheet + ~15%, rounded to ₹100 (Aman):
+ *   vendor Omkareshwar round 3,200 / 3,800 / 5,500 (toll + parking included) → 3,700 / 4,400 / 6,300
+ *   vendor local 7 hr 1,800 / — / 3,500 → 2,100 / 2,500 / 4,000; full day 2,500 / — / 4,500 → 2,900 / 3,400 / 5,200
+ *   (Ertiga local was priced like Dzire on the sheet; Aman: scale it by the Omkareshwar ratio 3,800/3,200)
+ *   vendor km 11 / 12 / 18 + toll → extra km 13 / 14 / 21; extra hour = 7-hr fare ÷ 7.
+ *   One-way = same as round trip (Aman: keep one-way, same rate — a −₹500 drop would have been at cost).
+ *   Airport (not on the sheet): ~120 km at the vendor km rate + 15% → 1,700 / 1,900 / 2,700.
+ *   Local limits 7 hr / 70 km and full day 12 hr / 120 km are Claude's proposal, Aman OK'd.
  * - All fares include toll, parking, fuel and the driver's charges.
- * - One-way = round trip minus ₹500 (Aman).
- * - Local 8 hr / 80 km: extra km = fare ÷ 80, extra hour = fare ÷ 8, per vehicle (Aman),
- *   rounded to a clean figure.
- * - Airport: Innova was not priced, so it is quoted on request.
  */
 
 export type VehicleId = 'dzire' | 'ertiga' | 'innova';
@@ -24,7 +28,7 @@ export const VEHICLES: Record<VehicleId, { name: string; seats: number; kind: B 
 
 export const VEHICLE_ORDER: VehicleId[] = ['dzire', 'ertiga', 'innova'];
 
-export type RouteId = 'omkareshwar-round' | 'omkareshwar-oneway' | 'ujjain-local' | 'indore-airport';
+export type RouteId = 'omkareshwar-round' | 'omkareshwar-oneway' | 'ujjain-local' | 'ujjain-fullday' | 'indore-airport';
 
 export interface CabRoute {
   id: RouteId;
@@ -40,30 +44,41 @@ export const CAB_ROUTES: Record<RouteId, CabRoute> = {
     id: 'omkareshwar-round',
     title: { hi: 'ओंकारेश्वर राउंड ट्रिप', en: 'Omkareshwar round trip' },
     detail: { hi: 'उज्जैन – ओंकारेश्वर – उज्जैन या इंदौर – ओंकारेश्वर – इंदौर', en: 'Ujjain – Omkareshwar – Ujjain, or Indore – Omkareshwar – Indore' },
-    fares: { dzire: 3200, ertiga: 3800, innova: 4500 },
+    fares: { dzire: 3700, ertiga: 4400, innova: 6300 },
   },
   'omkareshwar-oneway': {
     id: 'omkareshwar-oneway',
     title: { hi: 'ओंकारेश्वर वन-वे', en: 'Omkareshwar one way' },
     detail: { hi: 'उज्जैन या इंदौर से ओंकारेश्वर ड्रॉप, या ओंकारेश्वर से उज्जैन / इंदौर', en: 'Drop from Ujjain or Indore to Omkareshwar, or Omkareshwar to Ujjain / Indore' },
-    fares: { dzire: 2700, ertiga: 3300, innova: 4000 },
+    fares: { dzire: 3700, ertiga: 4400, innova: 6300 },
   },
   'ujjain-local': {
     id: 'ujjain-local',
-    title: { hi: 'उज्जैन लोकल दर्शन', en: 'Ujjain local darshan' },
-    detail: { hi: '8 घंटे / 80 किमी — उज्जैन के मंदिर और घाट', en: '8 hours / 80 km — Ujjain temples and ghats' },
-    fares: { dzire: 2500, ertiga: 3000, innova: 4500 },
+    title: { hi: 'उज्जैन लोकल दर्शन — 7 घंटे', en: 'Ujjain local darshan — 7 hours' },
+    detail: { hi: '7 घंटे / 70 किमी — उज्जैन के मंदिर और घाट', en: '7 hours / 70 km — Ujjain temples and ghats' },
+    fares: { dzire: 2100, ertiga: 2500, innova: 4000 },
     extra: {
-      dzire:  { km: 31, hour: 310 },
-      ertiga: { km: 38, hour: 375 },
-      innova: { km: 56, hour: 560 },
+      dzire:  { km: 13, hour: 300 },
+      ertiga: { km: 14, hour: 360 },
+      innova: { km: 21, hour: 570 },
+    },
+  },
+  'ujjain-fullday': {
+    id: 'ujjain-fullday',
+    title: { hi: 'उज्जैन लोकल दर्शन — पूरा दिन', en: 'Ujjain local darshan — full day' },
+    detail: { hi: '12 घंटे / 120 किमी — उज्जैन के मंदिर और घाट', en: '12 hours / 120 km — Ujjain temples and ghats' },
+    fares: { dzire: 2900, ertiga: 3400, innova: 5200 },
+    extra: {
+      dzire:  { km: 13, hour: 300 },
+      ertiga: { km: 14, hour: 360 },
+      innova: { km: 21, hour: 570 },
     },
   },
   'indore-airport': {
     id: 'indore-airport',
     title: { hi: 'इंदौर एयरपोर्ट ↔ उज्जैन', en: 'Indore Airport ↔ Ujjain' },
     detail: { hi: 'एयरपोर्ट पिकअप या ड्रॉप, एक तरफ़', en: 'Airport pickup or drop, one way' },
-    fares: { dzire: 1700, ertiga: 2200, innova: null },
+    fares: { dzire: 1700, ertiga: 1900, innova: 2700 },
   },
 };
 
@@ -76,7 +91,7 @@ export const FARE_INCLUDES: B = {
 /* ── Booking widget: pickup → drop → trip type, resolved to one rate row ───────────────
    Only combinations Aman has priced are offered; anything else is not in the dropdowns. */
 
-export type PlaceId = 'ujjain' | 'indore' | 'idr' | 'omkareshwar' | 'ujjain-local';
+export type PlaceId = 'ujjain' | 'indore' | 'idr' | 'omkareshwar' | 'ujjain-local' | 'ujjain-fullday';
 export type TripType = 'oneway' | 'round' | 'local';
 
 export const PLACES: Record<PlaceId, B> = {
@@ -84,13 +99,14 @@ export const PLACES: Record<PlaceId, B> = {
   indore:        { hi: 'इंदौर (शहर)', en: 'Indore (city)' },
   idr:           { hi: 'इंदौर एयरपोर्ट', en: 'Indore Airport' },
   omkareshwar:   { hi: 'ओंकारेश्वर', en: 'Omkareshwar' },
-  'ujjain-local': { hi: 'उज्जैन लोकल दर्शन', en: 'Ujjain local darshan' },
+  'ujjain-local': { hi: '7 घंटे / 70 किमी', en: '7 hours / 70 km' },
+  'ujjain-fullday': { hi: 'पूरा दिन — 12 घंटे / 120 किमी', en: 'Full day — 12 hours / 120 km' },
 };
 
 export const TRIP_TYPES: Record<TripType, B> = {
   oneway: { hi: 'वन-वे (सिर्फ़ छोड़ना)', en: 'One way (drop only)' },
   round:  { hi: 'राउंड ट्रिप (वापसी सहित)', en: 'Round trip (with return)' },
-  local:  { hi: 'लोकल (8 घंटे / 80 किमी)', en: 'Local (8 hr / 80 km)' },
+  local:  { hi: 'लोकल दर्शन', en: 'Local darshan' },
 };
 
 /** pickup → drop → the trip types offered and the rate row each one uses. */
@@ -98,6 +114,7 @@ export const ROUTE_MAP: Partial<Record<PlaceId, Partial<Record<PlaceId, Partial<
   ujjain: {
     omkareshwar: { round: 'omkareshwar-round', oneway: 'omkareshwar-oneway' },
     'ujjain-local': { local: 'ujjain-local' },
+    'ujjain-fullday': { local: 'ujjain-fullday' },
     idr: { oneway: 'indore-airport' },
   },
   indore: {

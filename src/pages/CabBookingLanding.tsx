@@ -49,8 +49,8 @@ export function CabBookingLanding() {
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — तय किराया: लोकल दर्शन (8 घंटे / 80 किमी) ₹2,500, ओंकारेश्वर राउंड ट्रिप ₹3,200, इंदौर एयरपोर्ट ₹1,700। टोल व पार्किंग शामिल। कॉल: +91 89890 06759।'
-    : 'Ujjain taxi service with fixed fares: local darshan (8 hr / 80 km) ₹2,500, Omkareshwar round trip ₹3,200, Indore Airport ₹1,700. Toll and parking included. Call +91 89890 06759.';
+    ? 'उज्जैन टैक्सी सेवा — तय किराया: लोकल दर्शन (7 घंटे) ₹2,100 से, ओंकारेश्वर राउंड ट्रिप ₹3,700 से, इंदौर एयरपोर्ट ₹1,700 से। टोल व पार्किंग शामिल। कॉल: +91 89890 06759।'
+    : 'Ujjain taxi service with fixed fares: local darshan (7 hr) from ₹2,100, Omkareshwar round trip from ₹3,700, Indore Airport from ₹1,700. Toll and parking included. Call +91 89890 06759.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -79,8 +79,8 @@ export function CabBookingLanding() {
     {
       q: locale === 'hi' ? 'इंदौर एयरपोर्ट से उज्जैन का टैक्सी/कैब किराया कितना है?' : 'How much is taxi/cab fare from Indore Airport to Ujjain?',
       a: locale === 'hi'
-        ? 'इंदौर एयरपोर्ट से उज्जैन (या उज्जैन से एयरपोर्ट) का तय किराया: Dzire ₹1,700 और Ertiga ₹2,200, एक तरफ़। टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल है। Innova का किराया कॉल पर बताया जाता है।'
-        : 'The fixed fare from Indore Airport to Ujjain (or Ujjain to the airport) is ₹1,700 in a Dzire and ₹2,200 in an Ertiga, one way. Toll, parking, fuel and driver charges are included. The Innova fare is quoted on the call.'
+        ? 'इंदौर एयरपोर्ट से उज्जैन (या उज्जैन से एयरपोर्ट) का तय किराया, एक तरफ़: Dzire ₹1,700, Ertiga ₹1,900, Innova ₹2,700। टोल, पार्किंग, फ्यूल और ड्राइवर का खर्च शामिल है।'
+        : 'The fixed fare from Indore Airport to Ujjain (or Ujjain to the airport), one way: Dzire ₹1,700, Ertiga ₹1,900, Innova ₹2,700. Toll, parking, fuel and driver charges are included.'
     },
     {
       q: locale === 'hi' ? 'उज्जैन लोकल टैक्सी बुकिंग/कैंसिलेशन पॉलिसी क्या है?' : 'What is the Ujjain local taxi booking/cancellation policy?',

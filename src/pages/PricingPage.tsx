@@ -76,7 +76,7 @@ export function PricingPage() {
 
         <section className="bg-cream">
           <div className="container-page py-10 sm:py-14 max-w-4xl">
-            <CabFareTable routes={['omkareshwar-round', 'omkareshwar-oneway', 'ujjain-local', 'indore-airport']} locale={locale} source="pricing" />
+            <CabFareTable routes={['omkareshwar-round', 'omkareshwar-oneway', 'ujjain-local', 'ujjain-fullday', 'indore-airport']} locale={locale} source="pricing" />
 
             <div className="space-y-6">
               {NOTES[locale].map((s) => (
