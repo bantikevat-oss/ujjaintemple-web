@@ -28,7 +28,6 @@ const COPY = {
     hours: [
       { day: 'सोमवार – शनिवार', time: 'सुबह 8:00 – रात 9:00' },
       { day: 'रविवार', time: 'सुबह 9:00 – शाम 6:00' },
-      { day: 'पूजा बुकिंग व्हाट्सऐप', time: 'सातों दिन 24×7' },
     ],
     faqTitle: 'अक्सर पूछे जाने वाले प्रश्न',
     faqs: [
@@ -56,7 +55,6 @@ const COPY = {
     hours: [
       { day: 'Monday – Saturday', time: '8:00 AM – 9:00 PM' },
       { day: 'Sunday', time: '9:00 AM – 6:00 PM' },
-      { day: 'Puja Booking WhatsApp', time: '24×7 all days' },
     ],
     faqTitle: 'Frequently Asked Questions',
     faqs: [

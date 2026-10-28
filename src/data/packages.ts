@@ -294,7 +294,7 @@ export const packagesData: TourPackageData[] = [
         ],
         note: {
           hi: 'साइटसीइंग क्रम व स्थल संख्या समय व श्रद्धालुओं की संख्या अनुसार समायोजित की जा सकती है। बुकिंग: +91 89890 06759।',
-          en: 'Sightseeing order and number of spots may be adjusted as per time and crowd. Booking: +91 89890 06759.'
+          en: 'Sightseeing order and number of spots may be adjusted as per time and footfall. Booking: +91 89890 06759.'
         }
       }
     ]
@@ -359,7 +359,7 @@ export const packagesData: TourPackageData[] = [
         dayTitle: { hi: 'किफ़ायती 1-दिन दर्शन', en: 'Economy 1-Day Darshan' },
         content: {
           hi: 'सुबह जल्दी शुरुआत — कम श्रद्धालु, कम खर्च। साझा/बजट कैब से सभी मुख्य दर्शन।',
-          en: 'Early morning start — less crowd, less cost. All main darshan by shared/economy cab.'
+          en: 'Early morning start — fewer devotees, lower cost. All main darshan by shared/economy cab.'
         },
         list: [
           { hi: 'श्री महाकालेश्वर दर्शन (सामान्य लाइन)', en: 'Shree Mahakaleshwar darshan (general queue)' },

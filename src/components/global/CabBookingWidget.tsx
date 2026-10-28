@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Calendar, Car, Check, CheckCircle2, Clock, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, ShieldCheck, User, Users } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, Car, Check, CheckCircle2, Clock, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
 import {
@@ -9,13 +9,38 @@ import {
 } from '../../data/rates';
 
 /*
- * Ola / oneway.cab-style cab booking (Aman, 2026-10-27), in two short steps so neither needs
+ * Ola / oneway.cab-style cab booking (Aman, 2026-10-27), in three short steps so none needs
  * scrolling: (1) trip type tiles → pickup → drop → date → time → "See fares";
- * (2) one fixed fare per car → Book. Fares come only from data/rates.ts; only priced
- * combinations appear. "Book" opens the WhatsApp gate with the whole trip in the chat and
- * the lead. When Razorpay is wired this button becomes "Pay ₹X advance".
+ * (2) name + mobile, verified by SMS OTP (Aman, 2026-10-28: fares only after the number —
+ * every fare look becomes a lead); (3) one fixed fare per car → pickup point → pay ₹500.
+ * Fares come only from data/rates.ts; only priced combinations appear. A verified contact is
+ * remembered for 30 days, so the next search goes straight to fares. /pricing/ stays public:
+ * Razorpay reads it before approving the merchant account.
  * Trust lines say only what is true today.
  */
+
+const CONTACT_KEY = 'ut_cab_contact';
+const CONTACT_DAYS = 30;
+type Contact = { name: string; phone: string; at: number };
+const readContact = (): Contact | null => {
+  try {
+    const c = JSON.parse(localStorage.getItem(CONTACT_KEY) || 'null') as Contact | null;
+    return c && c.name && c.phone && Date.now() - c.at < CONTACT_DAYS * 864e5 ? c : null;
+  } catch { return null; }
+};
+const saveContact = (c: Contact | null) => {
+  try { if (c) localStorage.setItem(CONTACT_KEY, JSON.stringify(c)); else localStorage.removeItem(CONTACT_KEY); } catch { /* private mode */ }
+};
+
+type OtpReply = { success?: boolean; skip?: boolean; reason?: string; error?: string; wait?: number; left?: number };
+const callOtp = async (fields: Record<string, string>): Promise<OtpReply | null> => {
+  const fd = new FormData();
+  Object.entries(fields).forEach(([k, v]) => fd.append(k, v));
+  try {
+    const res = await fetch('/api/otp.php', { method: 'POST', body: fd });
+    return await res.json() as OtpReply;
+  } catch { return null; }   // endpoint unreachable — the caller lets the visitor through unverified
+};
 
 type Preset = { from: PlaceId; to: PlaceId; type: TripType };
 
@@ -101,6 +126,21 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [bookingId, setBookingId] = useState('');
   const [requested, setRequested] = useState(false);   // step 4 without payment (gateway off)
   const [error, setError] = useState('');
+  const [known, setKnown] = useState(false);            // contact already given (this visit or a recent one)
+  const [otpSent, setOtpSent] = useState(false);
+  const [otp, setOtp] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [resendIn, setResendIn] = useState(0);
+
+  useEffect(() => {
+    const c = readContact();
+    if (c) { setName(c.name); setPhone(c.phone); setKnown(true); }
+  }, []);
+  useEffect(() => {
+    if (resendIn <= 0) return undefined;
+    const t = window.setTimeout(() => setResendIn(resendIn - 1), 1000);
+    return () => window.clearTimeout(t);
+  }, [resendIn]);
 
   // Date options are built after mount: the page is pre-rendered at build time, and "Today"
   // must mean the visitor's today, not the build day.
@@ -147,6 +187,65 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     if (!date) { setError(hi ? 'यात्रा की तारीख़ चुनें' : 'Choose the travel date'); return; }
     if (!time) { setError(hi ? 'पिकअप का समय चुनें' : 'Choose the pickup time'); return; }
     setError('');
+    setStep(known ? 3 : 2);
+  };
+
+  /* ── Step 2: name + mobile → OTP → fares ── */
+  const phoneDigits = phone.replace(/[^0-9]/g, '');
+  const checkContact = () => {
+    if (name.trim().length < 2) { setError(hi ? 'अपना नाम लिखें' : 'Enter your name'); return false; }
+    if (phoneDigits.length < 10 || phoneDigits.length > 15) { setError(hi ? 'सही मोबाइल नंबर लिखें (विदेश से हों तो +देश कोड के साथ)' : 'Enter a valid mobile number (add the +country code if abroad)'); return false; }
+    return true;
+  };
+  /** The lead is saved the moment fares open — whether or not the visitor books. */
+  const openFares = (verified: string) => {
+    const fd = new FormData();
+    Object.entries({
+      name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'form',
+      sourcePage: `booking:${source}`, locale, travelDate: date,
+      message: `Cab fare enquiry: ${tripLine} · ${dayLabel}, ${slotLabel} · Mobile ${verified}`,
+    }).forEach(([k, v]) => fd.append(k, v));
+    fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* fares still open */ });
+    window.gtag?.('event', 'generate_lead', { form_id: 'cab_fare_gate', route: routeId, verified: verified.startsWith('OTP verified') });
+    saveContact({ name: name.trim(), phone: phone.trim(), at: Date.now() });
+    setKnown(true); setOtpSent(false); setOtp(''); setError('');
+    setStep(3);
+  };
+  const otpError = (r: OtpReply) => {
+    if (r.error === 'wait') return hi ? `${r.wait ?? 30} सेकंड बाद दोबारा भेजें` : `Try again in ${r.wait ?? 30} seconds`;
+    if (r.error === 'limit') return hi ? `बहुत बार कोशिश हो गई — कॉल करें ${SITE.phone}` : `Too many attempts — call ${SITE.phone}`;
+    if (r.error === 'expired') return hi ? 'OTP की समय-सीमा ख़त्म — नया OTP भेजें' : 'The OTP has expired — send a new one';
+    if (r.error === 'tries') return hi ? 'ग़लत OTP कई बार — नया OTP भेजें' : 'Too many wrong tries — send a new OTP';
+    if (r.error === 'wrong') return hi ? `OTP ग़लत है${r.left ? ` (${r.left} कोशिश बाकी)` : ''}` : `Wrong OTP${r.left ? ` (${r.left} tries left)` : ''}`;
+    return hi ? 'जानकारी जाँचें और दोबारा कोशिश करें' : 'Check the details and try again';
+  };
+  const sendOtp = async () => {
+    if (busy || !checkContact()) return;
+    setError(''); setBusy(true);
+    const r = await callOtp({ action: 'send', phone: phone.trim() });
+    setBusy(false);
+    if (!r) { openFares('not verified (OTP service unreachable)'); return; }
+    if (r.success && r.skip) {
+      openFares(r.reason === 'intl' ? 'not verified (number outside India)' : r.reason === 'sms_failed' ? 'not verified (SMS failed)' : 'not verified (OTP off)');
+      return;
+    }
+    if (!r.success) { setError(otpError(r)); return; }
+    setOtpSent(true); setOtp(''); setResendIn(30);
+    window.gtag?.('event', 'otp_sent', { source });
+  };
+  const verifyOtp = async () => {
+    if (busy) return;
+    if (otp.length !== 4) { setError(hi ? '4 अंकों का OTP लिखें' : 'Enter the 4-digit OTP'); return; }
+    setError(''); setBusy(true);
+    const r = await callOtp({ action: 'verify', phone: phone.trim(), otp });
+    setBusy(false);
+    if (!r) { openFares('not verified (OTP service unreachable)'); return; }
+    if (!r.success) { setError(otpError(r)); return; }
+    openFares('OTP verified');
+  };
+  const forgetContact = () => {
+    saveContact(null);
+    setKnown(false); setOtpSent(false); setOtp(''); setError('');
     setStep(2);
   };
 
@@ -173,18 +272,10 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setStep(4);
   };
 
-  const book = () => {
-    if (!route || fare === null) return;
-    window.gtag?.('event', 'fare_book_click', { route: routeId, vehicle, fare, source });
-    setError('');
-    setStep(3);
-  };
-
   const pay = async () => {
     if (paying || !routeId || fare === null) return;
-    const digits = phone.replace(/[^0-9]/g, '');
-    if (name.trim().length < 2) { setError(hi ? 'अपना नाम लिखें' : 'Enter your name'); return; }
-    if (digits.length < 10 || digits.length > 15) { setError(hi ? 'सही मोबाइल नंबर लिखें (विदेश से हों तो +देश कोड के साथ)' : 'Enter a valid mobile number (add the +country code if abroad)'); return; }
+    if (!checkContact()) { setStep(2); return; }
+    window.gtag?.('event', 'fare_book_click', { route: routeId, vehicle, fare, source });
     setError('');
     setPaying(true);
 
@@ -244,17 +335,41 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const sel = 'w-full appearance-none bg-transparent py-2.5 text-[15px] font-semibold text-ink focus:outline-none';
   const cap = 'mb-1 block text-[11px] font-bold text-ink-mute';
 
-  const trust = useMemo(() => ([
-    { Icon: BadgeIndianRupee, t: hi ? `सिर्फ़ ₹${ADVANCE} एडवांस — बाकी ड्राइवर को` : `Only ₹${ADVANCE} advance — rest to the driver` },
-    { Icon: Check, t: hi ? 'टोल, पार्किंग, ड्राइवर शामिल' : 'Toll, parking, driver included' },
-    { Icon: ShieldCheck, t: hi ? '48 घंटे पहले रद्द — पूरा रिफ़ंड' : 'Cancel 48 h ahead — full refund' },
+  /* Why book with us (Aman, 2026-10-28). Only what is true today: "no extra charge" is NOT
+     said flat — local packages bill extra km/hours, at the rate shown before booking. No
+     "free" (cheap-words rule), no "verified drivers" until we actually verify them. */
+  const why = useMemo(() => ([
+    { Icon: BadgeIndianRupee, t: hi ? 'तय किराया, कोई छिपा चार्ज नहीं' : 'Fixed fare, no hidden charges',
+      d: hi ? 'टोल, पार्किंग, ड्राइवर शामिल। ज़्यादा किमी/घंटे का रेट बुकिंग से पहले दिखता है।' : 'Toll, parking and driver included. Extra km/hours only at the rate shown before you book.' },
+    { Icon: Wallet, t: hi ? `सिर्फ़ ₹${ADVANCE} में बुकिंग` : `Book with just ₹${ADVANCE}`,
+      d: hi ? 'बाकी किराया ड्राइवर को नकद या UPI में।' : 'The rest goes to the driver in cash or UPI.' },
+    { Icon: ShieldCheck, t: hi ? 'रद्द करने पर पूरा रिफ़ंड' : 'Full refund on cancellation',
+      d: hi ? 'यात्रा से 48 घंटे पहले तक।' : 'Up to 48 hours before the trip.' },
+    { Icon: Car, t: hi ? 'साफ़-सुथरी गाड़ी, अनुभवी ड्राइवर' : 'Clean cars, experienced drivers',
+      d: hi ? 'Dzire, Ertiga और Innova — परिवार के हिसाब से।' : 'Dzire, Ertiga or Innova — sized to your group.' },
+    { Icon: Building2, t: hi ? 'रजिस्टर्ड कंपनी' : 'A registered company',
+      d: hi ? 'ByteFlow Technologies Pvt Ltd · DPIIT पंजीकृत स्टार्टअप' : 'ByteFlow Technologies Pvt Ltd · DPIIT-Registered Startup' },
+    { Icon: PhoneCall, t: hi ? 'सीधे हमसे बात करें' : 'Talk to us directly',
+      d: hi ? `यात्रा से पहले और दौरान — ${SITE.phone}` : `Before and during your trip — ${SITE.phone}` },
   ]), [hi]);
+
+  const tripBar = (
+    <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
+      <div className="min-w-0">
+        <p className="truncate text-sm font-bold text-ink">{tripLine}</p>
+        <p className="text-xs text-ink-mute">{dayLabel}, {slotLabel}</p>
+      </div>
+      <button type="button" onClick={() => { setStep(1); setError(''); }} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-maroon hover:underline">
+        <ArrowLeft className="h-4 w-4" aria-hidden /> {hi ? 'बदलें' : 'Change'}
+      </button>
+    </div>
+  );
 
   return (
     <section className="not-prose overflow-hidden rounded-3xl border border-gold/40 bg-white shadow-2xl" aria-label={hi ? 'कैब बुकिंग' : 'Cab booking'}>
       {showTitle && (
         <div className="flex items-center justify-between gap-3 bg-gradient-to-r from-maroon-800 to-maroon px-5 py-3 text-white">
-          <h2 className={`text-lg font-bold sm:text-xl ${hi ? 'font-sanskrit' : 'font-serif'}`}>
+          <h2 className={`text-lg font-bold sm:text-xl ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
             {hi ? 'कैब बुक करें — तय किराया' : 'Book a cab — fixed fare'}
           </h2>
           <span className="text-xs text-cream/80">{step < 4 ? (hi ? `चरण ${step}/3` : `Step ${step}/3`) : ''}</span>
@@ -348,16 +463,73 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           </div>
         ) : step === 2 ? (
           <div className="space-y-4">
-            {/* Trip summary */}
-            <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
-              <div className="min-w-0">
-                <p className="truncate text-sm font-bold text-ink">{tripLine}</p>
-                <p className="text-xs text-ink-mute">{dayLabel}, {slotLabel}</p>
+            {tripBar}
+            <p className="text-center text-sm text-ink-soft">
+              {hi
+                ? 'किराया देखने के लिए अपना नाम और मोबाइल नंबर दें — इसी नंबर पर बुकिंग की जानकारी भेजी जाएगी।'
+                : 'Share your name and mobile number to see the fares — booking details are sent to this number.'}
+            </p>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div>
+                <label className={cap} htmlFor={`${source}-name`}>{hi ? 'आपका नाम' : 'YOUR NAME'}</label>
+                <div className={box}>
+                  <User className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <input id={`${source}-name`} className={sel} autoComplete="name" value={name} maxLength={60} disabled={otpSent}
+                    onChange={(e) => { setName(e.target.value); setError(''); }} placeholder={hi ? 'जैसे राहुल शर्मा' : 'e.g. Rahul Sharma'} />
+                </div>
               </div>
-              <button type="button" onClick={() => setStep(1)} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-maroon hover:underline">
-                <ArrowLeft className="h-4 w-4" aria-hidden /> {hi ? 'बदलें' : 'Change'}
-              </button>
+              <div>
+                <label className={cap} htmlFor={`${source}-phone`}>{hi ? 'मोबाइल नंबर' : 'MOBILE NUMBER'}</label>
+                <div className={box}>
+                  <Phone className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <input id={`${source}-phone`} className={sel} type="tel" inputMode="tel" autoComplete="tel" value={phone} maxLength={18} disabled={otpSent}
+                    onChange={(e) => { setPhone(e.target.value.replace(/[^0-9+ ]/g, '')); setError(''); }} placeholder={hi ? '10 अंक, या +देश कोड' : '10 digits, or +country code'} />
+                </div>
+              </div>
             </div>
+
+            {otpSent ? (
+              <div className="mx-auto max-w-sm space-y-3">
+                <div>
+                  <label className={cap} htmlFor={`${source}-otp`}>
+                    {hi ? `${phone.trim()} पर भेजा गया OTP` : `OTP SENT TO ${phone.trim()}`}
+                  </label>
+                  <div className={box}>
+                    <KeyRound className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                    <input id={`${source}-otp`} className={`${sel} tracking-[0.4em]`} inputMode="numeric" autoComplete="one-time-code" value={otp} maxLength={4} autoFocus
+                      onChange={(e) => { setOtp(e.target.value.replace(/[^0-9]/g, '').slice(0, 4)); setError(''); }}
+                      onKeyDown={(e) => { if (e.key === 'Enter') verifyOtp(); }} placeholder="• • • •" />
+                  </div>
+                </div>
+                <button type="button" onClick={verifyOtp} disabled={busy}
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
+                  {busy ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <ShieldCheck className="h-5 w-5" aria-hidden />}
+                  {hi ? 'OTP जाँचें और किराया देखें' : 'Verify & see fares'}
+                </button>
+                <div className="flex items-center justify-between text-xs">
+                  <button type="button" onClick={() => { setOtpSent(false); setOtp(''); setError(''); }} className="font-semibold text-maroon hover:underline">
+                    {hi ? 'नंबर बदलें' : 'Change number'}
+                  </button>
+                  {resendIn > 0
+                    ? <span className="text-ink-mute">{hi ? `${resendIn} सेकंड में दोबारा भेजें` : `Resend in ${resendIn}s`}</span>
+                    : <button type="button" onClick={sendOtp} disabled={busy} className="font-semibold text-maroon hover:underline">{hi ? 'OTP दोबारा भेजें' : 'Resend OTP'}</button>}
+                </div>
+              </div>
+            ) : (
+              <button type="button" onClick={sendOtp} disabled={busy}
+                className={`mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70 ${hi ? '' : 'uppercase tracking-wide'}`}>
+                {busy ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : null}
+                {hi ? 'OTP भेजें' : 'Send OTP'} <ArrowRight className="h-5 w-5" aria-hidden />
+              </button>
+            )}
+            {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
+            <p className="text-center text-xs text-ink-mute">
+              {hi ? 'नंबर सिर्फ़ इस यात्रा के लिए — कोई प्रमोशनल कॉल या SMS नहीं।' : 'Your number is used only for this trip — no promotional calls or SMS.'}
+            </p>
+          </div>
+        ) : step === 3 ? (
+          <div className="space-y-4">
+            {tripBar}
 
             {/* Cars */}
             {route && (
@@ -393,73 +565,41 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             )}
 
             {fare !== null ? (
-              <button type="button" onClick={book}
-                className="mx-auto flex w-full max-w-sm items-center justify-center gap-3 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99]">
-                {hi ? `${VEHICLES[vehicle].name} बुक करें` : `Book ${VEHICLES[vehicle].name}`}
-                <span className="rounded-md bg-white/15 px-2 py-0.5">{inr(fare)}</span>
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </button>
+              <>
+                <div className="mx-auto max-w-xl">
+                  <label className={cap} htmlFor={`${source}-note`}>{hi ? 'पिकअप की जगह (वैकल्पिक)' : 'PICKUP POINT (OPTIONAL)'}</label>
+                  <div className={box}>
+                    <MapPin className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                    <input id={`${source}-note`} className={sel} value={pickupNote} maxLength={160}
+                      onChange={(e) => setPickupNote(e.target.value)} placeholder={hi ? 'होटल का नाम, स्टेशन या फ़्लाइट नंबर' : 'Hotel name, station or flight number'} />
+                  </div>
+                </div>
+                <button type="button" onClick={pay} disabled={paying}
+                  className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
+                  {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
+                  {hi ? `₹${ADVANCE} देकर ${VEHICLES[vehicle].name} पक्की करें` : `Pay ₹${ADVANCE} · book ${VEHICLES[vehicle].name}`}
+                </button>
+                <p className="text-center text-xs text-ink-mute">
+                  {hi
+                    ? `बाकी ${inr(fare - ADVANCE)} ड्राइवर को नकद या UPI में · Razorpay से सुरक्षित भुगतान (UPI, कार्ड, नेटबैंकिंग)`
+                    : `Balance ${inr(fare - ADVANCE)} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
+                </p>
+              </>
             ) : (
               <a href={SITE.phoneTel} className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
                 <Phone className="h-5 w-5" aria-hidden /> {hi ? 'कॉल करें' : 'Call'}
               </a>
             )}
-          </div>
-        ) : step === 3 ? (
-          <div className="space-y-4">
-            <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
-              <div className="min-w-0">
-                <p className="truncate text-sm font-bold text-ink">{tripLine} · {VEHICLES[vehicle].name}</p>
-                <p className="text-xs text-ink-mute">{dayLabel}, {slotLabel} · {hi ? 'कुल' : 'Total'} {fare !== null ? inr(fare) : ''}</p>
-              </div>
-              <button type="button" onClick={() => { setStep(2); setError(''); }} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-maroon hover:underline">
-                <ArrowLeft className="h-4 w-4" aria-hidden /> {hi ? 'बदलें' : 'Change'}
-              </button>
-            </div>
-
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div>
-                <label className={cap} htmlFor={`${source}-name`}>{hi ? 'आपका नाम' : 'YOUR NAME'}</label>
-                <div className={box}>
-                  <User className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                  <input id={`${source}-name`} className={sel} autoComplete="name" value={name} maxLength={60}
-                    onChange={(e) => { setName(e.target.value); setError(''); }} placeholder={hi ? 'जैसे राहुल शर्मा' : 'e.g. Rahul Sharma'} />
-                </div>
-              </div>
-              <div>
-                <label className={cap} htmlFor={`${source}-phone`}>{hi ? 'मोबाइल नंबर' : 'MOBILE NUMBER'}</label>
-                <div className={box}>
-                  <Phone className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                  <input id={`${source}-phone`} className={sel} type="tel" inputMode="tel" autoComplete="tel" value={phone} maxLength={18}
-                    onChange={(e) => { setPhone(e.target.value.replace(/[^0-9+ ]/g, '')); setError(''); }} placeholder={hi ? '10 अंक, या +देश कोड' : '10 digits, or +country code'} />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label className={cap} htmlFor={`${source}-note`}>{hi ? 'पिकअप की जगह (वैकल्पिक)' : 'PICKUP POINT (OPTIONAL)'}</label>
-                <div className={box}>
-                  <MapPin className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                  <input id={`${source}-note`} className={sel} value={pickupNote} maxLength={160}
-                    onChange={(e) => setPickupNote(e.target.value)} placeholder={hi ? 'होटल का नाम, स्टेशन या फ़्लाइट नंबर' : 'Hotel name, station or flight number'} />
-                </div>
-              </div>
-            </div>
-
-            <button type="button" onClick={pay} disabled={paying}
-              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
-              {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
-              {hi ? `₹${ADVANCE} एडवांस देकर पक्का करें` : `Pay ₹${ADVANCE} advance to confirm`}
-            </button>
-            <p className="text-center text-xs text-ink-mute">
-              {hi
-                ? `बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में · Razorpay से सुरक्षित भुगतान (UPI, कार्ड, नेटबैंकिंग)`
-                : `Balance ${fare !== null ? inr(fare - ADVANCE) : ''} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
-            </p>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
+            <p className="text-center text-xs text-ink-mute">
+              {hi ? `${name.trim()} · ${phone.trim()} के नाम से — ` : `Booking as ${name.trim()} · ${phone.trim()} — `}
+              <button type="button" onClick={forgetContact} className="font-semibold text-maroon hover:underline">{hi ? 'बदलें' : 'change'}</button>
+            </p>
           </div>
         ) : requested ? (
           <div className="space-y-4 py-2 text-center">
             <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
-            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit' : 'font-serif'}`}>{hi ? 'बुकिंग की रिक्वेस्ट मिल गई' : 'Booking request received'}</h3>
+            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'बुकिंग की रिक्वेस्ट मिल गई' : 'Booking request received'}</h3>
             <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {fare !== null ? inr(fare) : ''} · {dayLabel}, {slotLabel}</p>
             <p className="text-sm text-ink-soft">
               {hi
@@ -474,7 +614,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
         ) : (
           <div className="space-y-4 py-2 text-center">
             <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
-            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit' : 'font-serif'}`}>{hi ? 'बुकिंग पक्की हो गई' : 'Your cab is booked'}</h3>
+            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'बुकिंग पक्की हो गई' : 'Your cab is booked'}</h3>
             <p className="text-sm text-ink-soft">{hi ? 'बुकिंग ID' : 'Booking ID'}: <b className="text-ink">{bookingId}</b></p>
             <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {dayLabel}, {slotLabel}</p>
             <p className="text-sm text-ink-soft">
@@ -490,17 +630,31 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           </div>
         )}
 
-        {/* Trust — one line */}
-        <ul className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-xs text-ink-soft">
-          {trust.map(({ Icon, t }) => (
-            <li key={t} className="flex items-center gap-1.5"><Icon className="h-3.5 w-3.5 text-maroon" aria-hidden />{t}</li>
+      </div>
+
+      {/* Why book with us */}
+      <div className="border-t border-gold/30 bg-cream-light/60 px-4 py-5 sm:px-6">
+        <h3 className={`mb-4 text-center text-base font-bold text-maroon sm:text-lg ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
+          {hi ? 'हमसे ही क्यों बुक करें' : 'Why book with us'}
+        </h3>
+        <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+          {why.map(({ Icon, t, d }) => (
+            <li key={t} className="flex items-start gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-maroon ring-1 ring-gold/40">
+                <Icon className="h-4.5 w-4.5" aria-hidden />
+              </span>
+              <span>
+                <span className="block text-sm font-bold text-ink">{t}</span>
+                <span className="block text-xs leading-relaxed text-ink-soft">{d}</span>
+              </span>
+            </li>
           ))}
-          <li>
-            <a className="underline" href={hi ? '/hi/pricing/' : '/pricing/'}>{hi ? 'सभी किराए' : 'All fares'}</a>
-            {' · '}
-            <a className="underline" href={hi ? '/hi/cancellation-refund-policy/' : '/cancellation-refund-policy/'}>{hi ? 'रिफ़ंड नीति' : 'Refund policy'}</a>
-          </li>
         </ul>
+        <p className="mt-4 text-center text-xs text-ink-soft">
+          <a className="underline" href={hi ? '/hi/pricing/' : '/pricing/'}>{hi ? 'सभी किराए' : 'All fares'}</a>
+          {' · '}
+          <a className="underline" href={hi ? '/hi/cancellation-refund-policy/' : '/cancellation-refund-policy/'}>{hi ? 'रिफ़ंड नीति' : 'Refund policy'}</a>
+        </p>
       </div>
     </section>
   );

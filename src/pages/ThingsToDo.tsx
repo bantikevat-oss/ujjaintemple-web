@@ -53,7 +53,7 @@ export function ThingsToDo() {
       q: locale === 'hi' ? 'उज्जैन घूमने का सबसे अच्छा समय कौन सा है?' : 'What is the best time to visit Ujjain?',
       a: locale === 'hi'
         ? 'अक्टूबर से मार्च तक मौसम सुहावना रहता है — दर्शन के लिए सर्वोत्तम। महाशिवरात्रि एवं सिंहस्थ के समय श्रद्धालु अधिक रहते हैं।'
-        : 'October to March offers pleasant weather — ideal for darshan. Expect large crowds during Mahashivratri and Simhastha.'
+        : 'October to March offers pleasant weather — ideal for darshan. Expect a large number of devotees during Mahashivratri and Simhastha.'
     },
     {
       q: locale === 'hi' ? 'क्या एक ही दिन में उज्जैन दर्शन हो सकता है?' : 'Can Ujjain darshan be done in one day?',

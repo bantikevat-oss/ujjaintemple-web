@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, BedDouble, CalendarDays, Car, Flame, Landmark, Route } from 'lucide-react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { MandalaDivider } from '../components/global/MandalaDivider';
 import { HomeGraphicHero } from '../components/home/HomeGraphicHero';
 import { WhyUjjainTemple } from '../components/home/WhyUjjainTemple';
 import { SimhasthaNews, UjjainBlog } from '../components/home/SimhasthaNews';
-import { FestivalCalendar } from '../components/home/FestivalCalendar';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { AppPromo } from '../components/shared/AppPromo';
 import { CabBookingWidget } from '../components/global/CabBookingWidget';
@@ -93,6 +92,22 @@ const COPY = {
   },
 };
 
+/* Service tiles — the order is the money order: cab and tours first, information last. */
+const SERVICES = [
+  { Icon: Car, href: '/cab-booking/', hi: 'कैब बुकिंग', en: 'Cab booking',
+    dHi: 'तय किराया · ₹500 में बुकिंग · ओंकारेश्वर, इंदौर एयरपोर्ट', dEn: 'Fixed fares · book with ₹500 · Omkareshwar, Indore airport' },
+  { Icon: Route, href: '/tour-and-travel-ujjain/', hi: 'टूर पैकेज', en: 'Tour packages',
+    dHi: '1 से 7 दिन की यात्रा योजना', dEn: 'Yatra plans from one to seven days' },
+  { Icon: BedDouble, href: '/hotels/', hi: 'होटल', en: 'Hotels',
+    dHi: 'महाकाल मंदिर के पास ठहरने की व्यवस्था', dEn: 'Stays near Mahakaleshwar' },
+  { Icon: Landmark, href: '/mandirs/', hi: 'मंदिर व दर्शन समय', en: 'Temples & darshan timings',
+    dHi: 'महाकाल, काल भैरव, मंगलनाथ और 180 से अधिक मंदिर', dEn: 'Mahakal, Kal Bhairav, Mangalnath and 180+ more' },
+  { Icon: CalendarDays, href: '/simhastha-2028/', hi: 'सिंहस्थ 2028', en: 'Simhastha 2028',
+    dHi: '27 मार्च – 27 मई 2028 · शाही स्नान की तिथियाँ', dEn: '27 March – 27 May 2028 · Shahi Snan dates' },
+  { Icon: Flame, href: '/puja-in-ujjain/', hi: 'पूजा जानकारी', en: 'Puja information',
+    dHi: 'मंगल दोष · काल सर्प · नवग्रह शांति', dEn: 'Mangal Dosh · Kaal Sarp · Navgrah Shanti' },
+];
+
 /* ─── Simhastha countdown hook ──────────────────────────────────────────── */
 function useSimhasthaCountdown() {
   const [days, setDays] = useState<number | null>(null);
@@ -111,6 +126,16 @@ export function Home() {
   const t = COPY[locale];
   const prefix = locale === 'en' ? '' : '/hi';
   const daysLeft = useSimhasthaCountdown();
+  const hi = locale === 'hi';
+  /* Type system for this page. Tiro Devanagari ships one weight (400): `font-bold` on it is a
+     browser-faked bold, so Hindi display headings stay at 400 and small Hindi titles use Noto
+     Sans Devanagari, which has real weights. Hindi labels get no letter-spacing — it splits
+     conjuncts ("उ ज्जै न"). */
+  const display = hi ? 'font-sanskrit font-normal' : 'font-serif font-bold';
+  const cardTitle = hi ? 'font-hindi font-semibold' : 'font-serif font-bold';
+  const eyebrow = hi ? 'text-sm font-semibold text-ink-label' : 'text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label';
+  /* One card style for every card on the page. */
+  const card = 'group rounded-2xl border border-gold/40 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-maroon/40 hover:shadow-md';
 
   // Title ≤ 65 and description 140-160: past that Google rewrites the title and
   // truncates the snippet, and the AI-readiness check scores the lengths directly.
@@ -146,49 +171,90 @@ export function Home() {
           </div>
         </section>
 
-        {/* ── SERVICE QUICK BAR ─────────────────────────────────────────── */}
-        <section id="services" className="bg-white border-b border-cream-dark">
-          <div className="container-page py-0">
-            <div className="grid grid-cols-3 divide-x divide-gold/25">
-              {[
-                {
-                  emoji: '🙏',
-                  hi: 'पूजा अनुष्ठान', en: 'Puja Booking',
-                  desc_hi: 'काल सर्प · मंगल दोष · महामृत्युंजय',
-                  desc_en: 'Kaal Sarp · Mangal Dosh · Mahamrityunjaya',
-                  href: `${prefix}/puja-in-ujjain/`,
-                  color: '#8B0000',
-                },
-                {
-                  emoji: '🗺️',
-                  hi: 'टूर पैकेज', en: 'Tour Packages',
-                  desc_hi: '1 से 7 दिन · महाकाल · शिप्रा घाट',
-                  desc_en: '1–7 Days · Mahakal · Shipra Ghat',
-                  href: `${prefix}/tour-and-travel-ujjain/`,
-                  color: '#5c3a00',
-                },
-                {
-                  emoji: '🚗',
-                  hi: 'कैब बुकिंग', en: 'Cab Booking',
-                  desc_hi: 'इंदौर · भोपाल · दिल्ली से',
-                  desc_en: 'Indore · Bhopal · Delhi',
-                  href: `${prefix}/cab-booking/`,
-                  color: '#1a3a5c',
-                },
-              ].map((s) => (
-                <Link key={s.href} to={s.href}
-                  className="group flex flex-col items-center text-center py-7 px-3 sm:px-6
-                    hover:bg-cream transition-colors duration-200">
-                  <span className="text-2xl sm:text-3xl mb-2 group-hover:scale-110 transition-transform duration-200">
-                    {s.emoji}
-                  </span>
-                  <p className={`font-bold text-maroon text-sm sm:text-base ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}>
-                    {locale === 'hi' ? s.hi : s.en}
-                  </p>
-                  <div className="mt-2 h-[2px] w-0 group-hover:w-8 bg-gold transition-all duration-300 rounded-full" />
-                </Link>
-              ))}
+        {/* ── RECOGNITION — moved up under the booking form (Aman, 2026-10-28): trust next to the
+            moment someone decides to pay. */}
+        <section id="trust" className="bg-cream-dark/50">
+          <div className="container-page py-10 sm:py-14">
+            <div className="grid items-center gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
+              <a
+                href="/images/trust/eir-startup-india.jpg"
+                className="block overflow-hidden rounded-lg border border-gold/40 shadow-md transition-transform hover:scale-[1.02]"
+                aria-label={locale === 'hi' ? 'Startup India EIR योजना के अंतर्गत भारत सरकार से प्रथम अनुदान' : 'First grant under Startup India EIR scheme from Govt of India'}
+              >
+                <img
+                  src="/images/trust/eir-startup-india.webp"
+                  width={600}
+                  height={400}
+                  alt={locale === 'hi' ? 'Startup India EIR योजना के अंतर्गत भारत सरकार से प्रथम अनुदान — बाइटफ़्लो टेक्नोलॉजीज़' : 'First grant under Startup India EIR scheme — ByteFlow Technologies'}
+                  className="h-auto w-full max-w-[280px] sm:max-w-[320px]"
+                  loading="lazy"
+                />
+              </a>
+              <div>
+                <p className={eyebrow}>
+                  {locale === 'hi' ? 'मान्यता एवं सम्मान' : 'Recognition & Honours'}
+                </p>
+                <h2 className={`mt-2 text-maroon ${display} ${hi ? 'text-2xl sm:text-3xl' : 'text-xl sm:text-2xl'}`}>
+                  {locale === 'hi'
+                    ? <>राज्य स्तरीय <span className="text-saffron-700">MSME Conclave</span> में सम्मानित</>
+                    : <>Recognised at the State-level <span className="italic text-saffron-700">MSME Conclave</span></>}
+                </h2>
+                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
+                  {locale === 'hi'
+                    ? 'हमारी टीम को राज्य स्तरीय MSME Conclave, भोपाल में वैदिक सेवाओं में डिजिटल नवाचार के लिए सम्मानित किया गया — दोष निवारण पूजाएँ देश-विदेश के श्रद्धालुओं तक पहुँचाने के लिए।'
+                    : "Our team was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing dosh nivaran pujas to devotees across India and Indians living abroad."}
+                </p>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2 max-w-2xl">
+                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
+                    <p className="text-[13px] font-bold text-maroon">
+                      {locale === 'hi' ? 'DPIIT पंजीकृत स्टार्टअप' : 'DPIIT-Registered Startup'}
+                    </p>
+                    <p className="text-[11px] text-ink-mute mt-1">
+                      {locale === 'hi' ? 'भारत सरकार · Startup India पहल' : 'Government of India · Startup India initiative'}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
+                    <p className="text-[13px] font-bold text-maroon">
+                      {locale === 'hi' ? 'राष्ट्रीय प्रेस में प्रकाशित' : 'Featured in National Press'}
+                    </p>
+                    <p className="text-[11px] text-ink-mute mt-1">
+                      Dainik Bhaskar · Patrika · Shivhare Vaani
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── SERVICES — service-first (Aman, 2026-10-28, redesign option 1): one card style,
+            real icons instead of emoji, every service one tap away right under the booking form. */}
+        <section id="services" aria-labelledby="services-title" className="bg-white">
+          <div className="container-page py-12 sm:py-16">
+            <div className="mb-8 text-center">
+              <p className={eyebrow}>{hi ? 'हमारी सेवाएँ' : 'Our services'}</p>
+              <h2 id="services-title" className={`mt-2 text-maroon ${display} text-3xl sm:text-4xl`}>
+                {hi ? 'उज्जैन यात्रा की हर व्यवस्था, एक ही जगह' : 'Everything for your Ujjain yatra, in one place'}
+              </h2>
+            </div>
+            <ul className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+              {SERVICES.map(({ Icon, href, hi: h, en, dHi, dEn }) => (
+                <li key={href}>
+                  <Link to={`${prefix}${href}`} className={`${card} flex h-full items-start gap-3 p-4 sm:gap-4 sm:p-5`}>
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cream-light text-maroon ring-1 ring-gold/40 transition-colors group-hover:bg-maroon group-hover:text-white sm:h-12 sm:w-12">
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className={`flex items-center gap-1 text-[15px] text-maroon sm:text-lg ${cardTitle}`}>
+                        {hi ? h : en}
+                        <ArrowRight className="hidden h-4 w-4 shrink-0 transition-transform group-hover:translate-x-0.5 sm:block" aria-hidden />
+                      </span>
+                      <span className="mt-1 block text-xs leading-relaxed text-ink-soft sm:text-sm">{hi ? dHi : dEn}</span>
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -201,10 +267,10 @@ export function Home() {
             <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-cream to-cream-dark/40 p-8 sm:p-12 lg:p-16">
               <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-end lg:gap-16">
                 <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
+                  <p className={eyebrow}>
                     {t.simhasthaEyebrow} · {t.simhasthaDates}
                   </p>
-                  <h2 className={`mt-3 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-4xl sm:text-5xl md:text-6xl leading-[1.05]`}>
+                  <h2 className={`mt-3 text-maroon ${display} text-4xl sm:text-5xl md:text-6xl leading-[1.05]`}>
                     {t.simhasthaTitle}
                   </h2>
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg">
@@ -218,7 +284,7 @@ export function Home() {
                         style={{ fontSize: 'clamp(3rem, 6vw, 5rem)' }}>
                         {daysLeft.toLocaleString('en-IN')}
                       </span>
-                      <span className="text-sm font-bold uppercase tracking-widest text-ink-label">
+                      <span className={hi ? 'text-base font-semibold text-ink-label' : 'text-sm font-bold uppercase tracking-widest text-ink-label'}>
                         {locale === 'hi' ? 'दिन शेष' : 'days left'}
                       </span>
                     </div>
@@ -242,17 +308,14 @@ export function Home() {
         {/* ── UJJAIN BLOG (/hi/blog/; hidden until the first post is live) ── */}
         <UjjainBlog />
 
-        {/* ── UPCOMING PARV (from data/ujjain-parv.ts, relative to IST today) ── */}
-        <FestivalCalendar />
-
         {/* ── PUJA CARDS ────────────────────────────────────────────────── */}
         <section id="pujas" style={{ background: 'linear-gradient(to bottom, #FCEFD8 0%, #FBF5EC 100%)' }}>
           <div className="container-page py-16 sm:py-20">
             <div className="text-center mb-10">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-label mb-2">
+              <p className={`${eyebrow} mb-2`}>
                 {locale === 'hi' ? 'उज्जैन के पारंपरिक अनुष्ठान' : 'Traditional rituals of Ujjain'}
               </p>
-              <h2 className={`font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'}`}
+              <h2 className={`text-maroon ${display}`}
                 style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.8rem)' }}>
                 {locale === 'hi' ? 'उज्जैन में कौन सी पूजा कराई जाती है?' : 'Which pujas are performed in Ujjain?'}
               </h2>
@@ -260,30 +323,22 @@ export function Home() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
               {[
-                { slug: 'kaal-sarp-dosh-nivaran', hi: 'काल सर्प दोष निवारण', en: 'Kaal Sarp Dosh Nivaran', symbol: '🐍', mantra: 'ॐ नमः शिवाय' },
-                { slug: 'mahamrityunjaya-puja', hi: 'महामृत्युंजय पूजा', en: 'Mahamrityunjaya Puja', symbol: '🔱', mantra: 'ॐ त्र्यम्बकं यजामहे' },
-                { slug: 'mangal-dosh-nivaran', hi: 'मंगल दोष निवारण', en: 'Mangal Dosh Nivaran', symbol: '⭐', mantra: 'ॐ अं अंगारकाय नमः' },
-                { slug: 'navgrah-shanti', hi: 'नवग्रह शांति', en: 'Navgrah Shanti', symbol: '🌐', mantra: 'ॐ नवग्रहाय नमः' },
-                { slug: 'pitru-dosh-nivaran', hi: 'पितृ दोष निवारण', en: 'Pitru Dosh Nivaran', symbol: '🪔', mantra: 'ॐ पितृभ्यो नमः' },
+                { slug: 'kaal-sarp-dosh-nivaran', hi: 'काल सर्प दोष निवारण', en: 'Kaal Sarp Dosh Nivaran', mantra: 'ॐ नमः शिवाय' },
+                { slug: 'mahamrityunjaya-puja', hi: 'महामृत्युंजय पूजा', en: 'Mahamrityunjaya Puja', mantra: 'ॐ त्र्यम्बकं यजामहे' },
+                { slug: 'mangal-dosh-nivaran', hi: 'मंगल दोष निवारण', en: 'Mangal Dosh Nivaran', mantra: 'ॐ अं अंगारकाय नमः' },
+                { slug: 'navgrah-shanti', hi: 'नवग्रह शांति', en: 'Navgrah Shanti', mantra: 'ॐ नवग्रहाय नमः' },
+                { slug: 'pitru-dosh-nivaran', hi: 'पितृ दोष निवारण', en: 'Pitru Dosh Nivaran', mantra: 'ॐ पितृभ्यो नमः' },
               ].map((p) => (
                 <Link key={p.slug} to={`${prefix}/puja-in-ujjain/${p.slug}/`}
-                  className="group relative flex flex-col rounded-xl overflow-hidden bg-white border border-gold/40
-                    shadow-sm hover:border-gold transition-all duration-300 hover:-translate-y-1
-                    hover:shadow-[0_14px_40px_rgba(139,26,26,0.12)]">
-                  <div className="h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
-                  <div className="p-6 flex flex-col items-center text-center flex-1">
-                    <span className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{p.symbol}</span>
-                    <h3 className="font-sanskrit font-bold text-maroon leading-snug mb-1"
-                      style={{ fontSize: 'clamp(0.95rem, 2vw, 1.2rem)' }}>
-                      {locale === 'hi' ? p.hi : p.en}
-                    </h3>
-                    <p className="text-saffron-700 text-[11px] italic mb-5">{p.mantra}</p>
-                    <div className="h-px w-10 bg-gold/40 mb-5" />
-                    <div className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest text-maroon/50 group-hover:text-maroon transition-colors">
-                      {locale === 'hi' ? 'जानकारी देखें' : 'View Details'}
-                      <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
-                    </div>
-                  </div>
+                  className={`${card} flex flex-col items-center p-6 text-center`}>
+                  <p className="mb-3 text-[12px] italic text-saffron-700">{p.mantra}</p>
+                  <h3 className={`mb-4 flex-1 leading-snug text-maroon ${cardTitle} text-base sm:text-lg`}>
+                    {hi ? p.hi : p.en}
+                  </h3>
+                  <span className={`flex items-center gap-1 text-xs font-bold text-maroon/60 transition-colors group-hover:text-maroon ${hi ? '' : 'uppercase tracking-widest'}`}>
+                    {hi ? 'जानकारी देखें' : 'View details'}
+                    <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                  </span>
                 </Link>
               ))}
             </div>
@@ -302,10 +357,10 @@ export function Home() {
           <div className="container-page py-16 sm:py-20">
             <div className="mb-10 flex items-end justify-between gap-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
+                <p className={eyebrow}>
                   {t.featuredEyebrow}
                 </p>
-                <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-3xl sm:text-4xl`}>
+                <h2 className={`mt-2 text-maroon ${display} text-3xl sm:text-4xl`}>
                   {t.featuredTitle}
                 </h2>
               </div>
@@ -339,10 +394,10 @@ export function Home() {
           <div className="container-page py-16 sm:py-20">
             <div className="grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
+                <p className={eyebrow}>
                   {t.section2Eyebrow}
                 </p>
-                <h2 className={`mt-3 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit' : 'font-serif'} text-3xl sm:text-4xl leading-tight`}>
+                <h2 className={`mt-3 text-maroon ${display} text-3xl sm:text-4xl leading-tight`}>
                   {t.section2Title}
                 </h2>
               </div>
@@ -350,59 +405,6 @@ export function Home() {
                 <p>{t.section2P1}</p>
                 <p>{t.section2P2}</p>
                 <p>{t.section2P3}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── STARTUP INDIA EIR — deep trust signal ────────────────────── */}
-        <section id="trust" className="bg-cream-dark/50">
-          <div className="container-page py-10 sm:py-14">
-            <div className="grid items-center gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-              <a
-                href="/images/trust/eir-startup-india.jpg"
-                className="block overflow-hidden rounded-lg border border-gold/40 shadow-md transition-transform hover:scale-[1.02]"
-                aria-label={locale === 'hi' ? 'Startup India EIR योजना के अंतर्गत भारत सरकार से प्रथम अनुदान' : 'First grant under Startup India EIR scheme from Govt of India'}
-              >
-                <img
-                  src="/images/trust/eir-startup-india.jpg"
-                  alt={locale === 'hi' ? 'Startup India EIR योजना के अंतर्गत भारत सरकार से प्रथम अनुदान — बाइटफ़्लो टेक्नोलॉजीज़' : 'First grant under Startup India EIR scheme — ByteFlow Technologies'}
-                  className="h-auto w-full max-w-[280px] sm:max-w-[320px]"
-                  loading="lazy"
-                />
-              </a>
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-label">
-                  {locale === 'hi' ? 'मान्यता एवं सम्मान' : 'Recognition & Honours'}
-                </p>
-                <h2 className={`mt-2 font-bold text-maroon ${locale === 'hi' ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-xl sm:text-2xl'}`}>
-                  {locale === 'hi'
-                    ? <>राज्य स्तरीय <span className="text-saffron-700">MSME Conclave</span> में सम्मानित</>
-                    : <>Recognised at the State-level <span className="italic text-saffron-700">MSME Conclave</span></>}
-                </h2>
-                <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">
-                  {locale === 'hi'
-                    ? 'हमारी संस्थापक प्रियंका शिवहरे को राज्य स्तरीय MSME Conclave, भोपाल में वैदिक सेवाओं में डिजिटल नवाचार के लिए सम्मानित किया गया — दोष निवारण पूजाएँ देश-विदेश के श्रद्धालुओं तक पहुँचाने के लिए।'
-                    : "Our founder Priyanka Shivhare was recognised at the State-level MSME Conclave, Bhopal for digital innovation in Vedic services — bringing dosh nivaran pujas to devotees across India and Indians living abroad."}
-                </p>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2 max-w-2xl">
-                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
-                    <p className="text-[13px] font-bold text-maroon">
-                      {locale === 'hi' ? 'DPIIT पंजीकृत स्टार्टअप' : 'DPIIT-Registered Startup'}
-                    </p>
-                    <p className="text-[11px] text-ink-mute mt-1">
-                      {locale === 'hi' ? 'भारत सरकार · Startup India पहल' : 'Government of India · Startup India initiative'}
-                    </p>
-                  </div>
-                  <div className="rounded-lg border border-gold/40 bg-white px-4 py-3">
-                    <p className="text-[13px] font-bold text-maroon">
-                      {locale === 'hi' ? 'राष्ट्रीय प्रेस में प्रकाशित' : 'Featured in National Press'}
-                    </p>
-                    <p className="text-[11px] text-ink-mute mt-1">
-                      Dainik Bhaskar · Patrika · Shivhare Vaani
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -722,7 +722,7 @@ export function MandirDetail({ slug }: DetailProps) {
                   <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                  {locale === 'hi' ? 'लोकल दर्शन, ओंकारेश्वर व इंदौर एयरपोर्ट के लिए कैब बुकिंग — 24/7 उपलब्ध।' : 'Cab booking for local darshan, Omkareshwar and Indore airport — available 24/7.'}
+                  {locale === 'hi' ? 'लोकल दर्शन, ओंकारेश्वर व इंदौर एयरपोर्ट के लिए कैब बुकिंग — तय किराया।' : 'Cab booking for local darshan, Omkareshwar and Indore airport — fixed fares.'}
                 </p>
               </div>
             </Link>

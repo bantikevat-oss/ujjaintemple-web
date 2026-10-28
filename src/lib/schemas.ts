@@ -24,7 +24,7 @@ export function organizationSchema() {
     openingHours: 'Mo-Su 06:00-22:00',
     foundingDate: '2024',
     description:
-      "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Approximate darshan timings, puja information, 24×7 support.",
+      "Ujjain's trusted bilingual guide to famous temples, Simhastha Kumbh 2028, puja booking, hotels, taxi and tour packages. Approximate darshan timings, puja information, phone and WhatsApp support.",
     /*
      * 🔴 Fixed 2026-10-01. This block used to say streetAddress 'Mahakal Area' with
      * geo 23.1828/75.7682 and a hasMap pointing at Mahakaleshwar — i.e. it placed this
@@ -354,7 +354,7 @@ export function taxiServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Ujjain Taxi Service — UjjainTemple Cab Booking',
-    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Transparent fares quoted upfront, 24/7.',
+    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Fixed fares quoted upfront.',
     url: `${SITE.url}/cab-booking/`,
     provider: { '@id': `${SITE.url}/#organization` },
     areaServed: [

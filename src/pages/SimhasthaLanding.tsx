@@ -723,7 +723,7 @@ export function SimhasthaLanding() {
               >
                 {locale === 'hi'
                   ? 'पूरी तैयारी — सड़क, हवाई अड्डा, घाट, पेयजल, मंदिर एवं श्रद्धालु-प्रबंधन, लागत और समय-सीमा सहित →'
-                  : 'The full picture — roads, airport, ghats, water, temples and crowd management, with costs and deadlines →'}
+                  : 'The full picture — roads, airport, ghats, water, temples and footfall management, with costs and deadlines →'}
               </Link>
             </p>
           </div>

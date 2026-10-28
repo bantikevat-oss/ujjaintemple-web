@@ -74,7 +74,7 @@ const TRUST = [
   { numHi: '12+', numEn: '12+', labelHi: 'वर्ष अनुभव', labelEn: 'Years Experience' },
   { numHi: '183', numEn: '183', labelHi: 'मंदिर प्रलेखित', labelEn: 'Temples Documented' },
   { numHi: '₹0', numEn: '₹0', labelHi: 'बुकिंग शुल्क', labelEn: 'Booking Fee' },
-  { numHi: '24×7', numEn: '24×7', labelHi: 'सहायता', labelEn: 'Support' },
+  { numHi: '7 दिन', numEn: '7 days', labelHi: 'सहायता', labelEn: 'Support' },
 ];
 
 // ─── Component ────────────────────────────────────────────────────

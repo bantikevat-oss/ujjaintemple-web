@@ -199,7 +199,7 @@ export function Header() {
             {locale === 'hi' ? 'उज्जैन मंदिर · सिंहस्थ 2028 · होटल · टैक्सी · दर्शन पैकेज' : 'Ujjain Temple · Simhastha 2028 · Hotel · Taxi · Darshan Package'}
           </span>
           <span className="text-xs opacity-90 sm:hidden">
-            {locale === 'hi' ? '24×7 यात्रा सहायता' : '24×7 yatra help'}
+            {locale === 'hi' ? 'यात्रा सहायता' : 'Yatra help'}
           </span>
           <a href={SITE.phoneTel} className="flex items-center gap-1.5 whitespace-nowrap font-bold hover:opacity-90" aria-label={t('cta.call')}>
             <Phone className="h-3.5 w-3.5" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
