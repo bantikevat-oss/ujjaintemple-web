@@ -163,7 +163,7 @@ RewriteRule ^hi/blog/([A-Za-z0-9_-]+)/?$    /news/index.php?view=article&slug=$1
   Order allow,deny
   Deny from all
 </Files>
-<FilesMatch "^(booking-lib|cab-rates|quote-lib|rate-lib)\.php$">
+<FilesMatch "^(booking-lib|cab-rates|followup-lib|quote-lib|rate-lib)\.php$">
   Order allow,deny
   Deny from all
 </FilesMatch>

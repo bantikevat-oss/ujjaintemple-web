@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState, FormEvent } from 'react';
-import { X, MessageCircle, Phone } from 'lucide-react';
+import { X, MessageCircle, Phone, Car, ArrowRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { TripShapeFields, TRIP_SHAPES, TRAVELLERS } from './TripShapeFields';
+import { rememberCabContact } from '../../lib/cabContact';
 
 /**
  * WhatsApp capture gate (Aman, 2026-09-30 — option A).
@@ -19,6 +20,12 @@ import { TripShapeFields, TRIP_SHAPES, TRAVELLERS } from './TripShapeFields';
  * rides along into the mail subject so a group enquiry is obvious at a glance.
  *
  * Mounted once in Layout. Any CTA anywhere opens it via openWhatsAppGate().
+ *
+ * Cab → book online (Aman, 2026-10-28: "cab ki booking hai to direct hi book ho jaye"). A cab
+ * enquiry over WhatsApp ends in "baad me batate hain"; a ₹500 advance ends in a booking. So the
+ * gate leads with a "fixed fare → book now" strip, and once "Cab" is picked the main button is
+ * the booking (the widget on this page, else /cab-booking/), WhatsApp the second one. Name +
+ * mobile typed here travel to the widget so it does not ask again; the lead is still captured.
  */
 
 export interface GateOpts {
@@ -53,11 +60,15 @@ export function WhatsAppGateHost() {
   const [open, setOpen] = useState(false);
   const [opts, setOpts] = useState<GateOpts>({});
   const [sending, setSending] = useState(false);
+  const [purposeSel, setPurposeSel] = useState('');
   const nameRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
     const onOpen = (e: Event) => {
-      setOpts((e as CustomEvent<GateOpts>).detail || {});
+      const d = (e as CustomEvent<GateOpts>).detail || {};
+      setOpts(d);
+      setPurposeSel(d.purpose ?? '');
       setOpen(true);
     };
     window.addEventListener(EVT, onOpen);
@@ -137,8 +148,34 @@ export function WhatsAppGateHost() {
     });
 
     form.reset();
+    setPurposeSel('');
     handover(name, purpose, shape, people);
   }
+
+  /** Cab → the booking widget (here if the page has one, else /cab-booking/). */
+  function goBook() {
+    const form = formRef.current;
+    const data = form ? new FormData(form) : null;
+    const name = String(data?.get('name') || '').trim();
+    const phone = String(data?.get('phone') || '').trim();
+    if (data && name.length >= 2 && phone.replace(/[^0-9]/g, '').length >= 10) {
+      // Keep the lead even if they never finish the booking — and hand the contact to the widget.
+      data.append('sourcePage', opts.sourcePage || window.location.pathname);
+      data.append('locale', locale);
+      data.append('channel', 'form');
+      data.append('service', 'transport');
+      data.set('purpose', 'cab');
+      data.set('message', `WhatsApp form → chose online booking${opts.note ? ` · ${opts.note}` : ''}`);
+      fetch('/api/lead.php', { method: 'POST', body: data, keepalive: true }).catch(() => { /* booking still opens */ });
+      rememberCabContact(name, phone);
+    }
+    window.gtag?.('event', 'gate_to_booking', { purpose: purposeSel || 'none', had_contact: !!name });
+    setOpen(false);
+    const w = document.querySelector('[data-cab-widget]');
+    if (w) { w.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+    window.location.href = isHi ? '/hi/cab-booking/' : '/cab-booking/';
+  }
+  const isCab = purposeSel === 'cab';
 
   if (!open) return null;
 
@@ -177,7 +214,17 @@ export function WhatsAppGateHost() {
           </button>
         </div>
 
-        <form onSubmit={onSubmit} className="space-y-3">
+        <button type="button" onClick={goBook}
+          className="mb-4 flex w-full items-center gap-3 rounded-xl border-2 border-saffron/60 bg-saffron/10 px-3 py-2.5 text-left transition-colors hover:bg-saffron/15">
+          <Car className="h-6 w-6 shrink-0 text-maroon" aria-hidden />
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-bold text-maroon">{isHi ? 'कैब बुक करनी है?' : 'Need a cab?'}</span>
+            <span className="block text-xs text-ink-soft">{isHi ? 'तय किराया देखें और ₹500 एडवांस देकर अभी पक्की करें' : 'See the fixed fare and confirm now with a ₹500 advance'}</span>
+          </span>
+          <ArrowRight className="h-5 w-5 shrink-0 text-maroon" aria-hidden />
+        </button>
+
+        <form ref={formRef} onSubmit={onSubmit} className="space-y-3">
           {/* Honeypot — matches the `website` check in api/lead.php. Off-screen rather than
               display:none, which some bots skip; tabIndex/autoComplete keep humans out of it. */}
           <input
@@ -210,7 +257,7 @@ export function WhatsAppGateHost() {
               {isHi ? 'किस लिए?' : 'What for?'} *
             </label>
             <select
-              id="wag-purpose" name="purpose" required defaultValue={opts.purpose ?? ''}
+              id="wag-purpose" name="purpose" required value={purposeSel} onChange={(e) => setPurposeSel(e.target.value)}
               className="w-full rounded-md border border-cream-dark bg-white px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon"
             >
               <option value="" disabled>{isHi ? 'चुनें' : 'Select'}</option>
@@ -236,14 +283,23 @@ export function WhatsAppGateHost() {
             />
           </div>
 
+          {isCab && (
+            <button type="button" onClick={goBook}
+              className="flex w-full items-center justify-center gap-2 rounded-md bg-maroon py-3 text-base font-bold text-cream shadow-md transition-transform active:scale-95">
+              <Car className="h-5 w-5" aria-hidden />
+              {isHi ? 'तय किराया देखें और अभी बुक करें' : 'See fixed fare & book now'}
+            </button>
+          )}
           <button
             type="submit" disabled={sending}
-            className="flex w-full items-center justify-center gap-2 rounded-md bg-maroon py-3 text-base font-bold text-cream shadow-md transition-transform active:scale-95 disabled:opacity-70"
+            className={isCab
+              ? 'flex w-full items-center justify-center gap-2 rounded-md border-2 border-maroon bg-white py-2.5 text-sm font-bold text-maroon transition-transform active:scale-95 disabled:opacity-70'
+              : 'flex w-full items-center justify-center gap-2 rounded-md bg-maroon py-3 text-base font-bold text-cream shadow-md transition-transform active:scale-95 disabled:opacity-70'}
           >
             <MessageCircle className="h-5 w-5" />
             {sending
               ? (isHi ? 'खोल रहे हैं…' : 'Opening…')
-              : (isHi ? 'व्हाट्सएप खोलें' : 'Open WhatsApp')}
+              : isCab ? (isHi ? 'या व्हाट्सएप पर बात करें' : 'Or chat on WhatsApp') : (isHi ? 'व्हाट्सएप खोलें' : 'Open WhatsApp')}
           </button>
         </form>
 

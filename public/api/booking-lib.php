@@ -101,7 +101,7 @@ function ut_rzp_call($method, $path, $keyId, $keySecret, $body = null) {
 
 function ut_h($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
-function ut_booking_mail($subject, array $b, $extraLine = '') {
+function ut_booking_mail($subject, array $b, $extraLine = '', $extraHtml = '') {
   require_once __DIR__ . '/smtp.php';
   $rows = [
     'Booking ID' => $b['booking_id'], 'Naam' => $b['name'], 'Mobile' => $b['phone'],
@@ -117,5 +117,6 @@ function ut_booking_mail($subject, array $b, $extraLine = '') {
   }
   $html .= '</table>';
   if ($extraLine !== '') $html = '<p style="font-family:Arial,sans-serif">' . ut_h($extraLine) . '</p>' . $html;
+  if ($extraHtml !== '') $html .= $extraHtml;   // trusted, built by followup-lib.php
   return ujt_smtp_send($subject, $html, null, true);
 }

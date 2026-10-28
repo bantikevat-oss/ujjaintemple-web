@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, Car, Check, CheckCircle2, Clock, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, Car, Check, CheckCircle2, Clock, Download, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { CONTACT_EVT, readContact, saveContact } from '../../lib/cabContact';
 import {
   CAB_ROUTES, PICKUPS, PLACES, TRIP_TYPES, VEHICLES, VEHICLE_ORDER,
   dropsFor, inr, routeFor, tripTypesFor,
@@ -19,17 +20,23 @@ import {
  * Trust lines say only what is true today.
  */
 
-const CONTACT_KEY = 'ut_cab_contact';
-const CONTACT_DAYS = 30;
-type Contact = { name: string; phone: string; at: number };
-const readContact = (): Contact | null => {
-  try {
-    const c = JSON.parse(localStorage.getItem(CONTACT_KEY) || 'null') as Contact | null;
-    return c && c.name && c.phone && Date.now() - c.at < CONTACT_DAYS * 864e5 ? c : null;
-  } catch { return null; }
-};
-const saveContact = (c: Contact | null) => {
-  try { if (c) localStorage.setItem(CONTACT_KEY, JSON.stringify(c)); else localStorage.removeItem(CONTACT_KEY); } catch { /* private mode */ }
+/**
+ * Booking link with the trip filled in (2026-10-28): /cab-booking/?from=&to=&type=&date=&time=&v=.
+ * The team sends it from the lead mail ("fare dekha, pay nahi kiya"); the widget reads it on load.
+ */
+const readPrefill = () => {
+  if (typeof window === 'undefined') return null;
+  const q = new URLSearchParams(window.location.search);
+  const from = q.get('from') as PlaceId | null, to = q.get('to') as PlaceId | null, type = q.get('type') as TripType | null;
+  if (!from || !to || !type || !(from in PLACES) || !(to in PLACES) || !['oneway', 'round', 'local'].includes(type)) return null;
+  if (!routeFor(from, to, type)) return null;
+  const v = q.get('v');
+  return {
+    from, to, type,
+    date: /^\d{4}-\d{2}-\d{2}$/.test(q.get('date') || '') ? (q.get('date') as string) : '',
+    time: /^([01]\d|2[0-3]):[0-5]\d$/.test(q.get('time') || '') ? (q.get('time') as string) : '',
+    vehicle: v && v in VEHICLES ? (v as VehicleId) : null,
+  };
 };
 
 type OtpReply = { success?: boolean; skip?: boolean; reason?: string; error?: string; wait?: number; left?: number };
@@ -133,9 +140,25 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [resendIn, setResendIn] = useState(0);
 
   useEffect(() => {
-    const c = readContact();
-    if (c) { setName(c.name); setPhone(c.phone); setKnown(true); }
+    const load = () => {
+      const c = readContact();
+      if (c) { setName(c.name); setPhone(c.phone); setKnown(true); }
+    };
+    load();
+    window.addEventListener(CONTACT_EVT, load);
+    return () => window.removeEventListener(CONTACT_EVT, load);
   }, []);
+  // A booking link from the lead mail fills the trip in (date only if it is still bookable).
+  const [prefillDate, setPrefillDate] = useState('');
+  useEffect(() => {
+    const p = readPrefill();
+    if (!p) return;
+    setTab(tabOf(p)); setFrom(p.from); setTo(p.to);
+    if (p.time) setTime(p.time);
+    if (p.vehicle) setVehicle(p.vehicle);
+    if (p.date) setPrefillDate(p.date);
+    window.gtag?.('event', 'booking_link_open', { source });
+  }, []);   // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (resendIn <= 0) return undefined;
     const t = window.setTimeout(() => setResendIn(resendIn - 1), 1000);
@@ -157,6 +180,9 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     }
     setDays(out);
   }, [hi]);
+  useEffect(() => {
+    if (prefillDate && days.some((d) => d.iso === prefillDate)) { setDate(prefillDate); setPrefillDate(''); }
+  }, [days, prefillDate]);
 
   const routeId = routeFor(from, to, type);
   const route = routeId ? CAB_ROUTES[routeId] : null;
@@ -223,6 +249,9 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'form',
       sourcePage: `booking:${source}`, locale, travelDate: date,
       message: `Cab fare enquiry: ${tripLine} · ${dayLabel}, ${slotLabel} · Mobile ${verified}`,
+      // The mail builds a one-tap "send the booking link" from these (lead.php).
+      bkFrom: from, bkTo: to, bkType: type, bkTime: time, bkTrip: tripLine,
+      bkFares: VEHICLE_ORDER.map((v) => { const f = fareOf(v); return f !== null ? `${VEHICLES[v].name} ${inr(f)}` : ''; }).filter(Boolean).join(' · '),
     }).forEach(([k, v]) => fd.append(k, v));
     fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* fares still open */ });
     window.gtag?.('event', 'generate_lead', { form_id: 'cab_fare_gate', route: routeId, verified: verified.startsWith('OTP verified') });
@@ -299,7 +328,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setPaying(true);
 
     const fd = new FormData();
-    Object.entries({ route: routeId, vehicle, fare: String(fare), name: name.trim(), phone: phone.trim(), date, time, trip: `${tripLine} · ${VEHICLES[vehicle].name}`, pickupNote, locale, source })
+    Object.entries({ route: routeId, vehicle, fare: String(fare), name: name.trim(), phone: phone.trim(), date, time, trip: `${tripLine} · ${VEHICLES[vehicle].name}`, pickupNote, locale, source, from, to, type })
       .forEach(([k, v]) => fd.append(k, v));
     let order: { success?: boolean; fallback?: boolean; error?: string; fare?: number; booking_id?: string; order_id?: string; key_id?: string; amount?: number } = {};
     try {
@@ -356,6 +385,31 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     rzp.open();
   };
 
+  /* Receipt PDF — same browser-side method as the quote page (/q/): html2canvas + jsPDF from
+     /vendor/, loaded only on click (no Chrome on Hostinger; PHP PDF libs break Devanagari). */
+  const [receiptBusy, setReceiptBusy] = useState(false);
+  const downloadReceipt = async () => {
+    const el = document.getElementById(`${source}-receipt`);
+    if (!el || receiptBusy) return;
+    setReceiptBusy(true);
+    const load = (src: string) => new Promise<void>((ok, no) => {
+      const sc = document.createElement('script'); sc.src = src; sc.onload = () => ok(); sc.onerror = () => no(); document.head.appendChild(sc);
+    });
+    try {
+      const w = window as unknown as { html2canvas?: (e: HTMLElement, o: object) => Promise<HTMLCanvasElement>; jspdf?: { jsPDF: new (o: object) => { addImage: (...a: unknown[]) => void; save: (n: string) => void } } };
+      if (!w.html2canvas) await load('/vendor/html2canvas-1.4.1.min.js');
+      if (!w.jspdf) await load('/vendor/jspdf-2.5.2.umd.min.js');
+      if (document.fonts) await document.fonts.ready;
+      const canvas = await w.html2canvas!(el, { scale: 2, backgroundColor: '#ffffff', logging: false });
+      const pdf = new w.jspdf!.jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+      const W = 150, h = (canvas.height * W) / canvas.width;
+      pdf.addImage(canvas.toDataURL('image/jpeg', 0.92), 'JPEG', 30, 15, W, Math.min(h, 265));
+      pdf.save(`UjjainTemple-${bookingId || 'booking'}.pdf`);
+      window.gtag?.('event', 'receipt_download', { source });
+    } catch { window.print(); }
+    setReceiptBusy(false);
+  };
+
   const box = 'flex items-center gap-2.5 rounded-xl border border-cream-dark bg-white px-3 focus-within:border-maroon focus-within:ring-1 focus-within:ring-maroon';
   const sel = 'w-full appearance-none bg-transparent py-2.5 text-[15px] font-semibold text-ink focus:outline-none';
   const cap = 'mb-1 block text-[11px] font-bold text-ink-mute';
@@ -391,7 +445,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   );
 
   return (
-    <section className="not-prose overflow-hidden rounded-3xl border border-gold/40 bg-white shadow-2xl" aria-label={hi ? 'कैब बुकिंग' : 'Cab booking'}>
+    <section data-cab-widget className="not-prose scroll-mt-24 overflow-hidden rounded-3xl border border-gold/40 bg-white shadow-2xl" aria-label={hi ? 'कैब बुकिंग' : 'Cab booking'}>
       {showTitle && (
         <div className="flex items-center justify-between gap-3 bg-gradient-to-r from-maroon-800 to-maroon px-5 py-3 text-white">
           <h2 className={`text-lg font-bold sm:text-xl ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
@@ -643,19 +697,58 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             </a>
           </div>
         ) : (
-          <div className="space-y-4 py-2 text-center">
-            <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
-            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'बुकिंग पक्की हो गई' : 'Your cab is booked'}</h3>
-            <p className="text-sm text-ink-soft">{hi ? 'बुकिंग ID' : 'Booking ID'}: <b className="text-ink">{bookingId}</b></p>
-            <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {dayLabel}, {slotLabel}</p>
-            <p className="text-sm text-ink-soft">
-              {hi
-                ? `₹${ADVANCE} एडवांस मिल गया। बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में। गाड़ी और ड्राइवर की जानकारी यात्रा से पहले WhatsApp पर भेजी जाएगी।`
-                : `₹${ADVANCE} advance received. Balance ${fare !== null ? inr(fare - ADVANCE) : ''} to the driver in cash or UPI. Car and driver details will be sent on WhatsApp before your trip.`}
-            </p>
+          <div className="space-y-4 py-1">
+            {/* Receipt (2026-10-28): the customer should leave with a booking they can show, not a
+                one-line "booked". Same card becomes the PDF. */}
+            <div id={`${source}-receipt`} className="overflow-hidden rounded-2xl border border-gold/50 bg-white text-left">
+              <div className="flex items-center justify-between gap-3 bg-maroon px-4 py-3 text-white">
+                <div className="flex items-center gap-2">
+                  <img src="/favicon-192.png" alt="" width={34} height={34} className="h-8 w-8 rounded-full bg-white p-0.5" />
+                  <div>
+                    <p className="font-serif text-lg font-bold leading-none">UjjainTemple.com</p>
+                    <p className="mt-0.5 text-[11px] text-cream/80">{SITE.phone}</p>
+                  </div>
+                </div>
+                <span className="text-sm font-extrabold text-white">✓ {hi ? 'बुकिंग पक्की' : 'CONFIRMED'}</span>{/* plain text: html2canvas drops text inside a padded pill */}
+              </div>
+              <div className="space-y-3 p-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-8 w-8 shrink-0 text-maroon" aria-hidden />
+                  <div>
+                    <h3 className={`text-xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'आपकी कैब बुक हो गई' : 'Your cab is booked'}</h3>
+                    <p className="text-sm text-ink-soft">{hi ? 'बुकिंग ID' : 'Booking ID'}: <b className="text-ink">{bookingId}</b></p>
+                  </div>
+                </div>
+                <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl bg-cream-light/70 p-3 text-sm">
+                  <dt className="text-ink-mute">{hi ? 'यात्रा' : 'Trip'}</dt><dd className="font-semibold text-ink">{tripLine}</dd>
+                  <dt className="text-ink-mute">{hi ? 'तारीख़ व समय' : 'Date & time'}</dt><dd className="font-semibold text-ink">{dayLabel}, {slotLabel}</dd>
+                  <dt className="text-ink-mute">{hi ? 'गाड़ी' : 'Car'}</dt><dd className="font-semibold text-ink">{VEHICLES[vehicle].name}</dd>
+                  {pickupNote.trim() && (<><dt className="text-ink-mute">{hi ? 'पिकअप' : 'Pickup'}</dt><dd className="font-semibold text-ink">{pickupNote.trim()}</dd></>)}
+                  <dt className="text-ink-mute">{hi ? 'यात्री' : 'Name'}</dt><dd className="font-semibold text-ink">{name.trim()} · {phone.trim()}</dd>
+                </dl>
+                <div className="divide-y divide-cream-dark rounded-xl border border-cream-dark text-sm">
+                  <div className="flex justify-between px-3 py-2"><span>{hi ? 'कुल किराया' : 'Total fare'}</span><b>{fare !== null ? inr(fare) : ''}</b></div>
+                  <div className="flex justify-between bg-maroon/5 px-3 py-2 font-bold text-maroon"><span>{hi ? 'एडवांस मिला' : 'Advance paid'}</span><span>{inr(ADVANCE)} ✓</span></div>
+                  <div className="flex justify-between px-3 py-2"><span>{hi ? 'बाकी — ड्राइवर को नकद या UPI' : 'Balance — to the driver, cash or UPI'}</span><b>{fare !== null ? inr(fare - ADVANCE) : ''}</b></div>
+                </div>
+                <div>
+                  <p className="mb-1 text-xs font-bold text-ink-mute">{hi ? 'आगे क्या होगा' : 'What happens next'}</p>
+                  <ol className="space-y-1 text-sm text-ink-soft">
+                    <li>1. {hi ? 'यात्रा से पहले गाड़ी का नंबर और ड्राइवर का नाम-मोबाइल WhatsApp पर आएगा।' : 'Before the trip, the car number and the driver’s name and mobile come on WhatsApp.'}</li>
+                    <li>2. {hi ? 'तय समय पर ड्राइवर पिकअप पर होगा — बाकी किराया उन्हें दें।' : 'The driver reaches the pickup on time — pay the balance to the driver.'}</li>
+                    <li>3. {hi ? 'यात्रा से 48 घंटे पहले तक रद्द करने पर पूरा एडवांस वापस।' : 'Cancel up to 48 hours before the trip for a full refund of the advance.'}</li>
+                  </ol>
+                </div>
+                <p className="text-[11px] text-ink-mute">UjjainTemple.com · ByteFlow Technologies Pvt Ltd · {hi ? 'कॉल / WhatsApp' : 'Call / WhatsApp'} {SITE.phone}</p>
+              </div>
+            </div>
+            <button type="button" onClick={downloadReceipt} disabled={receiptBusy}
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-maroon py-3 font-bold text-white hover:bg-maroon/90 disabled:opacity-70">
+              <Download className="h-5 w-5" aria-hidden /> {receiptBusy ? (hi ? 'रसीद बन रही है…' : 'Preparing…') : (hi ? 'रसीद PDF डाउनलोड करें' : 'Download receipt (PDF)')}
+            </button>
             <a href={`${SITE.whatsapp}?text=${encodeURIComponent((hi ? 'नमस्ते, मेरी बुकिंग ID ' : 'Hello, my booking ID is ') + bookingId)}`}
               target="_blank" rel="noopener"
-              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-maroon py-3 font-bold text-white hover:bg-maroon/90">
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
               <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर बुकिंग ID भेजें' : 'Send booking ID on WhatsApp'}
             </a>
           </div>
@@ -682,8 +775,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           ))}
         </ul>
         <p className="mt-4 text-center text-xs text-ink-soft">
-          <a className="underline" href={hi ? '/hi/pricing/' : '/pricing/'}>{hi ? 'सभी किराए' : 'All fares'}</a>
-          {' · '}
           <a className="underline" href={hi ? '/hi/cancellation-refund-policy/' : '/cancellation-refund-policy/'}>{hi ? 'रिफ़ंड नीति' : 'Refund policy'}</a>
         </p>
       </div>

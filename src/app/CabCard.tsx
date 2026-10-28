@@ -1,6 +1,6 @@
 import { ArrowRight, Car } from 'lucide-react';
 import { useI18n } from '../i18n';
-import { CAB_ROUTES, fromFare, inr, type RouteId } from '../data/rates';
+import { CAB_ROUTES, type RouteId } from '../data/rates';
 import { ADVANCE } from '../components/global/CabBookingWidget';
 
 const SHOWN: RouteId[] = ['omkareshwar-round', 'ujjain-local', 'indore-airport'];
@@ -27,7 +27,7 @@ export function CabCard() {
           <li key={id} className="flex items-center justify-between gap-3 py-2 text-sm">
             <span className="text-ink">{hi ? CAB_ROUTES[id].title.hi : CAB_ROUTES[id].title.en}</span>
             <span className="shrink-0 font-semibold text-maroon">
-              {inr(fromFare(id))}{hi ? ' से' : ' onwards'}
+              {hi ? 'तय किराया' : 'Fixed fare'}
             </span>
           </li>
         ))}

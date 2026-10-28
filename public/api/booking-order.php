@@ -24,6 +24,9 @@ $trip    = ut_clean($_POST['trip'] ?? '', 160);
 $note    = ut_clean($_POST['pickupNote'] ?? '', 160);
 $locale  = ut_clean($_POST['locale'] ?? '', 4) === 'en' ? 'en' : 'hi';
 $source  = ut_clean($_POST['source'] ?? '', 120);
+$bkFrom  = ut_clean($_POST['from'] ?? '', 20);    // for the follow-up link only (followup-lib whitelists)
+$bkTo    = ut_clean($_POST['to'] ?? '', 20);
+$bkType  = ut_clean($_POST['type'] ?? '', 10);
 $ip      = $_SERVER['REMOTE_ADDR'] ?? '';
 
 // Validation — the same rules the widget applies, enforced again here.
@@ -83,8 +86,12 @@ ut_book_append($b);
 
 // An abandoned checkout is the hottest lead there is — tell the team now, not only on payment.
 if (!ut_over_cap('ordermail:' . date('Y-m-d'), 80)) {
+  require_once __DIR__ . '/followup-lib.php';
+  $fuHi = $locale !== 'en';
+  $fuLink = ut_fu_link(['from' => $bkFrom, 'to' => $bkTo, 'type' => $bkType, 'date' => $date, 'time' => $time, 'vehicle' => $vehicle], $fuHi);
   ut_booking_mail('⏳ [PAYMENT PENDING] ' . $bookingId . ' — ' . $trip . ' · ' . $name,
-    $b, 'Customer ne booking shuru ki, ₹500 advance abhi baaki hai. 15 min me paid mail na aaye to call karein.');
+    $b, 'Customer ne booking shuru ki, ₹500 advance abhi baaki hai. 15 min me paid mail na aaye to call karein.',
+    ut_fu_html($phone, $name, $trip, $fuLink, $fuHi));
 }
 
 ut_json(200, [

@@ -212,6 +212,9 @@ elseif ($purpose === 'info')                 { $tier = 'COLD'; $mark = '[INFO]';
 else                                         { $tier = 'WARM'; $mark = '[LEAD]'; }
 
 $subject = "$mark UjjainTemple — $name · $plabel";
+// Saw the fares but has not paid (cab widget fare gate) — the lead to chase first (2026-10-28).
+$sawFares = strpos($message, 'Cab fare enquiry:') === 0;
+if ($sawFares) $subject = '🔥 FARE DEKHA · ' . $subject;
 
 /*
  * The mail is the product here — Aman reads it on a phone and decides whether to call.
@@ -251,6 +254,17 @@ $body .= '<div style="margin:15px 0 5px">'
        . '<a href="tel:+' . $e($waNum) . '" style="display:inline-block;background:#7A1220;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px">Call</a>'
        . '<a href="https://wa.me/' . $e($waNum) . '" style="display:inline-block;background:#25D366;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp</a>'
        . '</div>';
+// Any cab lead: one tap sends the customer a booking link with their trip filled in, so the
+// follow-up call ends in a ₹500 booking rather than "baad me batate hain" (followup-lib.php).
+if ($purpose === 'cab') {
+  require_once __DIR__ . '/followup-lib.php';
+  $fuHi = $locale !== 'en';
+  $fuLink = ut_fu_link([
+    'from' => clean($_POST['bkFrom'] ?? ''), 'to' => clean($_POST['bkTo'] ?? ''), 'type' => clean($_POST['bkType'] ?? ''),
+    'date' => $travel, 'time' => clean($_POST['bkTime'] ?? ''), 'vehicle' => clean($_POST['bkVehicle'] ?? ''),
+  ], $fuHi);
+  $body .= ut_fu_html($phone, $name, mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120), $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160));
+}
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
 $body .= $row('Yatra date', $whenLine);
 $body .= $row('Chahiye', $e($plabel));
