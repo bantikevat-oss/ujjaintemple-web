@@ -12,4 +12,6 @@ return [
   'max_upload'  => 15 * 1024 * 1024, // 15 MB
   'allowed'     => ['jpg','jpeg','png','webp','svg','avif','gif','ico'],
   'session_ttl' => 3600 * 6, // 6 hours
+  // E-mail OTP login (2026-10-28) — only these addresses get a code. Password stays as fallback.
+  'login_emails' => ['16amanshivhare@gmail.com', 'dheeraj.byteflow@gmail.com'],
 ];

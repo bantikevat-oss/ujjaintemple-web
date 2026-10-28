@@ -54,6 +54,63 @@ if (($_POST['do'] ?? '') === 'login') {
   }
   usleep(600000); $err = 'Galat password.';
 }
+// ---------- e-mail OTP login (2026-10-28, same pattern as the other team portals) ----------
+// Code = 6 digits, 10 min, 5 tries, one send per 30 s, 5 sends per address per hour. A code is
+// "sent" for any address so the page never reveals who is an admin; only allowlisted ones get mail.
+$smtpLib = is_file(__DIR__ . '/../api/smtp.php') ? __DIR__ . '/../api/smtp.php' : __DIR__ . '/../public/api/smtp.php';
+$info = null; $showPw = false;
+function otp_cap(string $email): bool {
+  $f = sys_get_temp_dir() . '/ujt_panel_otp_' . hash('sha256', $email) . '.json';
+  $t = array_values(array_filter((array) json_decode((string) @file_get_contents($f), true), function ($x) { return $x > time() - 3600; }));
+  if (count($t) >= 5) return false;
+  $t[] = time(); @file_put_contents($f, json_encode($t), LOCK_EX);
+  return true;
+}
+if (($_POST['do'] ?? '') === 'otp_send') {
+  check_csrf();
+  $email = strtolower(trim((string)($_POST['email'] ?? '')));
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { $err = 'Sahi email likho.'; }
+  elseif (time() - (int)($_SESSION['otp_last'] ?? 0) < 30) { $err = '30 second baad dobara code maango.'; }
+  elseif (!otp_cap($email)) { $err = 'Is email pe bahut code ja chuke — 1 ghante baad, ya password se login karo.'; $showPw = true; }
+  else {
+    $_SESSION['otp_last'] = time();
+    $allowed = in_array($email, array_map('strtolower', $cfg['login_emails'] ?? []), true);
+    $hash = '';
+    if ($allowed) {
+      require_once $smtpLib;
+      $code = (string) random_int(100000, 999999);
+      $mail = ujt_mail_config();
+      $body = '<div style="font-family:Arial,sans-serif;font-size:15px"><p>UjjainTemple admin panel ka login code:</p>'
+        . '<p style="font-size:28px;font-weight:bold;letter-spacing:4px">' . $code . '</p>'
+        . '<p style="color:#666">10 minute tak valid. Aapne login nahi kiya to ye mail ignore karein.</p></div>';
+      if ($mail && ujt_smtp_send('UjjainTemple admin login code: ' . $code, $body, array_merge($mail, ['to' => $email]), true)) {
+        $hash = password_hash($code, PASSWORD_DEFAULT);
+      } else {
+        $err = 'Mail nahi ja paya — abhi password se login karo.'; $showPw = true;
+      }
+    }
+    if (!$err) {
+      $_SESSION['otp'] = ['email' => $email, 'hash' => $hash, 'exp' => time() + 600, 'tries' => 0];
+      $info = 'Code bheja: ' . $email . ' — inbox (ya spam) dekho.';
+    }
+  }
+}
+if (($_POST['do'] ?? '') === 'otp_verify') {
+  check_csrf();
+  $o = $_SESSION['otp'] ?? null;
+  $code = preg_replace('/\D/', '', (string)($_POST['code'] ?? ''));
+  if (!$o || $o['exp'] < time()) { unset($_SESSION['otp']); $err = 'Code ki samay-seema khatam — naya code maango.'; }
+  elseif ($o['tries'] >= 5) { unset($_SESSION['otp']); $err = 'Bahut galat koshish — naya code maango.'; }
+  elseif ($o['hash'] !== '' && password_verify($code, $o['hash'])) {
+    session_regenerate_id(true);
+    unset($_SESSION['otp']);
+    $_SESSION['auth'] = true; $_SESSION['auth_time'] = time(); $_SESSION['who'] = $o['email'];
+    header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?')); exit;
+  } else { $_SESSION['otp']['tries']++; usleep(500000); $err = 'Galat code.'; }
+}
+if (($_GET['do'] ?? '') === 'otp_reset') { unset($_SESSION['otp']); header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?')); exit; }
+if (($_POST['do'] ?? '') === 'login' && $err) $showPw = true;
+
 if (($_GET['do'] ?? '') === 'logout') { session_destroy(); header('Location: ' . strtok($_SERVER['REQUEST_URI'], '?')); exit; }
 
 // ---------- gated write actions ----------
@@ -200,22 +257,54 @@ $SITE = rtrim($cfg['site_url'], '/');
 <body>
 <?php if (!is_auth()): ?>
   <div class="login">
-    <div class="brand" style="margin-bottom:14px"><b>UjjainTemple</b> · Image Panel</div>
+    <div class="brand" style="margin-bottom:14px"><b>UjjainTemple</b> · Admin Panel</div>
     <h1>Login</h1>
-    <p>Site images manage karne ke liye password daalo.</p>
     <?php if ($err): ?><div class="flash err"><?= h($err) ?></div><?php endif; ?>
-    <?php if ($cfg['pass_hash'] === '__UNSET__'): ?><div class="flash err">Panel abhi setup nahi hua (secret.php missing).</div><?php endif; ?>
-    <form method="post">
-      <input type="hidden" name="do" value="login">
-      <input type="hidden" name="csrf" value="<?= csrf() ?>">
-      <input type="password" name="password" placeholder="Password" autofocus required>
-      <button type="submit">Enter</button>
-    </form>
+    <?php if ($info): ?><div class="flash ok"><?= h($info) ?></div><?php endif; ?>
+    <?php if (!empty($_SESSION['otp'])): ?>
+      <p>Email pe aaya 6 ank ka code daalo.</p>
+      <form method="post">
+        <input type="hidden" name="do" value="otp_verify">
+        <input type="hidden" name="csrf" value="<?= csrf() ?>">
+        <input type="text" name="code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 ank ka code" autofocus required>
+        <button type="submit">Login</button>
+      </form>
+      <p style="margin-top:12px"><a href="?do=otp_reset">Dusra email / naya code</a></p>
+    <?php else: ?>
+      <p>Apna email daalo — login code usi pe aayega.</p>
+      <form method="post">
+        <input type="hidden" name="do" value="otp_send">
+        <input type="hidden" name="csrf" value="<?= csrf() ?>">
+        <input type="email" name="email" autocomplete="email" placeholder="Email" autofocus required>
+        <button type="submit">Code bhejo</button>
+      </form>
+    <?php endif; ?>
+    <details style="margin-top:16px"<?= $showPw ? ' open' : '' ?>>
+      <summary style="cursor:pointer;font-size:13px;color:var(--muted)">Password se login</summary>
+      <?php if ($cfg['pass_hash'] === '__UNSET__'): ?><div class="flash err">Password abhi setup nahi hua (secret.php missing).</div><?php endif; ?>
+      <form method="post" style="margin-top:10px">
+        <input type="hidden" name="do" value="login">
+        <input type="hidden" name="csrf" value="<?= csrf() ?>">
+        <div style="position:relative">
+          <input type="password" name="password" id="pw" placeholder="Password" required style="padding-right:46px">
+          <button type="button" id="pwEye" aria-label="Password dikhao" style="position:absolute;right:6px;top:6px;width:36px;height:34px;padding:0;background:transparent;color:var(--muted);border:0;font-size:16px;cursor:pointer">👁</button>
+        </div>
+        <button type="submit">Enter</button>
+      </form>
+    </details>
+    <script>
+      document.getElementById('pwEye').addEventListener('click', function () {
+        var p = document.getElementById('pw'), show = p.type === 'password';
+        p.type = show ? 'text' : 'password';
+        this.textContent = show ? '🙈' : '👁';
+        this.setAttribute('aria-label', show ? 'Password chhupao' : 'Password dikhao');
+      });
+    </script>
   </div>
 <?php else: ?>
   <header class="top">
     <b>Ujjain<span class="gold">Temple</span> · Image Panel</b>
-    <span><a class="out" href="quotes.php" style="margin-right:6px">Quotes</a><a class="out" href="?do=logout">Logout</a></span>
+    <span><a class="out" href="quotes.php" style="margin-right:6px">Quotes</a><a class="out" href="rates.php" style="margin-right:6px">Rates</a><a class="out" href="?do=logout">Logout</a></span>
   </header>
   <div class="wrap">
     <?php if ($msg): ?><div class="flash ok"><?= $msg ?></div><?php endif; ?>

@@ -9,20 +9,8 @@
  */
 
 declare(strict_types=1);
-$cfg = require __DIR__ . '/config.php';
-// Live: public_html/panel + public_html/api. Local checkout: panel/ + public/api.
-$lib = is_file(__DIR__ . '/../api/quote-lib.php') ? __DIR__ . '/../api/quote-lib.php' : __DIR__ . '/../public/api/quote-lib.php';
-require $lib;
-
-session_set_cookie_params(['lifetime' => $cfg['session_ttl'], 'httponly' => true, 'samesite' => 'Lax', 'secure' => true]);
-session_start();
-header('Cache-Control: no-store');
-
-function h($s): string { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
-function csrf(): string { if (empty($_SESSION['csrf'])) $_SESSION['csrf'] = bin2hex(random_bytes(16)); return $_SESSION['csrf']; }
-function is_auth(): bool { return !empty($_SESSION['auth']) && ($_SESSION['auth_time'] ?? 0) > time() - 3600 * 6; }
-
-if (!is_auth()) { header('Location: ./'); exit; }   // log in on the image panel first
+require __DIR__ . '/common.php';
+require panel_api('quote-lib.php');
 
 $err = []; $msg = null;
 $edit = null;
@@ -84,7 +72,7 @@ function read_form(): array {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (!hash_equals($_SESSION['csrf'] ?? '', (string)($_POST['csrf'] ?? ''))) { http_response_code(419); exit('Bad CSRF token — refresh and retry.'); }
+  check_csrf();
   $act = (string)($_POST['do'] ?? '');
   $payments = ut_quote_payments();
 
@@ -145,6 +133,7 @@ function wa_text(array $q): string {
   header.top{background:var(--navy);color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:20}
   header.top b{font-size:17px} header.top .gold{color:var(--gold)}
   header.top nav a{color:#fff;text-decoration:none;font-size:13px;border:1px solid rgba(255,255,255,.3);padding:6px 12px;border-radius:8px;margin-left:6px}
+  header.top nav a.on{background:var(--gold);border-color:var(--gold);color:var(--navy)}
   .wrap{max-width:1100px;margin:0 auto;padding:20px}
   .flash{padding:12px 16px;border-radius:10px;margin:14px 0;font-size:14px}
   .flash.ok{background:#eef4ff;border:1px solid #b9cdf2;color:var(--navy)}
@@ -184,7 +173,7 @@ function wa_text(array $q): string {
 <body>
 <header class="top">
   <b>UjjainTemple <span class="gold">Quotes</span></b>
-  <nav><a href="./">Images</a><a href="./?do=logout">Logout</a></nav>
+  <nav><?= panel_nav('quotes.php') ?></nav>
 </header>
 <div class="wrap">
   <?php if ($msg): ?><div class="flash ok"><?= $msg ?></div><?php endif; ?>

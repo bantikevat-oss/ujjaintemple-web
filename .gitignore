@@ -31,3 +31,5 @@ news-router.local.php
 ut-otp/
 # Custom quotes (panel/quotes.php) — local runs write here; live it sits above public_html
 ut-quotes/
+# Date-wise fare overrides (panel/rates.php) — local runs write here; live it sits above public_html
+ut-rate-overrides.json

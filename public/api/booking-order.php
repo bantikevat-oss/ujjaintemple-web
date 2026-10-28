@@ -8,12 +8,12 @@
  * Razorpay down) — a booking is never lost because the gateway is unavailable.
  */
 require __DIR__ . '/booking-lib.php';
+require __DIR__ . '/rate-lib.php';
 
 header('Access-Control-Allow-Origin: https://ujjaintemple.com');
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') ut_json(405, ['success' => false, 'error' => 'POST only']);
 if (trim((string)($_POST['website'] ?? '')) !== '') ut_json(200, ['success' => false, 'error' => 'blocked', 'fallback' => true]); // honeypot
 
-$rates   = require __DIR__ . '/cab-rates.php';
 $route   = ut_clean($_POST['route'] ?? '', 40);
 $vehicle = ut_clean($_POST['vehicle'] ?? '', 20);
 $name    = ut_clean($_POST['name'] ?? '', 60);
@@ -27,8 +27,8 @@ $source  = ut_clean($_POST['source'] ?? '', 120);
 $ip      = $_SERVER['REMOTE_ADDR'] ?? '';
 
 // Validation — the same rules the widget applies, enforced again here.
-$fare = $rates[$route][$vehicle] ?? null;
-if ($fare === null)                                                ut_json(400, ['success' => false, 'error' => 'route']);
+$base = ut_rates_base();
+if (!array_key_exists($vehicle, $base[$route] ?? []))              ut_json(400, ['success' => false, 'error' => 'route']);
 if (mb_strlen($name) < 2)                                          ut_json(400, ['success' => false, 'error' => 'name']);
 $digits = ltrim($phone, '+');
 if (!preg_match('/^\+?[0-9]{10,15}$/', $phone) || strlen($digits) < 10) ut_json(400, ['success' => false, 'error' => 'phone']);
@@ -36,6 +36,14 @@ if (!preg_match('/^\+?[0-9]{10,15}$/', $phone) || strlen($digits) < 10) ut_json(
 if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $date) || $date <= date('Y-m-d')) ut_json(400, ['success' => false, 'error' => 'date']);
 if (!preg_match('/^([01]\d|2[0-3]):[0-5]\d$/', $time))           ut_json(400, ['success' => false, 'error' => 'time']);
 if (strlen($digits) === 10) $phone = '+91' . $digits;              // bare Indian mobile
+
+// Fare for the travel date — a panel override (festival day etc.) beats the normal card.
+$fare = ut_fare_for($route, $vehicle, $date);
+if ($fare === null) ut_json(400, ['success' => false, 'error' => 'route']);
+// The widget sends the fare it showed. If an override changed since the page loaded, stop and
+// show the new fare rather than record one the customer never saw.
+$shown = (int)($_POST['fare'] ?? 0);
+if ($shown > 0 && $shown !== (int)$fare) ut_json(409, ['success' => false, 'error' => 'fare_changed', 'fare' => (int)$fare, 'fallback' => false]);
 
 // Abuse guard: order creation is cheap to spam, so cap per IP.
 if ($ip !== '' && ut_over_cap('order:' . $ip . ':' . date('Y-m-d-H'), 15)) {

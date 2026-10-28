@@ -160,7 +160,26 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
 
   const routeId = routeFor(from, to, type);
   const route = routeId ? CAB_ROUTES[routeId] : null;
-  const fare = route ? route.fares[vehicle] : null;
+
+  /* Date-wise fares set in /panel/rates.php (festival days etc.). The static rate card is the
+     default; the server answers which fares differ on the chosen date. Until it answers, fares
+     wait — never show one price and charge another. A failed call falls back to the card, and
+     booking-order.php re-checks the fare anyway (409 fare_changed). */
+  const [ov, setOv] = useState<{ date: string; fares: Record<string, Record<string, number>> } | null>(null);
+  useEffect(() => {
+    if (!date) return undefined;
+    let live = true;
+    fetch(`/api/fares.php?date=${date}`)
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((j: { overrides?: Record<string, Record<string, number>> }) => { if (live) setOv({ date, fares: j.overrides ?? {} }); })
+      .catch(() => { if (live) setOv({ date, fares: {} }); });
+    return () => { live = false; };
+  }, [date]);
+  const ovReady = ov?.date === date;
+  const dayFares = (routeId && ovReady && ov?.fares[routeId]) || {};
+  const fareOf = (v: VehicleId): number | null => dayFares[v] ?? (route ? route.fares[v] : null);
+  const fare = fareOf(vehicle);
+  const dateFare = Object.keys(dayFares).length > 0;
 
   const pickTab = (t: Tab) => {
     setTab(t);
@@ -280,9 +299,9 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setPaying(true);
 
     const fd = new FormData();
-    Object.entries({ route: routeId, vehicle, name: name.trim(), phone: phone.trim(), date, time, trip: `${tripLine} · ${VEHICLES[vehicle].name}`, pickupNote, locale, source })
+    Object.entries({ route: routeId, vehicle, fare: String(fare), name: name.trim(), phone: phone.trim(), date, time, trip: `${tripLine} · ${VEHICLES[vehicle].name}`, pickupNote, locale, source })
       .forEach(([k, v]) => fd.append(k, v));
-    let order: { success?: boolean; fallback?: boolean; booking_id?: string; order_id?: string; key_id?: string; amount?: number } = {};
+    let order: { success?: boolean; fallback?: boolean; error?: string; fare?: number; booking_id?: string; order_id?: string; key_id?: string; amount?: number } = {};
     try {
       const res = await fetch('/api/booking-order.php', { method: 'POST', body: fd });
       order = await res.json();
@@ -291,6 +310,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     // Gateway not available → never lose the booking: hand it to WhatsApp with the trip filled in.
     if (!order.success || !order.order_id) {
       setPaying(false);
+      if (order.error === 'fare_changed' && order.fare && routeId) {
+        const newFare = order.fare;
+        setOv((o) => ({ date, fares: { ...(o?.date === date ? o.fares : {}), [routeId]: { ...(o?.date === date ? o.fares[routeId] : {}), [vehicle]: newFare } } }));
+        setError(hi ? `इस तारीख़ का किराया अब ${inr(newFare)} है — देखकर दोबारा बुक करें` : `The fare for this date is now ${inr(newFare)} — please review and book again`);
+        return;
+      }
       if (order.fallback !== false) { requestWithoutPayment(); return; }
       setError(hi ? 'जानकारी जाँचें और दोबारा कोशिश करें' : 'Check the details and try again');
       return;
@@ -531,11 +556,17 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           <div className="space-y-4">
             {tripBar}
 
+            {!ovReady && (
+              <p className="flex items-center justify-center gap-2 py-6 text-sm text-ink-mute"><Loader2 className="h-4 w-4 animate-spin" aria-hidden />{hi ? 'इस तारीख़ का किराया देखा जा रहा है…' : 'Checking fares for this date…'}</p>
+            )}
+            {ovReady && dateFare && (
+              <p className="rounded-lg bg-cream-light px-3 py-2 text-center text-xs font-semibold text-maroon">{hi ? 'इस तारीख़ के लिए विशेष किराया लागू है' : 'A special fare applies on this date'}</p>
+            )}
             {/* Cars */}
-            {route && (
+            {route && ovReady && (
               <div role="radiogroup" aria-label={hi ? 'गाड़ी चुनें' : 'Choose your car'} className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:gap-3">
                 {VEHICLE_ORDER.map((v) => {
-                  const f = route.fares[v];
+                  const f = fareOf(v);
                   const on = v === vehicle;
                   return (
                     <button key={v} type="button" role="radio" aria-checked={on} onClick={() => setVehicle(v)}
@@ -564,7 +595,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               </p>
             )}
 
-            {fare !== null ? (
+            {!ovReady ? null : fare !== null ? (
               <>
                 <div className="mx-auto max-w-xl">
                   <label className={cap} htmlFor={`${source}-note`}>{hi ? 'पिकअप की जगह (वैकल्पिक)' : 'PICKUP POINT (OPTIONAL)'}</label>
