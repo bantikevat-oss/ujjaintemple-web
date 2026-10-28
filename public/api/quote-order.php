@@ -14,6 +14,8 @@ $q = ut_quote_by_token((string)($_POST['k'] ?? ''));
 if (!$q) ut_json(404, ['success' => false, 'error' => 'quote']);
 $state = ut_quote_state($q);
 if ($state !== 'open') ut_json(409, ['success' => false, 'error' => $state]);
+// A quotation without an advance has nothing to pay online (Razorpay also rejects a ₹0 order).
+if ((int)$q['advance'] <= 0) ut_json(409, ['success' => false, 'error' => 'no_advance']);
 
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
 if ($ip !== '' && ut_over_cap('qorder:' . $ip . ':' . date('Y-m-d-H'), 15)) ut_json(429, ['success' => false, 'error' => 'busy']);

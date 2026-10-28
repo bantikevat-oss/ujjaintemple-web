@@ -32,7 +32,7 @@ function read_form(): array {
     if ($d === '' && $ti === '' && $de === '') continue;
     if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $d)) { $e[] = 'Din ' . (count($days) + 1) . ': tareekh chuno.'; continue; }
     if ($ti === '') { $e[] = 'Din ' . (count($days) + 1) . ': us din ka kaam likho (jaise "Omkareshwar darshan").'; continue; }
-    $days[] = ['date' => $d, 'title' => mb_substr($ti, 0, 120), 'details' => mb_substr($de, 0, 600)];
+    $days[] = ['date' => $d, 'title' => mb_substr($ti, 0, 120), 'details' => mb_substr($de, 0, 1200)];
   }
   if (!$days) $e[] = 'Kam se kam ek din ki yojana daalo.';
   for ($i = 1; $i < count($days); $i++) if ($days[$i]['date'] < $days[$i - 1]['date']) $e[] = 'Din ' . ($i + 1) . ' ki tareekh pichhle din se pehle hai.';
@@ -48,7 +48,9 @@ function read_form(): array {
 
   $total = (int)($_POST['total'] ?? 0); $adv = (int)($_POST['advance'] ?? 0);
   if ($total < 500) $e[] = 'Kul kiraya likho (kam se kam ₹500).';
-  if ($adv < 100 || $adv > $total) $e[] = 'Advance ₹100 se kul kiraye ke beech ho.';
+  // Advance is optional (Aman 2026-10-28: a quotation is sent before any money is asked for).
+  // 0 / blank = no advance on the link; the team confirms by call and can add one later by editing.
+  if ($adv < 0 || ($adv > 0 && ($adv < 100 || $adv > $total))) $e[] = 'Advance khaali chhodo, ya ₹100 se kul kiraye ke beech likho.';
   $valid = (string)($_POST['valid_until'] ?? '');
   if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $valid) || $valid < date('Y-m-d')) $e[] = 'Quote kab tak maanya hai — aaj ya aage ki tareekh chuno.';
   $title = trim(strip_tags((string)($_POST['title'] ?? '')));
@@ -59,7 +61,15 @@ function read_form(): array {
     'locale'      => ($_POST['locale'] ?? 'hi') === 'en' ? 'en' : 'hi',
     'title'       => mb_substr($title, 0, 120),
     'vehicle'     => mb_substr(trim(strip_tags((string)($_POST['vehicle'] ?? ''))), 0, 60),
-    'pax'         => max(0, min(60, (int)($_POST['pax'] ?? 0))),
+    // Guests split into adults + children with ages, plus room and meal plan (Aman's package
+    // format, 2026-10-28). pax stays as the total so older code and quotes keep working.
+    'adults'      => $ad = max(0, min(60, (int)($_POST['adults'] ?? 0))),
+    'children'    => $ch = max(0, min(30, (int)($_POST['children'] ?? 0))),
+    'child_ages'  => $ch ? mb_substr(trim(strip_tags((string)($_POST['child_ages'] ?? ''))), 0, 60) : '',
+    'pax'         => $ad + $ch,
+    'tagline'     => mb_substr(trim(strip_tags((string)($_POST['tagline'] ?? ''))), 0, 80),
+    'room'        => mb_substr(trim(strip_tags((string)($_POST['room'] ?? ''))), 0, 100),
+    'meal_plan'   => isset(UT_QUOTE_MEALS[(string)($_POST['meal_plan'] ?? '')]) ? (string)$_POST['meal_plan'] : '',
     'days'        => $days,
     'items'       => $items,
     'extra_in'    => $lines($_POST['extra_in'] ?? ''),
@@ -115,8 +125,8 @@ function wa_text(array $q): string {
   $hi = ($q['locale'] ?? 'hi') !== 'en';
   $first = $q['customer']['name'];
   return $hi
-    ? "नमस्ते {$first} जी, आपकी यात्रा \"{$q['title']}\" का कोटेशन यहाँ है:\n" . ut_quote_url($q) . "\n\nकुल किराया " . ut_quote_inr($q['total']) . " · बुकिंग के लिए " . ut_quote_inr($q['advance']) . " एडवांस।\n— UjjainTemple.com"
-    : "Hello {$first}, here is the quote for your trip \"{$q['title']}\":\n" . ut_quote_url($q) . "\n\nTotal " . ut_quote_inr($q['total']) . " · advance " . ut_quote_inr($q['advance']) . " to confirm.\n— UjjainTemple.com";
+    ? "नमस्ते {$first} जी, आपकी यात्रा \"{$q['title']}\" का कोटेशन यहाँ है:\n" . ut_quote_url($q) . "\n\nकुल किराया " . ut_quote_inr($q['total']) . ($q['advance'] > 0 ? " · बुकिंग के लिए " . ut_quote_inr($q['advance']) . " एडवांस।" : "। बुकिंग के लिए हमें कॉल या WhatsApp करें।") . "\n— UjjainTemple.com"
+    : "Hello {$first}, here is the quote for your trip \"{$q['title']}\":\n" . ut_quote_url($q) . "\n\nTotal " . ut_quote_inr($q['total']) . ($q['advance'] > 0 ? " · advance " . ut_quote_inr($q['advance']) . " to confirm." : ". Call or WhatsApp us to book.") . "\n— UjjainTemple.com";
 }
 ?>
 <!doctype html>
@@ -189,7 +199,9 @@ function wa_text(array $q): string {
     <fieldset><legend>Customer</legend><div class="g">
       <div><label>Naam *</label><input name="name" required maxlength="60" value="<?= h($e['customer']['name'] ?? '') ?>"></div>
       <div><label>Mobile *</label><input name="phone" required inputmode="tel" maxlength="18" value="<?= h($e['customer']['phone'] ?? '') ?>" placeholder="10 ank ya +desh code"></div>
-      <div><label>Yatri (log)</label><input name="pax" type="number" min="0" max="60" value="<?= h($e['pax'] ?? '') ?>"></div>
+      <div><label>Bade (adults)</label><input name="adults" type="number" min="0" max="60" value="<?= h($e['adults'] ?? (empty($e['children']) ? ($e['pax'] ?? '') : '')) ?>"></div>
+      <div><label>Bachche</label><input name="children" type="number" min="0" max="30" value="<?= h($e['children'] ?? '') ?>"></div>
+      <div><label>Bachchon ki umar</label><input name="child_ages" maxlength="60" value="<?= h($e['child_ages'] ?? '') ?>" placeholder="jaise: 11, 5"></div>
       <div><label>Customer ka page kis bhasha me</label><select name="locale">
         <option value="hi" <?= ($e['locale'] ?? 'hi') === 'hi' ? 'selected' : '' ?>>हिंदी</option>
         <option value="en" <?= ($e['locale'] ?? '') === 'en' ? 'selected' : '' ?>>English</option></select>
@@ -199,7 +211,14 @@ function wa_text(array $q): string {
     <fieldset><legend>Yatra</legend><div class="g">
       <div style="grid-column:span 2"><label>Yatra ka naam *</label><input name="title" required maxlength="120" value="<?= h($e['title'] ?? '') ?>" placeholder="इंदौर – ओंकारेश्वर – उज्जैन यात्रा"></div>
       <div><label>Gaadi</label><input name="vehicle" list="cars" maxlength="60" value="<?= h($e['vehicle'] ?? '') ?>" placeholder="Swift Dzire"></div>
+      <div><label>Package ka prakaar (optional)</label><input name="tagline" maxlength="80" value="<?= h($e['tagline'] ?? '') ?>" placeholder="Family Darshan Package"></div>
+      <div><label>Kamra (hotel ho to)</label><input name="room" list="rooms" maxlength="100" value="<?= h($e['room'] ?? '') ?>" placeholder="Double Bed AC Room + 1 extra mattress"></div>
+      <div><label>Meal plan (hotel ho to)</label><select name="meal_plan">
+        <option value="">— nahi / lagu nahi —</option>
+        <?php foreach (UT_QUOTE_MEALS as $mk => $ml): ?><option value="<?= h($mk) ?>" <?= ($e['meal_plan'] ?? '') === $mk ? 'selected' : '' ?>><?= h($ml['en']) ?></option><?php endforeach; ?>
+      </select></div>
     </div>
+    <datalist id="rooms"><option value="Double Bed AC Room"><option value="Double Bed AC Room + 1 extra mattress"><option value="Triple Bed AC Room"><option value="Family Room (4 bed)"></datalist>
     <datalist id="cars"><option value="Swift Dzire"><option value="Ertiga"><option value="Innova Crysta"><option value="Tempo Traveller"></datalist>
     <div id="days">
       <?php foreach ($days as $i => $d): ?>
@@ -207,7 +226,7 @@ function wa_text(array $q): string {
         <div><span class="n">Din <?= $i + 1 ?></span><input type="date" name="day_date[]" value="<?= h($d['date']) ?>"></div>
         <input name="day_title[]" maxlength="120" value="<?= h($d['title']) ?>" placeholder="Us din kya hoga — jaise: इंदौर पिकअप, रात इंदौर में">
         <button type="button" class="b x rm" title="Ye din hatao">✕</button>
-        <textarea name="day_details[]" maxlength="600" placeholder="Detail (optional): samay, pickup jagah, darshan, puja kab tak, train ka samay…"><?= h($d['details']) ?></textarea>
+        <textarea name="day_details[]" maxlength="1200" placeholder="Har baat nayi line me. Heading ke aakhir me : lagao, uske neeche ki lines list banengi —&#10;Ujjain station se pickup&#10;Hotel check-in&#10;Ujjain local darshan:&#10;Mahakaleshwar Jyotirlinga&#10;Harsiddhi Mata Mandir"><?= h($d['details']) ?></textarea>
       </div>
       <?php endforeach; ?>
     </div>
@@ -234,7 +253,7 @@ function wa_text(array $q): string {
 
     <fieldset><legend>Daam</legend><div class="g">
       <div><label>Kul tay kiraya (₹) *</label><input name="total" id="total" type="number" min="500" required value="<?= h($e['total'] ?? '') ?>"></div>
-      <div><label>Advance (₹) *</label><input name="advance" id="advance" type="number" min="100" required value="<?= h($e['advance'] ?? '') ?>"><div class="hint" id="advHint">Sujhav: 20–25%</div></div>
+      <div><label>Advance (₹) — optional</label><input name="advance" id="advance" type="number" min="0" placeholder="Abhi nahi to khaali chhodo" value="<?= h(!empty($e['advance']) ? $e['advance'] : '') ?>"><div class="hint" id="advHint">Khaali = abhi advance nahi · link pe payment button nahi aayega</div></div>
       <div><label>Quote kab tak maanya *</label><input name="valid_until" type="date" required value="<?= h($e['valid_until'] ?? $defaultValid) ?>"></div>
     </div>
     <div style="margin-top:12px"><label>Note customer ke liye (optional)</label><textarea name="notes" maxlength="1000" placeholder="जैसे: 24 तारीख़ की पूजा दोपहर 2 बजे तक पूरी होगी, ताकि 7:30 की ट्रेन आराम से मिले।"><?= h($e['notes'] ?? '') ?></textarea></div>
@@ -256,13 +275,14 @@ function wa_text(array $q): string {
         <td><b><?= h($q['id']) ?></b><div class="sub"><?= h(substr($q['created_at'], 0, 16)) ?></div></td>
         <td><?= h($q['customer']['name']) ?><div class="sub"><?= h($q['customer']['phone']) ?></div></td>
         <td><?= h($q['title']) ?><div class="sub"><?= h($d[0]['date'] . ($d[count($d) - 1]['date'] !== $d[0]['date'] ? ' → ' . $d[count($d) - 1]['date'] : '')) ?> · <?= count($d) ?> din-entry</div></td>
-        <td><?= ut_quote_inr($q['total']) ?><div class="sub">adv <?= ut_quote_inr($q['advance']) ?></div></td>
+        <td><?= ut_quote_inr($q['total']) ?><div class="sub"><?= $q['advance'] > 0 ? 'adv ' . ut_quote_inr($q['advance']) : 'advance nahi' ?></div></td>
         <td><span class="st <?= $st ?>"><?= $st === 'paid' ? 'Paid' : ($st === 'open' ? 'Bheja / khula' : ($st === 'expired' ? 'Expired' : 'Cancelled')) ?></span></td>
         <td><div class="acts">
           <a class="b" href="<?= h('/q/?k=' . $q['token']) ?>" target="_blank" rel="noopener">Dekho</a>
           <?php if ($st === 'open'): ?>
             <button class="b cp" type="button" data-url="<?= h(ut_quote_url($q)) ?>">Link copy</button>
             <a class="b wa" target="_blank" rel="noopener" href="https://wa.me/<?= h(ltrim($q['customer']['phone'], '+')) ?>?text=<?= rawurlencode(wa_text($q)) ?>">WhatsApp</a>
+            <button class="b cpt" type="button" data-text="<?= h(ut_quote_package_text($q)) ?>" title="Poora package (din-wise, daam, kya shaamil) WhatsApp format me copy">Package text copy</button>
           <?php endif; ?>
           <?php if ($st !== 'paid'): ?><a class="b" href="?edit=<?= h($q['id']) ?>">Badlo</a><?php endif; ?>
           <a class="b" href="?copy=<?= h($q['id']) ?>" title="Isi jaisa naya quote">Copy banao</a>
@@ -297,9 +317,18 @@ function wa_text(array $q): string {
       if (days.querySelectorAll('.day').length > 1) { ev.target.closest('.day').remove(); renumber(); }
     });
     var total = document.getElementById('total'), adv = document.getElementById('advance'), hint = document.getElementById('advHint');
-    var upd = function () { var t = +total.value || 0; hint.textContent = t ? 'Sujhav: 20–25% = ₹' + Math.round(t * 0.2) + '–' + Math.round(t * 0.25) : 'Sujhav: 20–25%'; };
-    total.addEventListener('input', upd); upd();
+    var upd = function () {
+      var t = +total.value || 0;
+      hint.textContent = !(+adv.value) ? 'Khaali = abhi advance nahi · link pe payment button nahi aayega'
+        : (t ? 'Sujhav: 20–25% = ₹' + Math.round(t * 0.2) + '–' + Math.round(t * 0.25) : 'Sujhav: 20–25%');
+    };
+    total.addEventListener('input', upd); adv.addEventListener('input', upd); upd();
   }
+  document.querySelectorAll('.cpt').forEach(function (b) {
+    b.addEventListener('click', function () {
+      navigator.clipboard.writeText(b.dataset.text).then(function () { b.textContent = 'Copied ✓ — WhatsApp me paste karo'; setTimeout(function () { b.textContent = 'Package text copy'; }, 2500); });
+    });
+  });
   document.querySelectorAll('.cp').forEach(function (b) {
     b.addEventListener('click', function () {
       navigator.clipboard.writeText(b.dataset.url).then(function () { b.textContent = 'Copied ✓'; setTimeout(function () { b.textContent = 'Link copy'; }, 1500); });
