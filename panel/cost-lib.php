@@ -77,8 +77,8 @@ const UT_COST_SECTIONS = [
   ],
   'puja' => [
     'title'  => 'Puja — apne pandit ji (dakshina + samagri)',
-    'hint'   => 'Sirf apne pandit ji ki puja. Mahakal mandir ki puja / VIP darshan / purohit kabhi nahi — site rule.',
-    'cols'   => ['cost' => 'Lagat'],
+    'hint'   => 'Har puja ki 3 category (KSD site jaisi: Basic ~₹5,100 · Standard ~₹11,000 · Premium ~₹21,000+). Jo category nahi karte, khaali chhodo. Sirf apne pandit ji ki puja — Mahakal mandir ki puja / VIP darshan / purohit kabhi nahi.',
+    'cols'   => ['basic' => 'Basic', 'standard' => 'Standard', 'premium' => 'Premium'],
     'rows'   => [
       'kaalsarp' => ['Kaal Sarp Dosh puja', 'puja'],
       'mangal'   => ['Mangal Dosh puja (Bhat puja)', 'puja'],

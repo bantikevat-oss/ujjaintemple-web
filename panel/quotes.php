@@ -256,7 +256,8 @@ function wa_text(array $q): string {
         <label style="display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink)"><input type="checkbox" id="pbBoat" style="width:auto" checked> Omkareshwar nauka vihar</label>
         <label style="display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink)"><input type="checkbox" id="pbWater" style="width:auto"> Paani / welcome kit</label>
         <?php foreach (UT_COST_SECTIONS['puja']['rows'] as $pk => $pdef): ?>
-        <label style="display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink)"><input type="checkbox" class="pbPuja" value="<?= h($pk) ?>" style="width:auto"> <?= h($pdef[0]) ?></label>
+        <div><label><?= h($pdef[0]) ?></label><select class="pbPuja" data-puja="<?= h($pk) ?>"><option value="">Nahi</option>
+          <?php foreach (UT_COST_SECTIONS['puja']['cols'] as $tc => $tl): ?><option value="<?= h($tc) ?>"><?= h($tl) ?></option><?php endforeach; ?></select></div>
         <?php endforeach; ?>
       </div>
       <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="b p" id="pbGo">Package banao</button><button type="button" class="b" id="pbApply" disabled>Quote me bharo ↓</button></div>
@@ -476,8 +477,9 @@ function wa_text(array $q): string {
     } else if (n > 1) warn.push('Hotel nahi chuna — ' + (n - 1) + ' raat ka kamra customer khud lega, quote me "shaamil nahi" likha jaayega.');
     if (omk && $('pbBoat').checked) add('other.boat.cost', 'Nauka vihar', P.pax);
     if ($('pbWater').checked) add('other.water.cost', 'Paani / welcome kit', P.pax);
-    var pujas = [].filter.call(document.querySelectorAll('.pbPuja'), function (x) { return x.checked; }).map(function (x) { return x.value; });
-    pujas.forEach(function (p) { add('puja.' + p + '.cost', 'Puja ' + p, 1); });
+    // Each puja has 3 categories (Basic / Standard / Premium — Aman 2026-10-29); the select holds the category.
+    var pujas = [].filter.call(document.querySelectorAll('.pbPuja'), function (x) { return x.value; }).map(function (x) { return x.dataset.puja + '.' + x.value; });
+    pujas.forEach(function (p) { add('puja.' + p, 'Puja ' + p.replace('.', ' · '), 1); });
 
     // Markup once, on the net lines' total (Aman 2026-10-29); sell-rate lines go in as they are.
     var net = 0, sellIn = 0, mk = $('pbMarkup').value === '' ? +D.set.markup_pct : +$('pbMarkup').value;
@@ -570,7 +572,9 @@ function wa_text(array $q): string {
     $('pbStart').value = st.start || ''; if (st.markup !== undefined && st.markup !== '') $('pbMarkup').value = st.markup; $('pbCar').value = st.car || 'auto'; $('pbHotel').value = st.hotel || '';
     $('pbRooms').value = st.rooms || ''; $('pbExtra').value = st.extra || ''; $('pbMeal').value = st.meal || 'EP';
     $('pbPeak').checked = !!st.peak; $('pbBoat').checked = st.boat !== false; $('pbWater').checked = !!st.water;
-    document.querySelectorAll('.pbPuja').forEach(function (x) { x.checked = (st.pujas || []).indexOf(x.value) >= 0; });
+    document.querySelectorAll('.pbPuja').forEach(function (x) {
+      (st.pujas || []).forEach(function (p) { var a = p.split('.'); if (a[0] === x.dataset.puja && a[1]) x.value = a[1]; });
+    });
     (st.days || [['', '']]).forEach(function (d) { addDay(d[0], d[1]); });
     build();
   } else {
