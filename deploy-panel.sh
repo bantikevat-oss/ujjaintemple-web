@@ -3,5 +3,5 @@
 set -e
 DEST="domains/ujjaintemple.com/public_html/panel/"
 echo "→ Uploading panel to $DEST"
-rsync -az -e "ssh" ./panel/index.php ./panel/quotes.php ./panel/rates.php ./panel/common.php ./panel/config.php ./panel/secret.php ./panel/.htaccess ./panel/usage-map.json pukhta:"$DEST"
+rsync -az -e "ssh" ./panel/index.php ./panel/quotes.php ./panel/rates.php ./panel/lagat.php ./panel/cost-lib.php ./panel/common.php ./panel/config.php ./panel/secret.php ./panel/.htaccess ./panel/usage-map.json pukhta:"$DEST"
 echo "✓ Panel live: https://ujjaintemple.com/panel/"

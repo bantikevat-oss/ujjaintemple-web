@@ -304,7 +304,7 @@ $SITE = rtrim($cfg['site_url'], '/');
 <?php else: ?>
   <header class="top">
     <b>Ujjain<span class="gold">Temple</span> · Image Panel</b>
-    <span><a class="out" href="quotes.php" style="margin-right:6px">Quotes</a><a class="out" href="rates.php" style="margin-right:6px">Rates</a><a class="out" href="?do=logout">Logout</a></span>
+    <span><a class="out" href="quotes.php" style="margin-right:6px">Quotes</a><a class="out" href="lagat.php" style="margin-right:6px">Lagat</a><a class="out" href="rates.php" style="margin-right:6px">Rates</a><a class="out" href="?do=logout">Logout</a></span>
   </header>
   <div class="wrap">
     <?php if ($msg): ?><div class="flash ok"><?= $msg ?></div><?php endif; ?>

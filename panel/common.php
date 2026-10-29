@@ -27,7 +27,7 @@ if (!is_auth()) { header('Location: ./'); exit; }   // log in on index.php first
 
 function panel_nav(string $here): string {
   $out = '';
-  foreach (['./' => 'Images', 'quotes.php' => 'Quotes', 'rates.php' => 'Rates'] as $href => $label) {
+  foreach (['./' => 'Images', 'quotes.php' => 'Quotes', 'lagat.php' => 'Lagat', 'rates.php' => 'Rates'] as $href => $label) {
     $out .= '<a href="' . $href . '"' . ($href === $here ? ' class="on"' : '') . '>' . $label . '</a>';
   }
   return $out . '<a href="./?do=logout">Logout</a>';

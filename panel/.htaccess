@@ -5,6 +5,9 @@
 <Files "config.php">
   Require all denied
 </Files>
+<Files "cost-lib.php">
+  Require all denied
+</Files>
 <Files "secret.php">
   Require all denied
 </Files>
