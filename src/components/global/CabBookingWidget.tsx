@@ -179,6 +179,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [to, setTo] = useState<PlaceId>(start.to);
   const [date, setDate] = useState('');
   const [calOpen, setCalOpen] = useState(false);
+  // Passengers (Aman, 2026-10-30): picks the smallest car that fits; '8' = 8 or more → more than one car.
+  const [pax, setPax] = useState('');
   const [time, setTime] = useState('');
   const [vehicle, setVehicle] = useState<VehicleId>('dzire');
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
@@ -282,12 +284,22 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const dayLabel = days.find((d) => d.iso === date)?.label ?? '';
   const slotLabel = SLOTS.find((s) => s.value === time)?.label ?? '';   // only from an old booking link
   const whenLabel = slotLabel ? `${dayLabel}, ${slotLabel}` : dayLabel;
-  const tripLine = type === 'local'
+  const paxN = Number(pax) || 0;
+  const bigGroup = paxN >= 8;
+  const paxLabel = !paxN ? '' : bigGroup ? (hi ? '8+ लोग' : '8+ people') : hi ? `${paxN} ${paxN === 1 ? 'व्यक्ति' : 'लोग'}` : `${paxN} ${paxN === 1 ? 'person' : 'people'}`;
+  const seatsOk = (v: VehicleId) => !paxN || VEHICLES[v].seats >= paxN;
+  const pickPax = (val: string) => {
+    setPax(val); setError('');
+    const n = Number(val) || 0;
+    if (n && n < 8) setVehicle(VEHICLE_ORDER.find((v) => VEHICLES[v].seats >= n) ?? 'innova');   // smallest car that fits
+  };
+  const tripLine = (type === 'local'
     ? `${PLACES[from][locale]} · ${TRIP_TYPES.local[locale]} · ${PLACES[to][locale]}`
-    : `${PLACES[from][locale]} → ${PLACES[to][locale]} · ${TRIP_TYPES[type][locale]}`;
+    : `${PLACES[from][locale]} → ${PLACES[to][locale]} · ${TRIP_TYPES[type][locale]}`) + (paxLabel ? ` · ${paxLabel}` : '');
 
   const seeFares = () => {
     if (!date) { setError(hi ? 'यात्रा की तारीख़ चुनें' : 'Choose the travel date'); setCalOpen(true); return; }
+    if (!pax) { setError(hi ? 'कितने लोग यात्रा करेंगे, चुनें' : 'Choose the number of passengers'); return; }
     setError('');
     setStep(known ? 3 : 2);
   };
@@ -311,7 +323,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       bkFares: VEHICLE_ORDER.map((v) => { const f = fareOf(v); return f !== null ? `${VEHICLES[v].name} ${inr(f)}` : ''; }).filter(Boolean).join(' · '),
     }).forEach(([k, v]) => fd.append(k, v));
     fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* fares still open */ });
-    window.gtag?.('event', 'generate_lead', { form_id: 'cab_fare_gate', route: routeId, verified: verified.startsWith('OTP verified') });
+    window.gtag?.('event', 'generate_lead', { form_id: 'cab_fare_gate', route: routeId, pax, verified: verified.startsWith('OTP verified') });
     saveContact({ name: name.trim(), phone: phone.trim(), at: Date.now() });
     setKnown(true); setOtpSent(false); setOtp(''); setError('');
     setStep(3);
@@ -413,6 +425,9 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const talkFirstUrl = `${SITE.whatsapp}?text=${encodeURIComponent(hi
     ? `नमस्ते! मैं ${name.trim()} हूँ। ये कैब बुक करने से पहले बात करनी है: ${tripNote}`
     : `Hello! I am ${name.trim()}. I would like to talk before booking this cab: ${tripNote}`)}`;
+  const bigGroupUrl = `${SITE.whatsapp}?text=${encodeURIComponent(hi
+    ? `नमस्ते! मैं ${name.trim()} हूँ। हम 8 या ज़्यादा लोग हैं, गाड़ियाँ तय करनी हैं: ${tripLine} · ${whenLabel}`
+    : `Hello! I am ${name.trim()}. We are 8 or more people and need cars for: ${tripLine} · ${whenLabel}`)}`;
 
   const pay = async () => {
     if (paying || !routeId || fare === null) return;
@@ -567,8 +582,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               })}
             </div>
 
-            {/* From ⇄ To · Date — one row on desktop */}
-            <div className="grid grid-cols-2 items-end gap-3 lg:grid-cols-[1fr_auto_1fr_1fr]">
+            {/* From ⇄ To · Date · Passengers — one row on desktop */}
+            <div className="grid grid-cols-2 items-end gap-3 lg:grid-cols-[1fr_auto_1fr_1fr_1fr]">
               <div className="col-span-2 lg:col-span-1">
                 <label className={cap} htmlFor={`${source}-from`}>{hi ? 'कहाँ से' : 'FROM'}</label>
                 <div className={box}>
@@ -603,15 +618,26 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                   </div>
                 </div>
               )}
-              <div className="col-span-2 lg:col-span-1">
+              <div>
                 <label className={cap} htmlFor={`${source}-date`}>{hi ? 'पिकअप तारीख़' : 'PICKUP DATE'}</label>
                 <div className={box}>
                   <Calendar className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
                   <button id={`${source}-date`} type="button" aria-expanded={calOpen} onClick={() => setCalOpen(!calOpen)}
-                    className={`${sel} flex items-center justify-between text-left ${date ? '' : 'text-ink-mute'}`}>
-                    {dayLabel || (hi ? 'तारीख़ चुनें' : 'Select date')}
-                    <ChevronDown className={`h-4 w-4 shrink-0 text-ink-mute transition-transform ${calOpen ? 'rotate-180' : ''}`} aria-hidden />
+                    className={`${sel} flex min-w-0 items-center justify-between text-left ${date ? '' : 'text-ink-mute'}`}>
+                    <span className="truncate whitespace-nowrap">{dayLabel || (hi ? 'तारीख़ चुनें' : 'Select date')}</span>
+                    <ChevronDown className={`hidden h-4 w-4 shrink-0 text-ink-mute transition-transform sm:block ${calOpen ? 'rotate-180' : ''}`} aria-hidden />
                   </button>
+                </div>
+              </div>
+              <div>
+                <label className={cap} htmlFor={`${source}-pax`}>{hi ? 'कितने लोग' : 'PASSENGERS'}</label>
+                <div className={box}>
+                  <Users className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
+                  <select id={`${source}-pax`} className={`${sel} ${pax ? '' : 'text-ink-mute'}`} value={pax} onChange={(e) => pickPax(e.target.value)}>
+                    <option value="">{hi ? 'चुनें' : 'Select'}</option>
+                    {[1, 2, 3, 4, 5, 6, 7].map((n) => <option key={n} value={String(n)}>{hi ? `${n} ${n === 1 ? 'व्यक्ति' : 'लोग'}` : `${n} ${n === 1 ? 'person' : 'people'}`}</option>)}
+                    <option value="8">{hi ? '8 या ज़्यादा' : '8 or more'}</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -712,8 +738,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                   const f = fareOf(v);
                   const on = v === vehicle;
                   return (
-                    <button key={v} type="button" role="radio" aria-checked={on} onClick={() => setVehicle(v)}
-                      className={`relative flex items-center justify-between gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-all sm:flex-col sm:items-start ${on ? 'border-maroon bg-maroon/[0.04] shadow-md' : 'border-cream-dark hover:border-maroon/40'}`}>
+                    <button key={v} type="button" role="radio" aria-checked={on} onClick={() => setVehicle(v)} disabled={!seatsOk(v)}
+                      className={`relative flex items-center justify-between gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-all disabled:cursor-not-allowed disabled:opacity-40 sm:flex-col sm:items-start ${on && seatsOk(v) ? 'border-maroon bg-maroon/[0.04] shadow-md' : 'border-cream-dark hover:border-maroon/40'}`}>
                       {on && <Check className="absolute right-2.5 top-2.5 hidden h-5 w-5 rounded-full bg-maroon p-0.5 text-white sm:block" aria-hidden />}
                       <span className="flex items-center gap-2.5">
                         <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${on ? 'bg-maroon text-white' : 'bg-cream-light text-maroon'}`}><Car className="h-4.5 w-4.5" aria-hidden /></span>
@@ -738,7 +764,18 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               </p>
             )}
 
-            {!ovReady ? null : fare !== null ? (
+            {!ovReady ? null : bigGroup ? (
+              <div data-big-group className="mx-auto max-w-xl space-y-3 text-center">
+                <p className="rounded-lg bg-cream-light px-3 py-2 text-sm font-semibold text-maroon">
+                  {hi ? '8 या ज़्यादा लोगों के लिए एक से ज़्यादा गाड़ी लगेगी — WhatsApp पर बताएं, हम गाड़ियाँ और किराया तय करके भेजेंगे।' : 'A group of 8 or more needs more than one car — message us on WhatsApp and we will send the cars and the fare.'}
+                </p>
+                <a href={bigGroupUrl} target="_blank" rel="noopener"
+                  onClick={() => window.gtag?.('event', 'cab_talk_first', { route: routeId, pax, source })}
+                  className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95">
+                  <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर गाड़ियाँ तय करें' : 'Plan the cars on WhatsApp'}
+                </a>
+              </div>
+            ) : fare !== null ? (
               <>
                 <div className="mx-auto max-w-xl">
                   <label className={cap} htmlFor={`${source}-note`}>{hi ? 'पिकअप की जगह (वैकल्पिक)' : 'PICKUP POINT (OPTIONAL)'}</label>

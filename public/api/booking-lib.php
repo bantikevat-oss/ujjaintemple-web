@@ -39,7 +39,8 @@ function ut_rzp() {
   return $r;
 }
 
-function ut_clean($s, $max = 200) { return trim(strip_tags(substr((string)$s, 0, $max))); }
+// Characters, not bytes: a Hindi trip line (3 bytes a letter) must never be cut mid-letter (2026-10-30).
+function ut_clean($s, $max = 200) { return trim(strip_tags(mb_substr((string)$s, 0, $max, 'UTF-8'))); }
 
 /** Append one event row; the file is append-only (a booking's later events are new rows). */
 function ut_book_append(array $row) {
