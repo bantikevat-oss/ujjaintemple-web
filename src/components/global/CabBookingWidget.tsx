@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, CalendarCheck, Car, Check, CheckCircle2, Clock, Download, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, CalendarCheck, Car, Check, CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, Clock, Download, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { CONTACT_EVT, readContact, saveContact } from '../../lib/cabContact';
@@ -11,7 +11,8 @@ import {
 
 /*
  * Ola / oneway.cab-style cab booking (Aman, 2026-10-27), in three short steps so none needs
- * scrolling: (1) trip type tiles → pickup → drop → date → time → "See fares";
+ * scrolling: (1) trip type tiles → pickup → drop → date → "See fares" (no time box since 2026-10-30 —
+ * Aman: the driver fixes the pickup time with the traveller on the phone);
  * (2) name + mobile, verified by SMS OTP (Aman, 2026-10-28: fares only after the number —
  * every fare look becomes a lead); (3) one fixed fare per car → pickup point → pay ₹500.
  * Fares come only from data/rates.ts; only priced combinations appear. A verified contact is
@@ -112,6 +113,60 @@ const pickupsFor = (tab: Tab) => PICKUPS.filter((p) => dropsFor(p).some((d) => f
 const dropsForTab = (from: PlaceId, tab: Tab) => dropsFor(from).filter((d) => fits(tab, from, d));
 const tabOf = (p: Preset): Tab => (routeFor(p.from, p.to, p.type) === 'indore-airport' ? 'airport' : p.type);
 
+/**
+ * Date picker (Aman, 2026-10-30: "3 days drop down ho and then calendar aa jaye"). The 60-option
+ * dropdown made far trips a long scroll. Opens under the field row (the card clips popovers):
+ * the next 3 days as one-tap chips, then a month calendar. Only dates in `days` can be picked.
+ */
+function DatePanel({ days, value, hi, onPick }: {
+  days: { iso: string; label: string }[]; value: string; hi: boolean; onPick: (iso: string) => void;
+}) {
+  const ok = useMemo(() => new Set(days.map((d) => d.iso)), [days]);
+  const first = days[0]?.iso ?? '', last = days[days.length - 1]?.iso ?? '';
+  // Opens on the chosen date's month, else on the first date after the chips (31 Oct → November).
+  const [month, setMonth] = useState((value || days[3]?.iso || first).slice(0, 7));   // YYYY-MM
+  const loc = hi ? 'hi-IN' : 'en-IN';
+  const [y, m] = month.split('-').map(Number);
+  const lead = new Date(y, m - 1, 1).getDay();                       // Sunday-first grid
+  const count = new Date(y, m, 0).getDate();
+  const shift = (n: number) => { const d = new Date(y, m - 1 + n, 1); setMonth(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`); };
+  const week = Array.from({ length: 7 }, (_, i) => new Date(2026, 1, 1 + i).toLocaleDateString(loc, { weekday: 'narrow' }));   // 1 Feb 2026 = Sunday
+  const cells = [...Array(lead).fill(''), ...Array.from({ length: count }, (_, i) => `${month}-${String(i + 1).padStart(2, '0')}`)];
+  const navBtn = 'flex h-8 w-8 items-center justify-center rounded-full text-maroon hover:bg-cream-light disabled:opacity-25 disabled:hover:bg-transparent';
+  return (
+    <div data-date-panel className="rounded-2xl border border-cream-dark bg-white p-3 shadow-lg sm:p-4">
+      <div className="grid grid-cols-3 gap-2">
+        {days.slice(0, 3).map((d) => (
+          <button key={d.iso} type="button" onClick={() => onPick(d.iso)}
+            className={`rounded-xl border px-1 py-1.5 leading-tight ${value === d.iso ? 'border-maroon bg-maroon text-white' : 'border-maroon/30 text-ink hover:bg-cream-light'}`}>
+            <span className="block text-[11px] font-semibold opacity-80">{d.label.split(' · ')[0]}</span>
+            <span className="block text-sm font-bold">{d.label.split(' · ')[1]}</span>
+          </button>
+        ))}
+      </div>
+      <div className="mx-auto mt-3 max-w-xs">
+        <div className="flex items-center justify-between">
+          <button type="button" className={navBtn} onClick={() => shift(-1)} disabled={month <= first.slice(0, 7)} aria-label={hi ? 'पिछला महीना' : 'Previous month'}><ChevronLeft className="h-4 w-4" aria-hidden /></button>
+          <p className="text-sm font-bold text-ink">{new Date(y, m - 1, 1).toLocaleDateString(loc, { month: 'long', year: 'numeric' })}</p>
+          <button type="button" className={navBtn} onClick={() => shift(1)} disabled={month >= last.slice(0, 7)} aria-label={hi ? 'अगला महीना' : 'Next month'}><ChevronRight className="h-4 w-4" aria-hidden /></button>
+        </div>
+        <div className="mt-1 grid grid-cols-7 text-center text-[11px] font-bold text-ink-mute">{week.map((w, i) => <span key={i} className="py-1">{w}</span>)}</div>
+        <div className="grid grid-cols-7 gap-y-1 text-center">
+          {cells.map((iso, i) => iso === '' ? <span key={`e${i}`} /> : (
+            <button key={iso} type="button" disabled={!ok.has(iso)} onClick={() => onPick(iso)}
+              aria-pressed={value === iso}
+              aria-label={new Date(`${iso}T00:00:00`).toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long' })}
+              className={`mx-auto flex h-9 w-9 items-center justify-center rounded-full text-sm font-semibold ${value === iso ? 'bg-maroon text-white' : ok.has(iso) ? 'text-ink hover:bg-cream-light' : 'text-ink-mute/40'}`}>
+              {Number(iso.slice(8))}
+            </button>
+          ))}
+        </div>
+      </div>
+      <p className="mt-2 text-center text-[11px] text-ink-mute">{hi ? 'पिकअप का समय ड्राइवर आपसे फ़ोन पर तय करेगा' : 'The driver fixes the pickup time with you on the phone'}</p>
+    </div>
+  );
+}
+
 export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   locale: Locale; source: string; preset?: Preset; showTitle?: boolean;
 }) {
@@ -123,6 +178,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [from, setFrom] = useState<PlaceId>(start.from);
   const [to, setTo] = useState<PlaceId>(start.to);
   const [date, setDate] = useState('');
+  const [calOpen, setCalOpen] = useState(false);
   const [time, setTime] = useState('');
   const [vehicle, setVehicle] = useState<VehicleId>('dzire');
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
@@ -224,14 +280,14 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const swap = () => { if (canSwap) { setFrom(to); setTo(from); } };
 
   const dayLabel = days.find((d) => d.iso === date)?.label ?? '';
-  const slotLabel = SLOTS.find((s) => s.value === time)?.label ?? '';
+  const slotLabel = SLOTS.find((s) => s.value === time)?.label ?? '';   // only from an old booking link
+  const whenLabel = slotLabel ? `${dayLabel}, ${slotLabel}` : dayLabel;
   const tripLine = type === 'local'
     ? `${PLACES[from][locale]} · ${TRIP_TYPES.local[locale]} · ${PLACES[to][locale]}`
     : `${PLACES[from][locale]} → ${PLACES[to][locale]} · ${TRIP_TYPES[type][locale]}`;
 
   const seeFares = () => {
-    if (!date) { setError(hi ? 'यात्रा की तारीख़ चुनें' : 'Choose the travel date'); return; }
-    if (!time) { setError(hi ? 'पिकअप का समय चुनें' : 'Choose the pickup time'); return; }
+    if (!date) { setError(hi ? 'यात्रा की तारीख़ चुनें' : 'Choose the travel date'); setCalOpen(true); return; }
     setError('');
     setStep(known ? 3 : 2);
   };
@@ -249,7 +305,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     Object.entries({
       name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'form',
       sourcePage: `booking:${source}`, locale, travelDate: date,
-      message: `Cab fare enquiry: ${tripLine} · ${dayLabel}, ${slotLabel} · Mobile ${verified}`,
+      message: `Cab fare enquiry: ${tripLine} · ${whenLabel} · Mobile ${verified}`,
       // The mail builds a one-tap "send the booking link" from these (lead.php).
       bkFrom: from, bkTo: to, bkType: type, bkTime: time, bkTrip: tripLine,
       bkFares: VEHICLE_ORDER.map((v) => { const f = fareOf(v); return f !== null ? `${VEHICLES[v].name} ${inr(f)}` : ''; }).filter(Boolean).join(' · '),
@@ -298,7 +354,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setStep(2);
   };
 
-  const tripNote = fare !== null ? `${tripLine} · ${VEHICLES[vehicle].name} · ${inr(fare)} · ${dayLabel}, ${slotLabel}` : '';
+  const tripNote = fare !== null ? `${tripLine} · ${VEHICLES[vehicle].name} · ${inr(fare)} · ${whenLabel}` : '';
   /* Gateway off or failed AFTER the visitor already gave name + mobile (Aman, 2026-10-27: the
      WhatsApp gate asked for them a second time). Save the lead directly, open WhatsApp with the
      whole trip, and show "request received" — never "booked", because nothing was paid. */
@@ -475,7 +531,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     <div className="flex items-center justify-between gap-3 rounded-xl bg-cream-light/80 px-4 py-2.5">
       <div className="min-w-0">
         <p className="truncate text-sm font-bold text-ink">{tripLine}</p>
-        <p className="text-xs text-ink-mute">{dayLabel}, {slotLabel}</p>
+        <p className="text-xs text-ink-mute">{whenLabel}</p>
       </div>
       <button type="button" onClick={() => { setStep(1); setError(''); }} className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-maroon hover:underline">
         <ArrowLeft className="h-4 w-4" aria-hidden /> {hi ? 'बदलें' : 'Change'}
@@ -511,8 +567,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               })}
             </div>
 
-            {/* From ⇄ To · Date · Time — one row on desktop */}
-            <div className="grid grid-cols-2 items-end gap-3 lg:grid-cols-[1fr_auto_1fr_1fr_1fr]">
+            {/* From ⇄ To · Date — one row on desktop */}
+            <div className="grid grid-cols-2 items-end gap-3 lg:grid-cols-[1fr_auto_1fr_1fr]">
               <div className="col-span-2 lg:col-span-1">
                 <label className={cap} htmlFor={`${source}-from`}>{hi ? 'कहाँ से' : 'FROM'}</label>
                 <div className={box}>
@@ -547,27 +603,21 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                   </div>
                 </div>
               )}
-              <div>
+              <div className="col-span-2 lg:col-span-1">
                 <label className={cap} htmlFor={`${source}-date`}>{hi ? 'पिकअप तारीख़' : 'PICKUP DATE'}</label>
                 <div className={box}>
                   <Calendar className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                  <select id={`${source}-date`} className={sel} value={date} onChange={(e) => { setDate(e.target.value); setError(''); }}>
-                    <option value="">{hi ? 'चुनें' : 'Select'}</option>
-                    {days.map((d) => <option key={d.iso} value={d.iso}>{d.label}</option>)}
-                  </select>
-                </div>
-              </div>
-              <div>
-                <label className={cap} htmlFor={`${source}-time`}>{hi ? 'पिकअप समय' : 'PICKUP TIME'}</label>
-                <div className={box}>
-                  <Clock className="h-4 w-4 shrink-0 text-maroon" aria-hidden />
-                  <select id={`${source}-time`} className={sel} value={time} onChange={(e) => { setTime(e.target.value); setError(''); }}>
-                    <option value="">{hi ? 'चुनें' : 'Select'}</option>
-                    {SLOTS.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
-                  </select>
+                  <button id={`${source}-date`} type="button" aria-expanded={calOpen} onClick={() => setCalOpen(!calOpen)}
+                    className={`${sel} flex items-center justify-between text-left ${date ? '' : 'text-ink-mute'}`}>
+                    {dayLabel || (hi ? 'तारीख़ चुनें' : 'Select date')}
+                    <ChevronDown className={`h-4 w-4 shrink-0 text-ink-mute transition-transform ${calOpen ? 'rotate-180' : ''}`} aria-hidden />
+                  </button>
                 </div>
               </div>
             </div>
+            {calOpen && days.length > 0 && (
+              <DatePanel days={days} value={date} hi={hi} onPick={(iso) => { setDate(iso); setError(''); setCalOpen(false); }} />
+            )}
 
             <button type="button" onClick={seeFares}
               className={`mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95 active:scale-[0.99] ${hi ? '' : 'uppercase tracking-wide'}`}>
@@ -751,7 +801,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           <div className="space-y-4 py-2 text-center">
             <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
             <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'बुकिंग की रिक्वेस्ट मिल गई' : 'Booking request received'}</h3>
-            <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {fare !== null ? inr(fare) : ''} · {dayLabel}, {slotLabel}</p>
+            <p className="text-sm text-ink">{tripLine} · {VEHICLES[vehicle].name} · {fare !== null ? inr(fare) : ''} · {whenLabel}</p>
             <p className="text-sm text-ink-soft">
               {hi
                 ? 'WhatsApp पर आपकी यात्रा की पूरी जानकारी के साथ चैट खुल गई है — मैसेज भेज दें। हमारी टीम कॉल करके बुकिंग पक्की करेगी।'
@@ -779,7 +829,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 </div>
                 <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl bg-cream-light/70 p-3 text-sm">
                   <dt className="text-ink-mute">{hi ? 'यात्रा' : 'Trip'}</dt><dd className="font-semibold text-ink">{tripLine}</dd>
-                  <dt className="text-ink-mute">{hi ? 'तारीख़ व समय' : 'Date & time'}</dt><dd className="font-semibold text-ink">{dayLabel}, {slotLabel}</dd>
+                  <dt className="text-ink-mute">{hi ? 'तारीख़' : 'Date'}</dt><dd className="font-semibold text-ink">{whenLabel}</dd>
                   <dt className="text-ink-mute">{hi ? 'गाड़ी' : 'Car'}</dt><dd className="font-semibold text-ink">{VEHICLES[vehicle].name}</dd>
                   <dt className="text-ink-mute">{hi ? 'तय किराया' : 'Fare (locked)'}</dt><dd className="font-semibold text-ink">{fare !== null ? inr(fare) : ''}</dd>
                   <dt className="text-ink-mute">{hi ? 'यात्री' : 'Name'}</dt><dd className="font-semibold text-ink">{name.trim()} · {phone.trim()}</dd>
@@ -787,7 +837,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 <div>
                   <p className="mb-1 text-xs font-bold text-ink-mute">{hi ? 'आगे क्या होगा' : 'What happens next'}</p>
                   <ol className="space-y-1 text-sm text-ink-soft">
-                    <li>1. {hi ? 'हमारी टीम आपको कॉल करके पिकअप की जगह पक्की करेगी।' : 'Our team calls you to confirm the pickup point.'}</li>
+                    <li>1. {hi ? 'हमारी टीम आपको कॉल करके पिकअप की जगह और समय पक्का करेगी।' : 'Our team calls you to confirm the pickup point and time.'}</li>
                     <li>2. {hi ? `${payByLabel} तक ₹${ADVANCE} एडवांस का लिंक WhatsApp पर आएगा — एडवांस मिलते ही बुकिंग पक्की।` : `By ${payByLabel}, a ₹${ADVANCE} advance link comes on WhatsApp — the booking is confirmed once it is paid.`}</li>
                     <li>3. {hi ? `बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में।` : `The balance ${fare !== null ? inr(fare - ADVANCE) : ''} goes to the driver in cash or UPI.`}</li>
                   </ol>
@@ -832,7 +882,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 </div>
                 <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl bg-cream-light/70 p-3 text-sm">
                   <dt className="text-ink-mute">{hi ? 'यात्रा' : 'Trip'}</dt><dd className="font-semibold text-ink">{tripLine}</dd>
-                  <dt className="text-ink-mute">{hi ? 'तारीख़ व समय' : 'Date & time'}</dt><dd className="font-semibold text-ink">{dayLabel}, {slotLabel}</dd>
+                  <dt className="text-ink-mute">{hi ? 'तारीख़' : 'Date'}</dt><dd className="font-semibold text-ink">{whenLabel}</dd>
                   <dt className="text-ink-mute">{hi ? 'गाड़ी' : 'Car'}</dt><dd className="font-semibold text-ink">{VEHICLES[vehicle].name}</dd>
                   {pickupNote.trim() && (<><dt className="text-ink-mute">{hi ? 'पिकअप' : 'Pickup'}</dt><dd className="font-semibold text-ink">{pickupNote.trim()}</dd></>)}
                   <dt className="text-ink-mute">{hi ? 'यात्री' : 'Name'}</dt><dd className="font-semibold text-ink">{name.trim()} · {phone.trim()}</dd>
@@ -846,7 +896,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                   <p className="mb-1 text-xs font-bold text-ink-mute">{hi ? 'आगे क्या होगा' : 'What happens next'}</p>
                   <ol className="space-y-1 text-sm text-ink-soft">
                     <li>1. {hi ? 'यात्रा से पहले गाड़ी का नंबर और ड्राइवर का नाम-मोबाइल WhatsApp पर आएगा।' : 'Before the trip, the car number and the driver’s name and mobile come on WhatsApp.'}</li>
-                    <li>2. {hi ? 'तय समय पर ड्राइवर पिकअप पर होगा — बाकी किराया उन्हें दें।' : 'The driver reaches the pickup on time — pay the balance to the driver.'}</li>
+                    <li>2. {hi ? 'पिकअप का समय ड्राइवर आपसे फ़ोन पर तय करेगा — बाकी किराया उन्हें दें।' : 'The driver fixes the pickup time with you on the phone — pay the balance to the driver.'}</li>
                     <li>3. {hi ? 'यात्रा से 48 घंटे पहले तक रद्द करने पर पूरा एडवांस वापस।' : 'Cancel up to 48 hours before the trip for a full refund of the advance.'}</li>
                   </ol>
                 </div>
