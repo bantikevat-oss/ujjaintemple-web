@@ -146,6 +146,7 @@ $pbJs = [
     'min_profit' => ut_cost_setting($pbData, 'rules', 'min_profit') ?: 0,
     'gst_pct'    => ut_cost_setting($pbData, 'rules', 'gst_pct') ?: 0,
     'peak_pct'   => ut_cost_setting($pbData, 'hotel', 'peak_pct') ?: 0,
+    'child_free_age' => ut_cost_setting($pbData, 'rules', 'child_free_age') ?? 5,
   ],
 ];
 
@@ -205,7 +206,8 @@ function wa_text(array $q): string {
   .items select{width:auto}
   .hint{font-size:12px;color:var(--muted);margin-top:4px}
   .save{margin-top:18px;display:flex;gap:10px}
-  @media (max-width:640px){.day{grid-template-columns:1fr}.day textarea{grid-column:auto}table,thead,tbody,tr,td,th{display:block}thead{display:none}td{border:0;padding:6px 12px}tr{border-bottom:1px solid var(--line);padding:8px 0}}
+  .ml{display:none;color:var(--muted);font-size:12px}
+  @media (max-width:640px){.day{grid-template-columns:1fr}.day textarea{grid-column:auto}table,thead,tbody,tr,td,th{display:block}thead{display:none}td{border:0;padding:6px 12px}tr{border-bottom:1px solid var(--line);padding:8px 0}.ml{display:inline}}
 </style>
 </head>
 <body>
@@ -250,6 +252,13 @@ function wa_text(array $q): string {
         <div><label>Net rate pe % (is quote ke liye)</label><input type="number" id="pbMarkup" min="0" max="300" step="any" value="<?= h(rtrim(rtrim(number_format(ut_cost_markup($pbData), 2, '.', ''), '0'), '.')) ?>"><div class="hint">Default Lagat → Niyam se. Sell rate pe kuch nahi judta.</div></div>
         <div><label>&nbsp;</label><label style="display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink)"><input type="checkbox" id="pbPeak" style="width:auto"> Weekend / tyohaar rate</label></div>
       </div>
+      <div style="margin-top:12px"><label>Hotel ka rate — is quote ke liye (₹ net, ek kamra / raat · extra bed)</label>
+        <div class="g" id="pbHR">
+          <?php foreach (['ujjain' => 'Ujjain', 'omk' => 'Omkareshwar', 'indore' => 'Indore', 'mah' => 'Maheshwar'] as $hc => $hl): ?>
+          <div><span class="hint" style="margin:0"><?= h($hl) ?></span><div style="display:flex;gap:6px"><input type="number" min="0" step="any" class="pbHR" data-city="<?= h($hc) ?>" data-f="room" placeholder="kamra"><input type="number" min="0" step="any" class="pbHR" data-city="<?= h($hc) ?>" data-f="extra" placeholder="extra bed"></div></div>
+          <?php endforeach; ?>
+        </div>
+        <div class="hint">Hotel se phone pe mila rate. Bhara → sirf chuni hui class ke liye Lagat ki jagah ye lagega. Khaali → Lagat.</div></div>
       <div id="pbDays" style="margin-top:12px"></div>
       <button type="button" class="b" id="pbAddDay" style="margin-top:8px">+ Din</button>
       <div class="g" style="margin-top:12px" id="pbExtras">
@@ -260,8 +269,11 @@ function wa_text(array $q): string {
           <?php foreach (UT_COST_SECTIONS['puja']['cols'] as $tc => $tl): ?><option value="<?= h($tc) ?>"><?= h($tl) ?></option><?php endforeach; ?></select></div>
         <?php endforeach; ?>
       </div>
-      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="b p" id="pbGo">Package banao</button><button type="button" class="b" id="pbApply" disabled>Quote me bharo ↓</button></div>
+      <div style="margin-top:12px"><label>Aur kharcha (jo Lagat me nahi — customer ki khaas maang)</label><div id="pbLines"></div>
+        <button type="button" class="b" id="pbAddLine" style="margin-top:6px">+ Kharcha</button></div>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap"><button type="button" class="b p" id="pbGo">Package banao</button><button type="button" class="b" id="pbApply" disabled>Quote me bharo ↓</button><button type="button" class="b" id="pbOptCopy" disabled>Options text copy</button></div>
       <div id="pbOut" style="margin-top:12px"></div>
+      <div id="pbOpts" style="margin-top:12px"></div>
       <input type="hidden" name="calc" id="pbCalc" value="<?= h(!empty($e['calc']) ? json_encode($e['calc'], JSON_UNESCAPED_UNICODE) : '') ?>">
     </fieldset>
 
@@ -403,7 +415,8 @@ function wa_text(array $q): string {
   var inr = function (n) { return '₹' + Math.round(n).toLocaleString('en-IN'); };
   var CAR_NAMES = { dzire: 'Swift Dzire', ertiga: 'Ertiga', innova: 'Innova Crysta', tempo: 'Tempo Traveller' };
   var CAR_SEATS = [['dzire', 4], ['ertiga', 6], ['innova', 7], ['tempo', 12]];
-  var CITY = { ujjain: ['उज्जैन', 'Ujjain'], omk: ['ओंकारेश्वर', 'Omkareshwar'], indore: ['इंदौर', 'Indore'] };
+  var CITY = { ujjain: ['उज्जैन', 'Ujjain'], omk: ['ओंकारेश्वर', 'Omkareshwar'], indore: ['इंदौर', 'Indore'], mah: ['महेश्वर', 'Maheshwar'] };
+  var esc = function (x) { return String(x).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
   var planOpts = '<option value="">— kuch nahi —</option>' + Object.keys(D.plans).map(function (k) {
     return '<option value="' + k + '">' + D.plans[k].team + '</option>';
@@ -421,22 +434,53 @@ function wa_text(array $q): string {
   var num = function () { [].forEach.call(daysBox.children, function (r, i) { r.querySelector('.n').textContent = 'Din ' + (i + 1); }); };
   $('pbAddDay').addEventListener('click', function () { addDay(); });
 
+  // Children by age (Aman 2026-10-30): below Niyam → child_free_age they pay for nothing but a car seat;
+  // from that age on they count like an adult for bed, meals, boat and kit. Ages missing → counted as paying.
   var people = function () {
-    var a = +E.adults.value || 0, c = +E.children.value || 0;
-    return { adults: a, children: c, pax: a + c };
+    var a = +E.adults.value || 0, c = +E.children.value || 0, free = +D.set.child_free_age || 0;
+    var ages = (E.child_ages.value.match(/\d+/g) || []).map(Number), kidsFree = 0;
+    for (var i = 0; i < c; i++) if (ages[i] !== undefined && ages[i] < free) kidsFree++;
+    return { adults: a, children: c, pax: a + c, paying: a + c - kidsFree, kidsFree: kidsFree, noAge: Math.max(0, c - ages.length) };
   };
   var carFor = function (pax) { for (var i = 0; i < CAR_SEATS.length; i++) if (pax <= CAR_SEATS[i][1]) return CAR_SEATS[i][0]; return null; };
+  // 2 per room; one extra bed per room at most — a second one means another room.
+  var roomsFor = function (P) {
+    var beds = P.paying, rooms = Math.max(1, Math.floor(P.adults / 2)), extra = Math.max(0, beds - 2 * rooms);
+    while (extra > rooms) { rooms++; extra = Math.max(0, beds - 2 * rooms); }
+    return [rooms, extra];
+  };
+  var hotelRate = function (city, f) {
+    var x = document.querySelector('.pbHR[data-city="' + city + '"][data-f="' + f + '"]');
+    return x && x.value !== '' ? +x.value : null;
+  };
+  var addLine = function (l) {
+    var row = document.createElement('div');
+    row.style.cssText = 'display:grid;grid-template-columns:2fr 70px 1fr 90px 34px;gap:8px;align-items:center;margin-top:6px';
+    row.innerHTML = '<input class="l1" maxlength="80" placeholder="kya (jaise: doosri gaadi)"><input class="l2" type="number" min="1" value="1">' +
+      '<input class="l3" type="number" min="0" step="any" placeholder="rate ₹"><select class="l4"><option value="net">Net</option><option value="sell">Sell</option></select><button type="button" class="b x" title="Hatao">✕</button>';
+    if (l) { row.querySelector('.l1').value = l[0] || ''; row.querySelector('.l2').value = l[1] || 1; row.querySelector('.l3').value = l[2] === null || l[2] === undefined ? '' : l[2]; row.querySelector('.l4').value = l[3] === 'sell' ? 'sell' : 'net'; }
+    row.querySelector('button').addEventListener('click', function () { row.remove(); });
+    $('pbLines').appendChild(row);
+  };
+  $('pbAddLine').addEventListener('click', function () { addLine(); });
+  var customLines = function () {
+    return [].map.call($('pbLines').children, function (r) {
+      return [r.querySelector('.l1').value.trim(), +r.querySelector('.l2').value || 1, r.querySelector('.l3').value === '' ? null : +r.querySelector('.l3').value, r.querySelector('.l4').value];
+    }).filter(function (l) { return l[0] || l[2] !== null; });
+  };
 
-  var build = function () {
-    var P = people(), lines = [], warn = [];
+  // Prices the trip for one hotel class ('' = no hotel). No DOM writes: build() and the options table both call it.
+  var price = function (hotel) {
+    var P = people(), lines = [], warn = [], missingHotel = false;
     var car = $('pbCar').value === 'auto' ? carFor(P.pax || 1) : $('pbCar').value;
-    $('pbCarHint').textContent = $('pbCar').value === 'auto' ? (car ? 'Chuni: ' + D.cars[car] + ' (' + (P.pax || 1) + ' log)' : '12 se zyada log — gaadi khud chuno') : '';
     if (!car) { warn.push('12 se zyada log: ek gaadi kaafi nahi — do quote line haath se jodo ya Tempo chuno.'); car = 'tempo'; }
     if (!P.pax) warn.push('Upar "Bade (adults)" bharo — hotel, khana, nauka inhi se ginte hain.');
-    var add = function (key, label, qty, peak) {
+    if (P.noAge) warn.push(P.noAge + ' bachche ki umar nahi likhi — use poora vyakti gina hai. "Bachchon ki umar" bharo.');
+    var add = function (key, label, qty, peak, own) {
       if (!qty) return;
+      if (own) { lines.push({ k: key, label: label + ' (is quote ka rate)', qty: qty, unit: own.unit, rate: own.rate, kind: 'net' }); return; }
       var c = D.cat[key], peakPct = peak ? +D.set.peak_pct || 0 : 0;
-      if (!c) { lines.push({ k: key, label: label, qty: qty, rate: null, kind: null }); warn.push('"' + label + '" ka rate Lagat me nahi hai — total me nahi juda.'); return; }
+      if (!c) { lines.push({ k: key, label: label, qty: qty, rate: null, kind: null }); warn.push('"' + label + '" ka rate Lagat me nahi hai — total me nahi juda.'); if (/^hotel\./.test(key)) missingHotel = true; return; }
       lines.push({ k: key, label: c.label + (peakPct ? ' (+' + peakPct + '% tyohaar)' : ''), qty: qty, unit: c.qty, rate: Math.round(c.rate * (1 + peakPct / 100)), kind: c.kind });
     };
 
@@ -456,30 +500,35 @@ function wa_text(array $q): string {
     if (!anyCab) warn.push('Kisi din ka plan nahi chuna — gaadi ka kharcha nahi juda.');
     if (driverNights) add('cab.driver_night.' + car, 'Driver bhatta', driverNights);
 
-    var hotel = $('pbHotel').value, totalNights = 0, rooms = 0, extra = 0;
+    var totalNights = 0, rooms = 0, extra = 0, auto = roomsFor(P), mine = hotel && hotel === $('pbHotel').value;
     if (hotel) {
-      var autoRooms = Math.max(1, Math.floor(P.adults / 2)), autoExtra = P.adults > 1 ? P.adults % 2 : 0;
-      rooms = $('pbRooms').value !== '' ? +$('pbRooms').value : autoRooms;
-      extra = $('pbExtra').value !== '' ? +$('pbExtra').value : autoExtra;
-      $('pbRoomHint').textContent = 'Auto: ' + autoRooms + ' kamra · ' + autoExtra + ' extra bed (bachche alag chahiye to badlo)';
+      rooms = $('pbRooms').value !== '' ? +$('pbRooms').value : auto[0];
+      extra = $('pbExtra').value !== '' ? +$('pbExtra').value : auto[1];
       var peak = $('pbPeak').checked;
       Object.keys(nights).forEach(function (c) {
         var r = D.hotels[c]; if (!r) return;
-        add('hotel.' + r[0] + '.' + hotel, 'Hotel ' + CITY[c][1], rooms * nights[c], peak);
-        if (extra && r[1]) add('hotel.' + r[1] + '.' + hotel, 'Extra bed ' + CITY[c][1], extra * nights[c], peak);
+        // This quote's own hotel rate counts for the class picked in the form only; other classes stay on Lagat.
+        var ownRoom = mine ? hotelRate(c, 'room') : null, ownExtra = mine ? hotelRate(c, 'extra') : null;
+        add('hotel.' + r[0] + '.' + hotel, 'Hotel ' + CITY[c][1], rooms * nights[c], peak, ownRoom === null ? null : { rate: ownRoom, unit: 'kamra × raat' });
+        if (extra) add(r[1] ? 'hotel.' + r[1] + '.' + hotel : 'hotel.none', 'Extra bed ' + CITY[c][1], extra * nights[c], peak, ownExtra === null ? null : { rate: ownExtra, unit: 'raat' });
         totalNights += nights[c];
       });
       if (!totalNights) warn.push('Hotel chuna hai par koi raat nahi bani (1 din ki yatra?) — hotel nahi juda.');
-      var meal = $('pbMeal').value, mn = P.pax * totalNights;
+      var meal = $('pbMeal').value, mn = P.paying * totalNights;
       if (meal !== 'EP') add('hotel.bf.' + hotel, 'Nashta', mn);
       if (meal === 'MAP') add('hotel.meal.' + hotel, 'Lunch / dinner', mn);
       if (meal === 'AP') add('hotel.meal.' + hotel, 'Lunch + dinner', mn * 2);
     } else if (n > 1) warn.push('Hotel nahi chuna — ' + (n - 1) + ' raat ka kamra customer khud lega, quote me "shaamil nahi" likha jaayega.');
-    if (omk && $('pbBoat').checked) add('other.boat.cost', 'Nauka vihar', P.pax);
-    if ($('pbWater').checked) add('other.water.cost', 'Paani / welcome kit', P.pax);
+    if (omk && $('pbBoat').checked) add('other.boat.cost', 'Nauka vihar', P.paying);
+    if ($('pbWater').checked) add('other.water.cost', 'Paani / welcome kit', P.paying);
     // Each puja has 3 categories (Basic / Standard / Premium — Aman 2026-10-29); the select holds the category.
     var pujas = [].filter.call(document.querySelectorAll('.pbPuja'), function (x) { return x.value; }).map(function (x) { return x.dataset.puja + '.' + x.value; });
     pujas.forEach(function (p) { add('puja.' + p, 'Puja ' + p.replace('.', ' · '), 1); });
+    var custom = customLines();
+    custom.forEach(function (l) {
+      if (l[2] === null) { lines.push({ k: 'custom', label: l[0], qty: l[1], rate: null, kind: null }); warn.push('"' + l[0] + '" ka rate nahi bhara.'); return; }
+      lines.push({ k: 'custom', label: l[0] || 'Aur kharcha', qty: l[1], unit: '', rate: l[2], kind: l[3] });
+    });
 
     // Markup once, on the net lines' total (Aman 2026-10-29); sell-rate lines go in as they are.
     var net = 0, sellIn = 0, mk = $('pbMarkup').value === '' ? +D.set.markup_pct : +$('pbMarkup').value;
@@ -489,31 +538,108 @@ function wa_text(array $q): string {
     var final = sell ? Math.ceil(sell * (1 + gst / 100) / rt) * rt : 0;
     var profit = final / (1 + gst / 100) - cost;
     if (final && D.set.min_profit && profit < D.set.min_profit) warn.push('Munafa ' + inr(profit) + ' — tay kam se kam ' + inr(D.set.min_profit) + ' se kam hai. Markup badhao ya daam haath se badlo.');
-
-    last = {
-      state: { start: $('pbStart').value, markup: $('pbMarkup').value, car: $('pbCar').value, carUsed: car, hotel: hotel, rooms: $('pbRooms').value, extra: $('pbExtra').value,
-        meal: $('pbMeal').value, peak: $('pbPeak').checked, boat: $('pbBoat').checked, water: $('pbWater').checked, pujas: pujas,
-        days: [].map.call(daysBox.children, function (r) { return [r.querySelector('.p1').value, r.querySelector('.p2').value]; }) },
-      lines: lines, totals: { net: Math.round(net), markup_pct: mk, sell_rate: Math.round(sellIn), cost: Math.round(cost), sell: Math.round(sell), gst_pct: gst, final: final, profit: Math.round(profit) },
+    return {
+      P: P, car: car, auto: auto, missingHotel: missingHotel, warn: warn, lines: lines, custom: custom, pujas: pujas,
+      totals: { net: Math.round(net), markup_pct: mk, sell_rate: Math.round(sellIn), cost: Math.round(cost), sell: Math.round(sell), gst_pct: gst, final: final, profit: Math.round(profit),
+        per_person: P.paying ? Math.ceil(final / P.paying) : 0, paying: P.paying },
       meta: { anyCab: anyCab, omk: omk, nights: totalNights, rooms: rooms, extra: extra, pujas: pujas, days: days }
     };
-    render(warn);
-    $('pbApply').disabled = !final;
+  };
+
+  var build = function () {
+    var hotel = $('pbHotel').value, r = price(hotel);
+    $('pbCarHint').textContent = $('pbCar').value === 'auto' ? 'Chuni: ' + D.cars[r.car] + ' (' + (r.P.pax || 1) + ' log)' : '';
+    $('pbRoomHint').textContent = hotel ? 'Auto: ' + r.auto[0] + ' kamra · ' + r.auto[1] + ' extra bed' + (r.P.kidsFree ? ' · ' + r.P.kidsFree + ' chhota bachcha (' + D.set.child_free_age + ' saal se kam) — paisa nahi' : '') : 'Khaali = logon se apne aap (2 per kamra)';
+    // Same trip in every hotel class (Lagat rates; the picked class also uses this quote's own hotel rate).
+    var opts = r.meta.nights ? Object.keys(D.rooms).map(function (c) {
+      var o = c === hotel ? r : price(c);
+      return { cls: c, final: o.totals.final, per_person: o.totals.per_person, profit: o.totals.profit, missing: o.missingHotel };
+    }) : [];
+    last = {
+      state: { start: $('pbStart').value, markup: $('pbMarkup').value, car: $('pbCar').value, carUsed: r.car, hotel: hotel, rooms: $('pbRooms').value, extra: $('pbExtra').value,
+        meal: $('pbMeal').value, peak: $('pbPeak').checked, boat: $('pbBoat').checked, water: $('pbWater').checked, pujas: r.pujas,
+        hotelRates: [].filter.call(document.querySelectorAll('.pbHR'), function (x) { return x.value !== ''; }).map(function (x) { return [x.dataset.city, x.dataset.f, +x.value]; }),
+        custom: r.custom,
+        days: [].map.call(daysBox.children, function (row) { return [row.querySelector('.p1').value, row.querySelector('.p2').value]; }) },
+      lines: r.lines, totals: r.totals, meta: r.meta, P: r.P, options: opts
+    };
+    render(r.warn);
+    $('pbApply').disabled = !r.totals.final;
+    $('pbOptCopy').disabled = !opts.some(function (o) { return !o.missing && o.final; });
   };
 
   var render = function (warn) {
     var t = last.totals, h = '<table style="font-size:13px"><thead><tr><th>Cheez</th><th>Kitna</th><th>Rate</th><th>Net / Sell</th><th>Kul</th></tr></thead><tbody>';
     last.lines.forEach(function (l) {
-      h += '<tr><td>' + l.label + '</td><td>' + l.qty + ' ' + (l.unit || '') + '</td><td>' + (l.rate === null ? '<b style="color:var(--red)">rate nahi</b>' : inr(l.rate)) +
+      h += '<tr><td>' + esc(l.label) + '</td><td>' + l.qty + ' ' + (l.unit || '') + '</td><td>' + (l.rate === null ? '<b style="color:var(--red)">rate nahi</b>' : inr(l.rate)) +
         '</td><td>' + (l.kind === 'sell' ? 'Sell' : l.kind === 'net' ? 'Net' : '—') + '</td><td>' + (l.rate === null ? '—' : inr(l.rate * l.qty)) + '</td></tr>';
     });
     h += '</tbody></table><div style="margin-top:10px;font-size:14px;line-height:1.8">Net ' + inr(t.net) + ' + ' + t.markup_pct + '% = ' + inr(t.net * (1 + t.markup_pct / 100)) +
       (t.sell_rate ? ' · Sell rate cheezen ' + inr(t.sell_rate) : '') + (t.gst_pct ? ' · + GST ' + t.gst_pct + '%' : '') + ' · round ₹' + (+D.set.round_to || 100) +
-      '<br><b style="color:var(--maroon);font-size:16px">Customer ka kul ' + inr(t.final) + '</b> · <b>Munafa ' + inr(t.profit) + (t.cost ? ' (' + Math.round(t.profit / t.cost * 100) + '%)' : '') + '</b></div>';
-    if (warn.length) h += '<div class="flash err" style="margin-top:10px">' + warn.map(function (w) { return '• ' + w; }).join('<br>') + '</div>';
+      '<br><b style="color:var(--maroon);font-size:16px">Customer ka kul ' + inr(t.final) + '</b>' +
+      (t.paying ? ' · <b>' + inr(t.per_person) + ' / vyakti</b> (' + t.paying + ' paying' + (last.P.kidsFree ? ' + ' + last.P.kidsFree + ' chhota bachcha' : '') + ')' : '') +
+      ' · <b>Munafa ' + inr(t.profit) + (t.cost ? ' (' + Math.round(t.profit / t.cost * 100) + '%)' : '') + '</b></div>';
+    if (warn.length) h += '<div class="flash err" style="margin-top:10px">' + warn.map(function (w) { return '• ' + esc(w); }).join('<br>') + '</div>';
     out.innerHTML = h;
-    $('pbCalc').value = JSON.stringify({ state: last.state, lines: last.lines, totals: last.totals });
+
+    var o = '';
+    if (last.options.length) {
+      o = '<table style="font-size:13px"><thead><tr><th>Hotel class</th><th>Customer ka kul</th><th>Per vyakti</th><th>Munafa</th><th></th></tr></thead><tbody>';
+      last.options.forEach(function (x) {
+        var on = x.cls === last.state.hotel;
+        o += '<tr' + (on ? ' style="background:#fff4e0"' : '') + '><td><b>' + esc(D.rooms[x.cls]) + '</b>' + (on ? ' ✓' : '') + '</td>' +
+          (x.missing ? '<td colspan="3" style="color:var(--red)">Lagat me is class ka hotel rate nahi</td>' :
+            '<td><span class="ml">Kul </span>' + inr(x.final) + '</td><td><span class="ml">Per vyakti </span>' + inr(x.per_person) + '</td><td><span class="ml">Munafa </span>' + inr(x.profit) + '</td>') +
+          '<td>' + (on ? '' : '<button type="button" class="b pbPick" data-c="' + x.cls + '">Ye chuno</button>') + '</td></tr>';
+      });
+      o += '</tbody></table>';
+    }
+    $('pbOpts').innerHTML = o;
+    [].forEach.call(document.querySelectorAll('.pbPick'), function (b) { b.addEventListener('click', function () { $('pbHotel').value = b.dataset.c; build(); }); });
+    $('pbCalc').value = JSON.stringify({ state: last.state, lines: last.lines, totals: last.totals, options: last.options });
   };
+
+  // Places in the trip, in order, for the title and the options message.
+  var tripName = function (hi, days) {
+    var L = hi ? 0 : 1, names = [CITY.ujjain[L]];
+    days.forEach(function (ps) { ps.forEach(function (p) {
+      if (D.plans[p].omk) names.push(CITY.omk[L]);
+      if (p === 'omk_mah' || /^mah_/.test(p)) names.push(CITY.mah[L]);
+      if (p === 'mandu') names.push(hi ? 'मांडू' : 'Mandu');
+      if (p === 'nalkheda') names.push(hi ? 'नलखेड़ा' : 'Nalkheda');
+      if (/indore/.test(p) || /_ind$/.test(p)) names.push(CITY.indore[L]);
+    }); });
+    return names.filter(function (x, i) { return names.indexOf(x) === i; }).join(' – ');
+  };
+
+  // WhatsApp message with every priced class — pure Hindi or pure English, as the quote's language.
+  var CLS_HI = { budget: 'बजट होटल', standard: 'स्टैंडर्ड एसी होटल', deluxe: 'डीलक्स होटल', premium: 'प्रीमियम 4★+ होटल' };
+  var CLS_EN = { budget: 'Budget hotel', standard: 'Standard AC hotel', deluxe: 'Deluxe hotel', premium: 'Premium 4★+ hotel' };
+  var MEAL_HI = { EP: 'सिर्फ़ कमरा', CP: 'कमरा + नाश्ता', MAP: 'कमरा + नाश्ता + एक समय भोजन', AP: 'कमरा + तीनों समय भोजन' };
+  var MEAL_EN = { EP: 'room only', CP: 'room + breakfast', MAP: 'room + breakfast + one meal', AP: 'room + all meals' };
+  var optionsText = function () {
+    var hi = E.locale.value !== 'en', m = last.meta, P = last.P, n = m.days.length, i = 0;
+    var who = hi ? P.adults + ' वयस्क' + (P.children ? ', ' + P.children + (P.children === 1 ? ' बच्चा' : ' बच्चे') : '') : P.adults + ' adult' + (P.adults === 1 ? '' : 's') + (P.children ? ', ' + P.children + ' child' + (P.children === 1 ? '' : 'ren') : '');
+    var t = (E.title.value.trim() || tripName(hi, m.days) + (hi ? ' यात्रा' : ' trip'));
+    var s = hi ? '🙏 ' + t + '\n' + n + ' दिन / ' + m.nights + ' रात · ' + who + '\n' + 'गाड़ी: ' + CAR_NAMES[last.state.carUsed] + ' · भोजन: ' + MEAL_HI[last.state.meal] + '\n\nहोटल के अनुसार कुल राशि:\n'
+               : '🙏 ' + t + '\n' + n + ' days / ' + m.nights + ' nights · ' + who + '\n' + 'Car: ' + CAR_NAMES[last.state.carUsed] + ' · Meals: ' + MEAL_EN[last.state.meal] + '\n\nTotal by hotel class:\n';
+    last.options.forEach(function (x) {
+      if (x.missing || !x.final) return;
+      i++;
+      s += hi ? i + '. ' + CLS_HI[x.cls] + ' — ' + inr(x.final) + ' (' + inr(x.per_person) + ' प्रति व्यक्ति)\n'
+              : i + '. ' + CLS_EN[x.cls] + ' — ' + inr(x.final) + ' (' + inr(x.per_person) + ' per person)\n';
+    });
+    if (P.kidsFree) s += hi ? D.set.child_free_age + ' वर्ष से कम उम्र के बच्चों का कोई शुल्क नहीं।\n' : 'No charge for children under ' + D.set.child_free_age + '.\n';
+    s += hi ? '\nदरें होटल में कमरे उपलब्ध होने पर पक्की होंगी। जो विकल्प पसंद हो बताइए, हम पूरा विवरण और बुकिंग लिंक भेज देंगे।'
+            : '\nRates are confirmed once the hotel confirms rooms. Tell us the option you like and we will send the full plan and booking link.';
+    return s;
+  };
+  $('pbOptCopy').addEventListener('click', function () {
+    if (!last) return;
+    var b = $('pbOptCopy'), txt = optionsText();
+    b.dataset.text = txt;
+    navigator.clipboard.writeText(txt).then(function () { b.textContent = 'Copied ✓ — WhatsApp me paste karo'; setTimeout(function () { b.textContent = 'Options text copy'; }, 2500); });
+  });
 
   var apply = function () {
     if (!last) return;
@@ -522,18 +648,7 @@ function wa_text(array $q): string {
     if (m.anyCab) E.vehicle.value = CAR_NAMES[s.carUsed];
     E.room.value = s.hotel ? D.rooms[s.hotel] + ' double room × ' + m.rooms + (m.extra ? ' + ' + m.extra + ' extra bed' : '') : '';
     E.meal_plan.value = s.hotel && m.nights ? s.meal : '';
-    if (!E.title.value.trim()) {
-      var names = [CITY.ujjain[L]];
-      m.days.forEach(function (ps) { ps.forEach(function (p) {
-        if (D.plans[p].omk) names.push(CITY.omk[L]);
-        if (p === 'omk_mah') names.push(hi ? 'महेश्वर' : 'Maheshwar');
-        if (p === 'mandu') names.push(hi ? 'मांडू' : 'Mandu');
-        if (p === 'nalkheda') names.push(hi ? 'नलखेड़ा' : 'Nalkheda');
-        if (/indore/.test(p) || /_ind$/.test(p)) names.push(CITY.indore[L]);
-      }); });
-      names = names.filter(function (x, i) { return names.indexOf(x) === i; });
-      E.title.value = names.join(' – ') + (hi ? ' यात्रा' : ' trip');
-    }
+    if (!E.title.value.trim()) E.title.value = tripName(hi, m.days) + (hi ? ' यात्रा' : ' trip');
     var set = function (k, v) { if (E['item_' + k]) E['item_' + k].value = v; };
     ['toll', 'parking', 'driver', 'fuel'].forEach(function (k) { set(k, m.anyCab ? 'in' : 'na'); });
     set('hotel', s.hotel && m.nights ? 'in' : (m.days.length > 1 ? 'out' : 'na'));
@@ -572,6 +687,8 @@ function wa_text(array $q): string {
     $('pbStart').value = st.start || ''; if (st.markup !== undefined && st.markup !== '') $('pbMarkup').value = st.markup; $('pbCar').value = st.car || 'auto'; $('pbHotel').value = st.hotel || '';
     $('pbRooms').value = st.rooms || ''; $('pbExtra').value = st.extra || ''; $('pbMeal').value = st.meal || 'EP';
     $('pbPeak').checked = !!st.peak; $('pbBoat').checked = st.boat !== false; $('pbWater').checked = !!st.water;
+    (st.hotelRates || []).forEach(function (x) { var i = document.querySelector('.pbHR[data-city="' + x[0] + '"][data-f="' + x[1] + '"]'); if (i) i.value = x[2]; });
+    (st.custom || []).forEach(function (l) { addLine(l); });
     document.querySelectorAll('.pbPuja').forEach(function (x) {
       (st.pujas || []).forEach(function (p) { var a = p.split('.'); if (a[0] === x.dataset.puja && a[1]) x.value = a[1]; });
     });

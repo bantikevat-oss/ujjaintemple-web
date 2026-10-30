@@ -50,6 +50,8 @@ const UT_COST_SECTIONS = [
       'ind_omk_ujj'  => ['Indore pickup → Omkareshwar darshan → Ujjain (ek din)', 'trip'],
       'ujj_omk_ind'  => ['Ujjain → Omkareshwar darshan → Indore drop (ek din)', 'trip'],
       'omk_mah'      => ['Ujjain → Omkareshwar + Maheshwar → Ujjain (ek din)', 'trip'],
+      'mah_stay'     => ['Ujjain → Omkareshwar + Maheshwar, raat Maheshwar (sirf jaana)', 'trip'],
+      'mah_back'     => ['Maheshwar → Ujjain (sirf aana)', 'trip'],
       'mandu'        => ['Ujjain → Mandu → Ujjain (ek din)', 'trip'],
       'nalkheda'     => ['Ujjain → Nalkheda (Baglamukhi) → Ujjain', 'trip'],
       'per_km'       => ['Outstation — per km rate', 'km', ['dzire' => 11, 'ertiga' => 12, 'innova' => 18]],
@@ -69,7 +71,9 @@ const UT_COST_SECTIONS = [
       'omk_room'  => ['Omkareshwar — double room (EP)', 'room'],
       'omk_extra' => ['Omkareshwar — extra bed / gadda', 'night'],
       'ind_room'  => ['Indore — double room (EP)', 'room'],
+      'ind_extra' => ['Indore — extra bed / gadda', 'night'],
       'mah_room'  => ['Maheshwar — double room (EP)', 'room'],
+      'mah_extra' => ['Maheshwar — extra bed / gadda', 'night'],
       'bf'        => ['Nashta (CP) — per vyakti', 'pax'],
       'meal'      => ['Lunch ya dinner (MAP) — per vyakti, ek meal', 'meal'],
       'peak_pct'  => ['Weekend / tyohaar pe kamre kitne % mehnge (Sat-Sun, Shravan, Navratri, Diwali)', 'set'],
@@ -104,6 +108,7 @@ const UT_COST_SECTIONS = [
       'round_to'   => ['Customer ka kul daam kis tak round karein (₹ — jaise 100)', 'set', ['v' => 100]],
       'min_profit' => ['Ek package pe kam se kam munafa (₹) — isse kam ho to warning', 'set'],
       'gst_pct'    => ['Customer daam pe GST % (0 = nahi jodna)', 'set'],
+      'child_free_age' => ['Is umar se chhote bachche — kamra, khana, nauka ka paisa nahi (saal)', 'set', ['v' => 5]],
     ],
   ],
 ];
@@ -153,13 +158,19 @@ const UT_COST_PLANS = [
   'indore_drop'  => ['row' => 'indore_drop', 'end' => null, 'omk' => false, 'team' => 'Ujjain → Indore drop',
     'hi' => 'इंदौर ड्रॉप', 'en' => 'Indore drop',
     'dhi' => "होटल चेक-आउट\nइंदौर एयरपोर्ट / स्टेशन ड्रॉप", 'den' => "Hotel check-out\nDrop at Indore airport / station"],
+  'mah_stay'     => ['row' => 'mah_stay', 'end' => 'mah', 'omk' => true, 'team' => 'Omkareshwar + Maheshwar, raat Maheshwar',
+    'hi' => 'ओंकारेश्वर दर्शन, रात महेश्वर में', 'en' => 'Omkareshwar darshan, night in Maheshwar',
+    'dhi' => "उज्जैन से ओंकारेश्वर\nओंकारेश्वर ज्योतिर्लिंग दर्शन\nशाम को महेश्वर, होटल चेक-इन", 'den' => "Ujjain to Omkareshwar\nOmkareshwar Jyotirlinga darshan\nMaheshwar by evening, hotel check-in"],
+  'mah_back'     => ['row' => 'mah_back', 'end' => 'ujjain', 'omk' => false, 'team' => 'Maheshwar → Ujjain, raat Ujjain',
+    'hi' => 'महेश्वर दर्शन और उज्जैन वापसी', 'en' => 'Maheshwar and back to Ujjain',
+    'dhi' => "महेश्वर घाट और अहिल्या किला\nमहेश्वर से उज्जैन\nहोटल चेक-इन", 'den' => "Maheshwar ghat and Ahilya Fort\nMaheshwar to Ujjain\nHotel check-in"],
   'ujj_transfer' => ['row' => 'ujj_transfer', 'end' => 'ujjain', 'omk' => false, 'team' => 'Sirf station ↔ hotel (Ujjain)',
     'hi' => 'उज्जैन स्टेशन से होटल', 'en' => 'Ujjain station to hotel',
     'dhi' => "उज्जैन स्टेशन / बस स्टैंड से पिकअप\nहोटल चेक-इन", 'den' => "Pickup from Ujjain station / bus stand\nHotel check-in"],
 ];
 
 /** Hotel city => [room row, extra-bed row]. */
-const UT_COST_HOTEL_ROWS = ['ujjain' => ['ujj_room', 'ujj_extra'], 'omk' => ['omk_room', 'omk_extra'], 'indore' => ['ind_room', null]];
+const UT_COST_HOTEL_ROWS = ['ujjain' => ['ujj_room', 'ujj_extra'], 'omk' => ['omk_room', 'omk_extra'], 'indore' => ['ind_room', 'ind_extra'], 'mah' => ['mah_room', 'mah_extra']];
 
 function ut_costs_file() { return __DIR__ . '/../../ut-costs.json'; }
 
