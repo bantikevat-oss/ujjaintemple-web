@@ -252,13 +252,14 @@ function wa_text(array $q): string {
         <div><label>Net rate pe % (is quote ke liye)</label><input type="number" id="pbMarkup" min="0" max="300" step="any" value="<?= h(rtrim(rtrim(number_format(ut_cost_markup($pbData), 2, '.', ''), '0'), '.')) ?>"><div class="hint">Default Lagat → Niyam se. Sell rate pe kuch nahi judta.</div></div>
         <div><label>&nbsp;</label><label style="display:flex;gap:8px;align-items:center;font-weight:600;color:var(--ink)"><input type="checkbox" id="pbPeak" style="width:auto"> Weekend / tyohaar rate</label></div>
       </div>
-      <div style="margin-top:12px"><label>Hotel ka rate — is quote ke liye (₹ net, ek kamra / raat · extra bed)</label>
+      <div style="margin-top:12px"><label>Hotel ka rate — is quote ke liye (₹ net, ek kamra / raat · extra bed) · class
+          <select id="pbHRcls" style="width:auto;display:inline-block;margin-left:6px"><?php foreach (UT_COST_SECTIONS['hotel']['cols'] as $c => $cl): ?><option value="<?= h($c) ?>"><?= h($cl) ?></option><?php endforeach; ?></select></label>
         <div class="g" id="pbHR">
           <?php foreach (['ujjain' => 'Ujjain', 'omk' => 'Omkareshwar', 'indore' => 'Indore', 'mah' => 'Maheshwar'] as $hc => $hl): ?>
           <div><span class="hint" style="margin:0"><?= h($hl) ?></span><div style="display:flex;gap:6px"><input type="number" min="0" step="any" class="pbHR" data-city="<?= h($hc) ?>" data-f="room" placeholder="kamra"><input type="number" min="0" step="any" class="pbHR" data-city="<?= h($hc) ?>" data-f="extra" placeholder="extra bed"></div></div>
           <?php endforeach; ?>
         </div>
-        <div class="hint">Hotel se phone pe mila rate. Bhara → sirf chuni hui class ke liye Lagat ki jagah ye lagega. Khaali → Lagat.</div></div>
+        <div class="hint">Hotel se phone pe mila rate, aur wo kis class ka hotel hai. Bhara → us class ke liye Lagat ki jagah ye lagega; baaki class Lagat se. Khaali → Lagat.</div></div>
       <div id="pbDays" style="margin-top:12px"></div>
       <button type="button" class="b" id="pbAddDay" style="margin-top:8px">+ Din</button>
       <div class="g" style="margin-top:12px" id="pbExtras">
@@ -463,6 +464,9 @@ function wa_text(array $q): string {
     $('pbLines').appendChild(row);
   };
   $('pbAddLine').addEventListener('click', function () { addLine(); });
+  // The rate's class follows the Hotel select until a rate is typed; after that it stays put ("Ye chuno" never moves it).
+  var ownRatesTyped = function () { return [].some.call(document.querySelectorAll('.pbHR'), function (x) { return x.value !== ''; }); };
+  $('pbHotel').addEventListener('change', function () { if ($('pbHotel').value && !ownRatesTyped()) $('pbHRcls').value = $('pbHotel').value; });
   var customLines = function () {
     return [].map.call($('pbLines').children, function (r) {
       return [r.querySelector('.l1').value.trim(), +r.querySelector('.l2').value || 1, r.querySelector('.l3').value === '' ? null : +r.querySelector('.l3').value, r.querySelector('.l4').value];
@@ -472,8 +476,8 @@ function wa_text(array $q): string {
   // Prices the trip for one hotel class ('' = no hotel). No DOM writes: build() and the options table both call it.
   var price = function (hotel) {
     var P = people(), lines = [], warn = [], missingHotel = false;
-    var car = $('pbCar').value === 'auto' ? carFor(P.pax || 1) : $('pbCar').value;
-    if (!car) { warn.push('12 se zyada log: ek gaadi kaafi nahi — do quote line haath se jodo ya Tempo chuno.'); car = 'tempo'; }
+    var car = $('pbCar').value === 'auto' ? carFor(P.pax || 1) : $('pbCar').value, tooMany = !car;
+    if (tooMany) { warn.push('12 se zyada log: ek gaadi kaafi nahi — do quote line haath se jodo ya Tempo chuno.'); car = 'tempo'; }
     if (!P.pax) warn.push('Upar "Bade (adults)" bharo — hotel, khana, nauka inhi se ginte hain.');
     if (P.noAge) warn.push(P.noAge + ' bachche ki umar nahi likhi — use poora vyakti gina hai. "Bachchon ki umar" bharo.');
     var add = function (key, label, qty, peak, own) {
@@ -500,14 +504,15 @@ function wa_text(array $q): string {
     if (!anyCab) warn.push('Kisi din ka plan nahi chuna — gaadi ka kharcha nahi juda.');
     if (driverNights) add('cab.driver_night.' + car, 'Driver bhatta', driverNights);
 
-    var totalNights = 0, rooms = 0, extra = 0, auto = roomsFor(P), mine = hotel && hotel === $('pbHotel').value;
+    var totalNights = 0, rooms = 0, extra = 0, auto = roomsFor(P), mine = hotel && hotel === $('pbHRcls').value;
     if (hotel) {
       rooms = $('pbRooms').value !== '' ? +$('pbRooms').value : auto[0];
       extra = $('pbExtra').value !== '' ? +$('pbExtra').value : auto[1];
       var peak = $('pbPeak').checked;
+      if (peak && !(+D.set.peak_pct)) warn.push('Tyohaar rate chuna par Lagat me "kamre kitne % mehnge" khaali hai — kuch nahi juda.');
       Object.keys(nights).forEach(function (c) {
         var r = D.hotels[c]; if (!r) return;
-        // This quote's own hotel rate counts for the class picked in the form only; other classes stay on Lagat.
+        // This quote's own hotel rate counts for the class it was typed for (pbHRcls) only; other classes stay on Lagat.
         var ownRoom = mine ? hotelRate(c, 'room') : null, ownExtra = mine ? hotelRate(c, 'extra') : null;
         add('hotel.' + r[0] + '.' + hotel, 'Hotel ' + CITY[c][1], rooms * nights[c], peak, ownRoom === null ? null : { rate: ownRoom, unit: 'kamra × raat' });
         if (extra) add(r[1] ? 'hotel.' + r[1] + '.' + hotel : 'hotel.none', 'Extra bed ' + CITY[c][1], extra * nights[c], peak, ownExtra === null ? null : { rate: ownExtra, unit: 'raat' });
@@ -539,7 +544,7 @@ function wa_text(array $q): string {
     var profit = final / (1 + gst / 100) - cost;
     if (final && D.set.min_profit && profit < D.set.min_profit) warn.push('Munafa ' + inr(profit) + ' — tay kam se kam ' + inr(D.set.min_profit) + ' se kam hai. Markup badhao ya daam haath se badlo.');
     return {
-      P: P, car: car, auto: auto, missingHotel: missingHotel, warn: warn, lines: lines, custom: custom, pujas: pujas,
+      P: P, car: car, tooMany: tooMany, auto: auto, missingHotel: missingHotel, warn: warn, lines: lines, custom: custom, pujas: pujas,
       totals: { net: Math.round(net), markup_pct: mk, sell_rate: Math.round(sellIn), cost: Math.round(cost), sell: Math.round(sell), gst_pct: gst, final: final, profit: Math.round(profit),
         per_person: P.paying ? Math.ceil(final / P.paying) : 0, paying: P.paying },
       meta: { anyCab: anyCab, omk: omk, nights: totalNights, rooms: rooms, extra: extra, pujas: pujas, days: days }
@@ -548,7 +553,7 @@ function wa_text(array $q): string {
 
   var build = function () {
     var hotel = $('pbHotel').value, r = price(hotel);
-    $('pbCarHint').textContent = $('pbCar').value === 'auto' ? 'Chuni: ' + D.cars[r.car] + ' (' + (r.P.pax || 1) + ' log)' : '';
+    $('pbCarHint').textContent = $('pbCar').value === 'auto' ? (r.tooMany ? '12 se zyada log — gaadi khud chuno' : 'Chuni: ' + D.cars[r.car] + ' (' + (r.P.pax || 1) + ' log)') : '';
     $('pbRoomHint').textContent = hotel ? 'Auto: ' + r.auto[0] + ' kamra · ' + r.auto[1] + ' extra bed' + (r.P.kidsFree ? ' · ' + r.P.kidsFree + ' chhota bachcha (' + D.set.child_free_age + ' saal se kam) — paisa nahi' : '') : 'Khaali = logon se apne aap (2 per kamra)';
     // Same trip in every hotel class (Lagat rates; the picked class also uses this quote's own hotel rate).
     var opts = r.meta.nights ? Object.keys(D.rooms).map(function (c) {
@@ -558,6 +563,7 @@ function wa_text(array $q): string {
     last = {
       state: { start: $('pbStart').value, markup: $('pbMarkup').value, car: $('pbCar').value, carUsed: r.car, hotel: hotel, rooms: $('pbRooms').value, extra: $('pbExtra').value,
         meal: $('pbMeal').value, peak: $('pbPeak').checked, boat: $('pbBoat').checked, water: $('pbWater').checked, pujas: r.pujas,
+        hotelRateCls: $('pbHRcls').value,
         hotelRates: [].filter.call(document.querySelectorAll('.pbHR'), function (x) { return x.value !== ''; }).map(function (x) { return [x.dataset.city, x.dataset.f, +x.value]; }),
         custom: r.custom,
         days: [].map.call(daysBox.children, function (row) { return [row.querySelector('.p1').value, row.querySelector('.p2').value]; }) },
@@ -638,7 +644,13 @@ function wa_text(array $q): string {
     if (!last) return;
     var b = $('pbOptCopy'), txt = optionsText();
     b.dataset.text = txt;
-    navigator.clipboard.writeText(txt).then(function () { b.textContent = 'Copied ✓ — WhatsApp me paste karo'; setTimeout(function () { b.textContent = 'Options text copy'; }, 2500); });
+    var manual = function () {   // clipboard blocked (some phone browsers) → show the text to copy by hand
+      var t = document.getElementById('pbOptTxt') || $('pbOpts').appendChild(document.createElement('textarea'));
+      t.id = 'pbOptTxt'; t.rows = 10; t.readOnly = true; t.style.marginTop = '10px'; t.value = txt; t.focus(); t.select();
+      b.textContent = 'Neeche se copy karo';
+    };
+    if (!navigator.clipboard) return manual();
+    navigator.clipboard.writeText(txt).then(function () { b.textContent = 'Copied ✓ — WhatsApp me paste karo'; setTimeout(function () { b.textContent = 'Options text copy'; }, 2500); }, manual);
   });
 
   var apply = function () {
@@ -687,6 +699,7 @@ function wa_text(array $q): string {
     $('pbStart').value = st.start || ''; if (st.markup !== undefined && st.markup !== '') $('pbMarkup').value = st.markup; $('pbCar').value = st.car || 'auto'; $('pbHotel').value = st.hotel || '';
     $('pbRooms').value = st.rooms || ''; $('pbExtra').value = st.extra || ''; $('pbMeal').value = st.meal || 'EP';
     $('pbPeak').checked = !!st.peak; $('pbBoat').checked = st.boat !== false; $('pbWater').checked = !!st.water;
+    $('pbHRcls').value = st.hotelRateCls || st.hotel || 'standard';
     (st.hotelRates || []).forEach(function (x) { var i = document.querySelector('.pbHR[data-city="' + x[0] + '"][data-f="' + x[1] + '"]'); if (i) i.value = x[2]; });
     (st.custom || []).forEach(function (l) { addLine(l); });
     document.querySelectorAll('.pbPuja').forEach(function (x) {
@@ -697,6 +710,7 @@ function wa_text(array $q): string {
   } else {
     var firstDate = document.querySelector('#days input[type=date]');
     $('pbStart').value = firstDate && firstDate.value ? firstDate.value : '';
+    $('pbHRcls').value = 'standard';
     addDay('local_7');
   }
 })();
