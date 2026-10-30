@@ -14,7 +14,7 @@ const UT_RATE_VEHICLES = ['dzire', 'ertiga', 'innova'];
 const UT_RATE_ROUTES = [
   'omkareshwar-round'  => 'Omkareshwar round trip',
   'omkareshwar-oneway' => 'Omkareshwar one way',
-  'ujjain-local'       => 'Ujjain local 7 hr / 70 km',
+  'ujjain-local'       => 'Ujjain local 8 hr / 80 km',
   'ujjain-fullday'     => 'Ujjain full day 12 hr / 120 km',
   'indore-airport'     => 'Indore airport',
 ];

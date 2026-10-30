@@ -13,6 +13,11 @@
  *   One-way = same as round trip (Aman: keep one-way, same rate — a −₹500 drop would have been at cost).
  *   Airport (not on the sheet): ~120 km at the vendor km rate + 15% → 1,700 / 1,900 / 2,700.
  *   Local limits 7 hr / 70 km and full day 12 hr / 120 km are Claude's proposal, Aman OK'd.
+ *
+ * 2026-10-30 — local package 7 hr / 70 km → 8 hr / 80 km at the same fares (Aman: "kar do").
+ *   Market sells 8 hr / 80 km at ₹1,500–2,200 for a sedan; ours gave less for the top of that range.
+ *   🔴 Vendor's sheet only prices 7 hr (1,800) — confirm his 8 hr rate before deploy, else the
+ *   Dzire margin is ~₹50–300 instead of ~₹300.
  * - All fares include toll, parking, fuel and the driver's charges.
  */
 
@@ -54,8 +59,8 @@ export const CAB_ROUTES: Record<RouteId, CabRoute> = {
   },
   'ujjain-local': {
     id: 'ujjain-local',
-    title: { hi: 'उज्जैन लोकल दर्शन — 7 घंटे', en: 'Ujjain local darshan — 7 hours' },
-    detail: { hi: '7 घंटे / 70 किमी — उज्जैन के मंदिर और घाट', en: '7 hours / 70 km — Ujjain temples and ghats' },
+    title: { hi: 'उज्जैन लोकल दर्शन — 8 घंटे', en: 'Ujjain local darshan — 8 hours' },
+    detail: { hi: '8 घंटे / 80 किमी — उज्जैन के मंदिर और घाट', en: '8 hours / 80 km — Ujjain temples and ghats' },
     fares: { dzire: 2100, ertiga: 2500, innova: 4000 },
     extra: {
       dzire:  { km: 13, hour: 300 },
@@ -99,7 +104,7 @@ export const PLACES: Record<PlaceId, B> = {
   indore:        { hi: 'इंदौर (शहर)', en: 'Indore (city)' },
   idr:           { hi: 'इंदौर एयरपोर्ट', en: 'Indore Airport' },
   omkareshwar:   { hi: 'ओंकारेश्वर', en: 'Omkareshwar' },
-  'ujjain-local': { hi: '7 घंटे / 70 किमी', en: '7 hours / 70 km' },
+  'ujjain-local': { hi: '8 घंटे / 80 किमी', en: '8 hours / 80 km' },
   'ujjain-fullday': { hi: 'पूरा दिन — 12 घंटे / 120 किमी', en: 'Full day — 12 hours / 120 km' },
 };
 

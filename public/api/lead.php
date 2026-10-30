@@ -213,8 +213,13 @@ else                                         { $tier = 'WARM'; $mark = '[LEAD]';
 
 $subject = "$mark UjjainTemple — $name · $plabel";
 // Saw the fares but has not paid (cab widget fare gate) — the lead to chase first (2026-10-28).
-$sawFares = strpos($message, 'Cab fare enquiry:') === 0;
+// Anywhere, not at 0: a QUICK/PREMIUM tier line is prepended above (AVINASH 10-29 lost the 🔥).
+$sawFares = strpos($message, 'Cab fare enquiry:') !== false;
 if ($sawFares) $subject = '🔥 FARE DEKHA · ' . $subject;
+// Reserved with no advance (2026-10-30) — the customer has said yes to a car and a fare; the team
+// calls, then sends the ₹500 link before the due date written in the message.
+$reservedLead = strpos($message, 'RESERVED (no advance):') !== false;
+if ($reservedLead) $subject = '🟢 RESERVED · ₹500 baaki · ' . $subject;
 
 /*
  * The mail is the product here — Aman reads it on a phone and decides whether to call.

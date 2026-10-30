@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, Car, Check, CheckCircle2, Clock, Download, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BadgeIndianRupee, Building2, Calendar, CalendarCheck, Car, Check, CheckCircle2, Clock, Download, KeyRound, Loader2, Lock, MapPin, MessageCircle, Navigation, Phone, PhoneCall, ShieldCheck, User, Users, Wallet } from 'lucide-react';
 import type { Locale } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { CONTACT_EVT, readContact, saveContact } from '../../lib/cabContact';
@@ -132,6 +132,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [paying, setPaying] = useState(false);
   const [bookingId, setBookingId] = useState('');
   const [requested, setRequested] = useState(false);   // step 4 without payment (gateway off)
+  const [reserved, setReserved] = useState(false);     // step 4: reserved, advance due later
   const [error, setError] = useState('');
   const [known, setKnown] = useState(false);            // contact already given (this visit or a recent one)
   const [otpSent, setOtpSent] = useState(false);
@@ -320,6 +321,43 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     setStep(4);
   };
 
+  /* Reserve now, advance later (Aman, 2026-10-30). The first 4 real visitors who saw a fare all
+     left without tapping "Pay ₹500" — 3 of them were travelling 7–59 days out, and nobody pays a
+     site they met today for a trip two months away. A trip 3+ days out can be reserved with no
+     money; the ₹500 is due 2 days before travel, by the follow-up link in the lead mail. Inside
+     3 days the ₹500 stays the main button (the car has to be blocked now). */
+  const daysAhead = days.findIndex((d) => d.iso === date) + 1;   // list starts tomorrow = 1
+  const canReserve = daysAhead >= 3;
+  const payByIso = (() => {
+    if (!date) return '';
+    const d = new Date(`${date}T00:00:00`); d.setDate(d.getDate() - 2);
+    return isoOf(d);
+  })();
+  const payByLabel = payByIso
+    ? new Date(`${payByIso}T00:00:00`).toLocaleDateString(hi ? 'hi-IN' : 'en-IN', { day: 'numeric', month: 'short' })
+    : '';
+  const reserve = () => {
+    if (!routeId || fare === null) return;
+    if (!checkContact()) { setStep(2); return; }
+    const fd = new FormData();
+    Object.entries({
+      name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'form',
+      sourcePage: `booking:${source}`, locale, travelDate: date,
+      message: `RESERVED (no advance): ${tripNote} · ₹${ADVANCE} due by ${payByIso}${pickupNote ? ` · Pickup: ${pickupNote}` : ''}`,
+      bkFrom: from, bkTo: to, bkType: type, bkTime: time, bkVehicle: vehicle, bkTrip: `${tripLine} · ${VEHICLES[vehicle].name}`,
+      bkFares: `${VEHICLES[vehicle].name} ${inr(fare)}`,
+    }).forEach(([k, v]) => fd.append(k, v));
+    fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* the screen still shows the reservation */ });
+    window.gtag?.('event', 'cab_reserve', { route: routeId, vehicle, fare, days_ahead: daysAhead, source });
+    window.gtag?.('event', 'generate_lead', { form_id: 'cab_reserve', route: routeId, vehicle });
+    setError('');
+    setReserved(true);
+    setStep(4);
+  };
+  const talkFirstUrl = `${SITE.whatsapp}?text=${encodeURIComponent(hi
+    ? `नमस्ते! मैं ${name.trim()} हूँ। ये कैब बुक करने से पहले बात करनी है: ${tripNote}`
+    : `Hello! I am ${name.trim()}. I would like to talk before booking this cab: ${tripNote}`)}`;
+
   const pay = async () => {
     if (paying || !routeId || fare === null) return;
     if (!checkContact()) { setStep(2); return; }
@@ -371,6 +409,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           if (out.success) {
             window.gtag?.('event', 'purchase', { transaction_id: order.booking_id, value: ADVANCE, currency: 'INR', items: [{ item_name: `${routeId}:${vehicle}` }] });
             setBookingId(order.booking_id || '');
+            setReserved(false);
             setStep(4);
           } else {
             setError(hi ? `पेमेंट की पुष्टि नहीं हो सकी — बुकिंग ID ${order.booking_id} के साथ हमें कॉल करें` : `Could not confirm the payment — call us with booking ID ${order.booking_id}`);
@@ -659,16 +698,43 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                       onChange={(e) => setPickupNote(e.target.value)} placeholder={hi ? 'होटल का नाम, स्टेशन या फ़्लाइट नंबर' : 'Hotel name, station or flight number'} />
                   </div>
                 </div>
-                <button type="button" onClick={pay} disabled={paying}
-                  className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
-                  {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
-                  {hi ? `₹${ADVANCE} देकर ${VEHICLES[vehicle].name} पक्की करें` : `Pay ₹${ADVANCE} · book ${VEHICLES[vehicle].name}`}
-                </button>
-                <p className="text-center text-xs text-ink-mute">
-                  {hi
-                    ? `बाकी ${inr(fare - ADVANCE)} ड्राइवर को नकद या UPI में · Razorpay से सुरक्षित भुगतान (UPI, कार्ड, नेटबैंकिंग)`
-                    : `Balance ${inr(fare - ADVANCE)} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
-                </p>
+                {canReserve ? (
+                  <>
+                    <button type="button" onClick={reserve} data-reserve
+                      className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99]">
+                      <CalendarCheck className="h-5 w-5" aria-hidden />
+                      {hi ? `बिना एडवांस ${VEHICLES[vehicle].name} रिज़र्व करें` : `Reserve ${VEHICLES[vehicle].name} — no advance now`}
+                    </button>
+                    <p className="text-center text-xs text-ink-mute">
+                      {hi
+                        ? `किराया ${inr(fare)} तय · ₹${ADVANCE} एडवांस ${payByLabel} तक, लिंक WhatsApp पर आएगा · बाकी ड्राइवर को`
+                        : `Fare ${inr(fare)} locked · ₹${ADVANCE} advance by ${payByLabel}, link comes on WhatsApp · rest to the driver`}
+                    </p>
+                    <button type="button" onClick={pay} disabled={paying}
+                      className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5 disabled:opacity-70">
+                      {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
+                      {hi ? `या अभी ₹${ADVANCE} देकर पक्की करें` : `Or pay ₹${ADVANCE} now to confirm`}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button type="button" onClick={pay} disabled={paying}
+                      className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-lg font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
+                      {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
+                      {hi ? `₹${ADVANCE} देकर ${VEHICLES[vehicle].name} पक्की करें` : `Pay ₹${ADVANCE} · book ${VEHICLES[vehicle].name}`}
+                    </button>
+                    <p className="text-center text-xs text-ink-mute">
+                      {hi
+                        ? `बाकी ${inr(fare - ADVANCE)} ड्राइवर को नकद या UPI में · Razorpay से सुरक्षित भुगतान (UPI, कार्ड, नेटबैंकिंग)`
+                        : `Balance ${inr(fare - ADVANCE)} to the driver in cash or UPI · Secure payment by Razorpay (UPI, card, netbanking)`}
+                    </p>
+                    <a href={talkFirstUrl} target="_blank" rel="noopener" data-talk-first
+                      onClick={() => window.gtag?.('event', 'cab_talk_first', { route: routeId, vehicle, source })}
+                      className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
+                      <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'पहले बात करें — WhatsApp' : 'Talk to us first — WhatsApp'}
+                    </a>
+                  </>
+                )}
               </>
             ) : (
               <a href={SITE.phoneTel} className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
@@ -695,6 +761,51 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
               <Phone className="h-5 w-5" aria-hidden /> {hi ? `अभी कॉल करें ${SITE.phone}` : `Call now ${SITE.phone}`}
             </a>
+          </div>
+        ) : reserved ? (
+          <div className="space-y-4 py-1" data-reserved>
+            <div className="overflow-hidden rounded-2xl border border-gold/50 bg-white text-left">
+              <div className="flex items-center justify-between gap-3 bg-maroon px-4 py-3 text-white">
+                <p className="font-serif text-lg font-bold leading-none">UjjainTemple.com</p>
+                <span className="text-sm font-extrabold">{hi ? 'रिज़र्व' : 'RESERVED'}</span>
+              </div>
+              <div className="space-y-3 p-4">
+                <div className="flex items-start gap-3">
+                  <CalendarCheck className="mt-0.5 h-8 w-8 shrink-0 text-maroon" aria-hidden />
+                  <div>
+                    <h3 className={`text-xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>{hi ? 'आपकी कैब रिज़र्व हो गई' : 'Your cab is reserved'}</h3>
+                    <p className="text-sm text-ink-soft">{hi ? 'अभी कोई भुगतान नहीं।' : 'Nothing to pay now.'}</p>
+                  </div>
+                </div>
+                <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5 rounded-xl bg-cream-light/70 p-3 text-sm">
+                  <dt className="text-ink-mute">{hi ? 'यात्रा' : 'Trip'}</dt><dd className="font-semibold text-ink">{tripLine}</dd>
+                  <dt className="text-ink-mute">{hi ? 'तारीख़ व समय' : 'Date & time'}</dt><dd className="font-semibold text-ink">{dayLabel}, {slotLabel}</dd>
+                  <dt className="text-ink-mute">{hi ? 'गाड़ी' : 'Car'}</dt><dd className="font-semibold text-ink">{VEHICLES[vehicle].name}</dd>
+                  <dt className="text-ink-mute">{hi ? 'तय किराया' : 'Fare (locked)'}</dt><dd className="font-semibold text-ink">{fare !== null ? inr(fare) : ''}</dd>
+                  <dt className="text-ink-mute">{hi ? 'यात्री' : 'Name'}</dt><dd className="font-semibold text-ink">{name.trim()} · {phone.trim()}</dd>
+                </dl>
+                <div>
+                  <p className="mb-1 text-xs font-bold text-ink-mute">{hi ? 'आगे क्या होगा' : 'What happens next'}</p>
+                  <ol className="space-y-1 text-sm text-ink-soft">
+                    <li>1. {hi ? 'हमारी टीम आपको कॉल करके पिकअप की जगह पक्की करेगी।' : 'Our team calls you to confirm the pickup point.'}</li>
+                    <li>2. {hi ? `${payByLabel} तक ₹${ADVANCE} एडवांस का लिंक WhatsApp पर आएगा — एडवांस मिलते ही बुकिंग पक्की।` : `By ${payByLabel}, a ₹${ADVANCE} advance link comes on WhatsApp — the booking is confirmed once it is paid.`}</li>
+                    <li>3. {hi ? `बाकी ${fare !== null ? inr(fare - ADVANCE) : ''} ड्राइवर को नकद या UPI में।` : `The balance ${fare !== null ? inr(fare - ADVANCE) : ''} goes to the driver in cash or UPI.`}</li>
+                  </ol>
+                  <p className="mt-2 text-xs text-ink-mute">{hi ? `एडवांस के बिना रिज़र्वेशन ${payByLabel} तक रहता है।` : `Without the advance, the reservation holds until ${payByLabel}.`}</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" onClick={pay} disabled={paying}
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-maroon py-3 font-bold text-white hover:bg-maroon/90 disabled:opacity-70">
+              {paying ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <Lock className="h-5 w-5" aria-hidden />}
+              {hi ? `अभी ₹${ADVANCE} देकर पक्की करें` : `Pay ₹${ADVANCE} now to confirm`}
+            </button>
+            <a href={`${SITE.whatsapp}?text=${encodeURIComponent(hi ? `नमस्ते! मैंने ये कैब रिज़र्व की है: ${tripNote}` : `Hello! I have reserved this cab: ${tripNote}`)}`}
+              target="_blank" rel="noopener"
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
+              <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर रिज़र्वेशन भेजें' : 'Send the reservation on WhatsApp'}
+            </a>
+            {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
           </div>
         ) : (
           <div className="space-y-4 py-1">
