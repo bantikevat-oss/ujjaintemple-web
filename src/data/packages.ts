@@ -17,8 +17,8 @@ export const packagesData: TourPackageData[] = [
   {
     slug: 'ujjain-darshan-package',
     title: {
-      hi: 'उज्जैन दर्शन टैक्सी टूर पैकेज',
-      en: 'Ujjain Darshan Taxi Tour Package'
+      hi: 'उज्जैन दर्शन टूर पैकेज (1 दिन)',
+      en: 'Ujjain Darshan Tour Package (1 Day)'
     },
     heroImage: '/images/mandirs/mahakaleshwar.jpg', // Using existing mahakal image
     description: {
@@ -65,8 +65,8 @@ export const packagesData: TourPackageData[] = [
   {
     slug: 'ujjain-omkareshwar-package',
     title: {
-      hi: 'उज्जैन - ओंकारेश्वर पैकेज',
-      en: 'Ujjain - Omkareshwar Package'
+      hi: 'उज्जैन ओंकारेश्वर टूर पैकेज (2 दिन)',
+      en: 'Ujjain Omkareshwar Tour Package (2 Days)'
     },
     heroImage: '/images/mandirs/omkareshwar.jpg',
     description: {
@@ -228,12 +228,12 @@ export const packagesData: TourPackageData[] = [
     },
     heroImage: '/images/mandirs/baglamukhi.jpg',
     description: {
-      hi: 'उज्जैन के महाकालेश्वर ज्योतिर्लिंग के साथ-साथ नलखेड़ा स्थित विश्व प्रसिद्ध चमत्कारी शक्तिपीठ माँ बगलामुखी मंदिर के दर्शन का विशेष दो दिवसीय पैकेज। माँ बगलामुखी (दस महाविद्याओं में से एक) को शत्रुओं का नाश करने वाली और मुकदमों में विजय दिलाने वाली देवी माना जाता है। महाभारत काल से पूजित इस पवित्र मंदिर में दर्शन और अनुष्ठान से भक्तों की सभी मनोकामनाएं पूर्ण होती हैं।',
-      en: 'A special 2-day package combining Mahakaleshwar darshan in Ujjain with a visit to the world-famous miraculous Shaktipeeth, Maa Baglamukhi Temple in Nalkheda. Maa Baglamukhi (one of the ten Mahavidyas) is revered as the goddess who destroys enemies and grants victory in legal battles and disputes. Worshipped since the Mahabharata era, a visit to this highly potent temple fulfills all the wishes of the devotees.'
+      hi: 'उज्जैन के महाकालेश्वर ज्योतिर्लिंग के साथ-साथ नलखेड़ा स्थित विश्व प्रसिद्ध चमत्कारी शक्तिपीठ माँ बगलामुखी मंदिर के दर्शन का विशेष दो दिवसीय पैकेज। माँ बगलामुखी (दस महाविद्याओं में से एक) को शत्रुओं का नाश करने वाली और मुकदमों में विजय दिलाने वाली देवी माना जाता है। यह मंदिर महाभारत काल से पूजित माना जाता है।',
+      en: 'A special 2-day package combining Mahakaleshwar darshan in Ujjain with a visit to the world-famous miraculous Shaktipeeth, Maa Baglamukhi Temple in Nalkheda. Maa Baglamukhi (one of the ten Mahavidyas) is revered as the goddess who destroys enemies and grants victory in legal battles and disputes. The temple is believed to have been worshipped since the Mahabharata era.'
     },
     itinerary: [
       {
-        dayTitle: { hi: 'पहला दिन: उज्जैन दर्शन और महाकाल पूजा', en: 'Day 1: Ujjain Darshan and Mahakal Puja' },
+        dayTitle: { hi: 'पहला दिन: उज्जैन दर्शन', en: 'Day 1: Ujjain Darshan' },
         content: { hi: 'उज्जैन आगमन पर होटल में चेक-इन करें। दिन भर उज्जैन के पवित्र मंदिरों के दर्शन करें।', en: 'Check-in to the hotel upon arrival in Ujjain. Spend the day visiting the holy temples of Ujjain.' },
         list: [
           { hi: 'श्री महाकालेश्वर ज्योतिर्लिंग के दर्शन', en: 'Darshan of Shree Mahakaleshwar Jyotirlinga' },
@@ -246,7 +246,7 @@ export const packagesData: TourPackageData[] = [
         dayTitle: { hi: 'दूसरा दिन: माँ बगलामुखी (नलखेड़ा) दर्शन', en: 'Day 2: Maa Baglamukhi (Nalkheda) Darshan' },
         content: { hi: 'सुबह जल्दी नलखेड़ा के लिए प्रस्थान (उज्जैन से लगभग 100 किमी)। माँ बगलामुखी को तंत्र-मंत्र और शत्रुओं पर विजय की देवी माना जाता है।', en: 'Early morning departure to Nalkheda (approx 100km from Ujjain). Maa Baglamukhi is revered as the goddess of Tantra and victory over enemies.' },
         list: [
-          { hi: 'माँ बगलामुखी मंदिर में विशेष दर्शन', en: 'Special Darshan at Maa Baglamukhi Temple' },
+          { hi: 'माँ बगलामुखी मंदिर में दर्शन', en: 'Darshan at Maa Baglamukhi Temple' },
           { hi: 'विशेष अनुष्ठान, हवन या यज्ञ (यदि पूर्व निर्धारित हो)', en: 'Special rituals, Havan or Yagya (if pre-booked)' },
           { hi: 'आस-पास के अन्य प्राचीन मंदिरों के दर्शन', en: 'Visit to other ancient temples nearby' }
         ],
@@ -376,17 +376,17 @@ export const packagesData: TourPackageData[] = [
   {
     slug: 'ujjain-premium-tour-package',
     title: {
-      hi: 'उज्जैन प्रीमियम टूर पैकेज — लक्ज़री दर्शन अनुभव',
-      en: 'Ujjain Premium Tour Package — Luxury Darshan Experience'
+      hi: 'उज्जैन प्रीमियम टूर पैकेज — डीलक्स होटल, निजी SUV',
+      en: 'Ujjain Premium Tour Package — Deluxe Hotel, Private SUV'
     },
     heroImage: '/images/mandirs/mahakaleshwar.jpg',
     description: {
-      hi: 'उज्जैन प्रीमियम टूर पैकेज एक आरामदायक, निजी व लक्ज़री दर्शन अनुभव प्रदान करता है। इसमें निजी AC SUV (इनोवा), मंदिर के निकट प्रीमियम होटल सुझाव, अनुभवी गाइड सहायता, व लचीला इटिनरेरी शामिल है। जोड़ों (couple), परिवार व VIP अतिथियों हेतु आदर्श — बिना भागदौड़ के शांत, गरिमामय यात्रा। बुकिंग: +91 89890 06759।',
-      en: 'The Ujjain premium tour package offers a comfortable, private and luxury darshan experience. It includes a private AC SUV (Innova), premium-hotel suggestions near the temple, experienced guide assistance and a flexible itinerary. Ideal for couples, families and VIP guests — a calm, dignified trip without any rush. Booking: +91 89890 06759.'
+      hi: 'उज्जैन प्रीमियम टूर पैकेज आरामदायक और निजी यात्रा के लिए है। इसमें निजी AC SUV (इनोवा), मंदिर के निकट डीलक्स या प्रीमियम होटल, अनुभवी गाइड सहायता और लचीली दिन-वार योजना शामिल है। दंपति, परिवार व वरिष्ठ नागरिकों के लिए उपयुक्त — बिना भागदौड़ के शांत, गरिमामय यात्रा। बुकिंग: +91 89890 06759।',
+      en: 'The Ujjain premium tour package is for a comfortable, private trip. It includes a private AC SUV (Innova), a deluxe or premium hotel near the temple, experienced guide assistance and a flexible itinerary. Ideal for couples, families and senior citizens — a calm, dignified trip without any rush. Booking: +91 89890 06759.'
     },
     itinerary: [
       {
-        dayTitle: { hi: 'निजी लक्ज़री दर्शन', en: 'Private Luxury Darshan' },
+        dayTitle: { hi: 'निजी गाड़ी, आराम की गति', en: 'Private Car, Unhurried Pace' },
         content: {
           hi: 'निजी SUV, लचीला समय, आरामदायक गति से सभी प्रमुख दर्शन व गाइड सहायता।',
           en: 'Private SUV, flexible timing, all major darshan at a comfortable pace with guide assistance.'

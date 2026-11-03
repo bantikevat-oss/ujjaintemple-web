@@ -8,9 +8,11 @@ interface Props {
   defaultService?: 'darshanPlan' | 'hotel' | 'transport' | 'tour' | 'group' | 'simhastha' | 'cab';
   variant?: 'card' | 'inline';
   sourcePage?: string;
+  /** Show the hotel-class question (package pages). */
+  askStay?: boolean;
 }
 
-export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePage = '' }: Props) {
+export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePage = '', askStay = false }: Props) {
   const { t, locale } = useI18n();
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
@@ -30,6 +32,7 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
         form_id: 'lead_form',
         trip_shape: String(data.get('tripShape') || 'none'),
         group_size: String(data.get('travellers') || 'unknown'),
+        stay: String(data.get('stay') || 'none_given'),
       });
     } catch {
       setStatus('error');
@@ -90,7 +93,7 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
             <input id="lf-date" name="travelDate" type="date"
               className="w-full rounded-md border border-cream-dark px-3 py-2 focus:border-maroon focus:outline-none focus:ring-1 focus:ring-maroon" />
           </div>
-          <TripShapeFields idPrefix="lf" />
+          <TripShapeFields idPrefix="lf" askStay={askStay} />
           <div>
             <label className="block text-sm font-medium text-ink-soft mb-1" htmlFor="lf-service">{t('form.service')}</label>
             <select id="lf-service" name="service" defaultValue={defaultService}

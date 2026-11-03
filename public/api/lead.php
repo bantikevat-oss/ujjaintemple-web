@@ -69,6 +69,8 @@ function pick($v, $allowed) { return in_array($v, $allowed, true) ? $v : ''; }
 $people    = pick(clean($_POST['travellers'] ?? ''), ['1-2', '3-5', '6-9', '10+']);
 $tripDays  = pick(clean($_POST['tripDays'] ?? ''), ['1', '2', '3+']);
 $shape     = pick(clean($_POST['tripShape'] ?? ''), ['cab', 'cab_hotel', 'full_plan']);
+// Hotel class from the package-page form (2026-11-03) — same classes "Package banao" prices.
+$stay      = pick(clean($_POST['stay'] ?? ''), ['budget', 'standard', 'deluxe', 'premium', 'none']);
 $fromCity  = trim(preg_replace('/[^\p{L}\s.\-]/u', '', clean($_POST['fromCity'] ?? '')));
 $fromCity  = function_exists('mb_substr') ? mb_substr($fromCity, 0, 40) : substr($fromCity, 0, 40);
 
@@ -139,8 +141,8 @@ $mail_ok   = !$burst && !$dayFlood;
 /*
  * Premium vs quick, decided here so the tier is written into the CSV/CRM message too.
  * Plain rules on purpose — no scoring weights to argue about later:
- *   PREMIUM = 10+ people, 6–9 people, 2+ days, cab + hotel, a full trip plan, or a
- *             phone number from abroad (+ code other than +91).
+ *   PREMIUM = 10+ people, 6–9 people, 2+ days, cab + hotel, a full trip plan, a
+ *             deluxe/premium hotel class, or a phone number from abroad (+ code other than +91).
  *   QUICK   = cab only (by shape or purpose) AND travelling within 2 days AND not premium
  *             — someone already on the way who needs a car. Still a lead; just called last.
  * Nothing is inferred from free text: if a visitor skipped the fields, the lead keeps
@@ -151,11 +153,13 @@ if ($travel !== '' && ($ts0 = strtotime($travel)) !== false) {
   $leadDays = (int) floor(($ts0 - strtotime('today')) / 86400);
 }
 $shapeLabels = ['cab' => 'Sirf cab', 'cab_hotel' => 'Cab + hotel', 'full_plan' => 'Poora trip plan'];
+$stayLabels  = ['budget' => 'Budget / dharamshala', 'standard' => 'Standard', 'deluxe' => 'Deluxe', 'premium' => 'Premium', 'none' => 'Nahi chahiye'];
 $isPremium = $purpose === 'group'
   || $isAbroad
   || in_array($people, ['6-9', '10+'], true)
   || in_array($tripDays, ['2', '3+'], true)
-  || in_array($shape, ['cab_hotel', 'full_plan'], true);
+  || in_array($shape, ['cab_hotel', 'full_plan'], true)
+  || in_array($stay, ['deluxe', 'premium'], true);
 $cabOnly  = $shape === 'cab' || ($shape === '' && in_array($purpose, ['cab'], true))
   || ($shape === '' && $purpose === '' && in_array($service, ['cab', 'transport'], true));
 $isQuick  = !$isPremium && $cabOnly && $leadDays !== null && $leadDays >= 0 && $leadDays <= 2;
@@ -164,6 +168,7 @@ $trip = [];
 if ($people !== '')   $trip[] = "Log: $people";
 if ($tripDays !== '') $trip[] = "Din: $tripDays";
 if ($shape !== '')    $trip[] = 'Plan: ' . $shapeLabels[$shape];
+if ($stay !== '')     $trip[] = 'Hotel: ' . $stayLabels[$stay];
 if ($fromCity !== '') $trip[] = "Kahan se: $fromCity";
 if ($isAbroad)        $trip[] = 'Videsh se (country code ke saath number)';
 if ($isPremium)       $trip[] = 'Tier: PREMIUM';

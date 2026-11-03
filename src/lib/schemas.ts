@@ -370,6 +370,27 @@ export function taxiServiceSchema() {
   };
 }
 
+/**
+ * A tour package as a TouristTrip (2026-11-03). No `offers`: rates are given on the call, and
+ * an Offer without a price would be a claim we do not print anywhere on the page.
+ */
+export function touristTripSchema(t: { name: string; description: string; url: string; image: string; touristType: string; days: string[] }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: t.name,
+    description: t.description,
+    url: t.url,
+    image: t.image.startsWith('http') ? t.image : `${SITE.url}${t.image}`,
+    touristType: t.touristType,
+    provider: { '@id': `${SITE.url}/#organization` },
+    itinerary: {
+      '@type': 'ItemList',
+      itemListElement: t.days.map((name, i) => ({ '@type': 'ListItem', position: i + 1, name })),
+    },
+  };
+}
+
 export function itemListSchema(items: Array<{ name: string; url: string; description: string; image?: string }>) {
   return {
     '@context': 'https://schema.org',

@@ -14,10 +14,11 @@ import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { getPackageBySlug } from '../data/packages';
+import { PACKAGE_SALES } from '../data/package-sales';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema, faqSchema } from '../lib/schemas';
+import { breadcrumbSchema, faqSchema, touristTripSchema } from '../lib/schemas';
 import { PackageBookingGuide, PACKAGE_FAQS } from '../components/global/PackageBookingGuide';
-import { Phone, PhoneCall } from 'lucide-react';
+import { PhoneCall, Clock, BedDouble, Car, Users, MapPin, Hotel } from 'lucide-react';
 import { NotFound } from './NotFound';
 
 export function TourPackageDetail({ slug }: { slug: string }) {
@@ -34,12 +35,25 @@ export function TourPackageDetail({ slug }: { slug: string }) {
   const title = pkg.title[locale];
   const descriptionText = pkg.description[locale];
   const path = `/tour-and-travel-ujjain/${slug}/`;
+  const sales = PACKAGE_SALES[slug];
+  const isHi = locale === 'hi';
+  const seoTitle = sales?.seoTitle ? sales.seoTitle[locale] : `${title} | Ujjain Tour Packages`;
+  const metaDescription = sales?.metaDescription ? sales.metaDescription[locale] : descriptionText;
+  const packageFaqs = sales?.faqs ?? [];
+  const glance = sales
+    ? [
+        { icon: Clock, label: isHi ? 'अवधि' : 'Duration', value: sales.duration[locale] },
+        { icon: BedDouble, label: isHi ? 'ठहरना' : 'Stay', value: sales.stay[locale] },
+        { icon: Car, label: isHi ? 'गाड़ी' : 'Travel', value: isHi ? 'ड्राइवर सहित निजी AC गाड़ी — लोगों के हिसाब से सेडान, SUV या टेम्पो ट्रैवलर' : 'Private AC car with driver — sedan, SUV or tempo traveller by group size' },
+        { icon: Users, label: isHi ? 'किसके लिए' : 'Ideal for', value: sales.idealFor[locale] },
+      ]
+    : [];
 
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Tour Packages`}
-        description={descriptionText}
+        title={seoTitle}
+        description={metaDescription}
         path={path}
         locale={locale}
         schemas={[breadcrumbSchema({
@@ -48,7 +62,15 @@ export function TourPackageDetail({ slug }: { slug: string }) {
             { name: locale === 'hi' ? 'टूर पैकेज' : 'Tour Packages', url: `${SITE.url}/tour-and-travel-ujjain/` },
             { name: title, url: `${SITE.url}${path}` },
           ]
-        }), faqSchema(PACKAGE_FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] })))]}
+        }), faqSchema([...packageFaqs, ...PACKAGE_FAQS].map((f) => ({ q: f.q[locale], a: f.a[locale] }))),
+        touristTripSchema({
+          name: title,
+          description: metaDescription,
+          url: `${SITE.url}${isHi ? '/hi' : ''}${path}`,
+          image: pkg.heroImage,
+          touristType: sales ? sales.idealFor[locale] : (isHi ? 'तीर्थयात्री' : 'Pilgrims'),
+          days: pkg.itinerary.map((d) => d.dayTitle[locale]),
+        })]}
       />
       <Layout>
         {/* ── TOP MAROON BANNER (plain, left-aligned — matches temple/puja hero) ── */}
@@ -90,15 +112,44 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-maroon-900/60 to-transparent" />
               </div>
 
-              {/* Description */}
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-cream">
-                <h2 className="font-serif text-3xl font-bold text-maroon mb-6 border-b-2 border-saffron inline-block pb-2">
-                  {locale === 'hi' ? 'विवरण' : 'Description'}
-                </h2>
-                <p className="text-lg text-ink-soft leading-relaxed font-serif italic">
-                  {descriptionText}
-                </p>
-              </div>
+              {/* At a glance — the facts a package searcher compares on (replaced a card that
+                  repeated the hero description word for word, 2026-11-03). */}
+              {sales && (
+                <div className="rounded-2xl border border-cream bg-white p-6 shadow-sm sm:p-8">
+                  <h2 className={`font-bold text-maroon ${isHi ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl sm:text-3xl'}`}>
+                    {isHi ? 'एक नज़र में' : 'At a glance'}
+                  </h2>
+                  <dl className="mt-5 grid gap-4 sm:grid-cols-2">
+                    {glance.map((g) => (
+                      <div key={g.label} className="flex gap-3 rounded-xl bg-cream-dark/40 p-4">
+                        <g.icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-maroon" />
+                        <div>
+                          <dt className={`text-xs font-bold text-ink-label ${isHi ? '' : 'uppercase tracking-wider'}`}>{g.label}</dt>
+                          <dd className="mt-0.5 text-ink">{g.value}</dd>
+                        </div>
+                      </div>
+                    ))}
+                  </dl>
+                  <p className="mt-4 flex gap-2 text-sm text-ink-soft">
+                    <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-maroon" />
+                    <span>{sales.places[locale]}</span>
+                  </p>
+                </div>
+              )}
+
+              {/* Hotel class — the question a package buyer has before the price (rates stay on the call). */}
+              {sales && (
+                <div className="rounded-2xl border-2 border-gold bg-cream p-6 sm:p-8">
+                  <p className="flex items-center gap-2 font-semibold text-maroon">
+                    <Hotel className="h-5 w-5" /> {isHi ? 'एक ही यात्रा, हर होटल श्रेणी का रेट' : 'One trip, a rate for every hotel class'}
+                  </p>
+                  <p className="mt-2 text-ink-soft">
+                    {isHi
+                      ? 'फ़ॉर्म में तारीख, लोग और पसंद की होटल श्रेणी बताएँ। हम यही योजना स्टैंडर्ड, डीलक्स और प्रीमियम होटल के साथ अलग-अलग रेट में भेजते हैं — गाड़ी और होटल एक ही रेट में, ताकि आप ठहरना देखकर चुनें।'
+                      : 'Tell us your dates, group size and the hotel class you have in mind. We send this same plan priced with a standard, deluxe and premium hotel side by side — car and hotel in one figure, so you choose the stay knowing the cost.'}
+                  </p>
+                </div>
+              )}
 
               {/* Itinerary */}
               <div className="space-y-8">
@@ -129,7 +180,7 @@ export function TourPackageDetail({ slug }: { slug: string }) {
                 ))}
               </div>
 
-              <PackageBookingGuide locale={locale} />
+              <PackageBookingGuide locale={locale} extraFaqs={packageFaqs} />
 
               {/* Need Help Banner */}
               <div className="bg-maroon rounded-2xl p-8 sm:p-12 shadow-xl border border-maroon-800 relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -149,9 +200,9 @@ export function TourPackageDetail({ slug }: { slug: string }) {
             <div className="lg:col-span-1">
               <div className="sticky top-24 bg-white rounded-2xl shadow-xl border border-cream-dark p-6 sm:p-8">
                 <h3 className="font-serif text-2xl font-bold text-maroon mb-6 text-center border-b-2 border-saffron pb-4 inline-block w-full">
-                  {locale === 'hi' ? 'पैकेज बुक करें' : 'Request a Call Back'}
+                  {isHi ? 'इस पैकेज का रेट मँगाएँ' : 'Get this package priced'}
                 </h3>
-                <LeadForm variant="card" defaultService={GROUP_SLUGS.has(slug) ? 'group' : 'tour'} sourcePage={slug} />
+                <LeadForm variant="card" defaultService={GROUP_SLUGS.has(slug) ? 'group' : 'tour'} sourcePage={slug} askStay />
               </div>
             </div>
 

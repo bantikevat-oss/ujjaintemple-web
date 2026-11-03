@@ -36,9 +36,24 @@ interface Props {
   idPrefix: string;
   /** compact = shape + people only (the WhatsApp gate, where every extra field costs). */
   compact?: boolean;
+  /** Ask the hotel class (package pages). Deluxe / premium marks the lead PREMIUM in lead.php. */
+  askStay?: boolean;
 }
 
-export function TripShapeFields({ idPrefix, compact = false }: Props) {
+/*
+ * Hotel class, in the classes "Package banao" prices (/panel/quotes.php). Added 2026-11-03 so a
+ * package lead arrives saying what stay the visitor has in mind — the team can open the quote
+ * in that class first. Field name `stay`, values must match lead.php.
+ */
+export const STAYS = [
+  { value: 'budget',   hi: 'बजट होटल / धर्मशाला', en: 'Budget hotel / dharamshala' },
+  { value: 'standard', hi: 'स्टैंडर्ड होटल',      en: 'Standard hotel' },
+  { value: 'deluxe',   hi: 'डीलक्स होटल',        en: 'Deluxe hotel' },
+  { value: 'premium',  hi: 'प्रीमियम होटल',      en: 'Premium hotel' },
+  { value: 'none',     hi: 'होटल नहीं चाहिए',     en: 'No hotel needed' },
+] as const;
+
+export function TripShapeFields({ idPrefix, compact = false, askStay = false }: Props) {
   const { locale } = useI18n();
   const isHi = locale === 'hi';
   const label = 'mb-1 block text-sm font-medium text-ink-soft';
@@ -94,6 +109,20 @@ export function TripShapeFields({ idPrefix, compact = false }: Props) {
           </div>
         )}
       </div>
+
+      {askStay && !compact && (
+        <div>
+          <label className={label} htmlFor={`${idPrefix}-stay`}>
+            {isHi ? 'होटल किस श्रेणी का?' : 'Hotel class?'} {optional}
+          </label>
+          <select id={`${idPrefix}-stay`} name="stay" defaultValue="" className={field}>
+            <option value="">{isHi ? 'चुनें' : 'Select'}</option>
+            {STAYS.map((s) => (
+              <option key={s.value} value={s.value}>{isHi ? s.hi : s.en}</option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {!compact && (
         <div>

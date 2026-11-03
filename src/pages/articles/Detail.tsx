@@ -8,6 +8,7 @@ import { PujaBookingForm } from '../../components/puja/PujaBookingForm';
 import { PujaGraphicHero } from '../../components/puja/PujaGraphicHero';
 import { ShareButtons } from '../../components/shared/ShareButtons';
 import { TripNextStep } from '../../components/global/TripNextStep';
+import { PackageStrip } from '../../components/global/PackageStrip';
 import { CabBookingWidget } from '../../components/global/CabBookingWidget';
 import { BOOKING_PRESET_BY_SLUG } from '../../data/rates';
 import { useI18n } from '../../i18n';
@@ -378,6 +379,11 @@ export function ArticleDetail({ category, slug }: Props) {
               {/* ── CAB BOOKING — above the body, so the fixed fare is the first answer ── */}
               {article.category === 'transport' && BOOKING_PRESET_BY_SLUG[article.slug] && (
                 <CabBookingWidget locale={locale} source={`transport/${article.slug}`} preset={BOOKING_PRESET_BY_SLUG[article.slug]} />
+              )}
+
+              {/* ── PACKAGE STRIP — trip planners reading a cab or guide page (2026-11-03) ── */}
+              {(article.category === 'tour' || article.category === 'transport') && (
+                <PackageStrip source={`${article.category}/${article.slug}`} />
               )}
 
               {/* ── ARTICLE BODY ── */}

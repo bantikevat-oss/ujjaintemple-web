@@ -7,9 +7,10 @@ import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
-import { breadcrumbSchema } from '../lib/schemas';
-import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { breadcrumbSchema, itemListSchema } from '../lib/schemas';
+import { PhoneCall, ChevronDown, CheckCircle2, Clock, BedDouble } from 'lucide-react';
 import { packagesData } from '../data/packages';
+import { PACKAGE_SALES, PACKAGE_HUB_ORDER } from '../data/package-sales';
 
 export function TourLanding() {
   const { locale } = useI18n();
@@ -17,10 +18,17 @@ export function TourLanding() {
   const articles = articlesByCategory('blog').slice(0, 3); // For News Feed
   const guides = articlesByCategory('tour').slice(0, 6); // Travel guides & resources
 
-  const title = locale === 'hi' ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज, टूर एंड ट्रैवल ऑपरेटर' : 'Ujjain Tour Packages — Darshan Packages, Tour and Travel in Ujjain';
+  // 2026-11-03: the head term "ujjain tour package" had 2 impressions in 90 days (~pos 12). The
+  // title now leads with it and says what a package searcher compares on: days, hotel, car.
+  const title = locale === 'hi' ? 'उज्जैन टूर पैकेज' : 'Ujjain Tour Packages';
+  const seoTitle = locale === 'hi' ? 'उज्जैन टूर पैकेज — 1 से 5 दिन, होटल और गाड़ी सहित' : 'Ujjain Tour Packages — 1 to 5 Days with Hotel and Car';
   const description = locale === 'hi'
-    ? 'उज्जैन टूर पैकेज — उज्जैन दर्शन पैकेज (1/2/3 दिन), महाकाल दर्शन, ओंकारेश्वर व सिंहस्थ 2028 यात्रा। भरोसेमंद उज्जैन टूर एंड ट्रैवल ऑपरेटर। बुकिंग: +91 89890 06759'
-    : 'Ujjain tour packages — Ujjain darshan packages (1/2/3 day), Mahakal darshan, Omkareshwar & Simhastha 2028 trips. Trusted tour and travel operator in Ujjain. Book: +91 89890 06759';
+    ? 'उज्जैन टूर पैकेज 1 से 5 दिन — महाकालेश्वर, ओंकारेश्वर, महेश्वर, मांडू। आपकी चुनी श्रेणी का होटल और ड्राइवर सहित निजी गाड़ी, एक ही रेट में। कॉल: +91 89890 06759'
+    : 'Ujjain tour packages from 1 to 5 days — Mahakaleshwar, Omkareshwar, Maheshwar, Mandu. Hotel in the class you choose and a private car with driver, in one quote.';
+  const orderedPackages = PACKAGE_HUB_ORDER
+    .map((slug) => packagesData.find((p) => p.slug === slug))
+    .filter((p): p is (typeof packagesData)[number] => Boolean(p))
+    .concat(packagesData.filter((p) => !PACKAGE_HUB_ORDER.includes(p.slug)));
   const path = '/tour-and-travel-ujjain/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -97,7 +105,7 @@ export function TourLanding() {
   return (
     <>
       <SEOHead
-        title={`${title} | Ujjain Temple`}
+        title={seoTitle}
         description={description}
         path={path}
         locale={locale}
@@ -106,7 +114,12 @@ export function TourLanding() {
             { name: locale === 'hi' ? 'होम' : 'Home', url: SITE.url },
             { name: title, url: `${SITE.url}${path}` },
           ]
-        })]}
+        }), itemListSchema(orderedPackages.map((p) => ({
+          name: p.title[locale],
+          url: `${SITE.url}${prefix}/tour-and-travel-ujjain/${p.slug}/`,
+          description: PACKAGE_SALES[p.slug] ? `${PACKAGE_SALES[p.slug].duration[locale]} — ${PACKAGE_SALES[p.slug].places[locale]}` : p.description[locale],
+          image: `${SITE.url}${p.heroImage}`,
+        })))]}
       />
       <Layout>
         {/* ── LUXURY HERO SECTION ── */}
@@ -127,8 +140,8 @@ export function TourLanding() {
             
             <p className="text-cream text-lg sm:text-2xl font-serif italic max-w-3xl leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {locale === 'hi' 
-                ? 'अध्यात्म, संस्कृति और ऐतिहासिक भव्यता की एक अविस्मरणीय यात्रा पर निकलें।'
-                : 'Embark on an unforgettable journey of spirituality, culture, and historical grandeur.'}
+                ? '1 से 5 दिन · आपकी चुनी श्रेणी का होटल · ड्राइवर सहित निजी गाड़ी'
+                : '1 to 5 days · Hotel in the class you choose · Private car with driver'}
             </p>
           </div>
         </section>
@@ -155,8 +168,8 @@ export function TourLanding() {
                 </p>
                 <p>
                   {locale === 'hi'
-                    ? 'अपनी यात्रा को यादगार बनाने के लिए सर्वोत्तम कीमतों पर उज्जैन टूर पैकेज ऑनलाइन बुक करें। सबसे विश्वसनीय उज्जैन टूर ऑपरेटरों के साथ अपनी उज्जैन यात्रा का आनंद लें और सर्वोत्तम छूट के साथ 100% अनुकूलित टूर पैकेज प्राप्त करें।'
-                    : 'Book online Ujjain tour packages from Omkareshwar with the best prices to make your trip memorable. Enjoy your Ujjain trip with the most trusted Ujjain tour operators and get 100% customized Ujjain trip packages with best discounts and offers.'}
+                    ? 'हर उज्जैन टूर पैकेज में आपकी चुनी श्रेणी का होटल — बजट, स्टैंडर्ड, डीलक्स या प्रीमियम — और पूरी यात्रा के लिए ड्राइवर सहित निजी गाड़ी शामिल होती है। नीचे दी गई योजनाएँ नमूना हैं; मंदिर, दिन और ठहरना आपकी ज़रूरत के हिसाब से तय होते हैं, और होटल व गाड़ी का एक ही रेट आपको भेजा जाता है।'
+                    : 'Every Ujjain tour package comes with a hotel in the class you choose — budget, standard, deluxe or premium — and a private car with driver for the whole trip. The plans below are templates: the temples, the days and the stay are set around you, and you get one rate for the hotel and the car together.'}
                 </p>
               </div>
             </div>
@@ -178,14 +191,20 @@ export function TourLanding() {
             </div>
             
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {packagesData.map((pkg) => (
+              {orderedPackages.map((pkg) => (
                 <div key={pkg.slug} className="bg-white rounded-2xl overflow-hidden shadow-xl border border-cream hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col">
                   <div className="relative h-56 overflow-hidden">
                     <img src={pkg.heroImage} alt={pkg.title[locale]} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   </div>
                   <div className="p-6 sm:p-8 flex-1 flex flex-col">
-                    <h3 className="font-serif text-2xl font-bold text-maroon mb-4 line-clamp-2">{pkg.title[locale]}</h3>
+                    <h3 className="font-serif text-2xl font-bold text-maroon mb-3 line-clamp-2">{pkg.title[locale]}</h3>
+                    {PACKAGE_SALES[pkg.slug] && (
+                      <div className="mb-4 space-y-1.5 text-sm text-ink">
+                        <p className="flex items-center gap-2"><Clock className="h-4 w-4 flex-shrink-0 text-saffron-700" />{PACKAGE_SALES[pkg.slug].duration[locale]}</p>
+                        <p className="flex items-center gap-2"><BedDouble className="h-4 w-4 flex-shrink-0 text-saffron-700" />{PACKAGE_SALES[pkg.slug].stay[locale]}</p>
+                      </div>
+                    )}
                     <p className="text-ink-soft mb-8 text-sm sm:text-base line-clamp-3 flex-1">
                       {pkg.description[locale]}
                     </p>

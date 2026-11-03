@@ -50,17 +50,21 @@ const STEPS: Array<{ icon: typeof ClipboardList; t: B; d: B }> = [
 
 const INCLUDED: B[] = [
   { hi: 'ड्राइवर सहित गाड़ी — सेडान, SUV या टेम्पो ट्रैवलर', en: 'Vehicle with driver — sedan, SUV or tempo traveller' },
-  { hi: 'होटल या धर्मशाला ढूँढने में मदद', en: 'Help finding a hotel or dharamshala' },
+  { hi: 'होटल आपकी चुनी श्रेणी में — या धर्मशाला, अगर आप चाहें', en: 'Hotel in the class you choose — or a dharamshala if you prefer' },
+  { hi: 'उज्जैन स्टेशन, बस स्टैंड या इंदौर एयरपोर्ट से पिकअप और ड्रॉप', en: 'Pickup and drop — Ujjain station, bus stand or Indore airport' },
   { hi: 'दिन-वार योजना — कौन सा मंदिर कब', en: 'A day-wise plan — which temple when' },
   { hi: 'ओंकारेश्वर, महेश्वर, मांडू तक का रूट', en: 'Routes on to Omkareshwar, Maheshwar, Mandu' },
 ];
 const NOT_INCLUDED: B[] = [
   { hi: 'मंदिर के अंदर की दर्शन व्यवस्था (मंदिर प्रबंधन की)', en: 'Darshan arrangements inside temples (the temple administration’s)' },
   { hi: 'पूजा-सामग्री और दान', en: 'Puja items and offerings' },
+  { hi: 'भोजन — जब तक आप रेट में न जुड़वाएँ', en: 'Meals — unless you ask for them in the quote' },
 ];
 
-export function PackageBookingGuide({ locale }: { locale: Locale }) {
+/** extraFaqs: the package's own questions, shown first (TourPackageDetail puts the same list in FAQPage schema). */
+export function PackageBookingGuide({ locale, extraFaqs = [] }: { locale: Locale; extraFaqs?: Array<{ q: B; a: B }> }) {
   const isHi = locale === 'hi';
+  const faqs = [...extraFaqs, ...PACKAGE_FAQS];
   const h2 = `font-bold text-maroon ${isHi ? 'font-sanskrit text-2xl sm:text-3xl' : 'font-serif text-2xl'}`;
   return (
     <div className="space-y-8">
@@ -98,7 +102,7 @@ export function PackageBookingGuide({ locale }: { locale: Locale }) {
       <div className="rounded-2xl border border-cream bg-white p-6 shadow-sm sm:p-8">
         <h2 className={h2}>{isHi ? 'अक्सर पूछे जाने वाले सवाल' : 'Frequently asked questions'}</h2>
         <div className="mt-4 divide-y divide-cream-dark">
-          {PACKAGE_FAQS.map((f, i) => (
+          {faqs.map((f, i) => (
             <details key={i} className="group py-3" open={i === 0}>
               <summary className="cursor-pointer list-none font-semibold text-ink marker:hidden">{f.q[locale]}</summary>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">{f.a[locale]}</p>
