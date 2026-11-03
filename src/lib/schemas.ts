@@ -349,13 +349,14 @@ export function pujaServiceSchema() {
   };
 }
 
-export function taxiServiceSchema() {
+/** Route pages (2026-11-03) pass their own name/description/url; /cab-booking/ uses the defaults. */
+export function taxiServiceSchema(route?: { name: string; description: string; url: string }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
-    name: 'Ujjain Taxi Service — UjjainTemple Cab Booking',
-    description: 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Fixed fares quoted upfront.',
-    url: `${SITE.url}/cab-booking/`,
+    name: route?.name ?? 'Ujjain Taxi Service — UjjainTemple Cab Booking',
+    description: route?.description ?? 'Taxi service in Ujjain — cab booking for Mahakaleshwar darshan, local sightseeing, Omkareshwar, Indore airport and outstation trips. Fixed fares quoted upfront.',
+    url: route?.url ?? `${SITE.url}/cab-booking/`,
     provider: { '@id': `${SITE.url}/#organization` },
     areaServed: [
       { '@type': 'City', name: 'Ujjain' },
@@ -365,7 +366,7 @@ export function taxiServiceSchema() {
     availableChannel: {
       '@type': 'ServiceChannel',
       servicePhone: { '@type': 'ContactPoint', telephone: SITE.phoneIntl, contactType: 'reservations', availableLanguage: ['Hindi', 'English'] },
-      serviceUrl: `${SITE.url}/cab-booking/`,
+      serviceUrl: route?.url ?? `${SITE.url}/cab-booking/`,
     },
   };
 }

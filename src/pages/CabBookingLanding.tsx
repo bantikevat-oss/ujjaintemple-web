@@ -23,6 +23,15 @@ const PhoneInline = () => (
   </a>
 );
 
+const ROUTE_LINKS: { to: string; label: { hi: string; en: string } }[] = [
+  { to: '/transport-in-ujjain/ujjain-to-omkareshwar-taxi/', label: { hi: 'उज्जैन से ओंकारेश्वर टैक्सी', en: 'Ujjain to Omkareshwar taxi' } },
+  { to: '/transport-in-ujjain/ujjain-local-sightseeing-cab/', label: { hi: 'उज्जैन लोकल दर्शन कैब', en: 'Ujjain local sightseeing cab' } },
+  { to: '/transport-in-ujjain/ujjain-to-indore-taxi/', label: { hi: 'उज्जैन से इंदौर एयरपोर्ट टैक्सी', en: 'Ujjain to Indore airport taxi' } },
+  { to: '/transport-in-ujjain/indore-to-ujjain/', label: { hi: 'इंदौर से उज्जैन कैब', en: 'Indore to Ujjain cab' } },
+  { to: '/transport-in-ujjain/ujjain-station-to-mahakaleshwar/', label: { hi: 'उज्जैन स्टेशन से महाकालेश्वर', en: 'Ujjain station to Mahakaleshwar' } },
+  { to: '/tour-and-travel-ujjain/', label: { hi: 'उज्जैन टूर पैकेज — होटल और गाड़ी', en: 'Ujjain tour packages — hotel and car' } },
+];
+
 export function CabBookingLanding() {
   const { locale } = useI18n();
   const prefix = locale === 'en' ? '' : '/hi';
@@ -168,14 +177,14 @@ export function CabBookingLanding() {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="animate-fade-in">
               <h2 className="font-serif text-3xl sm:text-5xl font-bold text-maroon mb-6 relative pb-4 inline-block uppercase">
-                {locale === 'hi' ? 'उज्जैन में सर्वश्रेष्ठ टैक्सी सेवा' : 'Best Taxi Service in Ujjain'}
+                {locale === 'hi' ? 'उज्जैन टैक्सी सेवा' : 'Taxi Service in Ujjain'}
                 <div className="absolute bottom-0 left-0 w-1/2 h-1.5 bg-saffron rounded-full" />
               </h2>
               <div className="space-y-6 text-ink-soft leading-relaxed text-lg font-serif">
                 <p>
                   {locale === 'hi'
-                    ? 'हम उज्जैन में टैक्सी सेवा प्रदान कर रहे हैं। हमारी उज्जैन टैक्सी सेवा शहर में सर्वश्रेष्ठ है। उज्जैन लोकल साइटसीइंग, ओंकारेश्वर, महेश्वर, मांडू, इंदौर आदि के लिए हमारे पास विभिन्न प्रकार की कैब उपलब्ध हैं। हम उज्जैन से इंदौर एयरपोर्ट ड्रॉप और पिकअप के लिए नियमित कैब सेवा प्रदान करते हैं। आपके लिए उज्जैन टैक्सी सेवा सबसे अच्छा विकल्प है।'
-                    : 'We are providing Taxi service in Ujjain. Our Ujjain Taxi service is the best in the city. We have a variety of cabs available for Ujjain local sightseeing, Omkareshwar, Maheshwar, Mandu, Indore, etc. We offer regular cab service for Ujjain to Indore airport drop & pickup. The Ujjain taxi service is the best choice for you.'}
+                    ? 'उज्जैन लोकल दर्शन, ओंकारेश्वर और इंदौर एयरपोर्ट के लिए चालक सहित गाड़ी — डिज़ायर (4 सीट), अर्टिगा (6 सीट) या इनोवा (7 सीट)। हर गाड़ी का एक तय किराया है, जिसमें टोल, पार्किंग, ईंधन और चालक का खर्च शामिल है। महेश्वर, मांडू या कई दिनों की यात्रा के लिए रेट कॉल पर बताया जाता है।'
+                    : 'A car with a driver for Ujjain local darshan, Omkareshwar and Indore Airport — Dzire (4 seats), Ertiga (6 seats) or Innova (7 seats). Every car has one fixed fare, with toll, parking, fuel and the driver included. For Maheshwar, Mandu or a trip of several days, the rate is quoted on the call.'}
                 </p>
                 <h3 className="font-bold text-maroon text-2xl mt-8">
                   {locale === 'hi' ? 'उज्जैन में टैक्सी कैसे प्राप्त करें?' : 'How to reach Taxi in Ujjain?'}
@@ -209,7 +218,7 @@ export function CabBookingLanding() {
               <div className="grid grid-cols-2 gap-6 text-lg sm:text-xl font-medium text-ink-soft mb-8">
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-saffron-700" />
-                  {locale === 'hi' ? 'सर्वश्रेष्ठ आवास' : 'Best Accommodation'}
+                  {locale === 'hi' ? 'होटल व ठहरना' : 'Hotel Stay'}
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-saffron-700" />
@@ -233,7 +242,29 @@ export function CabBookingLanding() {
 
         {/* ── CAB OPTIONS & ROUTES ── */}
         <section className="container-page py-16 sm:py-24 space-y-16">
-          
+
+          {/* Every route page, by its own name (2026-11-03). GSC 28d to 10-31: for "ujjain to
+              omkareshwar taxi" Google ranked THIS page at 36–50 — the route had no taxi page of its
+              own and nothing here pointed to one. Same anchor, one hop, for every route we run. */}
+          <nav className="max-w-4xl mx-auto" aria-label={locale === 'hi' ? 'टैक्सी रूट' : 'Taxi routes'}>
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-maroon mb-6">
+              {locale === 'hi' ? 'उज्जैन से टैक्सी — रूट चुनें' : 'Taxi from Ujjain — pick your route'}
+            </h2>
+            <ul className="grid gap-3 sm:grid-cols-2">
+              {ROUTE_LINKS.map((r) => (
+                <li key={r.to}>
+                  <Link
+                    to={`${prefix}${r.to}`}
+                    className="flex items-center justify-between gap-3 rounded-xl border border-gold/50 bg-white px-4 py-3 font-semibold text-maroon shadow-sm transition hover:border-maroon hover:shadow-md"
+                  >
+                    {r.label[locale]}
+                    <span aria-hidden>→</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="max-w-4xl mx-auto">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-maroon mb-6">
               {locale === 'hi' ? 'उज्जैन में कैब विकल्प –' : 'Cab options in Ujjain –'}

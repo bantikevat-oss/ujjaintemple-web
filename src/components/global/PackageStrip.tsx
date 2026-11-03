@@ -29,6 +29,11 @@ const BY_SOURCE: Record<string, Strip | null> = {
     lead: { hi: 'रात रुकना है?', en: 'Staying the night?' },
     text: { hi: 'उज्जैन ओंकारेश्वर टूर पैकेज (2 दिन) — होटल और गाड़ी एक ही रेट में', en: 'Ujjain Omkareshwar tour package (2 days) — hotel and car in one quote' },
   },
+  'transport/ujjain-to-omkareshwar-taxi': {
+    to: '/tour-and-travel-ujjain/ujjain-omkareshwar-package/',
+    lead: { hi: 'रात रुकना है?', en: 'Staying the night?' },
+    text: { hi: 'उज्जैन ओंकारेश्वर टूर पैकेज (2 दिन) — होटल और गाड़ी एक ही रेट में', en: 'Ujjain Omkareshwar tour package (2 days) — hotel and car in one quote' },
+  },
   // Someone leaving Ujjain for Indore is done with the trip.
   'transport/ujjain-to-indore-taxi': null,
 };

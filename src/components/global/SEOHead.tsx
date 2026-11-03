@@ -18,7 +18,9 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
   // no earning copy at risk.
   const serpDescription = clampDescription(description);
   const hreflangs = buildHreflang(path);
-  const ogImage = image || `${SITE.url}/og/default.webp`;
+  // og:image must be absolute (2026-11-03): article and mandir pages passed '/images/…', which
+  // WhatsApp and Facebook ignore, so shared links showed no picture.
+  const ogImage = image ? (image.startsWith('/') ? `${SITE.url}${image}` : image) : `${SITE.url}/og/default.webp`;
 
   return (
     <>

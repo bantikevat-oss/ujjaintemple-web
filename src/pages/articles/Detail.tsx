@@ -9,12 +9,13 @@ import { PujaGraphicHero } from '../../components/puja/PujaGraphicHero';
 import { ShareButtons } from '../../components/shared/ShareButtons';
 import { TripNextStep } from '../../components/global/TripNextStep';
 import { PackageStrip } from '../../components/global/PackageStrip';
+import { SimhasthaHubStrip } from '../../components/global/SimhasthaHubStrip';
 import { CabBookingWidget } from '../../components/global/CabBookingWidget';
 import { BOOKING_PRESET_BY_SLUG } from '../../data/rates';
 import { useI18n } from '../../i18n';
 import { articleBySlug, getRelatedArticles, articlePath } from '../../data/articles';
 import { SITE } from '../../lib/site';
-import { articleSchema, breadcrumbSchema, faqSchema } from '../../lib/schemas';
+import { articleSchema, breadcrumbSchema, faqSchema, taxiServiceSchema } from '../../lib/schemas';
 import type { Article } from '../../lib/types';
 
 const categoryMeta: Record<Article['category'], { hi: string; en: string; href: string }> = {
@@ -258,6 +259,8 @@ export function ArticleDetail({ category, slug }: Props) {
   // site-relative paths and tel: are accepted, so a body can never inject an
   // off-site or javascript: href into the dangerouslySetInnerHTML below.
   // Relative paths pick up the locale prefix so Hindi articles link to /hi/.
+  // 🪤 A path already written as /hi/… must not get it twice: five Hindi bodies carried
+  // such links and rendered /hi/hi/… — a 404, live on the HI Omkareshwar page (found 2026-11-03).
   const renderInline = (s: string) =>
     s
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
@@ -265,7 +268,7 @@ export function ArticleDetail({ category, slug }: Props) {
       .replace(
         /\[([^\]]+)\]\((\/[A-Za-z0-9\-._~/#?=&]*|tel:[+0-9\- ]+)\)/g,
         (_m, label: string, href: string) =>
-          `<a href="${href.startsWith('/') ? prefix + href : href}">${label}</a>`,
+          `<a href="${href.startsWith('/') && !href.startsWith('/hi/') ? prefix + href : href}">${label}</a>`,
       );
 
   const related = getRelatedArticles(article);
@@ -284,6 +287,10 @@ export function ArticleDetail({ category, slug }: Props) {
       { name: cat[locale], url: `${SITE.url}${cat.href}` },
       { name: article.title[locale], url: canonical },
     ]}),
+    // A route page that takes bookings is a taxi service for that route, not only an article.
+    ...(article.category === 'transport' && BOOKING_PRESET_BY_SLUG[article.slug]
+      ? [taxiServiceSchema({ name: article.title[locale], description: article.metaDescription[locale], url: canonical })]
+      : []),
     ...(article.faqs ? [faqSchema(article.faqs.map((f) => ({ q: (f.question || f.q)![locale], a: (f.answer || f.a)![locale] })))] : []),
   ];
 
@@ -385,6 +392,9 @@ export function ArticleDetail({ category, slug }: Props) {
               {(article.category === 'tour' || article.category === 'transport') && (
                 <PackageStrip source={`${article.category}/${article.slug}`} />
               )}
+
+              {/* ── SIMHASTHA HUB STRIP — consolidates the head term on /simhastha-2028/ (2026-11-03) ── */}
+              {article.category === 'simhastha' && <SimhasthaHubStrip source={article.slug} />}
 
               {/* ── ARTICLE BODY ── */}
               {renderBody(article.body[locale])}

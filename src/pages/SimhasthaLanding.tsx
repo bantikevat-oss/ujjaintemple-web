@@ -140,7 +140,9 @@ export function SimhasthaLanding() {
   // would cost more than it wins.
   const title = locale === 'hi'
     ? 'उज्जैन सिंहस्थ 2028 कब है — 27 मार्च से 27 मई, शाही स्नान'
-    : 'Simhastha 2028 Ujjain Date: 27 Mar–27 May · Shahi Snan Dates';
+    // 2026-11-03: "Ujjain Simhastha" leads. For `ujjain simhastha` (664 impr) and `simhastha`
+    // Google ranked the HISTORY page (pos ~9.4) over this hub — the hub title opened on the date.
+    : 'Ujjain Simhastha 2028 Dates: 27 Mar–27 May · Shahi Snan';
   const description = locale === 'hi'
     ? 'सिंहस्थ (सिंहस्त / Singhasth / Sihast) महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड।'
     : 'Simhastha Mahakumbh 2028 Ujjain, also written Singhasth or Sihast — mela runs 27 March to 27 May 2028. 3 Shahi Snans: 09 April, 23 April, 08 May. 13 Akhadas, Kalpvas, hotel & transport guide.';

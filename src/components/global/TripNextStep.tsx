@@ -80,6 +80,15 @@ export function TripNextStep({ source, className = '', inline = false }: { sourc
             </Link>
           ))}
         </div>
+        {/* The hub, by the words people search (2026-11-03): this block sits on every temple and
+            trip page, and until now linked only to three package pages, never to the hub itself. */}
+        <Link
+          to={`${prefix}/tour-and-travel-ujjain/`}
+          onClick={() => track('hub')}
+          className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-maroon underline hover:text-saffron-700"
+        >
+          {isHi ? 'सभी उज्जैन टूर पैकेज — 1 से 5 दिन' : 'All Ujjain tour packages — 1 to 5 days'} <ArrowRight className="h-4 w-4" />
+        </Link>
         <p className="mt-4 flex items-start gap-2 text-sm text-ink-soft">
           <Plane className="mt-0.5 h-4 w-4 flex-shrink-0 text-maroon" />
           <span>

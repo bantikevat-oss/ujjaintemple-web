@@ -144,7 +144,10 @@ export const routeFor = (from: PlaceId, to: PlaceId, type: TripType): RouteId | 
 /** Transport article slug → where the booking widget starts on that page. */
 export const BOOKING_PRESET_BY_SLUG: Record<string, { from: PlaceId; to: PlaceId; type: TripType }> = {
   'ujjain-to-omkareshwar-cab': { from: 'ujjain', to: 'omkareshwar', type: 'round' },
+  'ujjain-to-omkareshwar-taxi': { from: 'ujjain', to: 'omkareshwar', type: 'round' },
   'ujjain-local-sightseeing-cab': { from: 'ujjain', to: 'ujjain-local', type: 'local' },
+  // Ujjain → Indore city is not priced; the airport drop is, and it is what this page's fare FAQ answers.
+  'ujjain-to-indore-taxi': { from: 'ujjain', to: 'idr', type: 'oneway' },
 };
 
 export const inr = (n: number) => `₹${n.toLocaleString('en-IN')}`;
