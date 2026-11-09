@@ -77,7 +77,9 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
     $ok = $ok && $cmd('DATA', '354');
 
     if ($ok) {
-        $headers  = 'From: UjjainTemple Leads <' . $from . ">\r\n";
+        // 'from_name' lets lead.php send the partner copy under a neutral name (2026-11-09).
+        $fromName = preg_replace('/[^A-Za-z0-9 ._-]/', '', (string)($cfg['from_name'] ?? 'UjjainTemple Leads'));
+        $headers  = 'From: ' . $fromName . ' <' . $from . ">\r\n";
         $headers .= 'To: ' . implode(', ', array_map(function ($a) { return '<' . $a . '>'; }, $to)) . "\r\n";
         $headers .= 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n";
         $headers .= "MIME-Version: 1.0\r\n";

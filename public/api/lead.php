@@ -175,6 +175,8 @@ if ($fromCity !== '') $trip[] = "From: $fromCity";
 if ($isAbroad)        $trip[] = 'From abroad (number with a country code)';
 if ($isPremium)       $trip[] = 'Tier: PREMIUM';
 elseif ($isQuick)     $trip[] = 'Tier: QUICK';
+// What the visitor typed, before the trip/tier prefix — the only free text the partner copy carries.
+$customerNote = $message;
 if ($trip) $message = implode(' · ', $trip) . ($message !== '' ? "\n" . $message : '');
 
 const LEAD_CSV_HEADER =['timestamp', 'name', 'phone', 'service', 'source', 'locale', 'message', 'ip', 'purpose', 'channel', 'travel_date'];
@@ -281,8 +283,6 @@ if ($purpose === 'cab') {
   ], $fuHi);
   $fuTrip = mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120);
   $fuInternal = ut_fu_html($phone, $name, $fuTrip, $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160), $cabQuote);
-  // Partner copy: always the quote block — no booking link, no fare shown (Aman, 2026-11-09).
-  $fuPartner  = ut_fu_html($phone, $name, $fuTrip, '', $fuHi, '', true);
   $body .= '<!--UT_FU-->';
 }
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
@@ -375,17 +375,51 @@ if ($mail_ok) {
   }
   if ($toPartner && ($pcfg = ujt_mail_config())) {
     $pcfg['to'] = UT_PARTNER_TO;
-    // No URLs in the partner copy (Aman, 2026-11-09): no page link, no booking link, and the footer
-    // says "UjjainTemple" without ".com" because Gmail turns a bare domain into a link. Only the
-    // Call (tel:) and WhatsApp-to-customer buttons stay, so the desk can reach the customer.
-    $partnerBody = strtr($body, ['<!--UT_FU-->' => $fuPartner ?? '', '<!--UT_PAGE-->' => '']);
-    $pSubject = $subject;
-    if ($pNo !== '') {
-      $pSubject = "Lead $pNo · " . $subject;
-      $partnerBody = preg_replace('/(<div style="background:[^"]*;color:#fff;padding:13px 18px;font-size:14px;font-weight:700">)/',
-        '$1Lead ' . $pNo . ' &nbsp;·&nbsp; ', $partnerBody, 1);
+    $pcfg['from_name'] = 'Lead Desk';
+    /*
+     * Partner copy = only what the desk needs to call and close (Aman, 2026-11-09: the partner must
+     * not learn our business logic, site or SEO). Built from scratch, NOT from $body, so nothing
+     * internal can leak in by accident. Left out on purpose: page / URL, lead source (form / WhatsApp
+     * button / app), our tier (WARM / PREMIUM / QUICK / HOT), widget words (OTP-VERIFIED, FARE SEEN,
+     * Suggested car), our labels in the message, the site name, any link except tel: / wa.me.
+     */
+    $pRows = $row('Requirement', '<strong>' . $e($plabel) . '</strong>');
+    $pTrip = mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120);
+    if ($pTrip !== '')    $pRows .= $row('Trip', $e($pTrip));
+    $pTime = clean($_POST['bkTime'] ?? '');
+    $pRows .= $row('Travel date', $whenLine . ($pTime !== '' && preg_match('/^\d{1,2}:\d{2}$/', $pTime) ? ' · ' . $e($pTime) : ''));
+    if ($shape !== '')    $pRows .= $row('Plan', $e($shapeLabels[$shape]));
+    if ($stay !== '')     $pRows .= $row('Hotel class', $e($stayLabels[$stay]));
+    if ($people !== '')   $pRows .= $row('Travellers', $e($people));
+    if ($tripDays !== '') $pRows .= $row('Trip length', $e($tripDays === '1' ? '1 day' : "$tripDays days"));
+    if ($fromCity !== '') $pRows .= $row('Travelling from', $e($fromCity));
+    // The visitor's own words only; skip text our widgets write ("Cab enquiry: …", "RESERVED …").
+    $note = trim((string)$customerNote);
+    if ($note !== '' && !preg_match('/^(Cab (fare )?enquiry:|Booking request|RESERVED|Log:|Din:|Travellers:|Days:)/u', $note)) {
+      $pRows .= $row('Customer note', nl2br($e(mb_substr($note, 0, 500))));
     }
-    if (!ujt_smtp_send($pSubject, $partnerBody . $foot('Enquiry received via UjjainTemple', 'UjjainTemple'), $pcfg, true)) {
+    $pRows .= $row('Received', date('d M Y, g:i A') . ' IST');
+
+    $pHead = ($pNo !== '' ? "Lead $pNo · " : '') . $plabel;
+    $pb  = '<div style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f5f2;padding:18px">';
+    $pb .= '<div style="max-width:560px;margin:0 auto;background:#fff;border:1px solid #e7e3da;border-radius:12px;overflow:hidden">';
+    $pb .= '<div style="background:#7A1220;color:#fff;padding:13px 18px;font-size:15px;font-weight:700">' . $e($pHead) . '</div>';
+    $pb .= '<div style="padding:18px">';
+    $pb .= '<div style="font-size:21px;font-weight:700;color:#111827;margin-bottom:3px">' . $e($name) . '</div>';
+    $pb .= '<a href="tel:+' . $e($waNum) . '" style="font-size:20px;font-weight:700;color:#7A1220;text-decoration:none">' . $e($phone) . '</a>';
+    if ($otpChecked) $pb .= '<div style="font-size:12px;color:#6b7280;margin-top:3px">Mobile number verified ✓</div>';
+    $pb .= '<div style="margin:15px 0 5px">'
+         . '<a href="tel:+' . $e($waNum) . '" style="display:inline-block;background:#7A1220;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px">Call</a>'
+         . '<a href="https://wa.me/' . $e($waNum) . '" style="display:inline-block;background:#25D366;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp</a>'
+         . '</div>';
+    $pb .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">' . $pRows . '</table></div>';
+    $pb .= '<div style="background:#faf9f6;padding:10px 18px;color:#9ca3af;font-size:11px;border-top:1px solid #eee">'
+         . 'Please call the customer within 15 minutes.' . ($pNo !== '' ? ' Quote Lead ' . $e($pNo) . ' when you report the outcome.' : '')
+         . '</div></div></div>';
+
+    $pSubject = ($pNo !== '' ? "Lead $pNo · " : '') . "$plabel enquiry — $name"
+              . ($travel !== '' && ($pts = strtotime($travel)) !== false ? ' · ' . date('d M', $pts) : '');
+    if (!ujt_smtp_send($pSubject, $pb, $pcfg, true)) {
       error_log("ujt lead: partner SMTP send failed for $name / $phone");
     }
   }
