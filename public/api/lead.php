@@ -279,7 +279,11 @@ if ($purpose === 'cab') {
     'from' => clean($_POST['bkFrom'] ?? ''), 'to' => clean($_POST['bkTo'] ?? ''), 'type' => clean($_POST['bkType'] ?? ''),
     'date' => $travel, 'time' => clean($_POST['bkTime'] ?? ''), 'vehicle' => clean($_POST['bkVehicle'] ?? ''),
   ], $fuHi);
-  $body .= ut_fu_html($phone, $name, mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120), $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160), $cabQuote);
+  $fuTrip = mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120);
+  $fuInternal = ut_fu_html($phone, $name, $fuTrip, $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160), $cabQuote);
+  // Partner copy: always the quote block — no booking link, no fare shown (Aman, 2026-11-09).
+  $fuPartner  = ut_fu_html($phone, $name, $fuTrip, '', $fuHi, '', true);
+  $body .= '<!--UT_FU-->';
 }
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
 $body .= $row('Travel date', $whenLine);
@@ -294,16 +298,41 @@ $channelLabels = ['whatsapp' => 'WhatsApp button', 'app' => 'Android app', 'form
 $body .= $row('Lead source', $e($channelLabels[$channel] ?? 'Website form'));
 // Only a real path becomes a link; widget ids like "booking:transport/…" or a package slug used to
 // render as broken https://ujjaintemple.combooking:… links.
-$body .= $row('Page', substr($src, 0, 1) === '/'
+$pageRow = $row('Page', substr($src, 0, 1) === '/'
   ? '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src) . '</a>'
   : $e($src ?: '—'));
+$body .= '<!--UT_PAGE-->';
 if ($message !== '') $body .= $row('Message', nl2br($e($message)));
 $body .= $row('Received', date('d M Y, g:i A') . ' IST');
 $body .= '</table></div>';
-$foot = function ($note) use ($e) {
+$foot = function ($note, $brand = 'UjjainTemple.com') use ($e) {
   return '<div style="background:#faf9f6;padding:10px 18px;color:#9ca3af;font-size:11px;border-top:1px solid #eee">'
-       . 'UjjainTemple.com &nbsp;·&nbsp; ' . $e($note) . '</div></div></div>';
+       . $e($brand) . ' &nbsp;·&nbsp; ' . $e($note) . '</div></div></div>';
 };
+
+/*
+ * Partner lead number — "Lead 01", "Lead 02"… (Aman, 2026-11-09), the basis for counting / billing
+ * leads given to the partner desk. Counter + register live next to news-config.php, OUTSIDE
+ * public_html, so a deploy rsync never resets or deletes them and nobody can fetch them by URL.
+ *   ~/domains/ujjaintemple.com/partner-lead-seq.txt   last number used
+ *   ~/domains/ujjaintemple.com/partner-leads.csv      no, time, name, phone, type, travel date
+ * Returns '' if the counter cannot be written — the mail still goes, just without a number.
+ */
+function ut_partner_seq(array $row) {
+  $dir = __DIR__ . '/../..';
+  $fh = @fopen($dir . '/partner-lead-seq.txt', 'c+');
+  if (!$fh) return '';
+  if (!flock($fh, LOCK_EX)) { fclose($fh); return ''; }
+  $n = (int)trim((string)stream_get_contents($fh)) + 1;
+  ftruncate($fh, 0); rewind($fh); fwrite($fh, (string)$n); fflush($fh);
+  $no = str_pad((string)$n, 2, '0', STR_PAD_LEFT);
+  if ($log = @fopen($dir . '/partner-leads.csv', 'a')) {
+    fputcsv($log, array_merge([$no, date('Y-m-d H:i:s')], $row));
+    fclose($log);
+  }
+  flock($fh, LOCK_UN); fclose($fh);
+  return $no;
+}
 
 /*
  * Who gets which lead (Aman, 2026-11-09):
@@ -335,7 +364,9 @@ if ($mail_ok) {
       function ($a) { return $a !== '' && !in_array(strtolower($a), UT_NO_PACKAGE_MAIL, true); });
     $icfg['to'] = implode(', ', $keep);
   }
-  $internal = $body . $foot($toPartner ? 'Saved to the lead register · also sent to the partner travel desk (' . UT_PARTNER_TO . ')'
+  // Numbered before the internal mail, so Aman's copy says which partner number this lead got.
+  $pNo = $toPartner ? ut_partner_seq([$name, $phone, $isPackage ? 'package' : 'cab', $travel]) : '';
+  $internal = strtr($body, ['<!--UT_FU-->' => $fuInternal ?? '', '<!--UT_PAGE-->' => $pageRow]) . $foot($toPartner ? 'Saved to the lead register · also sent to the partner travel desk (' . UT_PARTNER_TO . ')' . ($pNo !== '' ? " as Lead $pNo" : '')
                                        : 'Saved to the lead register');
   if ($icfg && trim((string)$icfg['to']) !== '') {
     if (!ujt_smtp_send($subject, $internal, $icfg, true)) error_log("ujt lead: SMTP send failed for $name / $phone");
@@ -344,7 +375,17 @@ if ($mail_ok) {
   }
   if ($toPartner && ($pcfg = ujt_mail_config())) {
     $pcfg['to'] = UT_PARTNER_TO;
-    if (!ujt_smtp_send($subject, $body . $foot('Enquiry from UjjainTemple.com'), $pcfg, true)) {
+    // No URLs in the partner copy (Aman, 2026-11-09): no page link, no booking link, and the footer
+    // says "UjjainTemple" without ".com" because Gmail turns a bare domain into a link. Only the
+    // Call (tel:) and WhatsApp-to-customer buttons stay, so the desk can reach the customer.
+    $partnerBody = strtr($body, ['<!--UT_FU-->' => $fuPartner ?? '', '<!--UT_PAGE-->' => '']);
+    $pSubject = $subject;
+    if ($pNo !== '') {
+      $pSubject = "Lead $pNo · " . $subject;
+      $partnerBody = preg_replace('/(<div style="background:[^"]*;color:#fff;padding:13px 18px;font-size:14px;font-weight:700">)/',
+        '$1Lead ' . $pNo . ' &nbsp;·&nbsp; ', $partnerBody, 1);
+    }
+    if (!ujt_smtp_send($pSubject, $partnerBody . $foot('Enquiry received via UjjainTemple', 'UjjainTemple'), $pcfg, true)) {
       error_log("ujt lead: partner SMTP send failed for $name / $phone");
     }
   }
