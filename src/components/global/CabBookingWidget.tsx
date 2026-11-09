@@ -54,6 +54,12 @@ type Preset = { from: PlaceId; to: PlaceId; type: TripType };
 
 export const ADVANCE = 500;   // ₹500 flat advance (Aman, 2026-10-27) — the server sets the real amount
 
+/* Fare on a call, not on screen (Aman, 2026-11-09: "rate mat dikhao, sirf lead ko OTP verified
+   kar do"). 19 cab + 6 package leads in 1–9 Nov, 0 paid bookings since the fare gate went live on
+   10-28. The widget now ends at an OTP-verified enquiry; the team calls with the fare. The fare /
+   reserve / ₹500 screens below stay in the file — set this to false to bring them back. */
+const QUOTE_ON_CALL = true;
+
 /* Razorpay Checkout, loaded only when someone actually pays. */
 type RzpResponse = { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string };
 type RzpInstance = { open: () => void; on: (ev: string, cb: (r: { error?: { description?: string } }) => void) => void };
@@ -197,11 +203,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const [otp, setOtp] = useState('');
   const [busy, setBusy] = useState(false);
   const [resendIn, setResendIn] = useState(0);
+  const [verifiedPhone, setVerifiedPhone] = useState('');   // mobile that passed OTP in the last 30 days
 
   useEffect(() => {
     const load = () => {
       const c = readContact();
-      if (c) { setName(c.name); setPhone(c.phone); setKnown(true); }
+      if (c) { setName(c.name); setPhone(c.phone); setKnown(true); setVerifiedPhone(c.v ? c.phone : ''); }
     };
     load();
     window.addEventListener(CONTACT_EVT, load);
@@ -296,12 +303,21 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   const tripLine = (type === 'local'
     ? `${PLACES[from][locale]} · ${TRIP_TYPES.local[locale]} · ${PLACES[to][locale]}`
     : `${PLACES[from][locale]} → ${PLACES[to][locale]} · ${TRIP_TYPES[type][locale]}`) + (paxLabel ? ` · ${paxLabel}` : '');
+  // The lead mail is in English whatever the page language (2026-11-09), so the message carries an
+  // English copy of the trip; bkTrip stays in the visitor's language for the WhatsApp reply.
+  const tripLineEn = (type === 'local'
+    ? `${PLACES[from].en} · ${TRIP_TYPES.local.en} · ${PLACES[to].en}`
+    : `${PLACES[from].en} → ${PLACES[to].en} · ${TRIP_TYPES[type].en}`)
+    + (!paxN ? '' : bigGroup ? ' · 8+ people' : ` · ${paxN} ${paxN === 1 ? 'person' : 'people'}`);
+  const whenEn = date
+    ? new Date(`${date}T00:00:00`).toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' })
+    : '';
 
   const seeFares = () => {
     if (!date) { setError(hi ? 'यात्रा की तारीख़ चुनें' : 'Choose the travel date'); setCalOpen(true); return; }
     if (!pax) { setError(hi ? 'कितने लोग यात्रा करेंगे, चुनें' : 'Choose the number of passengers'); return; }
     setError('');
-    setStep(known ? 3 : 2);
+    setStep(known && !QUOTE_ON_CALL ? 3 : 2);   // quote mode: every enquiry passes step 2, so it is sent
   };
 
   /* ── Step 2: name + mobile → OTP → fares ── */
@@ -317,14 +333,19 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
     Object.entries({
       name: name.trim(), phone: phone.trim(), service: 'transport', purpose: 'cab', channel: 'form',
       sourcePage: `booking:${source}`, locale, travelDate: date,
-      message: `Cab fare enquiry: ${tripLine} · ${whenLabel} · Mobile ${verified}`,
-      // The mail builds a one-tap "send the booking link" from these (lead.php).
-      bkFrom: from, bkTo: to, bkType: type, bkTime: time, bkTrip: tripLine,
-      bkFares: VEHICLE_ORDER.map((v) => { const f = fareOf(v); return f !== null ? `${VEHICLES[v].name} ${inr(f)}` : ''; }).filter(Boolean).join(' · '),
+      message: QUOTE_ON_CALL
+        ? `Cab enquiry: ${tripLineEn} · ${whenEn} · Suggested car: ${bigGroup ? 'more than one car' : VEHICLES[vehicle].name} · Mobile ${verified}`
+        : `Cab fare enquiry: ${tripLine} · ${whenLabel} · Mobile ${verified}`,
+      // The mail builds a one-tap WhatsApp reply to the customer from these (lead.php).
+      bkFrom: from, bkTo: to, bkType: type, bkTime: time, bkVehicle: vehicle, bkTrip: tripLine,
+      // No rate card in quote mode — the mail also goes to the partner desk (Aman, 2026-11-09).
+      bkFares: QUOTE_ON_CALL ? '' : VEHICLE_ORDER.map((v) => { const f = fareOf(v); return f !== null ? `${VEHICLES[v].name} ${inr(f)}` : ''; }).filter(Boolean).join(' · '),
     }).forEach(([k, v]) => fd.append(k, v));
     fetch('/api/lead.php', { method: 'POST', body: fd, keepalive: true }).catch(() => { /* fares still open */ });
     window.gtag?.('event', 'generate_lead', { form_id: 'cab_fare_gate', route: routeId, pax, verified: verified.startsWith('OTP verified') });
-    saveContact({ name: name.trim(), phone: phone.trim(), at: Date.now() });
+    const isVerified = verified.startsWith('OTP verified');
+    saveContact({ name: name.trim(), phone: phone.trim(), at: Date.now(), v: isVerified });
+    if (isVerified) setVerifiedPhone(phone.trim());
     setKnown(true); setOtpSent(false); setOtp(''); setError('');
     setStep(3);
   };
@@ -527,7 +548,17 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   /* Why book with us (Aman, 2026-10-28). Only what is true today: "no extra charge" is NOT
      said flat — local packages bill extra km/hours, at the rate shown before booking. No
      "free" (cheap-words rule), no "verified drivers" until we actually verify them. */
-  const why = useMemo(() => ([
+  const why = useMemo(() => (QUOTE_ON_CALL ? [
+    // No fare on screen and nothing paid online, so no "fixed fare", "₹500" or refund lines here.
+    { Icon: BadgeIndianRupee, t: hi ? 'पहले किराया, फिर बुकिंग' : 'The fare first, then the booking',
+      d: hi ? 'हमारी टीम फ़ोन पर किराया और गाड़ी की जानकारी देगी। अभी ऑनलाइन कुछ नहीं देना है।' : 'Our team shares the fare and car options on the phone. Nothing to pay online now.' },
+    { Icon: Car, t: hi ? 'साफ़-सुथरी गाड़ी, अनुभवी ड्राइवर' : 'Clean cars, experienced drivers',
+      d: hi ? 'Dzire, Ertiga और Innova — परिवार के हिसाब से।' : 'Dzire, Ertiga or Innova — sized to your group.' },
+    { Icon: Building2, t: hi ? 'रजिस्टर्ड कंपनी' : 'A registered company',
+      d: hi ? 'ByteFlow Technologies Pvt Ltd · DPIIT पंजीकृत स्टार्टअप' : 'ByteFlow Technologies Pvt Ltd · DPIIT-Registered Startup' },
+    { Icon: PhoneCall, t: hi ? 'सीधे हमसे बात करें' : 'Talk to us directly',
+      d: hi ? `यात्रा से पहले और दौरान — ${SITE.phone}` : `Before and during your trip — ${SITE.phone}` },
+  ] : [
     { Icon: BadgeIndianRupee, t: hi ? 'तय किराया, कोई छिपा चार्ज नहीं' : 'Fixed fare, no hidden charges',
       d: hi ? 'टोल, पार्किंग, ड्राइवर शामिल। ज़्यादा किमी/घंटे का रेट बुकिंग से पहले दिखता है।' : 'Toll, parking and driver included. Extra km/hours only at the rate shown before you book.' },
     { Icon: Wallet, t: hi ? `सिर्फ़ ₹${ADVANCE} में बुकिंग` : `Book with just ₹${ADVANCE}`,
@@ -559,9 +590,13 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       {showTitle && (
         <div className="flex items-center justify-between gap-3 bg-gradient-to-r from-maroon-800 to-maroon px-5 py-3 text-white">
           <h2 className={`text-lg font-bold sm:text-xl ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
-            {hi ? 'कैब बुक करें — तय किराया' : 'Book a cab — fixed fare'}
+            {QUOTE_ON_CALL ? (hi ? 'कैब बुक करें' : 'Book a cab') : (hi ? 'कैब बुक करें — तय किराया' : 'Book a cab — fixed fare')}
           </h2>
-          <span className="text-xs text-cream/80">{step < 4 ? (hi ? `चरण ${step}/3` : `Step ${step}/3`) : ''}</span>
+          <span className="text-xs text-cream/80">
+            {QUOTE_ON_CALL
+              ? (step < 3 ? (hi ? `चरण ${step}/2` : `Step ${step}/2`) : '')
+              : (step < 4 ? (hi ? `चरण ${step}/3` : `Step ${step}/3`) : '')}
+          </span>
         </div>
       )}
 
@@ -647,7 +682,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
 
             <button type="button" onClick={seeFares}
               className={`mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95 active:scale-[0.99] ${hi ? '' : 'uppercase tracking-wide'}`}>
-              {hi ? 'किराया देखें' : 'See cab fares'} <ArrowRight className="h-5 w-5" aria-hidden />
+              {QUOTE_ON_CALL ? (hi ? 'आगे बढ़ें' : 'Continue') : (hi ? 'किराया देखें' : 'See cab fares')} <ArrowRight className="h-5 w-5" aria-hidden />
             </button>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
             <p className="text-center text-xs text-ink-mute">
@@ -659,9 +694,13 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
           <div className="space-y-4">
             {tripBar}
             <p className="text-center text-sm text-ink-soft">
-              {hi
-                ? 'किराया देखने के लिए अपना नाम और मोबाइल नंबर दें — इसी नंबर पर बुकिंग की जानकारी भेजी जाएगी।'
-                : 'Share your name and mobile number to see the fares — booking details are sent to this number.'}
+              {QUOTE_ON_CALL
+                ? (hi
+                  ? 'अपना नाम और मोबाइल नंबर दें। OTP से नंबर की पुष्टि के बाद हमारी टीम इसी नंबर पर किराया और गाड़ी की जानकारी देगी।'
+                  : 'Share your name and mobile number. Once it is verified by OTP, our team calls you on this number with the fare and car options.')
+                : (hi
+                  ? 'किराया देखने के लिए अपना नाम और मोबाइल नंबर दें — इसी नंबर पर बुकिंग की जानकारी भेजी जाएगी।'
+                  : 'Share your name and mobile number to see the fares — booking details are sent to this number.')}
             </p>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <div>
@@ -698,7 +737,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 <button type="button" onClick={verifyOtp} disabled={busy}
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-bold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70">
                   {busy ? <Loader2 className="h-5 w-5 animate-spin" aria-hidden /> : <ShieldCheck className="h-5 w-5" aria-hidden />}
-                  {hi ? 'OTP जाँचें और किराया देखें' : 'Verify & see fares'}
+                  {QUOTE_ON_CALL ? (hi ? 'OTP जाँचें और पूछताछ भेजें' : 'Verify & send enquiry') : (hi ? 'OTP जाँचें और किराया देखें' : 'Verify & see fares')}
                 </button>
                 <div className="flex items-center justify-between text-xs">
                   <button type="button" onClick={() => { setOtpSent(false); setOtp(''); setError(''); }} className="font-semibold text-maroon hover:underline">
@@ -709,6 +748,12 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                     : <button type="button" onClick={sendOtp} disabled={busy} className="font-semibold text-maroon hover:underline">{hi ? 'OTP दोबारा भेजें' : 'Resend OTP'}</button>}
                 </div>
               </div>
+            ) : QUOTE_ON_CALL && verifiedPhone !== '' && phone.trim() === verifiedPhone ? (
+              /* Same mobile already passed OTP in the last 30 days — no second SMS. */
+              <button type="button" data-send-enquiry onClick={() => { if (checkContact()) openFares('OTP verified (earlier visit)'); }}
+                className={`mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95 active:scale-[0.99] ${hi ? '' : 'uppercase tracking-wide'}`}>
+                {hi ? 'पूछताछ भेजें' : 'Send enquiry'} <ArrowRight className="h-5 w-5" aria-hidden />
+              </button>
             ) : (
               <button type="button" onClick={sendOtp} disabled={busy}
                 className={`mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-saffron py-3.5 text-base font-extrabold text-white shadow-lg hover:brightness-95 active:scale-[0.99] disabled:opacity-70 ${hi ? '' : 'uppercase tracking-wide'}`}>
@@ -718,7 +763,42 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             )}
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
             <p className="text-center text-xs text-ink-mute">
-              {hi ? 'नंबर सिर्फ़ इस यात्रा के लिए — कोई प्रमोशनल कॉल या SMS नहीं।' : 'Your number is used only for this trip — no promotional calls or SMS.'}
+              {QUOTE_ON_CALL
+                ? (hi ? 'नंबर सिर्फ़ इस यात्रा के लिए — हमारी टीम और सहयोगी ट्रैवल ऑपरेटर ही संपर्क करेंगे, कोई प्रमोशनल कॉल या SMS नहीं। ' : 'Your number is used only for this trip, by our team and our partner travel operator — no promotional calls or SMS. ')
+                : (hi ? 'नंबर सिर्फ़ इस यात्रा के लिए — कोई प्रमोशनल कॉल या SMS नहीं।' : 'Your number is used only for this trip — no promotional calls or SMS.')}
+              {QUOTE_ON_CALL && <a className="underline" href={hi ? '/hi/privacy-policy/' : '/privacy-policy/'}>{hi ? 'गोपनीयता नीति' : 'Privacy policy'}</a>}
+            </p>
+          </div>
+        ) : step === 3 && QUOTE_ON_CALL ? (
+          <div className="space-y-4 py-2 text-center" data-enquiry-sent>
+            <CheckCircle2 className="mx-auto h-14 w-14 text-maroon" aria-hidden />
+            <h3 className={`text-2xl font-bold text-maroon ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
+              {hi ? 'आपकी पूछताछ मिल गई' : 'Your enquiry has been received'}
+            </h3>
+            <div className="mx-auto max-w-md rounded-xl bg-cream-light/80 px-4 py-2.5">
+              <p className="text-sm font-bold text-ink">{tripLine}</p>
+              <p className="text-xs text-ink-mute">{whenLabel}</p>
+            </div>
+            <p className="mx-auto max-w-md text-sm text-ink-soft">
+              {hi
+                ? `हमारी टीम ${phone.trim()} पर कॉल करके इस यात्रा का किराया और गाड़ी की जानकारी देगी।`
+                : `Our team will call you on ${phone.trim()} with the fare and car options for this trip.`}
+            </p>
+            <a href={`${SITE.whatsapp}?text=${encodeURIComponent(hi
+                ? `नमस्ते! मैं ${name.trim()} हूँ। इस यात्रा के लिए कैब चाहिए: ${tripLine} · ${whenLabel}`
+                : `Hello! I am ${name.trim()}. I need a cab for this trip: ${tripLine} · ${whenLabel}`)}`}
+              target="_blank" rel="noopener"
+              onClick={() => window.gtag?.('event', 'cab_talk_first', { route: routeId, pax, source })}
+              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
+              <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर बात करें' : 'Message us on WhatsApp'}
+            </a>
+            <p className="text-xs text-ink-mute">
+              {hi ? 'जल्दी है? ' : 'In a hurry? '}
+              <a href={SITE.phoneTel} className="font-semibold text-maroon underline">{hi ? `कॉल करें ${SITE.phone}` : `Call ${SITE.phone}`}</a>
+              {' · '}
+              <button type="button" onClick={() => { setStep(1); setError(''); }} className="font-semibold text-maroon hover:underline">
+                {hi ? 'दूसरी यात्रा पूछें' : 'Ask about another trip'}
+              </button>
             </p>
           </div>
         ) : step === 3 ? (
@@ -959,7 +1039,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
         <h3 className={`mb-4 text-center text-base font-bold text-maroon sm:text-lg ${hi ? 'font-sanskrit !font-normal' : 'font-serif'}`}>
           {hi ? 'हमसे ही क्यों बुक करें' : 'Why book with us'}
         </h3>
-        <ul className="grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className={`grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2 ${QUOTE_ON_CALL ? 'lg:grid-cols-4' : 'lg:grid-cols-3'}`}>
           {why.map(({ Icon, t, d }) => (
             <li key={t} className="flex items-start gap-3">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white text-maroon ring-1 ring-gold/40">
@@ -972,9 +1052,11 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-center text-xs text-ink-soft">
-          <a className="underline" href={hi ? '/hi/cancellation-refund-policy/' : '/cancellation-refund-policy/'}>{hi ? 'रिफ़ंड नीति' : 'Refund policy'}</a>
-        </p>
+        {!QUOTE_ON_CALL && (
+          <p className="mt-4 text-center text-xs text-ink-soft">
+            <a className="underline" href={hi ? '/hi/cancellation-refund-policy/' : '/cancellation-refund-policy/'}>{hi ? 'रिफ़ंड नीति' : 'Refund policy'}</a>
+          </p>
+        )}
       </div>
     </section>
   );

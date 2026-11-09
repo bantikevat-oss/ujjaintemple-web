@@ -152,8 +152,10 @@ $leadDays = null;
 if ($travel !== '' && ($ts0 = strtotime($travel)) !== false) {
   $leadDays = (int) floor(($ts0 - strtotime('today')) / 86400);
 }
-$shapeLabels = ['cab' => 'Sirf cab', 'cab_hotel' => 'Cab + hotel', 'full_plan' => 'Poora trip plan'];
-$stayLabels  = ['budget' => 'Budget / dharamshala', 'standard' => 'Standard', 'deluxe' => 'Deluxe', 'premium' => 'Premium', 'none' => 'Nahi chahiye'];
+// English labels since 2026-11-09 (the mail now goes to a partner desk too). Rows before that read
+// "Log: / Din: / Kahan se: / Sirf cab / Poora trip plan" — same fields, Hinglish names.
+$shapeLabels = ['cab' => 'Cab only', 'cab_hotel' => 'Cab + hotel', 'full_plan' => 'Full trip plan'];
+$stayLabels  = ['budget' => 'Budget / dharamshala', 'standard' => 'Standard', 'deluxe' => 'Deluxe', 'premium' => 'Premium', 'none' => 'Not needed'];
 $isPremium = $purpose === 'group'
   || $isAbroad
   || in_array($people, ['6-9', '10+'], true)
@@ -165,12 +167,12 @@ $cabOnly  = $shape === 'cab' || ($shape === '' && in_array($purpose, ['cab'], tr
 $isQuick  = !$isPremium && $cabOnly && $leadDays !== null && $leadDays >= 0 && $leadDays <= 2;
 
 $trip = [];
-if ($people !== '')   $trip[] = "Log: $people";
-if ($tripDays !== '') $trip[] = "Din: $tripDays";
+if ($people !== '')   $trip[] = "Travellers: $people";
+if ($tripDays !== '') $trip[] = "Days: $tripDays";
 if ($shape !== '')    $trip[] = 'Plan: ' . $shapeLabels[$shape];
 if ($stay !== '')     $trip[] = 'Hotel: ' . $stayLabels[$stay];
-if ($fromCity !== '') $trip[] = "Kahan se: $fromCity";
-if ($isAbroad)        $trip[] = 'Videsh se (country code ke saath number)';
+if ($fromCity !== '') $trip[] = "From: $fromCity";
+if ($isAbroad)        $trip[] = 'From abroad (number with a country code)';
 if ($isPremium)       $trip[] = 'Tier: PREMIUM';
 elseif ($isQuick)     $trip[] = 'Tier: QUICK';
 if ($trip) $message = implode(' · ', $trip) . ($message !== '' ? "\n" . $message : '');
@@ -204,10 +206,10 @@ if ($fp) {
  * A group enquiry is the one we most want to see instantly, so it leads the subject.
  */
 $labels = [
-  'cab'   => 'Cab/Taxi',  'tour'  => 'Tour package', 'group' => 'GROUP 10+',
+  'cab'   => 'Cab / Taxi', 'tour'  => 'Tour package', 'group' => 'Group (10+)',
   'hotel' => 'Hotel',     'puja'  => 'Puja',         'info'  => 'Info only',
 ];
-$plabel = $labels[$purpose] ?? ($service ?: 'General');
+$plabel = $labels[$purpose] ?? $labels[$service] ?? ($service !== '' ? ucfirst($service) : 'General');
 
 if ($isPremium)                              { $tier = 'PREMIUM'; $mark = $purpose === 'group' || $people === '10+' ? '[PREMIUM · GROUP]' : '[PREMIUM]'; }
 elseif ($isQuick)                            { $tier = 'QUICK'; $mark = '[QUICK CAB]'; }
@@ -216,15 +218,19 @@ elseif (in_array($purpose, ['cab','tour','hotel'], true)) { $tier = 'WARM'; $mar
 elseif ($purpose === 'info')                 { $tier = 'COLD'; $mark = '[INFO]'; }
 else                                         { $tier = 'WARM'; $mark = '[LEAD]'; }
 
-$subject = "$mark UjjainTemple — $name · $plabel";
-// Saw the fares but has not paid (cab widget fare gate) — the lead to chase first (2026-10-28).
-// Anywhere, not at 0: a QUICK/PREMIUM tier line is prepended above (AVINASH 10-29 lost the 🔥).
-$sawFares = strpos($message, 'Cab fare enquiry:') !== false;
-if ($sawFares) $subject = '🔥 FARE DEKHA · ' . $subject;
+$subject = "$mark UjjainTemple.com enquiry — $name · $plabel";
+// Cab widget lead — the one to chase first (2026-10-28). Anywhere in the message, not at 0: a
+// QUICK/PREMIUM tier line is prepended above (AVINASH 10-29 lost the 🔥). Since 2026-11-09 the
+// widget shows no fare ("Cab enquiry:"); "Cab fare enquiry:" = older widget that showed one.
+$sawFares   = strpos($message, 'Cab fare enquiry:') !== false;
+$cabQuote   = strpos($message, 'Cab enquiry:') !== false;
+$otpChecked = strpos($message, 'Mobile OTP verified') !== false;
+if ($sawFares) $subject = '🔥 FARE SEEN · ' . $subject;
+elseif ($cabQuote) $subject = ($otpChecked ? '🔥 OTP-VERIFIED CAB ENQUIRY · ' : '🚕 CAB ENQUIRY · ') . $subject;
 // Reserved with no advance (2026-10-30) — the customer has said yes to a car and a fare; the team
 // calls, then sends the ₹500 link before the due date written in the message.
 $reservedLead = strpos($message, 'RESERVED (no advance):') !== false;
-if ($reservedLead) $subject = '🟢 RESERVED · ₹500 baaki · ' . $subject;
+if ($reservedLead) $subject = '🟢 RESERVED · ₹500 advance due · ' . $subject;
 
 /*
  * The mail is the product here — Aman reads it on a phone and decides whether to call.
@@ -241,7 +247,7 @@ $waNum     = strlen($digits) === 10 ? '91' . $digits : $digits;
 $whenLine = '—';
 if ($travel !== '' && ($ts = strtotime($travel)) !== false) {
   $days = (int) floor(($ts - strtotime('today')) / 86400);
-  $rel  = $days < 0 ? 'beet chuki' : ($days === 0 ? 'AAJ' : ($days === 1 ? 'KAL' : "$days din baad"));
+  $rel  = $days < 0 ? 'date has passed' : ($days === 0 ? 'TODAY' : ($days === 1 ? 'TOMORROW' : "in $days days"));
   $whenLine = date('d M Y', $ts) . ' · <strong>' . $rel . '</strong>';
   if ($days >= 0 && $days <= 7) $subject = '⏰ ' . $subject;   // travelling within a week
 }
@@ -264,8 +270,8 @@ $body .= '<div style="margin:15px 0 5px">'
        . '<a href="tel:+' . $e($waNum) . '" style="display:inline-block;background:#7A1220;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px;margin-right:8px">Call</a>'
        . '<a href="https://wa.me/' . $e($waNum) . '" style="display:inline-block;background:#25D366;color:#fff;padding:11px 20px;border-radius:7px;text-decoration:none;font-weight:700;font-size:14px">WhatsApp</a>'
        . '</div>';
-// Any cab lead: one tap sends the customer a booking link with their trip filled in, so the
-// follow-up call ends in a ₹500 booking rather than "baad me batate hain" (followup-lib.php).
+// Any cab lead: a one-tap WhatsApp reply with the trip filled in (followup-lib.php). Quote-on-call
+// enquiries get a greeting the sender completes with the fare; older flows get the booking link.
 if ($purpose === 'cab') {
   require_once __DIR__ . '/followup-lib.php';
   $fuHi = $locale !== 'en';
@@ -273,29 +279,75 @@ if ($purpose === 'cab') {
     'from' => clean($_POST['bkFrom'] ?? ''), 'to' => clean($_POST['bkTo'] ?? ''), 'type' => clean($_POST['bkType'] ?? ''),
     'date' => $travel, 'time' => clean($_POST['bkTime'] ?? ''), 'vehicle' => clean($_POST['bkVehicle'] ?? ''),
   ], $fuHi);
-  $body .= ut_fu_html($phone, $name, mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120), $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160));
+  $body .= ut_fu_html($phone, $name, mb_substr(clean($_POST['bkTrip'] ?? ''), 0, 120), $fuLink, $fuHi, mb_substr(clean($_POST['bkFares'] ?? ''), 0, 160), $cabQuote);
 }
 $body .= '<table style="width:100%;border-collapse:collapse;margin-top:14px;border-top:1px solid #eee">';
-$body .= $row('Yatra date', $whenLine);
-$body .= $row('Chahiye', $e($plabel));
+$body .= $row('Travel date', $whenLine);
+$body .= $row('Service', $e($plabel));
 if ($shape !== '')    $body .= $row('Plan', '<strong>' . $e($shapeLabels[$shape]) . '</strong>');
-if ($people !== '')   $body .= $row('Log', $e($people));
-if ($tripDays !== '') $body .= $row('Kitne din', $e($tripDays));
-if ($fromCity !== '') $body .= $row('Kahan se', $e($fromCity));
+if ($stay !== '')     $body .= $row('Hotel class', $e($stayLabels[$stay]));
+if ($people !== '')   $body .= $row('Travellers', $e($people));
+if ($tripDays !== '') $body .= $row('Trip length', $e($tripDays === '1' ? '1 day' : "$tripDays days"));
+if ($fromCity !== '') $body .= $row('Travelling from', $e($fromCity));
+if ($isAbroad)        $body .= $row('Note', 'Number has a foreign country code');
 $channelLabels = ['whatsapp' => 'WhatsApp button', 'app' => 'Android app', 'form' => 'Website form'];
-$body .= $row('Aaya kahan se', $e($channelLabels[$channel] ?? 'Website form'));
-$body .= $row('Page', '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src ?: '—') . '</a>');
+$body .= $row('Lead source', $e($channelLabels[$channel] ?? 'Website form'));
+// Only a real path becomes a link; widget ids like "booking:transport/…" or a package slug used to
+// render as broken https://ujjaintemple.combooking:… links.
+$body .= $row('Page', substr($src, 0, 1) === '/'
+  ? '<a href="https://ujjaintemple.com' . $e($src) . '" style="color:#7A1220">' . $e($src) . '</a>'
+  : $e($src ?: '—'));
 if ($message !== '') $body .= $row('Message', nl2br($e($message)));
-$body .= $row('Time', date('d M Y, g:i A') . ' IST');
+$body .= $row('Received', date('d M Y, g:i A') . ' IST');
 $body .= '</table></div>';
-$body .= '<div style="background:#faf9f6;padding:10px 18px;color:#9ca3af;font-size:11px;border-top:1px solid #eee">'
-       . 'UjjainTemple.com &nbsp;·&nbsp; leads.csv me bhi save ho chuki hai</div>';
-$body .= '</div></div>';
+$foot = function ($note) use ($e) {
+  return '<div style="background:#faf9f6;padding:10px 18px;color:#9ca3af;font-size:11px;border-top:1px solid #eee">'
+       . 'UjjainTemple.com &nbsp;·&nbsp; ' . $e($note) . '</div></div></div>';
+};
+
+/*
+ * Who gets which lead (Aman, 2026-11-09):
+ *   cab / taxi      → Aman + Dheeraj (news-config 'mail' → 'to') + the partner travel desk
+ *   tour / package  → Aman + the partner travel desk. NOT Dheeraj, and NOT pushed to the CRM
+ *                     (the CRM shows every lead to every user, so skipping the push is the only
+ *                     way Dheeraj does not see them there). Still in leads.csv.
+ *   puja, info, rest → Aman + Dheeraj only, as before.
+ * The partner gets a separate send, not a CC, so it never sees the internal addresses.
+ * Throttled by the same $mail_ok. To stop forwarding: set UT_PARTNER_TO to ''.
+ */
+const UT_PARTNER_TO      = 'info.ujjainmahakaltour@gmail.com';
+const UT_NO_PACKAGE_MAIL = ['dheeraj.byteflow@gmail.com'];
+$isPujaLead = $purpose === 'puja' || $service === 'puja';
+$isPackage  = !$isPujaLead && $purpose !== 'info' && !$cabOnly
+  && (in_array($purpose, ['tour', 'hotel', 'group'], true)
+      || in_array($service, ['tour', 'hotel'], true)
+      || in_array($shape, ['cab_hotel', 'full_plan'], true)
+      || $stay !== '');
+$isCabLead  = !$isPujaLead && $purpose !== 'info'
+  && ($cabOnly || $purpose === 'cab' || in_array($service, ['cab', 'transport'], true));
+$toPartner  = UT_PARTNER_TO !== '' && ($isPackage || $isCabLead);
 
 require_once __DIR__ . '/smtp.php';
 if ($mail_ok) {
-  $sent = ujt_smtp_send($subject, $body, null, true);
-  if (!$sent) error_log("ujt lead: SMTP send failed for $name / $phone");
+  $icfg = ujt_mail_config();
+  if ($icfg && $isPackage) {
+    $keep = array_filter(array_map('trim', is_array($icfg['to']) ? $icfg['to'] : explode(',', (string)($icfg['to'] ?? ''))),
+      function ($a) { return $a !== '' && !in_array(strtolower($a), UT_NO_PACKAGE_MAIL, true); });
+    $icfg['to'] = implode(', ', $keep);
+  }
+  $internal = $body . $foot($toPartner ? 'Saved to the lead register · also sent to the partner travel desk (' . UT_PARTNER_TO . ')'
+                                       : 'Saved to the lead register');
+  if ($icfg && trim((string)$icfg['to']) !== '') {
+    if (!ujt_smtp_send($subject, $internal, $icfg, true)) error_log("ujt lead: SMTP send failed for $name / $phone");
+  } else {
+    error_log("ujt lead: no internal recipient for $name / $phone");
+  }
+  if ($toPartner && ($pcfg = ujt_mail_config())) {
+    $pcfg['to'] = UT_PARTNER_TO;
+    if (!ujt_smtp_send($subject, $body . $foot('Enquiry from UjjainTemple.com'), $pcfg, true)) {
+      error_log("ujt lead: partner SMTP send failed for $name / $phone");
+    }
+  }
 } else {
   // Captured, deliberately not mailed. The row is in leads.csv either way.
   error_log("ujt lead: mail throttled (burst=" . (int)$burst . " dayFlood=" . (int)$dayFlood . ") for $phone");
@@ -313,7 +365,8 @@ if ($mail_ok) {
  */
 $crm_cfg_path = __DIR__ . '/../../news-config.php';
 $crm_cfg = is_readable($crm_cfg_path) ? (include $crm_cfg_path) : null;
-if (is_array($crm_cfg) && !empty($crm_cfg['crm']['key'])) {
+// Package leads stay out of the CRM (see "Who gets which lead" above).
+if (!$isPackage && is_array($crm_cfg) && !empty($crm_cfg['crm']['key'])) {
   require_once __DIR__ . '/crm-push.php';
   crm_push($crm_cfg['crm'], [
     'name'        => $name,

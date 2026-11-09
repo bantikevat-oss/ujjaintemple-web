@@ -95,7 +95,7 @@ const COPY = {
 /* Service tiles — the order is the money order: cab and tours first, information last. */
 const SERVICES = [
   { Icon: Car, href: '/cab-booking/', hi: 'कैब बुकिंग', en: 'Cab booking',
-    dHi: 'तय किराया · ₹500 में बुकिंग · ओंकारेश्वर, इंदौर एयरपोर्ट', dEn: 'Fixed fares · book with ₹500 · Omkareshwar, Indore airport' },
+    dHi: 'तय किराया · ऑनलाइन बुकिंग · ओंकारेश्वर, इंदौर एयरपोर्ट', dEn: 'Fixed fares · book online · Omkareshwar, Indore airport' },
   { Icon: Route, href: '/tour-and-travel-ujjain/', hi: 'टूर पैकेज', en: 'Tour packages',
     dHi: '1 से 7 दिन की यात्रा योजना', dEn: 'Yatra plans from one to seven days' },
   { Icon: BedDouble, href: '/hotels/', hi: 'होटल', en: 'Hotels',

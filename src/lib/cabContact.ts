@@ -5,7 +5,9 @@
  */
 export const CONTACT_KEY = 'ut_cab_contact';
 export const CONTACT_DAYS = 30;
-export type Contact = { name: string; phone: string; at: number };
+// v = this mobile passed the widget's SMS OTP (2026-11-09). A contact handed over by the WhatsApp
+// gate has no v, so the widget still asks for the OTP before it sends the enquiry.
+export type Contact = { name: string; phone: string; at: number; v?: boolean };
 export const readContact = (): Contact | null => {
   try {
     const c = JSON.parse(localStorage.getItem(CONTACT_KEY) || 'null') as Contact | null;

@@ -219,7 +219,7 @@ export function WhatsAppGateHost() {
           <Car className="h-6 w-6 shrink-0 text-maroon" aria-hidden />
           <span className="min-w-0 flex-1">
             <span className="block text-sm font-bold text-maroon">{isHi ? 'कैब बुक करनी है?' : 'Need a cab?'}</span>
-            <span className="block text-xs text-ink-soft">{isHi ? 'तय किराया देखें और ₹500 एडवांस देकर अभी पक्की करें' : 'See the fixed fare and confirm now with a ₹500 advance'}</span>
+            <span className="block text-xs text-ink-soft">{isHi ? 'नंबर की पुष्टि करें — टीम कॉल करके किराया बताएगी' : 'Verify your mobile — our team calls you with the fare'}</span>
           </span>
           <ArrowRight className="h-5 w-5 shrink-0 text-maroon" aria-hidden />
         </button>
@@ -287,7 +287,7 @@ export function WhatsAppGateHost() {
             <button type="button" onClick={goBook}
               className="flex w-full items-center justify-center gap-2 rounded-md bg-maroon py-3 text-base font-bold text-cream shadow-md transition-transform active:scale-95">
               <Car className="h-5 w-5" aria-hidden />
-              {isHi ? 'तय किराया देखें और अभी बुक करें' : 'See fixed fare & book now'}
+              {isHi ? 'कैब बुक करें' : 'Book a cab'}
             </button>
           )}
           <button

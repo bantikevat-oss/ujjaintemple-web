@@ -8,6 +8,8 @@ import { SITE } from '../lib/site';
 // data — untrue since GA4 went live on 2026-09-11 — and nothing covered the
 // Ujjain Guide app. Play's Data safety form is checked against this page, so the
 // two must say the same thing (ujjaintemple-app/PLAY_LISTING.md).
+// 2026-11-09: cab, taxi, tour package and hotel enquiries are now shared with a partner travel
+// operator (Aman). The old "we do not sell or share … with any third party" line was no longer true.
 const SECTIONS_HI = [
   {
     title: 'हम कौन सी जानकारी एकत्रित करते हैं?',
@@ -19,7 +21,7 @@ const SECTIONS_HI = [
   },
   {
     title: 'आपकी जानकारी का उपयोग कैसे होता है?',
-    body: `एकत्रित जानकारी केवल आपकी यात्रा, टूर पैकेज या अन्य सेवा अनुरोध का उत्तर देने के लिए उपयोग की जाती है। हम आपकी व्यक्तिगत जानकारी किसी तृतीय पक्ष को विक्रय या साझा नहीं करते।`,
+    body: `एकत्रित जानकारी केवल आपकी पूजा, यात्रा, टूर पैकेज या अन्य सेवा अनुरोध का उत्तर देने के लिए उपयोग की जाती है।\n• कैब, टैक्सी, टूर पैकेज और होटल की पूछताछ: आपकी यात्रा की व्यवस्था के लिए हम आपका नाम, मोबाइल नंबर और यात्रा का विवरण (स्थान, तारीख़, यात्रियों की संख्या, होटल की श्रेणी) अपने सहयोगी ट्रैवल ऑपरेटर के साथ साझा करते हैं। सहयोगी इस जानकारी का उपयोग केवल उसी पूछताछ के लिए आपसे संपर्क करने और वही यात्रा व्यवस्थित करने के लिए कर सकता है।\n• पूजा और अन्य सभी पूछताछ हमारी टीम के बाहर किसी के साथ साझा नहीं की जातीं।\nइसके अलावा हम आपकी जानकारी किसी के साथ साझा नहीं करते, और इसका उपयोग प्रमोशनल कॉल या SMS के लिए नहीं करते।`,
   },
   {
     title: 'जानकारी की सुरक्षा',
@@ -54,7 +56,7 @@ const SECTIONS_EN = [
   },
   {
     title: 'How is your information used?',
-    body: `Collected information is used solely to respond to your travel, tour package or other service request. We do not sell or share your personal information with any third party.`,
+    body: `Collected information is used only to respond to your puja, travel, tour package or other service request.\n• Cab, taxi, tour package and hotel enquiries: to arrange your trip, we share your name, mobile number and trip details (places, dates, number of travellers, hotel class) with our partner travel operator. The partner may use them only to contact you about that enquiry and to arrange that trip.\n• Puja enquiries and all other enquiries are not shared with anyone outside our team.\nWe do not share your information with anyone else, and we do not use it for promotional calls or SMS.`,
   },
   {
     title: 'Data security',
