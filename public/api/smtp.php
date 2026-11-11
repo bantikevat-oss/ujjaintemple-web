@@ -42,6 +42,10 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
     $to = array_values(array_filter(array_map('trim', is_array($toRaw) ? $toRaw : explode(',', $toRaw)),
         function ($a) { return filter_var($a, FILTER_VALIDATE_EMAIL) !== false; }));
     if (!$to) { error_log('ujt_smtp: no valid recipient'); return false; }
+    // Optional 'cc' (same shapes as 'to'). Added 2026-11-11: the partner lead mail CCs Aman.
+    $ccRaw = $cfg['cc'] ?? '';
+    $cc = array_values(array_diff(array_filter(array_map('trim', is_array($ccRaw) ? $ccRaw : explode(',', (string)$ccRaw)),
+        function ($a) { return filter_var($a, FILTER_VALIDATE_EMAIL) !== false; }), $to));
 
     $transport = ($port === 465) ? "ssl://$host" : $host;
     $fp = @stream_socket_client("$transport:$port", $errno, $errstr, 12);
@@ -73,7 +77,7 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
     $ok = $ok && $cmd(base64_encode($user), '334');
     $ok = $ok && $cmd(base64_encode($pass), '235');
     $ok = $ok && $cmd('MAIL FROM:<' . $from . '>', '250');
-    foreach ($to as $rcpt) $ok = $ok && $cmd('RCPT TO:<' . $rcpt . '>', '250');
+    foreach (array_merge($to, $cc) as $rcpt) $ok = $ok && $cmd('RCPT TO:<' . $rcpt . '>', '250');
     $ok = $ok && $cmd('DATA', '354');
 
     if ($ok) {
@@ -81,6 +85,7 @@ function ujt_smtp_send(string $subject, string $body, ?array $cfg = null, bool $
         $fromName = preg_replace('/[^A-Za-z0-9 ._-]/', '', (string)($cfg['from_name'] ?? 'UjjainTemple Leads'));
         $headers  = 'From: ' . $fromName . ' <' . $from . ">\r\n";
         $headers .= 'To: ' . implode(', ', array_map(function ($a) { return '<' . $a . '>'; }, $to)) . "\r\n";
+        if ($cc) $headers .= 'Cc: ' . implode(', ', array_map(function ($a) { return '<' . $a . '>'; }, $cc)) . "\r\n";
         $headers .= 'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= 'Content-Type: text/' . ($html ? 'html' : 'plain') . "; charset=UTF-8\r\n";

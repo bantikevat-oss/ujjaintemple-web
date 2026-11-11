@@ -335,17 +335,20 @@ function ut_partner_seq(array $row) {
 }
 
 /*
- * Who gets which lead (Aman, 2026-11-09):
- *   cab / taxi      → Aman + Dheeraj (news-config 'mail' → 'to') + the partner travel desk
- *   tour / package  → Aman + the partner travel desk. NOT Dheeraj, and NOT pushed to the CRM
- *                     (the CRM shows every lead to every user, so skipping the push is the only
- *                     way Dheeraj does not see them there). Still in leads.csv.
- *   puja, info, rest → Aman + Dheeraj only, as before.
- * The partner gets a separate send, not a CC, so it never sees the internal addresses.
+ * Who gets which lead (Aman, 2026-11-09; cab changed 2026-11-11):
+ *   cab / taxi      → Aman + the partner travel desk. NOT Dheeraj, NOT pushed to the CRM.
+ *   tour / package  → Aman + the partner travel desk. NOT Dheeraj, NOT pushed to the CRM.
+ *                     (The CRM shows every lead to every user, so skipping the push is the only
+ *                     way Dheeraj does not see them there.) Both stay in leads.csv.
+ *   puja, info, rest → Aman + Dheeraj + CRM, as before.
+ * Aman gets two mails per travel lead: the internal copy (tier, source, page) and the partner
+ * copy, which goes To the partner with Aman in CC (Aman, 2026-11-11: "kapil ke mail me meko cc
+ * me rakho"). The CC = news-config 'to' minus UT_NO_TRAVEL_MAIL, so no address is hard-coded
+ * here; the partner sees that one CC address and nothing else internal.
  * Throttled by the same $mail_ok. To stop forwarding: set UT_PARTNER_TO to ''.
  */
 const UT_PARTNER_TO      = 'info.ujjainmahakaltour@gmail.com';
-const UT_NO_PACKAGE_MAIL = ['dheeraj.byteflow@gmail.com'];
+const UT_NO_TRAVEL_MAIL  = ['dheeraj.byteflow@gmail.com'];
 $isPujaLead = $purpose === 'puja' || $service === 'puja';
 $isPackage  = !$isPujaLead && $purpose !== 'info' && !$cabOnly
   && (in_array($purpose, ['tour', 'hotel', 'group'], true)
@@ -359,9 +362,10 @@ $toPartner  = UT_PARTNER_TO !== '' && ($isPackage || $isCabLead);
 require_once __DIR__ . '/smtp.php';
 if ($mail_ok) {
   $icfg = ujt_mail_config();
-  if ($icfg && $isPackage) {
+  $isTravel = $isPackage || $isCabLead;
+  if ($icfg && $isTravel) {
     $keep = array_filter(array_map('trim', is_array($icfg['to']) ? $icfg['to'] : explode(',', (string)($icfg['to'] ?? ''))),
-      function ($a) { return $a !== '' && !in_array(strtolower($a), UT_NO_PACKAGE_MAIL, true); });
+      function ($a) { return $a !== '' && !in_array(strtolower($a), UT_NO_TRAVEL_MAIL, true); });
     $icfg['to'] = implode(', ', $keep);
   }
   // Numbered before the internal mail, so Aman's copy says which partner number this lead got.
@@ -375,6 +379,7 @@ if ($mail_ok) {
   }
   if ($toPartner && ($pcfg = ujt_mail_config())) {
     $pcfg['to'] = UT_PARTNER_TO;
+    $pcfg['cc'] = $icfg ? (string)$icfg['to'] : '';   // Aman only — Dheeraj already filtered out above
     $pcfg['from_name'] = 'Lead Desk';
     /*
      * Partner copy = only what the desk needs to call and close (Aman, 2026-11-09: the partner must
@@ -440,8 +445,8 @@ if ($mail_ok) {
  */
 $crm_cfg_path = __DIR__ . '/../../news-config.php';
 $crm_cfg = is_readable($crm_cfg_path) ? (include $crm_cfg_path) : null;
-// Package leads stay out of the CRM (see "Who gets which lead" above).
-if (!$isPackage && is_array($crm_cfg) && !empty($crm_cfg['crm']['key'])) {
+// Cab + package leads stay out of the CRM (see "Who gets which lead" above).
+if (!$isPackage && !$isCabLead && is_array($crm_cfg) && !empty($crm_cfg['crm']['key'])) {
   require_once __DIR__ . '/crm-push.php';
   crm_push($crm_cfg['crm'], [
     'name'        => $name,
