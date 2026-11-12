@@ -2,6 +2,7 @@ import { Phone, Check } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { LeadForm } from './LeadForm';
 import { SITE } from '../../lib/site';
+import { useNoPhone } from '../../lib/noPhone';
 
 interface GlobalLeadSectionProps {
   sourcePage: string;
@@ -10,6 +11,7 @@ interface GlobalLeadSectionProps {
 
 export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: GlobalLeadSectionProps) {
   const { locale } = useI18n();
+  const noPhone = useNoPhone();
   const isHi = locale === 'hi';
 
   const benefits = isHi
@@ -58,8 +60,8 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
               ))}
             </ul>
 
-            {/* Phone CTA */}
-            <a
+            {/* Phone CTA — not on informational pages (lib/noPhone.ts) */}
+            {!noPhone && <a
               href={SITE.phoneTel}
               className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gold/40
                 bg-gold/10 px-6 py-3 font-bold text-gold backdrop-blur-sm
@@ -67,7 +69,7 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
             >
               <Phone className="h-4 w-4" />
               {isHi ? `सीधे कॉल करें · ${SITE.phone}` : `Call directly · ${SITE.phone}`}
-            </a>
+            </a>}
 
             {/* Trust line */}
             <p className="mt-5 text-xs text-cream/55">

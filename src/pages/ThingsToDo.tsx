@@ -8,6 +8,7 @@ import { useI18n } from '../i18n';
 import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
 import { packagesData } from '../data/packages';
 import { SITE } from '../lib/site';
+import { useNoPhone } from '../lib/noPhone';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { Landmark, MapPinned, BedDouble, Car, CalendarDays, Flame, ArrowRight } from 'lucide-react';
 
@@ -16,6 +17,7 @@ import { Landmark, MapPinned, BedDouble, Car, CalendarDays, Flame, ArrowRight } 
 // hotels, cab, simhastha, puja). Internal-link hub, not a thin page.
 export function ThingsToDo() {
   const { locale } = useI18n();
+  const noPhone = useNoPhone();
   const prefix = locale === 'en' ? '' : '/hi';
   const path = '/things-to-do-in-ujjain/';
   const topMandirs = featuredMandirs.slice(0, 6);
@@ -24,8 +26,8 @@ export function ThingsToDo() {
     ? 'उज्जैन में घूमने की जगह — प्रमुख दर्शन स्थल, टूर व यात्रा गाइड 2026'
     : 'Things to Do in Ujjain — Top Places to Visit, Darshan & Travel Guide 2026';
   const description = locale === 'hi'
-    ? 'उज्जैन में घूमने की जगह — महाकालेश्वर, काल भैरव, हरसिद्धि सहित प्रमुख मंदिर, टूर पैकेज, होटल, कैब व सिंहस्थ 2028 की पूरी यात्रा गाइड। यात्रा सहायता: +91 89890 06759'
-    : 'Things to do in Ujjain — top temples like Mahakaleshwar, Kal Bhairav, Harsiddhi, plus tour packages, hotels, cabs & Simhastha 2028. Complete Ujjain travel guide. Help: +91 89890 06759';
+    ? 'उज्जैन में घूमने की जगह — महाकालेश्वर, काल भैरव, हरसिद्धि सहित प्रमुख मंदिर, टूर पैकेज, होटल, कैब व सिंहस्थ 2028 की पूरी यात्रा गाइड।'
+    : 'Things to do in Ujjain — top temples like Mahakaleshwar, Kal Bhairav, Harsiddhi, plus tour packages, hotels, cabs & Simhastha 2028. Complete Ujjain travel guide.';
 
   const hubs = [
     { icon: Landmark, to: `${prefix}/mandirs/`, hi: 'उज्जैन के मंदिर', en: 'Temples in Ujjain', dh: 'प्रमुख एवं प्राचीन मंदिर — दर्शन समय, इतिहास व कैसे पहुँचें।', de: 'Famous ancient temples — darshan timings, history & how to reach.' },
@@ -95,7 +97,8 @@ export function ThingsToDo() {
                 ? 'प्राचीन मंदिर, ज्योतिर्लिंग, पवित्र घाट एवं सिंहस्थ की नगरी — उज्जैन दर्शन, टूर, होटल व कैब की पूरी यात्रा गाइड एक जगह।'
                 : "Ancient temples, Jyotirlinga, holy ghats and the city of Simhastha — your complete guide to Ujjain darshan, tours, hotels and cabs in one place."}
             </p>
-            <a href={SITE.phoneTel} className="btn-call mt-7 inline-flex">{locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}</a>
+            {/* No phone on this guide (lib/noPhone.ts) — the button takes the visitor to the trip form. */}
+            <a href={noPhone ? '#trip-help' : SITE.phoneTel} className="btn-call mt-7 inline-flex">{locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}</a>
           </div>
         </section>
 
@@ -210,7 +213,9 @@ export function ThingsToDo() {
         </section>
 
         {/* ── LEAD ── */}
-        <GlobalLeadSection sourcePage="things-to-do" defaultService="tour" />
+        <div id="trip-help" className="scroll-mt-24">
+          <GlobalLeadSection sourcePage="things-to-do" defaultService="tour" />
+        </div>
       </Layout>
     </>
   );

@@ -2,6 +2,7 @@ import { Phone, MessageCircle, Share2 } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { openWhatsAppGate } from './WhatsAppGate';
+import { useNoPhone } from '../../lib/noPhone';
 
 /**
  * Mobile-only premium sticky bottom bar — primary conversion surface.
@@ -10,6 +11,7 @@ import { openWhatsAppGate } from './WhatsAppGate';
  */
 export function StickyCallBar() {
   const { locale } = useI18n();
+  const noPhone = useNoPhone();
 
   const handleShare = async () => {
     if (typeof navigator !== 'undefined' && navigator.share) {
@@ -36,14 +38,16 @@ export function StickyCallBar() {
       {/* gold top hairline */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent" />
       <div className="flex items-center gap-2">
-        <a
-          href={SITE.phoneTel}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-gold py-2.5 text-sm font-bold text-maroon-900 shadow-md transition-transform active:scale-95"
-          aria-label={locale === 'hi' ? 'कॉल करें' : 'Call now'}
-        >
-          <Phone className="h-4 w-4" />
-          <span>{locale === 'hi' ? 'कॉल करें' : 'Call'}</span>
-        </a>
+        {!noPhone && (
+          <a
+            href={SITE.phoneTel}
+            className="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-gold py-2.5 text-sm font-bold text-maroon-900 shadow-md transition-transform active:scale-95"
+            aria-label={locale === 'hi' ? 'कॉल करें' : 'Call now'}
+          >
+            <Phone className="h-4 w-4" />
+            <span>{locale === 'hi' ? 'कॉल करें' : 'Call'}</span>
+          </a>
+        )}
         <button
           type="button"
           onClick={() => openWhatsAppGate({ sourcePage: typeof window !== 'undefined' ? window.location.pathname : '' })}

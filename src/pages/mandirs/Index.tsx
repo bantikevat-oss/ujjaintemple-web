@@ -183,8 +183,8 @@ export function MandirIndex() {
     {
       q: { hi: 'उज्जैन के मुख्य मंदिर देखने में कितने दिन लगते हैं?', en: 'How many days are needed to see the main temples of Ujjain?' },
       a: {
-        hi: 'मुख्य मंदिर — महाकालेश्वर, महाकाल लोक, काल भैरव, हरसिद्धि, मंगलनाथ और चिंतामण गणेश — एक पूरे दिन में देखे जा सकते हैं। सांदीपनि आश्रम, गढ़कालिका और चौरासी महादेव जोड़ने पर दो दिन आराम से लगते हैं। यात्रा नियोजन में सहायता हेतु +91 89890 06759 पर संपर्क करें।',
-        en: 'The main temples — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Harsiddhi, Mangalnath and Chintaman Ganesh — fit into one full day. Adding Sandipani Ashram, Gadkalika and the 84 Mahadev makes it a comfortable two days. For help planning a route, call +91 89890 06759.',
+        hi: 'मुख्य मंदिर — महाकालेश्वर, महाकाल लोक, काल भैरव, हरसिद्धि, मंगलनाथ और चिंतामण गणेश — एक पूरे दिन में देखे जा सकते हैं। सांदीपनि आश्रम, गढ़कालिका और चौरासी महादेव जोड़ने पर दो दिन आराम से लगते हैं। रूट बनाने में सहायता के लिए इसी पेज पर यात्रा फ़ॉर्म भरें।',
+        en: 'The main temples — Mahakaleshwar, Mahakal Lok, Kal Bhairav, Harsiddhi, Mangalnath and Chintaman Ganesh — fit into one full day. Adding Sandipani Ashram, Gadkalika and the 84 Mahadev makes it a comfortable two days. For help planning a route, fill in the trip form on this page.',
       },
     },
   ] as const;
@@ -473,11 +473,12 @@ export function MandirIndex() {
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
               {locale === 'hi'
-                ? 'यहाँ सूचीबद्ध प्रत्येक मन्दिर का दर्शन समय एवं संपर्क जानकारी मन्दिर ट्रस्ट से सीधे अथवा अधिकृत स्रोतों से सत्यापित। यदि कोई जानकारी पुरानी प्रतीत हो — कृपया व्हाट्सऐप पर सूचित करें: '
-                : 'Each temple’s darshan timing and contact info has been verified directly with the temple trust or via authoritative sources. If any information appears outdated, please flag it on WhatsApp: '}
+                ? 'यहाँ दिए गए दर्शन समय प्रकाशित स्रोतों से संकलित हैं और लगभग हैं। यदि कोई जानकारी पुरानी प्रतीत हो — कृपया '
+                : 'The darshan timings listed here are compiled from published sources and are approximate. If any information appears outdated, please tell us on '}
               <a href={`${SITE.whatsapp}?text=${encodeURIComponent(locale === 'hi' ? 'नमस्ते! मन्दिर सूची में एक जानकारी पुरानी लग रही है: ' : 'Hello! Some information in the temple list looks outdated: ')}`} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
-                {SITE.phone}
+                {locale === 'hi' ? 'व्हाट्सऐप पर सूचित करें' : 'WhatsApp'}
               </a>
+              {locale === 'hi' ? '।' : '.'}
             </p>
           </aside>
 

@@ -117,7 +117,10 @@ export function placeOfWorshipSchema(m: MandirSchemaInput) {
     description: m.description,
     image: m.image,
     url: m.url,
-    telephone: m.telephone ?? SITE.phoneIntl,
+    // 🔴 Only the temple's own number, never ours (2026-11-12). The fallback to SITE.phoneIntl
+    // told Google that our travel-desk number was the temple's phone on every temple page,
+    // and people called it as the temple. No known temple number → no telephone field.
+    ...(m.telephone ? { telephone: m.telephone } : {}),
     address: {
       '@type': 'PostalAddress',
       streetAddress: m.address,

@@ -2,6 +2,7 @@ import { useState, FormEvent } from 'react';
 import { Phone, Send } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { useNoPhone } from '../../lib/noPhone';
 import { TripShapeFields } from './TripShapeFields';
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 
 export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePage = '', askStay = false }: Props) {
   const { t, locale } = useI18n();
+  const noPhone = useNoPhone();
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -50,11 +52,15 @@ export function LeadForm({ defaultService = 'hotel', variant = 'card', sourcePag
           {locale === 'hi' ? 'उज्जैन यात्रा सहायता' : 'Ujjain Trip Assistance'}
         </h3>
         <p className="mt-1 text-sm text-ink-soft">
-          {locale === 'hi' ? 'होटल, कैब, टूर — फ़ॉर्म भरें अथवा सीधे सम्पर्क करें' : 'Hotel, cab, tour — fill the form or call us directly'}
+          {noPhone
+            ? (locale === 'hi' ? 'होटल, कैब, टूर — फ़ॉर्म भरें, हमारी टीम आपसे सम्पर्क करेगी' : 'Hotel, cab, tour — fill the form and our team will get back to you')
+            : (locale === 'hi' ? 'होटल, कैब, टूर — फ़ॉर्म भरें अथवा सीधे सम्पर्क करें' : 'Hotel, cab, tour — fill the form or call us directly')}
         </p>
-        <a href={SITE.phoneTel} className="mt-3 inline-flex items-center gap-2 font-bold text-maroon hover:text-saffron-700">
-          <Phone className="h-4 w-4" /> {SITE.phone}
-        </a>
+        {!noPhone && (
+          <a href={SITE.phoneTel} className="mt-3 inline-flex items-center gap-2 font-bold text-maroon hover:text-saffron-700">
+            <Phone className="h-4 w-4" /> {SITE.phone}
+          </a>
+        )}
       </div>
 
       {status === 'success' ? (

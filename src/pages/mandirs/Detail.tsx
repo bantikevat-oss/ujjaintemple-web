@@ -373,11 +373,12 @@ export function MandirDetail({ slug }: DetailProps) {
               <p className={`mb-8 max-w-[62ch] leading-relaxed text-cream/85 ${locale === 'hi' ? 'text-lg' : 'text-base sm:text-lg'}`}>
                 {mandir.shortIntro[locale]}
               </p>
-              {/* One icon, on the one action that is a phone call. The directions link is
-                  a link and is allowed to look like one. */}
+              {/* 🔴 No phone on temple pages (Aman, 2026-11-12, lib/noPhone.ts): this button used to
+                  be a tel: link and drew 10-15 calls a day from people asking about the temple.
+                  It now takes the visitor to the trip form on this page. */}
               <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
-                <a href={SITE.phoneTel} className="btn-call">
-                  <Phone className="h-4 w-4" /> {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
+                <a href="#trip-help" className="btn-call">
+                  {locale === 'hi' ? 'यात्रा सहायता लें' : 'Get Trip Help'}
                 </a>
                 <a
                   href={`https://maps.google.com/?q=${mandir.geo.lat},${mandir.geo.lng}`}
@@ -529,7 +530,7 @@ export function MandirDetail({ slug }: DetailProps) {
                 )}
               </div>
             </div>
-            <aside className="lg:sticky lg:top-24 lg:self-start">
+            <aside id="trip-help" className="scroll-mt-24 lg:sticky lg:top-24 lg:self-start">
               <LeadForm defaultService="darshanPlan" sourcePage={`mandir/${mandir.slug}`} />
             </aside>
           </div>

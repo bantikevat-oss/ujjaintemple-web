@@ -5,6 +5,7 @@ import { Menu, X, Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { isServerRoute } from '../../lib/serverRoutes';
+import { useNoPhone } from '../../lib/noPhone';
 
 interface NavItem {
   key?: string;
@@ -141,6 +142,7 @@ export function Header() {
   const { t, locale, altLocale } = useI18n();
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const noPhone = useNoPhone();
   const prefix = locale === 'en' ? '' : '/hi';
   const altPrefix = altLocale === 'en' ? '' : '/hi';
 
@@ -198,12 +200,16 @@ export function Header() {
           <span className="hidden opacity-90 sm:inline">
             {locale === 'hi' ? 'उज्जैन मंदिर · सिंहस्थ 2028 · होटल · टैक्सी · दर्शन पैकेज' : 'Ujjain Temple · Simhastha 2028 · Hotel · Taxi · Darshan Package'}
           </span>
-          <span className="text-xs opacity-90 sm:hidden">
-            {locale === 'hi' ? 'यात्रा सहायता' : 'Yatra help'}
-          </span>
-          <a href={SITE.phoneTel} className="flex items-center gap-1.5 whitespace-nowrap font-bold hover:opacity-90" aria-label={t('cta.call')}>
-            <Phone className="h-3.5 w-3.5" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
-          </a>
+          {!noPhone && (
+            <span className="text-xs opacity-90 sm:hidden">
+              {locale === 'hi' ? 'यात्रा सहायता' : 'Yatra help'}
+            </span>
+          )}
+          {!noPhone && (
+            <a href={SITE.phoneTel} className="flex items-center gap-1.5 whitespace-nowrap font-bold hover:opacity-90" aria-label={t('cta.call')}>
+              <Phone className="h-3.5 w-3.5" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
+            </a>
+          )}
         </div>
       </div>
 
@@ -223,11 +229,13 @@ export function Header() {
             lines at 1024px) — padding shrinks instead. */}
         <ul className="hidden lg:flex items-center gap-0.5 xl:gap-3 text-sm">
           {renderDesktopNav(navTree)}
-          <li className="ml-1 xl:ml-2">
-            <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-3 xl:!px-4 text-sm flex items-center gap-2 whitespace-nowrap">
-              <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
-            </a>
-          </li>
+          {!noPhone && (
+            <li className="ml-1 xl:ml-2">
+              <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-3 xl:!px-4 text-sm flex items-center gap-2 whitespace-nowrap">
+                <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
+              </a>
+            </li>
+          )}
           <li className="ml-1 xl:ml-2">
             <Link to={`${altPrefix}/`} className="text-xs font-semibold text-link hover:underline bg-cream-light px-2 py-1 rounded" aria-label="Switch language">
               {t('lang.switchTo')}
@@ -253,9 +261,11 @@ export function Header() {
               <MobileNavItem key={idx} item={item} prefix={prefix} locale={locale as 'hi' | 'en'} t={t} closeMenu={() => setOpen(false)} />
             ))}
             <div className="pt-4 mt-2 border-t border-cream-dark flex justify-between items-center">
-              <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm inline-flex items-center gap-2">
-                <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
-              </a>
+              {noPhone ? <span /> : (
+                <a href={`${SITE.phoneTel}`} className="btn-call !py-2 !px-4 text-sm inline-flex items-center gap-2">
+                  <Phone className="h-4 w-4" /> {locale === 'hi' ? 'कॉल करें' : 'Call Now'}
+                </a>
+              )}
               <Link to={`${altPrefix}/`} className="text-sm font-bold text-link underline" onClick={() => setOpen(false)}>
                 {t('lang.switchTo')}
               </Link>

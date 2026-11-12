@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { CalendarDays, Plane, ArrowRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
+import { useNoPhone } from '../../lib/noPhone';
 
 /*
  * "What next?" for a visitor who has the answer they came for (a timing, a distance) and is
@@ -40,6 +41,7 @@ const OPTIONS: Option[] = [
 
 export function TripNextStep({ source, className = '', inline = false }: { source: string; className?: string; inline?: boolean }) {
   const { locale } = useI18n();
+  const noPhone = useNoPhone();
   const isHi = locale === 'hi';
   const prefix = isHi ? '/hi' : '';
   const track = (option: string) => window.gtag?.('event', 'trip_plan_click', { option, source });
@@ -93,12 +95,17 @@ export function TripNextStep({ source, className = '', inline = false }: { sourc
           <Plane className="mt-0.5 h-4 w-4 flex-shrink-0 text-maroon" />
           <span>
             {isHi
-              ? 'विदेश से आ रहे हैं? सबसे नज़दीकी हवाई अड्डा इंदौर (IDR) है, उज्जैन से लगभग 55 किमी। वहाँ से कैब की व्यवस्था हो सकती है — फ़ॉर्म में नंबर +देश कोड के साथ लिखें या '
-              : 'Coming from abroad? The nearest airport is Indore (IDR), about 55 km from Ujjain, and a cab from there can be arranged — enter your number with the country code in the form, or '}
-            <a href={SITE.phoneTel} onClick={() => track('call')} className="font-semibold text-maroon underline">
-              {isHi ? `कॉल करें ${SITE.phone}` : `call ${SITE.phone}`}
-            </a>
-            {isHi ? '।' : '.'}
+              ? 'विदेश से आ रहे हैं? सबसे नज़दीकी हवाई अड्डा इंदौर (IDR) है, उज्जैन से लगभग 55 किमी। वहाँ से कैब की व्यवस्था हो सकती है — फ़ॉर्म में नंबर +देश कोड के साथ लिखें'
+              : 'Coming from abroad? The nearest airport is Indore (IDR), about 55 km from Ujjain, and a cab from there can be arranged — enter your number with the country code in the form'}
+            {noPhone ? (isHi ? '।' : '.') : (
+              <>
+                {isHi ? ' या ' : ', or '}
+                <a href={SITE.phoneTel} onClick={() => track('call')} className="font-semibold text-maroon underline">
+                  {isHi ? `कॉल करें ${SITE.phone}` : `call ${SITE.phone}`}
+                </a>
+                {isHi ? '।' : '.'}
+              </>
+            )}
           </span>
         </p>
       </div>
