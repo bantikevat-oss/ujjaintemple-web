@@ -19,8 +19,8 @@ export function Mahadev84Page() {
     ? '84 महादेव उज्जैन — पूरी सूची, स्थान व दर्शन क्रम (चौरासी महादेव यात्रा)'
     : '84 Mahadev of Ujjain — Complete List, Locations & Darshan Order';
   const description = locale === 'hi'
-    ? `उज्जैन के 84 महादेव मंदिरों की पूरी सूची — नाम, स्थान और यात्रा क्रम। अगस्तेश्वर से दुर्दरेश्वर तक चौरासी महादेव की प्राचीन परिक्रमा। यात्रा सहायता: ${SITE.phone}`
-    : `Complete list of the 84 Mahadev (Chaurasi Mahadev) temples of Ujjain — names, locations and parikrama order. Plan your darshan: ${SITE.phone}`;
+    ? `उज्जैन के 84 महादेव मंदिरों की पूरी सूची — नाम, स्थान और यात्रा क्रम। अगस्तेश्वर से दुर्दरेश्वर तक चौरासी महादेव की प्राचीन परिक्रमा।`
+    : `Complete list of the 84 Mahadev (Chaurasi Mahadev) temples of Ujjain — names, locations and parikrama order.`;
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -99,10 +99,6 @@ export function Mahadev84Page() {
             </div>
             <p className="mt-3 text-xs text-ink-mute">
               {filtered.length} / 84 {locale === 'hi' ? 'महादेव' : 'Mahadev'}
-              {' · '}
-              <a href={SITE.phoneTel} className="font-semibold text-maroon hover:underline">
-                {locale === 'hi' ? 'यात्रा सहायता' : 'Trip help'}: {SITE.phone}
-              </a>
             </p>
           </div>
         </section>
@@ -236,11 +232,8 @@ export function Mahadev84Page() {
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
               {locale === 'hi'
-                ? '84 महादेव की सूची एवं स्थान पारंपरिक स्रोतों से संकलित हैं। कुछ शिवालय गलियों में स्थित हैं — दर्शन क्रम व मार्गदर्शन के लिए स्थानीय सहायता लें। कोई सुधार हो तो व्हाट्सऐप पर बताएं: '
-                : 'The list and locations of the 84 Mahadev are compiled from traditional sources. Some shrines lie within old lanes — take local help for the darshan order and directions. For corrections, message us on WhatsApp: '}
-              <a href={`${SITE.whatsapp}?text=${encodeURIComponent(locale === 'hi' ? 'नमस्ते! 84 महादेव सूची में एक सुधार बताना है: ' : 'Hello! I would like to report a correction in the 84 Mahadev list: ')}`} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
-                {SITE.phone}
-              </a>
+                ? '84 महादेव की सूची एवं स्थान पारंपरिक स्रोतों से संकलित हैं। कुछ शिवालय गलियों में स्थित हैं — दर्शन क्रम व मार्गदर्शन के लिए स्थानीय सहायता लें। कोई सुधार हो तो नीचे दिए फ़ॉर्म से बताएं।'
+                : 'The list and locations of the 84 Mahadev are compiled from traditional sources. Some shrines lie within old lanes — take local help for the darshan order and directions. For corrections, tell us through the form below.'}
             </p>
           </aside>
 

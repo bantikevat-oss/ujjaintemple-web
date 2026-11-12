@@ -12,6 +12,8 @@ import { useNoPhone } from '../../lib/noPhone';
 export function StickyCallBar() {
   const { locale } = useI18n();
   const noPhone = useNoPhone();
+  // Informational pages: no call, no WhatsApp (lib/noPhone.ts) — a bar with only "share" is noise.
+  if (noPhone) return null;
 
   const handleShare = async () => {
     if (typeof navigator !== 'undefined' && navigator.share) {

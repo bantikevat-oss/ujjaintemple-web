@@ -1,22 +1,21 @@
 import { useLocation } from 'react-router-dom';
 
 /**
- * 🔴 No phone number on INFORMATIONAL pages (Aman, 2026-11-12: "make sure informational
- * call nahi aaye … without impacting SEO and other leads").
+ * 🔴 No phone number AND no WhatsApp on INFORMATIONAL pages (Aman, 2026-11-12: "make sure
+ * informational call nahi aaye … without impacting SEO and other leads"; later the same day,
+ * on 84 Mahadev: "in pages pe whatsapp bhi hta do … call now bhi na dikhe").
  *
  * Why: temple pages are ~2,100 of the site's GSC clicks a month (Kal Bhairav alone ~580).
  * People landing there for darshan timings saw our number and called it as if it were the
  * temple — 10-15 calls a day asking about the mandir, none of them a booking. GA4 (30 days to
  * 11-12): temple pages gave 59 of ~139 call taps but only 4 form leads.
  *
- * On these pages the number is not shown, not linked (tel:) and not put in any schema.
- * Visitors who want a cab or a trip still have the enquiry forms, the cab widget and
- * WhatsApp (gated, so the request arrives as a written lead). The number stays everywhere a
- * caller is a buyer: cab/taxi pages, tour packages, hotels, cab booking, puja pages (puja
- * leads), the Simhastha hub/stay/transport/budget guides, home, contact, 84 Mahadev.
- *
- * Not covered on purpose: /84-mahadev-ujjain/. It sells the parikrama package and is a lead
- * source — callers there want a vehicle and a route, which is business.
+ * On these pages the number is not shown, not linked (tel:) and not put in any schema, and
+ * there is no WhatsApp button (footer strip, mobile sticky bar, editor's notes). The only
+ * contact path is the enquiry form, so every request arrives as a written lead. The number
+ * and WhatsApp stay everywhere a caller is a buyer: cab/taxi pages, tour packages (incl. the
+ * 84 Mahadev parikrama package), hotels, cab booking, puja pages (puja leads), the Simhastha
+ * hub/stay/transport/budget guides, home, contact.
  *
  * Slugs are written out instead of imported from the data files because this runs in the
  * global header and footer. Add a slug here when a new informational page is added.
@@ -28,6 +27,8 @@ const INFO_EXACT = new Set([
   '/navgrah-mandir-ujjain/',
   '/bhairav-mandir-ujjain/',
   '/ganesh-mandir-ujjain/',
+  // 84 Mahadev list (its parikrama package page keeps the number — it sells)
+  '/84-mahadev-ujjain/',
   // Guides with no product of their own
   '/things-to-do-in-ujjain/',
   '/tour-and-travel-ujjain/best-places-to-visit-ujjain/',
@@ -53,7 +54,7 @@ export function isTempleInfoPath(pathname: string): boolean {
   return INFO_EXACT.has(p);
 }
 
-/** true on informational pages — callers hide the phone number and tel: links. */
+/** true on informational pages — callers hide the phone number, tel: links and WhatsApp. */
 export function useNoPhone(): boolean {
   const { pathname } = useLocation();
   return isTempleInfoPath(pathname);

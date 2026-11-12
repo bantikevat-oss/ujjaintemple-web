@@ -97,8 +97,8 @@ export function Footer() {
         </svg>
       </div>
 
-      {/* ── PRE-FOOTER WhatsApp CTA STRIP ────────────────────────────────── */}
-      <div
+      {/* ── PRE-FOOTER WhatsApp CTA STRIP — not on informational pages (lib/noPhone.ts) ── */}
+      {!noPhone && <div
         className="relative border-b"
         style={{ borderColor: 'rgba(201,168,76,0.35)', background: 'rgba(255,255,255,0.55)' }}
       >
@@ -129,7 +129,7 @@ export function Footer() {
             {isHi ? 'व्हाट्सऐप पर पूछें' : 'Ask on WhatsApp'}
           </a>
         </div>
-      </div>
+      </div>}
 
       {/* ── MAIN FOOTER GRID ──────────────────────────────────────────────── */}
       <div className="container-page py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">

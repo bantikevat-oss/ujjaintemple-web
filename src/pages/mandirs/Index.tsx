@@ -473,12 +473,8 @@ export function MandirIndex() {
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft sm:text-base">
               {locale === 'hi'
-                ? 'यहाँ दिए गए दर्शन समय प्रकाशित स्रोतों से संकलित हैं और लगभग हैं। यदि कोई जानकारी पुरानी प्रतीत हो — कृपया '
-                : 'The darshan timings listed here are compiled from published sources and are approximate. If any information appears outdated, please tell us on '}
-              <a href={`${SITE.whatsapp}?text=${encodeURIComponent(locale === 'hi' ? 'नमस्ते! मन्दिर सूची में एक जानकारी पुरानी लग रही है: ' : 'Hello! Some information in the temple list looks outdated: ')}`} className="font-bold text-maroon hover:underline" target="_blank" rel="noopener noreferrer">
-                {locale === 'hi' ? 'व्हाट्सऐप पर सूचित करें' : 'WhatsApp'}
-              </a>
-              {locale === 'hi' ? '।' : '.'}
+                ? 'यहाँ दिए गए दर्शन समय प्रकाशित स्रोतों से संकलित हैं और लगभग हैं। यदि कोई जानकारी पुरानी प्रतीत हो — कृपया नीचे दिए फ़ॉर्म से बताएं।'
+                : 'The darshan timings listed here are compiled from published sources and are approximate. If any information appears outdated, please tell us through the form below.'}
             </p>
           </aside>
 
