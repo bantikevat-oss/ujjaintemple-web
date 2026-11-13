@@ -38,15 +38,16 @@ export function CabBookingLanding() {
    * the number and the fare ARE the answer — the same reasoning that put actual
    * darshan hours at the front of every temple snippet.
    *
-   * 🔴 The number is in the DESCRIPTION, never the <title>: a title carrying a phone
-   * number gets rewritten by Google and burns the pixel width the keyword needs.
-   * The title instead carries the WORDS people type ("service", "fare", "contact
-   * number"). Every fare figure must match data/rates.ts (the one rate card) — the table
-   * below reads it directly; the copy strings here repeat it by hand, so edit both.
+   * 🔴 2026-11-13: calls are off site-wide (lib/noPhone.ts CALLS_OFF), so the page shows no
+   * number and the title no longer says "Contact Number" (Aman: "haan, theek karo") — a
+   * title promising a number the page doesn't show is a bounce, and those searchers only
+   * wanted to call. Expect the `…contact number` / `…service number` queries to slide;
+   * that is intended. The title keeps "service" and "fare" and adds "online booking",
+   * which is what the page now does. Every fare figure must match data/rates.ts.
    */
   const title = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
-    : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
+    ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व ऑनलाइन बुकिंग'
+    : 'Ujjain Taxi Service — Darshan Cab Fare & Online Booking';
   const description = locale === 'hi'
     ? 'उज्जैन टैक्सी सेवा — लोकल दर्शन, ओंकारेश्वर और इंदौर एयरपोर्ट के लिए हर गाड़ी का तय किराया, ऑनलाइन बुकिंग। टोल व पार्किंग शामिल।'
     : 'Ujjain taxi service at one fixed fare per car for local darshan, Omkareshwar and Indore Airport — book online in two steps. Toll and parking included.';
