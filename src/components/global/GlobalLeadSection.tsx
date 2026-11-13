@@ -2,7 +2,7 @@ import { Phone, Check } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { LeadForm } from './LeadForm';
 import { SITE } from '../../lib/site';
-import { useNoPhone } from '../../lib/noPhone';
+import { useNoCall } from '../../lib/noPhone';
 
 interface GlobalLeadSectionProps {
   sourcePage: string;
@@ -11,7 +11,7 @@ interface GlobalLeadSectionProps {
 
 export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: GlobalLeadSectionProps) {
   const { locale } = useI18n();
-  const noPhone = useNoPhone();
+  const noCall = useNoCall();
   const isHi = locale === 'hi';
 
   const benefits = isHi
@@ -44,8 +44,8 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
             </h2>
             <p className="mt-4 text-base sm:text-lg text-cream/80 max-w-md mx-auto lg:mx-0">
               {isHi
-                ? 'फ़ॉर्म भरें या सीधे कॉल करें — हमारी टीम पूजा, ठहराव एवं यात्रा की पूरी योजना बना देगी।'
-                : 'Fill the form or call directly — our team plans your puja, stay and travel end-to-end.'}
+                ? 'फ़ॉर्म भरें — हमारी टीम पूजा, ठहराव एवं यात्रा की पूरी योजना बना देगी।'
+                : 'Fill the form — our team plans your puja, stay and travel end-to-end.'}
             </p>
 
             {/* Benefits */}
@@ -61,7 +61,7 @@ export function GlobalLeadSection({ sourcePage, defaultService = 'tour' }: Globa
             </ul>
 
             {/* Phone CTA — not on informational pages (lib/noPhone.ts) */}
-            {!noPhone && <a
+            {!noCall && <a
               href={SITE.phoneTel}
               className="mt-8 inline-flex items-center gap-2.5 rounded-full border border-gold/40
                 bg-gold/10 px-6 py-3 font-bold text-gold backdrop-blur-sm

@@ -351,7 +351,7 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
   };
   const otpError = (r: OtpReply) => {
     if (r.error === 'wait') return hi ? `${r.wait ?? 30} सेकंड बाद दोबारा भेजें` : `Try again in ${r.wait ?? 30} seconds`;
-    if (r.error === 'limit') return hi ? `बहुत बार कोशिश हो गई — कॉल करें ${SITE.phone}` : `Too many attempts — call ${SITE.phone}`;
+    if (r.error === 'limit') return hi ? 'बहुत बार कोशिश हो गई — कृपया WhatsApp पर मैसेज करें' : 'Too many attempts — please message us on WhatsApp';
     if (r.error === 'expired') return hi ? 'OTP की समय-सीमा ख़त्म — नया OTP भेजें' : 'The OTP has expired — send a new one';
     if (r.error === 'tries') return hi ? 'ग़लत OTP कई बार — नया OTP भेजें' : 'Too many wrong tries — send a new OTP';
     if (r.error === 'wrong') return hi ? `OTP ग़लत है${r.left ? ` (${r.left} कोशिश बाकी)` : ''}` : `Wrong OTP${r.left ? ` (${r.left} tries left)` : ''}`;
@@ -504,10 +504,10 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
             setReserved(false);
             setStep(4);
           } else {
-            setError(hi ? `पेमेंट की पुष्टि नहीं हो सकी — बुकिंग ID ${order.booking_id} के साथ हमें कॉल करें` : `Could not confirm the payment — call us with booking ID ${order.booking_id}`);
+            setError(hi ? `पेमेंट की पुष्टि नहीं हो सकी — बुकिंग ID ${order.booking_id} के साथ हमें WhatsApp करें` : `Could not confirm the payment — message us on WhatsApp with booking ID ${order.booking_id}`);
           }
         } catch {
-          setError(hi ? `पेमेंट हो गया हो तो बुकिंग ID ${order.booking_id} के साथ हमें कॉल करें` : `If you were charged, call us with booking ID ${order.booking_id}`);
+          setError(hi ? `पेमेंट हो गया हो तो बुकिंग ID ${order.booking_id} के साथ हमें WhatsApp करें` : `If you were charged, message us on WhatsApp with booking ID ${order.booking_id}`);
         }
         setPaying(false);
       },
@@ -556,8 +556,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       d: hi ? 'Dzire, Ertiga और Innova — परिवार के हिसाब से।' : 'Dzire, Ertiga or Innova — sized to your group.' },
     { Icon: Building2, t: hi ? 'रजिस्टर्ड कंपनी' : 'A registered company',
       d: hi ? 'ByteFlow Technologies Pvt Ltd · DPIIT पंजीकृत स्टार्टअप' : 'ByteFlow Technologies Pvt Ltd · DPIIT-Registered Startup' },
-    { Icon: PhoneCall, t: hi ? 'सीधे हमसे बात करें' : 'Talk to us directly',
-      d: hi ? `यात्रा से पहले और दौरान — ${SITE.phone}` : `Before and during your trip — ${SITE.phone}` },
+    { Icon: MessageCircle, t: hi ? 'WhatsApp पर हमसे बात करें' : 'Talk to us on WhatsApp',
+      d: hi ? 'यात्रा से पहले और दौरान।' : 'Before and during your trip.' },
   ] : [
     { Icon: BadgeIndianRupee, t: hi ? 'तय किराया, कोई छिपा चार्ज नहीं' : 'Fixed fare, no hidden charges',
       d: hi ? 'टोल, पार्किंग, ड्राइवर शामिल। ज़्यादा किमी/घंटे का रेट बुकिंग से पहले दिखता है।' : 'Toll, parking and driver included. Extra km/hours only at the rate shown before you book.' },
@@ -569,8 +569,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
       d: hi ? 'Dzire, Ertiga और Innova — परिवार के हिसाब से।' : 'Dzire, Ertiga or Innova — sized to your group.' },
     { Icon: Building2, t: hi ? 'रजिस्टर्ड कंपनी' : 'A registered company',
       d: hi ? 'ByteFlow Technologies Pvt Ltd · DPIIT पंजीकृत स्टार्टअप' : 'ByteFlow Technologies Pvt Ltd · DPIIT-Registered Startup' },
-    { Icon: PhoneCall, t: hi ? 'सीधे हमसे बात करें' : 'Talk to us directly',
-      d: hi ? `यात्रा से पहले और दौरान — ${SITE.phone}` : `Before and during your trip — ${SITE.phone}` },
+    { Icon: MessageCircle, t: hi ? 'WhatsApp पर हमसे बात करें' : 'Talk to us on WhatsApp',
+      d: hi ? 'यात्रा से पहले और दौरान।' : 'Before and during your trip.' },
   ]), [hi]);
 
   const tripBar = (
@@ -685,10 +685,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               {QUOTE_ON_CALL ? (hi ? 'आगे बढ़ें' : 'Continue') : (hi ? 'किराया देखें' : 'See cab fares')} <ArrowRight className="h-5 w-5" aria-hidden />
             </button>
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
-            <p className="text-center text-xs text-ink-mute">
-              {hi ? 'आज ही यात्रा है? ' : 'Travelling today? '}
-              <a href={SITE.phoneTel} className="font-semibold text-maroon underline">{hi ? `कॉल करें ${SITE.phone}` : `Call ${SITE.phone}`}</a>
-            </p>
           </div>
         ) : step === 2 ? (
           <div className="space-y-4">
@@ -793,9 +789,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
               <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर बात करें' : 'Message us on WhatsApp'}
             </a>
             <p className="text-xs text-ink-mute">
-              {hi ? 'जल्दी है? ' : 'In a hurry? '}
-              <a href={SITE.phoneTel} className="font-semibold text-maroon underline">{hi ? `कॉल करें ${SITE.phone}` : `Call ${SITE.phone}`}</a>
-              {' · '}
               <button type="button" onClick={() => { setStep(1); setError(''); }} className="font-semibold text-maroon hover:underline">
                 {hi ? 'दूसरी यात्रा पूछें' : 'Ask about another trip'}
               </button>
@@ -904,8 +897,8 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 )}
               </>
             ) : (
-              <a href={SITE.phoneTel} className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
-                <Phone className="h-5 w-5" aria-hidden /> {hi ? 'कॉल करें' : 'Call'}
+              <a href={talkFirstUrl} target="_blank" rel="noopener" className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3.5 text-lg font-bold text-maroon hover:bg-maroon/5">
+                <MessageCircle className="h-5 w-5" aria-hidden /> {hi ? 'WhatsApp पर पूछें' : 'Ask on WhatsApp'}
               </a>
             )}
             {error && <p className="text-center text-sm font-semibold text-red-700" role="alert">{error}</p>}
@@ -924,10 +917,6 @@ export function CabBookingWidget({ locale, source, preset, showTitle = true }: {
                 ? 'WhatsApp पर आपकी यात्रा की पूरी जानकारी के साथ चैट खुल गई है — मैसेज भेज दें। हमारी टीम कॉल करके बुकिंग पक्की करेगी।'
                 : 'WhatsApp has opened with your trip details — send the message. Our team will call you to confirm the booking.'}
             </p>
-            <a href={SITE.phoneTel}
-              className="mx-auto flex w-full max-w-sm items-center justify-center gap-2 rounded-xl border-2 border-maroon py-3 font-bold text-maroon hover:bg-maroon/5">
-              <Phone className="h-5 w-5" aria-hidden /> {hi ? `अभी कॉल करें ${SITE.phone}` : `Call now ${SITE.phone}`}
-            </a>
           </div>
         ) : reserved ? (
           <div className="space-y-4 py-1" data-reserved>

@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
@@ -8,7 +9,7 @@ import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, faqSchema, pujaServiceSchema } from '../lib/schemas';
-import { PhoneCall, ArrowRight, CheckCircle2, ChevronDown, Star } from 'lucide-react';
+import { PhoneCall, ArrowRight, CheckCircle2, ChevronDown, Star, MessageCircle } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────
 /*
@@ -61,14 +62,14 @@ const WHY_POINTS = [
 
 const FAQS = {
   hi: [
-    { q: 'उज्जैन में पूजा बुकिंग कैसे करें?', a: '+91 89890 06759 पर कॉल या WhatsApp करें। पूजा का प्रकार, तारीख, और आपकी आवश्यकता बताएं। हमारे विशेषज्ञ पंडित आपको पूरी जानकारी देंगे और बुकिंग कन्फर्म करेंगे।' },
+    { q: 'उज्जैन में पूजा बुकिंग कैसे करें?', a: 'इस पेज से पूछताछ भेजें या WhatsApp करें। पूजा का प्रकार, तारीख, और आपकी आवश्यकता बताएं। हमारे विशेषज्ञ पंडित आपको पूरी जानकारी देंगे और बुकिंग कन्फर्म करेंगे।' },
     { q: 'क्या मैं उज्जैन आए बिना पूजा करा सकता हूँ?', a: 'हाँ — ऑनलाइन पूजा की सुविधा है। पंडित जी पूजा करते हैं, आप WhatsApp Video Call पर लाइव देख सकते हैं। परन्तु स्वयं उपस्थित रहने का फल अधिक होता है।' },
     { q: 'पूजा की फीस कितनी है?', a: 'पूजा के प्रकार और विधि पर निर्भर: साधारण पूजा ₹3,100 से, मध्यम ₹7,100-15,000, और विशेष हवन-यज्ञ ₹21,000-51,000 तक। कॉल करने पर सटीक जानकारी दी जाएगी।' },
     { q: 'पूजा के लिए कौन से दस्तावेज चाहिए?', a: 'जन्म कुंडली (यदि ग्रह दोष संबंधी पूजा है), जन्म तिथि, नाम, और गोत्र। यदि कुंडली नहीं है तो भी पूजा होती है — केवल नाम-गोत्र पर्याप्त है।' },
     { q: 'क्या उज्जैन टेम्पल के पंडित प्रामाणिक हैं?', a: 'हाँ — हमारे पंडित उज्जैन के मूल निवासी एवं अनुभवी वाले, वैदिक परम्परा में प्रशिक्षित हैं। कोई कमीशन नहीं — सीधा पंडित-यजमान सम्बन्ध।' },
   ],
   en: [
-    { q: 'How to book a puja in Ujjain?', a: 'Call or WhatsApp +91 89890 06759. Share the puja type, preferred date and your requirement. Our expert pandits will provide complete guidance and confirm the booking.' },
+    { q: 'How to book a puja in Ujjain?', a: 'Send an enquiry from this page or message us on WhatsApp. Share the puja type, preferred date and your requirement. Our expert pandits will provide complete guidance and confirm the booking.' },
     { q: 'Can I get a puja done without coming to Ujjain?', a: 'Yes — online puja is available. The pandit performs the puja and you can watch live on WhatsApp Video Call. However, being personally present gives greater results.' },
     { q: 'What is the puja fee?', a: 'Depends on puja type and vidhi: basic puja from ₹3,100, medium ₹7,100-15,000, and special havan-yajna ₹21,000-51,000. Exact details given on call.' },
     { q: 'What documents are needed for the puja?', a: 'Birth horoscope (kundli) for planet-related pujas, birth date, name and gotra. If no kundli is available, the puja still proceeds — name and gotra suffice.' },
@@ -88,8 +89,8 @@ export function PujaLanding() {
     ? 'उज्जैन में पूजा — मंगल दोष, काल सर्प, नवग्रह शांति, पितृ दोष'
     : 'Puja in Ujjain — Mangal Dosh, Kaal Sarp, Navgrah Shanti, Pitru Dosh';
   const description = locale === 'hi'
-    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। अनुभवी पंडित। प्रामाणिक वैदिक विधि। बुकिंग: +91 89890 06759'
-    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. Experienced pandits. Authentic Vedic vidhi. Booking: +91 89890 06759';
+    ? 'उज्जैन में पूजा — मंगल दोष निवारण, काल सर्प शांति, नवग्रह शांति, पितृ दोष, महामृत्युंजय। अनुभवी पंडित। प्रामाणिक वैदिक विधि।'
+    : 'Puja in Ujjain — Mangal Dosh Nivaran, Kaal Sarp Shanti, Navgrah Shanti, Pitru Dosh, Mahamrityunjaya. Experienced pandits. Authentic Vedic vidhi.';
 
   const schemas = [
     breadcrumbSchema({ items: [
@@ -149,12 +150,11 @@ export function PujaLanding() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href={SITE.phoneTel}
-                className="inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all hover:scale-105"
+              <EnquireButton purpose="puja" className="inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 35px rgba(201,168,76,0.35)' }}>
-                <PhoneCall className="w-5 h-5" />
-                {locale === 'hi' ? 'पूजा बुकिंग — कॉल करें' : 'Book Puja — Call Now'}
-              </a>
+                <MessageCircle className="w-5 h-5" />
+                {locale === 'hi' ? 'पूजा बुकिंग — पूछताछ करें' : 'Book Puja — Send Enquiry'}
+              </EnquireButton>
               <a href="#pujas"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all"
                 style={{ border: '1.5px solid rgba(201,168,76,0.40)', color: '#E0C374', background: 'rgba(201,168,76,0.06)' }}>
@@ -233,9 +233,9 @@ export function PujaLanding() {
                 <p className="text-xl font-serif text-ink-soft mb-6">
                   {locale === 'hi' ? 'जल्द ही पूजाएँ जोड़ी जाएँगी।' : 'Pujas coming soon.'}
                 </p>
-                <a href={SITE.phoneTel} className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-lg">
-                  <PhoneCall className="w-5 h-5" /> {SITE.phone}
-                </a>
+                <EnquireButton purpose="puja" className="btn-primary inline-flex items-center gap-2 px-8 py-4 text-lg">
+                  <MessageCircle className="w-5 h-5" /> {locale === 'hi' ? 'पूछताछ भेजें' : 'Send Enquiry'}
+                </EnquireButton>
               </div>
             ) : (
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
@@ -285,12 +285,11 @@ export function PujaLanding() {
               <p className="text-ink-mute font-serif italic text-sm mb-4">
                 {locale === 'hi' ? 'कौन सी पूजा सही है — यह पता नहीं? हमसे पूछें।' : 'Not sure which puja is right for you? Just ask us.'}
               </p>
-              <a href={SITE.phoneTel}
-                className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
+              <EnquireButton purpose="puja" className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 30px rgba(201,168,76,0.25)' }}>
-                <PhoneCall className="w-5 h-5" />
-                {locale === 'hi' ? 'निःशुल्क परामर्श — कॉल करें' : 'Free Consultation — Call'}
-              </a>
+                <MessageCircle className="w-5 h-5" />
+                {locale === 'hi' ? 'पूजा की जानकारी लें' : 'Ask About a Puja'}
+              </EnquireButton>
             </div>
           </div>
         </section>
@@ -370,12 +369,12 @@ export function PujaLanding() {
                 {(locale === 'hi' ? [
                   ['शास्त्रोक्त विधि', 'अनुभवी पंडित, कोई समझौता नहीं'],
                   ['पारदर्शी मूल्य', 'पहले से तय फीस — पूजा के बाद कोई अतिरिक्त माँग नहीं'],
-                  ['वन-स्टॉप', 'पूजा + मंदिर दर्शन + आवास + कैब — सब एक कॉल पर'],
+                  ['वन-स्टॉप', 'पूजा + मंदिर दर्शन + आवास + कैब — सब एक ही जगह'],
                   ['ऑनलाइन विकल्प', 'घर बैठे WhatsApp पर लाइव देखें'],
                 ] : [
                   ['Shastriya Vidhi', '15+ year experienced pandits — no compromises'],
                   ['Transparent Pricing', 'Fee fixed upfront — no extra demands after puja'],
-                  ['One-Stop', 'Puja + darshan + hotel + cab — all in one call'],
+                  ['One-Stop', 'Puja + darshan + hotel + cab — all in one place'],
                   ['Online Option', 'Watch live on WhatsApp from home'],
                 ]).map(([title, desc], i) => (
                   <li key={i} className="flex items-start gap-4">
@@ -390,12 +389,11 @@ export function PujaLanding() {
                   </li>
                 ))}
               </ul>
-              <a href={SITE.phoneTel}
-                className="mt-8 w-full inline-flex items-center justify-center gap-3 font-bold px-7 py-4 rounded-full text-base transition-all hover:scale-105"
+              <EnquireButton purpose="puja" className="mt-8 w-full inline-flex items-center justify-center gap-3 font-bold px-7 py-4 rounded-full text-base transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 25px rgba(201,168,76,0.25)' }}>
-                <PhoneCall className="w-5 h-5" />
-                {locale === 'hi' ? `${SITE.phone}` : `${SITE.phone}`}
-              </a>
+                <MessageCircle className="w-5 h-5" />
+                {locale === 'hi' ? 'पूछताछ भेजें' : 'Send Enquiry'}
+              </EnquireButton>
             </div>
 
           </div>

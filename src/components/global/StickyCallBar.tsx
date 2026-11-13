@@ -2,7 +2,7 @@ import { Phone, MessageCircle, Share2 } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { openWhatsAppGate } from './WhatsAppGate';
-import { useNoPhone } from '../../lib/noPhone';
+import { useNoPhone, useNoCall } from '../../lib/noPhone';
 
 /**
  * Mobile-only premium sticky bottom bar — primary conversion surface.
@@ -12,6 +12,8 @@ import { useNoPhone } from '../../lib/noPhone';
 export function StickyCallBar() {
   const { locale } = useI18n();
   const noPhone = useNoPhone();
+  // 2026-11-13: calls off site-wide (lib/noPhone.ts CALLS_OFF) — the bar keeps WhatsApp (gated lead) + Share.
+  const noCall = useNoCall();
   // Informational pages: no call, no WhatsApp (lib/noPhone.ts) — a bar with only "share" is noise.
   if (noPhone) return null;
 
@@ -40,7 +42,7 @@ export function StickyCallBar() {
       {/* gold top hairline */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/80 to-transparent" />
       <div className="flex items-center gap-2">
-        {!noPhone && (
+        {!noCall && (
           <a
             href={SITE.phoneTel}
             className="flex flex-1 items-center justify-center gap-1.5 rounded-md bg-gold py-2.5 text-sm font-bold text-maroon-900 shadow-md transition-transform active:scale-95"

@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
@@ -8,7 +9,7 @@ import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';
-import { PhoneCall, ArrowRight, Train, Bus, Car, Plane, MapPin, Clock, ChevronDown } from 'lucide-react';
+import { PhoneCall, ArrowRight, Train, Bus, Car, Plane, MapPin, Clock, ChevronDown, MessageCircle } from 'lucide-react';
 
 // ─── SEO: Top 20 target keywords naturally embedded in content ───
 // 1. उज्जैन कैसे पहुंचें  2. Ujjain transport guide  3. Indore to Ujjain cab
@@ -80,13 +81,13 @@ const MODES = [
       'इंदौर से 55 किमी — सिर्फ 1.5 घंटे, टोल ₹75',
       'भोपाल से 195 किमी — 3.5–4 घंटे',
       'इंदौर एयरपोर्ट से सीधे उज्जैन कैब उपलब्ध',
-      'उज्जैन टेम्पल कैब बुकिंग: +91 89890 06759',
+      'उज्जैन टेम्पल पर कैब की ऑनलाइन पूछताछ',
     ],
     pointsEn: [
       'Indore: 55 km — just 1.5 hrs, toll ₹75',
       'Bhopal: 195 km — 3.5–4 hours',
       'Direct cab from Indore airport to Ujjain',
-      'UjjainTemple cab booking: +91 89890 06759',
+      'Online cab enquiry on UjjainTemple',
     ],
     color: '#C9A84C',
   },
@@ -122,7 +123,7 @@ const LOCAL = [
 const FAQS_HI = [
   {
     q: 'इंदौर से उज्जैन कैसे पहुंचें?',
-    a: 'इंदौर से उज्जैन की दूरी 55 किमी है जो NH 52 पर 1.5 घंटे में तय होती है। कैब (₹600–800), बस (हर 20 मिनट, ₹60–120), ट्रेन (40 मिनट, ₹25 से) — तीनों विकल्प उपलब्ध हैं। इंदौर हवाई अड्डे से सीधे उज्जैन कैब बुकिंग के लिए +91 89890 06759 पर कॉल करें।',
+    a: 'इंदौर से उज्जैन की दूरी 55 किमी है जो NH 52 पर 1.5 घंटे में तय होती है। कैब (₹600–800), बस (हर 20 मिनट, ₹60–120), ट्रेन (40 मिनट, ₹25 से) — तीनों विकल्प उपलब्ध हैं। इंदौर हवाई अड्डे से सीधे उज्जैन की कैब इसी साइट पर ऑनलाइन बुक की जा सकती है।',
   },
   {
     q: 'भोपाल से उज्जैन कैसे जाएं?',
@@ -130,7 +131,7 @@ const FAQS_HI = [
   },
   {
     q: 'उज्जैन में मंदिर दर्शन के लिए कौन सा लोकल ट्रांसपोर्ट सबसे अच्छा है?',
-    a: 'उज्जैन दर्शन के लिए प्राइवेट कैब पैकेज (₹600–1,200 / दिन) सबसे सुविधाजनक है। इसमें महाकालेश्वर, काल भैरव, हरसिद्धि, मंगलनाथ — सब मंदिर कवर होते हैं। ऑटो रिक्शा भी ₹50–150 प्रति स्थान उपलब्ध है। बुकिंग के लिए +91 89890 06759।',
+    a: 'उज्जैन दर्शन के लिए प्राइवेट कैब पैकेज (₹600–1,200 / दिन) सबसे सुविधाजनक है। इसमें महाकालेश्वर, काल भैरव, हरसिद्धि, मंगलनाथ — सब मंदिर कवर होते हैं। ऑटो रिक्शा भी ₹50–150 प्रति स्थान उपलब्ध है। बुकिंग के लिए इस पेज से पूछताछ भेजें।',
   },
   {
     q: 'दिल्ली से उज्जैन कैसे पहुंचें?',
@@ -138,7 +139,7 @@ const FAQS_HI = [
   },
   {
     q: 'सिंहस्थ 2028 के दौरान उज्जैन कैसे पहुंचें?',
-    a: 'सिंहस्थ 2028 (09 अप्रैल–08 मई 2028) में 30 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें। सहायता: +91 89890 06759।',
+    a: 'सिंहस्थ 2028 (09 अप्रैल–08 मई 2028) में 30 करोड़+ श्रद्धालु आएंगे। विशेष ट्रेनें और बसें चलेंगी। शाही स्नान दिवसों पर ट्रांसपोर्ट बहुत सीमित होगा। 3–4 माह पहले बुकिंग करें।',
   },
   {
     q: 'उज्जैन जंक्शन से महाकालेश्वर कितनी दूर है?',
@@ -149,7 +150,7 @@ const FAQS_HI = [
 const FAQS_EN = [
   {
     q: 'How to reach Ujjain from Indore?',
-    a: 'Indore to Ujjain is 55 km via NH 52, taking 1.5 hours. Options: cab (₹600–800), bus (every 20 minutes, ₹60–120), train (40 minutes, from ₹25). For direct cab from Indore airport to Ujjain, call +91 89890 06759.',
+    a: 'Indore to Ujjain is 55 km via NH 52, taking 1.5 hours. Options: cab (₹600–800), bus (every 20 minutes, ₹60–120), train (40 minutes, from ₹25). A direct cab from Indore airport to Ujjain can be booked online on this site.',
   },
   {
     q: 'How to reach Ujjain from Bhopal?',
@@ -157,7 +158,7 @@ const FAQS_EN = [
   },
   {
     q: 'Which local transport is best for temple darshan in Ujjain?',
-    a: 'A private cab package (₹600–1,200 / day) is the most convenient for Ujjain darshan. It covers Mahakaleshwar, Kal Bhairav, Harsiddhi, Mangalnath and more. Auto rickshaws are also available at ₹50–150 per spot. For booking call +91 89890 06759.',
+    a: 'A private cab package (₹600–1,200 / day) is the most convenient for Ujjain darshan. It covers Mahakaleshwar, Kal Bhairav, Harsiddhi, Mangalnath and more. Auto rickshaws are also available at ₹50–150 per spot. To book, send an enquiry from this page.',
   },
   {
     q: 'How to reach Ujjain from Delhi?',
@@ -165,7 +166,7 @@ const FAQS_EN = [
   },
   {
     q: 'How to reach Ujjain during Simhastha 2028?',
-    a: 'Simhastha 2028 (09 April–08 May 2028) expects 30 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead. Help: +91 89890 06759.',
+    a: 'Simhastha 2028 (09 April–08 May 2028) expects 30 crore+ pilgrims. Special trains and buses will run. Transport on Shahi Snan days will be very limited. Book 3–4 months ahead.',
   },
   {
     q: 'How far is Mahakaleshwar from Ujjain Junction?',
@@ -185,8 +186,8 @@ export function TransportLanding() {
     ? 'उज्जैन कैसे पहुंचें — इंदौर, भोपाल, दिल्ली से दूरी, ट्रेन, बस, टैक्सी गाइड'
     : 'How to Reach Ujjain — Distance from Indore, Bhopal, Delhi, Train, Bus & Taxi Guide';
   const description = locale === 'hi'
-    ? 'उज्जैन यातायात गाइड — इंदौर से 55 किमी, भोपाल 195 किमी, दिल्ली से ट्रेन, बस टाइमिंग, कैब बुकिंग, लोकल ऑटो। महाकाल दर्शन + सिंहस्थ 2028 ट्रांसपोर्ट। सहायता: +91 89890 06759'
-    : 'Ujjain transport guide — 55 km from Indore, 195 km Bhopal, Delhi train, bus timings, cab booking, local auto. Mahakal darshan + Simhastha 2028 transport. Help: +91 89890 06759';
+    ? 'उज्जैन यातायात गाइड — इंदौर से 55 किमी, भोपाल 195 किमी, दिल्ली से ट्रेन, बस टाइमिंग, कैब बुकिंग, लोकल ऑटो। महाकाल दर्शन + सिंहस्थ 2028 ट्रांसपोर्ट।'
+    : 'Ujjain transport guide — 55 km from Indore, 195 km Bhopal, Delhi train, bus timings, cab booking, local auto. Mahakal darshan + Simhastha 2028 transport.';
 
   const pageSchemas = [
     breadcrumbSchema({ items: [
@@ -255,12 +256,11 @@ export function TransportLanding() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href={SITE.phoneTel}
-                className="inline-flex items-center justify-center gap-3 font-bold px-7 py-4 rounded-full text-base transition-all hover:scale-105"
+              <EnquireButton purpose="cab" className="inline-flex items-center justify-center gap-3 font-bold px-7 py-4 rounded-full text-base transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 35px rgba(201,168,76,0.30)' }}>
-                <PhoneCall className="w-5 h-5" />
-                {locale === 'hi' ? 'कैब बुकिंग — कॉल करें' : 'Book Cab — Call Now'}
-              </a>
+                <MessageCircle className="w-5 h-5" />
+                {locale === 'hi' ? 'कैब बुकिंग — पूछताछ करें' : 'Book Cab — Send Enquiry'}
+              </EnquireButton>
               <a href="#routes"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-base font-semibold transition-all"
                 style={{ border: '1.5px solid rgba(201,168,76,0.40)', color: '#E0C374', background: 'rgba(201,168,76,0.06)' }}>
@@ -441,12 +441,11 @@ export function TransportLanding() {
                     : 'All major temples in one day — from ₹600. AC car, experienced driver, temple sequence included.'}
                 </p>
               </div>
-              <a href={SITE.phoneTel}
-                className="inline-flex items-center gap-3 font-bold px-7 py-4 rounded-full text-base whitespace-nowrap transition-all hover:scale-105 flex-shrink-0"
+              <EnquireButton purpose="cab" className="inline-flex items-center gap-3 font-bold px-7 py-4 rounded-full text-base whitespace-nowrap transition-all hover:scale-105 flex-shrink-0"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 25px rgba(201,168,76,0.25)' }}>
-                <PhoneCall className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
                 {locale === 'hi' ? 'कैब बुक करें' : 'Book Cab'}
-              </a>
+              </EnquireButton>
             </div>
           </div>
         </section>
@@ -471,11 +470,10 @@ export function TransportLanding() {
                 : '30 crore+ pilgrims will visit Ujjain from 09 April – 08 May 2028. On Shahi Snan dates, trains, buses, cabs — all will be booked. Reserve now.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={SITE.phoneTel}
-                className="inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
+              <EnquireButton purpose="cab" className="inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
                 style={{ background: 'linear-gradient(135deg,#E0C374,#C9A84C)', color: '#1a0404', boxShadow: '0 0 35px rgba(201,168,76,0.30)' }}>
-                <PhoneCall className="w-5 h-5" /> {locale === 'hi' ? 'सिंहस्थ ट्रांसपोर्ट बुकिंग' : 'Simhastha Transport Booking'}
-              </a>
+                <MessageCircle className="w-5 h-5" /> {locale === 'hi' ? 'सिंहस्थ ट्रांसपोर्ट बुकिंग' : 'Simhastha Transport Booking'}
+              </EnquireButton>
               <a href="/simhastha-2028/"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all"
                 style={{ border: '1.5px solid rgba(201,168,76,0.40)', color: '#E0C374', background: 'rgba(201,168,76,0.06)' }}>

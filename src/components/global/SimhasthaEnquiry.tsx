@@ -217,8 +217,7 @@ export function SimhasthaEnquiry({ sourcePage }: { sourcePage: string }) {
 
               {status === 'error' && (
                 <p className="text-center text-sm text-maroon" role="alert">
-                  {isHi ? 'कुछ गड़बड़ हुई — कृपया कॉल करें ' : 'Something went wrong — please call '}
-                  <a href={SITE.phoneTel} className="font-bold underline">{SITE.phone}</a>
+                  {isHi ? 'कुछ गड़बड़ हुई — कृपया थोड़ी देर बाद दोबारा भेजें।' : 'Something went wrong — please try again in a moment.'}
                 </p>
               )}
 
@@ -230,12 +229,6 @@ export function SimhasthaEnquiry({ sourcePage }: { sourcePage: string }) {
             </form>
           )}
 
-          <div className="mt-5 border-t border-cream-dark pt-4 text-center">
-            <a href={SITE.phoneTel} className="inline-flex items-center gap-2 font-bold text-maroon hover:text-saffron-700">
-              <Phone className="h-4 w-4" />
-              {isHi ? `या सीधे कॉल करें: ${SITE.phone}` : `Or call directly: ${SITE.phone}`}
-            </a>
-          </div>
         </div>
       </div>
     </section>

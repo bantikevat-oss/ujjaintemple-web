@@ -1,4 +1,5 @@
-﻿import { Link } from 'react-router-dom';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
@@ -82,12 +83,12 @@ export function VerticalLanding({ category, titleHi, titleEn, introHi, introEn, 
               <div className="rounded-2xl border-4 border-dashed border-cream-dark bg-cream p-12 text-center max-w-2xl mx-auto shadow-sm">
                 <p className="text-xl font-serif text-ink-soft mb-6">
                   {locale === 'hi'
-                    ? 'जल्द ही और लेख जोड़े जाएँगे। फ़िलहाल सहायता के लिए कॉल करें:'
-                    : 'More articles coming soon. For help right now, call:'}
+                    ? 'जल्द ही और लेख जोड़े जाएँगे। फ़िलहाल सहायता के लिए पूछताछ भेजें:'
+                    : 'More articles coming soon. For help right now, send an enquiry:'}
                 </p>
-                <a href={SITE.phoneTel} className="btn-primary shadow-lg text-xl px-8 py-4 inline-flex items-center gap-3 transition-transform hover:scale-105">
-                  {SITE.phone}
-                </a>
+                <EnquireButton className="btn-primary shadow-lg text-xl px-8 py-4 inline-flex items-center gap-3 transition-transform hover:scale-105">
+                  {locale === 'hi' ? 'पूछताछ भेजें' : 'Send Enquiry'}
+                </EnquireButton>
               </div>
             ) : (
               <main className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" role="list">

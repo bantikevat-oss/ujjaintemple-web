@@ -413,21 +413,7 @@ export function Home() {
         {/* MANDALA DIVIDER */}
         <MandalaDivider />
 
-        {/* ── CALL FLOATING BUTTON ──────────────────────────────────────── */}
-        <a href="tel:+918989006759"
-          aria-label={locale === 'hi' ? 'अभी कॉल करें' : 'Call Now'}
-          className="fixed bottom-6 right-5 z-50 flex items-center gap-2.5 rounded-full
-            bg-gold py-3.5 pl-4 pr-5 text-maroon-900 font-bold
-            shadow-[0_6px_28px_rgba(201,162,39,0.50)]
-            transition-all duration-200 hover:-translate-y-1
-            hover:shadow-[0_10px_36px_rgba(201,162,39,0.65)]">
-          <svg viewBox="0 0 24 24" className="h-5 w-5 fill-maroon-900 flex-shrink-0">
-            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-          </svg>
-          <span className="text-sm hidden sm:block">
-            {locale === 'hi' ? 'अभी कॉल करें' : 'Call Now'}
-          </span>
-        </a>
+        {/* Floating Call button removed 2026-11-13 — calls off site-wide (lib/noPhone.ts CALLS_OFF). */}
       </Layout>
     </>
   );

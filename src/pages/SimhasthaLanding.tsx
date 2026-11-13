@@ -1,4 +1,5 @@
-﻿import { useState, useEffect } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
@@ -10,7 +11,7 @@ import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, itemListSchema, simhastha2028EventSchema, faqSchema } from '../lib/schemas';
-import { PhoneCall, ArrowRight } from 'lucide-react';
+import { PhoneCall, ArrowRight, MessageCircle } from 'lucide-react';
 import { SHAHI_SNANS } from '../data/simhastha-dates';
 
 // ─── Countdown ───────────────────────────────────────────────────
@@ -186,8 +187,8 @@ export function SimhasthaLanding() {
     {
       q: { hi: 'सिंहस्थ 2028 के लिए उज्जैन कैसे पहुँचें?', en: 'How to reach Ujjain for Simhastha 2028?' },
       a: {
-        hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद हेतु +91 89890 06759 पर संपर्क करें।',
-        en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, call +91 89890 06759.',
+        hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद के लिए इस पेज से पूछताछ भेजें।',
+        en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, send an enquiry from this page.',
       },
     },
     {
@@ -206,7 +207,7 @@ export function SimhasthaLanding() {
       titleEn: 'Accommodation',
       descHi: 'सिंहस्थ नगर की कुटिया, होटल, धर्मशाला — शाही स्नान वाले दिनों में जगह बहुत कम मिलती है। 6–8 महीने पहले बुकिंग करवा लें।',
       descEn: 'MP Tourism kutiyas, hotels, dharmshalas — extremely limited on Shahi Snan dates. Book 6–8 months in advance.',
-      href: SITE.phoneTel,
+      href: '#enquire',
       isExternal: true,
       ctaHi: 'बुकिंग में मदद लें',
       ctaEn: 'Booking Help',
@@ -228,10 +229,10 @@ export function SimhasthaLanding() {
       titleEn: 'When to Go',
       descHi: 'मेला 27 मार्च से 27 मई 2028 तक चलता है। शाही स्नान: 3 हैं (09 अप्रैल, 23 अप्रैल, 08 मई)। परिवार के साथ जाना है तो अंतिम शाही स्नान (08 मई 2028) सबसे अच्छा दिन है।',
       descEn: 'The mela runs 27 March to 27 May 2028. 3 Shahi Snans (09 Apr, 23 Apr, 08 May). For families, target the final Shahi Snan (08 May 2028).',
-      href: SITE.phoneTel,
+      href: '#enquire',
       isExternal: true,
-      ctaHi: 'पूरी जानकारी — कॉल करें',
-      ctaEn: 'Full Info — Call',
+      ctaHi: 'पूरी जानकारी — पूछताछ करें',
+      ctaEn: 'Full Info — Enquire',
     },
   ] as const;
 
@@ -389,8 +390,7 @@ export function SimhasthaLanding() {
 
             {/* CTA row */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <a
-                href={SITE.phoneTel}
+              <EnquireButton purpose="tour"
                 className="inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(135deg, #E0C374 0%, #C9A84C 100%)',
@@ -398,9 +398,9 @@ export function SimhasthaLanding() {
                   boxShadow: '0 0 40px rgba(201,168,76,0.35), 0 4px 16px rgba(0,0,0,0.4)',
                 }}
               >
-                <PhoneCall className="w-5 h-5 flex-shrink-0" />
+                <MessageCircle className="w-5 h-5 flex-shrink-0" />
                 {locale === 'hi' ? 'यात्रा योजना बनाएँ' : 'Plan Your Trip'}
-              </a>
+              </EnquireButton>
               <a
                 href="#akhadas"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 font-semibold"
@@ -656,7 +656,7 @@ export function SimhasthaLanding() {
                   <p>सिंहस्थ की आत्मा हैं <strong>तीन शाही स्नान</strong> (09 अप्रैल, 23 अप्रैल व 08 मई 2028), जिनमें <strong>13 अखाड़ों</strong> के नागा साधु व संत-महंत भव्य शोभायात्रा के साथ शिप्रा में स्नान करते हैं। इनके अतिरिक्त सात पर्व स्नान भी प्रस्तावित हैं। इसके साथ कल्पवास, पंचकोशी यात्रा, साधु-संतों के शिविर, भजन-कीर्तन और विशाल धार्मिक आयोजन पूरे दो माह चलते हैं।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">यात्रा की योजना कैसे बनाएँ</h3>
-                  <p>शाही स्नान वाले दिनों में उज्जैन में होटल, धर्मशाला व कुटिया की जगह बहुत जल्दी भर जाती है — इसलिए 6–8 महीने पहले बुकिंग करवाना समझदारी है। दिल्ली, मुम्बई व अहमदाबाद से सीधी ट्रेनें आती हैं और निकटतम हवाई अड्डा इंदौर (55 किमी) है। यात्रा, होटल व दर्शन में सहायता के लिए हमारी टीम से <strong>{SITE.phone}</strong> पर संपर्क करें।</p>
+                  <p>शाही स्नान वाले दिनों में उज्जैन में होटल, धर्मशाला व कुटिया की जगह बहुत जल्दी भर जाती है — इसलिए 6–8 महीने पहले बुकिंग करवाना समझदारी है। दिल्ली, मुम्बई व अहमदाबाद से सीधी ट्रेनें आती हैं और निकटतम हवाई अड्डा इंदौर (55 किमी) है। यात्रा, होटल व दर्शन में सहायता के लिए इस पेज से पूछताछ भेजें — हमारी टीम आपसे सम्पर्क करेगी।</p>
                 </>
               ) : (
                 <>
@@ -672,7 +672,7 @@ export function SimhasthaLanding() {
                   <p>The heart of Simhastha is the <strong>three Shahi Snans</strong> (09 April, 23 April and 08 May 2028), when Naga sadhus and saints of the <strong>13 Akhadas</strong> process to the Shipra for the royal bath. Seven parv snans are proposed alongside them. Kalpvas, the Panchkoshi Yatra, saint camps, bhajan-kirtan and grand religious events run across all two months.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">How to plan your trip</h3>
-                  <p>Hotels, dharmshalas and kutiyas in Ujjain fill very fast on Shahi Snan days, so booking 6–8 months ahead is wise. Direct trains arrive from Delhi, Mumbai and Ahmedabad, and the nearest airport is Indore (55 km). For help with travel, stay and darshan, contact our team at <strong>{SITE.phone}</strong>.</p>
+                  <p>Hotels, dharmshalas and kutiyas in Ujjain fill very fast on Shahi Snan days, so booking 6–8 months ahead is wise. Direct trains arrive from Delhi, Mumbai and Ahmedabad, and the nearest airport is Indore (55 km). For help with travel, stay and darshan, send an enquiry from this page and our team will get back to you.</p>
                 </>
               )}
             </div>
@@ -909,16 +909,14 @@ export function SimhasthaLanding() {
                     {locale === 'hi' ? card.descHi : card.descEn}
                   </p>
                   {card.isExternal ? (
-                    <a
-                      href={card.href}
-                      className="mt-6 inline-flex items-center gap-2 font-bold text-sm transition-colors"
+                    <EnquireButton
+                      purpose="tour"
+                      className="mt-6 inline-flex items-center gap-2 font-bold text-sm transition-colors hover:brightness-125"
                       style={{ color: '#C9A84C' }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#E0C374'; }}
-                      onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = '#C9A84C'; }}
                     >
                       {locale === 'hi' ? card.ctaHi : card.ctaEn}
                       <ArrowRight className="w-4 h-4" />
-                    </a>
+                    </EnquireButton>
                   ) : (
                     <Link
                       to={card.href}
@@ -942,8 +940,7 @@ export function SimhasthaLanding() {
                   ? '⚠ सिंहस्थ 2028 के समय होटल और ट्रेन-कैब की बुकिंग बहुत जल्दी फुल हो जाती है — अभी से प्लानिंग शुरू कर दें।'
                   : '⚠ Accommodation and transport for Simhastha 2028 will fill months in advance — start planning now.'}
               </p>
-              <a
-                href={SITE.phoneTel}
+              <EnquireButton purpose="tour"
                 className="mt-6 inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all duration-300 hover:scale-105"
                 style={{
                   background: 'linear-gradient(135deg, #E0C374 0%, #C9A84C 100%)',
@@ -951,9 +948,9 @@ export function SimhasthaLanding() {
                   boxShadow: '0 0 30px rgba(201,168,76,0.30)',
                 }}
               >
-                <PhoneCall className="w-5 h-5" />
-                {locale === 'hi' ? `${SITE.phone} — अभी कॉल करें` : `Call ${SITE.phone} Now`}
-              </a>
+                <MessageCircle className="w-5 h-5" />
+                {locale === 'hi' ? 'अभी पूछताछ भेजें' : 'Send an Enquiry Now'}
+              </EnquireButton>
             </div>
           </div>
         </section>

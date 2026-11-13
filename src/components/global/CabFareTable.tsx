@@ -14,9 +14,9 @@ import { CAB_ROUTES, FARE_INCLUDES, VEHICLES, VEHICLE_ORDER, inr, type RouteId, 
 export function CabFareTable({ routes, locale, source }: { routes: RouteId[]; locale: Locale; source: string }) {
   const hi = locale === 'hi';
 
-  const book = (routeId: RouteId, v: VehicleId, fare: number) => {
+  const book = (routeId: RouteId, v: VehicleId, fare: number | null) => {
     const r = CAB_ROUTES[routeId];
-    const note = `${r.title[locale]} · ${VEHICLES[v].name} · ${inr(fare)}`;
+    const note = `${r.title[locale]} · ${VEHICLES[v].name} · ${fare !== null ? inr(fare) : (hi ? 'दाम पूछा' : 'price asked')}`;
     window.gtag?.('event', 'fare_book_click', { route: routeId, vehicle: v, fare, source });
     openWhatsAppGate({ service: 'transport', purpose: 'cab', sourcePage: `fare:${source}`, note });
   };
@@ -69,11 +69,11 @@ export function CabFareTable({ routes, locale, source }: { routes: RouteId[]; lo
                         </>
                       ) : (
                         <>
-                          <p className="mt-1 text-lg font-semibold text-ink-soft">{hi ? 'कॉल पर दाम' : 'Price on call'}</p>
-                          <a href={SITE.phoneTel} className="mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-maroon px-4 py-2 text-sm font-semibold text-maroon hover:bg-maroon/5">
-                            <Phone className="h-4 w-4" aria-hidden />
-                            {hi ? 'कॉल करें' : 'Call'}
-                          </a>
+                          <p className="mt-1 text-lg font-semibold text-ink-soft">{hi ? 'पूछने पर दाम' : 'Price on request'}</p>
+                          <button type="button" onClick={() => book(id, v, null)} className="mt-3 inline-flex items-center justify-center gap-2 rounded-md border border-maroon px-4 py-2 text-sm font-semibold text-maroon hover:bg-maroon/5">
+                            <MessageCircle className="h-4 w-4" aria-hidden />
+                            {hi ? 'पूछताछ करें' : 'Enquire'}
+                          </button>
                         </>
                       )}
                     </div>

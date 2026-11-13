@@ -43,7 +43,7 @@ export function SEOHead({ title, description, path, locale, image, type = 'websi
       <meta name="bingbot" content="index, follow" />
       <meta name="author" content="UjjainTemple Editorial — ByteFlow Technologies" />
       <meta name="theme-color" content="#8b1a1a" />
-      <meta name="format-detection" content="telephone=yes" />
+      <meta name="format-detection" content="telephone=no" />
 
       {/* ── Geo tags — boosts local/map search ranking ──────────────────────── */}
       <meta name="geo.region" content="IN-MP" />

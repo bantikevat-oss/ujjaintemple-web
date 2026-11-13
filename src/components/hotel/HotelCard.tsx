@@ -1,5 +1,6 @@
+import { EnquireButton } from '../global/EnquireButton';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone } from 'lucide-react';
+import { MapPin, Phone, MessageCircle } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import type { Hotel } from '../../lib/types';
@@ -47,10 +48,10 @@ export function HotelCard({ hotel }: Props) {
           </div>
         </div>
       </Link>
-      <a href={SITE.phoneTel} className="block bg-maroon py-2.5 text-center text-sm font-bold text-white hover:bg-maroon-600">
-        <Phone className="mr-1 inline h-4 w-4" />
-        {locale === 'hi' ? 'बुक करने के लिए कॉल करें' : 'Call to Book'}
-      </a>
+      <EnquireButton purpose="hotel" className="block w-full bg-maroon py-2.5 text-center text-sm font-bold text-white hover:bg-maroon-600">
+        <MessageCircle className="mr-1 inline h-4 w-4" />
+        {locale === 'hi' ? 'बुकिंग के लिए पूछें' : 'Enquire to Book'}
+      </EnquireButton>
     </article>
   );
 }

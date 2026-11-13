@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState } from 'react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
@@ -6,7 +7,7 @@ import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema } from '../lib/schemas';
-import { Phone, MapPin, CheckCircle2, PhoneCall, Star, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Phone, MapPin, CheckCircle2, PhoneCall, Star, ArrowRight, ShieldCheck, MessageCircle } from 'lucide-react';
 
 // ─── Data ─────────────────────────────────────────────────────────
 const TIERS = [
@@ -87,8 +88,8 @@ export function HotelsIndex() {
     ? 'उज्जैन में होटल — महाकाल के पास, बजट से लक्ज़री, परिवार-अनुकूल | Ujjain Temple'
     : 'Hotel in Ujjain — Near Mahakal, Budget to Luxury, Family-Friendly | Ujjain Temple';
   const description = locale === 'hi'
-    ? 'उज्जैन में होटल बुकिंग — महाकालेश्वर के निकट, बजट से लक्ज़री, परिवार-अनुकूल। सत्यापित दूरी, सुविधाएँ, रेट। एक कॉल पर सहायता: +91 89890 06759।'
-    : 'Hotel in Ujjain — booking near Mahakaleshwar, budget to luxury, family-friendly. Verified distances, amenities, pricing. Call: +91 89890 06759.';
+    ? 'उज्जैन में होटल बुकिंग — महाकालेश्वर के निकट, बजट से लक्ज़री, परिवार-अनुकूल। सत्यापित दूरी, सुविधाएँ, रेट।'
+    : 'Hotel in Ujjain — booking near Mahakaleshwar, budget to luxury, family-friendly. Verified distances, amenities, pricing.';
 
   return (
     <>
@@ -144,16 +145,15 @@ export function HotelsIndex() {
                 : 'Near Mahakaleshwar · Budget to Luxury · Family-friendly · Verified & Safe'}
             </p>
 
-            <a href={SITE.phoneTel}
-              className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 mt-2"
+            <EnquireButton purpose="hotel" className="inline-flex items-center gap-3 font-bold px-8 py-4 rounded-full text-base sm:text-lg transition-all duration-300 hover:scale-105 mt-2"
               style={{
                 background: 'linear-gradient(135deg, #E0C374, #C9A84C)',
                 color: '#1a0404',
                 boxShadow: '0 0 35px rgba(201,168,76,0.35)',
               }}>
-              <PhoneCall className="w-5 h-5" />
-              {locale === 'hi' ? 'होटल बुकिंग सहायता — कॉल करें' : 'Get Hotel Booking Help — Call Now'}
-            </a>
+              <MessageCircle className="w-5 h-5" />
+              {locale === 'hi' ? 'होटल बुकिंग सहायता — पूछताछ करें' : 'Get Hotel Booking Help — Enquire'}
+            </EnquireButton>
           </div>
         </section>
 
@@ -264,12 +264,11 @@ export function HotelsIndex() {
                     {locale === 'hi' ? tier.labelHi : tier.labelEn}
                   </h3>
                 </div>
-                <a href={SITE.phoneTel}
-                  className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105 flex-shrink-0"
+                <EnquireButton purpose="hotel" className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105 flex-shrink-0"
                   style={{ background: 'rgba(255,255,255,0.18)', color: '#fff', border: '1.5px solid rgba(255,255,255,0.45)' }}>
-                  <Phone className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" />
                   {locale === 'hi' ? 'बुकिंग पूछें' : 'Enquire Now'}
-                </a>
+                </EnquireButton>
               </div>
 
               {/* Features + Best For */}
@@ -300,16 +299,15 @@ export function HotelsIndex() {
                   {/* Call to action big */}
                   <div className="mt-auto rounded-xl p-6 text-center" style={{ background: `${tier.color}15`, border: `1.5px solid ${tier.color}35` }}>
                     <p className="font-serif text-base font-bold mb-1" style={{ color: tier.color }}>
-                      {locale === 'hi' ? 'सटीक कीमत जानने के लिए कॉल करें' : 'Call for exact pricing & availability'}
+                      {locale === 'hi' ? 'सटीक कीमत जानने के लिए पूछताछ करें' : 'Enquire for exact pricing & availability'}
                     </p>
                     <p className="text-xs text-ink-mute mb-4">
                       {locale === 'hi' ? 'तारीखें बताएं — हम 3 सत्यापित होटल सुझाएंगे' : 'Share your dates — we\'ll suggest 3 verified hotels'}
                     </p>
-                    <a href={SITE.phoneTel}
-                      className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105"
+                    <EnquireButton purpose="hotel" className="inline-flex items-center gap-2 font-bold px-6 py-3 rounded-full text-sm transition-all hover:scale-105"
                       style={{ background: tier.color, color: '#fff', boxShadow: `0 4px 16px ${tier.color}44` }}>
-                      <PhoneCall className="w-4 h-4" /> {SITE.phone}
-                    </a>
+                      <MessageCircle className="w-4 h-4" /> {locale === 'hi' ? 'पूछताछ करें' : 'Enquire'}
+                    </EnquireButton>
                   </div>
                 </div>
               </div>
@@ -397,16 +395,15 @@ export function HotelsIndex() {
                   ))}
                 </ul>
 
-                <a href={SITE.phoneTel}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
+                <EnquireButton purpose="hotel" className="w-full sm:w-auto inline-flex items-center justify-center gap-3 font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105"
                   style={{
                     background: 'linear-gradient(135deg,#E0C374,#C9A84C)',
                     color: '#1a0404',
                     boxShadow: '0 0 30px rgba(201,168,76,0.30)',
                   }}>
-                  <Phone className="w-5 h-5" />
+                  <MessageCircle className="w-5 h-5" />
                   {locale === 'hi' ? 'विशेषज्ञ से बात करें' : 'Talk to an Expert'}
-                </a>
+                </EnquireButton>
               </div>
             </div>
 

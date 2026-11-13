@@ -18,8 +18,8 @@ const COPY = {
     waTitle: 'व्हाट्सऐप पर संपर्क करें',
     waDesc: 'सबसे तेज़ जवाब व्हाट्सऐप पर मिलता है। पूजा बुकिंग के लिए यही सबसे आसान तरीका है।',
     waCta: 'व्हाट्सऐप पर लिखें',
-    phoneTitle: 'फोन करें',
-    phoneDesc: 'सोमवार से शनिवार, सुबह 8 बजे से रात 9 बजे तक।',
+    phoneTitle: 'फ़ोन नंबर',
+    phoneDesc: 'बुकिंग और यात्रा की पूछताछ के लिए फ़ॉर्म या WhatsApp सबसे तेज़ है।',
     emailTitle: 'ईमेल भेजें',
     emailDesc: 'विस्तृत प्रश्नों और दस्तावेज़ों के लिए ईमेल करें। 24 घंटे में जवाब मिलेगा।',
     addressTitle: 'पता',
@@ -45,8 +45,8 @@ const COPY = {
     waTitle: 'WhatsApp Us',
     waDesc: 'Fastest response on WhatsApp. The easiest way to book a puja or plan your visit.',
     waCta: 'Message on WhatsApp',
-    phoneTitle: 'Call Us',
-    phoneDesc: 'Monday to Saturday, 8 AM to 9 PM IST.',
+    phoneTitle: 'Phone',
+    phoneDesc: 'For bookings and trip enquiries, the form or WhatsApp is quickest.',
     emailTitle: 'Email Us',
     emailDesc: 'For detailed queries and documents. Response within 24 hours.',
     addressTitle: 'Address',
@@ -155,12 +155,8 @@ export function ContactPage() {
                   {t.phoneTitle}
                 </h2>
                 <p className="text-xs text-ink-mute mb-4">{t.phoneDesc}</p>
-                <a href={SITE.phoneTel}
-                  className="inline-flex items-center gap-1.5 font-bold text-maroon text-sm
-                    hover:text-maroon-700 transition-colors mt-auto">
-                  {SITE.phone}
-                  <ArrowRight className="h-3.5 w-3.5" />
-                </a>
+                {/* Plain text, not a tel: link — calls off site-wide (lib/noPhone.ts CALLS_OFF, 2026-11-13). */}
+                <p className="font-bold text-maroon text-sm mt-auto">{SITE.phone}</p>
               </div>
 
               {/* Email */}

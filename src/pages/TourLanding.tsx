@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
@@ -8,7 +9,7 @@ import { useI18n } from '../i18n';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, itemListSchema } from '../lib/schemas';
-import { PhoneCall, ChevronDown, CheckCircle2, Clock, BedDouble } from 'lucide-react';
+import { PhoneCall, ChevronDown, CheckCircle2, Clock, BedDouble, MessageCircle } from 'lucide-react';
 import { packagesData } from '../data/packages';
 import { PACKAGE_SALES, PACKAGE_HUB_ORDER } from '../data/package-sales';
 
@@ -23,7 +24,7 @@ export function TourLanding() {
   const title = locale === 'hi' ? 'उज्जैन टूर पैकेज' : 'Ujjain Tour Packages';
   const seoTitle = locale === 'hi' ? 'उज्जैन टूर पैकेज — 1 से 5 दिन, होटल और गाड़ी सहित' : 'Ujjain Tour Packages — 1 to 5 Days with Hotel and Car';
   const description = locale === 'hi'
-    ? 'उज्जैन टूर पैकेज 1 से 5 दिन — महाकालेश्वर, ओंकारेश्वर, महेश्वर, मांडू। आपकी चुनी श्रेणी का होटल और ड्राइवर सहित निजी गाड़ी, एक ही रेट में। कॉल: +91 89890 06759'
+    ? 'उज्जैन टूर पैकेज 1 से 5 दिन — महाकालेश्वर, ओंकारेश्वर, महेश्वर, मांडू। आपकी चुनी श्रेणी का होटल और ड्राइवर सहित निजी गाड़ी, एक ही रेट में।'
     : 'Ujjain tour packages from 1 to 5 days — Mahakaleshwar, Omkareshwar, Maheshwar, Mandu. Hotel in the class you choose and a private car with driver, in one quote.';
   const orderedPackages = PACKAGE_HUB_ORDER
     .map((slug) => packagesData.find((p) => p.slug === slug))
@@ -220,10 +221,10 @@ export function TourLanding() {
               <p className="text-ink-soft text-lg mb-6 font-serif italic">
                 {locale === 'hi' ? 'क्या आपको अपनी सुविधानुसार पैकेज चाहिए?' : 'Looking for a customized experience?'}
               </p>
-              <a href={SITE.phoneTel} className="btn-call shadow-xl text-lg px-8 py-4 inline-flex items-center gap-3 transition-transform hover:-translate-y-1">
-                <PhoneCall className="w-5 h-5" />
+              <EnquireButton purpose="tour" className="btn-call shadow-xl text-lg px-8 py-4 inline-flex items-center gap-3 transition-transform hover:-translate-y-1">
+                <MessageCircle className="w-5 h-5" />
                 {locale === 'hi' ? 'विशेषज्ञ से बात करें' : 'Talk to our Expert'}
-              </a>
+              </EnquireButton>
             </div>
           </div>
         </section>

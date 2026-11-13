@@ -4,7 +4,7 @@ import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
 import { TripShapeFields, TRIP_SHAPES, TRAVELLERS } from './TripShapeFields';
 import { rememberCabContact } from '../../lib/cabContact';
-import { useNoPhone } from '../../lib/noPhone';
+import { useNoPhone, useNoCall } from '../../lib/noPhone';
 
 /**
  * WhatsApp capture gate (Aman, 2026-09-30 — option A).
@@ -58,6 +58,7 @@ const PURPOSES = [
 export function WhatsAppGateHost() {
   const { locale } = useI18n();
   const noPhone = useNoPhone();
+  const noCall = useNoCall();
   const isHi = locale === 'hi';
   const [open, setOpen] = useState(false);
   const [opts, setOpts] = useState<GateOpts>({});
@@ -305,7 +306,7 @@ export function WhatsAppGateHost() {
           </button>
         </form>
 
-        {!noPhone && (
+        {!noCall && (
           <a href={SITE.phoneTel} className="mt-3 flex items-center justify-center gap-2 text-sm font-semibold text-maroon hover:text-saffron-700">
             <Phone className="h-4 w-4" />
             {isHi ? 'या सीधे कॉल करें' : 'Or call directly'} — {SITE.phone}

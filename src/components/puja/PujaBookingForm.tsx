@@ -72,7 +72,7 @@ export function PujaBookingForm({ pujaName }: Props) {
               <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/10">
                 <span className="text-gold font-serif font-bold">1</span>
               </div>
-              <span className="text-sm sm:text-base">{locale === 'hi' ? 'फॉर्म भरें या कॉल करें' : 'Fill form or Call us'}</span>
+              <span className="text-sm sm:text-base">{locale === 'hi' ? 'फॉर्म भरें' : 'Fill the form'}</span>
             </div>
             <div className="flex items-center gap-4 text-cream/90">
               <div className="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center bg-gold/10">

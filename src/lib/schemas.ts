@@ -156,7 +156,8 @@ export function hotelSchema(h: HotelSchemaInput) {
     description: h.description,
     image: h.image,
     url: h.url,
-    telephone: SITE.phoneIntl,
+    // No telephone (2026-11-13): this was OUR number written as each hotel's own phone — same
+    // mistake as the temple schema fixed on 11-12. We don't publish hotels' numbers either.
     priceRange: h.priceRange,
     address: {
       '@type': 'PostalAddress',

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Phone, MapPin, Mail, ArrowRight } from 'lucide-react';
 import { useI18n } from '../../i18n';
 import { SITE } from '../../lib/site';
-import { useNoPhone } from '../../lib/noPhone';
+import { useNoPhone, useNoCall } from '../../lib/noPhone';
 
 /* ─── Gold ornament divider ──────────────────────────────────────────────── */
 function GoldDivider() {
@@ -63,6 +63,7 @@ function ColHead({ children }: { children: React.ReactNode }) {
 /* ─── Main footer ────────────────────────────────────────────────────────── */
 export function Footer() {
   const noPhone = useNoPhone();
+  const noCall = useNoCall();
   const { t, locale } = useI18n();
   const prefix = locale === 'en' ? '' : '/hi';
   const year = new Date().getFullYear();
@@ -149,7 +150,7 @@ export function Footer() {
 
           {/* Contact quick links */}
           <div className="space-y-2.5">
-            {!noPhone && (
+            {!noCall && (
               <a href={SITE.phoneTel}
                 className="flex items-center gap-2.5 text-[14px] text-ink-soft hover:text-saffron-700 transition-colors group">
                 <Phone className="h-3.5 w-3.5 text-saffron-700 flex-shrink-0 group-hover:text-saffron-700" />

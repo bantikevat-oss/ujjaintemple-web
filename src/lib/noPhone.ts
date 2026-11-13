@@ -59,3 +59,22 @@ export function useNoPhone(): boolean {
   const { pathname } = useLocation();
   return isTempleInfoPath(pathname);
 }
+
+/**
+ * 🔴 Calls off SITE-WIDE (Aman, 2026-11-13: "number ko clickable se hta de … sare bina revenue
+ * wale call aate hai" → "kar do is plan ke hisab se"). After info pages lost the number on 11-12,
+ * Aman reported the remaining calls were non-revenue too, while written leads (form / OTP cab
+ * enquiry) arrive numbered in the partner register and get billed. A call bypasses that register.
+ *
+ * So no page shows a tel: link, a "Call" button or the number as text. The only place the number
+ * appears is the Contact page, as plain non-clickable text (Razorpay needs contact details), plus
+ * the Organization schema (NAP consistency with the GBP). WhatsApp stays on money pages — it goes
+ * through the WhatsApp gate, which writes the lead first. Flip CALLS_OFF to bring calls back.
+ */
+export const CALLS_OFF = true;
+
+/** true when the phone number / tel: link / Call button must not render (everywhere while CALLS_OFF). */
+export function useNoCall(): boolean {
+  const noPhone = useNoPhone();
+  return CALLS_OFF || noPhone;
+}

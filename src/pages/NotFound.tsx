@@ -43,12 +43,11 @@ export function NotFound() {
           </h1>
           <p className="mt-3 text-base text-ink-soft">
             {locale === 'hi'
-              ? 'जो आप ढूंढ रहे हैं वह यहाँ नहीं है — मुख्य पेज पर जाएँ या सीधे हमें कॉल करें।'
-              : "What you're looking for isn't here — go to the homepage or call us directly."}
+              ? 'जो आप ढूंढ रहे हैं वह यहाँ नहीं है — मुख्य पेज पर जाएँ।'
+              : "What you're looking for isn't here — go to the homepage."}
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
             <Link to={`${prefix}/`} className="btn-secondary"><Home className="h-4 w-4" /> {locale === 'hi' ? 'होम' : 'Home'}</Link>
-            <a href={SITE.phoneTel} className="btn-call"><Phone className="h-4 w-4" /> {SITE.phone}</a>
           </div>
         </section>
       </Layout>

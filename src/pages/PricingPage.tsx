@@ -88,8 +88,8 @@ export function PricingPage() {
             </div>
 
             <p className="mt-8 text-center text-sm text-ink-soft">
-              {isHi ? 'सवाल हो तो कॉल करें: ' : 'Questions? Call '}
-              <a className="font-semibold text-maroon" href={SITE.phoneTel}>{SITE.phone}</a>
+              {isHi ? 'सवाल हो तो सम्पर्क करें: ' : 'Questions? Contact '}
+              <span className="font-semibold text-maroon">{SITE.phone}</span>
               {' · '}
               <a className="font-semibold text-maroon" href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </p>

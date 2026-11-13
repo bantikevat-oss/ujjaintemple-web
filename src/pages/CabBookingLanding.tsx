@@ -1,4 +1,5 @@
-﻿import { useState } from 'react';
+﻿import { EnquireButton } from '../components/global/EnquireButton';
+import { useState } from 'react';
 import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
@@ -7,21 +8,10 @@ import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
 import { SITE } from '../lib/site';
 import { breadcrumbSchema, faqSchema, taxiServiceSchema } from '../lib/schemas';
-import { PhoneCall, ChevronDown, CheckCircle2 } from 'lucide-react';
+import { PhoneCall, ChevronDown, CheckCircle2, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { articleListByCategory as articlesByCategory, articlePath } from '../data/articles-index';
 import type { ReactNode } from 'react';
-
-// Inline styled phone link — inherits surrounding font, renders premium maroon bold
-// (prevents browser auto-detection from styling the number in a jarring default font)
-const PhoneInline = () => (
-  <a
-    href={SITE.phoneTel}
-    className="text-maroon font-semibold no-underline hover:underline whitespace-nowrap"
-  >
-    {SITE.phone}
-  </a>
-);
 
 const ROUTE_LINKS: { to: string; label: { hi: string; en: string } }[] = [
   { to: '/transport-in-ujjain/ujjain-to-omkareshwar-taxi/', label: { hi: 'उज्जैन से ओंकारेश्वर टैक्सी', en: 'Ujjain to Omkareshwar taxi' } },
@@ -58,8 +48,8 @@ export function CabBookingLanding() {
     ? 'उज्जैन टैक्सी सेवा — दर्शन कैब किराया व संपर्क नंबर'
     : 'Ujjain Taxi Service — Darshan Cab Fare & Contact Number';
   const description = locale === 'hi'
-    ? 'उज्जैन टैक्सी सेवा — लोकल दर्शन, ओंकारेश्वर और इंदौर एयरपोर्ट के लिए हर गाड़ी का तय किराया, ऑनलाइन बुकिंग। टोल व पार्किंग शामिल। कॉल: +91 89890 06759।'
-    : 'Ujjain taxi service at one fixed fare per car for local darshan, Omkareshwar and Indore Airport — book online in two steps. Toll and parking included. Call +91 89890 06759.';
+    ? 'उज्जैन टैक्सी सेवा — लोकल दर्शन, ओंकारेश्वर और इंदौर एयरपोर्ट के लिए हर गाड़ी का तय किराया, ऑनलाइन बुकिंग। टोल व पार्किंग शामिल।'
+    : 'Ujjain taxi service at one fixed fare per car for local darshan, Omkareshwar and Indore Airport — book online in two steps. Toll and parking included.';
   const path = '/cab-booking/';
 
   const [openFaq, setOpenFaq] = useState<number>(0);
@@ -191,8 +181,8 @@ export function CabBookingLanding() {
                 </h3>
                 <p>
                   {locale === 'hi'
-                    ? 'उज्जैन सड़क, रेल और हवाई मार्ग से अच्छी तरह जुड़ा हुआ है। निकटतम हवाई अड्डा इंदौर में देवी अहिल्या बाई होलकर हवाई अड्डा है। उज्जैन रेलवे स्टेशन भारत के प्रमुख शहरों से जुड़ा हुआ है। यदि आप आउटस्टेशन से आ रहे हैं, तो आप इंदौर से उज्जैन के लिए कैब या टैक्सी बुक कर सकते हैं। आप हमारे साथ अग्रिम रूप से कैब/टैक्सी बुक कर सकते हैं, बस हमारे संपर्क नंबर पर हमें कॉल करें।'
-                    : 'Ujjain is well connected by road, rail & air. The nearest airport is Devi Ahilya Bai Holkar airport in Indore. Ujjain railway station is connected to major cities in India. If you are coming from out of station, you can book a cab or taxi from Indore to Ujjain. You can book cab/taxi in advance with us, just call us on our contact number.'}
+                    ? 'उज्जैन सड़क, रेल और हवाई मार्ग से अच्छी तरह जुड़ा हुआ है। निकटतम हवाई अड्डा इंदौर में देवी अहिल्या बाई होलकर हवाई अड्डा है। उज्जैन रेलवे स्टेशन भारत के प्रमुख शहरों से जुड़ा हुआ है। यदि आप आउटस्टेशन से आ रहे हैं, तो आप इंदौर से उज्जैन के लिए कैब या टैक्सी बुक कर सकते हैं। आप हमारे साथ अग्रिम रूप से कैब/टैक्सी बुक कर सकते हैं — बस इस पेज का बुकिंग फ़ॉर्म भरें।'
+                    : 'Ujjain is well connected by road, rail & air. The nearest airport is Devi Ahilya Bai Holkar airport in Indore. Ujjain railway station is connected to major cities in India. If you are coming from out of station, you can book a cab or taxi from Indore to Ujjain. You can book a cab/taxi in advance with us — just fill the booking form on this page.'}
                 </p>
               </div>
             </div>
@@ -233,9 +223,9 @@ export function CabBookingLanding() {
                   {locale === 'hi' ? 'कस्टमाइज्ड पैकेज' : 'Customized Packages'}
                 </div>
               </div>
-              <a href={SITE.phoneTel} className="btn-primary bg-white text-maroon hover:bg-maroon hover:text-white border-2 border-maroon shadow-md text-lg px-8 py-3 rounded-full inline-flex items-center transition-colors">
+              <EnquireButton purpose="cab" service="transport" className="btn-primary bg-white text-maroon hover:bg-maroon hover:text-white border-2 border-maroon shadow-md text-lg px-8 py-3 rounded-full inline-flex items-center transition-colors">
                 {locale === 'hi' ? 'अभी बुक करें →' : 'Book Now →'}
-              </a>
+              </EnquireButton>
             </div>
           </div>
         </section>
@@ -381,12 +371,12 @@ export function CabBookingLanding() {
           
           <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 px-4 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-md">
-              {locale === 'hi' ? 'मदद चाहिए, अभी कॉल करें!' : 'Need Help, Call Us Now!'}
+              {locale === 'hi' ? 'मदद चाहिए? हमें पूछताछ भेजें' : 'Need Help? Send Us an Enquiry'}
             </h2>
-            <a href={SITE.phoneTel} className="btn-primary bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)] text-xl px-8 py-3 rounded-full backdrop-blur-sm transition-all flex items-center gap-3">
-              <PhoneCall className="w-5 h-5" />
-              {SITE.phone}
-            </a>
+            <EnquireButton purpose="cab" service="transport" className="btn-primary bg-white/20 hover:bg-white/30 border-2 border-white/50 text-white shadow-[0_0_15px_rgba(255,255,255,0.2)] text-xl px-8 py-3 rounded-full backdrop-blur-sm transition-all flex items-center gap-3">
+              <MessageCircle className="w-5 h-5" />
+              {locale === 'hi' ? 'पूछताछ भेजें' : 'Send Enquiry'}
+            </EnquireButton>
           </div>
         </section>
 

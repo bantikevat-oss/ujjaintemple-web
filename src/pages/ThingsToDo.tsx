@@ -8,7 +8,7 @@ import { useI18n } from '../i18n';
 import { featuredMandirList as featuredMandirs } from '../data/mandirs-index';
 import { packagesData } from '../data/packages';
 import { SITE } from '../lib/site';
-import { useNoPhone } from '../lib/noPhone';
+import { useNoCall } from '../lib/noPhone';
 import { breadcrumbSchema, faqSchema } from '../lib/schemas';
 import { Landmark, MapPinned, BedDouble, Car, CalendarDays, Flame, ArrowRight } from 'lucide-react';
 
@@ -17,7 +17,7 @@ import { Landmark, MapPinned, BedDouble, Car, CalendarDays, Flame, ArrowRight } 
 // hotels, cab, simhastha, puja). Internal-link hub, not a thin page.
 export function ThingsToDo() {
   const { locale } = useI18n();
-  const noPhone = useNoPhone();
+  const noPhone = useNoCall();
   const prefix = locale === 'en' ? '' : '/hi';
   const path = '/things-to-do-in-ujjain/';
   const topMandirs = featuredMandirs.slice(0, 6);
