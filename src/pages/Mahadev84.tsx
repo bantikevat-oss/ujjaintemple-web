@@ -6,6 +6,7 @@ import { SEOHead } from '../components/global/SEOHead';
 import { LeadForm } from '../components/global/LeadForm';
 import { AppPromo } from '../components/shared/AppPromo';
 import { Breadcrumb } from '../components/global/Breadcrumb';
+import { DarshanTripLinks } from '../components/global/DarshanTripLinks';
 import { useI18n } from '../i18n';
 import { mahadev84 } from '../data/mahadev84';
 import { breadcrumbSchema } from '../lib/schemas';
@@ -236,6 +237,8 @@ export function Mahadev84Page() {
                 : 'The list and locations of the 84 Mahadev are compiled from traditional sources. Some shrines lie within old lanes — take local help for the darshan order and directions. For corrections, tell us through the form below.'}
             </p>
           </aside>
+
+          <DarshanTripLinks className="mt-12 !px-0" heading={{ hi: '84 महादेव दर्शन के लिए टैक्सी व टूर पैकेज', en: 'Taxi & Tour Packages for 84 Mahadev Darshan' }} />
 
           <AppPromo placement="84-mahadev" className="mt-12 !px-0" />
 

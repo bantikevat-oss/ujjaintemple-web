@@ -6,6 +6,7 @@ import { AppPromo } from '../../components/shared/AppPromo';
 import { MandirCard } from '../../components/mandir/MandirCard';
 import { MandirRow, AREA_HI } from '../../components/mandir/MandirRow';
 import { Breadcrumb } from '../../components/global/Breadcrumb';
+import { DarshanTripLinks } from '../../components/global/DarshanTripLinks';
 import { Link } from 'react-router-dom';
 import { useI18n } from '../../i18n';
 import { mandirList as mandirs } from '../../data/mandirs-index';
@@ -477,6 +478,8 @@ export function MandirIndex() {
                 : 'The darshan timings listed here are compiled from published sources and are approximate. If any information appears outdated, please tell us through the form below.'}
             </p>
           </aside>
+
+          <DarshanTripLinks className="mt-12 !px-0" heading={{ hi: 'उज्जैन मंदिर दर्शन के लिए टैक्सी व टूर पैकेज', en: 'Taxi & Tour Packages for Ujjain Temple Darshan' }} />
 
           <AppPromo placement="mandirs-index" className="mt-12 !px-0" />
 
