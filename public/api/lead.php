@@ -346,9 +346,15 @@ function ut_partner_seq(array $row) {
  * me rakho"). The CC = news-config 'to' minus UT_NO_TRAVEL_MAIL, so no address is hard-coded
  * here; the partner sees that one CC address and nothing else internal.
  * Throttled by the same $mail_ok. To stop forwarding: set UT_PARTNER_TO to ''.
+ *
+ * 2026-11-14 (Aman: "21 lead se bapas dheeraj ko cc me rakh do · kapil ko dena band kar do"):
+ * the partner's free trial of 20 leads ended (register stops at Lead 20, mail sent 11-14).
+ * Forwarding OFF (UT_PARTNER_TO = '') and Dheeraj back on cab + package mails
+ * (UT_NO_TRAVEL_MAIL = []). Travel leads still skip the CRM push (unchanged).
+ * To restart a paid partner: put the address back — the counter resumes at Lead 21.
  */
-const UT_PARTNER_TO      = 'info.ujjainmahakaltour@gmail.com';
-const UT_NO_TRAVEL_MAIL  = ['dheeraj.byteflow@gmail.com'];
+const UT_PARTNER_TO      = '';
+const UT_NO_TRAVEL_MAIL  = [];
 $isPujaLead = $purpose === 'puja' || $service === 'puja';
 $isPackage  = !$isPujaLead && $purpose !== 'info' && !$cabOnly
   && (in_array($purpose, ['tour', 'hotel', 'group'], true)
