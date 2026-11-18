@@ -49,7 +49,8 @@ const STATS = [
   { numHi: '2 माह',      numEn: '2 Months',    labelHi: 'महापर्व अवधि',         labelEn: 'Festival Duration' },
   { numHi: '3',           numEn: '3',            labelHi: 'शाही स्नान',            labelEn: 'Shahi Snans' },
   { numHi: '13',          numEn: '13',           labelHi: 'अखाड़े',               labelEn: 'Akhadas' },
-  { numHi: '30 करोड़+',  numEn: '30 Crore+',   labelHi: 'श्रद्धालु (अनुमानित)', labelEn: 'Expected Pilgrims' },
+  // 2026-11-18: was "30 Crore+ expected pilgrims" — crowd figures are off the site (Simhastha rail).
+  { numHi: '12 वर्ष',     numEn: '12 Years',    labelHi: 'में एक बार',            labelEn: 'Once Every' },
 ];
 
 // ─── Preparation snapshot (published media reports, September 2026) ──────────
@@ -141,13 +142,15 @@ export function SimhasthaLanding() {
   // paragraph is written to be lifted as a featured snippet and spelling clutter in it
   // would cost more than it wins.
   const title = locale === 'hi'
-    ? 'उज्जैन सिंहस्थ 2028 कब है — 27 मार्च से 27 मई, शाही स्नान'
+    ? 'उज्जैन सिंहस्थ 2028 कब है — 27 मार्च से 27 मई, 3 शाही स्नान'
     // 2026-11-03: "Ujjain Simhastha" leads. For `ujjain simhastha` (664 impr) and `simhastha`
     // Google ranked the HISTORY page (pos ~9.4) over this hub — the hub title opened on the date.
-    : 'Ujjain Simhastha 2028 Dates: 27 Mar–27 May · Shahi Snan';
+    // 2026-11-18 (S2): the three Shahi Snan dates open the DESCRIPTION — the title has 60 chars
+    // and the mela window is the "kab hai" answer, so it keeps that.
+    : 'Ujjain Simhastha 2028 Dates: 27 Mar–27 May · 3 Shahi Snans';
   const description = locale === 'hi'
-    ? 'सिंहस्थ (सिंहस्त / Singhasth / Sihast) महाकुम्भ 2028 उज्जैन — मेला 27 मार्च से 27 मई 2028 तक (2 माह)। 3 शाही स्नान: 09 अप्रैल, 23 अप्रैल, 08 मई। 13 अखाड़े, कल्पवास, होटल व ट्रांसपोर्ट गाइड।'
-    : 'Simhastha Mahakumbh 2028 Ujjain, also written Singhasth or Sihast — mela runs 27 March to 27 May 2028. 3 Shahi Snans: 09 April, 23 April, 08 May. 13 Akhadas, Kalpvas, hotel & transport guide.';
+    ? 'उज्जैन सिंहस्थ 2028: मेला 27 मार्च से 27 मई 2028 तक। शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को। सिंहस्त / Singhasth / Sihast — ठहरने व यात्रा की गाइड।'
+    : 'Ujjain Simhastha 2028 runs 27 March to 27 May 2028. Shahi Snans: 09 April, 23 April and 08 May 2028. Also written Singhasth or Sihast — stay and travel guide.';
 
   const FAQS = [
     {
@@ -190,13 +193,6 @@ export function SimhasthaLanding() {
       a: {
         hi: 'दिल्ली, मुम्बई, अहमदाबाद से सीधी ट्रेनें उज्जैन आती हैं; निकटतम हवाई अड्डा इंदौर (55 किमी) है। सिंहस्थ के दौरान विशेष ट्रेनें व बस सेवाएँ चलती हैं। यात्रा व होटल बुकिंग में मदद के लिए इस पेज से पूछताछ भेजें।',
         en: 'Direct trains from Delhi, Mumbai and Ahmedabad reach Ujjain; the nearest airport is Indore (55 km). Special trains and buses run during Simhastha. For travel and hotel booking help, send an enquiry from this page.',
-      },
-    },
-    {
-      q: { hi: 'सिंहस्थ 2028 में कितने श्रद्धालु आने की संभावना है?', en: 'How many pilgrims are expected at Simhastha 2028?' },
-      a: {
-        hi: 'सिंहस्थ 2028 में 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है, जिससे यह विश्व के सबसे बड़े धार्मिक आयोजनों में से एक होगा। शाही स्नान वाले दिनों में सबसे अधिक श्रद्धालु रहते हैं।',
-        en: 'Over 30 crore (300 million) pilgrims are expected at Simhastha 2028, making it one of the world\'s largest religious gatherings. Pilgrim numbers are highest on the Shahi Snan days.',
       },
     },
   ] as const;
@@ -251,7 +247,7 @@ export function SimhasthaLanding() {
               { name: title, url: `${SITE.url}/simhastha-2028/` },
             ],
           }),
-          simhastha2028EventSchema(),
+          ...simhastha2028EventSchema(locale),
           faqSchema(FAQS.map((f) => ({ q: f.q[locale], a: f.a[locale] }))),
         ]}
       >
@@ -329,11 +325,15 @@ export function SimhasthaLanding() {
               >
                 2028
               </span>
+              {/* 2026-11-18 (S2): the mela window is part of the H1 now, not a <p> under it. */}
+              <span className="block text-cream/70 font-serif font-normal text-base sm:text-xl tracking-wide">
+                {locale === 'hi' ? '27 मार्च — 27 मई 2028' : '27 March — 27 May 2028'}
+              </span>
               </h1>
               <p className="text-cream/70 font-serif text-base sm:text-xl tracking-wide">
                 {locale === 'hi'
-                  ? '27 मार्च — 27 मई 2028  ·  शिप्रा तट, उज्जैन'
-                  : '27 March — 27 May 2028  ·  Shipra Ghat, Ujjain'}
+                  ? `शाही स्नान: ${SHAHI_SNANS.map((x) => x.dateHi.replace(' 2028', '')).join(' · ')} 2028  ·  शिप्रा तट, उज्जैन`
+                  : `Shahi Snan: ${SHAHI_SNANS.map((x) => x.dateEn.replace(' 2028', '')).join(' · ')} 2028  ·  Shipra Ghat, Ujjain`}
               </p>
             </div>
 
@@ -648,7 +648,7 @@ export function SimhasthaLanding() {
             <div className="space-y-6 text-ink-soft text-base sm:text-lg leading-relaxed">
               {locale === 'hi' ? (
                 <>
-                  <p><strong className="text-maroon">उज्जैन सिंहस्थ 2028</strong> मध्य प्रदेश के उज्जैन में पवित्र शिप्रा नदी के तट पर आयोजित होने वाला महाकुम्भ है, जो हर 12 वर्ष में एक बार आता है। सिंहस्थ 2028 की अवधि <strong>27 मार्च 2028 से 27 मई 2028</strong> तक — कुल दो माह — रहेगी, जिसमें 30 करोड़ से अधिक श्रद्धालुओं के आने का अनुमान है। यह विश्व के सबसे बड़े आध्यात्मिक समागमों में से एक माना जाता है।</p>
+                  <p><strong className="text-maroon">उज्जैन सिंहस्थ 2028</strong> मध्य प्रदेश के उज्जैन में पवित्र शिप्रा नदी के तट पर आयोजित होने वाला महाकुम्भ है, जो हर 12 वर्ष में एक बार आता है। सिंहस्थ 2028 की अवधि <strong>27 मार्च 2028 से 27 मई 2028</strong> तक — कुल दो माह — रहेगी। इसी अवधि में तीन शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को हैं।</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">सिंहस्थ का ज्योतिषीय महत्व</h3>
                   <p>"सिंहस्थ" नाम इस दुर्लभ ग्रह-स्थिति से आता है जब <strong>बृहस्पति (गुरु) सिंह राशि</strong> में और <strong>सूर्य मेष राशि</strong> में प्रवेश करते हैं। इसी कारण उज्जैन के इस कुम्भ को "सिंहस्थ" कहा जाता है। इस अवधि में शिप्रा में स्नान का विशेष धार्मिक महत्व माना जाता है — मान्यता है कि यह आत्मशुद्धि और पुण्य का अवसर है।</p>
@@ -664,7 +664,7 @@ export function SimhasthaLanding() {
                 </>
               ) : (
                 <>
-                  <p><strong className="text-maroon">Ujjain Simhastha 2028</strong> is the Mahakumbh held on the banks of the sacred Shipra river in Ujjain, Madhya Pradesh, once every 12 years. Simhastha 2028 runs from <strong>27 March 2028 to 27 May 2028</strong> — a full two months — and is expected to draw over 30 crore (300 million) pilgrims, making it one of the largest spiritual gatherings in the world.</p>
+                  <p><strong className="text-maroon">Ujjain Simhastha 2028</strong> is the Mahakumbh held on the banks of the sacred Shipra river in Ujjain, Madhya Pradesh, once every 12 years. Simhastha 2028 runs from <strong>27 March 2028 to 27 May 2028</strong> — a full two months. The three Shahi Snans within it fall on 09 April, 23 April and 08 May 2028.</p>
 
                   <h3 className="font-serif text-2xl font-bold text-maroon pt-2">Astrological significance of Simhastha</h3>
                   <p>The name "Simhastha" comes from the rare planetary alignment when <strong>Jupiter enters Leo (Simha Rashi)</strong> and the <strong>Sun enters Aries (Mesha Rashi)</strong> — which is why Ujjain's Kumbh is called Simhastha. A holy dip in the Shipra during this period is held to be especially sacred, an occasion for inner purity and merit.</p>

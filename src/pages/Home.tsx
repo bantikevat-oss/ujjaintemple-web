@@ -153,7 +153,7 @@ export function Home() {
         description={description}
         path="/"
         locale={locale}
-        schemas={[organizationSchema(), websiteSchema(), simhastha2028EventSchema(), ujjainGuideAppSchema()]}
+        schemas={[organizationSchema(), websiteSchema(), ...simhastha2028EventSchema(locale), ujjainGuideAppSchema()]}
       >
         {/* LCP preload — home only. Keep in sync with HomeGraphicHero's <img> src. */}
         <link rel="preload" as="image" href="/images/hero/mahakal-lok-hero.webp" type="image/webp" fetchPriority="high" />

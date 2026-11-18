@@ -1,4 +1,5 @@
 import { SITE } from './site';
+import { SHAHI_SNANS, SNAN_SOURCE_HI, SNAN_SOURCE_EN } from '../data/simhastha-dates';
 
 export function organizationSchema() {
   return {
@@ -241,77 +242,80 @@ export function faqSchema(faqs: Array<{ q: string; a: string }>) {
   };
 }
 
-export function simhastha2028EventSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: 'Simhastha Mahakumbh 2028 — Ujjain Kumbh Mela',
-    alternateName: ['Ujjain Kumbh 2028', 'Simhastha 2028', 'Ujjain Mahakumbh 2028'],
-    // Mela period, not the Shahi Snan window. Webdunia, Times Now Navbharat,
-    // Patrika and ETV Bharat all report 27 Mar – 27 May 2028 for the mela; the
-    // three Shahi Snans (9 Apr, 23 Apr, 8 May) sit inside it as subEvents below.
-    startDate: '2028-03-27',
-    endDate: '2028-05-27',
+/**
+ * Simhastha 2028 as four linked Event nodes: the mela (27 Mar – 27 May 2028) and the three
+ * Shahi Snans (09 Apr, 23 Apr, 08 May 2028), each its own top-level Event with `superEvent`
+ * pointing at the mela — so a "shahi snan date" search can surface the snan itself.
+ * Dates = published media only (data/simhastha-dates.ts). Returns an ARRAY: spread it.
+ *
+ * 2026-11-18 (S3) — removed from the old single node:
+ *  · `offers` (our ₹2,500 tour package, "InStock") — an Offer on an Event reads as a TICKET to
+ *    the event. Simhastha has no ticket and we do not sell entry to it; schema asserting that is
+ *    the machine-readable version of a claim the site may not make.
+ *  · `performer` "13 Akhadas" — not a performer; and `typicalAgeRange`, which said nothing.
+ *  · English-only name/description on /hi/ — the Hindi hub now carries Hindi.
+ */
+export function simhastha2028EventSchema(locale: 'en' | 'hi' = 'en') {
+  const hi = locale === 'hi';
+  const page = `${SITE.url}${hi ? '/hi' : ''}/simhastha-2028/`;
+  const image = [`${SITE.url}/images/simhastha/simhastha-hero.webp`, `${SITE.url}/images/simhastha/ramghat.webp`];
+  const location = {
+    '@type': 'Place',
+    name: hi ? 'शिप्रा तट, उज्जैन, मध्य प्रदेश' : 'Shipra Ghat, Ujjain, Madhya Pradesh',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Ujjain',
+      addressRegion: 'Madhya Pradesh',
+      postalCode: '456001',
+      addressCountry: 'IN',
+    },
+    geo: { '@type': 'GeoCoordinates', latitude: 23.1828, longitude: 75.7682 },
+  };
+  const organizer = { '@type': 'Organization', name: 'Government of Madhya Pradesh', url: 'https://mp.gov.in' };
+  const common = {
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    location: {
-      '@type': 'Place',
-      name: 'Shipra Ghat, Ujjain, Madhya Pradesh',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Ujjain',
-        addressRegion: 'Madhya Pradesh',
-        postalCode: '456001',
-        addressCountry: 'IN',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 23.1828, longitude: 75.7682 },
-    },
-    image: `${SITE.url}/og/default.webp`,
-    description:
-      'Simhastha Mahakumbh 2028 — once-in-12-years grand pilgrimage at the sacred banks of Shipra river in Ujjain, held 27 March to 27 May 2028. Three Shahi Snans (9 April, 23 April, 8 May 2028) plus seven proposed parv snans, kalpvas, 13 akhada processions, and darshan at Mahakaleshwar Jyotirlinga.',
-    // The three Shahi Snans as subEvents — these are what "simhastha 2028 date"
-    // and "shahi snan dates" searchers actually want in the rich result.
-    subEvent: [
-      { date: '2028-04-09', name: 'First Shahi Snan — Simhastha 2028 Ujjain' },
-      { date: '2028-04-23', name: 'Second Shahi Snan — Simhastha 2028 Ujjain' },
-      { date: '2028-05-08', name: 'Third & Final Shahi Snan — Simhastha 2028 Ujjain' },
-    ].map(({ date, name }) => ({
-      '@type': 'Event',
-      name,
-      startDate: date,
-      endDate: date,
-      eventStatus: 'https://schema.org/EventScheduled',
-      eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-      location: {
-        '@type': 'Place',
-        name: 'Shipra Ghat, Ujjain, Madhya Pradesh',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Ujjain',
-          addressRegion: 'Madhya Pradesh',
-          postalCode: '456001',
-          addressCountry: 'IN',
-        },
-      },
-    })),
-    organizer: { '@type': 'Organization', name: 'Madhya Pradesh Government', url: 'https://mp.gov.in' },
-    performer: {
-      '@type': 'PerformingGroup',
-      name: '13 Akhadas — Naga Sadhus, Mahamandaleshwars & Saints',
-    },
-    offers: {
-      '@type': 'Offer',
-      name: 'Simhastha 2028 Tour Package',
-      url: `${SITE.url}/tour-and-travel-ujjain/`,
-      price: '2500',
-      priceCurrency: 'INR',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-06-01',
-    },
-    keywords: 'Simhastha 2028, Ujjain Kumbh Mela, Shahi Snan, Kalpvas, Naga Sadhu, Akhada',
-    typicalAgeRange: 'All ages',
+    location,
+    image,
+    organizer,
     isAccessibleForFree: true,
+    inLanguage: hi ? 'hi-IN' : 'en-IN',
   };
+  const melaId = `${page}#simhastha-2028`;
+  const snans = SHAHI_SNANS.map((x) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    '@id': `${page}#shahi-snan-${x.num}`,
+    name: hi ? `${x.nameHi} — उज्जैन सिंहस्थ 2028` : `${x.nameEn} — Ujjain Simhastha 2028`,
+    description: hi
+      ? `उज्जैन सिंहस्थ 2028 का ${x.nameHi}, ${x.dateHi} को शिप्रा तट पर। तिथि ${SNAN_SOURCE_HI} के अनुसार; प्रशासन द्वारा संशोधन संभव।`
+      : `The ${x.nameEn} of Ujjain Simhastha 2028, on ${x.dateEn} on the Shipra in Ujjain. Date as per ${SNAN_SOURCE_EN}; it may be revised by the administration.`,
+    startDate: x.iso,
+    endDate: x.iso,
+    url: `${page}#dates`,
+    superEvent: { '@id': melaId },
+    ...common,
+  }));
+  const mela = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    '@id': melaId,
+    name: hi ? 'उज्जैन सिंहस्थ महाकुम्भ 2028' : 'Ujjain Simhastha Mahakumbh 2028',
+    alternateName: hi
+      ? ['सिंहस्थ 2028', 'उज्जैन कुम्भ 2028', 'Simhastha 2028']
+      : ['Simhastha 2028', 'Ujjain Kumbh 2028', 'Ujjain Mahakumbh 2028', 'Singhasth 2028'],
+    // Mela period, not the Shahi Snan window. Webdunia, Times Now Navbharat, Patrika and
+    // ETV Bharat all report 27 Mar – 27 May 2028; the three Shahi Snans sit inside it.
+    startDate: '2028-03-27',
+    endDate: '2028-05-27',
+    url: page,
+    description: hi
+      ? 'उज्जैन में शिप्रा तट पर हर 12 वर्ष में होने वाला सिंहस्थ महाकुम्भ — 27 मार्च से 27 मई 2028 तक। तीन शाही स्नान 09 अप्रैल, 23 अप्रैल और 08 मई 2028 को (प्रकाशित मीडिया रिपोर्ट्स के अनुसार)।'
+      : 'The Simhastha Mahakumbh held on the Shipra in Ujjain once every 12 years — 27 March to 27 May 2028. Three Shahi Snans on 09 April, 23 April and 08 May 2028 (as per published media reports).',
+    subEvent: snans.map((x) => ({ '@id': x['@id'] })),
+    ...common,
+  };
+  return [mela, ...snans];
 }
 
 export function pujaServiceSchema() {
