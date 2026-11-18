@@ -115,6 +115,14 @@ function buildLocaleRoutes(locale: Locale, basePath: string): RouteRecord[] {
         return { Component: locale === 'hi' ? mod.SimhasthaHi : mod.SimhasthaEn };
       },
     },
+    // Simhastha 2028 Yatra List (2026-11-18). 🪤 Slug is also whitelisted in public/.htaccess.
+    {
+      path: `${basePath}simhastha-2028/simhastha-2028-yatra-list/`,
+      lazy: async () => {
+        const mod = await import('./pages/SimhasthaYatraListRoute');
+        return { Component: locale === 'hi' ? mod.YatraListHi : mod.YatraListEn };
+      },
+    },
     ...articlesByCategory('simhastha').map((a) => ({
       path: `${basePath}simhastha-2028/${a.slug}/`,
       lazy: async () => {

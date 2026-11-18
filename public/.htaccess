@@ -78,9 +78,10 @@ RewriteRule ^(en/)?mandirs/kal-bhairav-ujain/?$ /mandirs/kal-bhairav-ujjain/ [L,
 # and terminate in the hotel/cab/tour money pages.
 # 2026-09-06 — simhastha-2028-preparations added (city-wide readiness: roads, airport,
 # ghats, water, temple restoration, crowd-management command centre).
+# 2026-11-18 — simhastha-2028-yatra-list added (React page, not a content JSON — src/pages/SimhasthaYatraList.tsx).
 # Keep this list in sync with src/content/simhastha/*.json — a slug missing here is
 # built and sitemapped but 301s to the landing, so the page can never rank.
-RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide|simhastha-2028-accommodation|simhastha-2028-tour-package|simhastha-2028-transport-guide|simhastha-2028-from-indore-bhopal|simhastha-2028-budget-guide|simhastha-2028-preparations|simhastha-aur-kumbh-antar|peshwai-chhavni-pravesh|simhastha-ujjain-me-kyun)/?$
+RewriteCond %{REQUEST_URI} !^/(en/|hi/)?simhastha-2028/(akhada-traditions-ujjain|history-of-simhastha-ujjain|sadhus-naga-babas-simhastha|snan-ghats-ujjain|kalpvas-guide|simhastha-2028-accommodation|simhastha-2028-tour-package|simhastha-2028-transport-guide|simhastha-2028-from-indore-bhopal|simhastha-2028-budget-guide|simhastha-2028-preparations|simhastha-aur-kumbh-antar|peshwai-chhavni-pravesh|simhastha-ujjain-me-kyun|simhastha-2028-yatra-list)/?$
 RewriteRule ^(en/|hi/)?simhastha-2028/[^/]+/?$ /simhastha-2028/ [L,R=301]
 
 # ── Locale migration (2026-07): English is now the default at root; Hindi moved to /hi/ ──

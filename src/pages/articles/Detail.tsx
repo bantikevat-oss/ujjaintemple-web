@@ -10,6 +10,7 @@ import { ShareButtons } from '../../components/shared/ShareButtons';
 import { TripNextStep } from '../../components/global/TripNextStep';
 import { PackageStrip } from '../../components/global/PackageStrip';
 import { SimhasthaHubStrip } from '../../components/global/SimhasthaHubStrip';
+import { SimhasthaYatraListCta } from '../../components/global/SimhasthaYatraListCta';
 import { CabBookingWidget } from '../../components/global/CabBookingWidget';
 import { BOOKING_PRESET_BY_SLUG } from '../../data/rates';
 import { useI18n } from '../../i18n';
@@ -395,6 +396,7 @@ export function ArticleDetail({ category, slug }: Props) {
 
               {/* ── SIMHASTHA HUB STRIP — consolidates the head term on /simhastha-2028/ (2026-11-03) ── */}
               {article.category === 'simhastha' && <SimhasthaHubStrip source={article.slug} />}
+              {article.category === 'simhastha' && <SimhasthaYatraListCta source={article.slug} />}
 
               {/* ── ARTICLE BODY ── */}
               {renderBody(article.body[locale])}

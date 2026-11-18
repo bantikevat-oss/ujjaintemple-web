@@ -5,6 +5,7 @@ import { Layout } from '../components/global/Layout';
 import { SEOHead } from '../components/global/SEOHead';
 import { GlobalLeadSection } from '../components/global/GlobalLeadSection';
 import { SimhasthaEnquiry } from '../components/global/SimhasthaEnquiry';
+import { SimhasthaYatraListCta } from '../components/global/SimhasthaYatraListCta';
 import { AppPromo } from '../components/shared/AppPromo';
 import { Breadcrumb } from '../components/global/Breadcrumb';
 import { useI18n } from '../i18n';
@@ -583,6 +584,9 @@ export function SimhasthaLanding() {
                 ? 'स्रोत: प्रकाशित मीडिया रिपोर्ट्स (वेबदुनिया, टाइम्स नाउ नवभारत, पत्रिका, ईटीवी भारत)। प्रशासन द्वारा तिथियों में संशोधन संभव है — यात्रा से पहले पुष्टि कर लें।'
                 : 'Source: published media reports (Webdunia, Times Now Navbharat, Patrika, ETV Bharat). Dates may be revised by the administration — please reconfirm before travelling.'}
             </p>
+
+            {/* Date readers are the people planning a trip — point them at the Yatra List (2026-11-18). */}
+            <SimhasthaYatraListCta source="hub-dates" />
           </div>
         </section>
 

@@ -122,5 +122,5 @@ $rest = $rows ? array_slice($rows, 1) : [];
 <div class="cta">
   <p><strong>सिंहस्थ 2028 की यात्रा की योजना बना रहे हैं?</strong><br>
   होटल, कैब और दर्शन की व्यवस्था के लिए <a href="/hi/simhastha-2028/simhastha-2028-accommodation/">ठहरने की गाइड</a> और
-  <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें।</p>
+  <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें।<br>ठहरने और यात्रा की जानकारी WhatsApp पर पाने के लिए <a href="/hi/simhastha-2028/simhastha-2028-yatra-list/">सिंहस्थ 2028 यात्रा सूची</a> में नाम जोड़ें।</p>
 </div>

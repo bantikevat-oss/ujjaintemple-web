@@ -59,7 +59,7 @@ $tags = $a['tags_json'] ? (json_decode($a['tags_json'], true) ?: []) : [];
   <strong>9 अप्रैल, 23 अप्रैल और 8 मई</strong> को। इन तिथियों के आसपास होटल, धर्मशाला और
   कैब सबसे पहले भरते हैं। योजना बनाने के लिए
   <a href="/hi/simhastha-2028/simhastha-2028-accommodation/">ठहरने की गाइड</a>,
-  <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें।</p>
+  <a href="/hi/simhastha-2028/simhastha-2028-transport-guide/">यात्रा गाइड</a> देखें।<br>ठहरने और यात्रा की जानकारी WhatsApp पर पाने के लिए <a href="/hi/simhastha-2028/simhastha-2028-yatra-list/">सिंहस्थ 2028 यात्रा सूची</a> में नाम जोड़ें।</p>
 </div>
 <?php endif; ?>
 
